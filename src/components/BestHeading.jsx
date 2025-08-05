@@ -6,7 +6,7 @@ export default function BestHeading({
 }) {
   return (
     <div className="flex flex-col md:flex-row items-start justify-start px-8">
-      <h1 className="text-[#0A2351] font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mr-2">
+      <h1 className="text-[#0A2351] font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl pt-4">
         {title}
       </h1>
       <div className="relative leading-none tracking-[0.5rem]">
