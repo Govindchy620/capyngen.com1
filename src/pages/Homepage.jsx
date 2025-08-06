@@ -6,6 +6,8 @@ import TestimonialCarousel from "../components/TestimonialCarousel";
 import ServicesCarousel from "../components/ServicesCarousel";
 import BestHeading from "../components/BestHeading";
 import WhyChooseUs from "../components/WhyChooseUs";
+import LetTalkDiagonal from "../components/LetTalkDiagonal";
+import HomeServices from "../components/HomeServices";
 
 const Homepage = () => {
   return (
@@ -19,6 +21,8 @@ const Homepage = () => {
       <ServicesCarousel />
       <BestHeading />
       <WhyChooseUs />
+      <LetTalkDiagonal />
+      <HomeServices />
     </div>
   );
 };

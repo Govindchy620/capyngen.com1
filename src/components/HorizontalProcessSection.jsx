@@ -16,10 +16,10 @@ const HorizontalProcessSection = () => {
       title: "Consultation & Requirement Analysis",
       description:
         "We start with a detailed consultation to understand your business needs and goals. Through thorough requirement analysis, we identify key challenges and opportunities.",
-      color: "bg-gradient-to-br from-blue-500 to-blue-600",
+      color: "bg-gradient-to-br from-blue-400 to-blue-600",
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -38,10 +38,10 @@ const HorizontalProcessSection = () => {
       title: "Strategic Planning and Proposal",
       description:
         "Based on our analysis, we create a comprehensive strategic plan with detailed proposals, timelines, and resource allocation for optimal results.",
-      color: "bg-gradient-to-br from-purple-500 to-purple-600",
+      color: "bg-gradient-to-br from-purple-400 to-purple-600",
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -60,10 +60,10 @@ const HorizontalProcessSection = () => {
       title: "Implementation and Integration",
       description:
         "Our expert team implements the solution with precision, ensuring seamless integration with your existing systems and minimal disruption to operations.",
-      color: "bg-gradient-to-br from-green-500 to-green-600",
+      color: "bg-gradient-to-br from-green-400 to-green-600",
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -88,10 +88,10 @@ const HorizontalProcessSection = () => {
       title: "Ongoing Support and Optimization",
       description:
         "We provide continuous support, monitoring, and optimization to ensure your solution performs at its best and evolves with your business needs.",
-      color: "bg-gradient-to-br from-orange-500 to-orange-600",
+      color: "bg-gradient-to-br from-orange-400 to-orange-600",
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -226,16 +226,16 @@ const HorizontalProcessSection = () => {
                 className={`process-card process-card-${index} flex flex-col items-center text-center max-w-sm mx-12`}
               >
                 <div
-                  className={`w-24 h-24 ${step.color} rounded-3xl flex items-center justify-center text-white mb-8 shadow-2xl transform hover:scale-105 transition-transform duration-300`}
+                  className={`w-28 h-28 ${step.color} rounded-3xl flex items-center justify-center text-white mb-8 shadow-2xl transform hover:scale-110 transition-transform duration-300`}
                 >
                   {step.icon}
                 </div>
-                <div className="w-14 h-14 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center mb-8 shadow-lg">
+                <div className="w-16 h-16 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center mb-8 shadow-lg">
                   <span className="text-gray-700 font-bold text-lg">
                     {step.id}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
                   {step.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg max-w-xs">
