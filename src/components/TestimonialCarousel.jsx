@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Slider from "react-slick";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { assets } from "../assets/assets";
+import BestHeading from "./BestHeading";
 
 const testimonials = [
   {
@@ -119,15 +120,11 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#0A1940] text-white">
+    <section className="w-full bg-[#0A1940] text-white">
+      <BestHeading title="" highlight="Testimonials" />
       <div className="container max-w-[90rem] mx-auto flex flex-col lg:flex-row gap-10">
         {/* Left Section */}
         <div className="flex flex-col w-full lg:w-2/5 justify-center space-y-8 px-4 sm:px-6">
-          <div className="flex items-center space-x-2">
-            <span className="inline-block rounded-md bg-transparent bg-opacity-20 text-green-500 px-3 py-1 text-base font-semibold mb-2 border border-green-500">
-              • Testimonial Technox •
-            </span>
-          </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-5 leading-tight">
             See What Our Customer Say About Us.
           </h1>

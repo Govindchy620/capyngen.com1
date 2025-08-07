@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BestHeading from "./BestHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -123,7 +124,9 @@ const HorizontalProcessSection = () => {
     gsap.set(container.querySelectorAll(".dot"), { opacity: 0, scale: 0 });
 
     const totalWidth = container.scrollWidth;
-    const scrollDistance = totalWidth - window.innerWidth;
+    // Add just enough distance to center the last card properly
+    const scrollDistance =
+      totalWidth - window.innerWidth + window.innerWidth * 0.1;
 
     const horizontalScroll = gsap.to(container, {
       x: -scrollDistance,
@@ -131,7 +134,7 @@ const HorizontalProcessSection = () => {
       scrollTrigger: {
         trigger: section,
         start: "top top",
-        end: () => `+=${totalWidth}`,
+        end: () => `+=${scrollDistance}`,
         scrub: 0.8,
         pin: true,
         anticipatePin: 1,
@@ -158,30 +161,31 @@ const HorizontalProcessSection = () => {
         },
       });
 
-      const dotGroup = container.querySelectorAll(`.dotted-line-${index} .dot`);
-      dotGroup.forEach((dot, dotIndex) => {
-        gsap.to(dot, {
+      // Fix dot animation to fill from left to right properly
+      const dotContainer = container.querySelector(`.dotted-line-${index}`);
+      if (dotContainer) {
+        const dotGroup = dotContainer.querySelectorAll(".dot");
+
+        // Create a timeline for this dot group
+        gsap.set(dotGroup, { opacity: 0, scale: 0 });
+
+        gsap.to(dotGroup, {
+          opacity: 1,
+          scale: 1,
+          duration: 0.02,
+          stagger: {
+            each: 0.05,
+            from: "start",
+          },
           scrollTrigger: {
-            trigger: dot,
+            trigger: dotContainer,
             containerAnimation: horizontalScroll,
-            start: "left 70%",
-            end: "left 30%",
-            scrub: 0.3,
-            onUpdate: (self) => {
-              const progress = self.progress;
-              const dotProgress = Math.max(
-                0,
-                Math.min(1, progress * dotGroup.length - dotIndex)
-              );
-              gsap.to(dot, {
-                opacity: dotProgress,
-                scale: dotProgress,
-                duration: 0.1,
-              });
-            },
+            start: "left 80%",
+            end: "left 20%",
+            scrub: 1,
           },
         });
-      });
+      }
     });
 
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
@@ -190,67 +194,196 @@ const HorizontalProcessSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gradient-to-br from-gray-50 to-gray-100"
+      className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 overflow-hidden"
     >
-      <div className="h-screen overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-400/20 to-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
+
+        {/* Floating Particles */}
+        {Array.from({ length: 50 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white/30 rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="h-screen overflow-hidden relative z-10">
         <div
           ref={containerRef}
           className="flex items-center h-full px-8"
           style={{ width: "max-content" }}
         >
-          <div className="flex-shrink-0 w-screen flex items-center justify-center px-8">
-            <div className="text-center max-w-4xl">
-              <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-lg border border-gray-200">
-                <div className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
-                <span className="text-blue-600 text-sm font-semibold tracking-wide">
-                  WORK PROCESS TECHNOX
+          <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
+            {/* Decorative Grid */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="grid grid-cols-12 gap-4 h-full">
+                {Array.from({ length: 144 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="border border-white/20 rounded"
+                    style={{
+                      animationDelay: `${i * 0.05}s`,
+                    }}
+                  ></div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center max-w-4xl relative z-10">
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm rounded-full mb-12 shadow-2xl border border-white/30 hover:shadow-3xl transition-all duration-300">
+                <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mr-4 animate-pulse shadow-lg"></div>
+                <span className="text-blue-600 text-sm font-bold tracking-wider uppercase">
+                  ✨ WORK PROCESS TECHNOX ✨
                 </span>
               </div>
-              <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                How Our Works{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                  Process.
-                </span>
-              </h2>
-              <p className="text-gray-600 text-xl leading-relaxed max-w-3xl mx-auto">
-                We begin by understanding your business goals and identifying
-                the right technology solutions. Our team then designs,
-                implements, and supports systems to ensure optimal performance.
-              </p>
+              <BestHeading title="" highlight="Our Work Process" />
+
+              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
+                <p className="text-white/90 text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
+                  We begin by understanding your business goals and identifying
+                  the right technology solutions. Our team then designs,
+                  implements, and supports systems to ensure{" "}
+                  <span className="text-cyan-300 font-semibold">
+                    optimal performance
+                  </span>
+                  .
+                </p>
+              </div>
+
+              {/* Floating Icons */}
+              <div className="absolute -top-20 -left-20 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full opacity-20 animate-bounce delay-1000"></div>
+              <div className="absolute -top-10 -right-32 w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-30 animate-bounce delay-500"></div>
+              <div className="absolute -bottom-16 left-10 w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full opacity-25 animate-bounce delay-700"></div>
             </div>
           </div>
 
           {processSteps.map((step, index) => (
             <div key={step.id} className="flex items-center">
+              {/* Enhanced Card Design */}
               <div
-                className={`process-card process-card-${index} flex flex-col items-center text-center max-w-sm mx-12`}
+                className={`process-card process-card-${index} relative max-w-md mx-12 group`}
               >
-                <div
-                  className={`w-28 h-28 ${step.color} rounded-3xl flex items-center justify-center text-white mb-8 shadow-2xl transform hover:scale-110 transition-transform duration-300`}
-                >
-                  {step.icon}
-                </div>
-                <div className="w-16 h-16 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center mb-8 shadow-lg">
-                  <span className="text-gray-700 font-bold text-lg">
-                    {step.id}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-lg max-w-xs">
-                  {step.description}
-                </p>
-              </div>
-              {index < processSteps.length - 1 && (
-                <div className={`dotted-line-${index} flex items-center mx-16`}>
-                  <div className="flex space-x-3">
-                    {Array.from({ length: 15 }).map((_, i) => (
+                {/* Premium Card Background */}
+                <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl p-10 shadow-2xl border border-white/30 overflow-hidden hover:shadow-3xl transition-all duration-700">
+                  {/* Premium Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/30 rounded-3xl"></div>
+
+                  {/* Animated Premium Border */}
+                  <div className="absolute inset-0 rounded-3xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-purple-500/30 to-pink-400/30 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
+                    <div className="absolute inset-[1px] bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl"></div>
+                  </div>
+
+                  {/* Floating Elements */}
+                  <div className="absolute top-4 left-4 w-2 h-2 bg-blue-400/40 rounded-full animate-pulse"></div>
+                  <div className="absolute top-8 right-6 w-1.5 h-1.5 bg-purple-400/40 rounded-full animate-pulse delay-1000"></div>
+                  <div className="absolute bottom-6 left-6 w-1 h-1 bg-pink-400/40 rounded-full animate-pulse delay-500"></div>
+
+                  <div className="relative z-10">
+                    {/* Enhanced Step Number Badge */}
+                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white group-hover:scale-110 transition-transform duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+                      <span className="text-white font-black text-lg relative z-10">
+                        {step.id}
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-600/20 rounded-full animate-pulse"></div>
+                    </div>
+
+                    {/* Enhanced Image/Icon Area */}
+                    <div className="mb-8 relative">
+                      <div className="absolute -inset-2 bg-gradient-to-r from-blue-200/20 to-purple-200/20 rounded-2xl blur-lg"></div>
                       <div
-                        key={i}
-                        className="dot w-2 h-2 bg-gray-400 rounded-full"
-                      ></div>
+                        className={`relative w-full h-56 ${step.color} rounded-2xl flex items-center justify-center text-white shadow-xl overflow-hidden group-hover:shadow-2xl transition-all duration-500 transform group-hover:scale-[1.02]`}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/10 rounded-2xl"></div>
+                        {/* Replace this div with your image */}
+                        <div className="text-center p-6 relative z-10">
+                          <div className="mb-3 transform group-hover:scale-110 transition-transform duration-300">
+                            {step.icon}
+                          </div>
+                          <div className="text-base opacity-90 font-semibold">
+                            Replace with Image
+                          </div>
+                          <div className="text-sm opacity-70 mt-2">
+                            Recommended: 400x240px
+                          </div>
+                        </div>
+
+                        {/* Image Overlay Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      </div>
+                    </div>
+
+                    {/* Enhanced Content */}
+                    <div className="text-center space-y-4">
+                      <h3 className="text-2xl font-black text-gray-800 mb-4 leading-tight group-hover:text-indigo-700 transition-colors duration-300">
+                        {step.title}
+                      </h3>
+
+                      <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-100/50 shadow-inner">
+                        <p className="text-gray-700 text-base leading-relaxed group-hover:text-gray-800 transition-colors duration-300 font-medium">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Enhanced Shadow Effects */}
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 rounded-3xl transform translate-y-4 -z-20 group-hover:translate-y-2 transition-transform duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-900/10 rounded-3xl transform translate-y-6 -z-30 group-hover:translate-y-3 transition-transform duration-500"></div>
+              </div>
+
+              {/* Enhanced Dotted Connection */}
+              {index < processSteps.length - 1 && (
+                <div
+                  className={`dotted-line-${index} flex items-center mx-20 relative`}
+                >
+                  {/* Advanced Glowing Line Background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-200/40 via-purple-300/40 to-pink-200/40 h-2 rounded-full blur-md"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 via-purple-200/20 to-pink-100/20 h-1 rounded-full blur-sm"></div>
+
+                  {/* Enhanced Dots with Better Animation */}
+                  <div className="flex space-x-3 relative z-10">
+                    {Array.from({ length: 16 }).map((_, i) => (
+                      <div key={i} className="dot relative">
+                        {/* Main Dot */}
+                        <div
+                          className={`w-4 h-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 rounded-full shadow-lg transition-all duration-300`}
+                          style={{
+                            opacity: 0.6 + Math.sin(i * 0.4) * 0.3,
+                            transform: `scale(${
+                              0.7 + Math.sin(i * 0.2) * 0.4
+                            })`,
+                          }}
+                        ></div>
+                        {/* Glow Effect */}
+                        <div
+                          className="absolute inset-0 bg-gradient-to-r from-blue-300/50 via-purple-400/50 to-pink-300/50 rounded-full blur-sm animate-pulse"
+                          style={{
+                            animationDelay: `${i * 0.1}s`,
+                          }}
+                        ></div>
+                      </div>
                     ))}
+                  </div>
+
+                  {/* Enhanced Arrow */}
+                  <div className="ml-6 flex items-center space-x-1">
+                    <div className="text-4xl text-purple-400 opacity-80 group-hover:opacity-100 transition-opacity duration-300 animate-pulse">
+                      →
+                    </div>
+                    <div className="w-0 h-0 border-l-8 border-l-purple-400/60 border-y-4 border-y-transparent animate-bounce"></div>
                   </div>
                 </div>
               )}

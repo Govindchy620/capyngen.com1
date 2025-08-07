@@ -5,7 +5,7 @@ export default function BestHeading({
   highlight = "Work",
 }) {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start md:px-8">
+    <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row items-center md:items-start justify-center">
       {title && (
         <h1 className="text-[#0A2351] font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl pt-4">
           {title}
@@ -14,14 +14,14 @@ export default function BestHeading({
       <div className="relative leading-none tracking-[0.5rem]">
         {/* Shadow Layer */}
         <h1
-          className="absolute top-[4px] xl:top-[10px] left-[4px] xl:left-[10px] text-[#DCDEE0] font-extrabold text-[3.5rem] md:text-[10rem] z-0 whitespace-nowrap inline-block"
+          className="absolute top-[4px] xl:top-[9px] left-[4px] xl:left-[9px] text-[#DCDEE0] font-extrabold text-[3.5rem] md:text-[9rem] z-0 whitespace-nowrap inline-block"
           style={{ transform: "scaleX(0.8)" }}
         >
           {highlight}
         </h1>
         {/* Main Outlined Text */}
         <h1
-          className="relative text-outline-only font-extrabold text-[3.5rem] md:text-[10rem] z-10 whitespace-nowrap inline-block"
+          className="relative text-outline-only font-extrabold text-[3.5rem] md:text-[9rem] z-10 whitespace-nowrap inline-block"
           style={{ transform: "scaleX(0.8)" }}
         >
           {highlight}

@@ -191,8 +191,8 @@ const ServicesCarousel = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white py-16 min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-6 w-full">
-        <BestHeading title="Our" highlight="Services" />
+      <div className="max-w-[90rem] mx-auto px-6 w-full">
+        <BestHeading title="" highlight="Services" />
         <Slider {...settings}>
           {cards.map((card, idx) => (
             <div key={idx} className="px-3 py-2">

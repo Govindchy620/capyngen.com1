@@ -15,13 +15,10 @@ const HomeAboutUs = () => {
         className=" bg-[#0D2665] text-white w-full min-h-[100vh] relative overflow-x-hidden"
         style={{ backgroundImage: `url(${assets.homeAboutUsBg})` }}
       >
-        <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center py-12 px-4 md:px-12 lg:px-24 space-y-8 md:space-y-0 md:gap-20">
+        <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center py-12 px-4 md:px-12 space-y-8 md:space-y-0 md:gap-20">
           {/* Left Section: Text */}
           <div className="md:w-2/3 flex flex-col space-y-6">
             <div>
-              <span className="inline-block rounded-md bg-transparent bg-opacity-20 text-green-500 px-3 py-1 text-base font-semibold mb-2 border border-green-500">
-                • About Us Technox •
-              </span>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
                 Comprehensive IT Solutions That Drive Innovation, Efficiency,
                 &amp; Growth for Your Business Success.

@@ -8,21 +8,23 @@ import BestHeading from "../components/BestHeading";
 import WhyChooseUs from "../components/WhyChooseUs";
 import LetTalkDiagonal from "../components/LetTalkDiagonal";
 import HomeServices from "../components/HomeServices";
+import HomeBlogs from "../components/HomeBlogs";
+import HeroSection from "../components/HeroSection";
 
 const Homepage = () => {
   return (
     <div>
+      <HeroSection />
       <HomeAboutUs />
-
+      <WhyChooseUs />
       <HorizontalProcessSection />
-      <HomeAboutUs />
+      <ServicesCarousel />
+      <HomeServices />
       <HomeIndustries />
       <TestimonialCarousel />
-      <ServicesCarousel />
       <BestHeading />
-      <WhyChooseUs />
       <LetTalkDiagonal />
-      <HomeServices />
+      <HomeBlogs />
     </div>
   );
 };

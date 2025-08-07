@@ -2,12 +2,14 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import AnimatedButton from "./AnimatedButton";
+import BestHeading from "./BestHeading";
 
 export default function HomeIndustries() {
   return (
-    <div className="min-h-screen py-20 bg-gray-100">
+    <div className="min-h-screen bg-gray-100">
+      <BestHeading title="" highlight="Industries" />
       {/* Top Section */}
-      <div className="relative flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto w-full">
+      <div className="relative flex flex-col lg:flex-row items-center justify-center max-w-[90rem] px-4 md:px-6 lg:px-12 mx-auto w-full">
         {/* Left Image + Stat Card */}
         <div className="relative flex-1 flex flex-col justify-center">
           {/* Image */}
@@ -53,11 +55,6 @@ export default function HomeIndustries() {
         {/* Right Content */}
         <div className="flex-1 flex flex-col justify-center">
           <div className="px-6 md:px-10">
-            <div className="mb-2">
-              <span className="inline-block rounded-md bg-transparent bg-opacity-20 text-green-500 px-3 py-1 text-base font-semibold mb-2 border border-green-500">
-                • Industries We Help •
-              </span>
-            </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
               Empowering All Industries with Smart IT Solutions.
             </h1>
