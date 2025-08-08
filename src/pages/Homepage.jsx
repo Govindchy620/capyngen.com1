@@ -10,6 +10,7 @@ import HomeServices from "../components/HomeServices";
 import HomeBlogs from "../components/HomeBlogs";
 import HeroSection from "../components/HeroSection";
 import FAQSection from "../components/FAQSection";
+import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 
 const Homepage = () => {
   const faqItems = [
@@ -29,6 +30,7 @@ const Homepage = () => {
     },
   ];
 
+  useSplitTextAnimation("h1");
   return (
     <div>
       <HeroSection />
