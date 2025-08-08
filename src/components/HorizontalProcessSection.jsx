@@ -5,11 +5,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BestHeading from "./BestHeading";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const HorizontalProcessSection = () => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
+  const scrollTriggerRefs = useRef([]);
 
   const processSteps = [
     {
@@ -114,7 +113,11 @@ const HorizontalProcessSection = () => {
 
     if (!section || !container) return;
 
-    ScrollTrigger.getAll().forEach((t) => t.kill()); // cleanup on re-run
+    // Kill only the ScrollTrigger instances created by this component
+    scrollTriggerRefs.current.forEach((trigger) => {
+      if (trigger) trigger.kill();
+    });
+    scrollTriggerRefs.current = [];
 
     gsap.set(container.querySelectorAll(".process-card"), {
       opacity: 0,
@@ -123,72 +126,99 @@ const HorizontalProcessSection = () => {
     });
     gsap.set(container.querySelectorAll(".dot"), { opacity: 0, scale: 0 });
 
-    const totalWidth = container.scrollWidth;
-    // Add just enough distance to center the last card properly
-    const scrollDistance =
-      totalWidth - window.innerWidth + window.innerWidth * 0.1;
+    // Wait for the next frame to ensure all elements are rendered
+    requestAnimationFrame(() => {
+      const totalWidth = container.scrollWidth;
+      const viewportWidth = window.innerWidth;
 
-    const horizontalScroll = gsap.to(container, {
-      x: -scrollDistance,
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${scrollDistance}`,
-        scrub: 0.8,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    });
+      // Calculate the scroll distance to ensure the last card is properly centered
+      // Add extra space to account for the last card and padding
+      const scrollDistance = Math.max(0, totalWidth - viewportWidth + 200);
 
-    processSteps.forEach((_, index) => {
-      const card = container.querySelector(`.process-card-${index}`);
-      if (!card) return;
-
-      gsap.to(card, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1.2,
-        ease: "power2.out",
+      const horizontalScroll = gsap.to(container, {
+        x: -scrollDistance,
+        ease: "none",
         scrollTrigger: {
-          trigger: card,
-          containerAnimation: horizontalScroll,
-          start: "left 90%",
-          end: "left 10%",
-          scrub: 0.5,
+          trigger: section,
+          start: "top top",
+          end: () => `+=${scrollDistance}`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+          markers: false, // Set to true for debugging
         },
       });
 
-      // Fix dot animation to fill from left to right properly
-      const dotContainer = container.querySelector(`.dotted-line-${index}`);
-      if (dotContainer) {
-        const dotGroup = dotContainer.querySelectorAll(".dot");
+      // Store the main ScrollTrigger reference
+      if (horizontalScroll.scrollTrigger) {
+        scrollTriggerRefs.current.push(horizontalScroll.scrollTrigger);
+      }
 
-        // Create a timeline for this dot group
-        gsap.set(dotGroup, { opacity: 0, scale: 0 });
+      processSteps.forEach((_, index) => {
+        const card = container.querySelector(`.process-card-${index}`);
+        if (!card) return;
 
-        gsap.to(dotGroup, {
+        const cardAnimation = gsap.to(card, {
           opacity: 1,
+          y: 0,
           scale: 1,
-          duration: 0.02,
-          stagger: {
-            each: 0.05,
-            from: "start",
-          },
+          duration: 1.2,
+          ease: "power2.out",
           scrollTrigger: {
-            trigger: dotContainer,
+            trigger: card,
             containerAnimation: horizontalScroll,
-            start: "left 80%",
-            end: "left 20%",
-            scrub: 1,
+            start: "left 90%",
+            end: "left 10%",
+            scrub: 0.5,
           },
         });
-      }
+
+        // Store the card ScrollTrigger reference
+        if (cardAnimation.scrollTrigger) {
+          scrollTriggerRefs.current.push(cardAnimation.scrollTrigger);
+        }
+
+        // Fix dot animation to fill from left to right properly
+        const dotContainer = container.querySelector(`.dotted-line-${index}`);
+        if (dotContainer) {
+          const dotGroup = dotContainer.querySelectorAll(".dot");
+
+          // Create a timeline for this dot group
+          gsap.set(dotGroup, { opacity: 0, scale: 0 });
+
+          const dotAnimation = gsap.to(dotGroup, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.02,
+            stagger: {
+              each: 0.05,
+              from: "start",
+            },
+            scrollTrigger: {
+              trigger: dotContainer,
+              containerAnimation: horizontalScroll,
+              start: "left 80%",
+              end: "left 20%",
+              scrub: 1,
+            },
+          });
+
+          // Store the dot ScrollTrigger reference
+          if (dotAnimation.scrollTrigger) {
+            scrollTriggerRefs.current.push(dotAnimation.scrollTrigger);
+          }
+        }
+      });
     });
 
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    return () => {
+      // Kill only the ScrollTrigger instances created by this component
+      scrollTriggerRefs.current.forEach((trigger) => {
+        if (trigger) trigger.kill();
+      });
+      scrollTriggerRefs.current = [];
+    };
   }, []);
 
   return (
@@ -347,7 +377,7 @@ const HorizontalProcessSection = () => {
               {/* Enhanced Dotted Connection */}
               {index < processSteps.length - 1 && (
                 <div
-                  className={`dotted-line-${index} flex items-center mx-20 relative`}
+                  className={`dotted-line-${index} flex items-center mx-2 relative`}
                 >
                   {/* Advanced Glowing Line Background */}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-200/40 via-purple-300/40 to-pink-200/40 h-2 rounded-full blur-md"></div>
@@ -355,7 +385,7 @@ const HorizontalProcessSection = () => {
 
                   {/* Enhanced Dots with Better Animation */}
                   <div className="flex space-x-3 relative z-10">
-                    {Array.from({ length: 16 }).map((_, i) => (
+                    {Array.from({ length: 10 }).map((_, i) => (
                       <div key={i} className="dot relative">
                         {/* Main Dot */}
                         <div
@@ -376,14 +406,6 @@ const HorizontalProcessSection = () => {
                         ></div>
                       </div>
                     ))}
-                  </div>
-
-                  {/* Enhanced Arrow */}
-                  <div className="ml-6 flex items-center space-x-1">
-                    <div className="text-4xl text-purple-400 opacity-80 group-hover:opacity-100 transition-opacity duration-300 animate-pulse">
-                      →
-                    </div>
-                    <div className="w-0 h-0 border-l-8 border-l-purple-400/60 border-y-4 border-y-transparent animate-bounce"></div>
                   </div>
                 </div>
               )}

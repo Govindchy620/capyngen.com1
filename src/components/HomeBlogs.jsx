@@ -1,5 +1,7 @@
 // TeamMemberCard.jsx
 import React from "react";
+import BestHeading from "./BestHeading";
+import { assets } from "../assets/assets";
 
 const TeamMemberCard = ({ image, name, title }) => (
   <div className="relative w-72 h-80 rounded-lg overflow-hidden group shadow-lg bg-white mx-auto">
@@ -30,17 +32,22 @@ export default function HomeBlogs() {
   // Sample data
   const members = [
     {
-      image: "/images/member1.jpg",
+      image: assets.blog1,
       name: "Person One",
       title: "Project Manager",
     },
     {
-      image: "/images/member2.jpg",
+      image: assets.blog2,
       name: "Savannah Nguyen",
       title: "Sr. Web Developer",
     },
     {
-      image: "/images/member3.jpg",
+      image: assets.blog3,
+      name: "Person Three",
+      title: "UI/UX Designer",
+    },
+    {
+      image: assets.blog4,
       name: "Person Three",
       title: "UI/UX Designer",
     },
@@ -48,13 +55,16 @@ export default function HomeBlogs() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-10">
-      <h3 className="text-center text-3xl font-bold mb-8">
-        Expert IT Team Driving <br /> Business Success Forward.
-      </h3>
-      <div className="flex flex-col md:flex-row gap-8 justify-center">
-        {members.map((m, idx) => (
-          <TeamMemberCard key={idx} {...m} />
-        ))}
+      <div className=" max-w-[90rem] mx-auto">
+        <BestHeading title="" highlight="News & Updates" />
+        <h3 className="text-center text-3xl font-bold mb-8 mt-10">
+          Expert IT Team Driving <br /> Business Success Forward.
+        </h3>
+        <div className="flex flex-col md:flex-row gap-8 justify-center">
+          {members.map((m, idx) => (
+            <TeamMemberCard key={idx} {...m} />
+          ))}
+        </div>
       </div>
     </div>
   );

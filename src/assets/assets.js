@@ -12,6 +12,13 @@ import testimonial3 from "./testimonial3.webp";
 import testimonial4 from "./testimonial4.webp";
 import testimonial5 from "./testimonial5.webp";
 import whyChooseUs from "./whyChooseUs.webp";
+import capyngenLogo from "./capyngenLogo.png";
+import heroSectionBg from "./heroSectionBg.webp";
+import capyngenFavIcon from "./capyngenFavIcon.png";
+import blog1 from "./blog1.png";
+import blog2 from "./blog2.png";
+import blog3 from "./blog3.png";
+import blog4 from "./blog4.png";
 
 export const assets = {
   homeAboutUs1,
@@ -28,6 +35,13 @@ export const assets = {
   testimonial4,
   testimonial5,
   whyChooseUs,
+  capyngenLogo,
+  heroSectionBg,
+  capyngenFavIcon,
+  blog1,
+  blog2,
+  blog3,
+  blog4,
 };
 
 export const navItems = [

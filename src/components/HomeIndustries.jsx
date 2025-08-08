@@ -7,7 +7,7 @@ import BestHeading from "./BestHeading";
 export default function HomeIndustries() {
   return (
     <div className="min-h-screen bg-gray-100">
-      <BestHeading title="" highlight="Industries" />
+      <BestHeading title="" highlight="Technologies" />
       {/* Top Section */}
       <div className="relative flex flex-col lg:flex-row items-center justify-center max-w-[90rem] px-4 md:px-6 lg:px-12 mx-auto w-full">
         {/* Left Image + Stat Card */}

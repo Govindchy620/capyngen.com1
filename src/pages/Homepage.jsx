@@ -4,14 +4,31 @@ import HorizontalProcessSection from "../components/HorizontalProcessSection";
 import HomeIndustries from "../components/HomeIndustries";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import ServicesCarousel from "../components/ServicesCarousel";
-import BestHeading from "../components/BestHeading";
 import WhyChooseUs from "../components/WhyChooseUs";
 import LetTalkDiagonal from "../components/LetTalkDiagonal";
 import HomeServices from "../components/HomeServices";
 import HomeBlogs from "../components/HomeBlogs";
 import HeroSection from "../components/HeroSection";
+import FAQSection from "../components/FAQSection";
 
 const Homepage = () => {
+  const faqItems = [
+    {
+      question: "How long does it take for funds to show in my wallet?",
+      answer:
+        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+    },
+    {
+      question: "What is the minimum deposit requirement?",
+      answer:
+        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+    },
+    {
+      question: "Are there any fees associated with depositing funds?",
+      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+    },
+  ];
+
   return (
     <div>
       <HeroSection />
@@ -22,9 +39,9 @@ const Homepage = () => {
       <HomeServices />
       <HomeIndustries />
       <TestimonialCarousel />
-      <BestHeading />
-      <LetTalkDiagonal />
       <HomeBlogs />
+      <FAQSection items={faqItems} />
+      <LetTalkDiagonal />
     </div>
   );
 };

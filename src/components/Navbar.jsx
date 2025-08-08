@@ -19,19 +19,10 @@ const Navbar = () => {
     setActiveDropdown(null);
   };
 
-  // Handle scroll detection
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // Show/hide navbar based on scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setShowNavbar(false);
-      } else {
-        setShowNavbar(true);
-      }
-
-      // Set scrolled state
+      setShowNavbar(currentScrollY < lastScrollY || currentScrollY < 100);
       setScrolled(currentScrollY > 20);
       setLastScrollY(currentScrollY);
     };
@@ -40,13 +31,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Handle mobile menu body scroll
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -68,16 +54,15 @@ const Navbar = () => {
         className={`fixed top-0 left-0 w-full transition-all duration-300 z-50 ${
           showNavbar ? "translate-y-0" : "-translate-y-full"
         } ${
-          shouldBeDark 
-            ? "bg-slate-900/95 backdrop-blur-lg shadow-xl border-b border-slate-700/30" 
+          shouldBeDark
+            ? "bg-slate-900/95 backdrop-blur-lg shadow-xl border-b border-slate-700/30"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
-            {/* Logo */}
-            <NavLink 
-              to="/" 
+            <NavLink
+              to="/"
               className="flex-shrink-0 z-50 transition-transform hover:scale-105"
             >
               <img
@@ -87,8 +72,7 @@ const Navbar = () => {
               />
             </NavLink>
 
-            {/* Desktop Navigation */}
-            <div 
+            <div
               className="hidden lg:flex items-center space-x-1"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -104,9 +88,9 @@ const Navbar = () => {
                       }`}
                     >
                       {item.label}
-                      <ChevronDown 
-                        size={14} 
-                        className="transition-transform group-hover:rotate-180" 
+                      <ChevronDown
+                        size={14}
+                        className="transition-transform group-hover:rotate-180"
                       />
                     </button>
                   ) : (
@@ -122,34 +106,67 @@ const Navbar = () => {
                     </NavLink>
                   )}
 
-                  {/* Dropdown Menu */}
+                  {/* Dropdown */}
                   {item.dropdown && (
                     <div className="absolute top-full left-0 right-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2">
                       <div className="fixed inset-x-0 top-16 lg:top-20 bg-slate-900/98 backdrop-blur-lg border-b border-slate-700/30 shadow-2xl">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
-                            {item.dropdown.map((section, secIdx) => (
-                              <div key={secIdx} className="space-y-4">
-                                {section.title && (
-                                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
-                                    {section.title}
-                                  </h3>
-                                )}
-                                <ul className="space-y-2">
-                                  {section.links.map((link, linkIdx) => (
-                                    <li key={linkIdx}>
-                                      <NavLink
-                                        to={link.href}
-                                        className="text-sm text-slate-300 hover:text-white transition-colors duration-200 block py-1 hover:translate-x-1"
-                                      >
-                                        {link.label}
-                                      </NavLink>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
+                          {item.label === "INDUSTRIES" ? (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                              {(() => {
+                                const links = item.dropdown[0].links;
+                                const chunkSize = Math.ceil(links.length / 3);
+                                const chunks = Array.from(
+                                  { length: 3 },
+                                  (_, i) =>
+                                    links.slice(
+                                      i * chunkSize,
+                                      i * chunkSize + chunkSize
+                                    )
+                                );
+                                return chunks.map((column, colIdx) => (
+                                  <div key={colIdx} className="space-y-2">
+                                    <ul className="space-y-2">
+                                      {column.map((link, linkIdx) => (
+                                        <li key={linkIdx}>
+                                          <NavLink
+                                            to={link.href}
+                                            className="text-sm text-slate-300 hover:text-white transition-colors duration-200 block py-1 hover:translate-x-1"
+                                          >
+                                            {link.label}
+                                          </NavLink>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                ));
+                              })()}
+                            </div>
+                          ) : (
+                            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                              {item.dropdown.map((section, secIdx) => (
+                                <div key={secIdx} className="space-y-4">
+                                  {section.title && (
+                                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+                                      {section.title}
+                                    </h3>
+                                  )}
+                                  <ul className="space-y-2">
+                                    {section.links.map((link, linkIdx) => (
+                                      <li key={linkIdx}>
+                                        <NavLink
+                                          to={link.href}
+                                          className="text-sm text-slate-300 hover:text-white transition-colors duration-200 block py-1 hover:translate-x-1"
+                                        >
+                                          {link.label}
+                                        </NavLink>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -167,9 +184,15 @@ const Navbar = () => {
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? (
-                <X size={24} className={shouldBeDark ? "text-slate-100" : "text-white"} />
+                <X
+                  size={24}
+                  className={shouldBeDark ? "text-slate-100" : "text-white"}
+                />
               ) : (
-                <Menu size={24} className={shouldBeDark ? "text-slate-100" : "text-white"} />
+                <Menu
+                  size={24}
+                  className={shouldBeDark ? "text-slate-100" : "text-white"}
+                />
               )}
             </button>
           </div>
@@ -190,14 +213,14 @@ const Navbar = () => {
                         className="w-full flex items-center justify-between py-3 text-left text-slate-100 hover:text-white transition-colors"
                       >
                         <span className="font-medium">{item.label}</span>
-                        <ChevronDown 
-                          size={18} 
+                        <ChevronDown
+                          size={18}
                           className={`transition-transform ${
                             activeDropdown === idx ? "rotate-180" : ""
-                          }`} 
+                          }`}
                         />
                       </button>
-                      
+
                       {activeDropdown === idx && (
                         <div className="mt-2 pl-4 space-y-4">
                           {item.dropdown.map((section, secIdx) => (
