@@ -1,91 +1,132 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function LetTalkDiagonal() {
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
+  const s1 = useRef(null);
+  const s2 = useRef(null);
+  const s3 = useRef(null);
+  const t1 = useRef(null);
+  const t2 = useRef(null);
+  const t3 = useRef(null);
 
-  const rotate = useTransform(scrollYProgress, [0, 0.3], [0, 70]);
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.set([s2.current, s3.current], { xPercent: 100 });
+      gsap.set([t1.current, t2.current, t3.current], { opacity: 0, y: 40 });
 
-  const card1Opacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
-  const card1Y = useTransform(scrollYProgress, [0.3, 0.4], [50, 0]);
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "+=200%",
+          scrub: true,
+          pin: true,
+        },
+      });
 
-  const card2Opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
-  const card2Y = useTransform(scrollYProgress, [0.5, 0.6], [50, 0]);
+      tl.to(s1.current, { xPercent: -30, ease: "none", duration: 1 }, 0)
+        .to(s2.current, { xPercent: 0, ease: "none", duration: 1 }, 0.2)
+        .to(s1.current, { xPercent: -60, ease: "none", duration: 1 }, 0.6)
+        .to(s2.current, { xPercent: -30, ease: "none", duration: 1 }, 0.6)
+        .to(s3.current, { xPercent: 0, ease: "none", duration: 1 }, 1);
 
-  const card3Opacity = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
-  const card3Y = useTransform(scrollYProgress, [0.7, 0.8], [50, 0]);
+      gsap.to(t1.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          scrub: true,
+        },
+      });
+
+      gsap.to(t2.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 60%",
+          scrub: true,
+        },
+      });
+
+      gsap.to(t3.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 40%",
+          scrub: true,
+        },
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div
+    <section
       ref={containerRef}
-      className="relative w-full min-h-[350vh] bg-black text-white flex items-start justify-center overflow-hidden"
+      className="relative w-full min-h-[180vh] overflow-hidden bg-white"
     >
-      <div className="sticky top-0 flex flex-col items-center justify-center h-screen w-full max-w-6xl px-4 py-16">
-        <motion.h3
-          className="text-7xl md:text-[9rem] lg:text-[11rem] font-extrabold leading-none whitespace-nowrap origin-bottom-left"
-          style={{ rotate }}
-        >
-          Let&apos;s Talk
-        </motion.h3>
-        <h3 className="text-7xl md:text-[9rem] lg:text-[11rem] font-extrabold leading-none mt-4">
+      {/* Section 1 */}
+      <div
+        ref={s1}
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(135deg,#9AE65C,#7FD14A)",
+          clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)",
+        }}
+      />
+      {/* Section 2 */}
+      <div
+        ref={s2}
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(135deg,#FFE066,#FFD93D)",
+          clipPath: "polygon(15% 0, 100% 0, 100% 100%, 30% 100%)",
+        }}
+      />
+      {/* Section 3 */}
+      <div
+        ref={s3}
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(135deg,#4ECDC4,#26B5AC)",
+          clipPath: "polygon(70% 0, 100% 0, 100% 100%, 85% 100%)",
+        }}
+      />
+
+      {/* Text */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center gap-4">
+        <h3 ref={t1} className="text-6xl md:text-8xl font-extrabold">
+          Let’s Talk
+        </h3>
+        <h3 ref={t2} className="text-6xl md:text-8xl font-extrabold">
           Our
         </h3>
-        <h3 className="text-7xl md:text-[9rem] lg:text-[11rem] font-extrabold leading-none mt-4 flex items-center gap-4">
-          Team
+        <h3 ref={t3} className="text-4xl md:text-6xl font-extrabold">
+          Team{" "}
+          <a
+            href="mailto:info@themexriver.co.uk"
+            className="text-blue-600 underline"
+          >
+            info@themexriver.co.uk
+          </a>
         </h3>
-        <a
-          href="mailto:info@themexriver.co.uk"
-          className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-400 hover:text-white transition-colors duration-300 mt-8"
-        >
-          info@themexriver.co.uk
-        </a>
-
-        {/* Cards */}
-        <div className="absolute bottom-16 flex flex-col gap-8 w-full max-w-md">
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
-            style={{ opacity: card1Opacity, y: card1Y }}
-          >
-            <h4 className="text-2xl font-bold mb-2">
-              Card 1: Innovative Solutions
-            </h4>
-            <p className="text-gray-300">
-              We bring fresh ideas and cutting-edge technology to solve your
-              toughest challenges.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
-            style={{ opacity: card2Opacity, y: card2Y }}
-          >
-            <h4 className="text-2xl font-bold mb-2">
-              Card 2: Dedicated Support
-            </h4>
-            <p className="text-gray-300">
-              Our team is committed to providing exceptional support every step
-              of the way.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
-            style={{ opacity: card3Opacity, y: card3Y }}
-          >
-            <h4 className="text-2xl font-bold mb-2">Card 3: Proven Results</h4>
-            <p className="text-gray-300">
-              Partner with us to achieve measurable success and drive your
-              business forward.
-            </p>
-          </motion.div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 }

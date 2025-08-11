@@ -19,6 +19,7 @@ import blog1 from "./blog1.png";
 import blog2 from "./blog2.png";
 import blog3 from "./blog3.png";
 import blog4 from "./blog4.png";
+import bg1 from "./bg1.webp";
 
 export const assets = {
   homeAboutUs1,
@@ -42,6 +43,7 @@ export const assets = {
   blog2,
   blog3,
   blog4,
+  bg1,
 };
 
 export const navItems = [

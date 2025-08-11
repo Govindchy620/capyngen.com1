@@ -4,7 +4,7 @@ import BestHeading from "./BestHeading";
 import { assets } from "../assets/assets";
 
 const TeamMemberCard = ({ image, name, title }) => (
-  <div className="relative w-72 h-80 rounded-lg overflow-hidden group shadow-lg bg-white mx-auto">
+  <div className="relative w-84 h-100 rounded-lg overflow-hidden group shadow-lg bg-white mx-auto">
     <img
       src={image}
       alt={name}
@@ -60,7 +60,7 @@ export default function HomeBlogs() {
         <h3 className="text-center text-3xl font-bold mb-8 mt-10">
           Expert IT Team Driving <br /> Business Success Forward.
         </h3>
-        <div className="flex flex-col md:flex-row gap-8 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
           {members.map((m, idx) => (
             <TeamMemberCard key={idx} {...m} />
           ))}
