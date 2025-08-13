@@ -5,7 +5,7 @@ export default function BestHeading({
   highlight = "Work",
 }) {
   return (
-    <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row items-center md:items-start justify-center">
+    <div className="max-w-[90rem] bg-black mx-auto flex flex-col md:flex-row items-center md:items-start justify-center">
       {title && (
         <h1 className="text-[#0A2351] font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl pt-4">
           {title}

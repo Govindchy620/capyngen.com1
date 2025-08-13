@@ -224,7 +224,7 @@ const HorizontalProcessSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 overflow-hidden"
+      className="relative bg-black overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -232,19 +232,7 @@ const HorizontalProcessSection = () => {
         <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-400/20 to-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
 
-        {/* Floating Particles */}
-        {Array.from({ length: 50 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white/30 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`,
-            }}
-          />
-        ))}
+        
       </div>
 
       <div className="h-screen overflow-hidden relative z-10">
@@ -254,59 +242,34 @@ const HorizontalProcessSection = () => {
           style={{ width: "max-content" }}
         >
           <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
-            {/* Decorative Grid */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="grid grid-cols-12 gap-4 h-full">
-                {Array.from({ length: 144 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="border border-white/20 rounded"
-                    style={{
-                      animationDelay: `${i * 0.05}s`,
-                    }}
-                  ></div>
-                ))}
-              </div>
-            </div>
+            
 
             <div className="text-center max-w-4xl relative z-10">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm rounded-full mb-12 shadow-2xl border border-white/30 hover:shadow-3xl transition-all duration-300">
-                <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mr-4 animate-pulse shadow-lg"></div>
-                <span className="text-blue-600 text-sm font-bold tracking-wider uppercase">
-                  ✨ WORK PROCESS TECHNOX ✨
-                </span>
-              </div>
+              
               <BestHeading title="" highlight="Our Work Process" />
 
-              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
+              <div className="mt-15">
                 <p className="text-white/90 text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
                   We begin by understanding your business goals and identifying
                   the right technology solutions. Our team then designs,
-                  implements, and supports systems to ensure{" "}
-                  <span className="text-cyan-300 font-semibold">
-                    optimal performance
-                  </span>
-                  .
+                  implements, and supports systems to ensure optimal performance.
                 </p>
               </div>
 
-              {/* Floating Icons */}
-              <div className="absolute -top-20 -left-20 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full opacity-20 animate-bounce delay-1000"></div>
-              <div className="absolute -top-10 -right-32 w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-30 animate-bounce delay-500"></div>
-              <div className="absolute -bottom-16 left-10 w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full opacity-25 animate-bounce delay-700"></div>
+              
             </div>
           </div>
 
           {processSteps.map((step, index) => (
-            <div key={step.id} className="flex items-center">
+            <div key={step.id} className="flex items-center justify-center">
               {/* Enhanced Card Design */}
               <div
-                className={`process-card process-card-${index} relative max-w-md mx-12 group`}
+                className={`process-card process-card-${index} relative max-w-md mx-12`}
               >
                 {/* Premium Card Background */}
-                <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl p-10 shadow-2xl border border-white/30 overflow-hidden hover:shadow-3xl transition-all duration-700">
+                <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl p-6 shadow-2xl border border-white/30 overflow-hidden hover:shadow-3xl transition-all duration-700">
                   {/* Premium Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/30 rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50 rounded-3xl"></div>
 
                   {/* Animated Premium Border */}
                   <div className="absolute inset-0 rounded-3xl">

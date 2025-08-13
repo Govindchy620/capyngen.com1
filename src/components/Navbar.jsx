@@ -55,7 +55,7 @@ const Navbar = () => {
           showNavbar ? "translate-y-0" : "-translate-y-full"
         } ${
           shouldBeDark
-            ? "bg-slate-900/95 backdrop-blur-lg shadow-xl border-b border-slate-700/30"
+            ? "bg-slate-900/95 backdrop-blur-lg shadow-xl"
             : "bg-transparent"
         }`}
       >

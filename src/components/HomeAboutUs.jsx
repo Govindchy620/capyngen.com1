@@ -12,7 +12,7 @@ const HomeAboutUs = () => {
     <div>
       <BestHeading title="" highlight="About Us" />
       <div
-        className=" bg-[#0D2665] text-white w-full min-h-[100vh] relative overflow-x-hidden"
+        className=" bg-black text-white w-full min-h-[100vh] relative overflow-x-hidden"
         style={{ backgroundImage: `url(${assets.homeAboutUsBg})` }}
       >
         <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center py-12 px-4 md:px-12 space-y-8 md:space-y-0 md:gap-20">
