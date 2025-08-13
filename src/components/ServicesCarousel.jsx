@@ -190,22 +190,24 @@ const ServicesCarousel = () => {
   const currentGroup = Math.floor(currentSlide / slidesToScroll) + 1;
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-white py-16 min-h-screen flex items-center">
-      <div className="max-w-[90rem] mx-auto px-6 w-full">
-        <BestHeading title="" highlight="Services" />
-        <Slider {...settings}>
-          {cards.map((card, idx) => (
-            <div key={idx} className="px-3 py-2">
-              <Card {...card} />
-            </div>
-          ))}
-        </Slider>
-        <div className="mt-8 flex justify-center items-center space-x-3">
-          <span className="text-gray-700 font-semibold text-lg">
-            Showing <span className="text-gray-900">{currentGroup}</span> of{" "}
-            <span className="text-gray-900">{totalGroups}</span>
-          </span>
-          <div className="h-4 w-4 bg-gray-800 rounded-full animate-pulse"></div>
+    <div>
+      <BestHeading title="" highlight="Services" />
+      <div className="bg-black h-[85vh] flex items-center">
+        <div className="max-w-[90rem] mx-auto px-6 w-full">
+          <Slider {...settings}>
+            {cards.map((card, idx) => (
+              <div key={idx} className="px-3 py-2">
+                <Card {...card} />
+              </div>
+            ))}
+          </Slider>
+          <div className="flex justify-center items-center space-x-3">
+            <span className="text-white font-semibold text-lg">
+              Showing <span className="text-white">{currentGroup}</span> of{" "}
+              <span className="text-white">{totalGroups}</span>
+            </span>
+            <div className="h-4 w-4 bg-white rounded-full animate-pulse"></div>
+          </div>
         </div>
       </div>
     </div>

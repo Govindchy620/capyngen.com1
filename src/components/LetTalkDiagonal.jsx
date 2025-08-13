@@ -79,7 +79,7 @@ export default function LetTalkDiagonal() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[180vh] overflow-hidden bg-white"
+      className="relative w-full min-h-[180vh] overflow-hidden"
     >
       {/* Section 1 */}
       <div

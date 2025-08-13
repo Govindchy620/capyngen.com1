@@ -222,19 +222,7 @@ const HorizontalProcessSection = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative bg-black overflow-hidden"
-    >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-400/20 to-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-
-        
-      </div>
-
+    <section ref={sectionRef} className="relative bg-black overflow-hidden">
       <div className="h-screen overflow-hidden relative z-10">
         <div
           ref={containerRef}
@@ -242,21 +230,17 @@ const HorizontalProcessSection = () => {
           style={{ width: "max-content" }}
         >
           <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
-            
-
             <div className="text-center max-w-4xl relative z-10">
-              
               <BestHeading title="" highlight="Our Work Process" />
 
               <div className="mt-15">
                 <p className="text-white/90 text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
                   We begin by understanding your business goals and identifying
                   the right technology solutions. Our team then designs,
-                  implements, and supports systems to ensure optimal performance.
+                  implements, and supports systems to ensure optimal
+                  performance.
                 </p>
               </div>
-
-              
             </div>
           </div>
 
@@ -267,43 +251,23 @@ const HorizontalProcessSection = () => {
                 className={`process-card process-card-${index} relative max-w-md mx-12`}
               >
                 {/* Premium Card Background */}
-                <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl p-6 shadow-2xl border border-white/30 overflow-hidden hover:shadow-3xl transition-all duration-700">
-                  {/* Premium Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50 rounded-3xl"></div>
-
-                  {/* Animated Premium Border */}
-                  <div className="absolute inset-0 rounded-3xl">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-purple-500/30 to-pink-400/30 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
-                    <div className="absolute inset-[1px] bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl"></div>
-                  </div>
-
-                  {/* Floating Elements */}
-                  <div className="absolute top-4 left-4 w-2 h-2 bg-blue-400/40 rounded-full animate-pulse"></div>
-                  <div className="absolute top-8 right-6 w-1.5 h-1.5 bg-purple-400/40 rounded-full animate-pulse delay-1000"></div>
-                  <div className="absolute bottom-6 left-6 w-1 h-1 bg-pink-400/40 rounded-full animate-pulse delay-500"></div>
-
-                  <div className="relative z-10">
+                <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl shadow-2xl">
+                  <div className="relative">
                     {/* Enhanced Step Number Badge */}
-                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white group-hover:scale-110 transition-transform duration-500">
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white">
                       <span className="text-white font-black text-lg relative z-10">
                         {step.id}
                       </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-600/20 rounded-full animate-pulse"></div>
                     </div>
 
                     {/* Enhanced Image/Icon Area */}
-                    <div className="mb-8 relative">
-                      <div className="absolute -inset-2 bg-gradient-to-r from-blue-200/20 to-purple-200/20 rounded-2xl blur-lg"></div>
+                    <div className="mb-8">
                       <div
-                        className={`relative w-full h-56 ${step.color} rounded-2xl flex items-center justify-center text-white shadow-xl overflow-hidden group-hover:shadow-2xl transition-all duration-500 transform group-hover:scale-[1.02]`}
+                        className={`w-full h-56 ${step.color} rounded-t-2xl flex items-center justify-center text-white`}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/10 rounded-2xl"></div>
                         {/* Replace this div with your image */}
                         <div className="text-center p-6 relative z-10">
-                          <div className="mb-3 transform group-hover:scale-110 transition-transform duration-300">
-                            {step.icon}
-                          </div>
+                          <div className="mb-3">{step.icon}</div>
                           <div className="text-base opacity-90 font-semibold">
                             Replace with Image
                           </div>
@@ -311,19 +275,16 @@ const HorizontalProcessSection = () => {
                             Recommended: 400x240px
                           </div>
                         </div>
-
-                        {/* Image Overlay Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
                     </div>
 
                     {/* Enhanced Content */}
-                    <div className="text-center space-y-4">
+                    <div className="text-center space-y-4 px-2">
                       <h3 className="text-2xl font-black text-gray-800 mb-4 leading-tight group-hover:text-indigo-700 transition-colors duration-300">
                         {step.title}
                       </h3>
 
-                      <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-100/50 shadow-inner">
+                      <div className=" p-6 rounded-2xl">
                         <p className="text-gray-700 text-base leading-relaxed group-hover:text-gray-800 transition-colors duration-300 font-medium">
                           {step.description}
                         </p>
@@ -331,10 +292,6 @@ const HorizontalProcessSection = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Enhanced Shadow Effects */}
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 rounded-3xl transform translate-y-4 -z-20 group-hover:translate-y-2 transition-transform duration-500"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-900/10 rounded-3xl transform translate-y-6 -z-30 group-hover:translate-y-3 transition-transform duration-500"></div>
               </div>
 
               {/* Enhanced Dotted Connection */}
@@ -358,13 +315,6 @@ const HorizontalProcessSection = () => {
                             transform: `scale(${
                               0.7 + Math.sin(i * 0.2) * 0.4
                             })`,
-                          }}
-                        ></div>
-                        {/* Glow Effect */}
-                        <div
-                          className="absolute inset-0 bg-gradient-to-r from-blue-300/50 via-purple-400/50 to-pink-300/50 rounded-full blur-sm animate-pulse"
-                          style={{
-                            animationDelay: `${i * 0.1}s`,
                           }}
                         ></div>
                       </div>

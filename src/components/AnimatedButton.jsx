@@ -20,7 +20,7 @@ const AnimatedButton = ({ text = "Click Me", onClick }) => {
       initial="initial"
       whileHover="hover"
       onClick={onClick}
-      className="relative w-fit inline-flex items-center h-[56px] bg-gradient-to-r from-blue-600 to-purple-500 rounded-xl overflow-hidden px-6 cursor-pointer"
+      className="relative w-fit inline-flex items-center h-[56px] bg-gradient-to-r from-blue-600 to-[#4D85FF] rounded-xl overflow-hidden px-6 cursor-pointer"
     >
       {/* Icon */}
       <motion.div

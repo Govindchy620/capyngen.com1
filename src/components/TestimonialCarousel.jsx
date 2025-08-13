@@ -120,7 +120,7 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <section className="w-full bg-[#0A1940] text-white">
+    <section className="w-full bg-black text-white">
       <BestHeading title="" highlight="Testimonials" />
       <div className="container max-w-[90rem] mx-auto flex flex-col lg:flex-row gap-10">
         {/* Left Section */}
@@ -134,7 +134,7 @@ export default function TestimonialCarousel() {
               alt="Customer Testimonial"
               className="rounded-lg object-cover w-full h-auto"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0A1940] to-transparent p-6 pt-12 rounded-b-lg">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-700 to-transparent p-6 pt-12">
               <p className="text-6xl sm:text-7xl md:text-8xl font-bold mb-2">
                 4.9
               </p>
@@ -165,7 +165,7 @@ export default function TestimonialCarousel() {
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-2">
-                  <div className="bg-[#0A3492] rounded-xl p-6 sm:p-10 lg:p-15 relative overflow-hidden flex flex-col justify-between min-h-[450px] sm:min-h-[500px]">
+                  <div className="bg-blue-800 rounded-xl p-6 sm:p-10 lg:p-15 relative overflow-hidden flex flex-col justify-between min-h-[450px] sm:min-h-[500px]">
                     <div className="flex items-center mb-6">
                       <div>
                         <h3 className="text-2xl font-semibold">

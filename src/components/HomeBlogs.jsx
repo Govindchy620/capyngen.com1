@@ -4,7 +4,7 @@ import BestHeading from "./BestHeading";
 import { assets } from "../assets/assets";
 
 const TeamMemberCard = ({ image, name, title }) => (
-  <div className="relative w-84 h-100 rounded-lg overflow-hidden group shadow-lg bg-white mx-auto">
+  <div className="relative w-84 h-100 rounded-lg overflow-hidden group shadow-lg mx-auto">
     <img
       src={image}
       alt={name}
@@ -21,7 +21,7 @@ const TeamMemberCard = ({ image, name, title }) => (
         shadow-md
       "
     >
-      <p className="text-xl font-semibold">{name}</p>
+      <p className="text-xl text-black font-semibold">{name}</p>
       <p className="text-gray-600 text-sm mt-2">{title}</p>
       {/* Add social icons or more content as needed */}
     </div>
@@ -54,7 +54,7 @@ export default function HomeBlogs() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <div className="min-h-screen bg-black text-white py-10">
       <div className=" max-w-[90rem] mx-auto">
         <BestHeading title="" highlight="News & Updates" />
         <h3 className="text-center text-3xl font-bold mb-8 mt-10">
