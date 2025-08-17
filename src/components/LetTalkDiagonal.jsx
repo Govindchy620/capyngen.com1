@@ -1,132 +1,138 @@
 "use client";
-
-import { useRef, useLayoutEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React, { useEffect, useState } from "react";
 
 export default function LetTalkDiagonal() {
-  const containerRef = useRef(null);
-  const s1 = useRef(null);
-  const s2 = useRef(null);
-  const s3 = useRef(null);
-  const t1 = useRef(null);
-  const t2 = useRef(null);
-  const t3 = useRef(null);
+  const [scrollY, setScrollY] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(800); // Default height
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.set([s2.current, s3.current], { xPercent: 100 });
-      gsap.set([t1.current, t2.current, t3.current], { opacity: 0, y: 40 });
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    const handleResize = () => setWindowHeight(window.innerHeight);
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "+=200%",
-          scrub: true,
-          pin: true,
-        },
-      });
+    // Set initial height
+    setWindowHeight(window.innerHeight);
 
-      tl.to(s1.current, { xPercent: -30, ease: "none", duration: 1 }, 0)
-        .to(s2.current, { xPercent: 0, ease: "none", duration: 1 }, 0.2)
-        .to(s1.current, { xPercent: -60, ease: "none", duration: 1 }, 0.6)
-        .to(s2.current, { xPercent: -30, ease: "none", duration: 1 }, 0.6)
-        .to(s3.current, { xPercent: 0, ease: "none", duration: 1 }, 1);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
-      gsap.to(t1.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          scrub: true,
-        },
-      });
-
-      gsap.to(t2.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 60%",
-          scrub: true,
-        },
-      });
-
-      gsap.to(t3.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 40%",
-          scrub: true,
-        },
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
-  return (
-    <section
-      ref={containerRef}
-      className="relative w-full min-h-[180vh] overflow-hidden"
-    >
-      {/* Section 1 */}
-      <div
-        ref={s1}
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(135deg,#9AE65C,#7FD14A)",
-          clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)",
-        }}
-      />
-      {/* Section 2 */}
-      <div
-        ref={s2}
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(135deg,#FFE066,#FFD93D)",
-          clipPath: "polygon(15% 0, 100% 0, 100% 100%, 30% 100%)",
-        }}
-      />
-      {/* Section 3 */}
-      <div
-        ref={s3}
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(135deg,#4ECDC4,#26B5AC)",
-          clipPath: "polygon(70% 0, 100% 0, 100% 100%, 85% 100%)",
-        }}
-      />
+  // Calculate rotation angles based on scroll
+  const getRotationAngle = (sectionIndex, scrollOffset = 0) => {
+    const scrollProgress = Math.max(
+      0,
+      Math.min(1, (scrollY - scrollOffset) / windowHeight)
+    );
+    return scrollProgress * 90; // Rotate up to 90 degrees
+  };
 
-      {/* Text */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center gap-4">
-        <h3 ref={t1} className="text-6xl md:text-8xl font-extrabold">
-          Let’s Talk
-        </h3>
-        <h3 ref={t2} className="text-6xl md:text-8xl font-extrabold">
-          Our
-        </h3>
-        <h3 ref={t3} className="text-4xl md:text-6xl font-extrabold">
-          Team{" "}
-          <a
-            href="mailto:info@themexriver.co.uk"
-            className="text-blue-600 underline"
+  const sections = [
+    { bg: "bg-lime-400", text: "Let' Talk", offset: 0 },
+    { bg: "bg-yellow-400", text: "Team", offset: windowHeight },
+    { bg: "bg-teal-400", text: "Our", offset: windowHeight * 2 },
+    { bg: "bg-lime-400", text: "Let' Talk", offset: windowHeight * 3 },
+  ];
+
+  return (
+    <div className="relative" style={{ height: `${sections.length * 100}vh` }}>
+      {/* Rotating sections */}
+      {sections.map((section, index) => {
+        const rotationAngle = getRotationAngle(index, section.offset);
+        const isVisible =
+          scrollY >= section.offset - windowHeight &&
+          scrollY <= section.offset + windowHeight * 2;
+
+        return (
+          <div
+            key={index}
+            className={`fixed inset-0 ${section.bg} transition-transform duration-500 ease-out`}
+            style={{
+              transformOrigin: "0 0", // Pivot from top-left corner
+              transform: `rotate(${rotationAngle}deg)`,
+              zIndex: sections.length - index, // Stack order
+              opacity: isVisible ? 1 : 0,
+            }}
           >
-            info@themexriver.co.uk
-          </a>
-        </h3>
-      </div>
-    </section>
+            {/* Content container that counter-rotates to keep text upright */}
+            <div
+              className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out"
+              style={{
+                transformOrigin: "50% 50%",
+                transform: `rotate(${-rotationAngle * 0.3}deg)`, // Counter-rotate text slightly
+              }}
+            >
+              <h1
+                className="text-8xl md:text-9xl font-bold text-black transition-all duration-500 ease-out"
+                style={{
+                  opacity:
+                    rotationAngle < 45 ? 1 - (rotationAngle / 45) * 0.5 : 0.5,
+                  transform: `scale(${Math.max(
+                    0.8,
+                    1 - rotationAngle * 0.003
+                  )})`,
+                }}
+              >
+                {section.text}
+              </h1>
+            </div>
+
+            {/* Email contact for Team section */}
+            {section.text === "Team" && (
+              <div
+                className="absolute bottom-20 right-20 transition-all duration-500 ease-out"
+                style={{
+                  opacity:
+                    rotationAngle < 30
+                      ? Math.max(0, 1 - rotationAngle * 0.05)
+                      : 0,
+                  transform: `rotate(${-rotationAngle * 0.5}deg) translateX(${
+                    rotationAngle * 2
+                  }px)`,
+                }}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center">
+                    <span className="text-2xl text-white">@</span>
+                  </div>
+                  <div className="text-black font-semibold">
+                    info@themexriver.co.uk
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
+
+      {/* Background sections (revealed as top sections rotate away) */}
+      {sections.map((section, index) => {
+        if (index === 0) return null; // Skip first section as it's the base
+
+        return (
+          <div
+            key={`bg-${index}`}
+            className={`absolute inset-0 ${section.bg}`}
+            style={{
+              zIndex: 1, // Behind rotating sections
+            }}
+          >
+            <div className="absolute inset-0 flex items-center justify-center">
+              <h1 className="text-8xl md:text-9xl font-bold text-black opacity-20">
+                {section.text}
+              </h1>
+            </div>
+          </div>
+        );
+      })}
+
+      {/* Invisible scroll spacers */}
+      {sections.map((_, index) => (
+        <div key={`spacer-${index}`} className="h-screen" />
+      ))}
+    </div>
   );
 }

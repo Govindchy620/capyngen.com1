@@ -45,7 +45,7 @@ const HeroSection = ({ onEnd }) => {
       });
 
       tl.to(logo, {
-        scale: 4,
+        scale: 8,
         rotate: 360,
         ease: "none",
       }).to(logo, {
@@ -89,7 +89,7 @@ const HeroSection = ({ onEnd }) => {
           ref={logoRef}
           src={assets.capyngenFavIcon}
           alt="Logo"
-          className="w-24 h-24 md:w-40 md:h-40 will-change-transform"
+          className="w-24 h-24 md:w-10 md:h-10 will-change-transform"
           draggable="false"
           style={{ transformOrigin: "center center" }}
         />

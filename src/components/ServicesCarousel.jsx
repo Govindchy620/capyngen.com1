@@ -4,7 +4,7 @@ import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"; // Import Lucide icons
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import BestHeading from "./BestHeading";
 
 const cards = [
@@ -98,10 +98,10 @@ const cards = [
   },
 ];
 
-// Custom styled navigation arrows
+// Custom arrows
 const NextArrow = ({ onClick }) => (
   <button
-    className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white rounded-full p-3 shadow-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
     onClick={onClick}
     aria-label="Next"
   >
@@ -111,7 +111,7 @@ const NextArrow = ({ onClick }) => (
 
 const PrevArrow = ({ onClick }) => (
   <button
-    className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white rounded-full p-3 shadow-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
     onClick={onClick}
     aria-label="Previous"
   >
@@ -121,28 +121,25 @@ const PrevArrow = ({ onClick }) => (
 
 const Card = ({ icon, title, desc, items }) => (
   <div
-    className="relative group rounded-2xl p-8 min-h-[380px] flex flex-col shadow-md bg-white overflow-hidden
-               transition-shadow duration-300 hover:shadow-xl cursor-pointer border border-gray-200"
+    className="relative group rounded-2xl p-8 min-h-[380px] flex flex-col shadow-lg
+               bg-gradient-to-br from-white/90 via-white/80 to-white/90 
+               backdrop-blur-md overflow-hidden border border-gray-200/40
+               transition-all duration-500 hover:shadow-2xl hover:scale-[1.03] cursor-pointer"
   >
-    {/* Gradient overlay */}
-    <div
-      className="absolute inset-0 bg-gradient-to-br
-                 from-gray-100 via-gray-50 to-white
-                 opacity-0 group-hover:opacity-100
-                 transition-all duration-500 z-0"
-    />
-    {/* Card content */}
+    {/* Glow border effect */}
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-2xl"></div>
+
     <div className="relative z-10 flex flex-col h-full">
       <div className="flex mb-4 items-center">
-        <span className="w-12 h-12 flex justify-center items-center rounded-full bg-gray-800 text-white text-2xl shadow-sm mr-3">
+        <span className="w-12 h-12 flex justify-center items-center rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 text-white text-2xl shadow-md mr-3">
           {icon}
         </span>
-        <span className="ml-auto flex items-center border border-gray-200 rounded-full w-10 h-10 justify-center group-hover:bg-gray-100 transition-colors duration-300">
-          <ArrowRight className="h-5 w-5 text-gray-500 group-hover:text-gray-700 transition-colors duration-300" />
+        <span className="ml-auto flex items-center border border-gray-300 rounded-full w-10 h-10 justify-center group-hover:bg-indigo-50 transition-colors duration-300">
+          <ArrowRight className="h-5 w-5 text-gray-500 group-hover:text-indigo-600 transition-colors duration-300" />
         </span>
       </div>
       <h2 className="font-bold text-lg mb-2 text-gray-900">{title}</h2>
-      <p className="text-gray-500 text-sm mb-4">{desc}</p>
+      <p className="text-gray-600 text-sm mb-4">{desc}</p>
       <ul className="text-gray-700 text-[15px] pl-3 list-disc flex-grow">
         {items.map((it, idx) => (
           <li key={idx} className="my-1">
@@ -155,7 +152,7 @@ const Card = ({ icon, title, desc, items }) => (
 );
 
 const ServicesCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0); // [^1][^2]
+  const [currentSlide, setCurrentSlide] = useState(0);
   const slidesToShow = 4;
   const slidesToScroll = 1;
   const settings = {
@@ -166,28 +163,16 @@ const ServicesCarousel = () => {
     slidesToScroll,
     arrows: true,
     autoplay: true,
+    autoplaySpeed: 3000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
     responsive: [
-      {
-        breakpoint: 1280, // xl
-        settings: { slidesToShow: 3, slidesToScroll: 1 },
-      },
-      {
-        breakpoint: 1024, // lg
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
-      },
-      {
-        breakpoint: 768, // md
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
-      },
+      { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
     ],
   };
-
-  // Calculate total groups for pagination display
-  const totalGroups = cards.length;
-  const currentGroup = Math.floor(currentSlide / slidesToScroll) + 1;
 
   return (
     <div>
@@ -201,13 +186,6 @@ const ServicesCarousel = () => {
               </div>
             ))}
           </Slider>
-          <div className="flex justify-center items-center space-x-3">
-            <span className="text-white font-semibold text-lg">
-              Showing <span className="text-white">{currentGroup}</span> of{" "}
-              <span className="text-white">{totalGroups}</span>
-            </span>
-            <div className="h-4 w-4 bg-white rounded-full animate-pulse"></div>
-          </div>
         </div>
       </div>
     </div>

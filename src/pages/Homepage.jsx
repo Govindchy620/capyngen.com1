@@ -11,6 +11,8 @@ import HomeBlogs from "../components/HomeBlogs";
 import HeroSection from "../components/HeroSection";
 import FAQSection from "../components/FAQSection";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
+import WebServices from "../components/WebServices";
+import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
 const Homepage = () => {
   const faqItems = [
@@ -42,8 +44,10 @@ const Homepage = () => {
       <HomeIndustries />
       <TestimonialCarousel />
       <HomeBlogs />
-      <FAQSection items={faqItems} />
-      <LetTalkDiagonal />
+      <FAQSection items={faqItems} />\
+      <section>{/* <LetTalkDiagonal /> */}</section>
+      <WebServices />
+      <ScrollRevealEffect />
     </div>
   );
 };

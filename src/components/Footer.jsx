@@ -16,6 +16,8 @@ import { useState, useEffect } from "react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showAllServices, setShowAllServices] = useState(false);
+  const [showAllIndustries, setShowAllIndustries] = useState(false);
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
@@ -66,9 +68,9 @@ const Footer = () => {
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/10 to-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/10 to-orange-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
       </div>
 
       {/* Main Footer Content */}
@@ -122,31 +124,41 @@ const Footer = () => {
               <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
             </h4>
             <div className="space-y-4">
-              {navItems.slice(0, 1).map((item, idx) => (
-                <div key={idx}>
-                  {item.dropdown?.map((section, secIdx) => (
-                    <div key={secIdx} className="mb-4">
-                      {section.title && (
-                        <h5 className="text-blue-400 font-semibold mb-3 text-sm">
-                          {section.title}
-                        </h5>
-                      )}
-                      <ul className="space-y-2">
-                        {section.links.slice(0, 4).map((link, i) => (
-                          <li key={i}>
-                            <NavLink
-                              to={link.href}
-                              className="text-slate-300 hover:text-blue-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block"
-                            >
-                              {link.label}
-                            </NavLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              ))}
+              {navItems.slice(0, 1).map((item, idx) => {
+                // Flatten all services across dropdown sections
+                const allServices =
+                  item.dropdown?.flatMap((section) => section.links) || [];
+                const displayedServices = showAllServices
+                  ? allServices
+                  : allServices.slice(0, 10);
+
+                return (
+                  <div key={idx}>
+                    <ul className="space-y-2">
+                      {displayedServices.map((link, i) => (
+                        <li key={i}>
+                          <NavLink
+                            to={link.href}
+                            className="text-slate-300 hover:text-blue-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block"
+                          >
+                            {link.label}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Show More / Show Less Button */}
+                    {allServices.length > 10 && (
+                      <button
+                        onClick={() => setShowAllServices(!showAllServices)}
+                        className="mt-3 text-blue-400 text-sm font-medium hover:underline cursor-pointer"
+                      >
+                        {showAllServices ? "Show Less" : "Show More"}
+                      </button>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -159,22 +171,41 @@ const Footer = () => {
             <div className="space-y-4">
               {navItems.slice(1, 2).map((item, idx) => (
                 <div key={idx}>
-                  {item.dropdown?.map((section, secIdx) => (
-                    <div key={secIdx} className="mb-4">
-                      <ul className="space-y-2">
-                        {section.links.map((link, i) => (
-                          <li key={i}>
-                            <NavLink
-                              to={link.href}
-                              className="text-slate-300 hover:text-blue-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block"
-                            >
-                              {link.label}
-                            </NavLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                  {item.dropdown?.map((section, secIdx) => {
+                    const allIndustries = section.links;
+                    const displayedIndustries = showAllIndustries
+                      ? allIndustries
+                      : allIndustries.slice(0, 10);
+
+                    return (
+                      <div key={secIdx} className="mb-4">
+                        <ul className="space-y-2">
+                          {displayedIndustries.map((link, i) => (
+                            <li key={i}>
+                              <NavLink
+                                to={link.href}
+                                className="text-slate-300 hover:text-blue-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block"
+                              >
+                                {link.label}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+
+                        {/* Show More / Show Less Button */}
+                        {allIndustries.length > 10 && (
+                          <button
+                            onClick={() =>
+                              setShowAllIndustries(!showAllIndustries)
+                            }
+                            className="mt-3 text-blue-400 text-sm font-medium hover:underline"
+                          >
+                            {showAllIndustries ? "Show Less" : "Show More"}
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               ))}
             </div>
@@ -295,7 +326,7 @@ const Footer = () => {
       <div className="relative h-[50px] md:h-[100px]">
         {/* Capyngen watermark */}
         <div className="absolute top-0 -translate-y-1/2 inset-0 flex items-center justify-center pointer-events-none">
-          <div className="text-slate-800 text-7xl md:text-9xl lg:text-[12rem] font-bold md:tracking-wider select-none">
+          <div className="text-slate-800/50 text-7xl md:text-9xl lg:text-[12rem] font-bold md:tracking-wider select-none">
             capyngen
           </div>
         </div>

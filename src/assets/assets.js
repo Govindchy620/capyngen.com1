@@ -138,10 +138,6 @@ export const navItems = [
           { label: "Capital Market", href: "/industries/capital-market" },
           { label: "Life Science", href: "/industries/life-science" },
           {
-            label: "Consumer Packaged Goods & Distribution",
-            href: "/industries/cpg-distribution",
-          },
-          {
             label: "Healthcare & Fitness",
             href: "/industries/healthcare-fitness",
           },
@@ -157,6 +153,10 @@ export const navItems = [
           { label: "E-Commerce", href: "/industries/e-commerce" },
           { label: "High Tech", href: "/industries/high-tech" },
           { label: "Travel & Logistics", href: "/industries/travel-logistics" },
+          {
+            label: "Consumer Packaged Goods & Distribution",
+            href: "/industries/cpg-distribution",
+          },
           { label: "Insurance", href: "/industries/insurance" },
           {
             label: "Communication, Media & Information Services",
