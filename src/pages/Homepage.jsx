@@ -44,9 +44,9 @@ const Homepage = () => {
       <HomeIndustries />
       <TestimonialCarousel />
       <HomeBlogs />
-      <FAQSection items={faqItems} />\
-      <section>{/* <LetTalkDiagonal /> */}</section>
-      <WebServices />
+      <FAQSection items={faqItems} />
+      {/* <section> <LetTalkDiagonal />      </section> */}
+      {/* <WebServices /> */}
       <ScrollRevealEffect />
     </div>
   );
