@@ -49,10 +49,10 @@ const TechnologiesCarousel = () => {
   return (
     <section className="bg-black text-white py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 transition-all duration-500">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
           Web Development Technologies We Use
-        </h2>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+        </h1>
+        <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">
           We create impactful digital experiences that help businesses grow. Our
           team blends creativity, strategy, and technology to craft innovative
           and user-friendly solutions.

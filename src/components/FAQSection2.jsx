@@ -11,10 +11,10 @@ const FAQSection2 = ({ title, items }) => {
 
   return (
     <div className="bg-black text-white py-16 px-4 md:px-10 flex flex-col items-center">
-      <h2 className="text-4xl md:text-5xl font-bold mb-6 transition-all duration-500">
+      <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
         FAQs
-      </h2>
-      <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center">
+      </h1>
+      <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">
         Clear All your queries with our comprehensive FAQ section. Get quick
         answers to common questions about our services, processes, and more.
       </p>
