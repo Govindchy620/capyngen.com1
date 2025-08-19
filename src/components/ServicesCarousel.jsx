@@ -175,7 +175,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <div>
+    <div className="bg-black">
       <BestHeading title="" highlight="Services" />
       <div className="bg-black h-[85vh] flex items-center">
         <div className="max-w-[90rem] mx-auto px-6 w-full">

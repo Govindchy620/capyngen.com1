@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import BestHeading from "./BestHeading";
 
-const FAQSection = ({ title, items }) => {
+const FAQSection2 = ({ title, items }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
@@ -10,8 +10,14 @@ const FAQSection = ({ title, items }) => {
   };
 
   return (
-    <div className="bg-black text-white py-16 px-4 md:px-10">
-      <BestHeading title="" highlight="FAQs" />
+    <div className="bg-black text-white py-16 px-4 md:px-10 flex flex-col items-center">
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 transition-all duration-500">
+        FAQs
+      </h2>
+      <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center">
+        Clear All your queries with our comprehensive FAQ section. Get quick
+        answers to common questions about our services, processes, and more.
+      </p>
       <div className="max-w-4xl mx-auto  mt-10">
         {items.map((item, index) => (
           <div
@@ -45,4 +51,4 @@ const FAQSection = ({ title, items }) => {
   );
 };
 
-export default FAQSection;
+export default FAQSection2;

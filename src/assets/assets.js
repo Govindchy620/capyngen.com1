@@ -55,7 +55,7 @@ export const navItems = [
         links: [
           { label: "App Development", href: "/services/app-development" },
           { label: "Custom AI Solution", href: "/services/ai-solutions" },
-          { label: "Web Development", href: "/services/web-development" },
+          { label: "Web Development", href: "/web-development" },
           {
             label: "E-Commerce Solutions",
             href: "/services/ecommerce-solutions",

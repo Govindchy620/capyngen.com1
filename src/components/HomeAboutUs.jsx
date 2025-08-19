@@ -9,7 +9,7 @@ const demoPeople = [assets.team1, assets.team2, assets.team3, assets.team4];
 
 const HomeAboutUs = () => {
   return (
-    <div>
+    <div className="bg-black">
       <BestHeading title="" highlight="About Us" />
       <div
         className=" bg-black text-white w-full min-h-[100vh] relative overflow-x-hidden"

@@ -6,19 +6,26 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import WebDevelopment from "./pages/WebDevelopment";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden">
-      <Navbar />
-      <div>
-        <Homepage />
+    <Router>
+      <div className="overflow-x-hidden">
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/web-development" element={<WebDevelopment />} />
+        </Routes>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 };
 

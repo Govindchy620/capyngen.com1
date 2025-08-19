@@ -282,14 +282,14 @@ const Footer = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <button
               onClick={scrollToTop}
-              className={`w-12 h-12 rounded-full border border-teal-400/50 bg-slate-800/50 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-teal-400 ${
+              className={`w-12 h-12 rounded-full border border-blue-500 bg-slate-800/50 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-white hover:bg-blue-500 cursor-pointer group ${
                 showScrollTop
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
               }`}
               aria-label="Scroll to top"
             >
-              <ArrowUp className="w-5 h-5 text-teal-400" />
+              <ArrowUp className="w-5 h-5 text-blue-500 group-hover:text-white" />
             </button>
           </div>
         </div>

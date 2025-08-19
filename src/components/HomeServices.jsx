@@ -388,7 +388,7 @@ export default function HomeServices() {
   }, [isInViewport]);
 
   return (
-    <div>
+    <div className="bg-black">
       <BestHeading title="" highlight="Industries" />
       <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
         {/* Section Header */}
