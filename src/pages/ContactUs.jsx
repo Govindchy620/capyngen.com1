@@ -1,93 +1,180 @@
 import { Mail, MapPin } from "lucide-react";
 import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
-const Input = ({ label, placeholder, type = "text" }) => (
-  <label className="flex flex-col gap-2">
-    <span className="text-sm text-neutral-300">{label}</span>
-    <input
-      type={type}
-      placeholder={placeholder}
-      className="bg-transparent outline-none border-0 border-b border-white/30 focus:border-white/60 transition placeholder:text-neutral-500 py-2 text-white"
-    />
-  </label>
-);
+const Input = ({ label, placeholder, type = "text" }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
+  return (
+    <label className="flex flex-col gap-2 group">
+      <span
+        className={`text-sm transition-colors duration-300 ${
+          isFocused ? "text-white" : "text-neutral-300"
+        }`}
+      >
+        {label}
+      </span>
+      <div className="relative">
+        <input
+          type={type}
+          placeholder={placeholder}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          className="w-full bg-transparent outline-none border-0 border-b border-white/30 focus:border-white/80 transition-all duration-500 placeholder:text-neutral-500 py-3 text-white relative z-10"
+        />
+        <div
+          className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-500 ${
+            isFocused ? "w-full opacity-100" : "w-0 opacity-0"
+          }`}
+        />
+      </div>
+    </label>
+  );
+};
 
 export default function ContactUs() {
+  const [isMessageFocused, setIsMessageFocused] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <div className="relative min-h-screen w-full pt-10 overflow-hidden bg-[#0c0c0d] text-white">
-      {/* Background floating radial blobs */}
-      <div className="pointer-events-none absolute -left-10 top-40 h-48 w-48 rounded-full bg-[radial-gradient(circle_at_30%_30%,#74a2ff_0%,#6b5bff_45%,#1b1b2a_60%)]" />
-      <div className="pointer-events-none absolute right-8 top-28 h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#74a2ff_0%,#6b5bff_45%,#1b1b2a_70%)]" />
-      <div className="pointer-events-none absolute -left-20 bottom-20 h-[240px] w-[240px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#74a2ff_0%,#6b5bff_45%,#1b1b2a_70%)]" />
-      {/* Page heading */}
+      {/* Enhanced animated background blobs */}
+      <div
+        className="pointer-events-none absolute -left-10 top-40 h-48 w-48 rounded-full bg-[radial-gradient(circle_at_30%_30%,#74a2ff_0%,#6b5bff_45%,#1b1b2a_60%)] animate-float"
+        style={{ animationDelay: "0s", animationDuration: "8s" }}
+      />
+      <div
+        className="pointer-events-none absolute right-8 top-28 h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#74a2ff_0%,#6b5bff_45%,#1b1b2a_70%)] animate-float"
+        style={{ animationDelay: "2s", animationDuration: "10s" }}
+      />
+      <div
+        className="pointer-events-none absolute -left-20 bottom-20 h-[240px] w-[240px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#74a2ff_0%,#6b5bff_45%,#1b1b2a_70%)] animate-float"
+        style={{ animationDelay: "4s", animationDuration: "12s" }}
+      />
+      <div
+        className="pointer-events-none absolute right-20 bottom-40 h-[180px] w-[180px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#9ea0ff_0%,#74a2ff_45%,#1b1b2a_70%)] animate-float"
+        style={{ animationDelay: "6s", animationDuration: "9s" }}
+      />
+
+      {/* Animated header */}
       <div className="mx-auto max-w-5xl px-6 pt-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold">Contact Us</h1>
-        <p className="mt-3 text-neutral-300">
+        <h1 className="text-4xl md:text-5xl font-bold animate-fadeInUp bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+          Contact Us
+        </h1>
+        <p
+          className="mt-3 text-neutral-300 animate-fadeInUp"
+          style={{ animationDelay: "0.2s" }}
+        >
           Any question or remarks? Just write us a message!
         </p>
       </div>
 
       <div className="mx-auto mt-10 max-w-7xl px-6 pb-24">
-        <div className="relative">
-          {/* Enhanced gradient border with more subtle glow */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 via-white/10 to-white/20 p-[1px]" />
+        <div
+          className="relative animate-fadeInUp"
+          style={{ animationDelay: "0.4s" }}
+        >
+          {/* Enhanced glassy container with better effects */}
+          <div className="absolute inset-0 rounded-3xl p-[1px] shadow-2xl" />
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
 
-          <div className="relative rounded-2xl bg-white/[0.08] backdrop-blur-3xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),inset_0_-1px_2px_rgba(0,0,0,0.1),0_8px_32px_rgba(0,0,0,0.4)]">
-            <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/30">
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+          <div
+            className="relative rounded-3xl bg-white/[0.12] backdrop-blur-3xl border border-white/30 shadow-[inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-2px_4px_rgba(0,0,0,0.1),0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-500 hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.5),inset_0_-2px_4px_rgba(0,0,0,0.1),0_25px_50px_rgba(0,0,0,0.4)]"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
+            {/* Enhanced glass shine effect */}
+            <div className="pointer-events-none absolute inset-0 rounded-3xl overflow-hidden">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+              <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent" />
+              <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             </div>
 
-            <div className="pointer-events-none absolute -left-8 -top-10 h-40 w-40 rounded-full bg-[radial-gradient(circle,#8ab2ff_0%,transparent_60%)] opacity-40" />
-            <div className="pointer-events-none absolute -right-10 -top-8 h-40 w-40 rounded-full bg-[radial-gradient(circle,#9ea0ff_0%,transparent_60%)] opacity-50" />
-            <div className="pointer-events-none absolute -left-8 bottom-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,#8ab2ff_0%,transparent_60%)] opacity-40" />
-            <div className="pointer-events-none absolute right-16 bottom-6 h-28 w-28 rounded-full bg-[radial-gradient(circle,#8ab2ff_0%,transparent_60%)] opacity-50" />
+            {/* Floating inner glow orbs with animation */}
+            <div
+              className="pointer-events-none absolute -left-12 -top-12 h-48 w-48 rounded-full bg-[radial-gradient(circle,#8ab2ff_0%,transparent_65%)] opacity-50 animate-pulse"
+              style={{ animationDuration: "4s" }}
+            />
+            <div
+              className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-[radial-gradient(circle,#9ea0ff_0%,transparent_65%)] opacity-60 animate-pulse"
+              style={{ animationDuration: "5s", animationDelay: "1s" }}
+            />
+            <div
+              className="pointer-events-none absolute -left-12 bottom-16 h-48 w-48 rounded-full bg-[radial-gradient(circle,#8ab2ff_0%,transparent_65%)] opacity-45 animate-pulse"
+              style={{ animationDuration: "6s", animationDelay: "2s" }}
+            />
+            <div
+              className="pointer-events-none absolute right-16 bottom-6 h-36 w-36 rounded-full bg-[radial-gradient(circle,#b0a0ff_0%,transparent_65%)] opacity-55 animate-pulse"
+              style={{ animationDuration: "7s", animationDelay: "3s" }}
+            />
 
-            <div className="grid grid-cols-1 gap-8 p-6 md:grid-cols-[360px_1fr] md:p-10 lg:p-12">
-              <div className="relative rounded-2xl bg-white/[0.12] backdrop-blur-xl p-6 md:p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_4px_16px_rgba(0,0,0,0.2)] border border-white/20">
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+            <div className="grid grid-cols-1 gap-8 p-8 md:grid-cols-[380px_1fr] md:p-12 lg:p-16">
+              {/* Left contact info panel with enhanced glassy effect */}
+              <div className="relative rounded-3xl backdrop-blur-2xl p-8 md:p-10 shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_8px_32px_rgba(0,0,0,0.3)] border border-white/30 group transition-all duration-500">
+                {/* Contact panel shine effects */}
+                <div className="pointer-events-none absolute inset-0 rounded-3xl overflow-hidden">
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+                  <div className="absolute top-4 left-4 w-16 h-16 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-xl" />
+                </div>
 
-                <h3 className="text-xl font-semibold">Contact Information</h3>
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Contact Information
+                </h3>
 
-                <div className="mt-10 space-y-8 text-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm border border-white/20 shadow-sm">
-                      <Mail className="h-4 w-4" />
+                <div className="mt-12 space-y-10 text-base">
+                  <div className="flex items-center gap-4 group/item hover:translate-x-2 transition-transform duration-300">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg group-hover/item:bg-white/30 group-hover/item:scale-110 transition-all duration-300">
+                      <Mail className="h-5 w-5" />
                     </div>
-                    <span className="text-white">contact@capyngen.com</span>
+                    <span className="text-white font-medium">
+                      contact@capyngen.com
+                    </span>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm border border-white/20 shadow-sm">
-                      <MapPin className="h-4 w-4" />
+                  <div className="flex items-center gap-4 group/item hover:translate-x-2 transition-transform duration-300">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg group-hover/item:bg-white/30 group-hover/item:scale-110 transition-all duration-300">
+                      <MapPin className="h-5 w-5" />
                     </div>
                     <span className="text-neutral-300">&nbsp;</span>
                   </div>
                 </div>
 
-                <div className="absolute bottom-5 left-6 flex items-center gap-4 text-white/90">
+                {/* Enhanced social media icons with animation */}
+                <div className="absolute bottom-8 left-8 flex items-center gap-4 text-white/90">
                   <a
                     href="#"
-                    className="rounded-md bg-white/15 backdrop-blur-sm p-2 hover:bg-white/25 transition-all duration-200 border border-white/20 shadow-sm"
+                    className="rounded-xl bg-blue-500/20 backdrop-blur-sm p-3 hover:bg-blue-500/30 hover:scale-110 transition-all duration-300 border border-white/30 shadow-lg group"
                   >
-                    <FaTwitter />
+                    <FaTwitter className="group-hover:rotate-12 transition-transform duration-300" />
                   </a>
                   <a
                     href="#"
-                    className="rounded-md bg-white/15 backdrop-blur-sm p-2 hover:bg-white/25 transition-all duration-200 border border-white/20 shadow-sm"
+                    className="rounded-xl bg-pink-500/20 backdrop-blur-sm p-3 hover:bg-pink-500/30 hover:scale-110 transition-all duration-300 border border-white/30 shadow-lg group"
                   >
-                    <FaInstagram />
+                    <FaInstagram className="group-hover:rotate-12 transition-transform duration-300" />
                   </a>
                   <a
                     href="#"
-                    className="rounded-md bg-white/15 backdrop-blur-sm p-2 hover:bg-white/25 transition-all duration-200 border border-white/20 shadow-sm"
+                    className="rounded-xl bg-blue-600/20 backdrop-blur-sm p-3 hover:bg-blue-600/30 hover:scale-110 transition-all duration-300 border border-white/30 shadow-lg group"
                   >
-                    <FaLinkedinIn />
+                    <FaLinkedinIn className="group-hover:rotate-12 transition-transform duration-300" />
                   </a>
                 </div>
               </div>
 
-              {/* Right form area */}
-              <div className="relative py-20">
+              {/* Right form area with enhanced styling */}
+              <div className="relative py-16 px-4">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                   <Input label="First Name" placeholder="" />
                   <Input label="Last Name" placeholder="" />
@@ -95,43 +182,95 @@ export default function ContactUs() {
                   <Input label="Phone Number" placeholder="+91" />
                 </div>
 
+                {/* Enhanced message textarea */}
                 <div className="mt-8">
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm text-neutral-300">Message</span>
-                    <textarea
-                      rows={2}
-                      placeholder="Write your message.."
-                      className="resize-none bg-transparent outline-none border-0 border-b border-white/30 focus:border-white/60 transition placeholder:text-neutral-500 py-2 text-white"
-                    />
+                  <label className="flex flex-col gap-2 group">
+                    <span
+                      className={`text-sm transition-colors duration-300 ${
+                        isMessageFocused ? "text-white" : "text-neutral-300"
+                      }`}
+                    >
+                      Message
+                    </span>
+                    <div className="relative">
+                      <textarea
+                        rows={3}
+                        placeholder="Write your message..."
+                        onFocus={() => setIsMessageFocused(true)}
+                        onBlur={() => setIsMessageFocused(false)}
+                        className="w-full resize-none bg-transparent outline-none border-0 border-b border-white/30 focus:border-white/80 transition-all duration-500 placeholder:text-neutral-500 py-3 text-white relative z-10"
+                      />
+                      <div
+                        className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-500 ${
+                          isMessageFocused
+                            ? "w-full opacity-100"
+                            : "w-0 opacity-0"
+                        }`}
+                      />
+                    </div>
                   </label>
                 </div>
 
-                <div className="mt-8 flex justify-end">
-                  <button className="rounded-md bg-white/20 backdrop-blur-sm px-5 py-2 text-sm text-white shadow-lg outline-none ring-1 ring-white/30 transition-all duration-200 hover:bg-white/30 hover:ring-white/40 active:scale-[0.98] border border-white/20">
-                    Send Message
+                {/* Enhanced send button */}
+                <div className="mt-12 flex justify-end">
+                  <button className="group relative rounded-xl bg-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-xl px-8 py-3 text-base font-medium text-white shadow-2xl outline-none ring-2 ring-white/40 transition-all duration-300 hover:from-blue-500/40 hover:to-purple-500/40 hover:ring-white/60 hover:scale-105 active:scale-95 border border-white/30 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="relative z-10">Send Message</span>
                   </button>
                 </div>
 
-                {/* Paper plane doodle */}
-                <div className="pointer-events-none absolute -bottom-4 right-4">
+                {/* Enhanced animated paper plane */}
+                <div className="pointer-events-none absolute -bottom-16 right-8 group">
                   <svg
-                    width="170"
-                    height="90"
-                    viewBox="0 0 170 90"
+                    width="200"
+                    height="100"
+                    viewBox="0 0 200 100"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    className="animate-float"
+                    style={{ animationDuration: "6s" }}
                   >
+                    <defs>
+                      <linearGradient
+                        id="pathGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="0%"
+                      >
+                        <stop offset="0%" stopColor="white" stopOpacity="0.1" />
+                        <stop
+                          offset="50%"
+                          stopColor="white"
+                          stopOpacity="0.8"
+                        />
+                        <stop
+                          offset="100%"
+                          stopColor="white"
+                          stopOpacity="0.2"
+                        />
+                      </linearGradient>
+                    </defs>
                     <path
-                      d="M7 78 C60 70, 85 55, 120 35 C140 25, 152 12, 162 10"
-                      stroke="white"
-                      strokeOpacity="0.5"
-                      strokeWidth="2"
-                      strokeDasharray="6 6"
-                    />
+                      d="M7 88 C70 75, 95 60, 140 35 C165 20, 180 8, 192 5"
+                      stroke="url(#pathGradient)"
+                      strokeWidth="3"
+                      strokeDasharray="8 8"
+                      className="animate-pulse"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        values="0;-16;0"
+                        dur="3s"
+                        repeatCount="indefinite"
+                      />
+                    </path>
                     <polygon
-                      points="160,4 168,18 150,16"
+                      points="188,0 198,20 175,18"
                       fill="white"
-                      opacity="0.95"
+                      opacity="0.9"
+                      className="drop-shadow-lg animate-bounce"
+                      style={{ animationDuration: "2s" }}
                     />
                   </svg>
                 </div>

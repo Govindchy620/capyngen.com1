@@ -88,7 +88,7 @@ const FlipCards = () => {
 
               {/* Back Side */}
               <div
-                className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 p-10 border-2 border-white flex flex-col justify-between bg-gradient-to-br ${card.back.gradient} ${card.back.textColor}`}
+                className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 p-10 border-2 border-white flex flex-col justify-between bg-black text-white`}
               >
                 <div className="flex flex-col items-start h-full">
                   <div className="flex-grow flex flex-col justify-center">
