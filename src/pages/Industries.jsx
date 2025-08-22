@@ -6,6 +6,7 @@ import Timeline from "../components/Timeline";
 import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
 import StartupAgency from "../components/StartupAgency";
 import SeoAgency from "../components/SeoAgency";
+import FlipCards from "../components/FlipCards";
 
 const Industries = () => {
   return (
@@ -17,6 +18,7 @@ const Industries = () => {
       <CreativeAgencyFAQ />
       <StartupAgency />
       <SeoAgency />
+      <FlipCards />
     </div>
   );
 };
