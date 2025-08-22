@@ -16,13 +16,13 @@ const TeamMemberCard = ({ image, name, title }) => (
         bg-white/90
         p-6
         transition-transform duration-300
-        translate-y-24
+        translate-y-30
         group-hover:translate-y-0
         shadow-md
       "
     >
-      <p className="text-xl text-black font-semibold">{name}</p>
-      <p className="text-gray-600 text-sm mt-2">{title}</p>
+      <p className="text-2xl text-black font-semibold">{name}</p>
+      <p className="text-gray-600 text-md mt-2">{title}</p>
       {/* Add social icons or more content as needed */}
     </div>
   </div>

@@ -20,6 +20,37 @@ import blog2 from "./blog2.png";
 import blog3 from "./blog3.png";
 import blog4 from "./blog4.png";
 import bg1 from "./bg1.webp";
+import js from "./js.png";
+import python from "./python.png";
+import css3 from "./css3.png";
+import cplusplus from "./cplusplus.png";
+import php from "./php.png";
+import mongodb from "./mongodb.png";
+import mysql from "./mysql.png";
+import postgresql from "./postgresql.png";
+import react from "./react.png";
+import angular from "./angular.png";
+import vuejs from "./vuejs.png";
+import nextjs from "./nextjs.png";
+import jquery from "./jquery.png";
+import nodejs from "./nodejs.png";
+import laravel from "./laravel.png";
+import azure from "./azure.png";
+import aws from "./aws.png";
+import googlecloud from "./googlecloud.png";
+import expressjs from "./expressjs.png";
+import gallery1 from "./gallery1.jpg";
+import gallery2 from "./gallery2.jpg";
+import gallery3 from "./gallery3.jpg";
+import gallery4 from "./gallery4.jpg";
+import seoTool1 from "./seoTool1.png";
+import seoTool2 from "./seoTool2.png";
+import seoTool3 from "./seoTool3.png";
+import seoTool4 from "./seoTool4.png";
+import seoTool5 from "./seoTool5.png";
+import timelineBg from "./timelineBg.png";
+import creativeAgencyFAQ from "./creativeAgencyFAQ.webp";
+import seoAgency from "./seoAgency.jpg";
 
 export const assets = {
   homeAboutUs1,
@@ -44,6 +75,37 @@ export const assets = {
   blog3,
   blog4,
   bg1,
+  js,
+  python,
+  css3,
+  cplusplus,
+  php,
+  mongodb,
+  mysql,
+  postgresql,
+  react,
+  angular,
+  vuejs,
+  nextjs,
+  jquery,
+  nodejs,
+  laravel,
+  azure,
+  aws,
+  googlecloud,
+  expressjs,
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  seoTool1,
+  seoTool2,
+  seoTool3,
+  seoTool4,
+  seoTool5,
+  timelineBg,
+  creativeAgencyFAQ,
+  seoAgency,
 };
 
 export const navItems = [
@@ -130,6 +192,7 @@ export const navItems = [
   },
   {
     label: "INDUSTRIES",
+    link: "/industries",
     dropdown: [
       {
         links: [

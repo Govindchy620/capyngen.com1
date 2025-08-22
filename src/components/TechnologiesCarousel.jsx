@@ -6,33 +6,32 @@ import { assets } from "../assets/assets";
 
 // Example tech stack (replace logos with your assets)
 const technologies = [
-  { name: "JavaScript", logo: assets.capyngenFavIcon },
-  { name: "Python", logo: "/logos/python.png" },
-  { name: "CSS3", logo: "/logos/css3.png" },
-  { name: "C++", logo: "/logos/cpp.png" },
-  { name: "Swift", logo: "/logos/swift.png" },
-  { name: "PHP", logo: "/logos/php.png" },
-  { name: "React", logo: "/logos/react.png" },
-  { name: "Vue.js", logo: "/logos/react.png" },
-  { name: "AngularJS", logo: "/logos/react.png" },
-  { name: "JQuery", logo: "/logos/react.png" },
-  { name: "Next.js", logo: "/logos/react.png" },
-  { name: "MongoDB", logo: "/logos/mongodb.png" },
-  { name: "MySQL", logo: "/logos/mongodb.png" },
-  { name: "PostgreSQL", logo: "/logos/mongodb.png" },
-  { name: "Node.js", logo: "/logos/node.png" },
-  { name: "Laravel", logo: "/logos/node.png" },
-  { name: "Express.js", logo: "/logos/node.png" },
-  { name: "Azure", logo: "/logos/node.png" },
-  { name: "AWS", logo: "/logos/node.png" },
-  { name: "Google Cloud", logo: "/logos/mongodb.png" },
+  { name: "JavaScript", logo: assets.js },
+  { name: "Python", logo: assets.python },
+  { name: "CSS3", logo: assets.css3 },
+  { name: "C++", logo: assets.cplusplus },
+  { name: "PHP", logo: assets.php },
+  { name: "React", logo: assets.react },
+  { name: "Vue.js", logo: assets.vuejs },
+  { name: "AngularJS", logo: assets.angular },
+  { name: "JQuery", logo: assets.jquery },
+  { name: "Next.js", logo: assets.nextjs },
+  { name: "MongoDB", logo: assets.mongodb },
+  { name: "MySQL", logo: assets.mysql },
+  { name: "PostgreSQL", logo: assets.postgresql },
+  { name: "Node.js", logo: assets.nodejs },
+  { name: "Laravel", logo: assets.laravel },
+  { name: "Express.js", logo: assets.expressjs },
+  { name: "Azure", logo: assets.azure },
+  { name: "AWS", logo: assets.aws },
+  { name: "Google Cloud", logo: assets.googlecloud },
 ];
 
 const TechnologiesCarousel = () => {
   const settings = {
     infinite: true,
     speed: 3000, // smooth movement
-    slidesToShow: 6,
+    slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0, // continuous scroll
@@ -60,8 +59,8 @@ const TechnologiesCarousel = () => {
 
         <Slider {...settings}>
           {technologies.map((tech, i) => (
-            <div key={i} className="px-6">
-              <div className="flex flex-col items-center justify-center">
+            <div key={i} className="px-6 mt-10">
+              <div className="flex flex-col items-center justify-center bg-white rounded-sm overflow-hidden">
                 <img
                   src={tech.logo}
                   alt={tech.name}

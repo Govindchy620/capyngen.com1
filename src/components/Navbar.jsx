@@ -80,7 +80,8 @@ const Navbar = () => {
               {navItems.map((item, idx) => (
                 <div key={idx} className="relative group">
                   {item.dropdown ? (
-                    <button
+                    <NavLink
+                      to={item.link}
                       className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1 ${
                         shouldBeDark
                           ? "text-slate-100 hover:text-white hover:bg-slate-800/60"
@@ -92,7 +93,7 @@ const Navbar = () => {
                         size={14}
                         className="transition-transform group-hover:rotate-180"
                       />
-                    </button>
+                    </NavLink>
                   ) : (
                     <NavLink
                       to={item.href}
@@ -131,7 +132,7 @@ const Navbar = () => {
                                         <li key={linkIdx}>
                                           <NavLink
                                             to={link.href}
-                                            className="text-sm text-slate-300 hover:text-white transition-colors duration-200 block py-1 hover:translate-x-1"
+                                            className="text-sm text-slate-300  hover:text-blue-400 transition-colors duration-200 block py-1 hover:translate-x-1"
                                           >
                                             {link.label}
                                           </NavLink>
@@ -208,7 +209,8 @@ const Navbar = () => {
                 <div key={idx}>
                   {item.dropdown ? (
                     <div>
-                      <button
+                      <NavLink
+                        to={item.link}
                         onClick={() => handleDropdownClick(idx)}
                         className="w-full flex items-center justify-between py-3 text-left text-slate-100 hover:text-white transition-colors"
                       >
@@ -219,7 +221,7 @@ const Navbar = () => {
                             activeDropdown === idx ? "rotate-180" : ""
                           }`}
                         />
-                      </button>
+                      </NavLink>
 
                       {activeDropdown === idx && (
                         <div className="mt-2 pl-4 space-y-4">

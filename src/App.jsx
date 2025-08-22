@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WebDevelopment from "./pages/WebDevelopment";
 import ScrollToTop from "./components/ScrollToTop";
+import Industries from "./pages/Industries";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -22,6 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/industries" element={<Industries />} />
         </Routes>
         <Footer />
       </div>

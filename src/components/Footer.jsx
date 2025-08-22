@@ -198,7 +198,7 @@ const Footer = () => {
                             onClick={() =>
                               setShowAllIndustries(!showAllIndustries)
                             }
-                            className="mt-3 text-blue-400 text-sm font-medium hover:underline"
+                            className="mt-3 text-blue-400 text-sm font-medium hover:underline cursor-pointer"
                           >
                             {showAllIndustries ? "Show Less" : "Show More"}
                           </button>
