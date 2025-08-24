@@ -2,60 +2,9 @@
 import React from "react";
 import { Smartphone, DollarSign, Handshake, ArrowRight } from "lucide-react"; // Import Lucide icons
 
-const FlipCards = () => {
-  const cards = [
-    {
-      id: 1,
-      front: {
-        title: "VOICE-ACTIVATED DIGITAL BANKING",
-        icon: <Smartphone className="w-12 h-12" />,
-        gradient: "from-cyan-400 via-blue-500 to-purple-600",
-        textColor: "text-black",
-      },
-      back: {
-        title:
-          "Advanced voice recognition technology enables secure banking transactions through natural speech commands.",
-        buttonText: "Learn More",
-        gradient: "from-cyan-400 via-blue-500 to-purple-600",
-        textColor: "text-white",
-      },
-    },
-    {
-      id: 2,
-      front: {
-        title: "INSTANT PAYMENTS",
-        icon: <DollarSign className="w-12 h-12" />,
-        gradient: "from-orange-400 via-red-500 to-red-600",
-        textColor: "text-black",
-      },
-      back: {
-        title:
-          "Ensure funds become available in five seconds or less with our Instant Payment Solution Blueprint.",
-        buttonText: "Learn More",
-        gradient: "from-orange-400 via-red-500 to-red-600",
-        textColor: "text-white",
-      },
-    },
-    {
-      id: 3,
-      front: {
-        title: "SMART ONBOARDING",
-        icon: <Handshake className="w-12 h-12" />,
-        gradient: "from-purple-400 via-purple-500 to-blue-500",
-        textColor: "text-black",
-      },
-      back: {
-        title:
-          "Streamlined customer onboarding with AI-powered verification and automated compliance checks.",
-        buttonText: "Learn More",
-        gradient: "from-purple-400 via-purple-500 to-blue-500",
-        textColor: "text-white",
-      },
-    },
-  ];
-
+const FlipCards = ({ cards }) => {
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-8">
+    <div className="min-h-screen pt-20 bg-black flex items-center justify-center p-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-6xl w-full">
         {cards.map((card) => (
           <div

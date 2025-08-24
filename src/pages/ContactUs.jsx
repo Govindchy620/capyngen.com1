@@ -84,10 +84,6 @@ export default function ContactUs() {
           className="relative animate-fadeInUp"
           style={{ animationDelay: "0.4s" }}
         >
-          {/* Enhanced glassy container with better effects */}
-          <div className="absolute inset-0 rounded-3xl p-[1px] shadow-2xl" />
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
-
           <div
             className="relative rounded-3xl bg-white/[0.12] backdrop-blur-3xl border border-white/30 shadow-[inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-2px_4px_rgba(0,0,0,0.1),0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-500 hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.5),inset_0_-2px_4px_rgba(0,0,0,0.1),0_25px_50px_rgba(0,0,0,0.4)]"
             onMouseEnter={() => setIsHovering(true)}
@@ -213,66 +209,10 @@ export default function ContactUs() {
 
                 {/* Enhanced send button */}
                 <div className="mt-12 flex justify-end">
-                  <button className="group relative rounded-xl bg-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-xl px-8 py-3 text-base font-medium text-white shadow-2xl outline-none ring-2 ring-white/40 transition-all duration-300 hover:from-blue-500/40 hover:to-purple-500/40 hover:ring-white/60 hover:scale-105 active:scale-95 border border-white/30 overflow-hidden">
+                  <button className="group relative rounded-xl backdrop-blur-xl px-8 py-3 text-base font-medium text-white shadow-2xl outline-none ring-2 ring-white/40 transition-all duration-300 hover:from-blue-500/40 hover:ring-white/60 hover:scale-105 active:scale-95 border border-white/30 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="relative z-10">Send Message</span>
                   </button>
-                </div>
-
-                {/* Enhanced animated paper plane */}
-                <div className="pointer-events-none absolute -bottom-16 right-8 group">
-                  <svg
-                    width="200"
-                    height="100"
-                    viewBox="0 0 200 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="animate-float"
-                    style={{ animationDuration: "6s" }}
-                  >
-                    <defs>
-                      <linearGradient
-                        id="pathGradient"
-                        x1="0%"
-                        y1="0%"
-                        x2="100%"
-                        y2="0%"
-                      >
-                        <stop offset="0%" stopColor="white" stopOpacity="0.1" />
-                        <stop
-                          offset="50%"
-                          stopColor="white"
-                          stopOpacity="0.8"
-                        />
-                        <stop
-                          offset="100%"
-                          stopColor="white"
-                          stopOpacity="0.2"
-                        />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M7 88 C70 75, 95 60, 140 35 C165 20, 180 8, 192 5"
-                      stroke="url(#pathGradient)"
-                      strokeWidth="3"
-                      strokeDasharray="8 8"
-                      className="animate-pulse"
-                    >
-                      <animate
-                        attributeName="stroke-dashoffset"
-                        values="0;-16;0"
-                        dur="3s"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                    <polygon
-                      points="188,0 198,20 175,18"
-                      fill="white"
-                      opacity="0.9"
-                      className="drop-shadow-lg animate-bounce"
-                      style={{ animationDuration: "2s" }}
-                    />
-                  </svg>
                 </div>
               </div>
             </div>

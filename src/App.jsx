@@ -11,6 +11,7 @@ import WebDevelopment from "./pages/WebDevelopment";
 import ScrollToTop from "./components/ScrollToTop";
 import Industries from "./pages/Industries";
 import ContactUs from "./pages/ContactUs";
+import Banking from "./pages/Banking";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/web-development" element={<WebDevelopment />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/industries/banking" element={<Banking />} />
         </Routes>
         <Footer />
       </div>
