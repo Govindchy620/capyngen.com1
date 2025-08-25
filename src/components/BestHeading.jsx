@@ -5,32 +5,24 @@ export default function BestHeading({
   highlight = "Work",
 }) {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center text-center md:text-left">
-      {/* Title */}
+    <div className=" flex flex-col md:flex-row items-center md:items-start justify-center">
       {title && (
-        <h1 className="text-[#0A2351] font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pt-2 md:pt-4">
+        <h1 className="text-[#0A2351] font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl pt-4">
           {title}
         </h1>
       )}
-
-      {/* Highlight */}
-      <div className="relative ml-0 mt-2 md:mt-0 leading-none">
-        {/* Shadow Layer (scales with font size) */}
+      <div className="relative leading-none tracking-[0.5rem]">
+        {/* Shadow Layer */}
         <h1
-          className="absolute text-[#4D85FF] font-extrabold text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl z-0 md:whitespace-nowrap leading-tight"
-          style={{
-            transform: "scaleX(0.85)",
-            top: "0.05em", // relative to font size
-            left: "0.05em", // relative to font size
-          }}
+          className="absolute top-[4px] xl:top-[9px] left-[4px] xl:left-[9px] text-[#4D85FF] font-extrabold text-[2.5rem] md:text-[9rem] z-0 whitespace-nowrap inline-block"
+          style={{ transform: "scaleX(0.8)" }}
         >
           {highlight}
         </h1>
-
         {/* Main Outlined Text */}
         <h1
-          className="relative font-extrabold text-outline-only text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl z-10 md:whitespace-nowrap leading-tight"
-          style={{ transform: "scaleX(0.85)" }}
+          className="relative text-outline-only font-extrabold text-[2.5rem] md:text-[9rem] z-10 whitespace-nowrap inline-block"
+          style={{ transform: "scaleX(0.8)" }}
         >
           {highlight}
         </h1>
