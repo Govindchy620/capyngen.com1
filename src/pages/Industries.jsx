@@ -8,6 +8,7 @@ const Industries = () => {
   const cards = [
     {
       id: 1,
+      link: "/industries/banking",
       front: {
         title: "VOICE-ACTIVATED DIGITAL BANKING",
         icon: <Smartphone className="w-12 h-12" />,
@@ -24,6 +25,7 @@ const Industries = () => {
     },
     {
       id: 2,
+      link: "/industries/banking",
       front: {
         title: "INSTANT PAYMENTS",
         icon: <DollarSign className="w-12 h-12" />,
@@ -40,6 +42,7 @@ const Industries = () => {
     },
     {
       id: 3,
+      link: "/industries/banking",
       front: {
         title: "SMART ONBOARDING",
         icon: <Handshake className="w-12 h-12" />,
@@ -56,6 +59,7 @@ const Industries = () => {
     },
     {
       id: 1,
+      link: "/industries/banking",
       front: {
         title: "VOICE-ACTIVATED DIGITAL BANKING",
         icon: <Smartphone className="w-12 h-12" />,
@@ -72,6 +76,7 @@ const Industries = () => {
     },
     {
       id: 2,
+      link: "/industries/banking",
       front: {
         title: "INSTANT PAYMENTS",
         icon: <DollarSign className="w-12 h-12" />,
@@ -88,6 +93,7 @@ const Industries = () => {
     },
     {
       id: 3,
+      link: "/industries/banking",
       front: {
         title: "SMART ONBOARDING",
         icon: <Handshake className="w-12 h-12" />,
@@ -104,6 +110,7 @@ const Industries = () => {
     },
     {
       id: 1,
+      link: "/industries/banking",
       front: {
         title: "VOICE-ACTIVATED DIGITAL BANKING",
         icon: <Smartphone className="w-12 h-12" />,
@@ -120,6 +127,7 @@ const Industries = () => {
     },
     {
       id: 2,
+      link: "/industries/banking",
       front: {
         title: "INSTANT PAYMENTS",
         icon: <DollarSign className="w-12 h-12" />,
@@ -136,6 +144,7 @@ const Industries = () => {
     },
     {
       id: 3,
+      link: "/industries/banking",
       front: {
         title: "SMART ONBOARDING",
         icon: <Handshake className="w-12 h-12" />,
@@ -152,6 +161,7 @@ const Industries = () => {
     },
     {
       id: 1,
+      link: "/industries/banking",
       front: {
         title: "VOICE-ACTIVATED DIGITAL BANKING",
         icon: <Smartphone className="w-12 h-12" />,
@@ -168,6 +178,7 @@ const Industries = () => {
     },
     {
       id: 2,
+      link: "/industries/banking",
       front: {
         title: "INSTANT PAYMENTS",
         icon: <DollarSign className="w-12 h-12" />,
@@ -184,6 +195,7 @@ const Industries = () => {
     },
     {
       id: 3,
+      link: "/industries/banking",
       front: {
         title: "SMART ONBOARDING",
         icon: <Handshake className="w-12 h-12" />,
@@ -200,6 +212,7 @@ const Industries = () => {
     },
     {
       id: 1,
+      link: "/industries/banking",
       front: {
         title: "VOICE-ACTIVATED DIGITAL BANKING",
         icon: <Smartphone className="w-12 h-12" />,
@@ -216,6 +229,7 @@ const Industries = () => {
     },
     {
       id: 2,
+      link: "/industries/banking",
       front: {
         title: "INSTANT PAYMENTS",
         icon: <DollarSign className="w-12 h-12" />,
@@ -232,6 +246,7 @@ const Industries = () => {
     },
     {
       id: 3,
+      link: "/industries/banking",
       front: {
         title: "SMART ONBOARDING",
         icon: <Handshake className="w-12 h-12" />,

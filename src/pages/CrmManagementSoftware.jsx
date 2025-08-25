@@ -8,7 +8,7 @@ import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 
-const WebDevelopment = () => {
+const CrmManagementSoftware = () => {
   const faqItems = [
     {
       question: "How long does it take for funds to show in my wallet?",
@@ -51,16 +51,20 @@ const WebDevelopment = () => {
   return (
     <div>
       <Banner
-        title="Web Development"
+        title={
+          <>
+            CRM & Management <br /> Software
+          </>
+        }
         overlayBg="bg-black/70"
         backgroundImage={assets.bg1}
-        description="Unlock the Power of Web Presence with our Professional Website Designing Service! Elevate Your Online Presence with Stunning Website Designs."
+        description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
       />
       <OurServices />
       <HowWeWork />
       <WhyChoose />
       <TechnologiesCarousel
-        title="Web Development Technologies We Use"
+        title="App Development Technologies We Use"
         description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
         technologies={technologies}
       />
@@ -69,4 +73,4 @@ const WebDevelopment = () => {
   );
 };
 
-export default WebDevelopment;
+export default CrmManagementSoftware;

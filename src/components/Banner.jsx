@@ -9,19 +9,21 @@ const Banner = ({
 }) => {
   return (
     <div
-      className="relative h-screen bg-cover bg-center"
+      className="relative min-h-[100vh] md:min-h-screen bg-cover bg-center flex items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="h-full max-w-7xl mx-auto flex items-center justify-start px-10">
-        {/* Overlay */}
-        <div className={`absolute inset-0 ${overlayBg}`}></div>
+      {/* Overlay */}
+      <div className={`absolute inset-0 ${overlayBg}`} />
 
-        {/* Content */}
-        <div className=" text-center mx-auto z-10 max-w-4xl text-white">
+      {/* Content */}
+      <div className="relative z-10 w-full px-6 sm:px-10">
+        <div className="max-w-5xl mx-auto text-center text-white">
           <BestHeading title="" highlight={title} />
-          <p className="text-lg md:text-xl mb-6 mt-10">{description}</p>
+          <p className="mt-6 md:mt-10 text-base sm:text-lg md:text-xl leading-relaxed px-2">
+            {description}
+          </p>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };

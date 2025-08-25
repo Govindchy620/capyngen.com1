@@ -115,53 +115,53 @@ export const navItems = [
       {
         title: "Software Development",
         links: [
-          { label: "App Development", href: "/services/app-development" },
-          { label: "Custom AI Solution", href: "/services/ai-solutions" },
+          { label: "App Development", href: "/app-development" },
+          { label: "Custom AI Solution", href: "/ai-solutions" },
           { label: "Web Development", href: "/web-development" },
           {
             label: "E-Commerce Solutions",
-            href: "/services/ecommerce-solutions",
+            href: "/ecommerce-solutions",
           },
           {
             label: "Blockchain Development",
-            href: "/services/blockchain-development",
+            href: "/blockchain-development",
           },
-          { label: "DevOps Solutions", href: "/services/devops-solutions" },
+          { label: "DevOps Solutions", href: "/devops-solutions" },
           {
             label: "Application Solutions",
-            href: "/services/application-solutions",
+            href: "/application-solutions",
           },
           {
             label: "CRM & Management Software",
-            href: "/services/crm-management-software",
+            href: "/crm-management-software",
           },
         ],
       },
       {
         title: "Design",
         links: [
-          { label: "UI/UX Design", href: "/services/ui-ux-design" },
-          { label: "Website Design", href: "/services/website-design" },
+          { label: "UI/UX Design", href: "/ui-ux-design" },
+          { label: "Website Design", href: "/website-design" },
           {
             label: "Branding & Identity Design",
-            href: "/services/branding-and-identity-design",
+            href: "/branding-and-identity-design",
           },
-          { label: "Ecommerce Design", href: "/services/ecommerce-design" },
-          { label: "CMS Design", href: "/services/cms-design" },
+          { label: "Ecommerce Design", href: "/ecommerce-design" },
+          { label: "CMS Design", href: "/cms-design" },
         ],
       },
       {
         title: "Marketing",
         links: [
-          { label: "Digital Marketing", href: "/services/digital-marketing" },
+          { label: "Digital Marketing", href: "/digital-marketing" },
 
-          { label: "Search Engine Optimization (SEO)", href: "/services/seo" },
+          { label: "Search Engine Optimization (SEO)", href: "/seo" },
 
-          { label: "Social Media Marketing (SMM)", href: "/services/smm" },
-          { label: "Pay-Per-Click Advertising (PPC)", href: "/services/ppc" },
+          { label: "Social Media Marketing (SMM)", href: "/smm" },
+          { label: "Pay-Per-Click Advertising (PPC)", href: "/ppc" },
           {
             label: "Social Media Marketing",
-            href: "/services/social-media-marketing",
+            href: "/social-media-marketing",
           },
         ],
       },
@@ -170,23 +170,23 @@ export const navItems = [
         links: [
           {
             label: "Artificial Intelligence",
-            href: "/services/artificial-intelligence",
+            href: "/artificial-intelligence",
           },
-          { label: "Cybersecurity", href: "/services/cybersecurity" },
+          { label: "Cybersecurity", href: "/cybersecurity" },
           {
             label: "Network Solutions & Services",
-            href: "/services/network-solutions",
+            href: "/network-solutions",
           },
           {
             label: "Enterprise Solutions",
-            href: "/services/enterprise-solutions",
+            href: "/enterprise-solutions",
           },
-          { label: "Data & Analytics", href: "/services/data-analytics" },
+          { label: "Data & Analytics", href: "/data-analytics" },
         ],
       },
       {
         title: "Consulting",
-        links: [{ label: "Consulting", href: "/services/consulting" }],
+        links: [{ label: "Consulting", href: "/consulting" }],
       },
     ],
   },

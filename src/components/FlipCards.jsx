@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
 import { Smartphone, DollarSign, Handshake, ArrowRight } from "lucide-react"; // Import Lucide icons
+import { NavLink } from "react-router-dom";
 
 const FlipCards = ({ cards }) => {
   return (
     <div className="min-h-screen pt-20 bg-black flex items-center justify-center p-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-6xl w-full">
         {cards.map((card) => (
-          <div
+          <NavLink
+            to={card.link}
             key={card.id}
             className="relative group perspective-1000 h-80 w-full"
           >
@@ -56,7 +58,7 @@ const FlipCards = ({ cards }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </NavLink>
         ))}
       </div>
     </div>
