@@ -171,7 +171,7 @@ const OurServices = () => {
       <div className="max-w-[90rem] mx-auto">
         <div className="text-center mb-16">
           <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-8xl">
-            Our Services
+            Other Services
           </h1>
           <p className="mt-4 max-w-2xl text-xl mx-auto">
             Comprehensive Website Services to Ignite Your Online Success.

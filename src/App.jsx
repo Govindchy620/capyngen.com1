@@ -19,6 +19,7 @@ import BlockchainDevelopment from "./pages/BlockchainDevelopment";
 import DevOpsSolutions from "./pages/DevOpsSolutions";
 import ApplicationSolutions from "./pages/ApplicationSolutions";
 import CrmManagementSoftware from "./pages/CrmManagementSoftware";
+import Careers from "./pages/Careers";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -26,7 +27,7 @@ gsap.registerPlugin(ScrollTrigger);
 const App = () => {
   return (
     <Router>
-      <div className="overflow-x-hidden">
+      <div>
         <ScrollToTop />
         <Navbar />
         <Routes>
@@ -49,6 +50,7 @@ const App = () => {
             element={<CrmManagementSoftware />}
           />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/industries/banking" element={<Banking />} />
         </Routes>

@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { assets, navItems } from "../assets/assets";
 import { NavLink } from "react-router-dom";

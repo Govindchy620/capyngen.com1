@@ -14,14 +14,14 @@ export default function BestHeading({
       <div className="relative leading-none tracking-[0.5rem]">
         {/* Shadow Layer */}
         <h1
-          className="absolute top-[4px] xl:top-[9px] left-[4px] xl:left-[9px] text-[#4D85FF] font-extrabold text-[2.5rem] md:text-[9rem] z-0 whitespace-nowrap inline-block"
+          className="absolute top-[4px] xl:top-[7px] left-[4px] xl:left-[7px] text-[#4D85FF] font-extrabold text-6xl md:text-9xl z-0 whitespace-nowrap inline-block"
           style={{ transform: "scaleX(0.8)" }}
         >
           {highlight}
         </h1>
         {/* Main Outlined Text */}
         <h1
-          className="relative text-outline-only font-extrabold text-[2.5rem] md:text-[9rem] z-10 whitespace-nowrap inline-block"
+          className="relative text-outline-only font-extrabold text-6xl md:text-9xl z-10 whitespace-nowrap inline-block"
           style={{ transform: "scaleX(0.8)" }}
         >
           {highlight}

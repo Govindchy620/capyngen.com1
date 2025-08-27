@@ -51,6 +51,10 @@ import seoTool5 from "./seoTool5.png";
 import timelineBg from "./timelineBg.png";
 import creativeAgencyFAQ from "./creativeAgencyFAQ.webp";
 import seoAgency from "./seoAgency.jpg";
+import joinus from "./joinus.avif";
+import careersAbout1 from "./careersAbout1.avif";
+import careersAbout2 from "./careersAbout2.avif";
+import careersAbout3 from "./careersAbout3.avif";
 
 export const assets = {
   homeAboutUs1,
@@ -106,6 +110,10 @@ export const assets = {
   timelineBg,
   creativeAgencyFAQ,
   seoAgency,
+  joinus,
+  careersAbout1,
+  careersAbout2,
+  careersAbout3,
 };
 
 export const navItems = [
@@ -115,9 +123,9 @@ export const navItems = [
       {
         title: "Software Development",
         links: [
+          { label: "Web Development", href: "/web-development" },
           { label: "App Development", href: "/app-development" },
           { label: "Custom AI Solution", href: "/ai-solutions" },
-          { label: "Web Development", href: "/web-development" },
           {
             label: "E-Commerce Solutions",
             href: "/ecommerce-solutions",

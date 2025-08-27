@@ -45,8 +45,6 @@ const Homepage = () => {
       <TestimonialCarousel />
       <HomeBlogs />
       <FAQSection items={faqItems} />
-      {/* <section> <LetTalkDiagonal />      </section> */}
-      {/* <WebServices /> */}
       <ScrollRevealEffect />
     </div>
   );
