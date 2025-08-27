@@ -2,7 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import BestHeading from "./BestHeading";
 
-const FAQSection2 = ({ title, items }) => {
+const FAQSection2 = ({
+  title = "FAQs",
+  desc = "Clear All your queries with our comprehensive FAQ section. Get quick answers to common questions about our services, processes, and more.",
+  items,
+}) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
@@ -12,12 +16,9 @@ const FAQSection2 = ({ title, items }) => {
   return (
     <div className="bg-black text-white py-16 px-4 md:px-10 flex flex-col items-center">
       <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-        FAQs
+        {title}
       </h1>
-      <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">
-        Clear All your queries with our comprehensive FAQ section. Get quick
-        answers to common questions about our services, processes, and more.
-      </p>
+      <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">{desc}</p>
       <div className="max-w-4xl mx-auto  mt-10">
         {items.map((item, index) => (
           <div
