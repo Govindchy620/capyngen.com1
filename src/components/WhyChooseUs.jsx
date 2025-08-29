@@ -31,8 +31,8 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-1/3 mx-auto flex justify-center mt-20">
-            <div className="relative w-full max-w-sm md:max-w-md aspect-[4/5]">
+          <div className="w-full lg:w-1/3 mx-auto flex justify-center mt-6 md:mt-20">
+            <div className="relative w-full max-w-sm md:max-w-md md:aspect-[4/5]">
               {/* Purple border (background layer) */}
               <div className="absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0" />
 

@@ -57,9 +57,9 @@ export default function HomeBlogs() {
     <div className="min-h-screen bg-black text-white py-10">
       <div className=" max-w-[90rem] mx-auto">
         <BestHeading title="" highlight="News & Updates" />
-        <h3 className="text-center text-3xl font-bold mb-8 mt-10">
+        <h1 className="text-center text-3xl font-bold mb-8 mt-10">
           Expert IT Team Driving <br /> Business Success Forward.
-        </h3>
+        </h1>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           {members.map((m, idx) => (
             <TeamMemberCard key={idx} {...m} />

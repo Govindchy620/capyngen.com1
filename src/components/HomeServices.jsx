@@ -127,6 +127,102 @@ const servicesData = [
       ],
     },
   },
+  {
+    id: "cybersecurity",
+    title: "Cybersecurity And Data Protection",
+    icon: "ShieldCheck",
+    card: {
+      image: "/placeholder.svg?height=200&width=300&text=Cybersecurity",
+      description:
+        "Comprehensive security solutions to protect your valuable data and systems from threats.",
+      features: [
+        "Threat Detection",
+        "Vulnerability Assessment",
+        "Incident Response",
+        "Compliance Management",
+      ],
+    },
+  },
+  {
+    id: "cloud-solutions",
+    title: "Cloud Solutions & Migration",
+    icon: "Cloud",
+    card: {
+      image: "/placeholder.svg?height=200&width=300&text=Cloud+Solutions",
+      description:
+        "Seamless migration and optimization of your applications and data to the cloud.",
+      features: [
+        "Cloud Strategy",
+        "Migration Services",
+        "Cloud Optimization",
+        "Hybrid Cloud Solutions",
+      ],
+    },
+  },
+  {
+    id: "managed-it",
+    title: "Managed IT Services",
+    icon: "Laptop",
+    card: {
+      image: "/placeholder.svg?height=200&width=300&text=Managed+IT",
+      description:
+        "Proactive management and support for your IT systems, ensuring smooth operations.",
+      features: [
+        "24/7 Monitoring",
+        "Help Desk Support",
+        "System Maintenance",
+        "Security Management",
+      ],
+    },
+  },
+  {
+    id: "it-consulting",
+    title: "IT Consulting & Strategy",
+    icon: "Settings",
+    card: {
+      image: "/placeholder.svg?height=200&width=300&text=IT+Consulting",
+      description:
+        "Strategic guidance to align your IT initiatives with overall business objectives.",
+      features: [
+        "Digital Transformation",
+        "IT Roadmapping",
+        "Technology Adoption",
+        "Risk Management",
+      ],
+    },
+  },
+  {
+    id: "data-analytics",
+    title: "Data & Analytics Services",
+    icon: "Search",
+    card: {
+      image: "/placeholder.svg?height=200&width=300&text=Data+Analytics",
+      description:
+        "Leverage data-driven insights to make informed decisions and drive business growth.",
+      features: [
+        "Data Warehousing",
+        "Business Intelligence",
+        "Predictive Analytics",
+        "Data Governance",
+      ],
+    },
+  },
+  {
+    id: "it-infrastructure",
+    title: "IT Infrastructure Services",
+    icon: "CloudCog",
+    card: {
+      image: "/placeholder.svg?height=200&width=300&text=IT+Infrastructure",
+      description:
+        "Optimize performance and scalability with robust IT infrastructure services tailored.",
+      features: [
+        "Scalable Infrastructure",
+        "Network Optimization",
+        "Cloud Integration",
+        "Business Continuity",
+      ],
+    },
+  },
 ];
 
 // Service card component
@@ -388,7 +484,7 @@ export default function HomeServices() {
   }, [isInViewport]);
 
   return (
-    <div className="bg-black">
+    <div className="bg-black pb-10">
       <BestHeading title="" highlight="Industries" />
       <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
         {/* Section Header */}

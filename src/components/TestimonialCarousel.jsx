@@ -120,12 +120,12 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <section className="w-full bg-black text-white">
+    <section className="w-full bg-black text-white pt-5">
       <BestHeading title="" highlight="Testimonials" />
       <div className="container max-w-[90rem] mx-auto flex flex-col lg:flex-row gap-10">
         {/* Left Section */}
-        <div className="flex flex-col w-full lg:w-2/5 justify-center space-y-8 px-4 sm:px-6">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-5 leading-tight">
+        <div className="flex flex-col w-full lg:w-2/5 justify-center space-y-8 px-4">
+          <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mt-4 mb-5 leading-tight">
             See What Our Customer Say About Us.
           </h1>
           <div className="relative w-full max-w-md sm:max-w-lg mx-auto lg:mx-0">

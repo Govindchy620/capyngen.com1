@@ -9,7 +9,7 @@ export default function HomeIndustries() {
     <div className="min-h-screen bg-black text-white">
       <BestHeading title="" highlight="Technologies" />
       {/* Top Section */}
-      <div className="relative flex flex-col lg:flex-row items-center justify-center max-w-[90rem] px-4 md:px-6 lg:px-12 mx-auto w-full">
+      <div className="relative flex flex-col pt-15 lg:flex-row items-center justify-center max-w-[90rem] px-4 md:px-6 lg:px-12 mx-auto w-full">
         {/* Left Image + Stat Card */}
         <div className="relative flex-1 flex flex-col justify-center">
           {/* Image */}
@@ -21,7 +21,7 @@ export default function HomeIndustries() {
             />
           </div>
           {/* Stat Card - overlays image on large screens, sits below on small screens */}
-          <div className="md:absolute -bottom-1/2 -translate-y-1/2 md:-left-10 transform z-10">
+          <div className="md:absolute md:-bottom-1/2 md:-translate-y-1/2 md:-left-10 transform z-10">
             <div className="bg-blue-600 text-white p-6 md:p-10 w-full md:w-fit md:mt-4 mb-5 md:mb-0 shadow-xl flex flex-col gap-5">
               <div>
                 <p className="text-lg mb-4 opacity-80">

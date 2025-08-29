@@ -207,7 +207,7 @@ const HorizontalProcessSection = () => {
             <div className="text-center max-w-4xl relative z-10">
               <BestHeading title="" highlight="Our Work Process" />
               <div className="mt-15">
-                <p className="text-white/90 text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
+                <p className="text-white/90 text-xl leading-relaxed max-w-3xl mx-auto font-medium">
                   We begin by understanding your business goals and identifying
                   the right technology solutions. Our team then designs,
                   implements, and supports systems to ensure optimal
@@ -220,7 +220,7 @@ const HorizontalProcessSection = () => {
           {processSteps.map((step, index) => (
             <div key={step.id} className="flex items-center justify-center">
               <div
-                className={`process-card process-card-${index} relative max-w-md mx-12`}
+                className={`process-card process-card-${index} relative w-xs md:w-md mx-12`}
               >
                 <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl shadow-2xl">
                   <div className="relative">
