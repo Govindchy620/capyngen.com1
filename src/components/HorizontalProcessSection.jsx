@@ -1,14 +1,16 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BestHeading from "./BestHeading";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const HorizontalProcessSection = () => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
-  const scrollTriggerRefs = useRef([]);
+  const [pinReadyKey, setPinReadyKey] = useState(null);
 
   const processSteps = [
     {
@@ -107,117 +109,89 @@ const HorizontalProcessSection = () => {
     },
   ];
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const section = sectionRef.current;
     const container = containerRef.current;
-
     if (!section || !container) return;
 
-    // Kill only the ScrollTrigger instances created by this component
-    scrollTriggerRefs.current.forEach((trigger) => {
-      if (trigger) trigger.kill();
+    const totalWidth = container.scrollWidth;
+    const viewportWidth = window.innerWidth;
+    const scrollDistance = Math.max(0, totalWidth - viewportWidth + 200);
+
+    // Main pin ScrollTrigger
+    const st = ScrollTrigger.create({
+      id: "processPin",
+      trigger: section,
+      start: "top top",
+      end: `+=${scrollDistance}`,
+      pin: true,
+      scrub: true,
+      anticipatePin: 1,
     });
-    scrollTriggerRefs.current = [];
 
-    gsap.set(container.querySelectorAll(".process-card"), {
-      opacity: 0,
-      y: 100,
-      scale: 0.8,
+    setPinReadyKey(st.start);
+
+    // Horizontal scroll animation
+    const horizontalScroll = gsap.to(container, {
+      x: -scrollDistance,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: () => st.start,
+        end: () => st.end,
+        scrub: true,
+      },
     });
-    gsap.set(container.querySelectorAll(".dot"), { opacity: 0, scale: 0 });
 
-    // Wait for the next frame to ensure all elements are rendered
-    requestAnimationFrame(() => {
-      const totalWidth = container.scrollWidth;
-      const viewportWidth = window.innerWidth;
+    // Animate cards
+    processSteps.forEach((_, index) => {
+      const card = container.querySelector(`.process-card-${index}`);
+      if (!card) return;
 
-      // Calculate the scroll distance to ensure the last card is properly centered
-      // Add extra space to account for the last card and padding
-      const scrollDistance = Math.max(0, totalWidth - viewportWidth + 200);
-
-      const horizontalScroll = gsap.to(container, {
-        x: -scrollDistance,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => `+=${scrollDistance}`,
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-          markers: false, // Set to true for debugging
-        },
-      });
-
-      // Store the main ScrollTrigger reference
-      if (horizontalScroll.scrollTrigger) {
-        scrollTriggerRefs.current.push(horizontalScroll.scrollTrigger);
-      }
-
-      processSteps.forEach((_, index) => {
-        const card = container.querySelector(`.process-card-${index}`);
-        if (!card) return;
-
-        const cardAnimation = gsap.to(card, {
+      gsap.fromTo(
+        card,
+        { opacity: 0, y: 100, scale: 0.8 },
+        {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 1.2,
           ease: "power2.out",
           scrollTrigger: {
             trigger: card,
             containerAnimation: horizontalScroll,
-            start: "left 90%",
-            end: "left 10%",
-            scrub: 0.5,
+            start: "left 80%",
+            end: "left 20%",
+            scrub: 0.8,
           },
-        });
-
-        // Store the card ScrollTrigger reference
-        if (cardAnimation.scrollTrigger) {
-          scrollTriggerRefs.current.push(cardAnimation.scrollTrigger);
         }
+      );
 
-        // Fix dot animation to fill from left to right properly
-        const dotContainer = container.querySelector(`.dotted-line-${index}`);
-        if (dotContainer) {
-          const dotGroup = dotContainer.querySelectorAll(".dot");
-
-          // Create a timeline for this dot group
-          gsap.set(dotGroup, { opacity: 0, scale: 0 });
-
-          const dotAnimation = gsap.to(dotGroup, {
+      const dotContainer = container.querySelector(`.dotted-line-${index}`);
+      if (dotContainer) {
+        const dotGroup = dotContainer.querySelectorAll(".dot");
+        gsap.fromTo(
+          dotGroup,
+          { opacity: 0, scale: 0 },
+          {
             opacity: 1,
             scale: 1,
-            duration: 0.02,
-            stagger: {
-              each: 0.05,
-              from: "start",
-            },
+            duration: 0.05,
+            stagger: { each: 0.05, from: "start" },
             scrollTrigger: {
               trigger: dotContainer,
               containerAnimation: horizontalScroll,
-              start: "left 80%",
-              end: "left 20%",
-              scrub: 1,
+              start: "left 90%",
+              end: "left 10%",
+              scrub: true,
             },
-          });
-
-          // Store the dot ScrollTrigger reference
-          if (dotAnimation.scrollTrigger) {
-            scrollTriggerRefs.current.push(dotAnimation.scrollTrigger);
           }
-        }
-      });
+        );
+      }
     });
 
     return () => {
-      // Kill only the ScrollTrigger instances created by this component
-      scrollTriggerRefs.current.forEach((trigger) => {
-        if (trigger) trigger.kill();
-      });
-      scrollTriggerRefs.current = [];
+      st.kill();
+      horizontalScroll.scrollTrigger?.kill();
     };
   }, []);
 
@@ -232,7 +206,6 @@ const HorizontalProcessSection = () => {
           <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
             <div className="text-center max-w-4xl relative z-10">
               <BestHeading title="" highlight="Our Work Process" />
-
               <div className="mt-15">
                 <p className="text-white/90 text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
                   We begin by understanding your business goals and identifying
@@ -246,26 +219,21 @@ const HorizontalProcessSection = () => {
 
           {processSteps.map((step, index) => (
             <div key={step.id} className="flex items-center justify-center">
-              {/* Enhanced Card Design */}
               <div
                 className={`process-card process-card-${index} relative max-w-md mx-12`}
               >
-                {/* Premium Card Background */}
                 <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl shadow-2xl">
                   <div className="relative">
-                    {/* Enhanced Step Number Badge */}
                     <div className="absolute -top-6 -right-6 w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white">
                       <span className="text-white font-black text-lg relative z-10">
                         {step.id}
                       </span>
                     </div>
 
-                    {/* Enhanced Image/Icon Area */}
                     <div className="mb-8">
                       <div
                         className={`w-full h-56 ${step.color} rounded-t-2xl flex items-center justify-center text-white`}
                       >
-                        {/* Replace this div with your image */}
                         <div className="text-center p-6 relative z-10">
                           <div className="mb-3">{step.icon}</div>
                           <div className="text-base opacity-90 font-semibold">
@@ -278,14 +246,12 @@ const HorizontalProcessSection = () => {
                       </div>
                     </div>
 
-                    {/* Enhanced Content */}
                     <div className="text-center space-y-4 px-2">
-                      <h3 className="text-2xl font-black text-gray-800 mb-4 leading-tight group-hover:text-indigo-700 transition-colors duration-300">
+                      <h3 className="text-2xl font-black text-gray-800 mb-4 leading-tight">
                         {step.title}
                       </h3>
-
-                      <div className=" p-6 rounded-2xl">
-                        <p className="text-gray-700 text-base leading-relaxed group-hover:text-gray-800 transition-colors duration-300 font-medium">
+                      <div className="p-6 rounded-2xl">
+                        <p className="text-gray-700 text-base leading-relaxed font-medium">
                           {step.description}
                         </p>
                       </div>
@@ -294,22 +260,17 @@ const HorizontalProcessSection = () => {
                 </div>
               </div>
 
-              {/* Enhanced Dotted Connection */}
               {index < processSteps.length - 1 && (
                 <div
                   className={`dotted-line-${index} flex items-center mx-2 relative`}
                 >
-                  {/* Advanced Glowing Line Background */}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-200/40 via-purple-300/40 to-pink-200/40 h-2 rounded-full blur-md"></div>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 via-purple-200/20 to-pink-100/20 h-1 rounded-full blur-sm"></div>
-
-                  {/* Enhanced Dots with Better Animation */}
                   <div className="flex space-x-3 relative z-10">
                     {Array.from({ length: 10 }).map((_, i) => (
                       <div key={i} className="dot relative">
-                        {/* Main Dot */}
                         <div
-                          className={`w-4 h-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 rounded-full shadow-lg transition-all duration-300`}
+                          className="w-4 h-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 rounded-full shadow-lg transition-all duration-300"
                           style={{
                             opacity: 0.6 + Math.sin(i * 0.4) * 0.3,
                             transform: `scale(${

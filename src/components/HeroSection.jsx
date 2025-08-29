@@ -1,100 +1,135 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import AnimatedButton from "./AnimatedButton";
-import { assets } from "../assets/assets";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Instagram } from "lucide-react";
+import React, { useRef } from "react";
+import Particles from "./Particles";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const HeroSection = ({ onEnd }) => {
-  const sectionRef = useRef(null);
-  const logoRef = useRef(null);
-  console.log("sectionRef:", sectionRef.current);
-  console.log("logoRef:", logoRef.current);
-
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      const section = sectionRef.current;
-      const logo = logoRef.current;
-
-      if (!section || !logo) {
-        console.warn("Refs not ready");
-        return;
-      }
-
-      console.log("sectionRef:", sectionRef.current);
-      console.log("logoRef:", logoRef.current);
-
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: "+=1500",
-          scrub: true,
-          pin: true,
-          pinSpacing: true,
-          // markers: true,
-          onLeave: () => {
-            if (typeof onEnd === "function") {
-              onEnd();
-            }
-          },
-        },
-      });
-
-      tl.to(logo, {
-        scale: 8,
-        rotate: 360,
-        ease: "none",
-      }).to(logo, {
-        opacity: 0,
-      });
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, [onEnd]);
+const HeroSection = () => {
+  const containerRef = useRef(null);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center text-white"
-      style={{
-        backgroundImage: `url(${assets.heroSectionBg})`,
-      }}
+    <div
+      ref={containerRef}
+      className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a]"
     >
-      <div className="z-10 max-w-[90rem] mx-auto px-6 w-full flex flex-col lg:flex-row justify-between items-center py-20">
-        <div className="lg:w-1/2 text-left">
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-extrabold mt-4 leading-tight text-white">
-            Transforming Your Business Through IT Excellence.
-          </h1>
-        </div>
-        <div className="mt-12 lg:mt-0 lg:w-1/2 flex flex-col justify-end items-end text-right">
-          <p className="text-lg font-semibold text-[#eaeaea] md:w-2/3 text-right mb-10">
-            We deliver tailored IT solutions to streamline operations and boost
-            efficiency. From infrastructure to cyber security, we empower your
-            business with cutting technology.
-          </p>
-          <AnimatedButton
-            text="Discover More"
-            onClick={() => alert("Button clicked!")}
-          />
-        </div>
-      </div>
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <img
-          ref={logoRef}
-          src={assets.capyngenFavIcon}
-          alt="Logo"
-          className="w-24 h-24 md:w-10 md:h-10 will-change-transform"
-          draggable="false"
-          style={{ transformOrigin: "center center" }}
+      <div className="absolute inset-0 z-0 pointer-events-auto w-full h-full">
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={800}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
         />
       </div>
-    </section>
+      {/* Content with dark overlay */}
+      <div className="absolute inset-0 bg-[#0a0a0a]/30 z-[1] pointer-events-none" />
+      {/* Content */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center pointer-events-none">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-white text-lg md:text-6xl mb-4 font-light tracking-wider"
+        >
+          Welcome to
+        </motion.h2>
+
+        <motion.div
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+          <motion.h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 text-white pb-10"
+            animate={{
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            Capyngen
+          </motion.h1>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 relative px-4 text-center"
+        >
+          <span className="font-light">
+            We speed up AI adoption and ramp up engineering and design teams to
+            help you lead your industry.
+          </span>
+          <br />
+          <motion.span
+            className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
+            animate={{
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            style={{
+              backgroundSize: "200% 200%",
+            }}
+          >
+            Explore
+          </motion.span>
+        </motion.div>
+
+        {/* Social Links with hover effects */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="flex justify-center space-x-6 pointer-events-auto"
+        >
+          {[
+            { Icon: Github, href: "https://github.com/ashmitkhurana" },
+            { Icon: Linkedin, href: "https://linkedin.com/in/ashmitkhurana" },
+            {
+              Icon: Instagram,
+              href: "https://www.instagram.com/ashmitkhurana_/",
+            },
+          ].map(({ Icon, href }, index) => (
+            <motion.a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group"
+              whileHover={{
+                scale: 1.2,
+                filter: "brightness(1.5)",
+              }}
+            >
+              <Icon size={40} className="relative z-10 text-blue-500" />
+              <p className=""></p>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-20 blur-lg"
+                initial={false}
+                animate={{
+                  scale: [1, 1.5, 1],
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                }}
+              />
+            </motion.a>
+          ))}
+        </motion.div>
+      </div>
+    </div>
   );
 };
 

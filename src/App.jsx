@@ -20,6 +20,8 @@ import DevOpsSolutions from "./pages/DevOpsSolutions";
 import ApplicationSolutions from "./pages/ApplicationSolutions";
 import CrmManagementSoftware from "./pages/CrmManagementSoftware";
 import Careers from "./pages/Careers";
+import CompanyOverview from "./pages/CompanyOverview";
+import NewsAndUpdates from "./pages/NewsAndUpdates";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -51,6 +53,8 @@ const App = () => {
           />
           <Route path="/industries" element={<Industries />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/company-overview" element={<CompanyOverview />} />
+          <Route path="/news-and-updates" element={<NewsAndUpdates />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/industries/banking" element={<Banking />} />
         </Routes>

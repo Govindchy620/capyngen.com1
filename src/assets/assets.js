@@ -241,6 +241,6 @@ export const navItems = [
   },
   { label: "COMPANY OVERVIEW", href: "/company-overview" },
   { label: "CAREERS", href: "/careers" },
-  { label: "NEWS & UPDATES", href: "/news-updates" },
+  { label: "NEWS & UPDATES", href: "/news-and-updates" },
   { label: "CONTACT US", href: "/contact-us" },
 ];

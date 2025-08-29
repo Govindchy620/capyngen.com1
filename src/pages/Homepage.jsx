@@ -5,13 +5,11 @@ import HomeIndustries from "../components/HomeIndustries";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import ServicesCarousel from "../components/ServicesCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
-import LetTalkDiagonal from "../components/LetTalkDiagonal";
 import HomeServices from "../components/HomeServices";
 import HomeBlogs from "../components/HomeBlogs";
 import HeroSection from "../components/HeroSection";
 import FAQSection from "../components/FAQSection";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import WebServices from "../components/WebServices";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
 const Homepage = () => {
@@ -33,19 +31,27 @@ const Homepage = () => {
   ];
 
   useSplitTextAnimation("h1");
+
   return (
-    <div>
-      <HeroSection />
-      <HomeAboutUs />
-      <WhyChooseUs />
-      <HorizontalProcessSection />
-      <ServicesCarousel />
-      <HomeServices />
-      <HomeIndustries />
-      <TestimonialCarousel />
-      <HomeBlogs />
-      <FAQSection items={faqItems} />
-      <ScrollRevealEffect />
+    <div className="relative">
+      {/* Fixed Background (HeroSection) */}
+      <div className="sticky inset-0">
+        <HeroSection />
+      </div>
+
+      {/* Foreground Content (scrolls over background) */}
+      <div className="relative z-10">
+        <HomeAboutUs />
+        <WhyChooseUs />
+        <HorizontalProcessSection />
+        <ServicesCarousel />
+        <HomeServices />
+        <HomeIndustries />
+        <TestimonialCarousel />
+        <HomeBlogs />
+        <FAQSection items={faqItems} />
+        <ScrollRevealEffect />
+      </div>
     </div>
   );
 };

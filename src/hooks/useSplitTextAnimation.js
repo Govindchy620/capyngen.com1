@@ -11,41 +11,47 @@ export default function useSplitTextAnimation(selector = "h1") {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
+          const el = entry.target;
 
-            // Ensure element is visible
-            gsap.set(el, { opacity: 1 });
+          if (entry.isIntersecting) {
+            // If previously split, revert before re-splitting
+            if (el.splitText) {
+              el.splitText.revert();
+            }
 
             // Split into words
             const split = new SplitText(el, {
               type: "words",
               wordsClass: "word",
             });
+            el.splitText = split;
 
-            // Animate: start small & grow to original size
-            gsap.from(split.words, {
-              scale: 0.1, // start at half size
-              opacity: 0, // fade in
-              y: 50, // still rise up slightly
-              stagger: 0.2,
-              ease: "back.out(1.7)", // "springy" feel
-              duration: 0.8,
-            });
-
-            // Stop observing once animated
-            observer.unobserve(el);
+            // Animate
+            gsap.fromTo(
+              split.words,
+              { scale: 0.1, opacity: 0, y: 50 },
+              {
+                scale: 1,
+                opacity: 1,
+                y: 0,
+                stagger: 0.2,
+                ease: "back.out(1.7)",
+                duration: 0.8,
+              }
+            );
+          } else {
+            // Reset when out of view so it can play again
+            if (el.splitText) {
+              gsap.set(el.splitText.words, { opacity: 0, scale: 0.1, y: 50 });
+            }
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 } // triggers once 20% of element is visible
     );
 
-    elements.forEach((el) => {
-      observer.observe(el);
-    });
+    elements.forEach((el) => observer.observe(el));
 
-    // Cleanup
     return () => {
       observer.disconnect();
       elements.forEach((el) => {
