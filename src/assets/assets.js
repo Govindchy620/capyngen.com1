@@ -55,6 +55,8 @@ import joinus from "./joinus.avif";
 import careersAbout1 from "./careersAbout1.avif";
 import careersAbout2 from "./careersAbout2.avif";
 import careersAbout3 from "./careersAbout3.avif";
+import capyngen3d from "./capyngen3d.png";
+import overview from "./overview.webp";
 
 export const assets = {
   homeAboutUs1,
@@ -114,6 +116,8 @@ export const assets = {
   careersAbout1,
   careersAbout2,
   careersAbout3,
+  capyngen3d,
+  overview,
 };
 
 export const navItems = [

@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram } from "lucide-react";
 import React, { useRef } from "react";
 import Particles from "./Particles";
+import RotatingImage from "./RotatingImage";
+import { assets } from "../assets/assets";
 
 const HeroSection = () => {
   const containerRef = useRef(null);
@@ -84,49 +86,6 @@ const HeroSection = () => {
           >
             Explore
           </motion.span>
-        </motion.div>
-
-        {/* Social Links with hover effects */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex justify-center space-x-6 pointer-events-auto"
-        >
-          {[
-            { Icon: Github, href: "https://github.com/ashmitkhurana" },
-            { Icon: Linkedin, href: "https://linkedin.com/in/ashmitkhurana" },
-            {
-              Icon: Instagram,
-              href: "https://www.instagram.com/ashmitkhurana_/",
-            },
-          ].map(({ Icon, href }, index) => (
-            <motion.a
-              key={index}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative group"
-              whileHover={{
-                scale: 1.2,
-                filter: "brightness(1.5)",
-              }}
-            >
-              <Icon size={40} className="relative z-10 text-blue-500" />
-              <p className=""></p>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-20 blur-lg"
-                initial={false}
-                animate={{
-                  scale: [1, 1.5, 1],
-                }}
-                transition={{
-                  duration: 1,
-                  repeat: Infinity,
-                }}
-              />
-            </motion.a>
-          ))}
         </motion.div>
       </div>
     </div>

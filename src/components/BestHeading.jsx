@@ -21,7 +21,7 @@ export default function BestHeading({
         </h1>
         {/* Main Outlined Text */}
         <h1
-          className="relative text-outline-only font-extrabold text-xl md:text-9xl z-10 whitespace-nowrap inline-block"
+          className="relative text-gray-500 font-extrabold text-xl md:text-9xl z-10 whitespace-nowrap inline-block"
           style={{ transform: "scaleX(0.8)" }}
         >
           {highlight}

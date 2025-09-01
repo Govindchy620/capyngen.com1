@@ -1,4 +1,6 @@
 import React from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 // Updated SVG icons to match the image design
 const CalendarIcon = () => (
@@ -52,29 +54,35 @@ const EmployeesIcon = () => (
   </svg>
 );
 
+// Stats with numeric values for CountUp
 const stats = [
   {
     icon: <CalendarIcon />,
-    label: "19+ YEARS",
+    value: 19,
+    suffix: "+ YEARS",
   },
   {
     icon: <CustomersIcon />,
-    label: "500+ CUSTOMERS",
+    value: 500,
+    suffix: "+ CUSTOMERS",
   },
   {
     icon: <LocationIcon />,
-    label: "5 LOCATIONS",
+    value: 5,
+    suffix: " LOCATIONS",
   },
   {
     icon: <EmployeesIcon />,
-    label: "1650+ EMPLOYEES",
+    value: 1650,
+    suffix: "+ EMPLOYEES",
   },
 ];
 
 const centers = [
   {
     title: "Trivandrum",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Technopark_main_building%2C_Trivandrum.jpg/320px-Technopark_main_building%2C_Trivandrum.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Technopark_main_building%2C_Trivandrum.jpg/320px-Technopark_main_building%2C_Trivandrum.jpg",
     address: (
       <>
         Thejaswini Building, 407
@@ -82,11 +90,11 @@ const centers = [
         Technopark Campus
       </>
     ),
-    highlight: true,
   },
   {
     title: "Trivandrum",
-    image: "https://media.istockphoto.com/id/1177711747/photo/technopark-campus-in-trivandrum.webp?b=1&s=170667a&w=0&k=20&c=KMRTGyYeCKZoUuJFf9p60rxo7gAQylnEC-zWyblJvO4=",
+    image:
+      "https://media.istockphoto.com/id/1177711747/photo/technopark-campus-in-trivandrum.webp?b=1&s=170667a&w=0&k=20&c=KMRTGyYeCKZoUuJFf9p60rxo7gAQylnEC-zWyblJvO4=",
     address: (
       <>
         B-5, Gayatri Building,
@@ -108,7 +116,8 @@ const centers = [
   },
   {
     title: "Bangalore",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=320&q=80",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=320&q=80",
     address: (
       <>
         Trend India Workspaces
@@ -121,32 +130,87 @@ const centers = [
   },
 ];
 
-const AtAGlance = () => (
-  <div className="w-full bg-gradient-to-br from-red-500 via-red-600 to-pink-600 relative overflow-hidden">
-    {/* Background overlay for texture */}
-    <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-    
-    <div className="relative z-10">
-      {/* At a Glance Section */}
-      <div className="py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <h2 className="text-white text-5xl md:text-6xl font-bold text-center mb-16">
-            At a Glance
-          </h2>
-          
-          {/* Stats Container */}
-          <div className="bg-white rounded-3xl shadow-2xl p-12 mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {stats.map((stat, i) => (
-                <div 
-                  key={i} 
-                  className="flex flex-col items-center text-center group cursor-pointer transform transition-all duration-300 hover:scale-105"
-                >
-                  <div className="transform transition-all duration-300 group-hover:scale-110 mb-4">
-                    {stat.icon}
+const AtAGlance = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  return (
+    <div className="w-full bg-gradient-to-br from-red-500 via-red-600 to-pink-600 relative overflow-hidden">
+      {/* Background overlay for texture */}
+      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+
+      <div className="relative z-10" ref={ref}>
+        {/* At a Glance Section */}
+        <div className="py-16">
+          <div className="max-w-7xl mx-auto px-8 md:px-16">
+            <h2 className="text-white text-5xl md:text-6xl font-bold text-center mb-16">
+              At a Glance
+            </h2>
+
+            {/* Stats Container */}
+            <div className="bg-white rounded-3xl shadow-2xl p-12 mx-auto max-w-6xl">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                {stats.map((stat, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col items-center text-center group cursor-pointer transform transition-all duration-300 hover:scale-105"
+                  >
+                    <div className="transform transition-all duration-300 group-hover:scale-110 mb-4">
+                      {stat.icon}
+                    </div>
+                    <div className="text-gray-800 font-semibold text-lg tracking-wide group-hover:text-red-600 transition-colors duration-300">
+                      {inView && (
+                        <CountUp
+                          start={0}
+                          end={stat.value}
+                          duration={2}
+                          separator=","
+                        />
+                      )}
+                      {stat.suffix}
+                    </div>
                   </div>
-                  <div className="text-gray-800 font-semibold text-lg tracking-wide group-hover:text-red-600 transition-colors duration-300">
-                    {stat.label}
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Development Centers Section */}
+        <div className="pb-16">
+          <div className="max-w-7xl mx-auto px-8 md:px-16">
+            <h2 className="text-white text-4xl md:text-5xl font-bold text-center mb-12">
+              Development Centers
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {centers.map((center, i) => (
+                <div
+                  key={i}
+                  className="rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-white text-gray-800 hover:bg-gray-50"
+                >
+                  <div className="p-6">
+                    <img
+                      src={center.image}
+                      alt={center.title}
+                      className="w-full h-40 object-cover rounded-2xl mb-6"
+                    />
+                    <h3
+                      className={`text-2xl font-bold mb-4 text-center ${
+                        center.highlight ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {center.title}
+                    </h3>
+                    <div
+                      className={`text-center text-base leading-relaxed ${
+                        center.highlight ? "text-red-100" : "text-gray-600"
+                      }`}
+                    >
+                      {center.address}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -154,48 +218,8 @@ const AtAGlance = () => (
           </div>
         </div>
       </div>
-
-      {/* Development Centers Section */}
-      <div className="pb-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <h2 className="text-white text-4xl md:text-5xl font-bold text-center mb-12">
-            Development Centers
-          </h2>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {centers.map((center, i) => (
-              <div
-                key={i}
-                className={`rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                  center.highlight
-                    ? "bg-red-600 text-white border-4 border-white"
-                    : "bg-white text-gray-800 hover:bg-gray-50"
-                }`}
-              >
-                <div className="p-6">
-                  <img
-                    src={center.image}
-                    alt={center.title}
-                    className="w-full h-40 object-cover rounded-2xl mb-6"
-                  />
-                  <h3 className={`text-2xl font-bold mb-4 text-center ${
-                    center.highlight ? "text-white" : "text-gray-900"
-                  }`}>
-                    {center.title}
-                  </h3>
-                  <div className={`text-center text-base leading-relaxed ${
-                    center.highlight ? "text-red-100" : "text-gray-600"
-                  }`}>
-                    {center.address}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default AtAGlance;
