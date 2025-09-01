@@ -42,6 +42,7 @@ const Homepage = () => {
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <HomeAboutUs />
+
         <WhyChooseUs />
         <HorizontalProcessSection />
         <ServicesCarousel />

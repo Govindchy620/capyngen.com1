@@ -63,101 +63,6 @@ const OurServices = () => {
       description: "Reliable hosting solutions for your online presence.",
       image: assets.blog3,
     },
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog1,
-    },
-    {
-      title: "App Development",
-      description: "Mobile and web applications to engage your customers.",
-      image: assets.blog2,
-    },
-    {
-      title: "Digital Marketing",
-      description: "Strategies to boost your online presence and reach.",
-      image: assets.blog3,
-    },
-    {
-      title: "Website Maintenance",
-      description: "Ongoing support to keep your site running smoothly.",
-      image: assets.blog1,
-    },
-    {
-      title: "Graphic Design",
-      description: "Visually stunning designs for your brand identity.",
-      image: assets.blog2,
-    },
-    {
-      title: "Domain & Hosting",
-      description: "Reliable hosting solutions for your online presence.",
-      image: assets.blog3,
-    },
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog1,
-    },
-    {
-      title: "App Development",
-      description: "Mobile and web applications to engage your customers.",
-      image: assets.blog2,
-    },
-    {
-      title: "Digital Marketing",
-      description: "Strategies to boost your online presence and reach.",
-      image: assets.blog3,
-    },
-    {
-      title: "Website Maintenance",
-      description: "Ongoing support to keep your site running smoothly.",
-      image: assets.blog1,
-    },
-    {
-      title: "Graphic Design",
-      description: "Visually stunning designs for your brand identity.",
-      image: assets.blog2,
-    },
-    {
-      title: "Domain & Hosting",
-      description: "Reliable hosting solutions for your online presence.",
-      image: assets.blog3,
-    },
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog1,
-    },
-    {
-      title: "App Development",
-      description: "Mobile and web applications to engage your customers.",
-      image: assets.blog2,
-    },
-    {
-      title: "Digital Marketing",
-      description: "Strategies to boost your online presence and reach.",
-      image: assets.blog3,
-    },
-    {
-      title: "Website Maintenance",
-      description: "Ongoing support to keep your site running smoothly.",
-      image: assets.blog1,
-    },
-    {
-      title: "Graphic Design",
-      description: "Visually stunning designs for your brand identity.",
-      image: assets.blog2,
-    },
-    {
-      title: "Domain & Hosting",
-      description: "Reliable hosting solutions for your online presence.",
-      image: assets.blog3,
-    },
-    {
-      title: "Domain & Hosting",
-      description: "Reliable hosting solutions for your online presence.",
-      image: assets.blog3,
-    },
   ];
 
   const [visibleCount, setVisibleCount] = useState(5);
@@ -191,24 +96,6 @@ const OurServices = () => {
             ))}
           </AnimatePresence>
         </motion.div>
-
-        {/* Show More / Show Less Button */}
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={toggleServices}
-            className="flex items-center gap-2 px-6 py-3 bg-white text-black font-semibold rounded-full shadow-md hover:bg-gray-200 transition"
-          >
-            {visibleCount === 5 ? (
-              <>
-                Show More <ChevronDown size={20} />
-              </>
-            ) : (
-              <>
-                Show Less <ChevronUp size={20} />
-              </>
-            )}
-          </button>
-        </div>
       </div>
     </div>
   );

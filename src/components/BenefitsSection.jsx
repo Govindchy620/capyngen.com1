@@ -9,7 +9,7 @@ const BenefitsSection = ({
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         {/* LEFT COLUMN (sticky) */}
         <div className="md:sticky md:top-24 self-start">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold leading-tight">
             {heading}
           </h1>
           <div className="mt-8 w-28 h-28 border border-gray-500 rounded-full"></div>

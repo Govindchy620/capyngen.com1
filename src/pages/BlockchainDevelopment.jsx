@@ -7,6 +7,8 @@ import WhyChoose from "../components/WhyChoose";
 import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
+import BenefitsSection from "../components/BenefitsSection";
+import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
 const BlockchainDevelopment = () => {
   const faqItems = [
@@ -46,6 +48,25 @@ const BlockchainDevelopment = () => {
     { name: "AWS", logo: assets.aws },
     { name: "Google Cloud", logo: assets.googlecloud },
   ];
+  const benefitsData = [
+    {
+      title: "Smooth Software Team Extension",
+      desc: "We emphasize strong teamwork and smooth interaction between your local and remote software development units.",
+    },
+    {
+      title: "A Client-First Approach",
+      desc: "We focus on balancing technical know-how, soft skills, and additional qualifications that you deem important.",
+    },
+    {
+      title: "You and Your Team Stay in Sync",
+      desc: "Our method for extending your Blockchain development team lets you stay involved and manage your squad directly.",
+    },
+    {
+      title: "Relevant Candidates",
+      desc: "You can hire dedicated developers who passed our assessments in technical skills, soft skills, and English.",
+      highlight: true,
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -54,17 +75,22 @@ const BlockchainDevelopment = () => {
         title="Blockchain Development"
         overlayBg="bg-black/70"
         backgroundImage={assets.bg1}
-        description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        description="Unlock the Power of Blockchain Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
       />
-      <OurServices />
       <HowWeWork />
       <WhyChoose />
       <TechnologiesCarousel
-        title="App Development Technologies We Use"
+        title="Blockchain Development Technologies We Use"
         description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
         technologies={technologies}
       />
+      <BenefitsSection
+        heading="Why Leading Brands Choose Capyngen for Blockchain Development?"
+        benefits={benefitsData}
+      />
+      <OurServices />
       <FAQSection2 items={faqItems} />
+      <ScrollRevealEffect />
     </div>
   );
 };

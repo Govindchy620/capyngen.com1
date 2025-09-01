@@ -2,6 +2,7 @@ import React from "react";
 import { assets } from "../assets/assets";
 import AnimatedButton from "./AnimatedButton";
 import BestHeading from "./BestHeading";
+import ScrollFloat from "./ScrollFloat";
 
 const demoMainImg = assets.homeAboutUs1;
 const demoTeamImg = assets.homeAboutUs2;
@@ -10,7 +11,17 @@ const demoPeople = [assets.team1, assets.team2, assets.team3, assets.team4];
 const HomeAboutUs = () => {
   return (
     <section className="bg-black">
-      <BestHeading title="" highlight="About Us" />
+      <ScrollFloat
+        animationDuration={1}
+        ease="back.inOut(2)"
+        scrollStart="top center"
+        scrollEnd="bottom center"
+        stagger={0.03}
+        containerClassName="gradient-text"
+        textClassName="text-5xl sm:text-6xl md:text-7xl font-extrabold"
+      >
+        About Me
+      </ScrollFloat>
       <div
         className="bg-black text-white w-full relative overflow-hidden"
         style={{

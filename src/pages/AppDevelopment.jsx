@@ -59,7 +59,7 @@ const AppDevelopment = () => {
     },
     {
       title: "You and Your Team Stay in Sync",
-      desc: "Our method for extending your Web App development team lets you stay involved and manage your squad directly.",
+      desc: "Our method for extending your App development team lets you stay involved and manage your squad directly.",
     },
     {
       title: "Relevant Candidates",

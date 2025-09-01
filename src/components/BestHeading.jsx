@@ -1,5 +1,7 @@
 "use client";
 
+import ScrollFloat from "./ScrollFloat";
+
 export default function BestHeading({
   title = "Our Best",
   highlight = "Work",
@@ -11,22 +13,17 @@ export default function BestHeading({
           {title}
         </h1>
       )}
-      <div className="relative leading-none tracking-[0.5rem]">
-        {/* Shadow Layer */}
-        <h1
-          className="absolute top-[4px] xl:top-[7px] left-[4px] xl:left-[7px] text-[#4D85FF] font-extrabold text-xl md:text-9xl z-0 whitespace-nowrap inline-block"
-          style={{ transform: "scaleX(0.8)" }}
-        >
-          {highlight}
-        </h1>
-        {/* Main Outlined Text */}
-        <h1
-          className="relative text-gray-500 font-extrabold text-xl md:text-9xl z-10 whitespace-nowrap inline-block"
-          style={{ transform: "scaleX(0.8)" }}
-        >
-          {highlight}
-        </h1>
-      </div>
+      <ScrollFloat
+        animationDuration={1}
+        ease="back.inOut(2)"
+        scrollStart="top center"
+        scrollEnd="bottom center"
+        stagger={0.03}
+        containerClassName="gradient-text"
+        textClassName="text-5xl font-extrabold"
+      >
+        {highlight}
+      </ScrollFloat>
     </div>
   );
 }

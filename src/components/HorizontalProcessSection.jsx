@@ -204,7 +204,7 @@ const HorizontalProcessSection = () => {
           style={{ width: "max-content" }}
         >
           <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
-            <div className="text-center max-w-4xl relative z-10">
+            <div className="text-center max-w-7xl relative z-10">
               <BestHeading title="" highlight="Our Work Process" />
               <div className="mt-15">
                 <p className="text-white/90 text-xl leading-relaxed max-w-3xl mx-auto font-medium">
