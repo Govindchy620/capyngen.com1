@@ -65,7 +65,7 @@ function SeoStatsSection() {
   return (
     <section
       ref={ref}
-      className="w-full py-16 px-6 bg-gradient-to-b from-white to-gray-50 text-center"
+      className="w-full py-16 px-6 bg-black text-white text-center"
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
@@ -78,7 +78,7 @@ function SeoStatsSection() {
           Expect great things <br />
           <span className="font-bold">from your SEO Agency</span>
         </h2>
-        <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+        <p className="mt-4 text-white max-w-2xl mx-auto">
           Believe it because you've seen it. Here are real numbers from just one
           successful Victorious partner.
         </p>
@@ -87,7 +87,7 @@ function SeoStatsSection() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           {/* User Activity Line Chart */}
           <div>
-            <h4 className="text-gray-700 font-semibold mb-3">User Activity</h4>
+            <h4 className="text-white font-semibold mb-3">User Activity</h4>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={userActivityData}>
                 <XAxis dataKey="day" stroke="#999" />
@@ -110,7 +110,7 @@ function SeoStatsSection() {
             <div className="flex justify-center items-center gap-4 mb-6">
               <span
                 className={`text-sm font-medium ${
-                  !seoActive ? "text-gray-900" : "text-gray-400"
+                  !seoActive ? "text-white" : "text-gray-400"
                 }`}
               >
                 BEFORE SEO
@@ -131,7 +131,7 @@ function SeoStatsSection() {
               </button>
               <span
                 className={`text-sm font-medium ${
-                  seoActive ? "text-gray-900" : "text-gray-400"
+                  seoActive ? "text-white" : "text-gray-400"
                 }`}
               >
                 AFTER SEO
@@ -160,7 +160,7 @@ function SeoStatsSection() {
                     />
                   )}
                 </p>
-                <p className="text-gray-500 mt-2 font-medium">
+                <p className="text-white mt-2 font-medium">
                   Annual Organic Traffic
                 </p>
               </div>
@@ -185,9 +185,7 @@ function SeoStatsSection() {
                     />
                   )}
                 </p>
-                <p className="text-gray-500 mt-2 font-medium">
-                  Ranking Keywords
-                </p>
+                <p className="text-white mt-2 font-medium">Ranking Keywords</p>
               </div>
               <div
                 className={`transform transition-all duration-500 hover:scale-105 p-2 rounded-xl ${
@@ -210,7 +208,7 @@ function SeoStatsSection() {
                     />
                   )}
                 </p>
-                <p className="text-gray-500 mt-2 font-medium">
+                <p className="text-white mt-2 font-medium">
                   Return on Investment
                 </p>
               </div>
@@ -219,7 +217,7 @@ function SeoStatsSection() {
 
           {/* Performance Bar Chart */}
           <div>
-            <h4 className="text-gray-700 font-semibold mb-3">Performance</h4>
+            <h4 className="text-white font-semibold mb-3">Performance</h4>
             <div className="flex justify-center gap-4 mb-3">
               <button className="text-sm px-3 py-1 rounded-lg bg-blue-600 text-white">
                 Week

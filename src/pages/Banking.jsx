@@ -9,7 +9,7 @@ import SeoAgency from "../components/SeoAgency";
 
 const Industries = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <ExpandableGallery />
       <SeoToolsSection />
       <SeoStatsSection />

@@ -76,7 +76,7 @@ function SeoToolsSection() {
   };
 
   return (
-    <section className="w-full bg-blue-800 h-screen py-16 px-6 text-white overflow-hidden">
+    <section className="w-full bg-black h-screen py-16 px-6 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-12 h-full">
         {/* Left Tabs */}
         <div className="flex-1 space-y-6 w-1/3">

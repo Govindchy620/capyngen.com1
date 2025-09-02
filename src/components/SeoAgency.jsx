@@ -22,7 +22,7 @@ const SeoAgency = () => {
   }, []);
 
   return (
-    <div className="relative py-20 px-6 bg-white overflow-hidden">
+    <div className="relative py-20 px-6 bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
@@ -45,14 +45,14 @@ const SeoAgency = () => {
             </div>
 
             {/* Main heading */}
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-snug">
               Expect Great Things
               <br />
               From Your SEO Agency
             </h2>
 
             {/* Description */}
-            <p className="text-gray-600 text-lg leading-relaxed max-w-lg">
+            <p className="text-white text-lg leading-relaxed max-w-lg">
               Turn your ideas into reality with our exceptional software design
               and development team. Join the growing list of clients who have
               leveraged our expertise to scale their business.
@@ -66,7 +66,7 @@ const SeoAgency = () => {
               {/* Success stat */}
               <div>
                 <div className="flex items-end gap-1">
-                  <span className="text-5xl font-extrabold text-gray-900">
+                  <span className="text-5xl font-extrabold text-white">
                     250
                   </span>
                   <span className="text-orange-500 text-2xl font-bold">+</span>
@@ -77,14 +77,14 @@ const SeoAgency = () => {
               {/* Progress bar */}
               <div className="flex-1 border-l pl-8">
                 <div className="flex justify-between">
-                  <span className="font-bold text-lg text-gray-900">
+                  <span className="font-bold text-lg text-white">
                     Consulting Skill
                   </span>
-                  <span className="font-bold text-lg text-gray-900">70%</span>
+                  <span className="font-bold text-lg text-white">70%</span>
                 </div>
                 <div className="w-full bg-gray-200 h-3 rounded-full mt-3 overflow-hidden">
                   <div
-                    className="bg-black h-3 rounded-full transition-all duration-[1500ms] ease-out"
+                    className="bg-white h-3 rounded-full transition-all duration-[1500ms] ease-out"
                     style={{ width: progressVisible ? "70%" : "0%" }}
                   />
                 </div>
@@ -92,17 +92,17 @@ const SeoAgency = () => {
             </div>
 
             {/* Feature badges */}
-            <div className="flex flex-wrap gap-4 items-center text-gray-700 font-medium">
+            <div className="flex flex-wrap gap-4 items-center text-white font-medium">
               <div className="flex items-center gap-2 hover:text-orange-500 transition-colors">
                 <span className="text-orange-500">✓</span>
                 GRE CBT Test
               </div>
-              <span className="text-gray-400">•</span>
+              <span className="text-white">•</span>
               <div className="flex items-center gap-2 hover:text-orange-500 transition-colors">
                 <span className="text-orange-500">✓</span>
                 Moneyback Guarantee
               </div>
-              <span className="text-gray-400">•</span>
+              <span className="text-white">•</span>
               <div className="flex items-center gap-2 hover:text-orange-500 transition-colors">
                 <span className="text-orange-500">✓</span>
                 JEE CBT Test

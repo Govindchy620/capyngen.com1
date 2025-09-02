@@ -7,7 +7,7 @@ export default function BestHeading2({ highlight = "Work" }) {
         {/* Shadow Layer */}
         <h1
           className="col-start-1 row-start-1 text-gray-400 font-extrabold 
-          text-[clamp(2.5rem,12vw,8rem)] z-0 translate-x-[3px] translate-y-[3px]
+          text-[clamp(2.5rem,10vw,7rem)] z-0 translate-x-[3px] translate-y-[3px]
           md:translate-x-[6px] md:translate-y-[6px]"
           style={{ transform: "scaleX(0.9)" }}
         >
@@ -16,7 +16,7 @@ export default function BestHeading2({ highlight = "Work" }) {
         {/* Main Outlined Text */}
         <h1
           className="col-start-1 row-start-1 text-outline-only font-extrabold 
-          text-[clamp(2.5rem,12vw,8rem)] z-10"
+          text-[clamp(2.5rem,10vw,7rem)] z-10"
           style={{ transform: "scaleX(0.9)" }}
         >
           {highlight}

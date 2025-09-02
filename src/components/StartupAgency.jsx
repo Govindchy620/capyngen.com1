@@ -28,12 +28,12 @@ const StartupAgency = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center px-6 py-12 overflow-hidden"
+      className="bg-black min-h-screen flex items-center justify-center px-6 py-12 overflow-hidden"
     >
       <div className="relative max-w-7xl mx-auto w-full">
         {/* Background container */}
         <div
-          className={`absolute right-0 top-0 bg-gray-100 shadow-xl rounded-4xl w-4/5 h-[28rem] transition-all duration-1000 ${
+          className={`absolute right-0 top-0 bg-gray-500 shadow-xl rounded-4xl w-4/5 h-[28rem] transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         />
@@ -43,7 +43,7 @@ const StartupAgency = () => {
           <div className="max-w-2xl">
             {/* Heading */}
             <h1
-              className={`text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-8 transition-all duration-700 delay-500 ${
+              className={`text-5xl md:text-6xl font-bold text-white leading-tight mb-8 transition-all duration-700 delay-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-5"
@@ -73,7 +73,7 @@ const StartupAgency = () => {
                     }`}
                     style={{ transitionDelay: `${900 + index * 100}ms` }}
                   >
-                    <span className="text-gray-800 text-xl font-semibold">
+                    <span className="text-white text-xl font-semibold">
                       {service}
                     </span>
                   </div>
@@ -99,7 +99,7 @@ const StartupAgency = () => {
 
           {/* Right description */}
           <div
-            className={`absolute right-8 top-24 max-w-xl text-gray-600 text-xl leading-relaxed transition-all duration-700 delay-800 ${
+            className={`absolute right-8 top-24 max-w-xl text-white text-xl leading-relaxed transition-all duration-700 delay-800 ${
               isVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-5"
@@ -137,7 +137,7 @@ const StartupAgency = () => {
               ].map((card) => (
                 <div
                   key={card.title}
-                  className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group ${
+                  className={`bg-black rounded-2xl p-8 shadow-lg shadow-white hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group ${
                     isVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-10"
@@ -148,10 +148,10 @@ const StartupAgency = () => {
                     <div className="flex justify-center text-4xl text-orange-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                       {card.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-500 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white group-hover:text-orange-500 transition-colors duration-300">
                       {card.title}
                     </h3>
-                    <p className="text-gray-600 text-md leading-relaxed">
+                    <p className="text-white text-md leading-relaxed">
                       {card.description}
                     </p>
                   </div>

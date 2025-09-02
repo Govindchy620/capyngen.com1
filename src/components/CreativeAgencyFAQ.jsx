@@ -78,7 +78,7 @@ const CreativeAgencyFAQ = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto flex items-center gap-8 lg:gap-16">
         <AnimatePresence mode="wait">
           <motion.div
@@ -115,18 +115,16 @@ const CreativeAgencyFAQ = () => {
 
             {/* Right Side - Content */}
             <div className="flex-1 max-w-2xl">
-              <h1 className="text-4xl lg:text-6xl font-black text-black leading-tight mb-8">
+              <h1 className="text-4xl lg:text-6xl font-black leading-tight mb-8">
                 {slides[index].heading}
               </h1>
 
-              <p className="text-gray-600 text-xl leading-relaxed mb-8 max-w-xl">
+              <p className="text-xl leading-relaxed mb-8 max-w-xl">
                 {slides[index].description}
               </p>
 
               <div className="flex items-center gap-8">
-                <div className="text-5xl font-black text-black">
-                  {slides[index].price}
-                </div>
+                <div className="text-5xl font-black">{slides[index].price}</div>
                 <div className="text-xl">Monthly Price</div>
               </div>
 
