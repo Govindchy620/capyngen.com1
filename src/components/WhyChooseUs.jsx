@@ -14,13 +14,19 @@ export default function WhyChooseUs() {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight text-white">
-              Why Choose Technox:
+              Why Choose Capyngen:
               <br className="hidden sm:block" />
-              Smart, Reliable IT Solutions that Deliver.
+              Innovative, Reliable IT Services that Drive Success
             </h1>
             <p className="text-base md:text-lg my-6 text-white max-w-2xl mx-auto lg:mx-0">
-              Technox delivers smart, reliable IT solutions tailored to drive
-              your business forward with innovation and efficiency.
+              We provide businesses with innovative, dependable, and tailored
+              digital solutions that help them grow, come up with new ideas, and
+              get measurable results. We are experts in enterprise-grade cloud
+              computing, advanced business intelligence, next-generation
+              cybersecurity, custom mobile app development, strong enterprise
+              software, strategic digital transformation, intelligent
+              automation, responsive web platforms, and scalable IT strategies.
+              These things help businesses grow and succeed in the long term.
             </p>
             <div className="flex justify-center lg:justify-start">
               <AnimatedButton
@@ -52,22 +58,22 @@ export default function WhyChooseUs() {
             {
               icon: <UserRoundSearch className="w-6 h-6 text-gray-800" />,
               title: "Customer Focused",
-              desc: "Technox delivers smart, reliable IT solutions tailored to drive your business forward.",
+              desc: "Capyngen provides digital solutions that are tailored to the demands of your organization so that you may flourish in the long run.",
             },
             {
               icon: <BarChart3 className="w-6 h-6 text-gray-800" />,
               title: "Strategic Marketing",
-              desc: "Technox delivers smart, reliable IT solutions tailored to drive your business forward.",
+              desc: "We combine both technology and creativity to come up with clever digital plans that help you expand quicker and remain ahead of the competition.",
             },
             {
               icon: <Sparkles className="w-6 h-6 text-gray-800" />,
               title: "Experience & Expertise",
-              desc: "Technox delivers smart, reliable IT solutions tailored to drive your business forward.",
+              desc: "Capyngen uses its comprehensive understanding of the industry and proven skills to make sure that your firm receives IT solutions that are dependable, scalable, and ready for the future.",
             },
             {
               icon: <LifeBuoy className="w-6 h-6 text-gray-800" />,
               title: "24/7 Customer Support",
-              desc: "Technox delivers smart, reliable IT solutions tailored to drive your business forward.",
+              desc: "You can count on our devoted support staff to always be there for you, so you won't have to worry about anything going wrong.",
             },
           ].map(({ icon, title, desc }, i) => (
             <div

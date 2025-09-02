@@ -10,11 +10,15 @@
 
 .scroll-float-text {
   display: inline-block;
-  font-size: 6rem;
+  /* Responsive sizing across all screens */
+  font-size: clamp(1.75rem, 8vw, 6rem);
   font-weight: 900;
   text-align: center;
-  line-height: 1.5;
-  min-height: 1.5em;
+  line-height: 1.15;
+  /* Allow natural wrapping while keeping per-char spans inline */
+  white-space: normal;
+  word-break: break-word;
+  text-wrap: balance;
   opacity: 1;
   isolation: isolate; /* Creates a new stacking context */
 }
@@ -35,6 +39,20 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: white;
+}
+
+/* Small screens: slightly tighter line-height for better fit */
+@media (max-width: 640px) {
+  .scroll-float-text {
+    line-height: 1.1;
+  }
+}
+
+/* Large screens: relax line-height */
+@media (min-width: 1280px) {
+  .scroll-float-text {
+    line-height: 1.2;
+  }
 }
 
 /* Add debug outlines when needed */

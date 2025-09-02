@@ -18,9 +18,9 @@ const HomeAboutUs = () => {
         scrollEnd="bottom center"
         stagger={0.03}
         containerClassName="gradient-text"
-        textClassName="text-5xl sm:text-6xl md:text-7xl font-extrabold"
+        textClassName="text-xl md:text-7xl font-extrabold"
       >
-        About Me
+        About Us
       </ScrollFloat>
       <div
         className="bg-black text-white w-full relative overflow-hidden"
@@ -34,8 +34,8 @@ const HomeAboutUs = () => {
           {/* Left Section: Text */}
           <div className="w-full md:w-2/3 flex flex-col space-y-6">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
-              Comprehensive IT Solutions That Drive Innovation, Efficiency,
-              &amp; Growth for Your Business Success.
+              Innovative IT Solutions That Enhance Efficiency, Drive Growth, and
+              Deliver Sustainable Business Success
             </h1>
 
             {/* Team Row */}
@@ -71,7 +71,10 @@ const HomeAboutUs = () => {
               <p className="text-base sm:text-lg font-medium text-[#eaeaea] md:w-4/5">
                 We deliver tailored IT solutions to streamline operations and
                 boost efficiency. From infrastructure to cybersecurity, we
-                empower your business with cutting-edge technology.
+                empower your business with cutting-edge technology, innovative
+                cloud solutions, advanced data analytics, digital transformation
+                strategies, and scalable enterprise software for long-term
+                growth and success.
               </p>
 
               <AnimatedButton

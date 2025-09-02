@@ -64,8 +64,8 @@ const Navbar = () => {
               className="flex-shrink-0 z-50 transition-transform hover:scale-105"
             >
               <img
-                src={shouldBeDark ? assets.fpmLogoDark : assets.fpmLogo}
-                className="h-8 lg:h-10 w-auto"
+                src={shouldBeDark ? assets.capyngenLogo : assets.capyngenLogo}
+                className="w-26 md:w-36"
                 alt="logo"
               />
             </NavLink>

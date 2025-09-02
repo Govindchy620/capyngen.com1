@@ -15,9 +15,9 @@ const HorizontalProcessSection = () => {
   const processSteps = [
     {
       id: 1,
-      title: "Consultation & Requirement Analysis",
+      title: "Discovery & Consultation",
       description:
-        "We start with a detailed consultation to understand your business needs and goals. Through thorough requirement analysis, we identify key challenges and opportunities.",
+        "We start by getting to know your company, your audience, and your objectives. This helps us create a solid foundation for unique digital and IT solutions.",
       color: "bg-gradient-to-br from-blue-400 to-blue-600",
       icon: (
         <svg
@@ -37,9 +37,9 @@ const HorizontalProcessSection = () => {
     },
     {
       id: 2,
-      title: "Strategic Planning and Proposal",
+      title: "Planning and Strategy",
       description:
-        "Based on our analysis, we create a comprehensive strategic plan with detailed proposals, timelines, and resource allocation for optimal results.",
+        "Our professionals come up with sensible, data-driven strategies that leverage new ideas and technology to make sure that we can expand and stay ahead of the competition in the long run.",
       color: "bg-gradient-to-br from-purple-400 to-purple-600",
       icon: (
         <svg
@@ -59,9 +59,9 @@ const HorizontalProcessSection = () => {
     },
     {
       id: 3,
-      title: "Implementation and Integration",
+      title: "Design & Development",
       description:
-        "Our expert team implements the solution with precision, ensuring seamless integration with your existing systems and minimal disruption to operations.",
+        "We make contemporary, easy-to-use, and intuitive solutions, and we also construct powerful IT frameworks that operate well on all platforms.",
       color: "bg-gradient-to-br from-green-400 to-green-600",
       icon: (
         <svg
@@ -87,9 +87,31 @@ const HorizontalProcessSection = () => {
     },
     {
       id: 4,
-      title: "Ongoing Support and Optimization",
+      title: "Testing & Optimization",
       description:
-        "We provide continuous support, monitoring, and optimization to ensure your solution performs at its best and evolves with your business needs.",
+        "Before going live, every solution is put through a lot of testing and optimization to make sure it is secure, scalable, and dependable.",
+      color: "bg-gradient-to-br from-orange-400 to-orange-600",
+      icon: (
+        <svg
+          className="w-10 h-10"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: 5,
+      title: "Launch & Maintenance",
+      description:
+        "We make sure that your project goes online without any problems and remains up to date with continuing maintenance and enhancements. This keeps your firm ready for the future and gives you an edge over your competitors online.",
       color: "bg-gradient-to-br from-orange-400 to-orange-600",
       icon: (
         <svg
@@ -116,9 +138,15 @@ const HorizontalProcessSection = () => {
 
     const totalWidth = container.scrollWidth;
     const viewportWidth = window.innerWidth;
-    const scrollDistance = Math.max(0, totalWidth - viewportWidth + 200);
 
-    // Main pin ScrollTrigger
+    // ✅ Mobile-aware padding: keep your +200 on desktop, 0 on mobile to remove tail gap
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const scrollDistance = Math.max(
+      0,
+      totalWidth - viewportWidth + (window.innerWidth > 768 ? 100 : 0)
+    );
+
+    // Main pin ScrollTrigger (desktop keeps same feel)
     const st = ScrollTrigger.create({
       id: "processPin",
       trigger: section,
@@ -127,6 +155,7 @@ const HorizontalProcessSection = () => {
       pin: true,
       scrub: true,
       anticipatePin: 1,
+      invalidateOnRefresh: true, // <- small stability boost
     });
 
     setPinReadyKey(st.start);
@@ -140,10 +169,11 @@ const HorizontalProcessSection = () => {
         start: () => st.start,
         end: () => st.end,
         scrub: true,
+        invalidateOnRefresh: true, // <- keeps end aligned on resize/orientation
       },
     });
 
-    // Animate cards
+    // Animate cards (unchanged)
     processSteps.forEach((_, index) => {
       const card = container.querySelector(`.process-card-${index}`);
       if (!card) return;
@@ -200,18 +230,19 @@ const HorizontalProcessSection = () => {
       <div className="h-screen overflow-hidden relative z-10">
         <div
           ref={containerRef}
-          className="flex items-center h-full px-8"
+          className="flex items-center h-full px-4 md:px-8"
           style={{ width: "max-content" }}
         >
           <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
             <div className="text-center max-w-7xl relative z-10">
               <BestHeading title="" highlight="Our Work Process" />
-              <div className="mt-15">
+              <div className="mt-16">
+                {" "}
+                {/* <- mt-15 -> mt-16 (valid) */}
                 <p className="text-white/90 text-xl leading-relaxed max-w-3xl mx-auto font-medium">
-                  We begin by understanding your business goals and identifying
-                  the right technology solutions. Our team then designs,
-                  implements, and supports systems to ensure optimal
-                  performance.
+                  Our methodology at Capyngen is straightforward, collaborative,
+                  and focused on getting results. It helps you meet your company
+                  objectives swiftly and creatively.
                 </p>
               </div>
             </div>
@@ -220,7 +251,7 @@ const HorizontalProcessSection = () => {
           {processSteps.map((step, index) => (
             <div key={step.id} className="flex items-center justify-center">
               <div
-                className={`process-card process-card-${index} relative w-xs md:w-md mx-12`}
+                className={`process-card process-card-${index} relative w-[80vw] sm:w-80 md:w-96 mx-6 md:mx-12`}
               >
                 <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-2xl rounded-3xl shadow-2xl">
                   <div className="relative">
@@ -286,7 +317,8 @@ const HorizontalProcessSection = () => {
             </div>
           ))}
 
-          <div className="w-96 flex-shrink-0"></div>
+          {/* Spacer: keep desktop "breathing room", remove on mobile to eliminate tail gap */}
+          <div className="hidden md:block w-96 flex-shrink-0"></div>
         </div>
       </div>
     </section>

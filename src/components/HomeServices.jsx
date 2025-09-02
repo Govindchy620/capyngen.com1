@@ -32,194 +32,117 @@ const Icon = ({ name, ...props }) => {
 // Services Data
 const servicesData = [
   {
-    id: "cybersecurity",
-    title: "Cybersecurity And Data Protection",
+    id: "banking",
+    title: "Banking",
     icon: "ShieldCheck",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Cybersecurity",
+      image: "/placeholder.svg?height=200&width=300&text=Banking",
       description:
-        "Comprehensive security solutions to protect your valuable data and systems from threats.",
+        "Giving banks and other financial institutions safe, scalable, and cutting-edge technology solutions to help them go digital.",
       features: [
-        "Threat Detection",
-        "Vulnerability Assessment",
-        "Incident Response",
-        "Compliance Management",
+        "Best Mobile Banking App Development",
+        "Updating Core Banking",
+        "Safe Ways to Pay",
+        "Following the rules and managing risk",
       ],
     },
   },
   {
-    id: "cloud-solutions",
-    title: "Cloud Solutions & Migration",
-    icon: "Cloud",
+    id: "education",
+    title: "Education",
+    icon: "BookOpen",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Cloud+Solutions",
+      image: "/placeholder.svg?height=200&width=300&text=Education",
       description:
-        "Seamless migration and optimization of your applications and data to the cloud.",
+        "Changing how students learn with new technology made for schools, colleges, and the internet.",
       features: [
-        "Cloud Strategy",
-        "Migration Services",
-        "Cloud Optimization",
-        "Hybrid Cloud Solutions",
+        "Best Technology Solutions for Education",
+        "Learning Management System Development",
+        "Online Classrooms and E-Learning Sites",
+        "Systems for Student Information",
       ],
     },
   },
   {
-    id: "managed-it",
-    title: "Managed IT Services",
-    icon: "Laptop",
+    id: "capital-market",
+    title: "Capital Market",
+    icon: "TrendingUp",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Managed+IT",
+      image: "/placeholder.svg?height=200&width=300&text=Capital+Market",
       description:
-        "Proactive management and support for your IT systems, ensuring smooth operations.",
+        "Using advanced trading, analytics, and risk management tools to make capital market operations better.",
       features: [
-        "24/7 Monitoring",
-        "Help Desk Support",
-        "System Maintenance",
-        "Security Management",
+        "Best Trading Platform Development",
+        "Capital Market Software Solutions",
+        "Market Analytics & Insights",
+        "Secure Transaction Systems",
       ],
     },
   },
   {
-    id: "it-consulting",
-    title: "IT Consulting & Strategy",
-    icon: "Settings",
+    id: "life-sciences",
+    title: "Life Sciences",
+    icon: "FlaskRound",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=IT+Consulting",
+      image: "/placeholder.svg?height=200&width=300&text=Life+Sciences",
       description:
-        "Strategic guidance to align your IT initiatives with overall business objectives.",
+        "Using IT-driven solutions to speed up innovation in healthcare, biotechnology, and pharmaceutical research.",
       features: [
-        "Digital Transformation",
-        "IT Roadmapping",
-        "Technology Adoption",
-        "Risk Management",
+        "Clinical Data Management",
+        "Research & Development Platforms",
+        "Regulatory Compliance Systems",
+        "Patient-Centric Solutions",
       ],
     },
   },
   {
-    id: "data-analytics",
-    title: "Data & Analytics Services",
-    icon: "Search",
+    id: "healthcare",
+    title: "Healthcare & Fitness",
+    icon: "HeartPulse",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Data+Analytics",
+      image: "/placeholder.svg?height=200&width=300&text=Healthcare",
       description:
-        "Leverage data-driven insights to make informed decisions and drive business growth.",
+        "Providing tailored health and fitness solutions for patients, providers, and wellness businesses.",
       features: [
-        "Data Warehousing",
-        "Business Intelligence",
-        "Predictive Analytics",
-        "Data Governance",
+        "Telemedicine Platforms",
+        "Fitness & Wellness App Development",
+        "Electronic Health Records (EHR)",
+        "Wearable Integration",
       ],
     },
   },
   {
-    id: "it-infrastructure",
-    title: "IT Infrastructure Services",
-    icon: "CloudCog",
+    id: "energy",
+    title: "Energy, Resources & Utilities",
+    icon: "BatteryCharging",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=IT+Infrastructure",
+      image: "/placeholder.svg?height=200&width=300&text=Energy",
       description:
-        "Optimize performance and scalability with robust IT infrastructure services tailored.",
+        "Using smart IT solutions for energy, resources, and utilities to make operations and sustainability better.",
       features: [
-        "Scalable Infrastructure",
-        "Network Optimization",
-        "Cloud Integration",
-        "Business Continuity",
+        "Smart Grid Solutions",
+        "Monitoring and analyzing energy",
+        "Systems for Planning Resources",
+        "Platforms for Managing Utilities",
       ],
     },
   },
   {
-    id: "cybersecurity",
-    title: "Cybersecurity And Data Protection",
-    icon: "ShieldCheck",
+    id: "more-industries",
+    title: "More Industries",
+    icon: "Globe2",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Cybersecurity",
+      image: "/placeholder.svg?height=200&width=300&text=More+Industries",
       description:
-        "Comprehensive security solutions to protect your valuable data and systems from threats.",
+        "We serve a wide range of industries with customized IT solutions designed to drive efficiency, innovation, and growth.",
       features: [
-        "Threat Detection",
-        "Vulnerability Assessment",
-        "Incident Response",
-        "Compliance Management",
-      ],
-    },
-  },
-  {
-    id: "cloud-solutions",
-    title: "Cloud Solutions & Migration",
-    icon: "Cloud",
-    card: {
-      image: "/placeholder.svg?height=200&width=300&text=Cloud+Solutions",
-      description:
-        "Seamless migration and optimization of your applications and data to the cloud.",
-      features: [
-        "Cloud Strategy",
-        "Migration Services",
-        "Cloud Optimization",
-        "Hybrid Cloud Solutions",
-      ],
-    },
-  },
-  {
-    id: "managed-it",
-    title: "Managed IT Services",
-    icon: "Laptop",
-    card: {
-      image: "/placeholder.svg?height=200&width=300&text=Managed+IT",
-      description:
-        "Proactive management and support for your IT systems, ensuring smooth operations.",
-      features: [
-        "24/7 Monitoring",
-        "Help Desk Support",
-        "System Maintenance",
-        "Security Management",
-      ],
-    },
-  },
-  {
-    id: "it-consulting",
-    title: "IT Consulting & Strategy",
-    icon: "Settings",
-    card: {
-      image: "/placeholder.svg?height=200&width=300&text=IT+Consulting",
-      description:
-        "Strategic guidance to align your IT initiatives with overall business objectives.",
-      features: [
-        "Digital Transformation",
-        "IT Roadmapping",
-        "Technology Adoption",
-        "Risk Management",
-      ],
-    },
-  },
-  {
-    id: "data-analytics",
-    title: "Data & Analytics Services",
-    icon: "Search",
-    card: {
-      image: "/placeholder.svg?height=200&width=300&text=Data+Analytics",
-      description:
-        "Leverage data-driven insights to make informed decisions and drive business growth.",
-      features: [
-        "Data Warehousing",
-        "Business Intelligence",
-        "Predictive Analytics",
-        "Data Governance",
-      ],
-    },
-  },
-  {
-    id: "it-infrastructure",
-    title: "IT Infrastructure Services",
-    icon: "CloudCog",
-    card: {
-      image: "/placeholder.svg?height=200&width=300&text=IT+Infrastructure",
-      description:
-        "Optimize performance and scalability with robust IT infrastructure services tailored.",
-      features: [
-        "Scalable Infrastructure",
-        "Network Optimization",
-        "Cloud Integration",
-        "Business Continuity",
+        "🏭 Manufacturing & Automotive – Smart factories, IoT & robotics, supply chain optimization",
+        "🛒 Retail & E-Commerce – Omnichannel platforms, secure payment systems, personalized shopping",
+        "✈️ Travel & Hospitality – Booking engines, digital experiences, customer engagement platforms",
+        "🏢 Real Estate & Construction – Property management systems, digital project tracking, BIM integration",
+        "🎬 Media & Entertainment – Streaming platforms, content management, digital rights protection",
+        "📡 Telecom – Network optimization, 5G integration, customer service automation",
+        "🏛 Government & Public Sector – Digital governance, e-services, secure citizen platforms",
       ],
     },
   },
@@ -484,7 +407,7 @@ export default function HomeServices() {
   }, [isInViewport]);
 
   return (
-    <div className="bg-black pb-10">
+    <div className="bg-black pb-20">
       <BestHeading title="" highlight="Industries" />
       <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
         {/* Section Header */}
@@ -577,7 +500,7 @@ export default function HomeServices() {
               <button
                 key={service.id}
                 onClick={() => setActiveServiceId(service.id)}
-                className={`group p-4 sm:p-6 rounded-2xl transition-all duration-300 ${
+                className={`group p-2 sm:p-6 rounded-2xl transition-all duration-300 ${
                   activeServiceId === service.id
                     ? "bg-green-500/20 border-2 border-green-500 scale-105"
                     : "bg-white/10 border-2 border-white/20 hover:bg-white/20 hover:border-green-400"
@@ -585,7 +508,7 @@ export default function HomeServices() {
               >
                 {/* Service Icon */}
                 <div
-                  className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto transition-all duration-300 ${
+                  className={`w-10 h-10 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto transition-all duration-300 ${
                     activeServiceId === service.id
                       ? "bg-green-400 shadow-2xl shadow-green-400/50"
                       : "bg-blue-500/80 group-hover:bg-green-400/80 shadow-lg"
