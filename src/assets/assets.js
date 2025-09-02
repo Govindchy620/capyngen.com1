@@ -171,10 +171,6 @@ export const navItems = [
 
           { label: "Social Media Marketing (SMM)", href: "/smm" },
           { label: "Pay-Per-Click Advertising (PPC)", href: "/ppc" },
-          {
-            label: "Social Media Marketing",
-            href: "/social-media-marketing",
-          },
         ],
       },
       {

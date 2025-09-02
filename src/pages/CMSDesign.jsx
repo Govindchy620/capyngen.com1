@@ -10,7 +10,7 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
-const CrmManagementSoftware = () => {
+const CMSDesign = () => {
   const faqItems = [
     {
       question: "How long does it take for funds to show in my wallet?",
@@ -72,7 +72,7 @@ const CrmManagementSoftware = () => {
   return (
     <div>
       <Banner
-        title="CRM & Management Software"
+        title="CMS Design"
         overlayBg="bg-black/70"
         backgroundImage={assets.bg1}
         description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
@@ -95,4 +95,4 @@ const CrmManagementSoftware = () => {
   );
 };
 
-export default CrmManagementSoftware;
+export default CMSDesign;

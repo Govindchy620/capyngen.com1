@@ -15,7 +15,7 @@ const BlockchainDevelopment = () => {
     {
       question: "How long does it take for funds to show in my wallet?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "The time it takes for funds to Blockchainear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
     },
     {
       question: "What is the minimum deposit requirement?",
@@ -54,7 +54,7 @@ const BlockchainDevelopment = () => {
       desc: "We emphasize strong teamwork and smooth interaction between your local and remote software development units.",
     },
     {
-      title: "A Client-First Approach",
+      title: "A Client-First Blockchainroach",
       desc: "We focus on balancing technical know-how, soft skills, and additional qualifications that you deem important.",
     },
     {
@@ -75,7 +75,7 @@ const BlockchainDevelopment = () => {
         title="Blockchain Development"
         overlayBg="bg-black/70"
         backgroundImage={assets.bg1}
-        description="Unlock the Power of Blockchain Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        description="Unlock the Power of Blockchain Presence with our Professional Blockchainsite Designing Service! Elevate Your Online Presence with Stunning Blockchainsite Designs."
       />
       <HowWeWork />
       <WhyChoose />

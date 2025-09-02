@@ -10,12 +10,12 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
-const WebDevelopment = () => {
+const ECommerceSolution = () => {
   const faqItems = [
     {
       question: "How long does it take for funds to show in my wallet?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "The time it takes for funds to ECommerceear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
     },
     {
       question: "What is the minimum deposit requirement?",
@@ -54,12 +54,12 @@ const WebDevelopment = () => {
       desc: "We emphasize strong teamwork and smooth interaction between your local and remote software development units.",
     },
     {
-      title: "A Client-First Approach",
+      title: "A Client-First ECommerceroach",
       desc: "We focus on balancing technical know-how, soft skills, and additional qualifications that you deem important.",
     },
     {
       title: "You and Your Team Stay in Sync",
-      desc: "Our method for extending your Web development team lets you stay involved and manage your squad directly.",
+      desc: "Our method for extending your ECommerce development team lets you stay involved and manage your squad directly.",
     },
     {
       title: "Relevant Candidates",
@@ -75,17 +75,17 @@ const WebDevelopment = () => {
         title="E-Commerce Solutions"
         overlayBg="bg-black/70"
         backgroundImage={assets.bg1}
-        description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        description="Unlock the Power of ECommerce Presence with our Professional ECommercesite Designing Service! Elevate Your Online Presence with Stunning ECommercesite Designs."
       />
       <HowWeWork />
       <WhyChoose />
       <TechnologiesCarousel
-        title="Web Development Technologies We Use"
+        title="ECommerce Development Technologies We Use"
         description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
         technologies={technologies}
       />
       <BenefitsSection
-        heading="Why Leading Brands Choose Capyngen for Web Development?"
+        heading="Why Leading Brands Choose Capyngen for ECommerce Development?"
         benefits={benefitsData}
       />
       <OurServices />
@@ -95,4 +95,4 @@ const WebDevelopment = () => {
   );
 };
 
-export default WebDevelopment;
+export default ECommerceSolution;

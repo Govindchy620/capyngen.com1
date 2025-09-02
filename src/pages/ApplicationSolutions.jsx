@@ -10,12 +10,12 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
-const ApplicationSolutions = () => {
+const ApplicationlicationSolutions = () => {
   const faqItems = [
     {
       question: "How long does it take for funds to show in my wallet?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "The time it takes for funds to Applicationear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
     },
     {
       question: "What is the minimum deposit requirement?",
@@ -51,15 +51,15 @@ const ApplicationSolutions = () => {
   const benefitsData = [
     {
       title: "Smooth Software Team Extension",
-      desc: "We emphasize strong teamwork and smooth interaction between your local and remote software Solutions units.",
+      desc: "We emphasize strong teamwork and smooth interaction between your local and remote software development units.",
     },
     {
-      title: "A Client-First Approach",
+      title: "A Client-First Applicationroach",
       desc: "We focus on balancing technical know-how, soft skills, and additional qualifications that you deem important.",
     },
     {
       title: "You and Your Team Stay in Sync",
-      desc: "Our method for extending your Application Solutions team lets you stay involved and manage your squad directly.",
+      desc: "Our method for extending your Application development team lets you stay involved and manage your squad directly.",
     },
     {
       title: "Relevant Candidates",
@@ -75,17 +75,17 @@ const ApplicationSolutions = () => {
         title="Application Solutions"
         overlayBg="bg-black/70"
         backgroundImage={assets.bg1}
-        description="Unlock the Power of Application Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        description="Unlock the Power of Application Presence with our Professional Applicationsite Designing Service! Elevate Your Online Presence with Stunning Applicationsite Designs."
       />
       <HowWeWork />
       <WhyChoose />
       <TechnologiesCarousel
-        title="Application Solutions Technologies We Use"
+        title="Application Development Technologies We Use"
         description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
         technologies={technologies}
       />
       <BenefitsSection
-        heading="Why Leading Brands Choose Capyngen for Application Solutions?"
+        heading="Why Leading Brands Choose Capyngen for Application Development?"
         benefits={benefitsData}
       />
       <OurServices />
@@ -95,4 +95,4 @@ const ApplicationSolutions = () => {
   );
 };
 
-export default ApplicationSolutions;
+export default ApplicationlicationSolutions;

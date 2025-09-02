@@ -22,6 +22,21 @@ import CrmManagementSoftware from "./pages/CrmManagementSoftware";
 import Careers from "./pages/Careers";
 import CompanyOverview from "./pages/CompanyOverview";
 import NewsAndUpdates from "./pages/NewsAndUpdates";
+import UiUxDesign from "./pages/UiUxDesign";
+import WebsiteDesign from "./pages/WebsiteDesign";
+import BrandingIdentityDesign from "./pages/BrandingIdentityDesign";
+import EcommerceDesign from "./pages/EcommerceDesign";
+import CMSDesign from "./pages/CMSDesign";
+import DigitalMarketing from "./pages/DigitalMarketing";
+import SEO from "./pages/SEO";
+import SMM from "./pages/SMM";
+import PPC from "./pages/PPC";
+import ArtificialIntelligence from "./pages/ArtificialIntelligence";
+import Cybersecurity from "./pages/Cybersecurity";
+import NetworkSolutionServices from "./pages/NetworkSolutionServices";
+import EnterpriseSolutions from "./pages/EnterpriseSolutions";
+import DataAnalytics from "./pages/DataAnalytics";
+import Consulting from "./pages/Consulting";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -51,12 +66,41 @@ const App = () => {
             path="/crm-management-software"
             element={<CrmManagementSoftware />}
           />
+          <Route path="/ui-ux-design" element={<UiUxDesign />} />
+          <Route path="/website-design" element={<WebsiteDesign />} />
+          <Route
+            path="/branding-and-identity-design"
+            element={<BrandingIdentityDesign />}
+          />
+          <Route path="/ecommerce-design" element={<EcommerceDesign />} />
+          <Route path="/cms-design" element={<CMSDesign />} />
+          <Route path="/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/seo" element={<SEO />} />
+          <Route path="/smm" element={<SMM />} />
+          <Route path="/ppc" element={<PPC />} />
+          <Route
+            path="/artificial-intelligence"
+            element={<ArtificialIntelligence />}
+          />
+          <Route path="/cybersecurity" element={<Cybersecurity />} />
+          <Route
+            path="/network-solutions"
+            element={<NetworkSolutionServices />}
+          />
+          <Route
+            path="/enterprise-solutions"
+            element={<EnterpriseSolutions />}
+          />
+          <Route path="/data-analytics" element={<DataAnalytics />} />
+          <Route path="/consulting" element={<Consulting />} />
+
           <Route path="/industries" element={<Industries />} />
-          <Route path="/careers" element={<Careers />} />
+          <Route path="/industries/banking" element={<Banking />} />
+
           <Route path="/company-overview" element={<CompanyOverview />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/news-and-updates" element={<NewsAndUpdates />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/industries/banking" element={<Banking />} />
         </Routes>
         <Footer />
       </div>
