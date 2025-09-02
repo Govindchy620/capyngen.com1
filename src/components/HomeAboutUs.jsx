@@ -25,7 +25,7 @@ const HomeAboutUs = () => {
       <div
         className="bg-black text-white w-full relative overflow-hidden"
         style={{
-          backgroundImage: `url(${assets.homeAboutUsBg})`,
+          backgroundImage: `url(${assets.patternBg1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
