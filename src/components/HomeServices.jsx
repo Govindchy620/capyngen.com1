@@ -134,15 +134,12 @@ const servicesData = [
     card: {
       image: "/placeholder.svg?height=200&width=300&text=More+Industries",
       description:
-        "We serve a wide range of industries with customized IT solutions designed to drive efficiency, innovation, and growth.",
+        "Powering diverse sectors with scalable development, cloud infrastructure, and cutting-edge digital solutions.",
       features: [
-        "🏭 Manufacturing & Automotive – Smart factories, IoT & robotics, supply chain optimization",
-        "🛒 Retail & E-Commerce – Omnichannel platforms, secure payment systems, personalized shopping",
-        "✈️ Travel & Hospitality – Booking engines, digital experiences, customer engagement platforms",
-        "🏢 Real Estate & Construction – Property management systems, digital project tracking, BIM integration",
-        "🎬 Media & Entertainment – Streaming platforms, content management, digital rights protection",
-        "📡 Telecom – Network optimization, 5G integration, customer service automation",
-        "🏛 Government & Public Sector – Digital governance, e-services, secure citizen platforms",
+        "🏭 Healthcare Tech Solutions",
+        "Fintech Platforms & Security",
+        "Retail & E-Commerce Innovation",
+        "Smart Manufacturing Systems",
       ],
     },
   },
