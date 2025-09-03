@@ -56,17 +56,58 @@ export default function HomeIndustries() {
         <div className="flex-1 flex flex-col justify-center">
           <div className="px-6 md:px-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
-              Empowering All Industries with Smart IT Solutions.
+              Smart Technologies That Power Growth
             </h1>
-            <p className="text-lg md:pr-20 mt-5 mb-10">
-              We deliver intelligent IT solutions designed to meet the unique
-              needs of every industry. From healthcare to finance, our
-              technology empowers.
+            <p className="text-lg md:pr-20 mt-5 mb-6">
+              At Capyngen, we leverage fresh ideas and technology to build
+              solutions that are safe, ready for the future, and can expand with
+              your requirements.
             </p>
-            <AnimatedButton
-              text="Learn More"
-              onClick={() => alert("Button clicked!")}
-            />
+
+            <h2 className="text-2xl md:text-3xl font-semibold mt-8 mb-4">
+              What Sets Our Technologies Apart
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3 text-gray-300">
+              <li>
+                <span className="font-semibold text-cyan-400">
+                  Cutting-Edge Cloud & IT Solutions –
+                </span>{" "}
+                Scalable, secure, and future-ready.
+              </li>
+              <li>
+                <span className="font-semibold text-cyan-400">
+                  Advanced Cybersecurity Frameworks –
+                </span>{" "}
+                Protecting businesses against modern threats.
+              </li>
+              <li>
+                <span className="font-semibold text-cyan-400">
+                  Empowering Every Industry –
+                </span>{" "}
+                From finance to healthcare, our tech drives innovation.
+              </li>
+              <li>
+                <span className="font-semibold text-cyan-400">
+                  AI & Data-Driven Decisions –
+                </span>{" "}
+                Smarter insights for faster growth.
+              </li>
+              <li>
+                <span className="font-semibold text-cyan-400">
+                  Seamless Digital Transformation –
+                </span>{" "}
+                Modernizing enterprises with next-gen tools.
+              </li>
+            </ul>
+
+            {/* Button */}
+            <div className="mt-10">
+              <AnimatedButton
+                text="Learn More"
+                onClick={() => alert("Button clicked!")}
+              />
+            </div>
           </div>
         </div>
       </div>

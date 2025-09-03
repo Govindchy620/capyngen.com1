@@ -94,26 +94,73 @@ export default function ScrollRevealEffect() {
         >
           {section.text === "Form" ? (
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 text-white">
-              {/* Left Content */}
-              <div className="max-w-xl space-y-4">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  Let’ <span className="text-white">Talk</span> <br />
-                  About The <br />
-                  <span className="text-cyan-400">Project.</span>
-                </h1>
+              {/* Contact Form */}
+              <div className="w-full max-w-2xl bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+                  Let’s <span className="text-cyan-400">Talk</span> About Your{" "}
+                  <span className="text-cyan-400">Project</span>
+                </h2>
 
-                <div className="flex items-center gap-3 mt-6">
-                  {/* Email Icon */}
-                  <div className="w-10 h-10 bg-white flex items-center justify-center rounded-md shadow-lg">
-                    <span className="text-black text-xl">@</span>
+                <form className="space-y-5">
+                  {/* Name */}
+                  <div>
+                    <label className="block mb-2 text-sm font-medium">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      required
+                    />
                   </div>
-                  <a
-                    href="mailto:info@themexriver.co.uk"
-                    className="text-cyan-400 text-xl md:text-2xl font-medium hover:underline"
+
+                  {/* Email */}
+                  <div>
+                    <label className="block mb-2 text-sm font-medium">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      required
+                    />
+                  </div>
+
+                  {/* Contact Number */}
+                  <div>
+                    <label className="block mb-2 text-sm font-medium">
+                      Contact Number
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    />
+                  </div>
+
+                  {/* Message */}
+                  <div>
+                    <label className="block mb-2 text-sm font-medium">
+                      Message
+                    </label>
+                    <textarea
+                      placeholder="Write your message..."
+                      rows="5"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      required
+                    ></textarea>
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="w-full py-3 bg-cyan-400 text-black font-semibold rounded-lg shadow-lg hover:bg-cyan-300 transition duration-300"
                   >
-                    info@themexriver.co.uk
-                  </a>
-                </div>
+                    Send Message
+                  </button>
+                </form>
               </div>
             </div>
           ) : (

@@ -455,7 +455,7 @@ export default function HomeServices() {
                 ref={pathRef}
                 d="M 1000 100 A 600 600 0 0 1 200 700"
                 stroke="url(#pathGradient)"
-                strokeWidth="4"
+                strokeWidth="8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="drop-shadow-lg"
