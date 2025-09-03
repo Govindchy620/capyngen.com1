@@ -126,7 +126,7 @@ export default function TestimonialCarousel() {
         {/* Left Section */}
         <div className="flex flex-col w-full lg:w-2/5 justify-center space-y-8 px-4">
           <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mt-4 mb-5 leading-tight">
-            See What Our Customer Say About Us.
+            See What Our Clients Say About Us.
           </h1>
           <div className="relative w-full max-w-md sm:max-w-lg mx-auto lg:mx-0">
             <img
@@ -139,8 +139,8 @@ export default function TestimonialCarousel() {
                 4.9
               </p>
               <p className="text-xl sm:text-2xl text-white/80">
-                Clutch average based on 92+ reviews. All chances are you'll be
-                impressed too.
+                Average rating from 100+ trusted client reviews — you’ll love
+                working with us too.
               </p>
               <div className="flex items-center justify-between mt-6 text-white">
                 <div className="relative w-full h-12">

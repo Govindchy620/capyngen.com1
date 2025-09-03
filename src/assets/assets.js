@@ -5,6 +5,7 @@ import team2 from "./team2.png";
 import team3 from "./team3.png";
 import team4 from "./team4.png";
 import patternBg1 from "./patternBg1.webp";
+import patternBg2 from "./patternBg2.png";
 import homeIndustries from "./homeIndustries.webp";
 import testimonial1 from "./testimonial1.webp";
 import testimonial2 from "./testimonial2.webp";
@@ -66,6 +67,7 @@ export const assets = {
   team3,
   team4,
   patternBg1,
+  patternBg2,
   homeIndustries,
   testimonial1,
   testimonial2,

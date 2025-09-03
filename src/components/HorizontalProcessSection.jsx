@@ -111,7 +111,7 @@ const HorizontalProcessSection = () => {
       id: 5,
       title: "Launch & Maintenance",
       description:
-        "We make sure that your project goes online without any problems and remains up to date with continuing maintenance and enhancements. This keeps your firm ready for the future and gives you an edge over your competitors online.",
+        "We ensure your project goes online smoothly and stays updated with maintenance and enhancements, keeping your firm future-ready and competitive.",
       color: "bg-gradient-to-br from-orange-400 to-orange-600",
       icon: (
         <svg
@@ -239,10 +239,14 @@ const HorizontalProcessSection = () => {
               <div className="mt-16">
                 {" "}
                 {/* <- mt-15 -> mt-16 (valid) */}
-                <p className="text-white/90 text-xl leading-relaxed max-w-3xl mx-auto font-medium">
-                  Our methodology at Capyngen is straightforward, collaborative,
-                  and focused on getting results. It helps you meet your company
-                  objectives swiftly and creatively.
+                <p className="text-white/90 text-xl leading-relaxed max-w-4xl mx-auto font-medium">
+                  Our way of doing things at Capyngen is simple, works together,
+                  and gets results. We work closely with your team to figure out
+                  what you want to achieve, come up with new ways to do it, and
+                  then show you how well it worked. We help businesses reach
+                  their goals faster, smarter, and with lasting effects for
+                  long-term success by combining creativity, technology, and
+                  expertise.
                 </p>
               </div>
             </div>
@@ -277,11 +281,11 @@ const HorizontalProcessSection = () => {
                       </div>
                     </div>
 
-                    <div className="text-center space-y-4 px-2">
+                    <div className="text-center space-y-2 px-2">
                       <h3 className="text-2xl font-black text-gray-800 mb-4 leading-tight">
                         {step.title}
                       </h3>
-                      <div className="p-6 rounded-2xl">
+                      <div className="px-6 pb-6 rounded-2xl">
                         <p className="text-gray-700 text-base leading-relaxed font-medium">
                           {step.description}
                         </p>

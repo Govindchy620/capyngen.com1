@@ -1,7 +1,8 @@
 /* Custom animations for HorizontalProcessSection */
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
     opacity: 0.3;
   }
@@ -234,7 +235,8 @@
 
 /* Enhanced float animation for ContactUs */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
     opacity: 0.6;
   }
@@ -254,7 +256,8 @@
 
 /* Pulse variations for glowing orbs */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.4;
     transform: scale(1);
   }
@@ -266,7 +269,11 @@
 
 /* Bounce animation for badges */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) scale(1);
   }
   10% {
@@ -312,4 +319,17 @@
 /* Sticky scroll transition */
 .sticky-transition {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes smoothBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.animate-smoothBounce {
+  animation: smoothBounce 3s ease-in-out infinite;
 }

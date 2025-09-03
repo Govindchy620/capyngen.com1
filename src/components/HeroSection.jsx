@@ -28,16 +28,7 @@ const HeroSection = () => {
       {/* Content with dark overlay */}
       <div className="absolute inset-0 bg-[#0a0a0a]/30 z-[1] pointer-events-none" />
       {/* Content */}
-      <div className="relative z-10 w-full flex flex-col items-center justify-center pointer-events-none">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-white text-lg md:text-6xl mb-4 font-light tracking-wider"
-        >
-          Welcome to
-        </motion.h2>
-
+      <div className="relative z-10 w-full flex flex-col justify-center pointer-events-none max-w-[90rem] mt-10 ml-20">
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -45,7 +36,7 @@ const HeroSection = () => {
           className="relative"
         >
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 text-white pb-10"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 text-white pb-10 leading-30"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -55,7 +46,8 @@ const HeroSection = () => {
               ease: "linear",
             }}
           >
-            Capyngen
+            Innovating Today,
+            <br /> Empowering Tomorrow
           </motion.h1>
         </motion.div>
 
@@ -63,14 +55,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 relative px-4 text-center"
+          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 relative max-w-5xl"
         >
-          <span className="font-light">
-            We speed up AI adoption and ramp up engineering and design teams to
-            help you lead your industry.
+          <span className="">
+            In a world where digital is the first choice, we deliver secure,
+            scalable, and innovation-driven IT solutions that drive efficiency,
+            resilience, and measurable growth. From cloud and cybersecurity to
+            AI, automation, and digital transformation, our expertise helps
+            businesses stay competitive, future-ready, and equipped to thrive.
           </span>
           <br />
-          <motion.span
+          {/* <motion.span
             className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -85,7 +80,7 @@ const HeroSection = () => {
             }}
           >
             Explore
-          </motion.span>
+          </motion.span> */}
         </motion.div>
       </div>
     </div>

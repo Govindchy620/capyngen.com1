@@ -6,7 +6,14 @@ import BestHeading from "./BestHeading";
 
 export default function WhyChooseUs() {
   return (
-    <div className="bg-black">
+    <div
+      className="bg-black"
+      style={{
+        backgroundImage: `url(${assets.patternBg2})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <BestHeading title="" highlight="Why Choose Us" />
       <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto">
         {/* Hero Section */}
@@ -58,7 +65,7 @@ export default function WhyChooseUs() {
             {
               icon: <UserRoundSearch className="w-6 h-6 text-gray-800" />,
               title: "Customer Focused",
-              desc: "Capyngen provides digital solutions that are tailored to the demands of your organization so that you may flourish in the long run.",
+              desc: "Capyngen provides digital solutions that are tailored to the unique demands of your organization so that you may flourish in the long run.",
             },
             {
               icon: <BarChart3 className="w-6 h-6 text-gray-800" />,
@@ -68,12 +75,12 @@ export default function WhyChooseUs() {
             {
               icon: <Sparkles className="w-6 h-6 text-gray-800" />,
               title: "Experience & Expertise",
-              desc: "Capyngen uses its comprehensive understanding of the industry and proven skills to make sure that your firm receives IT solutions that are dependable, scalable, and ready for the future.",
+              desc: "Capyngen uses its comprehensive understanding of the industry and proven skills to ensure your firm receives IT solutions that are scalable, and future-ready.",
             },
             {
               icon: <LifeBuoy className="w-6 h-6 text-gray-800" />,
               title: "24/7 Customer Support",
-              desc: "You can count on our devoted support staff to always be there for you, so you won't have to worry about anything going wrong.",
+              desc: "You can count on our devoted support staff to always be there for you, providing reliable assistance so you won't have to worry about anything going wrong.",
             },
           ].map(({ icon, title, desc }, i) => (
             <div

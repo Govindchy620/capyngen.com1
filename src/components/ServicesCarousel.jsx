@@ -11,9 +11,9 @@ const cards = [
   {
     icon: "📱",
     title: "App Development",
-    desc: "Apps for mobile devices that are strong, scalable, and simple to use, all designed to help organizations meet their objectives.",
+    desc: "Apps for mobile devices that are strong, scalable, and simple to use, designed to help organizations meet objectives.",
     items: [
-      "Can be used on more than one platform",
+      "Multi-device compatibility",
       "Quick and safe growth",
       "Architecture that may change throughout time",
       "Design that puts the user first",
@@ -178,7 +178,6 @@ const cards = [
     desc: "Result-driven PPC ads that maximize ROI and capture qualified leads quickly.",
     items: [
       "Campaigns that target certain individuals",
-      "The best keywords",
       "Tracking in real time",
       "Ads that emphasize on return on investment",
     ],
@@ -250,6 +249,38 @@ const cards = [
   },
 ];
 
+// Next Arrow
+const NextArrow = ({ onClick }) => (
+  <button
+    className="hidden md:flex absolute -right-12 top-1/2 transform -translate-y-1/2 z-10 
+               bg-gradient-to-r from-indigo-600 to-purple-600 
+               hover:from-purple-600 hover:to-pink-600 
+               text-white rounded-full p-3 shadow-lg 
+               transition-all duration-300 
+               focus:outline-none focus:ring-2 focus:ring-purple-400"
+    onClick={onClick}
+    aria-label="Next"
+  >
+    <ChevronRight className="h-6 w-6" />
+  </button>
+);
+
+// Prev Arrow
+const PrevArrow = ({ onClick }) => (
+  <button
+    className="hidden md:flex absolute -left-12 top-1/2 transform -translate-y-1/2 z-10 
+               bg-gradient-to-r from-indigo-600 to-purple-600 
+               hover:from-purple-600 hover:to-pink-600 
+               text-white rounded-full p-3 shadow-lg 
+               transition-all duration-300 
+               focus:outline-none focus:ring-2 focus:ring-purple-400"
+    onClick={onClick}
+    aria-label="Previous"
+  >
+    <ChevronLeft className="h-6 w-6" />
+  </button>
+);
+
 const Card = ({ icon, title, desc, items }) => (
   <div
     className="relative group rounded-2xl p-8 min-h-[380px] flex flex-col shadow-lg
@@ -292,9 +323,11 @@ const ServicesCarousel = () => {
     speed: 600,
     slidesToShow,
     slidesToScroll,
-    arrows: false,
+    arrows: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
     responsive: [
       { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } },

@@ -55,15 +55,6 @@ const HomeAboutUs = () => {
                   talented team.
                 </span>
               </div>
-
-              {/* Middle Small Image */}
-              <div className="w-full md:w-64 lg:w-72 aspect-video overflow-hidden shadow-md rounded-md">
-                <img
-                  src={demoTeamImg}
-                  alt="team"
-                  className="object-cover w-full h-full"
-                />
-              </div>
             </div>
 
             {/* Description + Button */}
@@ -85,12 +76,12 @@ const HomeAboutUs = () => {
           </div>
 
           {/* Right Section: Main Image */}
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+          <div className="w-full md:w-1/3 flex justify-center items-center">
             <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg">
               <img
-                src={demoMainImg}
+                src={assets.capyngen3d}
                 alt="IT Server Room"
-                className="w-full h-auto object-cover shadow-lg max-w-md md:max-w-none md:h-[480px]"
+                className="w-full h-auto object-cover shadow-lg max-w-md md:max-w-none md:h-[480px] animate-smoothBounce"
               />
             </div>
           </div>

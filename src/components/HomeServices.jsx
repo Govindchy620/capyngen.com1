@@ -89,7 +89,7 @@ const servicesData = [
         "Using IT-driven solutions to speed up innovation in healthcare, biotechnology, and pharmaceutical research.",
       features: [
         "Clinical Data Management",
-        "Research & Development Platforms",
+        "Research & Development",
         "Regulatory Compliance Systems",
         "Patient-Centric Solutions",
       ],
@@ -136,7 +136,7 @@ const servicesData = [
       description:
         "Powering diverse sectors with scalable development, cloud infrastructure, and cutting-edge digital solutions.",
       features: [
-        "🏭 Healthcare Tech Solutions",
+        "Healthcare Tech Solutions",
         "Fintech Platforms & Security",
         "Retail & E-Commerce Innovation",
         "Smart Manufacturing Systems",
@@ -214,12 +214,12 @@ function ServiceCard({ service, isMobile = false }) {
           <img
             src={service.card.image || "/placeholder.svg"}
             alt={`${service.title} service`}
-            className="w-full h-44 object-cover bg-amber-200"
+            className="w-full h-40 object-cover bg-amber-200"
           />
         </div>
 
         {/* Card content */}
-        <div className="space-y-2 px-5 pb-5">
+        <div className="space-y-1 px-5 pb-2">
           <div>
             <h3 className="text-2xl font-bold text-gray-800 leading-tight">
               {service.title}
@@ -228,17 +228,13 @@ function ServiceCard({ service, isMobile = false }) {
           </div>
 
           {/* Features with enhanced styling */}
-          <div className="space-y-1">
-            <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
-              Key Features
-            </h4>
-            <div className="grid grid-cols-2 gap-2">
+          <div className="">
+            <div className="grid grid-cols-2 mt-4">
               {service.card.features.map((feature, index) => (
                 <div key={index} className="flex items-center">
-                  <div className="w-2 h-2 bg-black rounded-full mr-3"></div>
-                  <span className="text-gray-700 text-sm font-medium">
-                    {feature}
-                  </span>
+                  <ul className="list-disc pl-5 text-gray-700 text-sm font-medium">
+                    <li>{feature}</li>
+                  </ul>
                 </div>
               ))}
             </div>
