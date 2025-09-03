@@ -77,7 +77,7 @@ export default function HomeBlogs() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: () => st.start + window.innerHeight * 0.7,
+          start: "top bottom",
           end: () => st.start + window.innerHeight * 1.25,
           scrub: true,
         },
@@ -156,7 +156,6 @@ export default function HomeBlogs() {
           ))}
         </div>
       </div>
-      <div className="invisible select-none" style={{ height: "180vh" }} />
     </div>
   );
 }
