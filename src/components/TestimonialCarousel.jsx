@@ -15,7 +15,7 @@ const testimonials = [
     companyName: "Europa",
     rating: 5,
     quote:
-      "Their team transformed our outdated systems into a fast, secure infrastructure. We've never felt more confident in our IT setup.",
+      "Our online visibility went through the roof thanks to Capyngen's digital marketing strategies. We're getting more qualified leads and more consistent brand engagement on all platforms.",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const testimonials = [
     companyName: "EasyTax",
     rating: 4,
     quote:
-      "Their team transformed our outdated systems into a fast, secure infrastructure. We've never felt more confident in our IT setup.",
+      "Capyngen built a fitness app for our firm that works on phones and tablets. From creating the UI/UX to making sure everything functioned correctly, the entire process was easy and transparent.",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const testimonials = [
     companyName: "CreativeFlow",
     rating: 5,
     quote:
-      "Their team transformed our outdated systems into a fast, secure infrastructure. We’ve never felt more confident in our IT setup.",
+      "The AI-powered insights from Capyngen changed the way we think about how customers act. Their data analytics tools helped us get ahead of the competition.",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const testimonials = [
     companyName: "InnovateCo",
     rating: 5,
     quote:
-      "Their team transformed our outdated systems into a fast, secure infrastructure. We’ve never felt more confident in our IT setup.",
+      "We felt safe doing business because of Capyngen's cybersecurity solutions. Their risk management and proactive monitoring are just amazing.",
   },
 ];
 
@@ -165,7 +165,7 @@ export default function TestimonialCarousel() {
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-2">
-                  <div className="bg-blue-800 rounded-xl p-6 sm:p-10 lg:p-15 relative overflow-hidden flex flex-col justify-between min-h-[450px] sm:min-h-[500px]">
+                  <div className="bg-blue-800 rounded-xl p-6 sm:p-10 lg:p-12 relative overflow-hidden flex flex-col justify-between min-h-[450px] sm:min-h-[500px]">
                     <div className="flex items-center mb-6">
                       <div>
                         <h3 className="text-2xl font-semibold">
@@ -176,7 +176,7 @@ export default function TestimonialCarousel() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center mb-4">
+                    <div className="flex items-center mb-4 h-10">
                       <img
                         src={testimonial.companyLogo || "/placeholder.svg"}
                         width={120}
@@ -186,7 +186,7 @@ export default function TestimonialCarousel() {
                       />
                     </div>
                     <StarRating rating={testimonial.rating} />
-                    <p className="text-base sm:text-lg lg:text-xl mt-4 text-white/90 flex-grow">
+                    <p className="text-base md:h-44 sm:text-lg lg:text-xl mt-4 text-white/90 flex-grow">
                       "{testimonial.quote}"
                     </p>
                     <div className="flex justify-end">

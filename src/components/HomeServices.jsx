@@ -306,7 +306,7 @@ function ServiceNode({ service, isActive, onClick, position, index }) {
 
 // Main component
 export default function HomeServices() {
-  const [activeServiceId, setActiveServiceId] = useState(servicesData[3].id);
+  const [activeServiceId, setActiveServiceId] = useState(servicesData[0].id);
   const pathRef = useRef(null);
   const containerRef = useRef(null);
   const [positions, setPositions] = useState([]);

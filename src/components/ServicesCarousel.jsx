@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -178,6 +178,7 @@ const cards = [
     desc: "Result-driven PPC ads that maximize ROI and capture qualified leads quickly.",
     items: [
       "Campaigns that target certain individuals",
+      "The best keywords",
       "Tracking in real time",
       "Ads that emphasize on return on investment",
     ],
@@ -249,41 +250,9 @@ const cards = [
   },
 ];
 
-// Next Arrow
-const NextArrow = ({ onClick }) => (
-  <button
-    className="hidden md:flex absolute -right-12 top-1/2 transform -translate-y-1/2 z-10 
-               bg-gradient-to-r from-indigo-600 to-purple-600 
-               hover:from-purple-600 hover:to-pink-600 
-               text-white rounded-full p-3 shadow-lg 
-               transition-all duration-300 
-               focus:outline-none focus:ring-2 focus:ring-purple-400"
-    onClick={onClick}
-    aria-label="Next"
-  >
-    <ChevronRight className="h-6 w-6" />
-  </button>
-);
-
-// Prev Arrow
-const PrevArrow = ({ onClick }) => (
-  <button
-    className="hidden md:flex absolute -left-12 top-1/2 transform -translate-y-1/2 z-10 
-               bg-gradient-to-r from-indigo-600 to-purple-600 
-               hover:from-purple-600 hover:to-pink-600 
-               text-white rounded-full p-3 shadow-lg 
-               transition-all duration-300 
-               focus:outline-none focus:ring-2 focus:ring-purple-400"
-    onClick={onClick}
-    aria-label="Previous"
-  >
-    <ChevronLeft className="h-6 w-6" />
-  </button>
-);
-
 const Card = ({ icon, title, desc, items }) => (
   <div
-    className="relative group rounded-2xl p-8 min-h-[380px] flex flex-col shadow-lg
+    className="h-92 relative group rounded-2xl p-6 min-h-[380px] flex flex-col shadow-lg
                bg-gradient-to-br from-white/90 via-white/80 to-white/90 
                backdrop-blur-md overflow-hidden border border-gray-200/40
                transition-all duration-500 hover:shadow-2xl hover:scale-[1.03] cursor-pointer"
@@ -302,7 +271,7 @@ const Card = ({ icon, title, desc, items }) => (
       </div>
       <h2 className="font-bold text-lg mb-2 text-gray-900">{title}</h2>
       <p className="text-gray-600 text-sm mb-4">{desc}</p>
-      <ul className="text-gray-700 text-[15px] pl-3 list-disc flex-grow">
+      <ul className=" text-gray-700 text-[15px] pl-3 list-disc flex-grow">
         {items.map((it, idx) => (
           <li key={idx} className="my-1">
             {it}
@@ -315,6 +284,8 @@ const Card = ({ icon, title, desc, items }) => (
 
 const ServicesCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
+
   const slidesToShow = 4;
   const slidesToScroll = 1;
   const settings = {
@@ -323,33 +294,75 @@ const ServicesCarousel = () => {
     speed: 600,
     slidesToShow,
     slidesToScroll,
-    arrows: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 2500,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
     responsive: [
       { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } },
       { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        },
+      },
     ],
   };
 
+  const handlePrev = () => sliderRef.current?.slickPrev();
+  const handleNext = () => sliderRef.current?.slickNext();
+
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-x-hidden">
       <BestHeading title="" highlight="Services" />
-      <div className="bg-black h-[75vh] flex items-center">
-        <div className="max-w-[90rem] mx-auto px-6 w-full">
-          <Slider {...settings}>
-            {cards.map((card, idx) => (
-              <div key={idx} className="px-3 py-2">
-                <Card {...card} />
-              </div>
-            ))}
-          </Slider>
+      <section className="bg-black py-10 sm:py-14">
+        <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
+          <div className="relative overflow-hidden px-10 sm:px-12 md:px-16">
+            <button
+              type="button"
+              onClick={handlePrev}
+              aria-label="Previous"
+              className="hidden md:flex absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 z-20
+                         bg-gradient-to-r from-indigo-600 to-purple-600
+                         hover:from-purple-600 hover:to-pink-600
+                         text-white rounded-full p-3 shadow-lg
+                         transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+
+            <button
+              type="button"
+              onClick={handleNext}
+              aria-label="Next"
+              className="hidden md:flex absolute right-3 lg:right-4 top-1/2 -translate-y-1/2 z-20
+                         bg-gradient-to-r from-indigo-600 to-purple-600
+                         hover:from-purple-600 hover:to-pink-600
+                         text-white rounded-full p-3 shadow-lg
+                         transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+
+            <Slider
+              ref={sliderRef}
+              {...settings}
+              role="region"
+              aria-label="Services carousel"
+            >
+              {cards.map((card, idx) => (
+                <div key={idx} className="px-2 sm:px-3 py-2">
+                  <Card {...card} />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

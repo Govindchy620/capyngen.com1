@@ -12,7 +12,7 @@ import testimonial2 from "./testimonial2.webp";
 import testimonial3 from "./testimonial3.webp";
 import testimonial4 from "./testimonial4.webp";
 import testimonial5 from "./testimonial5.webp";
-import whyChooseUs from "./whyChooseUs.webp";
+import whyChooseUs from "./whyChooseUs.jpg";
 import capyngenLogo from "./capyngenLogo.png";
 import heroSectionBg from "./heroSectionBg.webp";
 import capyngenFavIcon from "./capyngenFavIcon.png";
@@ -58,6 +58,7 @@ import careersAbout2 from "./careersAbout2.avif";
 import careersAbout3 from "./careersAbout3.avif";
 import capyngen3d from "./capyngen3d.png";
 import overview from "./overview.webp";
+import webDevelopmentHero from "./webDevelopmentHero.jpg";
 
 export const assets = {
   homeAboutUs1,
@@ -120,6 +121,7 @@ export const assets = {
   careersAbout3,
   capyngen3d,
   overview,
+  webDevelopmentHero,
 };
 
 export const navItems = [

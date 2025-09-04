@@ -81,7 +81,7 @@ const HomeAboutUs = () => {
               <img
                 src={assets.capyngen3d}
                 alt="IT Server Room"
-                className="w-full h-auto object-cover shadow-lg max-w-md md:max-w-none md:h-[480px] animate-smoothBounce"
+                className="w-full h-auto object-cover max-w-md md:max-w-none md:h-[480px] animate-smoothBounce"
               />
             </div>
           </div>
