@@ -132,8 +132,8 @@ const WebDevelopment = () => {
     <div>
       <Banner
         title="Web Development"
-        overlayBg="bg-black/70"
-        backgroundImage={assets.bg1}
+        overlayBg="bg-black/60"
+        backgroundImage={assets.webDevelopmentHero}
         description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
       />
       <TopRatedCompany
