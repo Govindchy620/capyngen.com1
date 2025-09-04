@@ -4,12 +4,19 @@ const BenefitsSection = ({
   heading = "Web Development Solutions We Offer",
   desc = "A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers.",
   benefits = [],
+  reverse = false,
 }) => {
   return (
     <section className="bg-black text-white px-6 md:px-12 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        {/* LEFT COLUMN (sticky) */}
-        <div className="md:sticky md:top-24 self-start">
+      <div
+        className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start`}
+      >
+        {/* LEFT COLUMN (heading & description) */}
+        <div
+          className={`md:sticky md:top-24 self-start ${
+            reverse ? "md:order-2" : "md:order-1"
+          }`}
+        >
           <h1 className="text-3xl md:text-6xl font-bold leading-tight">
             {heading}
           </h1>
@@ -18,8 +25,8 @@ const BenefitsSection = ({
           </p>
         </div>
 
-        {/* RIGHT COLUMN (scrolls with page) */}
-        <div className="space-y-12">
+        {/* RIGHT COLUMN (benefits cards) */}
+        <div className={`space-y-12 ${reverse ? "md:order-1" : "md:order-2"}`}>
           {benefits.map((item, i) => (
             <div
               key={i}

@@ -50,7 +50,7 @@ const WebDevelopment = () => {
     { name: "AWS", logo: assets.aws },
     { name: "Google Cloud", logo: assets.googlecloud },
   ];
-  const benefitsData = [
+  const solutionsData = [
     {
       title: "Casino Game Web App",
       desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
@@ -100,6 +100,32 @@ const WebDevelopment = () => {
       desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
     },
   ];
+  const servicesData = [
+    {
+      title: "Custom Enterprise Web Portals",
+      desc: "Our web development company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+    },
+    {
+      title: "API Development and Integration",
+      desc: "Leverage our advanced web development services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+    },
+    {
+      title: "Cloud-Based Web Applications",
+      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+    },
+    {
+      title: "Enterprise CMS Development",
+      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+    },
+    {
+      title: "Data Analytics Dashboards",
+      desc: "Utilize our web development solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+    },
+    {
+      title: "Enterprise E-Commerce Solutions",
+      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -120,13 +146,19 @@ const WebDevelopment = () => {
         background={assets.patternBg1}
       />
 
-      <HowWeWork />
       <BenefitsSection
         heading="Web Development Solutions We Offer"
         desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-        benefits={benefitsData}
+        benefits={solutionsData}
       />
+      <HowWeWork />
       <WhyChoose />
+      <BenefitsSection
+        heading="Web Development Services We Offer"
+        desc="Partner with RichestSoft for enterprise-level web development services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
+        benefits={servicesData}
+        reverse
+      />
       <TechnologiesCarousel
         title="Web Development Technologies We Use"
         description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
