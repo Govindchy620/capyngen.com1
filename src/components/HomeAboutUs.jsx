@@ -1,16 +1,13 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import AnimatedButton from "./AnimatedButton";
-import BestHeading from "./BestHeading";
 import ScrollFloat from "./ScrollFloat";
 
-const demoMainImg = assets.homeAboutUs1;
-const demoTeamImg = assets.homeAboutUs2;
 const demoPeople = [assets.team1, assets.team2, assets.team3, assets.team4];
 
 const HomeAboutUs = () => {
   return (
-    <section className="bg-black">
+    <section className="bg-black pt-5">
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"
@@ -30,7 +27,7 @@ const HomeAboutUs = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center py-12 px-4 md:px-12 gap-10 md:gap-20">
+        <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center pt-5 md:py-12 px-4 md:px-12 md:gap-20">
           {/* Left Section: Text */}
           <div className="w-full md:w-2/3 flex flex-col space-y-6">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">

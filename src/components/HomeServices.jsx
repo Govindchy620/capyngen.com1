@@ -10,6 +10,17 @@ const lineAnimationStyles = `
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 `;
 
 // Inject styles
@@ -254,13 +265,26 @@ function ServiceCard({ service, isMobile = false }) {
 }
 
 // Service node component
-function ServiceNode({ service, isActive, onClick, position, index }) {
+function ServiceNode({
+  service,
+  isActive,
+  onClick,
+  position,
+  index,
+  isInViewport,
+}) {
+  const delay = position?.progress ? position.progress * 2 : index * 0.3; // sync to line (2s)
+
   return (
     <div
-      className="absolute transform -translate-x-1/2 -translate-y-1/2 z-30 group"
+      className="absolute transform -translate-x-1/2 -translate-y-1/2 z-30"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
+        opacity: 0,
+        animation: isInViewport
+          ? `fadeInUp 0.6s ease forwards ${delay}s`
+          : "none",
       }}
     >
       <button
@@ -268,7 +292,6 @@ function ServiceNode({ service, isActive, onClick, position, index }) {
         className="cursor-pointer transition-all duration-300"
         onClick={() => onClick(service.id)}
       >
-        {/* Node circle */}
         <div
           className={`relative w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
             isActive
@@ -280,15 +303,13 @@ function ServiceNode({ service, isActive, onClick, position, index }) {
             name={service.icon}
             className={`w-6 h-6 ${isActive ? "text-black" : "text-white"}`}
           />
-
-          {/* Pulse animation for active node */}
           {isActive && (
             <div className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-30"></div>
           )}
         </div>
       </button>
 
-      {/* Service label positioned to the right */}
+      {/* Label */}
       <div
         className={`absolute left-20 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${
           isActive ? "opacity-100" : "opacity-0 group-hover:opacity-75"
@@ -325,21 +346,18 @@ export default function HomeServices() {
           const t = index / (servicesData.length - 1);
           const point = pathRef.current.getPointAtLength(t * pathLength);
 
-          // Create SVG point and transform to screen coordinates
           const svgPoint = svg.createSVGPoint();
           svgPoint.x = point.x;
           svgPoint.y = point.y;
-
-          // Transform from SVG coordinate system to screen coordinates
           const screenPoint = svgPoint.matrixTransform(svg.getScreenCTM());
 
-          // Convert screen coordinates to container-relative coordinates
           const containerX = screenPoint.x - containerRect.left;
           const containerY = screenPoint.y - containerRect.top;
 
           return {
             x: containerX,
             y: containerY,
+            progress: t, // 🔑 store progress
           };
         });
 
@@ -353,6 +371,8 @@ export default function HomeServices() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInViewport(true);
+          } else {
+            setIsInViewport(false); // reset when leaving viewport
           }
         });
       },
@@ -384,23 +404,28 @@ export default function HomeServices() {
   const activePosition = positions[activeServiceIndex];
 
   useEffect(() => {
-    if (pathRef.current) {
-      const path = pathRef.current;
-      const pathLength = path.getTotalLength();
+    if (!pathRef.current) return;
+    const path = pathRef.current;
+    const pathLength = path.getTotalLength();
 
-      // Set the stroke-dasharray to the path length
-      path.style.strokeDasharray = pathLength;
+    // Always set stroke base
+    path.style.strokeDasharray = pathLength;
+    path.style.strokeDashoffset = pathLength;
+
+    if (isInViewport) {
+      // Reset animation
+      path.style.animation = "none";
+      void path.offsetWidth; // force reflow
+      path.style.animation = "drawLine 2s linear forwards";
+    } else {
+      // Reset stroke so it can replay next time
+      path.style.animation = "none";
       path.style.strokeDashoffset = pathLength;
-
-      if (isInViewport) {
-        // Trigger the animation
-        path.style.animation = `drawLine 2s ease-in-out forwards`;
-      }
     }
   }, [isInViewport]);
 
   return (
-    <div className="bg-black pb-20">
+    <div className="bg-black pb-10 md:pb-0">
       <BestHeading title="" highlight="Industries" />
       <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
         {/* Section Header */}
@@ -409,7 +434,6 @@ export default function HomeServices() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
             Smart IT Services to Elevate Your Business Success.
           </h1>
-
           {/* Subheading */}
           <p className="text-lg font-semibold text-[#eaeaea] md:w-2/3 mx-auto">
             Smart IT services designed to elevate your business, enhance
@@ -473,6 +497,7 @@ export default function HomeServices() {
                   onClick={setActiveServiceId}
                   position={positions[index]}
                   index={index}
+                  isInViewport={isInViewport}
                 />
               ))}
           </div>

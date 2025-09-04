@@ -54,7 +54,7 @@ export default function HomeIndustries() {
         </div>
         {/* Right Content */}
         <div className="flex-1 flex flex-col justify-center">
-          <div className="px-6 md:px-10">
+          <div className="px-2 md:px-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
               Smart Technologies That Power Growth
             </h1>
@@ -102,7 +102,7 @@ export default function HomeIndustries() {
             </ul>
 
             {/* Button */}
-            <div className="mt-10">
+            <div className="mt-6 md:mt-10">
               <AnimatedButton
                 text="Learn More"
                 onClick={() => alert("Button clicked!")}
@@ -114,11 +114,11 @@ export default function HomeIndustries() {
       {/* Services List */}
       <div className="max-w-7xl mx-auto flex">
         <div className="md:w-1/2 hidden md:block"></div>
-        <div className="w-full md:w-1/2 mt-10 md:mt-0 bg-white py-8">
+        <div className="w-full md:w-1/2 mt-6 md:mt-0 bg-white py-2">
           <div className="px-10 md:px-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-10 text-gray-800 text-lg py-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-2 md:gap-10 text-gray-800 text-lg py-6">
               <div>
-                <ul className="space-y-6">
+                <ul className="space-y-2">
                   <li className="flex items-center gap-3">
                     <span className="inline-block text-blue-600">✘</span>{" "}
                     Business Automation
@@ -138,7 +138,7 @@ export default function HomeIndustries() {
                 </ul>
               </div>
               <div>
-                <ul className="space-y-6">
+                <ul className="space-y-2">
                   <li className="flex items-center gap-3">
                     <span className="inline-block text-blue-600">✘</span> Remote
                     Work Enablement

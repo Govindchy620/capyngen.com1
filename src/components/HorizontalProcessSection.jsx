@@ -239,7 +239,7 @@ const HorizontalProcessSection = () => {
               <div className="mt-16">
                 {" "}
                 {/* <- mt-15 -> mt-16 (valid) */}
-                <p className="text-white/90 text-xl leading-relaxed max-w-4xl mx-auto font-medium">
+                <p className="text-white/90 text-base md:text-xl leading-relaxed max-w-4xl mx-auto font-medium">
                   Our way of doing things at Capyngen is simple, works together,
                   and gets results. We work closely with your team to figure out
                   what you want to achieve, come up with new ways to do it, and

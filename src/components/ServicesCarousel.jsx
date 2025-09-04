@@ -307,7 +307,7 @@ const ServicesCarousel = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
-          dots: true,
+          dots: false,
         },
       },
     ],
@@ -317,20 +317,20 @@ const ServicesCarousel = () => {
   const handleNext = () => sliderRef.current?.slickNext();
 
   return (
-    <div className="bg-black overflow-x-hidden">
+    <div className="bg-black overflow-x-hidden overflow-y-hidden">
       <BestHeading title="" highlight="Services" />
-      <section className="bg-black py-10 sm:py-14">
-        <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
-          <div className="relative overflow-hidden px-10 sm:px-12 md:px-16">
+      <section className="bg-black py-6 sm:py-14">
+        <div className="mx-auto w-full max-w-screen-2xl px-2  sm:px-6">
+          <div className="relative overflow-hidden px-7 sm:px-12 md:px-16">
             <button
               type="button"
               onClick={handlePrev}
               aria-label="Previous"
-              className="hidden md:flex absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 z-20
+              className="flex absolute left-0 lg:left-4 top-1/2 -translate-y-1/2 z-20
                          bg-gradient-to-r from-indigo-600 to-purple-600
                          hover:from-purple-600 hover:to-pink-600
                          text-white rounded-full p-3 shadow-lg
-                         transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                         transition-all duration-300"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -339,11 +339,11 @@ const ServicesCarousel = () => {
               type="button"
               onClick={handleNext}
               aria-label="Next"
-              className="hidden md:flex absolute right-3 lg:right-4 top-1/2 -translate-y-1/2 z-20
+              className="flex absolute right-0 lg:right-4 top-1/2 -translate-y-1/2 z-20
                          bg-gradient-to-r from-indigo-600 to-purple-600
                          hover:from-purple-600 hover:to-pink-600
                          text-white rounded-full p-3 shadow-lg
-                         transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                         transition-all duration-300"
             >
               <ChevronRight className="h-6 w-6" />
             </button>

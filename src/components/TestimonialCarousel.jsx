@@ -160,7 +160,7 @@ export default function TestimonialCarousel() {
         </div>
 
         {/* Right Section - Carousel */}
-        <div className="relative flex items-center justify-center py-12 w-full lg:w-3/5 px-4 sm:px-6">
+        <div className="relative flex items-center justify-center py-2 w-full lg:w-3/5 px-4 sm:px-6">
           <div className="w-full max-w-4xl">
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (

@@ -333,3 +333,17 @@
 .animate-smoothBounce {
   animation: smoothBounce 3s ease-in-out infinite;
 }
+@keyframes diagonalBounce {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    /* Moves diagonally but scales with element size */
+    transform: translate(5%, -5%);
+  }
+}
+
+.animate-diagonalBounce {
+  animation: diagonalBounce 3s ease-in-out infinite;
+}
