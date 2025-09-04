@@ -28,14 +28,26 @@ export default function HomeBlogs() {
   const cardsRef = useRef(null);
 
   const members = [
-    { image: assets.blog1, name: "Person One", title: "Project Manager" },
+    {
+      image: assets.blog1,
+      name: "Tech Updates",
+      title: "Latest trends in IT & innovation.",
+    },
     {
       image: assets.blog2,
-      name: "Savannah Nguyen",
-      title: "Sr. Web Developer",
+      name: "Marketing Buzz",
+      title: "Fresh SEO & social media tips.",
     },
-    { image: assets.blog3, name: "Person Three", title: "UI/UX Designer" },
-    { image: assets.blog4, name: "Person Three", title: "UI/UX Designer" },
+    {
+      image: assets.blog3,
+      name: "Industry Blog",
+      title: "Insights from global industries.",
+    },
+    {
+      image: assets.blog4,
+      name: "Capyngen News",
+      title: "Our latest updates & events.",
+    },
   ];
 
   useLayoutEffect(() => {
