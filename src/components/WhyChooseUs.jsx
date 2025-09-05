@@ -7,9 +7,9 @@ import BestHeading from "./BestHeading";
 export default function WhyChooseUs() {
   return (
     <div
-      className="bg-black"
+      className="pt-5 text-white w-full relative overflow-hidden"
       style={{
-        backgroundImage: `url(${assets.patternBg2})`,
+        backgroundImage: `url(${assets.patternBg1})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

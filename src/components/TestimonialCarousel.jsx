@@ -120,7 +120,14 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <section className="w-full bg-black text-white pt-5">
+    <section
+      className="w-full text-white pt-5"
+      style={{
+        backgroundImage: `url(${assets.patternBg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <BestHeading title="" highlight="Testimonials" />
       <div className="container max-w-[90rem] mx-auto flex flex-col lg:flex-row gap-10">
         {/* Left Section */}

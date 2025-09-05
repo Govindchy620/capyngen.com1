@@ -5,7 +5,7 @@ import team2 from "./team2.png";
 import team3 from "./team3.png";
 import team4 from "./team4.png";
 import patternBg1 from "./patternBg1.webp";
-import patternBg2 from "./patternBg2.png";
+import patternBg2 from "./patternBg2.webp";
 import homeIndustries from "./homeIndustries.webp";
 import testimonial1 from "./testimonial1.webp";
 import testimonial2 from "./testimonial2.webp";
@@ -58,7 +58,14 @@ import careersAbout2 from "./careersAbout2.avif";
 import careersAbout3 from "./careersAbout3.avif";
 import capyngen3d from "./capyngen3d.png";
 import overview from "./overview.webp";
-import webDevelopmentHero from "./webDevelopmentHero.jpg";
+import webDevelopment from "./webDevelopment.jpg";
+import appDevelopment from "./appDevelopment.jpg";
+import customAiSolution from "./customAiSolution.jpg";
+import eCommerceSolution from "./eCommerceSolution.webp";
+import blockchainDevelopment from "./blockchainDevelopment.webp";
+import devops from "./devops.jpg";
+import applicationSolution from "./applicationSolution.webp";
+import crmManagement from "./crmManagement.jpg";
 
 export const assets = {
   homeAboutUs1,
@@ -121,7 +128,14 @@ export const assets = {
   careersAbout3,
   capyngen3d,
   overview,
-  webDevelopmentHero,
+  webDevelopment,
+  appDevelopment,
+  customAiSolution,
+  eCommerceSolution,
+  blockchainDevelopment,
+  devops,
+  applicationSolution,
+  crmManagement,
 };
 
 export const navItems = [

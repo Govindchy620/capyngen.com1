@@ -1,6 +1,6 @@
 "use client";
 
-import ScrollFloat from "./ScrollFloat";
+import TextType from "./TextType";
 
 export default function BestHeading({
   title = "Our Best",
@@ -13,17 +13,13 @@ export default function BestHeading({
           {title}
         </h1>
       )}
-      <ScrollFloat
-        animationDuration={1}
-        ease="back.inOut(2)"
-        scrollStart="top center"
-        scrollEnd="bottom center"
-        stagger={0.03}
-        containerClassName="gradient-text"
-        textClassName="text-5xl font-extrabold"
-      >
-        {highlight}
-      </ScrollFloat>
+      <TextType
+        text={highlight}
+        typingSpeed={80}
+        startOnVisible={true}
+        showCursor={true}
+        className="text-5xl font-extrabold"
+      />
     </div>
   );
 }

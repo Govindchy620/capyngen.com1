@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import BestHeading from "./BestHeading";
+import { assets } from "../assets/assets";
 
 const FAQSection = ({ title, items }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -10,7 +11,14 @@ const FAQSection = ({ title, items }) => {
   };
 
   return (
-    <div className="bg-black text-white pb-16 px-4 md:px-10">
+    <div
+      className="text-white pb-16 px-4 md:px-10"
+      style={{
+        backgroundImage: `url(${assets.patternBg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <BestHeading title="" highlight="FAQs" />
       <div className="max-w-4xl mx-auto  mt-10">
         {items.map((item, index) => (

@@ -126,7 +126,12 @@ export default function HomeBlogs() {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen bg-black text-white py-10 relative overflow-hidden"
+      className="min-h-screen text-white py-10 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${assets.patternBg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
         <BestHeading title="" highlight="News & Updates" />

@@ -129,44 +129,49 @@ const WebDevelopment = () => {
 
   useSplitTextAnimation("h1");
   return (
-    <div>
-      <Banner
-        title="Web Development"
-        overlayBg="bg-black/60"
-        backgroundImage={assets.webDevelopmentHero}
-        description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
-      />
-      <TopRatedCompany
-        title="Top-Rated Web Development Company"
-        description={[
-          `RichestSoft provides top-notch and oriented web development solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-          `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch web development services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best web development company in India, we provide best-in-class web development services.`,
-        ]}
-        image={assets.whyChooseUs}
-        background={assets.patternBg1}
-      />
+    <div className="relative">
+      <div className="sticky inset-0">
+        <Banner
+          title="Web Development"
+          overlayBg="bg-black/60"
+          backgroundImage={assets.webDevelopment}
+          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        />
+      </div>
+      {/* Foreground Content (scrolls over background) */}
+      <div className="relative z-10">
+        <TopRatedCompany
+          title="Top-Rated Web Development Company"
+          description={[
+            `RichestSoft provides top-notch and oriented web development solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
+            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch web development services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best web development company in India, we provide best-in-class web development services.`,
+          ]}
+          image={assets.whyChooseUs}
+          background={assets.patternBg1}
+        />
 
-      <BenefitsSection
-        heading="Web Development Solutions We Offer"
-        desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-        benefits={solutionsData}
-      />
-      <HowWeWork />
-      <WhyChoose />
-      <BenefitsSection
-        heading="Web Development Services We Offer"
-        desc="Partner with RichestSoft for enterprise-level web development services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-        benefits={servicesData}
-        reverse
-      />
-      <TechnologiesCarousel
-        title="Web Development Technologies We Use"
-        description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-        technologies={technologies}
-      />
-      <OurServices />
-      <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+        <BenefitsSection
+          heading="Web Development Solutions We Offer"
+          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
+          benefits={solutionsData}
+        />
+        <HowWeWork />
+        <WhyChoose />
+        <BenefitsSection
+          heading="Web Development Services We Offer"
+          desc="Partner with RichestSoft for enterprise-level web development services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
+          benefits={servicesData}
+          reverse
+        />
+        <TechnologiesCarousel
+          title="Web Development Technologies We Use"
+          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+          technologies={technologies}
+        />
+        <OurServices />
+        <FAQSection2 items={faqItems} />
+        <ScrollRevealEffect />
+      </div>
     </div>
   );
 };

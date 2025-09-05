@@ -40,7 +40,7 @@ const Homepage = () => {
       </div>
 
       {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
+      <div className="relative z-10 bg-[#1B2B3A]">
         <HomeAboutUs />
         <WhyChooseUs />
         <HorizontalProcessSection />

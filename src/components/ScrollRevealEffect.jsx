@@ -80,7 +80,7 @@ export default function ScrollRevealEffect() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden"
+      className="relative w-full h-screen shadow-2xl shadow-blue-500"
     >
       {sections.map((section, i) => (
         <div
@@ -93,14 +93,22 @@ export default function ScrollRevealEffect() {
           }}
         >
           {section.text === "Form" ? (
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 text-white">
-              {/* Contact Form */}
-              <div className="w-full max-w-2xl bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+            <div className="flex flex-col lg:flex-row items-stretch justify-center gap-10 px-6 text-white max-w-7xl mx-auto">
+              {/* Left Side (Intro or Image/Info) */}
+              <div className="flex-1 flex flex-col justify-center bg-white/5 backdrop-blur-md p-10 rounded-2xl shadow-lg">
+                <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                   Let’s <span className="text-cyan-400">Talk</span> About Your{" "}
                   <span className="text-cyan-400">Project</span>
                 </h2>
+                <p className="text-lg text-gray-300">
+                  Fill out the form and we’ll get back to you as soon as
+                  possible. We’d love to hear about your ideas and help bring
+                  them to life.
+                </p>
+              </div>
 
+              {/* Right Side (Form) */}
+              <div className="flex-1 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg">
                 <form className="space-y-5">
                   {/* Name */}
                   <div>

@@ -1,0 +1,51 @@
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+
+  /* ScrollFloat styling */
+  font-size: clamp(1.75rem, 8vw, 6rem);
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.15;
+  white-space: normal;
+  word-break: break-word;
+  text-wrap: balance;
+  opacity: 1;
+  isolation: isolate;
+
+  /* Ensure no background color */
+  background: none !important;
+}
+
+/* Cursor */
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+  color: #ffffff !important; /* force white cursor */
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+/* Gradient text support */
+.gradient-text .text-type__content {
+  background-image: linear-gradient(to right, #3b82f6, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .text-type {
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-type {
+    line-height: 1.2;
+  }
+}

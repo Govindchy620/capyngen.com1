@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import BestHeading from "./BestHeading";
+import { assets } from "../assets/assets";
 
 const cards = [
   {
@@ -317,9 +318,16 @@ const ServicesCarousel = () => {
   const handleNext = () => sliderRef.current?.slickNext();
 
   return (
-    <div className="bg-black overflow-x-hidden overflow-y-hidden">
+    <section
+      className="overflow-x-hidden overflow-y-hidden min-h-[100vh]"
+      style={{
+        backgroundImage: `url(${assets.patternBg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <BestHeading title="" highlight="Services" />
-      <section className="bg-black py-6 sm:py-14">
+      <div className="py-6 sm:py-14">
         <div className="mx-auto w-full max-w-screen-2xl px-2  sm:px-6">
           <div className="relative overflow-hidden px-7 sm:px-12 md:px-16">
             <button
@@ -362,8 +370,8 @@ const ServicesCarousel = () => {
             </Slider>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

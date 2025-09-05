@@ -4,6 +4,7 @@ import { useRef, useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BestHeading from "./BestHeading";
+import { assets } from "../assets/assets";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -226,7 +227,15 @@ const HorizontalProcessSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-black overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${assets.patternBg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="h-screen overflow-hidden relative z-10">
         <div
           ref={containerRef}
