@@ -140,7 +140,7 @@ export default function ScrollRevealEffect() {
           )}
 
           {section.text === "Form" ? (
-            <div className="flex flex-col xl:flex-row items-stretch justify-center gap-10 px-4 sm:px-6 lg:px-10 text-white max-w-7xl mx-auto w-full">
+            <div className="flex flex-col md:flex-row items-stretch justify-center gap-10 px-4 sm:px-6 lg:px-10 text-white max-w-7xl mx-auto w-full max-h-[90vh]">
               {/* Left Side (Intro) */}
               <div className="hidden flex-1 min-w-[300px] md:flex flex-col justify-center bg-white/5 backdrop-blur-md p-6 sm:p-10 rounded-2xl shadow-lg">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -156,7 +156,7 @@ export default function ScrollRevealEffect() {
 
               {/* Right Side (Form) */}
               <div className="flex-1 min-w-[300px] bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg">
-                <form className="space-y-5 w-full">
+                <form className="space-y-3 w-full">
                   {/* Name */}
                   <div>
                     <label className="block mb-2 text-sm font-medium">
@@ -202,7 +202,7 @@ export default function ScrollRevealEffect() {
                     </label>
                     <textarea
                       placeholder="Write your message..."
-                      rows="5"
+                      rows="3"
                       className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
                     ></textarea>

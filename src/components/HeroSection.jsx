@@ -67,22 +67,8 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 w-full flex flex-col justify-center max-w-7xl mx-auto mt-10">
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white leading-snug">
-          {["Innovating", "Today,", "Empowering", "Tomorrow"].map((word, i) => (
-            <motion.span
-              key={i}
-              initial={{ y: "100%", opacity: 0, rotateX: 90 }}
-              animate={{ y: "0%", opacity: 1, rotateX: 0 }}
-              transition={{
-                type: "spring",
-                damping: 20,
-                stiffness: 120,
-                delay: i * 0.15, // stagger effect
-              }}
-              className="inline-block"
-            >
-              {word}
-            </motion.span>
-          ))}
+          Innovating Today,
+          <br /> Empowering Tomorrow
         </h1>
 
         {/* Subtext */}

@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
       <BestHeading title="" highlight="Why Choose Us" />
       <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto pt-5 md:pt-0">
         {/* Hero Section */}
-        <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-4 xl:gap-12">
           {/* Right Image (comes first on mobile) */}
           <div className="w-full lg:w-1/3 pr-5 md:pr-0 mx-auto flex justify-center mt-6 md:mt-20 order-1 lg:order-2">
             <div className="relative w-full max-w-sm md:max-w-md md:aspect-[4/5]">
@@ -36,9 +36,8 @@ export default function WhyChooseUs() {
           {/* Left Content (comes second on mobile) */}
           <div className="w-full lg:w-1/2 text-left order-2 lg:order-1">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight text-white">
-              Why Choose Capyngen:
-              <br className="hidden sm:block" />
-              Innovative, Reliable IT Services that Drive Success
+              Why Choose Capyngen: Innovative, Reliable IT Services that Drive
+              Success
             </h1>
             <p className="text-base md:text-lg my-6 text-white max-w-2xl mx-auto lg:mx-0">
               We provide businesses with innovative, dependable, and tailored

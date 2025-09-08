@@ -229,6 +229,8 @@ export default function HomeServices() {
   const [positions, setPositions] = useState([]);
 
   useLayoutEffect(() => {
+    if (window.innerWidth < 1024) return; // ❌ Skip GSAP setup on mobile
+
     if (!pathRef.current || !sectionRef.current) return;
 
     const path = pathRef.current;
@@ -266,6 +268,7 @@ export default function HomeServices() {
   }, []);
 
   useEffect(() => {
+    if (window.innerWidth < 1024) return; // ❌ Skip position calculation on mobile
     if (!pathRef.current || !containerRef.current) return;
 
     const path = pathRef.current;
@@ -274,23 +277,25 @@ export default function HomeServices() {
     const svg = path.ownerSVGElement;
     const svgRect = svg.getBoundingClientRect();
 
-    const newPositions = servicesData.map((_, index) => {
-      const t = index / (servicesData.length - 1);
-      const point = path.getPointAtLength(t * pathLength);
-      const svgPoint = svg.createSVGPoint();
-      svgPoint.x = point.x;
-      svgPoint.y = point.y;
-      const screenPoint = svgPoint.matrixTransform(svg.getScreenCTM());
-      return {
-        x: screenPoint.x - containerRect.left,
-        y: screenPoint.y - containerRect.top,
-      };
-    });
-    setPositions(newPositions);
+    const calculatePositions = () => {
+      const newPositions = servicesData.map((_, index) => {
+        const t = index / (servicesData.length - 1);
+        const point = path.getPointAtLength(t * pathLength);
+        const svgPoint = svg.createSVGPoint();
+        svgPoint.x = point.x;
+        svgPoint.y = point.y;
+        const screenPoint = svgPoint.matrixTransform(svg.getScreenCTM());
+        return {
+          x: screenPoint.x - containerRect.left,
+          y: screenPoint.y - containerRect.top,
+        };
+      });
+      setPositions(newPositions);
+    };
 
-    window.addEventListener("resize", () => setPositions(newPositions));
-    return () =>
-      window.removeEventListener("resize", () => setPositions(newPositions));
+    calculatePositions();
+    window.addEventListener("resize", calculatePositions);
+    return () => window.removeEventListener("resize", calculatePositions);
   }, []);
 
   const activeService = servicesData.find((s) => s.id === activeServiceId);
@@ -306,7 +311,7 @@ export default function HomeServices() {
       }}
     >
       <BestHeading title="" highlight="Industries" />
-      <div className="min-h-screen text-white flex flex-col relative overflow-hidden">
+      <div className="min-h-screen text-white flex flex-col relative overflow-hidden py-14">
         {/* Desktop */}
         <div className="hidden lg:block w-full flex-1">
           <div

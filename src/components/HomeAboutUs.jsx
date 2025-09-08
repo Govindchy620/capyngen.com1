@@ -17,14 +17,14 @@ const HomeAboutUs = () => {
       }}
     >
       <BestHeading title="" highlight="About Us" />
-      <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center pt-5 md:py-12 px-4 md:px-12 md:gap-20">
+      <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center pt-5 md:py-12 px-4 md:px-12 xl:gap-20">
         {/* Right Section: Main Image (comes first on mobile) */}
         <div className="w-full md:w-1/3 flex justify-center items-center order-1 md:order-2">
           <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg">
             <img
               src={assets.capyngen3d}
               alt="IT Server Room"
-              className="w-full h-auto object-cover max-w-md md:max-w-none md:h-[480px] animate-smoothBounce"
+              className="w-full h-auto object-contain max-w-md md:max-w-none md:h-[480px] animate-smoothBounce"
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ const HomeAboutUs = () => {
 
           {/* Description + Button */}
           <div className="flex flex-col gap-5 md:gap-8">
-            <p className="text-base sm:text-lg font-medium md:w-4/5">
+            <p className="text-base sm:text-lg font-medium md:w-7/8 xl:w-4/5">
               We deliver tailored IT solutions to streamline operations and
               boost efficiency. From infrastructure to cybersecurity, we empower
               your business with cutting-edge technology, innovative cloud

@@ -319,7 +319,7 @@ const ServicesCarousel = () => {
 
   return (
     <section
-      className="overflow-x-hidden overflow-y-hidden min-h-[100vh]"
+      className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh]"
       style={{
         backgroundImage: `url(${assets.patternBg1})`,
         backgroundSize: "cover",
