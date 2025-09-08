@@ -52,16 +52,12 @@ const Footer = () => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 300);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -74,17 +70,20 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div className="relative z-10 max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-10 lg:gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <img
-                src={assets.capyngenLogo || assets.capyngenFavIcon}
-                alt="Capyngen Logo"
-                className="h-12 w-auto mb-4"
-              />
+              <NavLink to="/">
+                <img
+                  src={assets.capyngenLogo || assets.capyngenFavIcon}
+                  alt="Capyngen Logo"
+                  className="w-full mb-4 max-w-[200px]"
+                />
+              </NavLink>
+
               <p className="text-slate-300 text-sm leading-relaxed">
                 Transforming businesses through innovative IT solutions. We
                 deliver cutting-edge technology that drives growth and
@@ -117,15 +116,15 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services Links */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-6 relative">
-              What We Offer
-              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-            </h4>
-            <div className="space-y-4">
+          {/* Services & Industries (side by side on mobile) */}
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-2 lg:col-span-2">
+            {/* Services */}
+            <div>
+              <h4 className="text-lg font-bold text-white mb-6 relative">
+                What We Offer
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+              </h4>
               {navItems.slice(0, 1).map((item, idx) => {
-                // Flatten all services across dropdown sections
                 const allServices =
                   item.dropdown?.flatMap((section) => section.links) || [];
                 const displayedServices = showAllServices
@@ -146,8 +145,6 @@ const Footer = () => {
                         </li>
                       ))}
                     </ul>
-
-                    {/* Show More / Show Less Button */}
                     {allServices.length > 10 && (
                       <button
                         onClick={() => setShowAllServices(!showAllServices)}
@@ -160,15 +157,13 @@ const Footer = () => {
                 );
               })}
             </div>
-          </div>
 
-          {/* Industries Links */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-6 relative">
-              Industries
-              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-            </h4>
-            <div className="space-y-4">
+            {/* Industries */}
+            <div>
+              <h4 className="text-lg font-bold text-white mb-6 relative">
+                Industries
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+              </h4>
               {navItems.slice(1, 2).map((item, idx) => (
                 <div key={idx}>
                   {item.dropdown?.map((section, secIdx) => {
@@ -178,7 +173,7 @@ const Footer = () => {
                       : allIndustries.slice(0, 10);
 
                     return (
-                      <div key={secIdx} className="mb-4">
+                      <div key={secIdx}>
                         <ul className="space-y-2">
                           {displayedIndustries.map((link, i) => (
                             <li key={i}>
@@ -191,8 +186,6 @@ const Footer = () => {
                             </li>
                           ))}
                         </ul>
-
-                        {/* Show More / Show Less Button */}
                         {allIndustries.length > 10 && (
                           <button
                             onClick={() =>
@@ -237,31 +230,26 @@ const Footer = () => {
               Stay Connected
               <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
             </h4>
-
-            {/* Social Links */}
-            <div>
-              <p className="text-slate-300 text-sm mb-3">
-                Follow us on social media
-              </p>
-              <div className="flex space-x-3">
-                {socialLinks.map((social, idx) => (
-                  <a
-                    key={idx}
-                    href={social.href}
-                    className="w-10 h-10 bg-slate-800 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-4 h-4 text-slate-300 hover:text-white transition-colors duration-200" />
-                  </a>
-                ))}
-              </div>
+            <p className="text-slate-300 text-sm mb-3">
+              Follow us on social media
+            </p>
+            <div className="flex space-x-3">
+              {socialLinks.map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  className="w-10 h-10 bg-slate-800 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-4 h-4 text-slate-300 hover:text-white transition-colors duration-200" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Divider */}
+        {/* Divider + Scroll To Top */}
         <div className="relative border-t border-slate-700/50 my-8">
-          {/* Scroll to top button */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <button
               onClick={scrollToTop}
@@ -305,9 +293,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Effect Section */}
+      {/* Bottom Watermark */}
       <div className="relative h-[50px] md:h-[100px]">
-        {/* Capyngen watermark */}
         <div className="absolute top-0 -translate-y-1/2 inset-0 flex items-center justify-center pointer-events-none">
           <div className="text-slate-800/50 text-7xl md:text-9xl lg:text-[12rem] font-bold md:tracking-wider select-none">
             capyngen
