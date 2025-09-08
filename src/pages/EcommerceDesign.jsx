@@ -134,7 +134,7 @@ const EcommerceDesign = () => {
         <Banner
           title="E-Commerce Design"
           overlayBg="bg-black/60"
-          backgroundImage={assets.ecommerceDesign}
+          backgroundImage={assets.eCommerceDesign}
           description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
         />
       </div>

@@ -68,7 +68,7 @@ import applicationSolution from "./applicationSolution.webp";
 import crmManagement from "./crmManagement.jpg";
 import uiUxDesign from "./uiUxDesign.jpg";
 import websiteDesign from "./websiteDesign.jpg";
-import ecommerceDesign from "./ecommerceDesign.jpg";
+import eCommerceDesign from "./eCommerceDesign.jpg";
 import cms from "./cms.jpg";
 import digitalMarketing from "./digitalMarketing.jpg";
 import seo from "./seo.jpg";
@@ -145,7 +145,7 @@ export const assets = {
   crmManagement,
   uiUxDesign,
   websiteDesign,
-  ecommerceDesign,
+  eCommerceDesign,
   cms,
   digitalMarketing,
   seo,
