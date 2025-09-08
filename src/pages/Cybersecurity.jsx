@@ -9,6 +9,8 @@ import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
+import TopRatedCompany from "../components/TopRatedCompany";
+import { LifeBuoy, Sparkles } from "lucide-react";
 
 const Cybersecurity = () => {
   const faqItems = [
@@ -48,49 +50,128 @@ const Cybersecurity = () => {
     { name: "AWS", logo: assets.aws },
     { name: "Google Cloud", logo: assets.googlecloud },
   ];
-  const benefitsData = [
+  const solutionsData = [
     {
-      title: "Smooth Software Team Extension",
-      desc: "We emphasize strong teamwork and smooth interaction between your local and remote software development units.",
+      title: "Casino Game Web App",
+      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
     },
     {
-      title: "A Client-First Approach",
-      desc: "We focus on balancing technical know-how, soft skills, and additional qualifications that you deem important.",
+      title: "Web App like CandyAI",
+      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
     },
     {
-      title: "You and Your Team Stay in Sync",
-      desc: "Our method for extending your App development team lets you stay involved and manage your squad directly.",
+      title: "Educational Websites",
+      desc: "Deliver interactive learning experiences with educational websites designed by our Cybersecurity company, integrating e-learning tools, course management, and student engagement features.",
     },
     {
-      title: "Relevant Candidates",
-      desc: "You can hire dedicated developers who passed our assessments in technical skills, soft skills, and English.",
-      highlight: true,
+      title: "Portfolio Websites",
+      desc: "Showcase your work with visually compelling portfolio websites crafted by our Cybersecurity services to highlight your skills and attract potential clients.",
+    },
+    {
+      title: "Offer Websites",
+      desc: "Promote deals effectively with custom offer websites built by our Cybersecurity company, featuring responsive designs and seamless navigation for a better user experience.",
+    },
+    {
+      title: "Listing Websites",
+      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+    },
+    {
+      title: "Wiki Websites",
+      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive Cybersecurity solutions tailored to your needs.",
+    },
+    {
+      title: "E-Commerce Websites",
+      desc: "Drive sales with robust e-commerce websites designed by our Cybersecurity company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+    },
+    {
+      title: "Non-Profit Websites",
+      desc: "Support your cause with engaging non-profit websites, developed by our Cybersecurity services, that enhance donor engagement and effectively communicate your mission.",
+    },
+    {
+      title: "Entertainment Website Development",
+      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+    },
+    {
+      title: "Event Website Development",
+      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+    },
+    {
+      title: "Consulting Website Development",
+      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+    },
+  ];
+  const servicesData = [
+    {
+      title: "Custom Enterprise Web Portals",
+      desc: "Our Cybersecurity company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+    },
+    {
+      title: "API Development and Integration",
+      desc: "Leverage our advanced Cybersecurity services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+    },
+    {
+      title: "Cloud-Based Web Applications",
+      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+    },
+    {
+      title: "Enterprise CMS Development",
+      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+    },
+    {
+      title: "Data Analytics Dashboards",
+      desc: "Utilize our Cybersecurity solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+    },
+    {
+      title: "Enterprise E-Commerce Solutions",
+      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
 
   useSplitTextAnimation("h1");
   return (
-    <div>
-      <Banner
-        title="Cybersecurity"
-        overlayBg="bg-black/70"
-        backgroundImage={assets.bg1}
-        description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
-      />
-      <HowWeWork />
-      <WhyChoose />
-      <TechnologiesCarousel
-        title="App Development Technologies We Use"
-        description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-        technologies={technologies}
-      />
-      <BenefitsSection
-        heading="Why Leading Brands Choose Capyngen for App Development?"
-        benefits={benefitsData}
-      />
-      <OurServices />
-      <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+    <div className="relative">
+      <div className="sticky inset-0">
+        <Banner
+          title="Cybersecurity"
+          overlayBg="bg-black/60"
+          backgroundImage={assets.cybersecurity}
+          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        />
+      </div>
+      {/* Foreground Content (scrolls over background) */}
+      <div className="relative z-10">
+        <TopRatedCompany
+          title="Top-Rated Cybersecurity Company"
+          description={[
+            `RichestSoft provides top-notch and oriented Cybersecurity solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
+            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch Cybersecurity services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best Cybersecurity company in India, we provide best-in-class Cybersecurity services.`,
+          ]}
+          image={assets.whyChooseUs}
+          background={assets.patternBg1}
+        />
+
+        <BenefitsSection
+          heading="Cybersecurity Solutions We Offer"
+          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
+          benefits={solutionsData}
+        />
+        <HowWeWork />
+        <WhyChoose />
+        <BenefitsSection
+          heading="Cybersecurity Services We Offer"
+          desc="Partner with RichestSoft for enterprise-level Cybersecurity services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
+          benefits={servicesData}
+          reverse
+        />
+        <TechnologiesCarousel
+          title="Cybersecurity Technologies We Use"
+          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+          technologies={technologies}
+        />
+        <OurServices />
+        <FAQSection2 items={faqItems} />
+        <ScrollRevealEffect />
+      </div>
     </div>
   );
 };

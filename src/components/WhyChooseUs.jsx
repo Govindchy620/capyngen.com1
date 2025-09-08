@@ -7,7 +7,7 @@ import BestHeading from "./BestHeading";
 export default function WhyChooseUs() {
   return (
     <div
-      className="pt-5 text-white w-full relative overflow-hidden"
+      className="pt-10 md:pt-5 text-white w-full relative overflow-hidden"
       style={{
         backgroundImage: `url(${assets.patternBg1})`,
         backgroundSize: "cover",
@@ -15,11 +15,26 @@ export default function WhyChooseUs() {
       }}
     >
       <BestHeading title="" highlight="Why Choose Us" />
-      <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto">
+      <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto pt-5 md:pt-0">
         {/* Hero Section */}
         <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-12">
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 text-left">
+          {/* Right Image (comes first on mobile) */}
+          <div className="w-full lg:w-1/3 pr-5 md:pr-0 mx-auto flex justify-center mt-6 md:mt-20 order-1 lg:order-2">
+            <div className="relative w-full max-w-sm md:max-w-md md:aspect-[4/5]">
+              {/* Purple border (background layer) */}
+              <div className="absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0" />
+
+              {/* Image (foreground layer) */}
+              <img
+                src={assets.whyChooseUs}
+                alt="Business people collaborating"
+                className="relative z-10 w-full h-full object-cover rounded-xl shadow-lg animate-diagonalBounce"
+              />
+            </div>
+          </div>
+
+          {/* Left Content (comes second on mobile) */}
+          <div className="w-full lg:w-1/2 text-left order-2 lg:order-1">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight text-white">
               Why Choose Capyngen:
               <br className="hidden sm:block" />
@@ -33,27 +48,12 @@ export default function WhyChooseUs() {
               cybersecurity, custom mobile app development, strong enterprise
               software, strategic digital transformation, intelligent
               automation, responsive web platforms, and scalable IT strategies.
-              These things help businesses grow and succeed in the long term.
+              These things help businesses grow and succeed in the long term.
             </p>
             <div className="flex justify-start">
               <AnimatedButton
                 text="Get in Touch"
                 onClick={() => alert("Button clicked!")}
-              />
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="w-full lg:w-1/3 pr-5 md:pr-0 mx-auto flex justify-center mt-6 md:mt-20">
-            <div className="relative w-full max-w-sm md:max-w-md md:aspect-[4/5]">
-              {/* Purple border (background layer) */}
-              <div className="absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0" />
-
-              {/* Image (foreground layer) */}
-              <img
-                src={assets.whyChooseUs}
-                alt="Business people collaborating"
-                className="relative z-10 w-full h-full object-cover rounded-xl shadow-lg animate-diagonalBounce"
               />
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
               className="bg-gray-700 border-b-2 border-b-white p-2 md:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 h-full"
             >
               <div className="space-y-2 h-full flex flex-col">
-                {/* Icon and Title - Responsive Layout */}
+                {/* Icon and Title */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-2 sm:space-y-0 sm:space-x-4">
                   <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-md border-b-2 border-b-white bg-white flex-shrink-0">
                     {icon}

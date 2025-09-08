@@ -140,14 +140,14 @@ export default function ScrollRevealEffect() {
           )}
 
           {section.text === "Form" ? (
-            <div className="flex flex-col lg:flex-row items-stretch justify-center gap-10 px-6 text-white max-w-7xl mx-auto">
-              {/* Left Side (Intro or Image/Info) */}
-              <div className="flex-1 flex flex-col justify-center bg-white/5 backdrop-blur-md p-10 rounded-2xl shadow-lg">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <div className="flex flex-col xl:flex-row items-stretch justify-center gap-10 px-4 sm:px-6 lg:px-10 text-white max-w-7xl mx-auto w-full">
+              {/* Left Side (Intro) */}
+              <div className="hidden flex-1 min-w-[300px] md:flex flex-col justify-center bg-white/5 backdrop-blur-md p-6 sm:p-10 rounded-2xl shadow-lg">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                   Let’s <span className="text-cyan-400">Talk</span> About Your{" "}
                   <span className="text-cyan-400">Project</span>
                 </h2>
-                <p className="text-lg text-gray-300">
+                <p className="text-base sm:text-lg text-gray-300">
                   Fill out the form and we’ll get back to you as soon as
                   possible. We’d love to hear about your ideas and help bring
                   them to life.
@@ -155,8 +155,8 @@ export default function ScrollRevealEffect() {
               </div>
 
               {/* Right Side (Form) */}
-              <div className="flex-1 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg">
-                <form className="space-y-5">
+              <div className="flex-1 min-w-[300px] bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg">
+                <form className="space-y-5 w-full">
                   {/* Name */}
                   <div>
                     <label className="block mb-2 text-sm font-medium">

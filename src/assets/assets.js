@@ -66,6 +66,13 @@ import blockchainDevelopment from "./blockchainDevelopment.webp";
 import devops from "./devops.jpg";
 import applicationSolution from "./applicationSolution.webp";
 import crmManagement from "./crmManagement.jpg";
+import uiUxDesign from "./uiUxDesign.jpg";
+import websiteDesign from "./websiteDesign.jpg";
+import ecommerceDesign from "./ecommerceDesign.jpg";
+import cms from "./cms.jpg";
+import digitalMarketing from "./digitalMarketing.jpg";
+import seo from "./seo.jpg";
+import cybersecurity from "./cybersecurity.jpg";
 
 export const assets = {
   homeAboutUs1,
@@ -136,6 +143,13 @@ export const assets = {
   devops,
   applicationSolution,
   crmManagement,
+  uiUxDesign,
+  websiteDesign,
+  ecommerceDesign,
+  cms,
+  digitalMarketing,
+  seo,
+  cybersecurity,
 };
 
 export const navItems = [
