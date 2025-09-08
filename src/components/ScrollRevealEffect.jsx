@@ -80,7 +80,7 @@ export default function ScrollRevealEffect() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen shadow-2xl shadow-blue-500"
+      className="relative w-full h-screen overflow-hidden"
     >
       {sections.map((section, i) => (
         <div
@@ -92,6 +92,53 @@ export default function ScrollRevealEffect() {
             ...(section.style || {}),
           }}
         >
+          {/* Gradient Overlays */}
+          {section.bg && (
+            <>
+              <div
+                className="absolute -top-20 left-0 w-full h-40 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, var(--tw-bg-opacity,1) currentColor, transparent)",
+                }}
+              ></div>
+              <div
+                className="absolute -bottom-20 left-0 w-full h-40 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to top, var(--tw-bg-opacity,1) currentColor, transparent)",
+                }}
+              ></div>
+            </>
+          )}
+
+          {section.style?.backgroundImage && (
+            <>
+              <div
+                className="absolute -top-20 left-0 w-full h-40 pointer-events-none"
+                style={{
+                  backgroundImage: section.style.backgroundImage,
+                  backgroundSize: section.style.backgroundSize,
+                  backgroundPosition: section.style.backgroundPosition,
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black, transparent)",
+                  maskImage: "linear-gradient(to bottom, black, transparent)",
+                }}
+              ></div>
+              <div
+                className="absolute -bottom-20 left-0 w-full h-40 pointer-events-none"
+                style={{
+                  backgroundImage: section.style.backgroundImage,
+                  backgroundSize: section.style.backgroundSize,
+                  backgroundPosition: section.style.backgroundPosition,
+                  WebkitMaskImage:
+                    "linear-gradient(to top, black, transparent)",
+                  maskImage: "linear-gradient(to top, black, transparent)",
+                }}
+              ></div>
+            </>
+          )}
+
           {section.text === "Form" ? (
             <div className="flex flex-col lg:flex-row items-stretch justify-center gap-10 px-6 text-white max-w-7xl mx-auto">
               {/* Left Side (Intro or Image/Info) */}

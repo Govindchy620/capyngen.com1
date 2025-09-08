@@ -1,16 +1,15 @@
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
-import Particles from "./Particles";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const HeroSection = () => {
   const containerRef = useRef(null);
+  const [init, setInit] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.25 },
-    },
+    show: { opacity: 1, transition: { staggerChildren: 0.25 } },
   };
 
   const itemVariants = {
@@ -18,48 +17,60 @@ const HeroSection = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
+  // Initialize particles engine
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
+
+  if (!init) return null;
+
   return (
     <div
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] px-4 sm:px-6 md:px-10"
+      className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] px-4 sm:px-6 md:px-10 overflow-hidden"
     >
       {/* Particles Background */}
-      <div className="absolute inset-0 z-0 pointer-events-auto w-full h-full">
-        <Particles
-          particleColors={["#ffffff", "#ffffff"]}
-          particleCount={800}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-      </div>
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#0a0a0a]/30 z-[1] pointer-events-none" />
+      <Particles
+        id="tsparticles"
+        className="absolute inset-0 z-0"
+        options={{
+          background: { color: "#0a0a0a" },
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onHover: { enable: true, mode: "repulse" },
+              onClick: { enable: true, mode: "push" },
+            },
+            modes: {
+              repulse: { distance: 120 },
+              push: { quantity: 4 },
+            },
+          },
+          particles: {
+            number: { value: 120, density: { enable: true, area: 800 } },
+            color: { value: "#ffffff" },
+            links: {
+              enable: true,
+              color: "#ffffff",
+              distance: 150,
+              opacity: 0.4,
+              width: 1,
+            },
+            move: { enable: true, speed: 1 },
+            size: { value: { min: 1, max: 4 } },
+            opacity: { value: 0.6 },
+          },
+        }}
+      />
 
       {/* Content */}
-      <div className="relative z-10 w-full flex flex-col justify-center pointer-events-none max-w-7xl mx-auto mt-10">
-        {/* Heading */}
-        <motion.div
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative"
-        >
-          <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white leading-snug"
-            animate={{
-              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-          >
-            Innovating Today,
-            <br /> Empowering Tomorrow
-          </motion.h1>
-        </motion.div>
+      <div className="relative z-10 w-full flex flex-col justify-center max-w-7xl mx-auto mt-10">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white leading-snug">
+          Innovating Today,
+          <br /> Empowering Tomorrow
+        </h1>
 
         {/* Subtext */}
         <motion.div
