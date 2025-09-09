@@ -143,7 +143,7 @@ const AtAGlance = () => {
 
       <div className="relative z-10" ref={ref}>
         {/* At a Glance Section */}
-        <div className="py-16">
+        <div className="pb-14">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <h2 className="text-white text-5xl md:text-6xl font-bold text-center mb-16">
               At a Glance
@@ -189,7 +189,7 @@ const AtAGlance = () => {
               {centers.map((center, i) => (
                 <div
                   key={i}
-                  className="rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-white text-gray-800 hover:bg-gray-50"
+                  className="rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-white text-gray-800 hover:bg-gray-50 group"
                 >
                   <div className="p-6">
                     <img

@@ -1,9 +1,9 @@
 import React from "react";
 
-// Updated SVG icons to match the image design
+// Updated SVG icons
 const AsiaIcon = () => (
   <svg
-    className="w-16 h-16 mx-auto text-red-500 mb-4"
+    className="w-14 h-14 md:w-16 md:h-16 mx-auto text-red-500 mb-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -16,7 +16,7 @@ const AsiaIcon = () => (
 
 const OceaniaIcon = () => (
   <svg
-    className="w-16 h-16 mx-auto text-red-500 mb-4"
+    className="w-14 h-14 md:w-16 md:h-16 mx-auto text-red-500 mb-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ const OceaniaIcon = () => (
 
 const EuropeIcon = () => (
   <svg
-    className="w-16 h-16 mx-auto text-red-500 mb-4"
+    className="w-14 h-14 md:w-16 md:h-16 mx-auto text-red-500 mb-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ const EuropeIcon = () => (
 
 const NAIcon = () => (
   <svg
-    className="w-16 h-16 mx-auto text-red-500 mb-4"
+    className="w-14 h-14 md:w-16 md:h-16 mx-auto text-red-500 mb-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -78,54 +78,51 @@ const regions = [
 ];
 
 const CustomerCountries = () => (
-  <div className="w-full py-20 bg-white">
-    <div className="max-w-7xl mx-auto px-8 md:px-16">
-      <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
-        {/* Left column - Text Content */}
-        <div className="lg:w-2/4">
-          <h2 className="text-5xl font-semibold text-gray-900 mb-8 leading-tight">
-            500+ customers across 37 countries
+  <div className="w-full py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+    <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-20">
+        {/* Left column */}
+        <div className="lg:w-2/5">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-snug">
+            500+ customers across{" "}
+            <span className="text-red-600">37 countries</span>
           </h2>
-          <p className="text-gray-600 text-xl leading-relaxed">
+          <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
             Direct presence in United States, United Kingdom, Germany,
-            Switzerland,Netherlands, India, Japan, Australia and New Zealand
+            Switzerland, Netherlands, India, Japan, Australia and New Zealand.
           </p>
         </div>
 
-        {/* Right column - Region Cards */}
-        <div className="lg:w-3/5">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {regions.map((region, index) => (
+        {/* Right column */}
+        <div className="lg:w-3/5 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+            {regions.map((region) => (
               <div
                 key={region.title}
-                className="bg-white rounded-md border border-gray-100 p-8 flex flex-col items-center text-center group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl relative"
+                className="relative bg-white rounded-2xl border border-gray-100 p-8 flex flex-col items-center text-center 
+                shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 cursor-pointer"
               >
-                {/* Bottom border accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-500 rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                {/* Decorative gradient border on hover */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-500/40 to-red-600/40 opacity-0 group-hover:opacity-100 transition duration-500 -z-10"></div>
 
-                <div className="transform transition-all duration-300 group-hover:scale-110">
+                <div className="mb-4 transition-transform duration-500 group-hover:scale-110">
                   {region.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-red-600 transition-colors duration-300">
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-4 group-hover:text-red-600 transition-colors duration-300">
                   {region.title}
                 </h3>
 
                 <div className="space-y-2">
                   {region.countries.map((country, i) => (
-                    <div
+                    <p
                       key={i}
-                      className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors duration-300"
+                      className="text-gray-600 text-base md:text-lg group-hover:text-gray-800 transition-colors duration-300"
                     >
                       {country}
-                    </div>
+                    </p>
                   ))}
                 </div>
-
-                {/* Decorative line under last country */}
-                {index < regions.length - 1 && (
-                  <div className="w-16 h-0.5 bg-gray-300 mt-6 group-hover:bg-red-400 transition-colors duration-300"></div>
-                )}
               </div>
             ))}
           </div>

@@ -165,7 +165,7 @@ export default function ScrollRevealEffect() {
                     <input
                       type="text"
                       placeholder="Enter your name"
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
                     />
                   </div>
@@ -178,7 +178,7 @@ export default function ScrollRevealEffect() {
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
                     />
                   </div>
@@ -191,7 +191,7 @@ export default function ScrollRevealEffect() {
                     <input
                       type="tel"
                       placeholder="Enter your phone number"
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     />
                   </div>
 
@@ -203,7 +203,7 @@ export default function ScrollRevealEffect() {
                     <textarea
                       placeholder="Write your message..."
                       rows="3"
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
                     ></textarea>
                   </div>

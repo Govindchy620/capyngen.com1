@@ -23,7 +23,7 @@ const TechnologiesCarousel = ({ title, description, technologies }) => {
   };
 
   return (
-    <section className="bg-black text-white py-16 px-6">
+    <section className="bg-black text-white py-10 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
           {title}

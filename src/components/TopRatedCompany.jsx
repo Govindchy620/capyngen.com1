@@ -17,7 +17,7 @@ export default function TopRatedCompany({
 }) {
   return (
     <div
-      className="bg-black"
+      className="bg-black py-10"
       style={{
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",

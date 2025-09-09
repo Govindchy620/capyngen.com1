@@ -3,81 +3,90 @@ import { assets } from "../assets/assets";
 
 const CareersAbout = () => {
   return (
-    <section className="py-24 bg-black text-white">
-      <div className="">
+    <section className="pt-10 md:py-14 text-white">
+      <div>
         {/* Heading */}
-        <h2 className="text-6xl md:text-7xl font-bold text-center mb-24">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-5 md:mb-24">
           All about Help Scout
         </h2>
 
         {/* Stats Section */}
-        <div className="relative bg-blue-900 py-30 shadow-lg mt-80">
+        <div className="relative bg-gray-900 py-10 md:py-30 shadow-lg mt-5 md:mt-80">
           {/* Top Cards */}
-          <div className="max-w-6xl w-full absolute -top-1/2 left-1/2 transform -translate-x-1/2 grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+          <div
+            className="
+              max-w-6xl w-full 
+              md:absolute md:-top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 
+              grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6
+            "
+          >
             {/* Card 1 */}
-            <div className="bg-[#F6F1EE] shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <div className="pt-10">
+            <div className="bg-[#F6F1EE] shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 rounded-xl">
+              <div className="pt-6 md:pt-10">
                 <div className="flex flex-col px-4">
-                  <h3 className="font-bold text-xl text-black mb-2">
+                  <h3 className="font-bold text-lg md:text-xl text-black mb-2">
                     Explore our product
                   </h3>
-                  <p className="text-md leading-relaxed pb-5 text-black">
+                  <p className="text-sm md:text-md leading-relaxed pb-4 md:pb-5 text-black">
                     Discover our simple-yet-powerful tools
                   </p>
                 </div>
                 <img
                   src={assets.careersAbout1}
                   alt="Explore product"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 md:h-64 object-cover"
                 />
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-[#F6F1EE] shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <div className="pt-10">
+            <div className="bg-[#F6F1EE] shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 rounded-xl">
+              <div className="pt-6 md:pt-10">
                 <div className="flex flex-col px-4">
-                  <h3 className="font-bold text-xl text-black mb-2">
+                  <h3 className="font-bold text-lg md:text-xl text-black mb-2">
                     Explore our product
                   </h3>
-                  <p className="text-md leading-relaxed pb-5 text-black">
+                  <p className="text-sm md:text-md leading-relaxed pb-4 md:pb-5 text-black">
                     Discover our simple-yet-powerful tools
                   </p>
                 </div>
                 <img
                   src={assets.careersAbout2}
                   alt="Explore product"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 md:h-64 object-cover"
                 />
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-[#F6F1EE] shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <div className="pt-10">
+            <div className="bg-[#F6F1EE] shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 rounded-xl">
+              <div className="pt-6 md:pt-10">
                 <div className="flex flex-col px-4">
-                  <h3 className="font-bold text-xl text-black mb-2">
+                  <h3 className="font-bold text-lg md:text-xl text-black mb-2">
                     Explore our product
                   </h3>
-                  <p className="text-md leading-relaxed text-black pb-5">
+                  <p className="text-sm md:text-md leading-relaxed pb-4 md:pb-5 text-black">
                     Discover our simple-yet-powerful tools
                   </p>
                 </div>
                 <img
                   src={assets.careersAbout3}
                   alt="Explore product"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 md:h-64 object-cover"
                 />
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 max-w-6xl mx-auto divide-y md:divide-y-0 md:divide-x divide-gray-300 pt-20">
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 max-w-6xl mx-auto divide-y sm:divide-y-0 sm:divide-x divide-gray-300 pt-16 md:pt-20">
             {/* Stat 1 */}
-            <div className="py-2 px-8 text-left">
-              <div className="flex items-baseline mb-6">
-                <h3 className="text-5xl font-light text-white mr-3">2011</h3>
-                <div className=" rounded-full p-2">
+            <div className="py-6 px-6 md:py-2 md:px-8 text-left">
+              <div className="flex items-baseline mb-4 md:mb-6">
+                <h3 className="text-4xl md:text-5xl font-light text-white mr-3">
+                  2011
+                </h3>
+                <div className="rounded-full p-2">
                   <svg
                     className="w-5 h-5 text-white"
                     fill="none"
@@ -93,17 +102,19 @@ const CareersAbout = () => {
                   </svg>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-white">
+              <p className="text-sm md:text-base leading-relaxed text-white">
                 Founded in 2011, our company powers conversations for over
                 12,000 customers.
               </p>
             </div>
 
             {/* Stat 2 */}
-            <div className="py-2 px-8 text-left">
-              <div className="flex items-baseline mb-6">
-                <h3 className="text-5xl font-light text-white mr-3">140</h3>
-                <div className=" rounded-full p-2">
+            <div className="py-6 px-6 md:py-2 md:px-8 text-left">
+              <div className="flex items-baseline mb-4 md:mb-6">
+                <h3 className="text-4xl md:text-5xl font-light text-white mr-3">
+                  140
+                </h3>
+                <div className="rounded-full p-2">
                   <svg
                     className="w-5 h-5 text-white"
                     fill="none"
@@ -119,17 +130,19 @@ const CareersAbout = () => {
                   </svg>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-white">
+              <p className="text-sm md:text-base leading-relaxed text-white">
                 Our small-but-mighty team is made of 140 folks in over 115
                 cities across the globe.
               </p>
             </div>
 
             {/* Stat 3 */}
-            <div className="py-2 px-8 text-left">
-              <div className="flex items-baseline mb-6">
-                <h3 className="text-5xl font-light text-white mr-3">1,830</h3>
-                <div className=" rounded-full p-2">
+            <div className="py-6 px-6 md:py-2 md:px-8 text-left">
+              <div className="flex items-baseline mb-4 md:mb-6">
+                <h3 className="text-4xl md:text-5xl font-light text-white mr-3">
+                  1,830
+                </h3>
+                <div className="rounded-full p-2">
                   <svg
                     className="w-5 h-5 text-white"
                     fill="none"
@@ -145,17 +158,19 @@ const CareersAbout = () => {
                   </svg>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-white">
+              <p className="text-sm md:text-base leading-relaxed text-white">
                 Custom-designed emoji can be found in our Slack workspace. Guess
                 you could say we've got a knack for Slack.
               </p>
             </div>
 
             {/* Stat 4 */}
-            <div className="py-2 px-8 text-left">
-              <div className="flex items-baseline mb-6">
-                <h3 className="text-5xl font-light text-white mr-3">110</h3>
-                <div className=" rounded-full p-2">
+            <div className="py-6 px-6 md:py-2 md:px-8 text-left">
+              <div className="flex items-baseline mb-4 md:mb-6">
+                <h3 className="text-4xl md:text-5xl font-light text-white mr-3">
+                  110
+                </h3>
+                <div className="rounded-full p-2">
                   <svg
                     className="w-5 h-5 text-white"
                     fill="none"
@@ -171,7 +186,7 @@ const CareersAbout = () => {
                   </svg>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-white">
+              <p className="text-sm md:text-base leading-relaxed text-white">
                 Hours our entire team has spent in the queue during Whole
                 Company Support this year.
               </p>

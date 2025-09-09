@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ServiceCard = ({ image, title, description }) => (
@@ -10,23 +9,33 @@ const ServiceCard = ({ image, title, description }) => (
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: 50 }}
     transition={{ duration: 0.4 }}
-    className="relative h-80 rounded-lg overflow-hidden group mx-auto card-glow"
+    className="relative rounded-lg overflow-hidden group card-glow
+      h-56 sm:h-64 lg:h-72 w-full"
   >
+    {/* Card Image */}
     <img
       src={image}
       alt={title}
-      className="w-full h-full object-cover object-top transition-all duration-600 group-hover:scale-110"
+      className="w-full h-full object-cover object-top 
+                 transition-all duration-500 group-hover:scale-110"
     />
+
+    {/* Desktop/Large: Hover Reveal */}
     <div
       className="
-        absolute bottom-0 left-0 w-full p-6 transition-transform duration-300
-        translate-y-40
-        group-hover:translate-y-0
-        shadow-md
+        hidden sm:block
+        absolute bottom-0 left-0 w-full p-4 transition-transform duration-300
+        translate-y-32 group-hover:translate-y-0 bg-gradient-to-t from-black/80
       "
     >
-      <p className="text-3xl text-white font-semibold">{title}</p>
-      <p className="text-white text-sm mt-2">{description}</p>
+      <p className="text-lg md:text-xl text-white font-semibold">{title}</p>
+      <p className="text-white text-xs mt-1">{description}</p>
+    </div>
+
+    {/* Mobile: Always Show Info */}
+    <div className="sm:hidden absolute bottom-0 left-0 w-full p-3 bg-black/70">
+      <p className="text-base font-semibold">{title}</p>
+      <p className="text-xs mt-1">{description}</p>
     </div>
   </motion.div>
 );
@@ -67,28 +76,30 @@ const OurServices = () => {
 
   const [visibleCount, setVisibleCount] = useState(5);
 
-  const toggleServices = () => {
-    setVisibleCount((prev) => (prev === 5 ? services.length : 5));
-  };
-
   return (
-    <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-black text-white py-10 px-2 sm:px-6 lg:px-8">
       <div className="max-w-[90rem] mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-8xl">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
             Other Services
           </h1>
-          <p className="mt-4 max-w-2xl text-xl mx-auto">
+          <p className="mt-4 max-w-2xl text-sm sm:text-lg md:text-xl mx-auto">
             Comprehensive Website Services to Ignite Your Online Success.
             Empower Your Business with Powerful Online Services from our
             Website.
           </p>
         </div>
 
-        {/* Cards with Animation */}
+        {/* Grid for cards */}
         <motion.div
           layout
-          className="flex flex-wrap flex-col md:flex-row gap-4 justify-center items-center"
+          className="
+            grid gap-2 sm:gap-4
+            grid-flow-col auto-cols-[minmax(140px,1fr)]
+            overflow-x-auto sm:overflow-visible
+            no-scrollbar
+          "
         >
           <AnimatePresence>
             {services.slice(0, visibleCount).map((m, idx) => (

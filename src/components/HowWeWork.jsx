@@ -24,7 +24,7 @@ const steps = [
 
 const HowWeWork = () => {
   return (
-    <section className="bg-black text-white py-12 px-6 md:px-12 lg:px-20">
+    <section className="bg-black text-white py-10 px-6 md:px-12 lg:px-20">
       {/* Heading */}
       <div className="text-center mb-16">
         <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">

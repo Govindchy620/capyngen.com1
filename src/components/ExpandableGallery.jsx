@@ -46,7 +46,7 @@ function ExpandableGallery() {
   }, [panels.length]);
 
   return (
-    <main className="w-screen h-screen bg-black overflow-hidden">
+    <main className="pt-16 md:pt-20 pb-5 md:pb-10 bg-black overflow-hidden">
       <div className="h-full w-full flex items-center justify-center p-4">
         <div className="flex w-full max-w-7xl h-[60vh] gap-3 md:gap-6 items-center justify-center">
           {panels.map((panel, index) => (

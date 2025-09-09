@@ -14,7 +14,7 @@ const FAQSection2 = ({
   };
 
   return (
-    <div className="bg-black text-white py-16 px-4 md:px-10 flex flex-col items-center">
+    <div className="bg-black text-white py-10 pb-16 px-4 md:px-10 flex flex-col items-center">
       <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
         {title}
       </h1>

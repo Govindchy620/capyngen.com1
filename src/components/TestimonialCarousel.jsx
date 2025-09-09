@@ -142,10 +142,10 @@ export default function TestimonialCarousel() {
               className="rounded-lg object-cover w-full h-auto"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-700 to-transparent p-6 pt-12">
-              <p className="text-6xl sm:text-7xl md:text-8xl font-bold mb-2">
+              <p className="text-6xl md:text-7xl xl:text-8xl font-bold mb-2">
                 4.9
               </p>
-              <p className="text-xl sm:text-2xl text-white/80">
+              <p className="text-xl xl:text-2xl text-white/80">
                 Average rating from 100+ trusted client reviews — you’ll love
                 working with us too.
               </p>
@@ -172,7 +172,7 @@ export default function TestimonialCarousel() {
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-2">
-                  <div className="bg-blue-800 rounded-xl p-6 sm:p-10 lg:p-12 relative overflow-hidden flex flex-col justify-between min-h-[450px] sm:min-h-[500px]">
+                  <div className="bg-blue-800 rounded-xl p-6 sm:p-10 xl:p-12 relative overflow-hidden flex flex-col justify-between min-h-[450px] sm:min-h-[500px]">
                     <div className="flex items-center mb-6">
                       <div>
                         <h3 className="text-2xl font-semibold">
@@ -193,7 +193,7 @@ export default function TestimonialCarousel() {
                       />
                     </div>
                     <StarRating rating={testimonial.rating} />
-                    <p className="text-base md:h-44 sm:text-lg lg:text-xl mt-4 text-white/90 flex-grow">
+                    <p className="text-base md:h-44 sm:text-md xl:text-xl mt-4 text-white/90 flex-grow">
                       "{testimonial.quote}"
                     </p>
                     <div className="flex justify-end">

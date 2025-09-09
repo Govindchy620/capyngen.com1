@@ -1,7 +1,5 @@
 import React from "react";
 
-// Updated icons to match the image design
-
 const values = [
   {
     title: "Ethics",
@@ -21,31 +19,31 @@ const values = [
 ];
 
 const OurValues = () => (
-  <div className="w-full py-20 bg-white">
-    <div className="max-w-7xl mx-auto px-8 md:px-16">
+  <section className="w-full py-16 sm:py-14 bg-black text-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16">
       {/* Heading */}
-      <h2 className="text-5xl md:text-6xl font-bold text-center text-gray-900 mb-20">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 sm:mb-16">
         Our Values
       </h2>
 
-      {/* Value Content */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-        {values.map((value, idx) => (
+      {/* Value Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        {values.map((value) => (
           <div
             key={value.title}
-            className="text-center px-6 group cursor-pointer transform transition-all duration-300 hover:scale-105"
+            className="p-6 sm:p-8 rounded-2xl bg-gray-500 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2"
           >
-            <h3 className="text-3xl font-bold mb-6 text-gray-900 group-hover:text-red-600 transition-colors duration-300">
+            <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
               {value.title}
             </h3>
-            <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+            <p className="text-base sm:text-lg leading-relaxed">
               {value.description}
             </p>
           </div>
         ))}
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default OurValues;

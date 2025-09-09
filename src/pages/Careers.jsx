@@ -25,7 +25,7 @@ const Careers = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-black">
       <JoinUs />
       <CareersAbout />
       <CareersFeatures />
