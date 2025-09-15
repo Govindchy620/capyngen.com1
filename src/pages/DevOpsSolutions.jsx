@@ -11,6 +11,17 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import BusinessValueStats from "../components/BusinessValueStats";
+import CardsSection from "../components/CardsSection";
+import {
+  FaLightbulb,
+  FaChartLine,
+  FaCogs,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaTasks,
+} from "react-icons/fa";
+import GetStarted from "../components/GetStarted";
 
 const DevOpsSolutions = () => {
   const faqItems = [
@@ -100,6 +111,100 @@ const DevOpsSolutions = () => {
       desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
     },
   ];
+  const cardsSectionData1 = [
+    {
+      title: "Ideation and Concept",
+      description:
+        "Our team refines your app ideas, ensuring a clear, viable concept that meets market needs.",
+      icon: <FaLightbulb className="text-4xl" />,
+    },
+    {
+      title: "Market Research",
+      description:
+        "We conduct thorough market research to understand trends, competition, and target audience, providing actionable insights to guide the app development process.",
+      icon: <FaChartLine className="text-4xl" />,
+    },
+    {
+      title: "Technology Stack Selection",
+      description:
+        "Our experts advise on the best technologies, frameworks, and tools for app development.",
+      icon: <FaCogs className="text-4xl" />,
+    },
+    {
+      title: "UX/UI Design",
+      description:
+        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Prototyping and MVP",
+      description:
+        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Project Management",
+      description:
+        "We provide project management services, ensuring timely delivery and risk management.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+    {
+      title: "UX/UI Design",
+      description:
+        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Prototyping and MVP",
+      description:
+        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Project Management",
+      description:
+        "We provide project management services, ensuring timely delivery and risk management.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+  ];
+  const cardsSectionData2 = [
+    {
+      title: "Ideation and Concept",
+      description:
+        "Our team refines your app ideas, ensuring a clear, viable concept that meets market needs.",
+      icon: <FaLightbulb className="text-4xl" />,
+    },
+    {
+      title: "Market Research",
+      description:
+        "We conduct thorough market research to understand trends, competition, and target audience, providing actionable insights to guide the app development process.",
+      icon: <FaChartLine className="text-4xl" />,
+    },
+    {
+      title: "Technology Stack Selection",
+      description:
+        "Our experts advise on the best technologies, frameworks, and tools for app development.",
+      icon: <FaCogs className="text-4xl" />,
+    },
+    {
+      title: "UX/UI Design",
+      description:
+        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Prototyping and MVP",
+      description:
+        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Project Management",
+      description:
+        "We provide project management services, ensuring timely delivery and risk management.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+  ];
   const servicesData = [
     {
       title: "Custom Enterprise Web Portals",
@@ -140,6 +245,70 @@ const DevOpsSolutions = () => {
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
+        <BusinessValueStats
+          title="Drive Business Value With The Right Technology Partner"
+          subtitle="Schedule Appointment"
+          ctaText="Speak with an Expert →"
+          stats={[
+            { value: 50, suffix: "%", label: "Faster Deployment" },
+            { value: 99.9, suffix: "%", label: "Uptime Achieved" },
+            {
+              value: 85,
+              suffix: "%",
+              label: "Improvement in Software Quality",
+            },
+            {
+              value: 100,
+              suffix: "+",
+              label: "Successful DevOps Implementations",
+            },
+            { value: 60, suffix: "%", label: "Increase in Team Productivity" },
+          ]}
+          backgroundColor="bg-[#0a1b2e]"
+          textColor="text-white"
+          highlightColor="text-red-500"
+        />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionData2}
+          headColor="text-white"
+          sectionBg="bg-blue-900"
+          cardBg="bg-transparent"
+          hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
+          textColor="text-white"
+          hoverTextColor=""
+        />
+        <GetStarted
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
+          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
+          buttonText="Contact Us"
+          image={assets.getStarted}
+        />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionData1}
+          cardBg="bg-gray-50"
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionData2}
+          headColor="text-black"
+          sectionBg="bg-white"
+          cardBg="bg-transparent"
+          hoverBg="border border-gray-100 hover:border-black hover:scale-105 transition-all"
+          textColor="text-black"
+          hoverTextColor=""
+        />
         <TopRatedCompany
           title="Top-Rated DevOps Solutions Company"
           description={[
@@ -149,13 +318,33 @@ const DevOpsSolutions = () => {
           image={assets.whyChooseUs}
           background={assets.patternBg1}
         />
-
         <BenefitsSection
           heading="DevOps Solutions Solutions We Offer"
           desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
         />
         <HowWeWork />
+        <CardsSection
+          heading="DevOps Services and Solutions Procedure We Follow"
+          subheading="Our DevOps services and solutions procedure ensures a seamless transition to automated, scalable, and secure operations, from assessment and planning to continuous integration, monitoring, and compliance tailored to your business needs."
+          services={cardsSectionData2}
+          headColor="text-white"
+          height="h-80"
+          sectionBg="bg-gray-800"
+          cardBg="bg-gray-700"
+          hoverBg=""
+          textColor="text-white"
+          hoverTextColor=""
+        />
+        <GetStarted
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
+          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
+          buttonText="Contact Us"
+        />
         <WhyChoose />
         <BenefitsSection
           heading="DevOps Solutions Services We Offer"

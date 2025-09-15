@@ -73,6 +73,22 @@ import cms from "./cms.jpg";
 import digitalMarketing from "./digitalMarketing.jpg";
 import seo from "./seo.jpg";
 import cybersecurity from "./cybersecurity.jpg";
+import newsAndUpdates from "./newsAndUpdates.jpg";
+import news1 from "./news1.jpg";
+import news2 from "./news2.jpg";
+import news3 from "./news3.jpg";
+import news4 from "./news4.jpg";
+import careers from "./careers.png";
+import careers1 from "./careers1.jpg";
+import careers2 from "./careers2.jpg";
+import careers3 from "./careers3.jpg";
+import companyOverview from "./companyOverview.jpg";
+import workProcess1 from "./workProcess1.webp";
+import workProcess2 from "./workProcess2.jpg";
+import workProcess3 from "./workProcess3.jpg";
+import workProcess4 from "./workProcess4.jpg";
+import workProcess5 from "./workProcess5.jpg";
+import getStarted from "./getStarted.webp";
 
 export const assets = {
   homeAboutUs1,
@@ -150,6 +166,22 @@ export const assets = {
   digitalMarketing,
   seo,
   cybersecurity,
+  newsAndUpdates,
+  news1,
+  news2,
+  news3,
+  news4,
+  careers,
+  careers1,
+  careers2,
+  careers3,
+  companyOverview,
+  workProcess1,
+  workProcess2,
+  workProcess3,
+  workProcess4,
+  workProcess5,
+  getStarted,
 };
 
 export const navItems = [

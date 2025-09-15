@@ -19,16 +19,16 @@ const FAQSection2 = ({
         {title}
       </h1>
       <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">{desc}</p>
-      <div className="max-w-4xl mx-auto  mt-10">
+      <div className="max-w-6xl mx-auto  mt-10">
         {items.map((item, index) => (
           <div
             key={index}
             onClick={() => toggle(index)}
             className="group py-5 border-b border-gray-700"
           >
-            <div className="w-full flex justify-between items-center text-left font-semibold text-2xl focus:outline-none">
+            <div className="w-full flex justify-between items-center text-left font-semibold text-3xl focus:outline-none">
               <span className="group-hover:text-blue-500">{item.question}</span>
-              <span className="ml-4 text-lg">
+              <span className="ml-4 text-xl">
                 {activeIndex === index ? <FaMinus /> : <FaPlus />}
               </span>
             </div>

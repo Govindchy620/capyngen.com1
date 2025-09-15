@@ -8,8 +8,8 @@ const NewsAndUpdates = () => {
     <div>
       <Banner
         title="News & Updates"
-        overlayBg="bg-black/70"
-        backgroundImage={assets.bg1}
+        overlayBg="bg-black/0"
+        backgroundImage={assets.newsAndUpdates}
         description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
       />
       <ArticleGrid />

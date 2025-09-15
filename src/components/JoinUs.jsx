@@ -25,7 +25,7 @@ const JoinUs = () => {
         {/* Image */}
         <div className="mt-14 relative flex justify-center">
           <img
-            src={assets.joinus}
+            src={assets.careers}
             alt="Join Us"
             className="rounded-xl shadow-lg w-full max-w-7xl object-cover"
           />

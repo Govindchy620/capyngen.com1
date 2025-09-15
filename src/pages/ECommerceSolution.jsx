@@ -11,6 +11,17 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import CardsSectionGrid from "../components/CardsSectionGrid";
+import { ShoppingCart, CreditCard, Smartphone, Store } from "lucide-react";
+import CardsSection from "../components/CardsSection";
+import {
+  FaLightbulb,
+  FaChartLine,
+  FaCogs,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaTasks,
+} from "react-icons/fa";
 
 const ECommerceSolution = () => {
   const faqItems = [
@@ -126,6 +137,80 @@ const ECommerceSolution = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const cardsSectionGridData1 = [
+    {
+      title: "Ecommerce App Development",
+      description:
+        "We create a mobile-friendly app with an ecommerce foundation to provide fantastic on-the-go access to any screen size.",
+      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
+      iconBg: "bg-orange-100",
+    },
+    {
+      title: "Payment Gateway Integration",
+      description:
+        "Increase business accommodations and user association by integrating excellent payment gateway modes into popular ecommerce schemas.",
+      icon: <CreditCard className="w-6 h-6 text-green-500" />,
+      iconBg: "bg-green-100",
+    },
+    {
+      title: "Responsive Shopping Application",
+      description:
+        "We provide you with dynamic potential from data query, analysis, and enterprise reporting to complete check-out analysis.",
+      icon: <Store className="w-6 h-6 text-lime-500" />,
+      iconBg: "bg-lime-100",
+    },
+    {
+      title: "Shopping Cart Development",
+      description:
+        "Our well-tailored shopping cart development services enhance customer engagement and the latest business adaptations.",
+      icon: <ShoppingCart className="w-6 h-6 text-red-500" />,
+      iconBg: "bg-red-100",
+    },
+  ];
+  const cardsSectionDifferentColorData = [
+    {
+      title: "Quality Assurance",
+      description:
+        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
+      icon: <FaLightbulb className="text-4xl" />,
+      cardBg: "bg-red-100",
+    },
+    {
+      title: "Real Time Support",
+      description:
+        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
+      icon: <FaChartLine className="text-4xl" />,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "Cost Effectiveness",
+      description:
+        "We provide affordable and superb quality services that fit your budget.",
+      icon: <FaCogs className="text-4xl" />,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Quality Assurance",
+      description:
+        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
+      icon: <FaLightbulb className="text-4xl" />,
+      cardBg: "bg-gray-100",
+    },
+    {
+      title: "Real Time Support",
+      description:
+        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
+      icon: <FaChartLine className="text-4xl" />,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Cost Effectiveness",
+      description:
+        "We provide affordable and superb quality services that fit your budget.",
+      icon: <FaCogs className="text-4xl" />,
+      cardBg: "bg-green-100",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -148,6 +233,16 @@ const ECommerceSolution = () => {
           ]}
           image={assets.whyChooseUs}
           background={assets.patternBg1}
+          reverse
+        />
+        <CardsSectionGrid
+          heading="Absolute Ecommerce Mobile App Development Solutions"
+          description={[
+            "We are a reliable Ecommerce application developer specializing in developing highly-scalable on-demand ecommerce development services. Our knowledgeable Ecommerce mobile app development Company services are globally renowned for providing avant-garde and reliable mobile app solutions.",
+            "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
+            "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
+          ]}
+          services={cardsSectionGridData1}
         />
 
         <BenefitsSection
@@ -155,8 +250,28 @@ const ECommerceSolution = () => {
           desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
         />
+        <CardsSectionGrid
+          heading="Absolute Ecommerce Mobile App Development Solutions"
+          description={[
+            "We are a reliable Ecommerce application developer specializing in developing highly-scalable on-demand ecommerce development services. Our knowledgeable Ecommerce mobile app development Company services are globally renowned for providing avant-garde and reliable mobile app solutions.",
+            "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
+            "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
+          ]}
+          services={cardsSectionGridData1}
+          reverse={true}
+        />
         <HowWeWork />
         <WhyChoose />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          height="h-76"
+          cardBg="bg-gray-50"
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
         <BenefitsSection
           heading="E-Commerce Solutions Services We Offer"
           desc="Partner with RichestSoft for enterprise-level E-Commerce Solutions services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."

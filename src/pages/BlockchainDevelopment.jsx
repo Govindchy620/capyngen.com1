@@ -11,6 +11,18 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import { ShoppingCart, CreditCard, Smartphone, Store } from "lucide-react";
+import CardsSection from "../components/CardsSection";
+import {
+  FaLightbulb,
+  FaChartLine,
+  FaCogs,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaTasks,
+} from "react-icons/fa";
+import GetStarted from "../components/GetStarted";
+import CardsSectionGrid from "../components/CardsSectionGrid";
 
 const BlockchainDevelopment = () => {
   const faqItems = [
@@ -126,6 +138,80 @@ const BlockchainDevelopment = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const cardsSectionDifferentColorData = [
+    {
+      title: "Quality Assurance",
+      description:
+        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
+      icon: <FaLightbulb className="text-4xl" />,
+      cardBg: "bg-red-100 hover:bg-red-400",
+    },
+    {
+      title: "Real Time Support",
+      description:
+        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
+      icon: <FaChartLine className="text-4xl" />,
+      cardBg: "bg-blue-100 hover:bg-blue-400",
+    },
+    {
+      title: "Cost Effectiveness",
+      description:
+        "We provide affordable and superb quality services that fit your budget.",
+      icon: <FaCogs className="text-4xl" />,
+      cardBg: "bg-purple-100 hover:bg-purple-400",
+    },
+    {
+      title: "Quality Assurance",
+      description:
+        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
+      icon: <FaLightbulb className="text-4xl" />,
+      cardBg: "bg-gray-100 hover:bg-gray-400",
+    },
+    {
+      title: "Real Time Support",
+      description:
+        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
+      icon: <FaChartLine className="text-4xl" />,
+      cardBg: "bg-yellow-100 hover:bg-yellow-400",
+    },
+    {
+      title: "Cost Effectiveness",
+      description:
+        "We provide affordable and superb quality services that fit your budget.",
+      icon: <FaCogs className="text-4xl" />,
+      cardBg: "bg-green-100 hover:bg-green-400",
+    },
+  ];
+  const cardsSectionGridData1 = [
+    {
+      title: "Ecommerce App Development",
+      description:
+        "We create a mobile-friendly app with an ecommerce foundation to provide fantastic on-the-go access to any screen size.",
+      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
+      iconBg: "bg-orange-100",
+    },
+    {
+      title: "Payment Gateway Integration",
+      description:
+        "Increase business accommodations and user association by integrating excellent payment gateway modes into popular ecommerce schemas.",
+      icon: <CreditCard className="w-6 h-6 text-green-500" />,
+      iconBg: "bg-green-100",
+    },
+    {
+      title: "Responsive Shopping Application",
+      description:
+        "We provide you with dynamic potential from data query, analysis, and enterprise reporting to complete check-out analysis.",
+      icon: <Store className="w-6 h-6 text-lime-500" />,
+      iconBg: "bg-lime-100",
+    },
+    {
+      title: "Shopping Cart Development",
+      description:
+        "Our well-tailored shopping cart development services enhance customer engagement and the latest business adaptations.",
+      icon: <ShoppingCart className="w-6 h-6 text-red-500" />,
+      iconBg: "bg-red-100",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -140,6 +226,15 @@ const BlockchainDevelopment = () => {
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          cardBg=""
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
         <TopRatedCompany
           title="Top-Rated Blockchain Development Company"
           description={[
@@ -149,13 +244,44 @@ const BlockchainDevelopment = () => {
           image={assets.whyChooseUs}
           background={assets.patternBg1}
         />
+        <GetStarted
+          reverse={true}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
+          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
+          buttonText="Contact Us"
+          image={assets.getStarted}
+        />
+        <CardsSectionGrid
+          heading="Absolute Ecommerce Mobile App Development Solutions"
+          description={[
+            "We are a reliable Ecommerce application developer specializing in developing highly-scalable on-demand ecommerce development services. Our knowledgeable Ecommerce mobile app development Company services are globally renowned for providing avant-garde and reliable mobile app solutions.",
+            "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
+            "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
+          ]}
+          services={cardsSectionGridData1}
+          reverse
+        />
 
         <BenefitsSection
           heading="Blockchain Development Solutions We Offer"
           desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
+          image={assets.blockchainDevelopment}
         />
         <HowWeWork />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          cardBg=""
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
         <WhyChoose />
         <BenefitsSection
           heading="Blockchain Development Services We Offer"
@@ -163,10 +289,29 @@ const BlockchainDevelopment = () => {
           benefits={servicesData}
           reverse
         />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          cardBg=""
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
         <TechnologiesCarousel
           title="Blockchain Development Technologies We Use"
           description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
           technologies={technologies}
+        />
+        <GetStarted
+          reverse={true}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
+          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
+          buttonText="Contact Us"
         />
         <OurServices />
         <FAQSection2 items={faqItems} />

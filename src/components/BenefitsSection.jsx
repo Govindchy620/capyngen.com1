@@ -2,59 +2,78 @@ import React from "react";
 
 const BenefitsSection = ({
   heading = "Web Development Solutions We Offer",
-  desc = "A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers.",
+  desc = "A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages...",
   benefits = [],
   reverse = false,
+  image = null,
+
+  // 🎨 Dynamic Props
+  cardBg = "bg-gradient-to-br from-zinc-900 to-zinc-800",
+  cardText = "text-white",
+  highlightBg = "bg-gradient-to-br from-pink-500 to-red-400",
+  highlightText = "text-black",
+  hoverScale = "hover:scale-[1.02]",
+  hoverShadow = "hover:shadow-2xl",
+  hoverRingColor = "hover:ring-pink-500/40",
 }) => {
   return (
     <section className="bg-black text-white px-6 md:px-12 py-10">
-      <div
-        className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start`}
-      >
-        {/* LEFT COLUMN (heading & description) */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        {/* LEFT COLUMN */}
         <div
-          className={`md:sticky md:top-24 self-start ${
+          className={`md:sticky md:top-24 self-start flex flex-col gap-6 ${
             reverse ? "md:order-2" : "md:order-1"
           }`}
         >
           <h1 className="text-3xl md:text-6xl font-bold leading-tight">
             {heading}
           </h1>
-          <p className="text-base md:text-lg my-6 text-white max-w-3xl mx-auto lg:mx-0 space-y-4">
+          <p className="text-base md:text-lg text-white max-w-3xl mx-auto lg:mx-0">
             {desc}
           </p>
+
+          {/* Large Image (Optional) */}
+          {image && (
+            <div className="mt-6">
+              <img
+                src={image}
+                alt="Benefits Illustration"
+                className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              />
+            </div>
+          )}
         </div>
 
         {/* RIGHT COLUMN (benefits cards) */}
         <div className={`space-y-12 ${reverse ? "md:order-1" : "md:order-2"}`}>
-          {benefits.map((item, i) => (
-            <div
-              key={i}
-              className={`relative p-10 rounded-2xl shadow-lg min-h-[40vh] flex flex-col justify-center transition-all duration-300 ${
-                item.highlight
-                  ? "bg-gradient-to-br from-pink-500 to-red-400 text-black"
-                  : "bg-gradient-to-br from-zinc-900 to-zinc-800 text-white"
-              } hover:scale-[1.02] hover:shadow-2xl`}
-            >
-              {/* Decorative top accent bar */}
+          {benefits.map((item, i) => {
+            const isHighlight = item.highlight;
+
+            return (
               <div
-                className={`absolute top-0 left-0 w-24 h-1 rounded-tr-full ${
-                  item.highlight ? "bg-black/50" : "bg-pink-500"
-                }`}
-              />
+                key={i}
+                className={`relative p-10 rounded-2xl shadow-lg min-h-[40vh] flex flex-col justify-center transition-all duration-300 
+                  ${isHighlight ? highlightBg : cardBg} 
+                  ${isHighlight ? highlightText : cardText} 
+                  ${hoverScale} ${hoverShadow}`}
+              >
+                {/* Title */}
+                <h3 className="text-3xl font-bold mb-4 leading-snug group-hover:text-pink-400 transition-colors">
+                  {item.title}
+                </h3>
 
-              {/* Title */}
-              <h3 className="text-3xl font-bold mb-4 leading-snug group-hover:text-pink-400 transition-colors">
-                {item.title}
-              </h3>
+                {/* Description */}
+                <p className="text-lg leading-relaxed opacity-90">
+                  {item.desc}
+                </p>
 
-              {/* Description */}
-              <p className="text-lg leading-relaxed opacity-90">{item.desc}</p>
-
-              {/* Subtle hover ring */}
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-transparent hover:ring-pink-500/40 transition-all duration-300 pointer-events-none"></div>
-            </div>
-          ))}
+                {/* Subtle hover ring */}
+                <div
+                  className={`absolute inset-0 rounded-2xl ring-1 ring-transparent ${hoverRingColor} transition-all duration-300 pointer-events-none`}
+                ></div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

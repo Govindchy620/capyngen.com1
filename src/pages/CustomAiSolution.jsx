@@ -1,5 +1,4 @@
 import React from "react";
-import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
 import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
@@ -10,7 +9,18 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
+import Banner from "../components/Banner";
+import CardsSection from "../components/CardsSection";
+import {
+  FaLightbulb,
+  FaChartLine,
+  FaCogs,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaTasks,
+} from "react-icons/fa";
+import CardsSectionImage from "../components/CardsSectionImage";
+import CardsSectionSlider from "../components/CardsSectionSlider";
 
 const CustomAiSolution = () => {
   const faqItems = [
@@ -126,13 +136,206 @@ const CustomAiSolution = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const cardsSectionData1 = [
+    {
+      title: "Ideation and Concept",
+      description:
+        "Our team refines your app ideas, ensuring a clear, viable concept that meets market needs.",
+      icon: <FaLightbulb className="text-4xl" />,
+    },
+    {
+      title: "Market Research",
+      description:
+        "We conduct thorough market research to understand trends, competition, and target audience, providing actionable insights to guide the app development process.",
+      icon: <FaChartLine className="text-4xl" />,
+    },
+    {
+      title: "Technology Stack Selection",
+      description:
+        "Our experts advise on the best technologies, frameworks, and tools for app development.",
+      icon: <FaCogs className="text-4xl" />,
+    },
+    {
+      title: "UX/UI Design",
+      description:
+        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Prototyping and MVP",
+      description:
+        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Project Management",
+      description:
+        "We provide project management services, ensuring timely delivery and risk management.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+    {
+      title: "UX/UI Design",
+      description:
+        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Prototyping and MVP",
+      description:
+        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Project Management",
+      description:
+        "We provide project management services, ensuring timely delivery and risk management.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+  ];
+  const cardsSectionImageData1 = [
+    {
+      title: "AI Integration In Software",
+      description:
+        "Richestsoft develops software with AI-integrated services that are equipped with NLP, machine learning, speech recognition, data collection, etc., from deep learning to generative AI implementation our dedicated AI developers deliver the best in the industry.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "AI Integration In Applications",
+      description:
+        "Get high-end AI integration for detailed user analysis and customized services.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "AI Integration in CRM",
+      description:
+        "Enhance customer understanding with predictive analysis and actionable insights.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "AI Integration In Software",
+      description:
+        "Richestsoft develops software with AI-integrated services that are equipped with NLP, machine learning, speech recognition, data collection, etc., from deep learning to generative AI implementation our dedicated AI developers deliver the best in the industry.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "AI Integration In Applications",
+      description:
+        "Get high-end AI integration for detailed user analysis and customized services.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "AI Integration in CRM",
+      description:
+        "Enhance customer understanding with predictive analysis and actionable insights.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+  ];
+  const cardsSectionImageData2 = [
+    {
+      title: "AI Integration In Software",
+      description:
+        "Richestsoft develops software with AI-integrated services that are equipped with NLP, machine learning, speech recognition, data collection, etc., from deep learning to generative AI implementation our dedicated AI developers deliver the best in the industry.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "AI Integration In Applications",
+      description:
+        "Get high-end AI integration for detailed user analysis and customized services.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "AI Integration in CRM",
+      description:
+        "Enhance customer understanding with predictive analysis and actionable insights.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+  ];
+  const cardsSectionSliderData1 = [
+    {
+      title: "Forex",
+      desc: "Trade 70+ major, minor and exotic currency pairs.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Shares",
+      desc: "Trade stocks of the most popular listed companies in the world.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Metals",
+      desc: "Trade Gold, Silver, Platinum and other metals.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Commodities",
+      desc: "Trade commodities such as Oil, Gas, Corn and Sugar.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+  ];
+  const cardsSectionDifferentColorData = [
+    {
+      title: "Quality Assurance",
+      description:
+        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
+      icon: <FaLightbulb className="text-4xl" />,
+      cardBg: "bg-red-100",
+    },
+    {
+      title: "Real Time Support",
+      description:
+        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
+      icon: <FaChartLine className="text-4xl" />,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "Cost Effectiveness",
+      description:
+        "We provide affordable and superb quality services that fit your budget.",
+      icon: <FaCogs className="text-4xl" />,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Quality Assurance",
+      description:
+        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
+      icon: <FaLightbulb className="text-4xl" />,
+      cardBg: "bg-gray-100",
+    },
+    {
+      title: "Real Time Support",
+      description:
+        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
+      icon: <FaChartLine className="text-4xl" />,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Cost Effectiveness",
+      description:
+        "We provide affordable and superb quality services that fit your budget.",
+      icon: <FaCogs className="text-4xl" />,
+      cardBg: "bg-green-100",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
       <div className="sticky inset-0">
         <Banner
-          title="Custom AI Solution"
+          title="Custom AI Solutions"
           overlayBg="bg-black/60"
           backgroundImage={assets.customAiSolution}
           description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
@@ -140,6 +343,18 @@ const CustomAiSolution = () => {
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionData1}
+          cardBg="bg-transparent"
+          hoverBg=" hover:bg-blue-50"
+          textColor="text-gray-800"
+          hoverTextColor=""
+          textSize="text-xl"
+          height="h-78"
+        />
+
         <TopRatedCompany
           title="Top-Rated Custom AI Solution Company"
           description={[
@@ -149,19 +364,85 @@ const CustomAiSolution = () => {
           image={assets.whyChooseUs}
           background={assets.patternBg1}
         />
+        <CardsSectionImage
+          heading="AI Integration Services"
+          subheading="We help businesses harness AI in software, apps, and CRM solutions."
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-50"
+          cardBg=""
+          hoverBg="hover:bg-gray-200"
+        />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionData1}
+          sectionBg="bg-black"
+          cardBg="bg-transparent"
+          headColor="text-white"
+          hoverBg=" hover:bg-gray-400"
+          textColor="text-white"
+          hoverTextColor=""
+          textSize="text-xl"
+          height="h-78"
+        />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionData1}
+          sectionBg="bg-blue-100"
+          cardBg="bg-transparent"
+          headColor="text-black"
+          hoverBg=" hover:bg-blue-200"
+          textColor="text-black"
+          hoverTextColor=""
+          textSize="text-xl"
+          height="h-78"
+        />
 
         <BenefitsSection
           heading="Custom AI Solution Solutions We Offer"
           desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
         />
+        <CardsSectionSlider
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          cardBg="bg-transparent"
+          hoverBg=" hover:bg-blue-50"
+          textColor="text-gray-800"
+          hoverTextColor=""
+          textSize="text-xl"
+          height="h-78"
+          services={cardsSectionSliderData1}
+        />
         <HowWeWork />
         <WhyChoose />
+        <CardsSectionImage
+          heading="AI Integration Services"
+          subheading="We help businesses harness AI in software, apps, and CRM solutions."
+          services={cardsSectionImageData2}
+          sectionBg="bg-gray-50"
+          cardBg=""
+          hoverBg="hover:bg-gray-200"
+        />
         <BenefitsSection
           heading="Custom AI Solution Services We Offer"
           desc="Partner with RichestSoft for enterprise-level Custom AI Solution services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
           benefits={servicesData}
           reverse
+        />
+        <CardsSection
+          heading="Why Choose RichestSoft As Your AI Development Company"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          sectionBg="bg-gray-100"
+          cardBg=""
+          headColor="text-black"
+          hoverBg=" hover:bg-gray-400"
+          textColor="text-black"
+          hoverTextColor=""
+          textSize="text-xl"
+          height="h-78"
         />
         <TechnologiesCarousel
           title="Custom AI Solution Technologies We Use"

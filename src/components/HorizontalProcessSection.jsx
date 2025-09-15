@@ -19,116 +19,35 @@ const HorizontalProcessSection = () => {
       title: "Discovery & Consultation",
       description:
         "We start by getting to know your company, your audience, and your objectives. This helps us create a solid foundation for unique digital and IT solutions.",
-      color: "bg-gradient-to-br from-blue-400 to-blue-600",
-      icon: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-          />
-        </svg>
-      ),
+      image: assets.workProcess1, // <-- new image
     },
     {
       id: 2,
       title: "Planning and Strategy",
       description:
         "Our professionals come up with sensible, data-driven strategies that leverage new ideas and technology to make sure that we can expand and stay ahead of the competition in the long run.",
-      color: "bg-gradient-to-br from-purple-400 to-purple-600",
-      icon: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-          />
-        </svg>
-      ),
+      image: assets.workProcess2,
     },
     {
       id: 3,
       title: "Design & Development",
       description:
         "We make contemporary, easy-to-use, and intuitive solutions, and we also construct powerful IT frameworks that operate well on all platforms.",
-      color: "bg-gradient-to-br from-green-400 to-green-600",
-      icon: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
+      image: assets.workProcess3,
     },
     {
       id: 4,
       title: "Testing & Optimization",
       description:
         "Before going live, every solution is put through a lot of testing and optimization to make sure it is secure, scalable, and dependable.",
-      color: "bg-gradient-to-br from-orange-400 to-orange-600",
-      icon: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg>
-      ),
+      image: assets.workProcess4,
     },
     {
       id: 5,
       title: "Launch & Maintenance",
       description:
         "We ensure your project goes online smoothly and stays updated with maintenance and enhancements, keeping your firm future-ready and competitive.",
-      color: "bg-gradient-to-br from-orange-400 to-orange-600",
-      icon: (
-        <svg
-          className="w-10 h-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg>
-      ),
+      image: assets.workProcess5,
     },
   ];
 
@@ -275,18 +194,12 @@ const HorizontalProcessSection = () => {
                     </div>
 
                     <div className="mb-8">
-                      <div
-                        className={`w-full h-56 ${step.color} rounded-t-2xl flex items-center justify-center text-white`}
-                      >
-                        <div className="text-center p-6 relative z-10">
-                          <div className="mb-3">{step.icon}</div>
-                          <div className="text-base opacity-90 font-semibold">
-                            Replace with Image
-                          </div>
-                          <div className="text-sm opacity-70 mt-2">
-                            Recommended: 400x240px
-                          </div>
-                        </div>
+                      <div className="w-full h-56 rounded-t-2xl overflow-hidden">
+                        <img
+                          src={step.image}
+                          alt={step.title}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </div>
 

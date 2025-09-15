@@ -7,7 +7,7 @@ const CareersAbout = () => {
       <div>
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-5 md:mb-24">
-          All about Help Scout
+          All about Capyngen
         </h2>
 
         {/* Stats Section */}
@@ -32,7 +32,7 @@ const CareersAbout = () => {
                   </p>
                 </div>
                 <img
-                  src={assets.careersAbout1}
+                  src={assets.careers1}
                   alt="Explore product"
                   className="w-full h-48 md:h-64 object-cover"
                 />
@@ -51,7 +51,7 @@ const CareersAbout = () => {
                   </p>
                 </div>
                 <img
-                  src={assets.careersAbout2}
+                  src={assets.careers2}
                   alt="Explore product"
                   className="w-full h-48 md:h-64 object-cover"
                 />
@@ -70,7 +70,7 @@ const CareersAbout = () => {
                   </p>
                 </div>
                 <img
-                  src={assets.careersAbout3}
+                  src={assets.careers3}
                   alt="Explore product"
                   className="w-full h-48 md:h-64 object-cover"
                 />

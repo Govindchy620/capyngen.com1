@@ -2,6 +2,10 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "./styles/animations.css";
 
+button {
+  cursor: pointer;
+}
+
 .text-outline-only {
   color: transparent;
   -webkit-text-stroke: 2.5px white;

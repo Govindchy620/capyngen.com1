@@ -30,7 +30,7 @@ const CompanyOverview = () => {
       <Banner
         title="Company Overview"
         overlayBg="bg-black/70"
-        backgroundImage={assets.bg1}
+        backgroundImage={assets.companyOverview}
         description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
       />
       <AboutSection />

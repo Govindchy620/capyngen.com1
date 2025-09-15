@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Smartphone, DollarSign, Handshake, ArrowRight } from "lucide-react"; // Import Lucide icons
+import { ArrowRight } from "lucide-react"; // keep only what you use
 import { NavLink } from "react-router-dom";
 
 const FlipCards = ({ cards }) => {
@@ -18,22 +18,29 @@ const FlipCards = ({ cards }) => {
 
             {/* Flipping card */}
             <div className="relative w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d group-hover:rotate-y-180">
-              {/* Front Side */}
+              {/* Front Side with full image */}
               <div
-                className={`absolute inset-0 w-full h-full backface-hidden p-6 border-2 border-white flex flex-col justify-between bg-gradient-to-br ${card.front.gradient} ${card.front.textColor}`}
+                className={`absolute inset-0 w-full h-full backface-hidden border-2 border-white overflow-hidden`}
               >
-                <div className="flex flex-col items-start h-full">
-                  {card.front.icon && (
-                    <div className="mb-4">{card.front.icon}</div>
-                  )}
-                  <div className="flex-grow flex flex-col justify-end">
-                    <h3 className="text-xl font-bold tracking-wide leading-tight mb-4">
-                      {card.front.title}
-                    </h3>
+                {/* Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${card.front.image})`,
+                  }}
+                ></div>
+
+                {/* Overlay (optional for readability) */}
+                <div className="absolute inset-0 bg-black/40"></div>
+
+                {/* Title & Arrow */}
+                <div className="relative z-10 flex flex-col justify-between h-full p-6 text-white">
+                  <h3 className="text-xl font-bold tracking-wide leading-tight">
+                    {card.front.title}
+                  </h3>
+                  <div className="flex justify-end items-end">
+                    <ArrowRight className="w-6 h-6" />
                   </div>
-                </div>
-                <div className="flex justify-end items-end">
-                  <ArrowRight className="w-6 h-6" />
                 </div>
               </div>
 

@@ -8,9 +8,8 @@ const articles = [
       "ChatGPT-5: Everything You Need to Know About the Next Generation of AI",
     summary:
       "From 80% lower error rates and smarter integrations to longer memory and deeper reasoning, ChatGPT-5 sets a new standard in AI performance. Discover its key features, benchmarks, and business impact.",
-    image: assets.blog1,
+    image: assets.news1,
     category: "Artificial Intelligence",
-    readTime: "5 min read",
   },
   {
     date: "22/08/2025",
@@ -18,9 +17,8 @@ const articles = [
       "Monolith to Microservices Migration: Turning Architectural Liabilities into Competitive Strengths",
     summary:
       "Learn how to successfully transition from monolithic architecture to microservices and transform your system's scalability, maintainability, and team productivity.",
-    image: assets.blog2,
+    image: assets.news2,
     category: "Software Architecture",
-    readTime: "8 min read",
   },
   {
     date: "18/08/2025",
@@ -28,18 +26,16 @@ const articles = [
       "The Future of Web Development: Trends and Technologies Shaping 2025",
     summary:
       "Explore the latest trends in web development including AI-powered development tools, serverless architecture, and progressive web applications that are defining the industry.",
-    image: assets.blog3,
+    image: assets.news3,
     category: "Web Development",
-    readTime: "6 min read",
   },
   {
     date: "15/08/2025",
     title: "Cybersecurity Best Practices for Modern Applications",
     summary:
       "Essential security measures every development team should implement to protect applications from emerging threats and vulnerabilities in today's digital landscape.",
-    image: assets.blog4,
+    image: assets.news4,
     category: "Cybersecurity",
-    readTime: "7 min read",
   },
 ];
 
@@ -60,13 +56,6 @@ const ArticleCard = ({ article }) => (
       <div className="absolute top-4 left-4">
         <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-lg backdrop-blur-sm">
           {article.category}
-        </span>
-      </div>
-
-      {/* Read Time Badge */}
-      <div className="absolute top-4 right-4">
-        <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-medium shadow-md">
-          {article.readTime}
         </span>
       </div>
     </div>
@@ -119,7 +108,6 @@ const ArticleCard = ({ article }) => (
         <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold">
           {article.category}
         </span>
-        <span className="text-white/80 text-xs">{article.readTime}</span>
       </div>
 
       {/* Animated Title */}
@@ -149,23 +137,6 @@ const ArticleCard = ({ article }) => (
           />
         </svg>
       </button>
-
-      {/* Decorative Element */}
-      <div className="absolute top-6 right-6 w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-500">
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 1v16a1 1 0 001 1h8a1 1 0 001-1V5H7z"
-          />
-        </svg>
-      </div>
     </div>
   </div>
 );
@@ -175,11 +146,6 @@ export default function ArticleGrid() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <div className="inline-block mb-4">
-          <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-semibold text-sm tracking-wider uppercase">
-            Latest Insights
-          </span>
-        </div>
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
           Stay Updated with Our
           <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
