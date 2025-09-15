@@ -126,6 +126,44 @@ const WebDevelopment = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const steps = [
+    {
+      step: "Step 01",
+      title: "UI Strategy",
+      description:
+        "Design intuitive and high-performance user interfaces for iOS and Android platforms, enhancing usability and engagement.",
+    },
+    {
+      step: "Step 02",
+      title: "Requirement Analysis",
+      description:
+        "Thoroughly gather and analyze client requirements to create a precise and actionable development roadmap.",
+    },
+    {
+      step: "Step 03",
+      title: "Wireframing",
+      description:
+        "Develop detailed wireframes and mockups that visualize app structure, flow, and functionality before development.",
+    },
+    {
+      step: "Step 04",
+      title: "Development",
+      description:
+        "Implement the application using state-of-the-art tools and frameworks, adhering to industry best practices and quality standards.",
+    },
+    {
+      step: "Step 05",
+      title: "Testing & QA",
+      description:
+        "Perform comprehensive testing to ensure flawless performance, security, and reliability across all devices.",
+    },
+    {
+      step: "Step 06",
+      title: "Handover & Deployment",
+      description:
+        "Deliver the fully tested app with seamless deployment, ready for launch and end-user adoption.",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -155,7 +193,11 @@ const WebDevelopment = () => {
           desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
         />
-        <HowWeWork />
+        <HowWeWork
+          heading="Mobile App Development Process"
+          desc="We follow a rigorous, high-standard development methodology to deliver robust, error-free, and high-performance mobile applications. Our team ensures each stage is meticulously executed for maximum efficiency and business impact."
+          steps={steps}
+        />
         <WhyChoose />
         <BenefitsSection
           heading="Web Development Services We Offer"
