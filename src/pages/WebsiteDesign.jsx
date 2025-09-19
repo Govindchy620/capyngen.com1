@@ -11,6 +11,7 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import { HeroParallax } from "../components/HeroParallax";
 
 const WebSiteDesign = () => {
   const faqItems = [
@@ -164,18 +165,106 @@ const WebSiteDesign = () => {
         "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
     },
   ];
+  const products = [
+    {
+      title: "Moonbeam",
+      link: "https://gomoonbeam.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    },
+    {
+      title: "Cursor",
+      link: "https://cursor.so",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    },
+    {
+      title: "Rogue",
+      link: "https://userogue.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    },
+
+    {
+      title: "Editorially",
+      link: "https://editorially.org",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    },
+    {
+      title: "Editrix AI",
+      link: "https://editrix.ai",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    },
+    {
+      title: "Pixel Perfect",
+      link: "https://app.pixelperfect.quest",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    },
+
+    {
+      title: "Algochurn",
+      link: "https://algochurn.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    },
+    {
+      title: "Aceternity UI",
+      link: "https://ui.aceternity.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    },
+    {
+      title: "Tailwind Master Kit",
+      link: "https://tailwindmasterkit.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    },
+    {
+      title: "SmartBridge",
+      link: "https://smartbridgetech.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    },
+    {
+      title: "Renderwork Studio",
+      link: "https://renderwork.studio",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    },
+
+    {
+      title: "Creme Digital",
+      link: "https://cremedigital.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    },
+    {
+      title: "Golden Bells Academy",
+      link: "https://goldenbellsacademy.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    },
+    {
+      title: "Invoker Labs",
+      link: "https://invoker.lol",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    },
+    {
+      title: "E Free Invoice",
+      link: "https://efreeinvoice.com",
+      thumbnail:
+        "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
-        <Banner
-          title="Website Design"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.websiteDesign}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
-        />
-      </div>
+      <HeroParallax products={products} />
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <TopRatedCompany

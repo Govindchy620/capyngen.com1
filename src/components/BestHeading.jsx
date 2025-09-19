@@ -17,7 +17,7 @@ export default function BestHeading({
         text={highlight}
         typingSpeed={80}
         startOnVisible={true}
-        showCursor={true}
+        showCursor={false}
         className="text-5xl font-extrabold"
       />
     </div>
