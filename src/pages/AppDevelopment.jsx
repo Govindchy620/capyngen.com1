@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import TechStack from "../components/TechStack";
+import AppDevHero from "../components/AppDevHero";
 
 const AppDevelopment = () => {
   const faqItems = [
@@ -461,17 +462,26 @@ const AppDevelopment = () => {
         "Deliver the fully tested app with seamless deployment, ready for launch and end-user adoption.",
     },
   ];
+  const slides = [
+    {
+      image: assets.appDevelopment,
+      title: "Building Scalable & Secure Apps",
+      description:
+        "We design, develop, and launch apps that fuel business growth with innovation and reliability.",
+    },
+    {
+      image: assets.appDevelopment,
+      title: "Your Vision, Our Expertise",
+      description:
+        "From idea to launch, our app development solutions are tailored to your business needs.",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
       <div className="sticky inset-0">
-        <Banner
-          title="App Development"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.appDevelopment}
-          description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
-        />
+        <AppDevHero slides={slides} />;
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
