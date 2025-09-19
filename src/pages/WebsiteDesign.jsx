@@ -126,6 +126,44 @@ const WebSiteDesign = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const steps = [
+    {
+      step: "Step 01",
+      title: "Discovery & Strategic Planning",
+      description:
+        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
+    },
+    {
+      step: "Step 02",
+      title: "Custom Design & Prototyping",
+      description:
+        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
+    },
+    {
+      step: "Step 03",
+      title: "Front-End Development",
+      description:
+        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
+    },
+    {
+      step: "Step 04",
+      title: "Back-End Development",
+      description:
+        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
+    },
+    {
+      step: "Step 05",
+      title: "Quality Assurance & Testing",
+      description:
+        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
+    },
+    {
+      step: "Step 06",
+      title: "Deployment & Ongoing Maintenance",
+      description:
+        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -155,7 +193,11 @@ const WebSiteDesign = () => {
           desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
         />
-        <HowWeWork />
+        <HowWeWork
+          heading="Comprehensive Web Development Process"
+          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
+          steps={steps}
+        />
         <WhyChoose />
         <BenefitsSection
           heading="Website Design Services We Offer"

@@ -24,8 +24,8 @@ import {
 import IndustryServices from "../components/IndustryServices";
 import TypesWeDevelop from "../components/TypesWeDevelop";
 import { assets } from "../assets/assets";
-import CompanyServices from "../../../New/CompanyServices";
-import CTASection from "../../../New/CTASection";
+// import CompanyServices from "../../../New/CompanyServices";
+// import CTASection from "../../../New/CTASection";
 
 const Industries = () => {
   const servicesData = [
@@ -140,8 +140,8 @@ const Industries = () => {
       <CreativeAgencyFAQ />
       <StartupAgency />
       <SeoAgency />
-      <CompanyServices />
-      <CTASection />
+      {/* <CompanyServices />
+      <CTASection /> */}
     </div>
   );
 };
