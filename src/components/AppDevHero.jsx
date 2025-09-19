@@ -1,93 +1,69 @@
-"use client";
+import { motion } from "framer-motion";
+import { assets } from "../assets/assets";
+import { Smartphone } from "lucide-react";
 
-import { useRef, useState } from "react";
-import Slider from "react-slick";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import BestHeading2 from "./BestHeading2";
+const floatingIcons = [
+  { icon: "📱", top: "15%", left: "5%" },
+  { icon: "🚀", top: "20%", right: "5%" },
+  { icon: "💡", bottom: "15%", left: "10%" },
+  { icon: "🔒", bottom: "20%", right: "10%" },
+];
 
-const AppDevHero = ({ slides }) => {
-  const sliderRef = useRef(null);
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const next = () => sliderRef.current.slickNext();
-  const previous = () => sliderRef.current.slickPrev();
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: false,
-    arrows: false,
-    beforeChange: (_, newIndex) => setActiveSlide(newIndex),
-  };
-
+const AppDevHero = () => {
   return (
-    <div className="relative overflow-hidden">
-      <Slider ref={sliderRef} {...settings}>
-        {slides.map((slide, index) => (
-          <div key={index}>
-            <div className="relative w-full h-[100vh] max-h-[100vh] overflow-hidden">
-              {/* Desktop Image */}
-              <div className="hidden sm:block w-full h-full">
-                <img
-                  src={slide.image || "/placeholder.svg"}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden bg-gradient-to-b from-indigo-900 via-purple-900 to-black text-white">
+      {/* Floating Emoji Icons */}
+      {floatingIcons.map((item, i) => (
+        <motion.div
+          key={i}
+          className="absolute text-4xl opacity-40 select-none pointer-events-none"
+          style={{ ...item }}
+          animate={{ y: [0, -20, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 6 + i,
+            ease: "easeInOut",
+          }}
+        >
+          {item.icon}
+        </motion.div>
+      ))}
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 sm:bg-black/40 md:bg-black/80"></div>
-
-              {/* Content */}
-              <div className="absolute inset-0 flex mt-28 md:mt-0 md:items-center justify-center text-white px-6">
-                <div className="max-w-5xl text-center">
-                  <h2 className="text-8xl font-bold">{slide.title}</h2>
-                  <p className="text-base sm:text-lg md:text-xl leading-relaxed mt-6 sm:mt-8 md:mt-10 px-2">
-                    {slide.description}
-                  </p>
-                  {slide.buttonText && (
-                    <button className="mt-6 sm:mt-8 bg-[#00bafa] hover:bg-[#0096c9] text-white px-6 py-3 rounded-full text-sm md:text-base transition-all">
-                      {slide.buttonText}
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-
-      {/* Arrows */}
-      <button
-        onClick={previous}
-        className="absolute hidden md:block left-4 top-1/2 -translate-y-1/2 p-2 text-white hover:bg-black/50 rounded-full transition-all z-10"
+      {/* Glass Card for Title & Subtitle */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 mt-16 max-w-3xl w-full px-6 py-8 rounded-3xl 
+                   bg-white/10 backdrop-blur-md border border-white/20 shadow-xl text-center"
       >
-        <ChevronLeft size={24} />
-      </button>
-      <button
-        onClick={next}
-        className="absolute hidden md:block right-4 top-1/2 -translate-y-1/2 p-2 text-white hover:bg-black/50 rounded-full transition-all z-10"
-      >
-        <ChevronRight size={24} />
-      </button>
+        <h1 className="text-4xl md:text-6xl font-extrabold flex items-center justify-center gap-3">
+          <Smartphone className="text-pink-400 w-10 h-10" /> App Development
+        </h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-200">
+          We build powerful, scalable, and user-friendly mobile applications
+          that transform your ideas into reality.
+        </p>
+      </motion.div>
 
-      {/* Dots */}
-      <div className="absolute bottom-6 sm:bottom-8 md:bottom-16 w-full flex justify-center space-x-2 z-10">
-        {slides.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => sliderRef.current.slickGoTo(index)}
-            className={`h-[2px] sm:h-[3px] w-6 sm:w-8 md:w-10 cursor-pointer rounded-2xl transition-all duration-300 ${
-              index === activeSlide ? "bg-white" : "bg-white/40"
-            }`}
-          ></div>
-        ))}
-      </div>
-    </div>
+      {/* Center Phone Mockup */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
+        className="mt-12 relative z-10"
+      >
+        <motion.img
+          src={assets.appDevelopment}
+          alt="App Development"
+          className="w-[320px] md:w-[480px] rounded-3xl shadow-2xl border border-gray-700"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+        />
+        {/* Glowing ring behind the phone */}
+        <div className="absolute -inset-10 bg-pink-500/20 blur-3xl rounded-full animate-pulse"></div>
+      </motion.div>
+    </section>
   );
 };
 

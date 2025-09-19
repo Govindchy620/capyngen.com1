@@ -10,21 +10,7 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import GetStarted from "../components/GetStarted";
-import {
-  FaLightbulb,
-  FaChartLine,
-  FaCogs,
-  FaLaptopCode,
-  FaProjectDiagram,
-  FaTasks,
-} from "react-icons/fa";
 import { LifeBuoy, Sparkles } from "lucide-react";
-import CardsSection from "../components/CardsSection";
-import WebDevBanner from "../components/WebDevBanner";
-import Banner2 from "../components/Banner2";
-import TechStack from "../components/TechStack";
-import BannerRollingGallery from "../components/BannerRollingGallery";
 
 const WebDevelopment = () => {
   const faqItems = [
@@ -43,247 +29,75 @@ const WebDevelopment = () => {
       answer: "No, PrimeForex Markets charges no fees for depositing funds.",
     },
   ];
-  const techStack = [
-    {
-      title: "Frontend",
-      items: [
-        {
-          name: "React",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        },
-        {
-          name: "Angular",
-          icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
-        },
-        {
-          name: "Next.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
-        },
-        {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
-        },
-        {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
-        },
-      ],
-    },
-    {
-      title: "Backend",
-      items: [
-        {
-          name: "Node.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
-        },
-        {
-          name: "Python",
-          icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
-        },
-        {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-        },
-        {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-        },
-      ],
-    },
-    {
-      title: "Platforms",
-      items: [
-        {
-          name: "iOS",
-          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
-        },
-        {
-          name: "Android",
-          icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
-        },
-        {
-          name: "React Native",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-      ],
-    },
-    {
-      title: "Database",
-      items: [
-        {
-          name: "MongoDB",
-          icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
-        },
-        {
-          name: "MySQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
-        },
-        {
-          name: "PostgreSQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
-        },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Oracle",
-          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
-        },
-      ],
-    },
-    {
-      title: "UI/UX",
-      items: [
-        {
-          name: "Adobe XD",
-          icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
-        },
-        {
-          name: "Sketch",
-          icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "InVision",
-          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
-        },
-      ],
-    },
+  const technologies = [
+    { name: "JavaScript", logo: assets.js },
+    { name: "Python", logo: assets.python },
+    { name: "CSS3", logo: assets.css3 },
+    { name: "C++", logo: assets.cplusplus },
+    { name: "PHP", logo: assets.php },
+    { name: "React", logo: assets.react },
+    { name: "Vue.js", logo: assets.vuejs },
+    { name: "AngularJS", logo: assets.angular },
+    { name: "JQuery", logo: assets.jquery },
+    { name: "Next.js", logo: assets.nextjs },
+    { name: "MongoDB", logo: assets.mongodb },
+    { name: "MySQL", logo: assets.mysql },
+    { name: "PostgreSQL", logo: assets.postgresql },
+    { name: "Node.js", logo: assets.nodejs },
+    { name: "Laravel", logo: assets.laravel },
+    { name: "Express.js", logo: assets.expressjs },
+    { name: "Azure", logo: assets.azure },
+    { name: "AWS", logo: assets.aws },
+    { name: "Google Cloud", logo: assets.googlecloud },
   ];
   const solutionsData = [
     {
-      title: "Casino Game Web Apps",
-      desc: "Create exciting casino game websites with safe payment options, live gaming experiences, and user-friendly interfaces that keep gamers coming back for more.",
+      title: "Casino Game Web App",
+      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
     },
     {
-      title: "AI-Powered Web Apps (like CandyAI)",
-      desc: "Capyngen makes high-end and easy-to-use web apps like Candy AI and other AR VR dating apps. They do this by leveraging advanced AI algorithms and trustworthy frameworks.",
+      title: "Web App like CandyAI",
+      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
     },
     {
-      title: "Educational Website Development",
-      desc: "Our web development business can create educational websites that offer interactive learning experiences by adding e-learning tools, course administration, and student interaction elements.",
+      title: "Educational Websites",
+      desc: "Deliver interactive learning experiences with educational websites designed by our web development company, integrating e-learning tools, course management, and student engagement features.",
     },
     {
-      title: "Portfolio Website Design",
-      desc: "Showcase your work with visually attractive portfolio websites developed by our web development services to emphasize your talents and attract new clients.",
+      title: "Portfolio Websites",
+      desc: "Showcase your work with visually compelling portfolio websites crafted by our web development services to highlight your skills and attract potential clients.",
     },
     {
-      title: "Offer & Deal Websites",
-      desc: "Promoted bargains work well with bespoke offer websites made by our web development firm. These websites have responsive designs and easy-to-use navigation for a better customer experience.",
+      title: "Offer Websites",
+      desc: "Promote deals effectively with custom offer websites built by our web development company, featuring responsive designs and seamless navigation for a better user experience.",
     },
     {
-      title: "Business Listing Websites",
-      desc: "Promote deals work well with custom offer websites made by our web development company. These websites have responsive designs and easy-to-use navigation for a better user experience.",
+      title: "Listing Websites",
+      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
     },
     {
-      title: "Wiki & Knowledge Websites",
-      desc: "Our website development firm can help you make dynamic listing websites with comprehensive search features and filters for real estate, job boards, and more.",
+      title: "Wiki Websites",
+      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive web development solutions tailored to your needs.",
     },
     {
-      title: "E-Commerce Website Solutions",
-      desc: "Our web development firm can help you boost sales with strong e-commerce websites that have secure payment gateways, inventory management, and user journeys that are optimized.",
+      title: "E-Commerce Websites",
+      desc: "Drive sales with robust e-commerce websites designed by our web development company, featuring secure payment gateways, inventory management, and optimized user journeys.",
     },
     {
-      title: "Non-Profit Website Development",
-      desc: "Our web development services can help you build interesting non-profit websites that get donors more involved and clearly explain your objective.",
+      title: "Non-Profit Websites",
+      desc: "Support your cause with engaging non-profit websites, developed by our web development services, that enhance donor engagement and effectively communicate your mission.",
     },
     {
-      title: "Entertainment Website Solutions",
-      desc: "Use dynamic entertainment and OTT websites with multimedia integration, interactive features, and responsive design to get people to pay attention to your business.",
+      title: "Entertainment Website Development",
+      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
     },
     {
       title: "Event Website Development",
-      desc: "Custom event websites with ticketing systems, live streaming, and real-time updates make it easy to manage events and improve the experience and engagement of attendees.",
+      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
     },
     {
-      title: "Consulting Website Solutions",
-      desc: "Set up your consulting brand online with excellent websites that show off your skills, client reviews, and service options. These sites should be geared to turn visitors into clients.",
-    },
-  ];
-  const cardsSectionData3 = [
-    {
-      title: "Custom Enterprise Web Portal Development",
-      description:
-        "Our web development company builds enterprise web portals with seamless integration, strong security, and scalable architecture that can handle even the most complicated business needs.",
-      icon: <FaLightbulb className="text-4xl" />,
-    },
-    {
-      title: "API Development & Seamless Integration",
-      description:
-        "Use our advanced web development services to create and connect powerful APIs that will make it easier for your business systems to share data and work better together.",
-      icon: <FaChartLine className="text-4xl" />,
-    },
-    {
-      title: "Cloud-Based Web Application Solutions",
-      description:
-        "Our company makes cloud-based web apps for businesses all over the world that are always available, can grow with the business, and are safe to use.",
-      icon: <FaCogs className="text-4xl" />,
-    },
-    {
-      title: "Enterprise CMS Design & Development",
-      description:
-        "Our custom-built enterprise CMS solutions make it easy to manage large amounts of content by giving you powerful features and flexibility.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "Advanced Data Analytics Dashboards",
-      description:
-        "Use our web development services to make interactive data analytics dashboards that give you real-time business insights and help you make smart decisions at the enterprise level.",
-      icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "Enterprise-Grade E-Commerce Solutions",
-      description:
-        "Our website building company can help you grow your online business with enterprise-level e-commerce systems. These systems have advanced customisation, security, and the flexibility to grow.",
-      icon: <FaTasks className="text-4xl" />,
+      title: "Consulting Website Development",
+      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
     },
   ];
   const servicesData = [
@@ -315,165 +129,74 @@ const WebDevelopment = () => {
   const steps = [
     {
       step: "Step 01",
-      title: "Discovery & Strategic Planning",
+      title: "UI Strategy",
       description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
+        "Design intuitive and high-performance user interfaces for iOS and Android platforms, enhancing usability and engagement.",
     },
     {
       step: "Step 02",
-      title: "Custom Design & Prototyping",
+      title: "Requirement Analysis",
       description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
+        "Thoroughly gather and analyze client requirements to create a precise and actionable development roadmap.",
     },
     {
       step: "Step 03",
-      title: "Front-End Development",
+      title: "Wireframing",
       description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
+        "Develop detailed wireframes and mockups that visualize app structure, flow, and functionality before development.",
     },
     {
       step: "Step 04",
-      title: "Back-End Development",
+      title: "Development",
       description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
+        "Implement the application using state-of-the-art tools and frameworks, adhering to industry best practices and quality standards.",
     },
     {
       step: "Step 05",
-      title: "Quality Assurance & Testing",
+      title: "Testing & QA",
       description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
+        "Perform comprehensive testing to ensure flawless performance, security, and reliability across all devices.",
     },
     {
       step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
+      title: "Handover & Deployment",
       description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
-    },
-  ];
-  const cardsSectionDifferentColorData = [
-    {
-      title: "Custom AI",
-      description:
-        "Our web development firm adds specialized AI solutions to your web development services. This lets you make decisions based on data, give users a more personalized experience, and automate more of your business.",
-      icon: <FaLightbulb className="text-5xl" />,
-      cardBg: "bg-red-100",
-    },
-    {
-      title: "Intelligent AI Chatbots",
-      description:
-        "AI-powered chatbots that are built right into your web development solutions can help you connect with customers more. They can provide instant support and tailored conversations 24/7.",
-      icon: <FaChartLine className="text-5xl" />,
-      cardBg: "bg-blue-100",
-    },
-    {
-      title: "Advanced RPA Solutions",
-      description:
-        "Integrate RPA into your business to streamline operations. This will let our web development services automate repetitive jobs, cut down on mistakes, and make your systems work more efficiently.",
-      icon: <FaCogs className="text-5xl" />,
-      cardBg: "bg-purple-100",
-    },
-    {
-      title: "AI-Powered Data Analytics",
-      description:
-        "Use our website development company's knowledge of AI-driven data analytics to get useful information, improve business processes, and help your organization expand with cutting-edge web development solutions.",
-      icon: <FaLightbulb className="text-5xl" />,
-      cardBg: "bg-gray-100",
-    },
-    {
-      title: "Machine Learning Solutions",
-      description:
-        "Our web development company uses machine learning algorithms in the services we offer to build your website. This lets us do things like predictive analytics, adaptive content distribution, and better user experiences.",
-      icon: <FaChartLine className="text-5xl" />,
-      cardBg: "bg-yellow-100",
-    },
-    {
-      title: "AI-Driven Security",
-      description:
-        "Add AI-driven security features to your web development solutions to safeguard your enterprise-level web apps by finding and stopping attacks in real time.",
-      icon: <FaCogs className="text-5xl" />,
-      cardBg: "bg-green-100",
+        "Deliver the fully tested app with seamless deployment, ready for launch and end-user adoption.",
     },
   ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      {/* <WebDevBanner backgroundImage={assets.webDevelopment} /> */}
-      <BannerRollingGallery autoplay={true} pauseOnHover={true} />
-
+      <div className="sticky inset-0">
+        <Banner
+          title="Web Development"
+          overlayBg="bg-black/60"
+          backgroundImage={assets.webDevelopment}
+          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        />
+      </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <TopRatedCompany
-          title="Top Web Development Company"
+          title="Top-Rated Web Development Company"
           description={[
-            `We are known worldwide as the best web development company, trusted by hundreds of clients in 90+ countries. With the perfect blend of award-winning designers and expert web developers, we are a one-stop solution for all your digital needs. Capyngen is committed to delivering exceptional results by using advanced data-driven strategies and smart digital marketing.`,
-            `We specialize in creating responsive websites, eCommerce development, and custom web development services that are innovative and future-ready. Clients can rely on our expertise in Magento development, Drupal development, WordPress development, HTML5, JavaScript, Joomla, and CSS3 to transform their ideas into reality.`,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-        />
-        <GetStarted
-          backgroundColor="bg-gray-900"
-          textColor="text-white"
-          buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="The best web development company to help your business grow"
-          description="Capyngen is a certified web development company that offers truly professional services for hiring web developers."
-          buttonText="Contact Us"
-        />
-        <TopRatedCompany
-          title="Globally Trusted Web Development Partner"
-          description={[
-            `After doing a thorough analysis, Capyngen gives our clients the best and most focused web development solutions. Our skilled web developers go through a number of tests for the project as part of a well-planned strategy to make sure the product is of the highest quality. We give our clients' projects better functionality, clarity, and dynamism, which will make it easier for users to use your website.`,
-            `Capyngen has been providing top-notch web development services since 2007. Their team includes innovators, problem solvers, and people who think outside the box. We make sure that your website works and is easy for people to use so that it ranks well in Google. We are the best web development company in India, and we offer the best web development services.`,
+            `RichestSoft provides top-notch and oriented web development solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
+            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch web development services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best web development company in India, we provide best-in-class web development services.`,
           ]}
           image={assets.whyChooseUs}
           background={assets.patternBg1}
         />
 
         <BenefitsSection
-          heading="Cutting-Edge Web Development Solutions We Deliver"
-          desc="A web page is the basic building block of the Internet. It has text, multimedia, and links to other pages. At Capyngen, we make and code web pages that are best suited to the needs of each project. We come up with and carry out the Internet strategy through careful and strategic thinking. We come up with new ways to solve the problems that come up on each project."
+          heading="Web Development Solutions We Offer"
+          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
         />
-        <CardsSection
-          heading="Expert Web Development Services Designed for Your Success"
-          subheading="Capyngen can help you with enterprise-level web development by creating custom solutions, integrating APIs, building cloud-based apps, and advanced e-commerce platforms that help your business grow and work more efficiently."
-          services={cardsSectionData3}
-          headColor="text-white"
-          cardBg="bg-gray-700"
-          sectionBg="bg-gray-900"
-          hoverBg="hover:bg-blue-800 hover:scale-98"
-          textColor="text-white"
-          hoverTextColor=""
-        />
         <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
+          heading="Mobile App Development Process"
+          desc="We follow a rigorous, high-standard development methodology to deliver robust, error-free, and high-performance mobile applications. Our team ensures each stage is meticulously executed for maximum efficiency and business impact."
           steps={steps}
-        />
-        <GetStarted
-          backgroundColor="bg-gray-900"
-          textColor="text-white"
-          buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Transform Your Vision into Reality with Us"
-          description="We worked with some of the top companies and ideas from around the world that were truly groundbreaking."
-          buttonText="Get Started"
-        />
-        <CardsSection
-          heading="Integrating Advanced Technologies into Web Development"
-          subheading="Add advanced technologies like AI, machine learning, blockchain, and cloud computing to your web projects to make sure you get web development services that are new, safe, and ready to grow with your organization."
-          services={cardsSectionDifferentColorData}
-          height="h-94"
-          sectionBg="bg-gray-900"
-          headColor="text-white"
-          cardBg="bg-gray-50"
-          hoverBg=""
-          cardHeadSize="text-2xl"
-          textSize="text-lg"
-          textColor="text-gray-800"
-          hoverTextColor=""
         />
         <WhyChoose />
         <BenefitsSection
@@ -482,10 +205,10 @@ const WebDevelopment = () => {
           benefits={servicesData}
           reverse
         />
-        <TechStack
-          heading="Transform Your Web Development and Consulting with Our Expert Tech Stack"
-          subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
-          categories={techStack}
+        <TechnologiesCarousel
+          title="Web Development Technologies We Use"
+          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+          technologies={technologies}
         />
         <OurServices />
         <FAQSection2 items={faqItems} />

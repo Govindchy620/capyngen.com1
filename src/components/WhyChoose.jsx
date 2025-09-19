@@ -1,7 +1,7 @@
 import React from "react";
 import { Users, Laptop, Award, Headphones } from "lucide-react";
 
-const whyChooseUsData = [
+const features = [
   {
     icon: <Users className="w-10 h-10 text-blue-500" />,
     title: "Professional Team",
@@ -28,23 +28,24 @@ const whyChooseUsData = [
   },
 ];
 
-const WhyChooseUs = ({
-  title = "Why Choose Us",
-  desc = "We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions.",
-}) => {
+const WhyChooseUs = () => {
   return (
     <section className="relative bg-black text-white py-10 px-6 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
 
         <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-          {title}
+          Why Choose Us
         </h1>
-        <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">{desc}</p>
+        <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">
+          We create impactful digital experiences that help businesses grow. Our
+          team blends creativity, strategy, and technology to craft innovative
+          and user-friendly solutions.
+        </p>
 
         {/* Feature Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-          {whyChooseUsData.map((f, i) => (
+          {features.map((f, i) => (
             <div
               key={i}
               className="p-6 bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-blue-500/40"
