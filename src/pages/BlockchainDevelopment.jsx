@@ -23,7 +23,6 @@ import {
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import CardsSectionGrid from "../components/CardsSectionGrid";
-import Banner4 from "../components/Banner4";
 
 const BlockchainDevelopment = () => {
   const faqItems = [
@@ -213,163 +212,111 @@ const BlockchainDevelopment = () => {
       iconBg: "bg-red-100",
     },
   ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Strategic Planning",
-      description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
-    },
-    {
-      step: "Step 02",
-      title: "Custom Design & Prototyping",
-      description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
-    },
-    {
-      step: "Step 03",
-      title: "Front-End Development",
-      description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
-    },
-    {
-      step: "Step 04",
-      title: "Back-End Development",
-      description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
-    },
-    {
-      step: "Step 05",
-      title: "Quality Assurance & Testing",
-      description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
-    },
-    {
-      step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
-      description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
-    },
-  ];
-  const slides = [
-    {
-      image: assets.blockchainDevelopment,
-      title: "Blockchain Development",
-      subtitle:
-        "Streamline KYC compliance with AI, cloud, and process automation",
-    },
-    {
-      image: assets.blockchainDevelopment,
-      title: "Blockchain Development",
-      subtitle:
-        "Streamline KYC compliance with AI, cloud, and process automation",
-    },
-    {
-      image: assets.blockchainDevelopment,
-      title: "Blockchain Development",
-      subtitle:
-        "Streamline KYC compliance with AI, cloud, and process automation",
-    },
-  ];
+
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <Banner4 slides={slides} />
+      <div className="sticky inset-0">
+        <Banner
+          title="Blockchain Development"
+          overlayBg="bg-black/60"
+          backgroundImage={assets.blockchainDevelopment}
+          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        />
+      </div>
+      {/* Foreground Content (scrolls over background) */}
+      <div className="relative z-10">
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          cardBg=""
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
+        <TopRatedCompany
+          title="Top-Rated Blockchain Development Company"
+          description={[
+            `RichestSoft provides top-notch and oriented Blockchain Development solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
+            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch Blockchain Development services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best Blockchain Development company in India, we provide best-in-class Blockchain Development services.`,
+          ]}
+          image={assets.whyChooseUs}
+          background={assets.patternBg1}
+        />
+        <GetStarted
+          reverse={true}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
+          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
+          buttonText="Contact Us"
+          image={assets.getStarted}
+        />
+        <CardsSectionGrid
+          heading="Absolute Ecommerce Mobile App Development Solutions"
+          description={[
+            "We are a reliable Ecommerce application developer specializing in developing highly-scalable on-demand ecommerce development services. Our knowledgeable Ecommerce mobile app development Company services are globally renowned for providing avant-garde and reliable mobile app solutions.",
+            "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
+            "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
+          ]}
+          services={cardsSectionGridData1}
+          reverse
+        />
 
-      <CardsSection
-        heading="Transform Your App Vision with Our App Development Consulting Services"
-        subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
-        services={cardsSectionDifferentColorData}
-        cardBg=""
-        hoverBg=""
-        textColor="text-gray-800"
-        hoverTextColor=""
-      />
-      <TopRatedCompany
-        title="Top-Rated Blockchain Development Company"
-        description={[
-          `RichestSoft provides top-notch and oriented Blockchain Development solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-          `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch Blockchain Development services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best Blockchain Development company in India, we provide best-in-class Blockchain Development services.`,
-        ]}
-        image={assets.whyChooseUs}
-        background={assets.patternBg1}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
-        description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
-        buttonText="Contact Us"
-        image={assets.getStarted}
-      />
-      <CardsSectionGrid
-        heading="Absolute Ecommerce Mobile App Development Solutions"
-        description={[
-          "We are a reliable Ecommerce application developer specializing in developing highly-scalable on-demand ecommerce development services. Our knowledgeable Ecommerce mobile app development Company services are globally renowned for providing avant-garde and reliable mobile app solutions.",
-          "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
-          "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
-        ]}
-        services={cardsSectionGridData1}
-        reverse
-      />
-
-      <BenefitsSection
-        heading="Blockchain Development Solutions We Offer"
-        desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-        benefits={solutionsData}
-        image={assets.blockchainDevelopment}
-      />
-      <HowWeWork
-        heading="Comprehensive Web Development Process"
-        desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-        steps={steps}
-      />
-      <CardsSection
-        heading="Transform Your App Vision with Our App Development Consulting Services"
-        subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
-        services={cardsSectionDifferentColorData}
-        cardBg=""
-        hoverBg=""
-        textColor="text-gray-800"
-        hoverTextColor=""
-      />
-      <WhyChoose />
-      <BenefitsSection
-        heading="Blockchain Development Services We Offer"
-        desc="Partner with RichestSoft for enterprise-level Blockchain Development services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-        benefits={servicesData}
-        reverse
-      />
-      <CardsSection
-        heading="Transform Your App Vision with Our App Development Consulting Services"
-        subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
-        services={cardsSectionDifferentColorData}
-        cardBg=""
-        hoverBg=""
-        textColor="text-gray-800"
-        hoverTextColor=""
-      />
-      <TechnologiesCarousel
-        title="Blockchain Development Technologies We Use"
-        description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-        technologies={technologies}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
-        description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
-        buttonText="Contact Us"
-      />
-      <OurServices />
-      <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+        <BenefitsSection
+          heading="Blockchain Development Solutions We Offer"
+          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
+          benefits={solutionsData}
+          image={assets.blockchainDevelopment}
+        />
+        <HowWeWork />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          cardBg=""
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
+        <WhyChoose />
+        <BenefitsSection
+          heading="Blockchain Development Services We Offer"
+          desc="Partner with RichestSoft for enterprise-level Blockchain Development services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
+          benefits={servicesData}
+          reverse
+        />
+        <CardsSection
+          heading="Transform Your App Vision with Our App Development Consulting Services"
+          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
+          services={cardsSectionDifferentColorData}
+          cardBg=""
+          hoverBg=""
+          textColor="text-gray-800"
+          hoverTextColor=""
+        />
+        <TechnologiesCarousel
+          title="Blockchain Development Technologies We Use"
+          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+          technologies={technologies}
+        />
+        <GetStarted
+          reverse={true}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
+          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
+          buttonText="Contact Us"
+        />
+        <OurServices />
+        <FAQSection2 items={faqItems} />
+        <ScrollRevealEffect />
+      </div>
     </div>
   );
 };

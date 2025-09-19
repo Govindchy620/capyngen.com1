@@ -11,7 +11,6 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
-import CardSwap, { Card } from "../components/CardSwap";
 
 const CrmManagementSoftware = () => {
   const faqItems = [
@@ -127,98 +126,18 @@ const CrmManagementSoftware = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Strategic Planning",
-      description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
-    },
-    {
-      step: "Step 02",
-      title: "Custom Design & Prototyping",
-      description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
-    },
-    {
-      step: "Step 03",
-      title: "Front-End Development",
-      description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
-    },
-    {
-      step: "Step 04",
-      title: "Back-End Development",
-      description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
-    },
-    {
-      step: "Step 05",
-      title: "Quality Assurance & Testing",
-      description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
-    },
-    {
-      step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
-      description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
-    },
-  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div
-        style={{ height: "600px" }}
-        className="bg-black overflow-hidden sticky inset-0 pt-30"
-      >
-        <div className="text-white font-bold px-20 text-8xl flex flex-col gap-10">
-          <h1 className=" max-w-2xl">CRM & Management Software</h1>
-          <p className="text-base max-w-3xl">
-            Our consulting process can help you see your app in a new light. At
-            Capyngen, we don't just build apps; we also aid you every step of
-            the way. You may be confident that you'll get professional guidance
-            from the idea stage to the launch with our mobile app development
-            consulting services.
-          </p>
-        </div>
-        <CardSwap
-          cardDistance={60}
-          verticalDistance={70}
-          delay={5000}
-          pauseOnHover={false}
-        >
-          <Card
-            customClass=" text-white p-6 flex flex-col items-center justify-center"
-            style={{ backgroundImage: `url(${assets.crmManagement})` }}
-          >
-            <h3 className="text-xl font-bold mb-2">Card 1</h3>
-            <p className="text-sm opacity-80 text-center">
-              Beautiful gradients with images and custom text.
-            </p>
-          </Card>
-          <Card
-            customClass=" text-white p-6 flex flex-col items-center justify-center"
-            style={{ backgroundImage: `url(${assets.appDevelopment})` }}
-          >
-            <h3 className="text-xl font-bold mb-2">Card 1</h3>
-            <p className="text-sm opacity-80 text-center">
-              Beautiful gradients with images and custom text.
-            </p>
-          </Card>
-          <Card
-            customClass=" text-white p-6 flex flex-col items-center justify-center"
-            style={{ backgroundImage: `url(${assets.webDevelopment})` }}
-          >
-            <h3 className="text-xl font-bold mb-2">Card 1</h3>
-            <p className="text-sm opacity-80 text-center">
-              Beautiful gradients with images and custom text.
-            </p>
-          </Card>
-        </CardSwap>
+      <div className="sticky inset-0">
+        <Banner
+          title="CRM & Management Software"
+          overlayBg="bg-black/70"
+          backgroundImage={assets.crmManagement}
+          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        />
       </div>
-
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <TopRatedCompany
@@ -236,11 +155,7 @@ const CrmManagementSoftware = () => {
           desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
           benefits={solutionsData}
         />
-        <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-          steps={steps}
-        />
+        <HowWeWork />
         <WhyChoose />
         <BenefitsSection
           heading="CRM & Management Software Services We Offer"

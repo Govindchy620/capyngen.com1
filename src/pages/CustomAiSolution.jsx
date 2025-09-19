@@ -21,7 +21,6 @@ import {
 } from "react-icons/fa";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
-import Banner3 from "../components/Banner3";
 
 const CustomAiSolution = () => {
   const faqItems = [
@@ -330,55 +329,16 @@ const CustomAiSolution = () => {
       cardBg: "bg-green-100",
     },
   ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Strategic Planning",
-      description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
-    },
-    {
-      step: "Step 02",
-      title: "Custom Design & Prototyping",
-      description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
-    },
-    {
-      step: "Step 03",
-      title: "Front-End Development",
-      description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
-    },
-    {
-      step: "Step 04",
-      title: "Back-End Development",
-      description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
-    },
-    {
-      step: "Step 05",
-      title: "Quality Assurance & Testing",
-      description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
-    },
-    {
-      step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
-      description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
-    },
-  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
       <div className="sticky inset-0">
-        <Banner3
-          title="Custom AI Solution"
-          subtitle="Transforming the future of healthcare with AI-driven innovations."
+        <Banner
+          title="Custom AI Solutions"
+          overlayBg="bg-black/60"
           backgroundImage={assets.customAiSolution}
-          overlayColor="bg-black"
-          diagonalShape="polygon(0 0, 100% 0, 100% 40%, 0 100%)"
+          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -455,11 +415,7 @@ const CustomAiSolution = () => {
           height="h-78"
           services={cardsSectionSliderData1}
         />
-        <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-          steps={steps}
-        />
+        <HowWeWork />
         <WhyChoose />
         <CardsSectionImage
           heading="AI Integration Services"
