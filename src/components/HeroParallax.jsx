@@ -1,45 +1,30 @@
-"use client";
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
+import { useParallaxScroll } from "../hooks/useParallaxScroll";
 
 export const HeroParallax = ({ products }) => {
+  const {
+    ref,
+    translateX,
+    translateXReverse,
+    rotateX,
+    rotateZ,
+    translateY,
+    opacity,
+  } = useParallaxScroll({
+    transforms: [
+      { name: "translateX", input: [0, 1], output: [0, 1000] },
+      { name: "translateXReverse", input: [0, 1], output: [0, -1000] },
+      { name: "rotateX", input: [0, 0.2], output: [15, 0] },
+      { name: "opacity", input: [0, 0.2], output: [0.2, 1] },
+      { name: "rotateZ", input: [0, 0.2], output: [20, 0] },
+      { name: "translateY", input: [0, 0.2], output: [-700, 500] },
+    ],
+  });
+
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
   const thirdRow = products.slice(10, 15);
-
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
-
-  const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
-  );
-  const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
-  );
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
-  );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
-  );
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
-  );
-  const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
-  );
 
   return (
     <section
@@ -53,12 +38,7 @@ export const HeroParallax = ({ products }) => {
 
       {/* Parallax Content */}
       <motion.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
+        style={{ rotateX, rotateZ, translateY, opacity }}
         className="mt-[40vh]"
       >
         {/* First Row */}
