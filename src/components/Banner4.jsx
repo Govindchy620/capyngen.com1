@@ -32,11 +32,13 @@ const Banner4 = ({ slides }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-transparent"></div>
 
               {/* Content */}
-              <div className="relative z-10 max-w-2xl text-left">
+              <div className="relative z-10 text-left">
                 <h1 className="text-3xl md:text-5xl font-bold text-white leading-snug">
                   {slide.title}
                 </h1>
-                <p className="text-lg mt-4 text-white/90">{slide.subtitle}</p>
+                <p className="text-lg mt-4 text-white/90 max-w-2xl">
+                  {slide.subtitle}
+                </p>
               </div>
             </div>
           </div>

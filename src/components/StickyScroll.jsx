@@ -32,7 +32,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
       ref={ref}
       className="relative min-h-[200vh] flex items-start justify-center px-8 py-16"
     >
-      <div className="flex w-full max-w-6xl gap-8">
+      <div className="flex w-full max-w-7xl gap-8">
         {/* Left: Scrollable content */}
         <div className="flex-1 flex flex-col">
           {content.map((item, index) => (

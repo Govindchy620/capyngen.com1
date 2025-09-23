@@ -465,9 +465,9 @@ const AppDevelopment = () => {
   const slides = [
     {
       image: assets.appDevelopment,
-      title: "Building Scalable & Secure Apps",
+      title: "The Ultimate Guide to App Development: From Idea to Launch",
       description:
-        "We design, develop, and launch apps that fuel business growth with innovation and reliability.",
+        "Apps in the digital world have changed their roles, now they are not only the users’ helpers, but also powerful business engines. The knowledge of app development is the key that will keep you, no matter if you are an entrepreneur, a startup founder, or a business manager, in front of the race in the competitive market. Mobile apps open the door for businesses to access the global user base of millions, which is the primary driver of convenience, engagement, and revenue growth.",
     },
     {
       image: assets.appDevelopment,

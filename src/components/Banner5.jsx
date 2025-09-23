@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner5 = ({
   title = "DevOps Solutions",
-  description = "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.",
+  description = "When it comes to software delivery, DevOps Solutions are no longer an optional add-on, rather, they are an integral component of the process. Businesses in modern times need more than speed, they need swift, secure, and ideal synchronized collaboration. With the appropriate DevOps services, one can establish an operational and developmental interface that optimally removes silos and facilitates innovative breakthroughs.",
   primaryBtnText = "Get started",
   primaryBtnLink = "#",
   image = "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png",
@@ -15,7 +15,7 @@ const Banner5 = ({
           <h1 className="max-w-3xl mb-4 text-4xl font-extrabold leading-normal md:text-5xl xl:text-7xl dark:text-white">
             {title}
           </h1>
-          <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+          <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl">
             {description}
           </p>
 

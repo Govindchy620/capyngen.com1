@@ -18,7 +18,7 @@ export default function TopRatedCompany({
 }) {
   return (
     <div
-      className={`${bgColor} py-10`}
+      className={`${bgColor} pb-10`}
       style={{
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
@@ -34,7 +34,7 @@ export default function TopRatedCompany({
         >
           {/* Left/Right Content */}
           <div className="w-full lg:w-2/3 text-center lg:text-left">
-            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-2 text-3xl font-bold leading-none sm:text-5xl lg:text-6xl">
               {title}
             </h1>
             <div className="text-base md:text-lg my-6 text-white max-w-3xl mx-auto lg:mx-0 space-y-4">

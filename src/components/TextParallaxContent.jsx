@@ -1,30 +1,32 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
+import AnimatedButton from "./AnimatedButton";
 
 export const TextParallaxContentExample = () => {
   return (
     <div className="bg-white">
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Collaborate"
-        heading="Built for all of us."
+        subheading="Innovative IT Solutions That Enhance Efficiency, Drive Growth, and
+            Deliver Sustainable Business Success"
+        heading="About Us."
       >
-        <ExampleContent />
+        <Content1 />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Quality"
-        heading="Never compromise."
+        subheading="Why Choose Capyngen: Innovative, Reliable IT Services that Drive Success"
+        heading="Why Choose Us"
       >
-        <ExampleContent />
+        <Content2 />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading="Modern"
         heading="Dress for the best."
       >
-        <ExampleContent />
+        <Content1 />
       </TextParallaxContent>
     </div>
   );
@@ -101,7 +103,7 @@ const OverlayCopy = ({ subheading, heading }) => {
       ref={targetRef}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
     >
-      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
+      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl max-w-5xl mx-auto">
         {subheading}
       </p>
       <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
@@ -109,25 +111,54 @@ const OverlayCopy = ({ subheading, heading }) => {
   );
 };
 
-const ExampleContent = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
+const Content1 = () => (
+  <div className="md:min-h-[100vh] mx-auto grid max-w-7xl grid-cols-1 gap-20 px-4 pb-24 pt-24 md:grid-cols-2 text-white">
+    <h2 className="text-3xl font-bold">
       Additional content explaining the above card here
     </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
+    <div className="">
+      <p className="mb-4 text-xl  md:text-2xl">
+        We deliver tailored IT solutions to streamline operations and boost
+        efficiency. From infrastructure to cybersecurity, we empower your
+        business with cutting-edge technology, innovative cloud solutions,
+        advanced data analytics, digital transformation strategies, and scalable
+        enterprise software for long-term growth and success.
       </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+      <p className="mb-8 text-xl  md:text-2xl">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         reiciendis blanditiis aliquam aut fugit sint.
       </p>
-      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-        Learn more <FiArrowUpRight className="inline" />
-      </button>
+      <AnimatedButton
+        text="Know More About Us"
+        onClick={() => alert("Button clicked!")}
+      />
+    </div>
+  </div>
+);
+const Content2 = () => (
+  <div className="md:h-[100vh] mx-auto grid max-w-7xl grid-cols-1 gap-20 px-4 pb-24 pt-24 md:grid-cols-2 text-white">
+    <h2 className="text-3xl font-bold">
+      Additional content explaining the above card here
+    </h2>
+    <div className="">
+      <p className="mb-4 text-xl  md:text-2xl">
+        We provide businesses with innovative, dependable, and tailored digital
+        solutions that help them grow, come up with new ideas, and get
+        measurable results. We are experts in enterprise-grade cloud computing,
+        advanced business intelligence, next-generation cybersecurity, custom
+        mobile app development, strong enterprise software, strategic digital
+        transformation, intelligent automation, responsive web platforms, and
+        scalable IT strategies. These things help businesses grow and succeed in
+        the long term.
+      </p>
+      <p className="mb-8 text-xl  md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        reiciendis blanditiis aliquam aut fugit sint.
+      </p>
+      <AnimatedButton
+        text="Know More About Us"
+        onClick={() => alert("Button clicked!")}
+      />
     </div>
   </div>
 );

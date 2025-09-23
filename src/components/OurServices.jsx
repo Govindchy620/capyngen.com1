@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { assets } from "../assets/assets";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ServiceCard = ({ image, title, description }) => (
@@ -16,8 +15,7 @@ const ServiceCard = ({ image, title, description }) => (
     <img
       src={image}
       alt={title}
-      className="w-full h-full object-cover object-top 
-                 transition-all duration-500 group-hover:scale-110"
+      className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-110"
     />
 
     {/* Desktop/Large: Hover Reveal */}
@@ -40,41 +38,13 @@ const ServiceCard = ({ image, title, description }) => (
   </motion.div>
 );
 
-const OurServices = () => {
-  const services = [
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog1,
-    },
-    {
-      title: "App Development",
-      description: "Mobile and web applications to engage your customers.",
-      image: assets.blog2,
-    },
-    {
-      title: "Digital Marketing",
-      description: "Strategies to boost your online presence and reach.",
-      image: assets.blog3,
-    },
-    {
-      title: "Website Maintenance",
-      description: "Ongoing support to keep your site running smoothly.",
-      image: assets.blog1,
-    },
-    {
-      title: "Graphic Design",
-      description: "Visually stunning designs for your brand identity.",
-      image: assets.blog2,
-    },
-    {
-      title: "Domain & Hosting",
-      description: "Reliable hosting solutions for your online presence.",
-      image: assets.blog3,
-    },
-  ];
-
-  const [visibleCount, setVisibleCount] = useState(5);
+const OurServices = ({
+  services = [],
+  heading = "Our Extra Capabilities",
+  intro = "Move Your Web Presence to the Next Level with Full Digital Solutions Capyngen provides a full suite of web and digital services with the purpose of moving your business forward, capturing users' interest, and accelerating your online progress. From customized web development to blockchain implementations, Capyngen provides solutions that make you unique from the online community.",
+  initialVisibleCount = 5,
+}) => {
+  const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
 
   return (
     <div className="bg-black text-white py-10 px-2 sm:px-6 lg:px-8">
@@ -82,12 +52,10 @@ const OurServices = () => {
         {/* Heading */}
         <div className="text-center mb-12">
           <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-            Other Services
+            {heading}
           </h1>
-          <p className="mt-4 max-w-2xl text-sm sm:text-lg md:text-xl mx-auto">
-            Comprehensive Website Services to Ignite Your Online Success.
-            Empower Your Business with Powerful Online Services from our
-            Website.
+          <p className="mt-4 max-w-6xl text-sm sm:text-lg md:text-xl mx-auto">
+            {intro}
           </p>
         </div>
 

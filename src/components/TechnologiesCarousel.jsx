@@ -28,7 +28,7 @@ const TechnologiesCarousel = ({ title, description, technologies }) => {
         <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
           {title}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg mx-auto text-gray-300">
+        <p className="mt-4 max-w-6xl text-lg mx-auto text-gray-300">
           {description}
         </p>
 
