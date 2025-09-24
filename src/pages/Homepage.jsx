@@ -98,14 +98,15 @@ const Homepage = () => {
       <TextParallaxContentExample />
       <ParallaxScroll images={images} />; */}
       {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10 bg-[#1B2B3A]">
-        <div className="h-30 bg-gradient-to-b from-[#000] to-[#0010A2]/90"></div>
-        <div className="bg-gradient-to-b from-[#0010A2]/90 to-[#303030]/90">
-            <HomeAboutUs />
+      <div className="relative z-10">
+        <div className="h-30 bg-gradient-to-b from-[#000] to-[#0010A2]"></div>
+        <div className="py-16 bg-gradient-to-b from-[#0010A2] to-[#708090] [&>*]:!mt-0 [&>*]:!mb-0">
+          <HomeAboutUs />
         </div>
-        <div className="h-30 bg-gradient-to-b from-[#303030]/90 to-[#0010A2]/90"></div>
-        {/* Remove the extra div, or match its colors exactly */}
-        <div className="bg-gradient-to-b from-[#0010A2]/90 to-[#0010A2]">
+
+        <div className="h-10 bg-gradient-to-b from-[#708090] to-[#708090]"></div>
+
+        <div className="py-10 bg-gradient-to-b from-[#708090] to-[#000] [&>*]:!mt-0 [&>*]:!mb-0">
             <WhyChooseUs />
         </div>
 

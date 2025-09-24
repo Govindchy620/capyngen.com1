@@ -6,7 +6,7 @@ import BestHeading from "./BestHeading";
 
 export default function WhyChooseUs() {
   return (
-    <div className="pt-10 md:pt-5 text-white w-full relative overflow-hidden">
+    <div className=" text-white w-full relative overflow-hidden">
       <BestHeading title="" highlight="Why Choose Us" />
       <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto pt-5 md:pt-0">
         {/* Hero Section */}

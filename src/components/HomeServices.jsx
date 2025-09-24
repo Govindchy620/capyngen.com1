@@ -319,7 +319,7 @@ export default function HomeServices() {
             {/* Path */}
             <svg
               className="absolute w-full h-full max-w-6xl max-h-[85vh]"
-              viewBox="0 0 800 800"
+              viewBox="50 0 800 800"
               preserveAspectRatio="xMidYMid meet"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
