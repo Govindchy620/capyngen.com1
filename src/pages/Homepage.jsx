@@ -88,7 +88,7 @@ const Homepage = () => {
   // useSplitTextAnimation("h1");
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       {/* Fixed Background (HeroSection) */}
       {/* Fixed Background (HeroSection) */}
       <div className="sticky inset-0">
@@ -99,8 +99,16 @@ const Homepage = () => {
       <ParallaxScroll images={images} />; */}
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10 bg-[#1B2B3A]">
-        <HomeAboutUs />
-        <WhyChooseUs />
+        <div className="h-30 bg-gradient-to-b from-[#000] to-[#0010A2]/90"></div>
+        <div className="bg-gradient-to-b from-[#0010A2]/90 to-[#303030]/90">
+            <HomeAboutUs />
+        </div>
+        <div className="h-30 bg-gradient-to-b from-[#303030]/90 to-[#0010A2]/90"></div>
+        {/* Remove the extra div, or match its colors exactly */}
+        <div className="bg-gradient-to-b from-[#0010A2]/90 to-[#0010A2]">
+            <WhyChooseUs />
+        </div>
+
         <HorizontalProcessSection />
         <ServicesCarousel />
         <HomeServices />

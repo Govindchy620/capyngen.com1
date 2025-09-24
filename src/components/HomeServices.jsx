@@ -98,7 +98,7 @@ const servicesData = [
   },
   {
     id: "energy",
-    title: "Energy, Resources & Utilities",
+    title: "Energy & Utilities",
     icon: "BatteryCharging",
     card: {
       image: "/placeholder.svg?height=200&width=300&text=Energy",
@@ -133,62 +133,55 @@ const servicesData = [
 // ✅ Card
 function ServiceCard({ service, isMobile = false }) {
   if (!service) return null;
-  if (isMobile) {
-    return (
-      <div className="w-full max-w-sm mx-auto">
-        <div className="bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl p-4 border border-white/20">
-          <div className="relative overflow-hidden rounded-2xl mb-4 group">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-green-600/20 z-10"></div>
-            <img
-              src={service.card.image || "/placeholder.svg"}
-              alt={service.title}
-              className="w-full h-32 object-cover transition-transform duration-700 group-hover:scale-110"
-            />
+
+  return (
+    <div
+      className={`relative ${
+        isMobile ? "w-full max-w-sm mx-auto" : "w-72 h-100 mx-auto"
+      }`}
+    >
+      {/* Glow background */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-green-400/20 via-blue-500/10 to-purple-500/20 blur-3xl opacity-70 animate-pulse"></div>
+
+      <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-green-400/30">
+        {/* Image */}
+        <div className="relative overflow-hidden group">
+          <img
+            src={service.card.image || "/placeholder.svg"}
+            alt={service.title}
+            className={`w-full ${
+              isMobile ? "h-32" : "h-40"
+            } object-cover rounded-t-3xl transition-transform duration-700 group-hover:scale-110`}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/60 opacity-70"></div>
+          <div className="absolute bottom-3 left-4 flex items-center gap-3">
+            <div className="p-2 rounded-xl bg-gradient-to-tr from-green-400 to-blue-500 shadow-lg">
+              <Icon name={service.icon} className="w-4 h-4 text-white" />
+            </div>
+            <h3 className="text-xl sm:text-xl font-extrabold text-white drop-shadow-lg">
+              {service.title}
+            </h3>
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-2">
-            {service.title}
-          </h3>
-          <p className="text-gray-600 text-sm">{service.card.description}</p>
-          <ul className="mt-3 grid grid-cols-2 gap-2 text-xs">
+        </div>
+
+        {/* Content */}
+        <div className="px-2 py-2">
+          <p className="text-gray-100/90 text-sm sm:text-sm">
+            {service.card.description}
+          </p>
+
+          {/* Features */}
+          <ul className="mt-2 space-y-1">
             {service.card.features.map((f, i) => (
-              <li key={i} className="flex items-center">
-                <span className="w-2 h-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mr-2"></span>
-                {f}
+              <li
+                key={i}
+                className="flex items-start gap-2 text-gray-200 text-sm sm:text-sm group"
+              >
+                <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-r from-green-400 to-blue-500 group-hover:from-purple-400 group-hover:to-pink-500 transition-all"></span>
+                <span>{f}</span>
               </li>
             ))}
           </ul>
-          <div className="pt-3 border-t border-gray-100">
-            <AnimatedButton
-              text="Learn More"
-              onClick={() => alert("Button clicked!")}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-  return (
-    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-      <div className="bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl w-96">
-        <img
-          src={service.card.image || "/placeholder.svg"}
-          alt={service.title}
-          className="w-full h-40 object-cover rounded-t-2xl"
-        />
-        <div className="px-5 pb-4">
-          <h3 className="text-2xl font-bold text-gray-800">{service.title}</h3>
-          <p className="text-gray-600 text-sm">{service.card.description}</p>
-          <ul className="grid grid-cols-2 mt-4 gap-x-4 text-sm list-disc pl-4">
-            {service.card.features.map((f, i) => (
-              <li key={i}>{f}</li>
-            ))}
-          </ul>
-          <div className="pt-3 border-t border-gray-100">
-            <AnimatedButton
-              text="Learn More"
-              onClick={() => alert("Button clicked!")}
-            />
-          </div>
         </div>
       </div>
     </div>
@@ -303,25 +296,31 @@ export default function HomeServices() {
   return (
     <div
       ref={sectionRef}
-      className="pb-10 md:pb-0"
-      style={{
-        backgroundImage: `url(${assets.patternBg1})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="min-h-screen w-full flex flex-col bg-cover bg-center"
+      style={{ backgroundImage: `url(${assets.patternBg1})` }}
     >
       <BestHeading title="" highlight="Industries" />
-      <div className="min-h-screen text-white flex flex-col relative overflow-hidden py-14">
-        {/* Desktop */}
-        <div className="hidden lg:block w-full flex-1">
+      <div className="flex-1 w-full flex flex-col relative">
+        {/* Desktop / Large Screens */}
+        <div className="hidden lg:flex w-full h-full items-center justify-center px-4">
           <div
             ref={containerRef}
-            className="relative w-full h-screen flex items-center justify-center"
+            className="relative w-full h-full max-w-7xl max-h-[90vh] mx-auto flex items-center justify-center"
           >
-            {activeService && <ServiceCard service={activeService} />}
+            {/* Center card */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              {activeService && (
+                <div className="flex items-center justify-center h-full px-4">
+                  <ServiceCard service={activeService} />
+                </div>
+              )}
+            </div>
+
+            {/* Path */}
             <svg
-              className="absolute w-full h-full"
-              viewBox="0 0 1000 800"
+              className="absolute w-full h-full max-w-6xl max-h-[85vh]"
+              viewBox="0 0 800 800"
+              preserveAspectRatio="xMidYMid meet"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -347,6 +346,8 @@ export default function HomeServices() {
                 strokeLinejoin="round"
               />
             </svg>
+
+            {/* Service Nodes */}
             {positions.length > 0 &&
               servicesData.map((service, index) => (
                 <ServiceNode
@@ -360,26 +361,26 @@ export default function HomeServices() {
           </div>
         </div>
 
-        {/* Mobile */}
-        <div className="block lg:hidden w-full max-w-4xl mx-auto px-4">
+        {/* Mobile / Tablet */}
+        <div className="block lg:hidden w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8">
           <div className="mb-8">
             {activeService && (
               <ServiceCard service={activeService} isMobile={true} />
             )}
           </div>
-          <div className="grid grid-cols-2 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {servicesData.map((service) => (
               <button
                 key={service.id}
                 onClick={() => setActiveServiceId(service.id)}
-                className={`group p-2 sm:p-6 rounded-2xl transition-all duration-300 ${
+                className={`group p-3 sm:p-5 md:p-6 rounded-2xl transition-all duration-300 ${
                   activeServiceId === service.id
                     ? "bg-green-500/20 border-2 border-green-500 scale-105"
                     : "bg-white/10 border-2 border-white/20 hover:bg-white/20 hover:border-green-400"
                 }`}
               >
                 <div
-                  className={`w-10 h-10 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto ${
+                  className={`w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto ${
                     activeServiceId === service.id
                       ? "bg-green-400 shadow-2xl shadow-green-400/50"
                       : "bg-blue-500/80 group-hover:bg-green-400/80 shadow-lg"
@@ -387,10 +388,10 @@ export default function HomeServices() {
                 >
                   <Icon
                     name={service.icon}
-                    className="w-8 h-8 sm:w-10 sm:h-10 text-white"
+                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white"
                   />
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-white text-center">
+                <h3 className="text-xs sm:text-sm md:text-base font-bold text-white text-center">
                   {service.title}
                 </h3>
               </button>

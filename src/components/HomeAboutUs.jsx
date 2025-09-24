@@ -8,14 +8,7 @@ const demoPeople = [assets.team1, assets.team2, assets.team3, assets.team4];
 
 const HomeAboutUs = () => {
   return (
-    <section
-      className="pt-5 text-white w-full relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${assets.patternBg1})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="pt-5 text-white w-full relative overflow-hidden">
       <BestHeading title="" highlight="About Us" />
       <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center pt-5 md:py-12 px-4 md:px-12 xl:gap-20">
         {/* Right Section: Main Image (comes first on mobile) */}

@@ -6,14 +6,7 @@ import BestHeading from "./BestHeading";
 
 export default function WhyChooseUs() {
   return (
-    <div
-      className="pt-10 md:pt-5 text-white w-full relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${assets.patternBg1})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="pt-10 md:pt-5 text-white w-full relative overflow-hidden">
       <BestHeading title="" highlight="Why Choose Us" />
       <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto pt-5 md:pt-0">
         {/* Hero Section */}
@@ -59,53 +52,52 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Feature Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 mt-6 md:mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-5">
           {[
             {
-              icon: <UserRoundSearch className="w-6 h-6 text-gray-800" />,
+              icon: <UserRoundSearch className="w-7 h-7 text-indigo-600" />,
               title: "Customer Focused",
               desc: "Capyngen provides digital solutions that are tailored to the unique demands of your organization so that you may flourish in the long run.",
             },
             {
-              icon: <BarChart3 className="w-6 h-6 text-gray-800" />,
+              icon: <BarChart3 className="w-7 h-7 text-pink-600" />,
               title: "Strategic Marketing",
               desc: "We combine both technology and creativity to come up with clever digital plans that help you expand quicker and remain ahead of the competition.",
             },
             {
-              icon: <Sparkles className="w-6 h-6 text-gray-800" />,
+              icon: <Sparkles className="w-7 h-7 text-yellow-500" />,
               title: "Experience & Expertise",
               desc: "Capyngen uses its comprehensive understanding of the industry and proven skills to ensure your firm receives IT solutions that are scalable, and future-ready.",
             },
             {
-              icon: <LifeBuoy className="w-6 h-6 text-gray-800" />,
+              icon: <LifeBuoy className="w-7 h-7 text-green-600" />,
               title: "24/7 Customer Support",
               desc: "You can count on our devoted support staff to always be there for you, providing reliable assistance so you won't have to worry about anything going wrong.",
             },
           ].map(({ icon, title, desc }, i) => (
             <div
               key={i}
-              className="bg-gray-700 border-b-2 border-b-white p-2 md:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 h-full"
+              className="group bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700/50 
+                 p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 
+                 transition-all duration-300 h-full flex flex-col"
             >
-              <div className="space-y-2 h-full flex flex-col">
-                {/* Icon and Title */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-2 sm:space-y-0 sm:space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-md border-b-2 border-b-white bg-white flex-shrink-0">
-                    {icon}
-                  </div>
-                  <div className="text-center sm:text-left">
-                    <h3 className="text-lg md:text-xl font-bold text-white leading-tight">
-                      {title}
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <div className="flex-1">
-                  <p className="text-white text-sm md:text-base leading-relaxed text-center sm:text-left">
-                    {desc}
-                  </p>
-                </div>
+              {/* Icon */}
+              <div
+                className="flex items-center justify-center w-14 h-14 rounded-xl 
+                      bg-white shadow-md mb-4 group-hover:scale-110 transition-transform duration-300"
+              >
+                {icon}
               </div>
+
+              {/* Title */}
+              <h3 className="text-lg md:text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors duration-300">
+                {title}
+              </h3>
+
+              {/* Description */}
+              <p className="mt-3 text-gray-300 text-sm md:text-base leading-relaxed">
+                {desc}
+              </p>
             </div>
           ))}
         </div>
