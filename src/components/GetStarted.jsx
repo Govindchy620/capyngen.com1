@@ -7,16 +7,29 @@ const GetStarted = ({
   buttonText = "Get Started Today",
   buttonColor = "bg-red-500 hover:bg-red-600",
   buttonTextColor = "text-white",
-  backgroundColor = "bg-[#0a1b52]", // default dark blue
+  backgroundColor = "bg-[#0a1b52]", // fallback background color
+  backgroundVideo, // new prop for background video source
   textColor = "text-white",
   image,
   reverse = false, // toggle layout
 }) => {
   return (
-    <section className="bg-black/90 py-10">
+    <section className="relative bg-black/90 py-10 overflow-hidden">
       <div
-        className={`${backgroundColor} py-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto rounded-xl`}
+        className={`relative z-10 py-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto rounded-xl ${
+          backgroundVideo ? "bg-black/50" : backgroundColor
+        }`}
       >
+        {backgroundVideo ? (
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            autoPlay
+            loop
+            muted
+            playsInline
+            src={backgroundVideo}
+          />
+        ) : null}
         <div
           className={`container max-w-6xl mx-auto flex ${
             image
@@ -32,13 +45,13 @@ const GetStarted = ({
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex-1 max-w-3xl"
+            className="flex-1 max-w-3xl z-10"
           >
-            <h1
+            <h2
               className={`text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug mb-6 ${textColor}`}
             >
               {title}
-            </h1>
+            </h2>
             <div className={`space-y-4 text-base sm:text-lg ${textColor}`}>
               {Array.isArray(description) ? (
                 description.map((para, i) => <p key={i}>{para}</p>)
@@ -55,7 +68,7 @@ const GetStarted = ({
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="md:flex-shrink-0"
+              className="md:flex-shrink-0 z-10"
             >
               <button
                 className={`${buttonColor} ${buttonTextColor} font-semibold px-6 py-3 rounded-md shadow-md transition`}

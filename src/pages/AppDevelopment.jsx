@@ -39,60 +39,42 @@ const AppDevelopment = () => {
   ];
   const cardsSectionData1 = [
     {
-      title: "Ideation & Conceptualization",
-      description:
-        "We refine your app ideas, ensuring they are innovative, market-ready, and aligned with your business goals.",
+      title: "Massive Reach",
+      description: "There are billions of smartphone users around the globe.",
       icon: <FaLightbulb className="text-4xl" />,
     },
     {
-      title: "Market Research & Analysis",
+      title: "Enhanced Engagement",
       description:
-        "We analyze trends, study competitors, and define target audiences to position your app strategically.",
+        "Users get more involved through push notifications and interactive features, hence they keep coming back.",
       icon: <FaChartLine className="text-4xl" />,
     },
     {
-      title: "Technology Stack Selection",
+      title: "Revenue Generation",
       description:
-        "Our team recommends the best frameworks, tools, and platforms for building scalable and future-proof applications.",
+        "By means of e-commerce, ads, and subscriptions, apps can become the new income sources for your company.",
       icon: <FaCogs className="text-4xl" />,
     },
     {
-      title: "UX/UI Design",
+      title: "Brand Recognition",
       description:
-        "We design visually stunning, user-friendly interfaces that enhance engagement and maximize user retention.",
+        "Powerful apps are the reason why customers trust brands and remain loyal to them.",
       icon: <FaLaptopCode className="text-4xl" />,
     },
     {
-      title: "Prototyping and MVP",
+      title: "Efficiency",
       description:
-        "Validate your idea quickly with an MVP, gather user feedback, and optimize features before the final launch.",
+        "Internal business processes can be simplified through custom android app development solutions.",
       icon: <FaProjectDiagram className="text-4xl" />,
     },
     {
-      title: "Project Management",
+      title: "Competitive Advantage",
       description:
-        "Our agile approach ensures timely delivery, resource allocation, and transparency at every stage.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-    {
-      title: "Quality Assurance",
-      description:
-        "We conduct rigorous testing to eliminate bugs and ensure flawless performance.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "Deployment Strategy",
-      description:
-        "From app store submission to launch campaigns, we handle every detail to ensure smooth deployment.",
+        "Innovative and well-designed mobile apps differentiate your business from competitors, enabling you to capture market share and lead industry trends.",
       icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "Post-Launch Support",
-      description:
-        "Capyngen offers ongoing support, updates, and feature enhancements to keep your app ahead of the competition.",
-      icon: <FaTasks className="text-4xl" />,
     },
   ];
+
   const cardsSectionData2 = [
     {
       title: "Healthcare",
@@ -465,9 +447,9 @@ const AppDevelopment = () => {
   const slides = [
     {
       image: assets.appDevelopment,
-      title: "The Ultimate Guide to App Development: From Idea to Launch",
+      title: "App Development : From Concept to Launch",
       description:
-        "Apps in the digital world have changed their roles, now they are not only the users’ helpers, but also powerful business engines. The knowledge of app development is the key that will keep you, no matter if you are an entrepreneur, a startup founder, or a business manager, in front of the race in the competitive market. Mobile apps open the door for businesses to access the global user base of millions, which is the primary driver of convenience, engagement, and revenue growth.",
+        "Mobile applications have ceased to be mere tools, they are the main drivers of business expansion. Mobile application knowledge can assist entrepreneurs, startups, and managers in accessing worldwide markets, promoting customer loyalty, and improving incomes. This guide explains Android, iOS, cross-platform, and enterprise applications, offering the inside stories that go beyond creation, testing, maintenance, and optimization of an idea to a successful and user-friendly application.",
     },
     {
       image: assets.appDevelopment,
@@ -487,13 +469,13 @@ const AppDevelopment = () => {
       <div className="relative z-10">
         <AppTypesSection />
         <CardsSection
-          heading="Our Consulting Process"
-          subheading="Our consulting process can help you see your app in a new light. At Capyngen, we don't just build apps; we also aid you every step of the way. You may be confident that you'll get professional guidance from the idea stage to the launch with our mobile app development consulting services."
+          heading="Why App Development Matters"
+          subheading=""
           services={cardsSectionData1}
           headColor="text-white"
           cardBg="bg-gray-700"
           sectionBg="bg-gray-900"
-          hoverBg="hover:bg-blue-800 rounded-3xl hover:scale-98"
+          hoverBg="hover:bg-blue-800 hover:scale-98"
           textColor="text-white"
           hoverTextColor=""
         />

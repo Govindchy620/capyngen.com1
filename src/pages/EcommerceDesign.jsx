@@ -10,7 +10,18 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
+import { LifeBuoy, Sparkles, Users } from "lucide-react";
+import Banner8 from "../components/Banner8";
+import GetStarted from "../components/GetStarted";
+import CardsSection from "../components/CardsSection";
+import {
+  FaChartLine,
+  FaCogs,
+  FaLaptopCode,
+  FaLightbulb,
+  FaProjectDiagram,
+  FaTasks,
+} from "react-icons/fa";
 
 const EcommerceDesign = () => {
   const faqItems = [
@@ -52,52 +63,28 @@ const EcommerceDesign = () => {
   ];
   const solutionsData = [
     {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      title: "Ecommerce Consulting",
+      desc: "Expert support helps businesses adopt more effective ecommerce website design services strategies, improve UX, and reach higher conversions with less effort.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      title: "Ecommerce Security",
+      desc: "Store data and user information are guarded with innovative security solutions, secure payment integrations, and constant monitoring that assures online transactions' safety.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our E-Commerce Design company, integrating e-learning tools, course management, and student engagement features.",
+      title: "Ecommerce Implementation",
+      desc: "The installation of tailor-made e-commerce website design solutions, apps, and third-party services is carried out without hindering the existing platform's services and is aimed at increasing the functionality and user-friendliness of the platform.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our E-Commerce Design services to highlight your skills and attract potential clients.",
+      title: "Ecommerce Help Desk Services",
+      desc: "A support system which is always available for solving e-commerce website and mobile app design-related problems is the kind which ensures easy store operations as well as the satisfaction of customers.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our E-Commerce Design company, featuring responsive designs and seamless navigation for a better user experience.",
+      title: "Ecommerce Management & Support",
+      desc: "Support and management continue to be available for ecommerce websites and apps so that the platforms are not only run efficiently and updated but also perform optimally all the time.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
-    },
-    {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive E-Commerce Design solutions tailored to your needs.",
-    },
-    {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our E-Commerce Design company, featuring secure payment gateways, inventory management, and optimized user journeys.",
-    },
-    {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our E-Commerce Design services, that enhance donor engagement and effectively communicate your mission.",
-    },
-    {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
-    },
-    {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
-    },
-    {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      title: "Ecommerce Migration",
+      desc: "The transfer of ecommerce websites, apps, and databases to new platforms or upgraded systems has been made smooth and efficient with minimal service interruption and maximum reliability.",
     },
   ];
   const servicesData = [
@@ -126,52 +113,165 @@ const EcommerceDesign = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const cardsSectionData = [
+    {
+      title: "Ecommerce Website Design",
+      description:
+        "The visually attractive ecommerce website design services can power up an online business. The experts of ecommerce website designing craft responsive, user-friendly, and high-converting websites that are equally suitable for startups and enterprises.Ecommerce UI Design",
+      icon: <FaLightbulb className="text-4xl" />,
+    },
+    {
+      title: "Ecommerce App UI Design",
+      description:
+        "Be reachable by an app instead of a website if you have a smart ecommerce mobile app design. Beautiful Android and iOS apps go with seamless ecommerce app UI design and together they elevate the engagement and loyalty.",
+      icon: <FaChartLine className="text-4xl" />,
+    },
+    {
+      title: "Ecommerce Database Design",
+      description:
+        "Help an online store to operate at its best using secure ecommerce database design. The scalable, efficient, and reliable databases support smooth transactions, and data management.",
+      icon: <FaCogs className="text-4xl" />,
+    },
+    {
+      title: "Custom Ecommerce Solutions",
+      description:
+        "Custom e-commerce website design solutions that are specifically tailored to a brand's requirements are the perfect fit. The platforms that are designed are not only flexible and scalable but also designed for growth and conversions.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Ecommerce Web Design Services",
+      description:
+        "Ecommerce web design services are a perfect match of creativity and technology. The websites are all mobile-responsive, fast, and optimized for user experience and search engines.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Ecommerce Mobile App Design",
+      description:
+        "Increase the number of people who can find your store by mobile app design. The cross-platform apps offer advanced features such as push notifications, personalized dashboards, and seamless payment gateways that allow for easy integration with your store.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+    {
+      title: "Affordable Ecommerce Website Design",
+      description:
+        "Reasonable but professional, affordable ecommerce website design services provide customers with high-quality solutions. With the right plan and good management, startups and small businesses can build powerful online stores that fit their budgets.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Enterprise Ecommerce Solutions",
+      description:
+        "Give enterprises the best service of e-commerce design for businesses. The end-to-end services of e-commerce website design come with the incorporation of analytics, performance optimization, and advanced UI/UX strategies.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Industries Transformed with Ecommerce Design Solutions",
+      description:
+        "Customized ecommerce design services empower businesses from all corners of the globe to create cutting-edge web and mobile platforms that foster engagement, increase sales, and surpass customer expectations.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+  ];
+  const features = [
+    {
+      icon: <Users className="w-10 h-10 text-blue-500" />,
+      title: "Proof & MVP",
+      description:
+        "Create and test Minimum Viable Products for ideas validation purposes through custom e-commerce website design solutions to target concepts and attract investors.",
+    },
+    {
+      icon: <Users className="w-10 h-10 text-blue-500" />,
+      title: "Prototype Development",
+      description:
+        "Fabricate working prototypes of ecommerce web design and ecommerce mobile app design to exhibit innovation and ease of use.",
+    },
+    {
+      icon: <Users className="w-10 h-10 text-blue-500" />,
+      title: "Launch Strategy",
+      description:
+        "Utilize data-driven product release methods for maximum exposure, participation, and conversions through ecommerce website design services.",
+    },
+    {
+      icon: <Users className="w-10 h-10 text-blue-500" />,
+      title: "Flexible models",
+      description:
+        "For scalable, cost-effective, and quality ecommerce design solutions, you can either go for the time and material or fixed price models.",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
-        <Banner
-          title="E-Commerce Design"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.eCommerceDesign}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
-        />
-      </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated E-Commerce Design Company"
-          description={[
-            `RichestSoft provides top-notch and oriented E-Commerce Design solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch E-Commerce Design services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best E-Commerce Design company in India, we provide best-in-class E-Commerce Design services.`,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-        />
+      <Banner8 />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Partner with a Company for Successful Ecommerce!"
+        description={[
+          "Revolutionize online businesses by using ecommerce design ideas that are the perfect reflection of brand goals. YouTube will be creating an excellent UI mobile app and web design if you share your concept with them, along with other things such as making the concept flawless.",
+        ]}
+        backgroundVideo={assets.backgroundVideo}
+      />
 
-        <BenefitsSection
-          heading="E-Commerce Design Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
-        />
-        <HowWeWork />
-        <WhyChoose />
-        <BenefitsSection
-          heading="E-Commerce Design Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level E-Commerce Design services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
-        />
-        <TechnologiesCarousel
-          title="E-Commerce Design Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
-        />
-        <OurServices />
-        <FAQSection2 items={faqItems} />
-        <ScrollRevealEffect />
-      </div>
+      <CardsSection
+        heading="Designing Ecommerce Solutions That Drive Sales"
+        subheading="Winning big with ecommerce design services that are precise and creative. As the top ecommerce website designing company, the team creates the startups' and enterprise businesses' scalable and aesthetically pleasing platforms to attract engagement and revenue growth."
+        services={cardsSectionData}
+        sectionBg="bg-gray-900"
+        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
+        hoverBg=""
+        height="h-96"
+        textColor="text-white"
+        hoverTextColor=""
+        headColor="text-white"
+      />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Empowering Growth Through Ecommerce Design Partnerships"
+        description={[
+          "Top ecommerce design professionals constitute a network that collaborates on elevating your online business. The team of experts comprising UI/UX specialists and mobile app designers delivers you innovative solutions that lead to increased sales, improved user experience, and a competitive edge in digital marketplace.",
+        ]}
+        backgroundVideo={assets.backgroundVideo}
+      />
+
+      <WhyChoose
+        heading="Ecommerce Solutions, Investor-Ready, by Designers That Are Experts"
+        intro="Custom e-commerce website design solutions are accompanied with market validation, user testing, scalable architecture, launch strategy, and customer feedback integration. Make your online store or app available for testing by investors and refine it so as to be a high-performing conversion-driven ecommerce platform."
+        features={features}
+      />
+
+      <BenefitsSection
+        heading="Flexible engagement models"
+        desc={[
+          "Flexible engagement models are not a one-size-fits-all solution but rather be adjusted according to the specific needs of each ecommerce project. These models guarantee smooth partnership, low costs, and timely delivery, thus becoming the e-commerce website design solution that tailors the clients' needs and gives the highest quality results for online stores and mobile apps.",
+          "Solutions for ecommerce design and development have been the power source behind green brands ranging from startups to large global enterprises turning digital outlets and their mobile apps to reign over the online competitive market by engaging target audiences, sales promotions, and growth accelerator strategies.",
+        ]}
+        benefits={solutionsData}
+      />
+      <TechnologiesCarousel
+        title="E-Commerce Design Technologies We Use"
+        description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+        technologies={technologies}
+      />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Get in touch with one of the most reputable Ecommerce Design Professionals right now!"
+        description={[
+          "Willing to take your online business to the next level? Get in touch with a premier ecommerce design consultant to benefit from his personal expertise and guidance on tailor-made e-commerce website design solutions, mobile apps, and web platforms. The high-end and conversion-driven online store of your dreams can be a reality as early as today!",
+        ]}
+        backgroundVideo={assets.backgroundVideo}
+      />
+      <OurServices />
+      <FAQSection2 items={faqItems} />
+      <ScrollRevealEffect />
     </div>
   );
 };

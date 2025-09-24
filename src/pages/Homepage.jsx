@@ -90,22 +90,26 @@ const Homepage = () => {
   return (
     <div className="relative">
       {/* Fixed Background (HeroSection) */}
-      <HeroSection />
+      {/* Fixed Background (HeroSection) */}
+      <div className="sticky inset-0">
+        <HeroSection />
+      </div>
+      {/* <StickyScroll content={demoContent} />
       <TextParallaxContentExample />
-      <StickyScroll content={demoContent} />
-      <ParallaxScroll images={images} />;
-      <HorizontalProcessSection />
-      {/* <HomeAboutUs />
-      <WhyChooseUs /> */}
-      <ServicesCarousel />
-      <HomeServices />
-      <HomeIndustries />
-      <TestimonialCarousel />
-      <HomeBlogs />
-      <FAQSection items={faqItems} />
-      <ScrollRevealEffect />
+      <ParallaxScroll images={images} />; */}
+      {/* Foreground Content (scrolls over background) */}
+      <div className="relative z-10 bg-[#1B2B3A]">
+        <HomeAboutUs />
+        <WhyChooseUs />
+        <HorizontalProcessSection />
+        <ServicesCarousel />
+        <HomeServices />
+        <HomeIndustries />
+        <TestimonialCarousel />
+        <HomeBlogs />
+        <FAQSection items={faqItems} />
+        <ScrollRevealEffect />
+      </div>
     </div>
   );
 };
-
-export default Homepage;

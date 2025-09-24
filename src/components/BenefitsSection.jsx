@@ -28,9 +28,20 @@ const BenefitsSection = ({
           <h1 className="text-3xl md:text-6xl font-bold leading-tight">
             {heading}
           </h1>
-          <p className="text-base md:text-lg text-white max-w-3xl mx-auto lg:mx-0">
-            {desc}
-          </p>
+          {Array.isArray(desc) ? (
+            desc.map((paragraph, idx) => (
+              <p
+                key={idx}
+                className="text-base md:text-lg text-white max-w-3xl mx-auto lg:mx-0 mb-4"
+              >
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className="text-base md:text-lg text-white max-w-3xl mx-auto lg:mx-0">
+              {desc}
+            </p>
+          )}
 
           {/* Large Image (Optional) */}
           {image && (
@@ -76,6 +87,10 @@ const BenefitsSection = ({
           })}
         </div>
       </div>
+      <p className="text-center text-white mt-10 text-xl font-semibold max-w-6xl mx-auto">
+        One stop for development and maintenance of ecommerce websites, mobile
+        apps, and online platforms to ensure effortless shopping experiences.
+      </p>
     </section>
   );
 };

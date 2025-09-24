@@ -189,42 +189,42 @@ const BlockchainDevelopment = () => {
       description:
         "Blockchain information is saved in a decentralized and tamper-evident manner. Each transaction or piece of data is saved in a secure ledger that can't be modified, providing total transparency and minimizing the likelihood of fraud.",
       icon: <FaLightbulb className="text-4xl" />,
-      cardBg: "bg-red-100 hover:bg-red-400",
+      cardBg: "bg-[#ed5565] hover:bg-[#da4453]",
     },
     {
       title: "Decentralization & Reliability",
       description:
         "In contrast to other systems, blockchain is decentralized, so there is no common point of failure. This enhances reliability, keeps data available at all times, and guards against cyberattacks.",
       icon: <FaChartLine className="text-4xl" />,
-      cardBg: "bg-blue-100 hover:bg-blue-400",
+      cardBg: "bg-[#5d9cec] hover:bg-[#4a89dc]",
     },
     {
       title: "Smart Contract Automation",
       description:
         "Smart contracts on the blockchain execute agreements automatically on conditions being met. This reduces intermediaries' requests, saves funds, and speeds up processes while ensuring rules' application to the letter.",
       icon: <FaCogs className="text-4xl" />,
-      cardBg: "bg-purple-100 hover:bg-purple-400",
+      cardBg: "bg-[#ac92ec] hover:bg-[#967adc]",
     },
     {
       title: "Scalability & Future-Readiness",
       description:
         "Blockchain technology is designed to scale with increasing user requirements. Blockchain is future-proof and can handle more transactions without compromising performance.",
       icon: <FaLightbulb className="text-4xl" />,
-      cardBg: "bg-gray-100 hover:bg-gray-400",
+      cardBg: "bg-[#ccd1d9] hover:bg-[#aab2bd]",
     },
     {
       title: "Traceability & Auditability",
       description:
         "All transactions within a blockchain are kept, dated, and are verifiable. This enables full traceability, thus making audits, compliance, and reporting transparent and simple.",
       icon: <FaChartLine className="text-4xl" />,
-      cardBg: "bg-yellow-100 hover:bg-yellow-400",
+      cardBg: "bg-[#ffce54] hover:bg-[#f6bb42]",
     },
     {
       title: "Enhanced Trust & Customer Confidence",
       description:
         "Securing data and making it transparent and verifiable, blockchain encourages stakeholders and users to trust each other. Blockchain ensures accountability and promotes trust in digital transactions and interactions.",
       icon: <FaCogs className="text-4xl" />,
-      cardBg: "bg-green-100 hover:bg-green-400",
+      cardBg: "bg-[#a0d468] hover:bg-[#8cc152]",
     },
   ];
   const cardsSectionGridData1 = [
@@ -467,7 +467,7 @@ const BlockchainDevelopment = () => {
         sectionBg="bg-black"
         hoverBg=""
         textColor="text-gray-800"
-        hoverTextColor=""
+        hoverTextColor="hover:text-gray-900 transition-all"
       />
       <TopRatedCompany
         title="Innovative Blockchain Development Company"
@@ -477,7 +477,7 @@ const BlockchainDevelopment = () => {
           `Capyngen offers premier end to end blockchain services as a leading Blockchain Development Company in India, enabling businesses to adopt decentralized technologies and seamlessly integrate measurable results.
 `,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.blockchainDevelopmentHero1}
         background={assets.patternBg1}
       />
       <GetStarted
@@ -512,6 +512,7 @@ const BlockchainDevelopment = () => {
           "Capyngen offers complete proof Blockchain Consulting Services and Enterprise Blockchain Services to meet your specific enterprise needs. We integrate strategic planning, rigorous analysis, and critical thinking to construct and deploy blockchain solutions that solve complex problems in an economical manner.",
           "We strive to deliver custom, high-value solutions to improve operational efficiency, introduce transparency, and allow business to leverage the full potential of blockchain technology. We approach each project with precision to deploy on scalability, security, and business requirements to fit your existing business environment.",
         ]}
+        backgroundVideo={assets.backgroundVideo}
       />
 
       <BenefitsSection

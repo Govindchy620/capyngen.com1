@@ -63,6 +63,7 @@ import appDevelopment from "./appDevelopment.jpg";
 import customAiSolution from "./customAiSolution.jpg";
 import eCommerceSolution from "./eCommerceSolution.webp";
 import blockchainDevelopment from "./blockchainDevelopment.webp";
+import blockchainDevelopmentHero1 from "./blockchainDevelopmentHero1.png";
 import devops from "./devops.jpg";
 import applicationSolution from "./applicationSolution.webp";
 import crmManagement from "./crmManagement.jpg";
@@ -89,6 +90,7 @@ import workProcess3 from "./workProcess3.jpg";
 import workProcess4 from "./workProcess4.jpg";
 import workProcess5 from "./workProcess5.jpg";
 import getStarted from "./getStarted.webp";
+import backgroundVideo from "./backgroundVideo.mp4";
 
 export const assets = {
   homeAboutUs1,
@@ -182,6 +184,8 @@ export const assets = {
   workProcess4,
   workProcess5,
   getStarted,
+  blockchainDevelopmentHero1,
+  backgroundVideo,
 };
 
 export const navItems = [

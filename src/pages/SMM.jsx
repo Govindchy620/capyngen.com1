@@ -10,7 +10,18 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
+import Banner8 from "../components/Banner8";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import GetStarted from "../components/GetStarted";
+import CardsSection from "../components/CardsSection";
+import {
+  FaChartLine,
+  FaCogs,
+  FaLaptopCode,
+  FaLightbulb,
+  FaProjectDiagram,
+  FaTasks,
+} from "react-icons/fa";
 
 const SMM = () => {
   const faqItems = [
@@ -126,52 +137,145 @@ const SMM = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const cardsSectionData2 = [
+    {
+      title: "Social Media Marketing Services",
+      description:
+        "Amplify your brand with finely targeted social media marketing services, designed around the preferences of your audience and the goals of your business.",
+      icon: <FaLightbulb className="text-4xl" />,
+    },
+    {
+      title: "Social Media Promotion",
+      description:
+        "Utilize the power of social media promotion to spread the word of your brand through various techniques like organic reach, influencer marketing, and paid campaigns.",
+      icon: <FaChartLine className="text-4xl" />,
+    },
+    {
+      title: "Social Media Management Services",
+      description:
+        "Save time managing accounts with social media management services that guarantee regular posting, community engagement, and performance tracking.",
+      icon: <FaCogs className="text-4xl" />,
+    },
+    {
+      title: "Social Media Advertising",
+      description:
+        "Reach your goals quickly by social media advertising, bettering campaign to raise traffic, conversions, and ROI.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Custom Social Media Campaigns",
+      description:
+        "Creating personal campaigns that are your brand's and your audience's to healthily communicate the results are measurable and online visibility is enhanced.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Affordable Social Media Marketing Services",
+      description:
+        "Though priced reasonably, social media marketing services are always professional and effective in helping startups and small businesses create a high impact in the market within their budget.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+    {
+      title: "Enterprise Social Media Solutions",
+      description:
+        "Detailed planning for corporations includes data measurement, efficiency, and creative social media marketing, carried out by a professional social media marketing agency for enterprises.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+    {
+      title: "Industries Transformed with Social Media Marketing",
+      description:
+        "Businesses across the globe are enabled by bespoke social media marketing to boost their presence, attract the audience, and garner tangible growth in their respective markets.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+    {
+      title: "Social Media Collaborations for Business Empowerment",
+      description:
+        "Professionals in social media marketing of the highest caliber team up to improve your digital visibility. The mix of content creators, strategists, and advertising specialists energizes your brand with campaigns that lead to the growth of engagement, audience, and brand awareness.",
+      icon: <FaTasks className="text-4xl" />,
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
-        <Banner
-          title="SMM"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.seo}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
-        />
-      </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated SMM Company"
-          description={[
-            `RichestSoft provides top-notch and oriented SMM solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch SMM services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best SMM company in India, we provide best-in-class SMM services.`,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-        />
+      <Banner8
+        titleMain="Social Media Marketing"
+        titlePrefix=""
+        titleSuffix="Services & Custom Strategies"
+        description={`Promote your brand with the help of a professional social media marketing that goes in tandem with creative initiatives, strategic planning, and smooth implementation. Targeted social media advertising and social media management services guarantee rise of engagement, improved conversion and trackable outcomes.`}
+        imageSrc={assets.socialMediaMarketing}
+        imageAlt="Social Media Marketing"
+        bgColor="bg-gray-900"
+        iconColor="bg-blue-700"
+        reverse={true}
+      />
 
-        <BenefitsSection
-          heading="SMM Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
-        />
-        <HowWeWork />
-        <WhyChoose />
-        <BenefitsSection
-          heading="SMM Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level SMM services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
-        />
-        <TechnologiesCarousel
-          title="SMM Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
-        />
-        <OurServices />
-        <FAQSection2 items={faqItems} />
-        <ScrollRevealEffect />
-      </div>
+      <TopRatedCompany
+        title="Professional social media marketing is the key to a business transformation"
+        description={[
+          `One of the main benefits of social media is the potential it possesses to be a driver of business growth and a key element in the whole company business strategy. The best social media marketing strategies and the professional social media agency for enterprises ensure that the campaigns lead to the audience getting attracted, creating a community, and generating substantial results.`,
+        ]}
+        image={assets.whyChooseUs}
+        background={assets.patternBg1}
+      />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Get the Win with a Social Media Marketing Agency Partner"
+        description={[
+          "Use social media marketing that matches with company objectives to bring a change to your digital presence. Team up with one of the leading agencies in social media marketing, to make your campaigns successful on Facebook, Instagram, LinkedIn, Twitter, and TikTok where they can get the most attention and interaction.",
+        ]}
+        backgroundVideo={assets.backgroundVideo}
+      />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Designing Social Media Marketing Campaigns That Convert"
+        description={[
+          "Grow your business through social media advertising and campaigns that are innovative, targeted, and result-oriented. Being one of the top social media marketing firms, we create scalable projects for startups and enterprises that aim to bring in new followers, interaction, and revenue.",
+        ]}
+        image={assets.getStarted}
+      />
+      <CardsSection
+        heading="Social Media Marketing Services"
+        subheading=""
+        services={cardsSectionData2}
+        headColor="text-white"
+        sectionBg="bg-gray-900"
+        cardBg="bg-transparent"
+        hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
+        textColor="text-white"
+        hoverTextColor=""
+        height="h-96"
+        textSize="text-lg"
+      />
+
+      <BenefitsSection
+        heading="SMM Solutions We Offer"
+        desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
+        benefits={solutionsData}
+      />
+      <HowWeWork />
+      <WhyChoose />
+      <BenefitsSection
+        heading="SMM Services We Offer"
+        desc="Partner with RichestSoft for enterprise-level SMM services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
+        benefits={servicesData}
+        reverse
+      />
+      <TechnologiesCarousel
+        title="SMM Technologies We Use"
+        description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+        technologies={technologies}
+      />
+      <OurServices />
+      <FAQSection2 items={faqItems} />
+      <ScrollRevealEffect />
     </div>
   );
 };

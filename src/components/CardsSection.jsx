@@ -34,7 +34,18 @@ const CardsSection = ({
               key={index}
               className={`${cardBg} ${hoverBg} ${textColor} ${hoverTextColor} ${service.cardBg} ${height} p-6 text-left transition`}
             >
-              <div className="mb-4">{service.icon}</div>
+              <div className="mb-4">
+                {service.image ? (
+                  <img
+                    src={service.image}
+                    alt={service.title || `service-img-${index}`}
+                    className="mx-auto w-full object-cover"
+                    style={{ maxHeight: "200px", objectPosition: "center" }}
+                  />
+                ) : (
+                  service.icon
+                )}
+              </div>
               <h3 className={`${cardHeadSize} font-bold mb-2`}>
                 {service.title}
               </h3>
