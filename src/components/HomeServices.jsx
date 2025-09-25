@@ -23,12 +23,11 @@ const servicesData = [
     card: {
       image: "/placeholder.svg?height=200&width=300&text=Banking",
       description:
-        "Giving banks and other financial institutions safe, scalable, and cutting-edge technology solutions to help them go digital.",
+        "Empowering banks and financial institutions with reliable, scalable, and cutting-edge technological solutions.",
       features: [
-        "Best Mobile Banking App Development",
-        "Updating Core Banking",
-        "Safe Ways to Pay",
-        "Following the rules and managing risk",
+        "Top Mobile Banking Applications",
+        "Upgrading Core Banking",
+        "Secure Payment Solutions",
       ],
     },
   },
@@ -297,7 +296,6 @@ export default function HomeServices() {
     <div
       ref={sectionRef}
       className="min-h-screen w-full flex flex-col bg-cover bg-center"
-      style={{ backgroundImage: `url(${assets.patternBg1})` }}
     >
       <BestHeading title="" highlight="Industries" />
       <div className="flex-1 w-full flex flex-col relative">

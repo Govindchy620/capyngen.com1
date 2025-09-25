@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import HomeAboutUs from "../components/HomeAboutUs";
 import HorizontalProcessSection from "../components/HorizontalProcessSection";
 import HomeIndustries from "../components/HomeIndustries";
@@ -15,8 +15,23 @@ import { StickyScroll } from "../components/StickyScroll";
 import { TextParallaxContentExample } from "../components/TextParallaxContent";
 import { ParallaxScroll } from "../components/ParallaxScroll";
 import { assets } from "../assets/assets";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const Homepage = () => {
+  const containerRef = useRef(null);
+  const [init, setInit] = useState(false);
+
+  // Initialize particles engine only once
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+      setInit(true);
+    });
+  }, []);
+
+  if (!init) return null;
+
   const faqItems = [
     {
       question: "How long does it take for funds to show in my wallet?",
@@ -88,7 +103,34 @@ const Homepage = () => {
   // useSplitTextAnimation("h1");
 
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative overflow-x-hidden" ref={containerRef}>
+      {/* Particles Background */}
+      <Particles
+        id="tsparticles"
+        className="absolute inset-0 z-0"
+        options={{
+          background: { color: "#0a0a0a" },
+          fpsLimit: 60,
+          interactivity: {
+            events: { onHover: { enable: true, mode: "repulse" } },
+            modes: { repulse: { distance: 120 }, push: { quantity: 4 } },
+          },
+          particles: {
+            number: { value: 120, density: { enable: true, area: 900 } },
+            color: { value: "#ffffff" },
+            links: {
+              enable: true,
+              color: "#ffffff",
+              distance: 150,
+              opacity: 0.4,
+              width: 1,
+            },
+            move: { enable: true, speed: 1 },
+            size: { value: { min: 1, max: 4 } },
+            opacity: { value: 0.6 },
+          },
+        }}
+      />
       {/* Fixed Background (HeroSection) */}
       {/* Fixed Background (HeroSection) */}
       <div className="sticky inset-0">
@@ -99,25 +141,40 @@ const Homepage = () => {
       <ParallaxScroll images={images} />; */}
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <div className="h-30 bg-gradient-to-b from-[#000] to-[#0010A2]"></div>
-        <div className="py-16 bg-gradient-to-b from-[#0010A2] to-[#708090] [&>*]:!mt-0 [&>*]:!mb-0">
+        <div className="h-10 bg-gradient-to-b from-[#000]/90 to-[#000]/90"></div>
+        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
           <HomeAboutUs />
         </div>
 
-        <div className="h-10 bg-gradient-to-b from-[#708090] to-[#708090]"></div>
+        {/* <div className="h-10 bg-gradient-to-b from-[#0010A2]/90 to-[#0010A2]/90"></div> */}
 
-        <div className="py-10 bg-gradient-to-b from-[#708090] to-[#000] [&>*]:!mt-0 [&>*]:!mb-0">
+        <div className="py-10 bg-gradient-to-b from-[#0010A2]/90 to-[#708090]/90 [&>*]:!mt-0 [&>*]:!mb-0">
             <WhyChooseUs />
         </div>
-
-        <HorizontalProcessSection />
-        <ServicesCarousel />
-        <HomeServices />
-        <HomeIndustries />
-        <TestimonialCarousel />
-        <HomeBlogs />
-        <FAQSection items={faqItems} />
-        <ScrollRevealEffect />
+        <div className="py-10 bg-gradient-to-b from-[#708090]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <HorizontalProcessSection />
+        </div>
+        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <ServicesCarousel />
+        </div>
+        <div className="py-10 bg-gradient-to-b from-[#0010A2]/90 to-[#708090]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <HomeServices />
+        </div>
+        <div className="py-10 bg-gradient-to-b from-[#708090]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <HomeIndustries />
+        </div>
+        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <TestimonialCarousel />
+        </div>
+        <div className="py-10 bg-gradient-to-b from-[#0010A2]/90 to-[#708090]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <HomeBlogs />
+        </div>
+        <div className="py-10 bg-gradient-to-b from-[#708090]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <FAQSection items={faqItems} />
+        </div>
+        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+          <ScrollRevealEffect />
+        </div>
       </div>
     </div>
   );

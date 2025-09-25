@@ -91,6 +91,7 @@ import workProcess4 from "./workProcess4.jpg";
 import workProcess5 from "./workProcess5.jpg";
 import getStarted from "./getStarted.webp";
 import backgroundVideo from "./backgroundVideo.mp4";
+import heroVideo from "./heroVideo.mp4";
 
 export const assets = {
   homeAboutUs1,
@@ -186,6 +187,7 @@ export const assets = {
   getStarted,
   blockchainDevelopmentHero1,
   backgroundVideo,
+  heroVideo,
 };
 
 export const navItems = [

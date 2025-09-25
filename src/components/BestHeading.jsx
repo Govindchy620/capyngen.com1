@@ -5,6 +5,7 @@ import TextType from "./TextType";
 export default function BestHeading({
   title = "Our Best",
   highlight = "Work",
+  textColor = "white",
 }) {
   return (
     <div className=" flex flex-col md:flex-row items-center md:items-start justify-center">
@@ -18,6 +19,7 @@ export default function BestHeading({
         typingSpeed={80}
         startOnVisible={true}
         showCursor={true}
+        textColor={textColor}
         className="text-5xl font-extrabold"
       />
     </div>

@@ -318,14 +318,7 @@ const ServicesCarousel = () => {
   const handleNext = () => sliderRef.current?.slickNext();
 
   return (
-    <section
-      className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh]"
-      style={{
-        backgroundImage: `url(${assets.patternBg1})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh]">
       <BestHeading title="" highlight="Services" />
       <div className="py-6 sm:py-14">
         <div className="mx-auto w-full max-w-screen-2xl px-2  sm:px-6">

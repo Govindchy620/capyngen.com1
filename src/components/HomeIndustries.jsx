@@ -6,14 +6,7 @@ import BestHeading from "./BestHeading";
 
 export default function HomeIndustries() {
   return (
-    <div
-      className="min-h-screen text-white"
-      style={{
-        backgroundImage: `url(${assets.patternBg1})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="min-h-screen text-white">
       <BestHeading title="" highlight="Technologies" />
       {/* Top Section */}
       <div className="relative flex flex-col pt-15 lg:flex-row items-center justify-center max-w-[90rem] px-4 md:px-6 lg:px-12 mx-auto w-full">

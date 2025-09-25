@@ -67,7 +67,7 @@ export default function ScrollRevealEffect() {
     { bg: "bg-yellow-400", text: "About The" },
     { bg: "bg-cyan-400", text: "Project" },
     {
-      bg: "",
+      bg: "transparent",
       text: "Form",
       style: {
         backgroundImage: `url(${assets.bg1})`,
@@ -80,7 +80,7 @@ export default function ScrollRevealEffect() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden"
+      className="relative w-full h-screen overflow-hidden "
     >
       {sections.map((section, i) => (
         <div

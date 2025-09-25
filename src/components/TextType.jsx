@@ -23,6 +23,7 @@ const TextType = ({
   cursorClassName = "",
   cursorBlinkDuration = 0.5,
   textColors = [],
+  textColor, // ✅ new prop
   variableSpeed,
   onComplete,
   startOnVisible = false,
@@ -35,20 +36,24 @@ const TextType = ({
   const cursorRef = useRef(null);
   const containerRef = useRef(null);
 
+  // Reverse or normal text
   const processedText = useMemo(
     () => (reverseMode ? text.split("").reverse().join("") : text),
     [text, reverseMode]
   );
 
+  // Variable speed typing
   const getRandomSpeed = useCallback(() => {
     if (!variableSpeed) return typingSpeed;
     const { min, max } = variableSpeed;
     return Math.random() * (max - min) + min;
   }, [variableSpeed, typingSpeed]);
 
+  // Determine text color
   const getCurrentTextColor = () => {
-    if (textColors.length === 0) return "#ffffff";
-    return textColors[0];
+    if (textColor) return textColor; // ✅ priority
+    if (textColors.length > 0) return textColors[0];
+    return "inherit"; // fallback
   };
 
   // Cursor blink animation
@@ -65,7 +70,7 @@ const TextType = ({
     }
   }, [showCursor, cursorBlinkDuration]);
 
-  // Restart when visible
+  // Restart typing when visible
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
 
@@ -73,7 +78,6 @@ const TextType = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Reset and restart typing
             setDisplayedText("");
             setCurrentCharIndex(0);
             setIsVisible(true);
@@ -87,7 +91,7 @@ const TextType = ({
     return () => observer.disconnect();
   }, [startOnVisible]);
 
-  // Typing effect only
+  // Typing effect
   useEffect(() => {
     if (!isVisible) return;
 
@@ -108,7 +112,6 @@ const TextType = ({
     return () => clearTimeout(timeout);
   }, [
     currentCharIndex,
-    displayedText,
     typingSpeed,
     variableSpeed,
     getRandomSpeed,
@@ -127,22 +130,27 @@ const TextType = ({
       className: `text-type ${className}`,
       ...props,
     },
-    <span
-      className="text-type__content"
-      style={{ color: getCurrentTextColor() }}
-    >
-      {displayedText}
-    </span>,
-    showCursor && (
+    <>
       <span
-        ref={cursorRef}
-        className={`text-type__cursor ${cursorClassName} ${
-          shouldHideCursor ? "text-type__cursor--hidden" : ""
-        }`}
+        className="text-type__content"
+        style={{ color: getCurrentTextColor() }}
       >
-        {cursorCharacter}
+        {displayedText}
       </span>
-    )
+      {showCursor && (
+        <span
+          ref={cursorRef}
+          className={`text-type__cursor ${cursorClassName}`}
+          style={{
+            visibility: shouldHideCursor ? "hidden" : "visible", // ✅ avoids layout shift
+            display: "inline-block", // ✅ keeps space reserved
+            whiteSpace: "pre", // ✅ prevents collapsing
+          }}
+        >
+          {cursorCharacter}
+        </span>
+      )}
+    </>
   );
 };
 

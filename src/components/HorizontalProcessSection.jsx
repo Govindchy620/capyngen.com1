@@ -16,37 +16,37 @@ const HorizontalProcessSection = () => {
   const processSteps = [
     {
       id: 1,
-      title: "Discovery & Consultation",
+      title: "Goal Setting & Strategy",
       description:
-        "We start by getting to know your company, your audience, and your objectives. This helps us create a solid foundation for unique digital and IT solutions.",
-      image: assets.workProcess1, // <-- new image
+        "We start by establishing business objectives and identifying key performance indicators (KPIs) that are consistent with your vision. Such a plan will make sure that every digital marketing service will have a measurable positive effect.",
+      image: assets.workProcess1,
     },
     {
       id: 2,
-      title: "Planning and Strategy",
+      title: "Audience Research & Insights",
       description:
-        "Our professionals come up with sensible, data-driven strategies that leverage new ideas and technology to make sure that we can expand and stay ahead of the competition in the long run.",
+        "We dig into the numbers to find the best customers for your company. By discovering their needs and wants, we can develop products that will attract their attention and keep them engaged.",
       image: assets.workProcess2,
     },
     {
       id: 3,
-      title: "Design & Development",
+      title: "Data-Driven Performance",
       description:
-        "We make contemporary, easy-to-use, and intuitive solutions, and we also construct powerful IT frameworks that operate well on all platforms.",
+        "Every act we perform is followed up with the latest data that we have. As we spot patterns and opportunities, we adjust our strategy to make sure that your SEO, social media & marketing efforts will give you the greatest possible return on your investment.",
       image: assets.workProcess3,
     },
     {
       id: 4,
-      title: "Testing & Optimization",
+      title: "Execution & Continuous Optimization",
       description:
-        "Before going live, every solution is put through a lot of testing and optimization to make sure it is secure, scalable, and dependable.",
+        "We are very careful about implementing our programs from the step of the takeoff to that of the landing. Our team is constantly working on the smallest parts of the programs, thus ensuring that your IT services and digital marketing will be long-term profitable.",
       image: assets.workProcess4,
     },
     {
       id: 5,
-      title: "Launch & Maintenance",
+      title: "Reporting & Transparent Communication",
       description:
-        "We ensure your project goes online smoothly and stays updated with maintenance and enhancements, keeping your firm future-ready and competitive.",
+        "We make accessible reports and keep you posted at each step, thus enabling full understanding of and quantifiable outcomes from your IT consulting services and custom software development initiatives.",
       image: assets.workProcess5,
     },
   ];
@@ -56,64 +56,59 @@ const HorizontalProcessSection = () => {
     const container = containerRef.current;
     if (!section || !container) return;
 
-    const updateScroll = () => {
+    let scrollTriggerInstance, horizontalScrollTween;
+
+    const calculateScrollDistance = () => {
       const viewportWidth = window.innerWidth;
-      const cardElements = container.querySelectorAll(".process-card");
-      const lastCard = cardElements[cardElements.length - 1];
+      const cards = container.querySelectorAll(".process-card");
+      const lastCard = cards[cards.length - 1];
       const lastCardRightEdge = lastCard
         ? lastCard.offsetLeft + lastCard.offsetWidth
         : 0;
       const buffer = 200;
+      return Math.max(0, lastCardRightEdge - viewportWidth + buffer);
+    };
 
-      const scrollDistance = Math.max(
-        0,
-        lastCardRightEdge - viewportWidth + buffer // Add 20px buffer, tweak as needed
-      );
-
-      if (container) {
-        container.style.paddingRight = `${viewportWidth}px`;
-      }
-
-      // Clear previous ScrollTriggers if any
+    const setupAnimation = () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
 
-      // Create main pin ScrollTrigger
-      const st = ScrollTrigger.create({
+      const scrollDistance = calculateScrollDistance();
+      container.style.paddingRight = `${window.innerWidth}px`;
+
+      scrollTriggerInstance = ScrollTrigger.create({
         id: "processPin",
         trigger: section,
         start: "top top",
         end: `+=${scrollDistance}`,
         pin: true,
-        scrub: true,
+        scrub: 1,
         anticipatePin: 1,
         invalidateOnRefresh: true,
       });
 
-      setPinReadyKey(st.start);
+      setPinReadyKey(scrollTriggerInstance.start);
 
-      // Horizontal scroll animation
-      const horizontalScroll = gsap.to(container, {
+      horizontalScrollTween = gsap.to(container, {
         x: -scrollDistance,
         ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: () => st.start,
-          end: () => st.end,
+          start: () => scrollTriggerInstance.start,
+          end: () => scrollTriggerInstance.end,
           scrub: true,
           invalidateOnRefresh: true,
         },
       });
 
-      // Animate cards (unchanged)
-      processSteps.forEach((_, index) => {
-        const card = container.querySelector(`.process-card-${index}`);
+      processSteps.forEach((_, idx) => {
+        const card = container.querySelector(`.process-card-${idx}`);
         if (!card) return;
 
         gsap.fromTo(
           card,
           {
             opacity: 0,
-            y: index % 2 === 0 ? -100 : 100, // Top cards from above, bottom cards from below
+            y: idx % 2 === 0 ? -100 : 100,
             scale: 0.3,
           },
           {
@@ -123,7 +118,7 @@ const HorizontalProcessSection = () => {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              containerAnimation: horizontalScroll,
+              containerAnimation: horizontalScrollTween,
               start: "left 90%",
               end: "left 70%",
               scrub: 0.8,
@@ -131,28 +126,31 @@ const HorizontalProcessSection = () => {
           }
         );
       });
-
-      return () => {
-        st.kill();
-        horizontalScroll.scrollTrigger?.kill();
-      };
     };
-    const cleanup = updateScroll();
 
-    window.addEventListener("resize", () => {
-      cleanup?.();
-      updateScroll();
-    });
+    setupAnimation();
 
-    window.addEventListener("orientationchange", () => {
-      cleanup?.();
-      updateScroll();
-    });
+    // Debounced resize handler
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (scrollTriggerInstance) scrollTriggerInstance.kill();
+        if (horizontalScrollTween && horizontalScrollTween.scrollTrigger)
+          horizontalScrollTween.scrollTrigger.kill();
+        setupAnimation();
+      }, 150);
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
 
     return () => {
-      cleanup?.();
-      window.removeEventListener("resize", updateScroll);
-      window.removeEventListener("orientationchange", updateScroll);
+      if (scrollTriggerInstance) scrollTriggerInstance.kill();
+      if (horizontalScrollTween && horizontalScrollTween.scrollTrigger)
+        horizontalScrollTween.scrollTrigger.kill();
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
     };
   }, []);
 
@@ -160,11 +158,7 @@ const HorizontalProcessSection = () => {
     <section
       ref={sectionRef}
       className="relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${assets.patternBg1})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      aria-label="Capyngen Process Section"
     >
       <div className="h-screen overflow-hidden relative z-10">
         <div
@@ -174,18 +168,22 @@ const HorizontalProcessSection = () => {
         >
           <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
             <div className="text-center max-w-7xl relative z-10">
-              <BestHeading title="" highlight="Our Work Process" />
+              <BestHeading
+                title=""
+                highlight="The Capyngen Approach"
+                textColor="white"
+              />
               <div className="mt-16">
-                {" "}
-                {/* <- mt-15 -> mt-16 (valid) */}
-                <p className="text-white/90 text-base md:text-xl leading-relaxed max-w-4xl mx-auto font-medium">
-                  Our way of doing things at Capyngen is simple, works together,
-                  and gets results. We work closely with your team to figure out
-                  what you want to achieve, come up with new ways to do it, and
-                  then show you how well it worked. We help businesses reach
-                  their goals faster, smarter, and with lasting effects for
-                  long-term success by combining creativity, technology, and
-                  expertise.
+                <p className="text-base text-white md:text-xl leading-relaxed max-w-4xl mx-auto font-medium">
+                  At Capyngen, we make strategy work for you with intelligent,
+                  data-backed steps that increase effectiveness and expansion.
+                  Everything from custom software and application solutions to
+                  cloud platforms and digital strategies is personalized around
+                  your business objectives. Our skilled team takes all the
+                  necessary steps, maintains the performance, and tracks the
+                  outcomes, thus, helping you to keep up with the competition,
+                  improve customer experiences, and open new doors of long-term
+                  success.
                 </p>
               </div>
             </div>
@@ -194,8 +192,8 @@ const HorizontalProcessSection = () => {
           {processSteps.map((step, index) => (
             <div
               key={step.id}
-              className={`flex items-center justify-center h-full`}
-              style={{ width: "calc(30vw)" }}
+              className="flex items-center justify-center h-full w-[100vw] md:w-[30vw] "
+              // style={{ width: "calc(30vw)" }}
             >
               <div
                 className={`flex flex-col justify-${
@@ -238,8 +236,8 @@ const HorizontalProcessSection = () => {
             </div>
           ))}
 
-          {/* Spacer: keep desktop "breathing room", remove on mobile to eliminate tail gap */}
-          <div className="hidden md:block w-96 flex-shrink-0"></div>
+          {/* Spacer for breathing room on desktop */}
+          <div className="hidden md:block w-96 flex-shrink-0" />
         </div>
       </div>
     </section>
