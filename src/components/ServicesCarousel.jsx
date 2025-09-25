@@ -252,13 +252,15 @@ const cards = [
 ];
 
 const Card = ({ icon, title, desc, items }) => (
-  <div
+  <article
     className="h-92 relative group rounded-2xl p-6 min-h-[380px] flex flex-col shadow-lg
                bg-gradient-to-br from-white/90 via-white/80 to-white/90 
                backdrop-blur-md overflow-hidden border border-gray-200/40
                transition-all duration-500 hover:shadow-2xl hover:scale-[1.03] cursor-pointer"
+    tabIndex={0}
+    aria-label={`${title} service`}
+    role="group"
   >
-    {/* Glow border effect */}
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-2xl"></div>
 
     <div className="relative z-10 flex flex-col h-full">
@@ -272,7 +274,7 @@ const Card = ({ icon, title, desc, items }) => (
       </div>
       <h2 className="font-bold text-lg mb-2 text-gray-900">{title}</h2>
       <p className="text-gray-600 text-sm mb-4">{desc}</p>
-      <ul className=" text-gray-700 text-[15px] pl-3 list-disc flex-grow">
+      <ul className="text-gray-700 text-[15px] pl-3 list-disc flex-grow">
         {items.map((it, idx) => (
           <li key={idx} className="my-1">
             {it}
@@ -280,7 +282,7 @@ const Card = ({ icon, title, desc, items }) => (
         ))}
       </ul>
     </div>
-  </div>
+  </article>
 );
 
 const ServicesCarousel = () => {
@@ -318,20 +320,24 @@ const ServicesCarousel = () => {
   const handleNext = () => sliderRef.current?.slickNext();
 
   return (
-    <section className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh]">
+    <section
+      className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh]"
+      aria-label="Services"
+      role="region"
+    >
       <BestHeading title="" highlight="Services" />
       <div className="py-6 sm:py-14">
-        <div className="mx-auto w-full max-w-screen-2xl px-2  sm:px-6">
+        <div className="mx-auto w-full max-w-screen-2xl px-2 sm:px-6">
           <div className="relative overflow-hidden px-7 sm:px-12 md:px-16">
             <button
               type="button"
               onClick={handlePrev}
-              aria-label="Previous"
+              aria-label="Previous Services"
               className="flex absolute left-0 lg:left-4 top-1/2 -translate-y-1/2 z-20
                          bg-gradient-to-r from-indigo-600 to-purple-600
                          hover:from-purple-600 hover:to-pink-600
                          text-white rounded-full p-3 shadow-lg
-                         transition-all duration-300"
+                         transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-500"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -339,12 +345,12 @@ const ServicesCarousel = () => {
             <button
               type="button"
               onClick={handleNext}
-              aria-label="Next"
+              aria-label="Next Services"
               className="flex absolute right-0 lg:right-4 top-1/2 -translate-y-1/2 z-20
                          bg-gradient-to-r from-indigo-600 to-purple-600
                          hover:from-purple-600 hover:to-pink-600
                          text-white rounded-full p-3 shadow-lg
-                         transition-all duration-300"
+                         transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-500"
             >
               <ChevronRight className="h-6 w-6" />
             </button>
@@ -352,11 +358,12 @@ const ServicesCarousel = () => {
             <Slider
               ref={sliderRef}
               {...settings}
-              role="region"
-              aria-label="Services carousel"
+              role="list"
+              aria-live="polite"
+              aria-atomic="true"
             >
               {cards.map((card, idx) => (
-                <div key={idx} className="px-2 sm:px-3 py-2">
+                <div key={idx} className="px-2 sm:px-3 py-2" role="listitem">
                   <Card {...card} />
                 </div>
               ))}

@@ -8,13 +8,11 @@ import { assets } from "../assets/assets";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ✅ Dynamic icon
 const Icon = ({ name, ...props }) => {
   const IconComponent = LucideIcons[name];
   return IconComponent ? <IconComponent {...props} /> : null;
 };
 
-// ✅ Data
 const servicesData = [
   {
     id: "banking",
@@ -129,32 +127,39 @@ const servicesData = [
   },
 ];
 
-// ✅ Card
 function ServiceCard({ service, isMobile = false }) {
   if (!service) return null;
 
   return (
-    <div
+    <article
       className={`relative ${
         isMobile ? "w-full max-w-sm mx-auto" : "w-72 h-100 mx-auto"
       }`}
+      aria-label={`${service.title} service`}
     >
-      {/* Glow background */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-green-400/20 via-blue-500/10 to-purple-500/20 blur-3xl opacity-70 animate-pulse"></div>
-
+      <div
+        className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-green-400/20 via-blue-500/10 to-purple-500/20 blur-3xl opacity-70 animate-pulse"
+        aria-hidden="true"
+      />
       <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-green-400/30">
-        {/* Image */}
         <div className="relative overflow-hidden group">
           <img
             src={service.card.image || "/placeholder.svg"}
-            alt={service.title}
+            alt={`${service.title} representative image`}
             className={`w-full ${
               isMobile ? "h-32" : "h-40"
             } object-cover rounded-t-3xl transition-transform duration-700 group-hover:scale-110`}
+            loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/60 opacity-70"></div>
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/60 opacity-70"
+            aria-hidden="true"
+          />
           <div className="absolute bottom-3 left-4 flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-gradient-to-tr from-green-400 to-blue-500 shadow-lg">
+            <div
+              className="p-2 rounded-xl bg-gradient-to-tr from-green-400 to-blue-500 shadow-lg"
+              aria-hidden="true"
+            >
               <Icon name={service.icon} className="w-4 h-4 text-white" />
             </div>
             <h3 className="text-xl sm:text-xl font-extrabold text-white drop-shadow-lg">
@@ -162,57 +167,52 @@ function ServiceCard({ service, isMobile = false }) {
             </h3>
           </div>
         </div>
-
-        {/* Content */}
         <div className="px-2 py-2">
           <p className="text-gray-100/90 text-sm sm:text-sm">
             {service.card.description}
           </p>
-
-          {/* Features */}
-          <ul className="mt-2 space-y-1">
+          <ul className="mt-2 space-y-1" role="list">
             {service.card.features.map((f, i) => (
               <li
                 key={i}
                 className="flex items-start gap-2 text-gray-200 text-sm sm:text-sm group"
               >
-                <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-r from-green-400 to-blue-500 group-hover:from-purple-400 group-hover:to-pink-500 transition-all"></span>
+                <span
+                  className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-r from-green-400 to-blue-500 group-hover:from-purple-400 group-hover:to-pink-500 transition-all"
+                  aria-hidden="true"
+                />
                 <span>{f}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
-// ✅ Node
 function ServiceNode({ service, isActive, onClick, position }) {
   return (
     <div
       className="absolute -translate-x-1/2 -translate-y-1/2 z-30"
       style={{ left: `${position.x}px`, top: `${position.y}px` }}
     >
-      <button onClick={() => onClick(service.id)}>
-        <div
-          className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
-            isActive
-              ? "bg-green-400 shadow-2xl shadow-green-400/90 scale-110"
-              : "bg-blue-500/80 hover:bg-green-400/80 shadow-lg"
-          }`}
-        >
-          <Icon
-            name={service.icon}
-            className={`w-6 h-6 ${isActive ? "text-black" : "text-white"}`}
-          />
-        </div>
+      <button
+        onClick={() => onClick(service.id)}
+        aria-pressed={isActive}
+        aria-label={`Select ${service.title} service`}
+        className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-400 ${
+          isActive
+            ? "bg-green-400 shadow-2xl shadow-green-400/90 scale-110 text-black"
+            : "bg-blue-500/80 hover:bg-green-400/80 shadow-lg text-white"
+        }`}
+      >
+        <Icon name={service.icon} className="w-6 h-6" aria-hidden="true" />
       </button>
     </div>
   );
 }
 
-// ✅ Main
 export default function HomeServices() {
   const [activeServiceId, setActiveServiceId] = useState(servicesData[0].id);
   const sectionRef = useRef(null);
@@ -221,7 +221,7 @@ export default function HomeServices() {
   const [positions, setPositions] = useState([]);
 
   useLayoutEffect(() => {
-    if (window.innerWidth < 1024) return; // ❌ Skip GSAP setup on mobile
+    if (window.innerWidth < 1024) return; // Skip GSAP on small screens
 
     if (!pathRef.current || !sectionRef.current) return;
 
@@ -260,7 +260,7 @@ export default function HomeServices() {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth < 1024) return; // ❌ Skip position calculation on mobile
+    if (window.innerWidth < 1024) return; // Skip positions calc on mobile
     if (!pathRef.current || !containerRef.current) return;
 
     const path = pathRef.current;
@@ -293,9 +293,10 @@ export default function HomeServices() {
   const activeService = servicesData.find((s) => s.id === activeServiceId);
 
   return (
-    <div
+    <section
       ref={sectionRef}
       className="min-h-screen w-full flex flex-col bg-cover bg-center"
+      aria-label="Industries and Services"
     >
       <BestHeading title="" highlight="Industries" />
       <div className="flex-1 w-full flex flex-col relative">
@@ -306,12 +307,12 @@ export default function HomeServices() {
             className="relative w-full h-full max-w-7xl max-h-[90vh] mx-auto flex items-center justify-center"
           >
             {/* Center card */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              {activeService && (
-                <div className="flex items-center justify-center h-full px-4">
-                  <ServiceCard service={activeService} />
-                </div>
-              )}
+            <div
+              className="absolute inset-0 flex items-center justify-center"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {activeService && <ServiceCard service={activeService} />}
             </div>
 
             {/* Path */}
@@ -321,6 +322,7 @@ export default function HomeServices() {
               preserveAspectRatio="xMidYMid meet"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <defs>
                 <linearGradient
@@ -366,16 +368,24 @@ export default function HomeServices() {
               <ServiceCard service={activeService} isMobile={true} />
             )}
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div
+            className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
+            role="list"
+          >
             {servicesData.map((service) => (
               <button
                 key={service.id}
                 onClick={() => setActiveServiceId(service.id)}
-                className={`group p-3 sm:p-5 md:p-6 rounded-2xl transition-all duration-300 ${
+                className={`group p-3 sm:p-5 md:p-6 rounded-2xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-400 ${
                   activeServiceId === service.id
                     ? "bg-green-500/20 border-2 border-green-500 scale-105"
                     : "bg-white/10 border-2 border-white/20 hover:bg-white/20 hover:border-green-400"
                 }`}
+                aria-current={
+                  activeServiceId === service.id ? "true" : undefined
+                }
+                role="listitem"
+                aria-label={`Select ${service.title} industry`}
               >
                 <div
                   className={`w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto ${
@@ -397,6 +407,6 @@ export default function HomeServices() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

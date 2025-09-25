@@ -15,8 +15,9 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-40 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] px-4 sm:px-6 md:px-12 overflow-hidden"
       aria-label="Hero Section"
+      role="region"
     >
       {/* Background Video */}
       <video
@@ -27,13 +28,16 @@ const HeroSection = () => {
         playsInline
         src={assets.heroVideo}
         poster="/path-to-poster-image.jpg"
+        preload="auto" // preload for performance
+        loading="lazy" // loading attribute for lazy load
+        aria-hidden="true" // hide from screen readers since decorative
       />
+      text
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
-
+      <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
       {/* Content */}
       <div className="relative z-10 w-[90vw] max-w-[90rem] flex flex-col justify-center space-y-8 sm:space-y-6 md:space-y-12 mt-16 md:mt-20 lg:mt-20">
-        <h1 className="font-extrabold text-white leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+        <h1 className="font-extrabold text-white leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Designing Innovation,
           <br /> Delivering Growth
         </h1>
@@ -56,6 +60,8 @@ const HeroSection = () => {
           initial="hidden"
           animate="show"
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 text-center mt-10"
+          role="list"
+          aria-label="Core company features"
         >
           {[
             {
@@ -79,6 +85,8 @@ const HeroSection = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center"
+              role="listitem"
+              tabIndex={0} // Make focusable for accessibility
             >
               <h3
                 className={`text-xl sm:text-2xl font-semibold bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}

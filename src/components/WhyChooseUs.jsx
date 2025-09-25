@@ -4,35 +4,63 @@ import AnimatedButton from "./AnimatedButton";
 import { assets } from "../assets/assets";
 import BestHeading from "./BestHeading";
 
+const features = [
+  {
+    icon: (
+      <UserRoundSearch className="w-7 h-7 text-indigo-600" aria-hidden="true" />
+    ),
+    title: "Customer-Centric Solutions",
+    desc: "Capyngen delivers custom software development and IT services designed for your business's unique needs, guaranteeing long-term growth and success.",
+  },
+  {
+    icon: <BarChart3 className="w-7 h-7 text-pink-600" aria-hidden="true" />,
+    title: "Strategic Digital Marketing",
+    desc: "We mix innovation and artistry to create digital marketing strategies, SEO, and campaigns that help you attract and retain customers, putting you ahead of the competition.",
+  },
+  {
+    icon: <Sparkles className="w-7 h-7 text-yellow-500" aria-hidden="true" />,
+    title: "Expertise You Can Trust",
+    desc: "Leveraging proven industry experience, Capyngen delivers IT consulting, web development, and CRM software solutions that are scalable and secure.",
+  },
+  {
+    icon: <LifeBuoy className="w-7 h-7 text-green-600" aria-hidden="true" />,
+    title: "Reliable 24/7 Support",
+    desc: "Our team ensures continuous, dependable IT support, letting your business run smoothly and without downtime.",
+  },
+];
+
 export default function WhyChooseUs() {
   return (
     <section
       className="relative w-full overflow-hidden text-white"
-      aria-label="Why Choose Capyngen Section"
+      aria-labelledby="why-choose-heading"
     >
+      {/* SEO: Semantic and accessible heading */}
       <BestHeading title="" highlight="Why Choose Capyngen" />
-
-      <div className="container max-w-[90rem] mx-auto px-6 md:px-8 lg:px-12 pt-6 md:pt-0">
-        {/* Hero Section */}
+      <div className="container max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pt-6 md:pt-0">
+        {/* Hero Row */}
         <div className="flex flex-col lg:flex-row items-center gap-6 xl:gap-10 mx-auto">
-          {/* Right Image (first on mobile) */}
-          <div className="w-full lg:w-1/3 flex justify-center mt-6 md:mt-20 order-1 lg:order-2 pr-5 md:pr-0">
-            <div className="relative w-full max-w-sm md:max-w-md md:aspect-[4/5]">
-              {/* Purple border background layer */}
-              <div className="absolute inset-0 rounded-xl border-2 border-purple-500 translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0" />
-              {/* Image foreground */}
+          {/* Visual: Appears first on mobile, order swapped on large */}
+          <div className="w-full lg:w-1/3 flex justify-center mt-6 md:mt-20 order-1 lg:order-2 pr-0 lg:pr-5">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-[4/5]">
+              {/* Decorative border */}
+              <div className="absolute inset-0 rounded-xl border-2 border-purple-500 translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0 pointer-events-none" />
               <img
                 src={assets.whyChooseUs}
-                alt="Business people collaborating"
+                alt="Professional team collaborating in a modern office"
                 className="relative z-10 w-full h-full object-cover rounded-xl shadow-lg animate-diagonalBounce"
+                loading="lazy"
               />
             </div>
           </div>
-
-          {/* Left Content (second on mobile) */}
+          {/* Content: Text and button */}
           <div className="w-full lg:w-2/3 text-left order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight text-white mt-4">
-              Innovative, Reliable IT & Digital Solutions That Deliver Results
+            <h1
+              id="why-choose-heading"
+              className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight text-white mt-4"
+            >
+              Innovative, Reliable IT &amp; Digital Solutions That Deliver
+              Results
             </h1>
             <p className="text-base md:text-lg my-6 max-w-7xl lg:max-w-full mx-auto lg:mx-0 text-white">
               Capyngen is the lifeline for businesses wanting to intensify their
@@ -49,44 +77,27 @@ export default function WhyChooseUs() {
             <div className="flex justify-start">
               <AnimatedButton
                 text="Get in Touch"
+                aria-label="Contact Capyngen team"
                 onClick={() => alert("Button clicked!")}
               />
             </div>
           </div>
         </div>
-
-        {/* Feature Cards Section */}
+        {/* Features: Responsive cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-8">
-          {[
-            {
-              icon: <UserRoundSearch className="w-7 h-7 text-indigo-600" />,
-              title: "Customer-Centric Solutions",
-              desc: "Capyngen delivers custom software development and IT services that are specially designed to meet the unique needs of your business, thus guaranteeing the long-term growth and success of your enterprise.",
-            },
-            {
-              icon: <BarChart3 className="w-7 h-7 text-pink-600" />,
-              title: "Strategic Digital Marketing",
-              desc: "We mix innovation and artistry to conceive digital marketing strategies, search engine optimization services, and social media & marketing campaigns which are the tools that will be used to attract and retain customers by you thus putting you way ahead of the competition.",
-            },
-            {
-              icon: <Sparkles className="w-7 h-7 text-yellow-500" />,
-              title: "Expertise You Can Trust",
-              desc: "With the use of industry knowledge and skills that have been proven, Capyngen delivers IT consulting services, web development, and CRM management software solutions that are scalable, secure, and ready for the future.",
-            },
-            {
-              icon: <LifeBuoy className="w-7 h-7 text-green-600" />,
-              title: "Reliable 24/7 Support",
-              desc: "Our dedicated team makes sure that you get uninterrupted assistance, providing reliable IT services company support so that your business can operate seamlessly without any downtime.",
-            },
-          ].map(({ icon, title, desc }, i) => (
+          {features.map(({ icon, title, desc }, i) => (
             <article
               key={i}
-              className="group bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700/50 p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
+              className="group bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700/50 p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
               tabIndex={0}
+              role="region"
               aria-labelledby={`feature-title-${i}`}
               aria-describedby={`feature-desc-${i}`}
             >
-              <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-white shadow-md mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div
+                className="flex items-center justify-center w-14 h-14 rounded-xl bg-white shadow-md mb-4 group-hover:scale-110 transition-transform duration-300"
+                aria-hidden="true"
+              >
                 {icon}
               </div>
               <h3
