@@ -15,6 +15,8 @@ export default function TopRatedCompany({
   bgColor = "bg-black",
   background = assets.patternBg2,
   reverse = false,
+  isHidden = "",
+  imageHeight = "md:aspect-[4/5]",
 }) {
   return (
     <div
@@ -28,16 +30,16 @@ export default function TopRatedCompany({
       <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto text-white">
         {/* Hero Section */}
         <div
-          className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
+          className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-8 ${
             reverse ? "lg:flex-row-reverse" : ""
           }`}
         >
           {/* Left/Right Content */}
           <div className="w-full lg:w-2/3 text-center lg:text-left">
-            <h1 className="mt-2 text-3xl font-bold leading-none sm:text-5xl lg:text-6xl">
+            <h1 className="mt-2 text-3xl font-bold leading-none sm:text-5xl">
               {title}
             </h1>
-            <div className="text-base md:text-lg my-6 text-white max-w-3xl mx-auto lg:mx-0 space-y-4">
+            <div className="text-base md:text-lg mt-12 text-white max-w-3xl mx-auto lg:mx-0 space-y-4">
               {Array.isArray(description) ? (
                 description.map((para, idx) => <p key={idx}>{para}</p>)
               ) : (
@@ -48,9 +50,13 @@ export default function TopRatedCompany({
 
           {/* Right/Left Image */}
           <div className="w-full lg:w-1/3 mx-auto flex justify-center mt-6 md:mt-20">
-            <div className="relative w-full max-w-sm md:max-w-md md:aspect-[4/5]">
+            <div
+              className={`relative w-full max-w-sm md:max-w-md ${imageHeight}`}
+            >
               {/* Purple border */}
-              <div className="absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0" />
+              <div
+                className={`${isHidden} absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0`}
+              />
 
               {/* Image */}
               <img

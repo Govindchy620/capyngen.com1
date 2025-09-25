@@ -25,6 +25,7 @@ import WebDevBanner from "../components/WebDevBanner";
 import Banner2 from "../components/Banner2";
 import TechStack from "../components/TechStack";
 import BannerRollingGallery from "../components/BannerRollingGallery";
+import CardsSectionImage from "../components/CardsSectionImage";
 
 const WebDevelopment = () => {
   const faqItems = [
@@ -315,39 +316,39 @@ const WebDevelopment = () => {
   const steps = [
     {
       step: "Step 01",
-      title: "Discovery & Strategic Planning",
+      title: "Requirement Gathering",
       description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
+        "Understand business goals, essential features, target audience, and user behavior to define the website’s purpose and scope.",
     },
     {
       step: "Step 02",
-      title: "Custom Design & Prototyping",
+      title: "Prototyping & Design",
       description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
+        "Create wireframes and prototypes aligned with the user journey. Apply UI/UX principles to ensure the site is visually appealing and easy to navigate.",
     },
     {
       step: "Step 03",
       title: "Front-End Development",
       description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
+        "Build the user interface using technologies like HTML, CSS, JavaScript, ReactJS, or Angular, ensuring seamless interaction for users.",
     },
     {
       step: "Step 04",
       title: "Back-End Development",
       description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
+        "Develop the server-side functionality, databases, APIs, and logic using tools such as PHP, Laravel, Node.js, or Python. This ensures data security and smooth functionality.",
     },
     {
       step: "Step 05",
-      title: "Quality Assurance & Testing",
+      title: "Full-Stack Development & Integration",
       description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
+        "Some developers handle both front-end and back-end tasks, integrating all components—including the database—for a complete, cohesive project.",
     },
     {
       step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
+      title: "Testing, Launch & Maintenance",
       description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
+        "Perform quality assurance to fix bugs and check performance, compatibility, speed, and security. Launch the website and provide ongoing maintenance to keep it up-to-date and fully functional.",
     },
   ];
   const cardsSectionDifferentColorData = [
@@ -394,6 +395,90 @@ const WebDevelopment = () => {
       cardBg: "bg-green-100",
     },
   ];
+  const cardsSectionData1 = [
+    {
+      title: "Credibility & Trust",
+      description:
+        "The establishment of trust is performed by a well-designed website. Customers are more willing to do business with companies that own modern, secure, and informative websites of their own.",
+      icon: <FaLightbulb className="text-4xl" />,
+    },
+    {
+      title: "Brand Identity",
+      description:
+        "Websites are the medium through which a company can communicate its distinctive attributes, not only through colors, design, and messaging, but also through other means. Custom development ensures that the brand can maintain its uniqueness.",
+      icon: <FaChartLine className="text-4xl" />,
+    },
+    {
+      title: "Accessibility",
+      description:
+        "The reach of a physical store is limited by its location. However, a website is not bound by geography, thus making it worldwide. With adequate development, companies can cater to international audiences around the clock.",
+      icon: <FaCogs className="text-4xl" />,
+    },
+    {
+      title: "Growth for Small Businesses",
+      description:
+        "For the startup entrepreneurs, purchasing affordable website development services for small businesses is the deciding factor. A small and modestly designed website, for one, can bring in clients, act as a platform for products, and also create a professional image.",
+      icon: <FaLaptopCode className="text-4xl" />,
+    },
+    {
+      title: "Competitive Advantage",
+      description:
+        "Features like interactive chat systems, e-commerce stores, online reservation services, and electronic payment integration help companies to keep up with or even outclass their rivals are only available for businesses that have had a website developed with the latest technologies.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+    {
+      title: "Customer Engagement",
+      description:
+        "Websites allow companies to actively engage with their customers through blogs, newsletters, feedback forms, and social media integration. This interaction helps build lasting relationships and keeps customers coming back.",
+      icon: <FaProjectDiagram className="text-4xl" />,
+    },
+  ];
+
+  const cardsSectionImageData1 = [
+    {
+      title: "Custom Website Development",
+      description:
+        "Not every company can make a generic template work for the website. Custom website development is about creating one-of-a-kind services that fit the needs of particular industries. As a matter of illustration, client portals might be the answer for a law firm whereas learning management systems could be the way for an educational institution. Customization is the reassurance of the three benefits such as adaptability, upgradability, and longevity.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+
+    {
+      title: "Good Design",
+      description:
+        "The necessity of responsive designing can be drawn just from the simple fact that over 50% of web traffic are mobile visitors. A responsive website adjusts its shows to any screen size without any loss in quality. It implies that users who switch between desktop, tablets, and smartphones are guaranteed a smooth viewing experience there.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Maintenance for Website",
+      description:
+        "Web building is only the beginning, of course. Apart from regular updates, even security, restoration, and performance optimization are very important. Website maintenance services keep the sites performing excellent, stop downtime and customer satisfaction are some of the outcomes regarding maintenance services.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Ecommerce Website Development Services",
+      description:
+        "Online shopping is getting more and more popular. The services of e-commerce web development cover the building of secure stores that have product listings, shopping carts, and so forth. In addition to the basic functions, various features such as inventory management, order tracking, and customer accounts make shopping convenient and fully satisfactory.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "Search Engine Optimization (SEO) Services",
+      description:
+        "A beautifully designed website is ineffective if potential customers cannot find it. SEO services optimize a website’s content, structure, and metadata to improve visibility on search engines like Google. This ensures that businesses attract more organic traffic, generate leads, and reach their target audience efficiently.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Content Management System (CMS) Integration",
+      description:
+        "A website needs regular updates to remain relevant and informative. CMS integration allows businesses to manage and publish content easily without technical knowledge. Platforms like WordPress, Drupal, or custom CMS solutions provide flexibility, scalability, and control over the website’s content, saving time and reducing reliance on developers.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -404,13 +489,51 @@ const WebDevelopment = () => {
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <TopRatedCompany
-          title="Top Web Development Company"
+          title="What is Website Development?"
           description={[
-            `We are known worldwide as the best web development company, trusted by hundreds of clients in 90+ countries. With the perfect blend of award-winning designers and expert web developers, we are a one-stop solution for all your digital needs. Capyngen is committed to delivering exceptional results by using advanced data-driven strategies and smart digital marketing.`,
-            `We specialize in creating responsive websites, eCommerce development, and custom web development services that are innovative and future-ready. Clients can rely on our expertise in Magento development, Drupal development, WordPress development, HTML5, JavaScript, Joomla, and CSS3 to transform their ideas into reality.`,
+            `Basically, the processes of building, maintaining, and updating websites form website development. It is the fusion of artistic design, logical programming, and market strategy that yields platforms that satisfy the needs of businesses as well as users. Compared to traditional print advertising or offline marketing, websites that are accessible 24 hours a day, seven days a week have turned them into one of the most powerful tools for global reach.`,
+            `Professional website development is not only about static HTML pages. It covers the creation of interactive features, linking of secure payment systems, ensuring the adaptability of mobile devices, search engine optimization, and the maintenance of scalability of the platform as the business grows.`,
+            `Custom website development also gives businesses the opportunity to create websites that are more than just templates. By doing so, developers are able to create special features that not only match the needs of the industry but also of the company in question, for example, healthcare portals, real estate listing, educational LMS platforms, or e-commerce marketplace.`,
+            <p
+              key="equation"
+              className="text-2xl font-bold text-cyan-400 text-center mt-6"
+            >
+              Web Development ={" "}
+              <span className="text-purple-400">Technology</span> +{" "}
+              <span className="text-pink-400">Creativity</span> +{" "}
+              <span className="text-green-400">Strategy</span>
+            </p>,
           ]}
           image={assets.whyChooseUs}
           background={assets.patternBg1}
+        />
+        <CardsSection
+          heading="Why Businesses Need Website Development Services"
+          subheading="Nowadays, the competition between the businesses is to get access to the online eyeballs. Without a well-designed website, a company's potential customers are more likely to find their way to competitors who offer faster, more comfortable, and more fascinating experiences. Firstly, let's examine the major benefits of website development services:"
+          services={cardsSectionData1}
+          sectionBg="bg-black"
+          cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
+          headColor="text-white"
+          hoverBg=" hover:bg-gray-700"
+          textColor="text-white"
+          hoverTextColor=""
+          textSize="text-md"
+          height="h-90"
+        />
+        <CardsSectionImage
+          heading="Types of Services for Website Development"
+          subheading=""
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
+        />
+        <HowWeWork
+          heading="Comprehensive Web Development Process"
+          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
+          steps={steps}
         />
         <GetStarted
           backgroundColor="bg-gray-900"
@@ -447,11 +570,7 @@ const WebDevelopment = () => {
           textColor="text-white"
           hoverTextColor=""
         />
-        <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-          steps={steps}
-        />
+
         <GetStarted
           backgroundColor="bg-gray-900"
           textColor="text-white"

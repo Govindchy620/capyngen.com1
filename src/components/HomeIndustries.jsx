@@ -56,48 +56,49 @@ export default function HomeIndustries() {
         <div className="flex-1 flex flex-col justify-center">
           <div className="px-2 md:px-6 xl:px-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
-              Smart Technologies That Power Growth
+              Smart Technologies That Drive Growth
             </h1>
             <p className="text-lg md:pr-20 mt-5 mb-6">
-              At Capyngen, we leverage fresh ideas and technology to build
-              solutions that are safe, ready for the future, and can expand with
-              your requirements.
+              At Capyngen, we harness innovation and cutting-edge IT services,
+              custom software development, and digital solutions to create
+              scalable, secure, and future-ready systems tailored to your
+              business.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-semibold mt-8 mb-4">
-              What Sets Our Technologies Apart
+              Why Our Technologies Stand Out
             </h2>
 
             <ul className="list-disc list-inside space-y-3 text-gray-300">
               <li>
                 <span className="font-semibold text-cyan-400">
-                  Cutting-Edge Cloud & IT Solutions –
+                  Next-Gen Cloud & IT Solutions –
                 </span>{" "}
-                Scalable, secure, and future-ready.
+                Scalable, secure, and ready for tomorrow.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
-                  Advanced Cybersecurity Frameworks –
+                  Advanced Cybersecurity Services –
                 </span>{" "}
-                Protecting businesses against modern threats.
+                Safeguarding businesses against evolving threats.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
-                  Empowering Every Industry –
+                  Industry-Focused Innovation –
                 </span>{" "}
-                From finance to healthcare, our tech drives innovation.
+                From finance to healthcare, our tech powers growth.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
-                  AI & Data-Driven Decisions –
+                  AI & Data-Driven Insights –
                 </span>{" "}
-                Smarter insights for faster growth.
+                Smarter decisions, faster results.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
                   Seamless Digital Transformation –
                 </span>{" "}
-                Modernizing enterprises with next-gen tools.
+                Modernizing enterprises with responsive solutions.
               </li>
             </ul>
           </div>
@@ -112,19 +113,19 @@ export default function HomeIndustries() {
               <div>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span>{" "}
+                    <span className="inline-block text-green-600">✔</span>{" "}
                     Business Automation
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span>{" "}
+                    <span className="inline-block text-green-600">✔</span>{" "}
                     Digital Transformation
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span> Legacy
-                    System Issues
+                    <span className="inline-block text-green-600">✔</span>{" "}
+                    Legacy System Issues
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span>{" "}
+                    <span className="inline-block text-green-600">✔</span>{" "}
                     Downtime & Reliability
                   </li>
                 </ul>
@@ -132,19 +133,19 @@ export default function HomeIndustries() {
               <div>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span> Remote
-                    Work Enablement
+                    <span className="inline-block text-green-600">✔</span>{" "}
+                    Remote Work Enablement
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span>{" "}
+                    <span className="inline-block text-green-600">✔</span>{" "}
                     Customer Experience Gaps
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span> System
-                    Integration
+                    <span className="inline-block text-green-600">✔</span>{" "}
+                    System Integration
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="inline-block text-blue-600">✘</span>{" "}
+                    <span className="inline-block text-green-600">✔</span>{" "}
                     Industry Innovation
                   </li>
                 </ul>

@@ -16,15 +16,17 @@ const CardsSectionImage = ({
 }) => {
   return (
     <section className={`py-16 px-6 md:px-12 ${sectionBg}`}>
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <h2 className={`text-2xl md:text-3xl font-bold mb-4 ${headColor}`}>
+        <h1
+          className={`mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl ${headColor}`}
+        >
           {heading}
-        </h2>
+        </h1>
         <p className={`mb-12 max-w-3xl mx-auto ${headColor}`}>{subheading}</p>
 
         {/* Grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-15 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}

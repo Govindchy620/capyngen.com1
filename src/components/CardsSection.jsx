@@ -23,7 +23,7 @@ const CardsSection = ({
         >
           {heading}
         </h1>
-        <p className={`mt-6 mb-12 text-lg max-w-4xl mx-auto ${headColor}`}>
+        <p className={`mt-6 mb-12 text-lg max-w-7xl mx-auto ${headColor}`}>
           {subheading}
         </p>
 
@@ -32,7 +32,7 @@ const CardsSection = ({
           {services.map((service, index) => (
             <div
               key={index}
-              className={`${cardBg} ${hoverBg} ${textColor} ${hoverTextColor} ${service.cardBg} ${height} p-6 text-left transition`}
+              className={`${cardBg} ${hoverBg} ${textColor} ${hoverTextColor} ${service.cardBg} ${height} p-6 text-left`}
             >
               <div className="mb-4">
                 {service.image ? (

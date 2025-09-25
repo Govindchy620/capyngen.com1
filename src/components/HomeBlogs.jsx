@@ -41,22 +41,22 @@ export default function HomeBlogs() {
 
   const members = [
     {
-      image: assets.blog1,
+      image: assets.news1,
       name: "Tech Updates",
       title: "Latest trends in IT & innovation.",
     },
     {
-      image: assets.blog2,
+      image: assets.news2,
       name: "Marketing Buzz",
       title: "Fresh SEO & social media tips.",
     },
     {
-      image: assets.blog3,
+      image: assets.news3,
       name: "Industry Blog",
       title: "Insights from global industries.",
     },
     {
-      image: assets.blog4,
+      image: assets.news4,
       name: "Capyngen News",
       title: "Our latest updates & events.",
     },
@@ -131,8 +131,7 @@ export default function HomeBlogs() {
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
         <BestHeading title="" highlight="News & Updates" />
         <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-8 mt-10 leading-snug">
-          Expert IT Team Driving <br className="hidden sm:block" /> Business
-          Success Forward.
+          Discover what’s new and what’s next in our journey of growth.
         </h1>
         <div
           ref={cardsRef}

@@ -2,7 +2,7 @@ import React from "react";
 import { ChevronRight, ChevronDown, ChevronLeft } from "lucide-react";
 
 const StepCard = ({ step, title, description }) => (
-  <div className="rounded-sm p-10 text-center w-full max-w-sm transition-all duration-300 bg-gray-800 hover:bg-blue-500 group hover:shadow-lg hover:scale-105">
+  <div className="rounded-sm p-10 text-center w-full max-w-sm transition-all duration-300 bg-gray-800 hover:bg-blue-500 group hover:shadow-lg hover:scale-105 min-h-[320px] flex flex-col justify-center">
     <p className="mb-3 text-sm font-medium text-blue-500 group-hover:text-white transition-all duration-300">
       {step}
     </p>

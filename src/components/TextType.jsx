@@ -28,6 +28,7 @@ const TextType = ({
   onComplete,
   startOnVisible = false,
   reverseMode = false,
+  textSize = "",
   ...props
 }) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -133,7 +134,7 @@ const TextType = ({
     <>
       <span
         className="text-type__content"
-        style={{ color: getCurrentTextColor() }}
+        style={{ color: getCurrentTextColor(), fontSize: textSize }}
       >
         {displayedText}
       </span>
@@ -142,9 +143,9 @@ const TextType = ({
           ref={cursorRef}
           className={`text-type__cursor ${cursorClassName}`}
           style={{
-            visibility: shouldHideCursor ? "hidden" : "visible", // ✅ avoids layout shift
-            display: "inline-block", // ✅ keeps space reserved
-            whiteSpace: "pre", // ✅ prevents collapsing
+            visibility: shouldHideCursor ? "hidden" : "visible",
+            display: "inline-block",
+            whiteSpace: "pre",
           }}
         >
           {cursorCharacter}

@@ -6,11 +6,34 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import BestHeading from "./BestHeading";
-import { assets } from "../assets/assets";
+import {
+  Smartphone,
+  Cpu,
+  Globe,
+  ShoppingCart,
+  ShieldCheck,
+  Hammer,
+  Layout,
+  Settings,
+  Paintbrush,
+  Monitor,
+  Tag,
+  Box,
+  FileText,
+  Search,
+  Facebook,
+  DollarSign,
+  Brain,
+  Shield,
+  Wifi,
+  Briefcase,
+  BarChart2,
+  UserCheck,
+} from "lucide-react";
 
+// ---------------- CARDS DATA ----------------
 const cards = [
   {
-    icon: "📱",
     title: "App Development",
     desc: "Apps for mobile devices that are strong, scalable, and simple to use, designed to help organizations meet objectives.",
     items: [
@@ -21,7 +44,6 @@ const cards = [
     ],
   },
   {
-    icon: "🤖",
     title: "Custom AI Solution",
     desc: "Custom AI-powered solutions that make jobs go faster and help businesses do better.",
     items: [
@@ -32,7 +54,6 @@ const cards = [
     ],
   },
   {
-    icon: "💻",
     title: "Web Development",
     desc: "Websites that are secure and responsive, so that users have a good time and companies may prosper.",
     items: [
@@ -43,7 +64,6 @@ const cards = [
     ],
   },
   {
-    icon: "🛒",
     title: "E-Commerce Solutions",
     desc: "Smart online stores that are created to increase sales, customer happiness, and engagement.",
     items: [
@@ -54,7 +74,6 @@ const cards = [
     ],
   },
   {
-    icon: "⛓️",
     title: "Blockchain Development",
     desc: "Blockchain solutions that are secure, transparent, and reliable for digital transactions.",
     items: [
@@ -65,7 +84,6 @@ const cards = [
     ],
   },
   {
-    icon: "⚡",
     title: "DevOps Solutions",
     desc: "Streamlined DevOps services that let you produce software more quickly, reliably, and effectively.",
     items: [
@@ -76,7 +94,6 @@ const cards = [
     ],
   },
   {
-    icon: "🛠️",
     title: "Application Solutions",
     desc: "Full application services for fresh ideas, improved company results, and making things work more smoothly.",
     items: [
@@ -87,7 +104,6 @@ const cards = [
     ],
   },
   {
-    icon: "📋",
     title: "CRM & Management Software",
     desc: "Custom CRM systems that truly help with sales, relationships, and getting customers involved.",
     items: [
@@ -98,7 +114,6 @@ const cards = [
     ],
   },
   {
-    icon: "🎨",
     title: "UI/UX Design",
     desc: "User-centered UI/UX design that makes sure that users can easily comprehend and enjoy their interactions.",
     items: [
@@ -109,7 +124,6 @@ const cards = [
     ],
   },
   {
-    icon: "🌐",
     title: "Website Design",
     desc: "Creative, responsive, and impactful websites designed to strengthen digital presence.",
     items: [
@@ -120,7 +134,6 @@ const cards = [
     ],
   },
   {
-    icon: "🏷️",
     title: "Branding & Identity Design",
     desc: "Strong branding solutions to define identity and connect with your audience.",
     items: [
@@ -131,7 +144,6 @@ const cards = [
     ],
   },
   {
-    icon: "🛍️",
     title: "Ecommerce Design",
     desc: "Modern ecommerce designs that boost sales, trust, and customer shopping experiences.",
     items: [
@@ -142,7 +154,6 @@ const cards = [
     ],
   },
   {
-    icon: "📰",
     title: "CMS Design",
     desc: "CMS designs that help you manage your content better and make the site perform better.",
     items: [
@@ -153,7 +164,6 @@ const cards = [
     ],
   },
   {
-    icon: "🔍",
     title: "Search Engine Optimization",
     desc: "Effective SEO strategies to improve ranking, visibility, and long-term online growth.",
     items: [
@@ -164,7 +174,6 @@ const cards = [
     ],
   },
   {
-    icon: "📱",
     title: "Social Media Marketing (SMM)",
     desc: "Engaging SMM campaigns that build brand presence and connect with audiences.",
     items: [
@@ -174,7 +183,6 @@ const cards = [
     ],
   },
   {
-    icon: "💰",
     title: "Pay-Per-Click Advertising (PPC)",
     desc: "Result-driven PPC ads that maximize ROI and capture qualified leads quickly.",
     items: [
@@ -185,7 +193,6 @@ const cards = [
     ],
   },
   {
-    icon: "🧠",
     title: "Artificial Intelligence",
     desc: "Cutting-edge AI services for smarter automation, innovation, and business transformation.",
     items: [
@@ -196,17 +203,15 @@ const cards = [
     ],
   },
   {
-    icon: "🛡️",
     title: "Cybersecurity",
     desc: "Robust cybersecurity solutions to safeguard data, systems, and digital infrastructures.",
     items: [
       "Finding dangers",
       "Keeping data safe",
-      "Risk assessment and monitoring 24 hours a day",
+      "Risk assessment and monitoring 24/7",
     ],
   },
   {
-    icon: "📡",
     title: "Network Services and Solutions",
     desc: "Advanced network solutions ensuring reliable, scalable, and secure connectivity infrastructure.",
     items: [
@@ -217,7 +222,6 @@ const cards = [
     ],
   },
   {
-    icon: "🏢",
     title: "Business Solutions",
     desc: "Scalable enterprise solutions built to streamline operations and accelerate digital transformation.",
     items: [
@@ -228,7 +232,6 @@ const cards = [
     ],
   },
   {
-    icon: "📊",
     title: "Data and Analysis",
     desc: "Actionable data analytics services turning raw information into valuable business insights.",
     items: [
@@ -239,7 +242,6 @@ const cards = [
     ],
   },
   {
-    icon: "👨‍💼",
     title: "Consulting",
     desc: "Expert IT consulting services to align technology with your business growth goals.",
     items: [
@@ -251,30 +253,58 @@ const cards = [
   },
 ];
 
-const Card = ({ icon, title, desc, items }) => (
+// ---------------- ICONS MAP ----------------
+const iconMap = [
+  <Smartphone className="text-white w-7 h-7" />,
+  <Cpu className="text-white w-7 h-7" />,
+  <Globe className="text-white w-7 h-7" />,
+  <ShoppingCart className="text-white w-7 h-7" />,
+  <ShieldCheck className="text-white w-7 h-7" />,
+  <Hammer className="text-white w-7 h-7" />,
+  <Settings className="text-white w-7 h-7" />,
+  <Layout className="text-white w-7 h-7" />,
+  <Paintbrush className="text-white w-7 h-7" />,
+  <Monitor className="text-white w-7 h-7" />,
+  <Tag className="text-white w-7 h-7" />,
+  <Box className="text-white w-7 h-7" />,
+  <FileText className="text-white w-7 h-7" />,
+  <Search className="text-white w-7 h-7" />,
+  <Facebook className="text-white w-7 h-7" />,
+  <DollarSign className="text-white w-7 h-7" />,
+  <Brain className="text-white w-7 h-7" />,
+  <Shield className="text-white w-7 h-7" />,
+  <Wifi className="text-white w-7 h-7" />,
+  <Briefcase className="text-white w-7 h-7" />,
+  <BarChart2 className="text-white w-7 h-7" />,
+  <UserCheck className="text-white w-7 h-7" />,
+];
+
+// ---------------- CARD COMPONENT ----------------
+const Card = ({ title, desc, items, index }) => (
   <article
     className="h-92 relative group rounded-2xl p-6 min-h-[380px] flex flex-col shadow-lg
-               bg-gradient-to-br from-white/90 via-white/80 to-white/90 
-               backdrop-blur-md overflow-hidden border border-gray-200/40
-               transition-all duration-500 hover:shadow-2xl hover:scale-[1.03] cursor-pointer"
+               bg-gradient-to-br from-cyan-600 via-blue-600 to-indigo-700
+               backdrop-blur-md overflow-hidden border border-cyan-400/40
+               transition-all duration-500 hover:shadow-2xl hover:scale-[1.04] cursor-pointer
+               focus:outline-none focus:ring-4 focus:ring-cyan-400"
     tabIndex={0}
     aria-label={`${title} service`}
     role="group"
   >
-    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-2xl"></div>
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition duration-500 bg-gradient-to-r from-teal-500 to-blue-700 rounded-2xl"></div>
 
     <div className="relative z-10 flex flex-col h-full">
       <div className="flex mb-4 items-center">
-        <span className="w-12 h-12 flex justify-center items-center rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 text-white text-2xl shadow-md mr-3">
-          {icon}
+        <span className="w-12 h-12 flex justify-center items-center rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 text-white text-2xl shadow-md mr-3 select-none">
+          {iconMap[index]}
         </span>
-        <span className="ml-auto flex items-center border border-gray-300 rounded-full w-10 h-10 justify-center group-hover:bg-indigo-50 transition-colors duration-300">
-          <ArrowRight className="h-5 w-5 text-gray-500 group-hover:text-indigo-600 transition-colors duration-300" />
+        <span className="ml-auto flex items-center border border-cyan-300 rounded-full w-10 h-10 justify-center group-hover:bg-cyan-50 transition-colors duration-300">
+          <ArrowRight className="h-5 w-5 text-cyan-100 group-hover:text-cyan-700 transition-colors duration-300" />
         </span>
       </div>
-      <h2 className="font-bold text-lg mb-2 text-gray-900">{title}</h2>
-      <p className="text-gray-600 text-sm mb-4">{desc}</p>
-      <ul className="text-gray-700 text-[15px] pl-3 list-disc flex-grow">
+      <h2 className="font-bold text-lg mb-2 text-white">{title}</h2>
+      <p className="text-cyan-200 text-sm mb-4">{desc}</p>
+      <ul className="text-cyan-100 text-[15px] pl-4 list-disc flex-grow space-y-1">
         {items.map((it, idx) => (
           <li key={idx} className="my-1">
             {it}
@@ -285,53 +315,41 @@ const Card = ({ icon, title, desc, items }) => (
   </article>
 );
 
+// ---------------- MAIN CAROUSEL ----------------
 const ServicesCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);
 
-  const slidesToShow = 4;
-  const slidesToScroll = 1;
   const settings = {
     dots: false,
-    infinite: cards.length > slidesToShow,
+    infinite: cards.length > 4,
     speed: 600,
-    slidesToShow,
-    slidesToScroll,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2500,
-    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
     responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-        },
-      },
+      { breakpoint: 1280, settings: { slidesToShow: 3 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
 
-  const handlePrev = () => sliderRef.current?.slickPrev();
-  const handleNext = () => sliderRef.current?.slickNext();
-
   return (
     <section
-      className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh]"
+      className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh] py-12"
       aria-label="Services"
       role="region"
     >
       <BestHeading title="" highlight="Services" />
-      <div className="py-6 sm:py-14">
+
+      <div className="py-6 sm:py-10">
         <div className="mx-auto w-full max-w-screen-2xl px-2 sm:px-6">
-          <div className="relative overflow-hidden px-7 sm:px-12 md:px-16">
+          <div className="relative px-7 sm:px-12 md:px-16">
+            {/* Prev Button */}
             <button
               type="button"
-              onClick={handlePrev}
+              onClick={() => sliderRef.current?.slickPrev()}
               aria-label="Previous Services"
               className="flex absolute left-0 lg:left-4 top-1/2 -translate-y-1/2 z-20
                          bg-gradient-to-r from-indigo-600 to-purple-600
@@ -342,9 +360,10 @@ const ServicesCarousel = () => {
               <ChevronLeft className="h-6 w-6" />
             </button>
 
+            {/* Next Button */}
             <button
               type="button"
-              onClick={handleNext}
+              onClick={() => sliderRef.current?.slickNext()}
               aria-label="Next Services"
               className="flex absolute right-0 lg:right-4 top-1/2 -translate-y-1/2 z-20
                          bg-gradient-to-r from-indigo-600 to-purple-600
@@ -355,16 +374,16 @@ const ServicesCarousel = () => {
               <ChevronRight className="h-6 w-6" />
             </button>
 
+            {/* Slider */}
             <Slider
               ref={sliderRef}
               {...settings}
               role="list"
               aria-live="polite"
-              aria-atomic="true"
             >
               {cards.map((card, idx) => (
                 <div key={idx} className="px-2 sm:px-3 py-2" role="listitem">
-                  <Card {...card} />
+                  <Card {...card} index={idx} />
                 </div>
               ))}
             </Slider>
