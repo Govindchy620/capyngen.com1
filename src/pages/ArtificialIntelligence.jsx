@@ -287,27 +287,27 @@ const ArtificialIntelligence = () => {
                   {
                     title: "Proven Expertise",
                     text: "We have the track record of providing top artificial intelligence solutions for businesses all over the globe.",
-                    color: "text-pink-400",
+                    color: "text-blue-500",
                   },
                   {
                     title: "Custom Solutions",
                     text: "The AI which we build for your business will be targeted specifically on your needs.",
-                    color: "text-cyan-400",
+                    color: "text-blue-500",
                   },
                   {
                     title: "Affordable & Scalable",
                     text: "We deliver services in AI for startups as well as big companies without making any compromise on quality.",
-                    color: "text-yellow-400",
+                    color: "text-blue-500",
                   },
                   {
                     title: "Dedicated Support",
                     text: "We provide continuous guidance and AI consulting services to you for the achievement of your goals.",
-                    color: "text-indigo-400",
+                    color: "text-blue-500",
                   },
                   {
                     title: "Future-Ready AI",
                     text: "Use the technology of artificial intelligence to always be a step ahead of the market trends.",
-                    color: "text-green-400",
+                    color: "text-blue-500",
                   },
                 ].map(({ title, text, color }, idx) => (
                   <li
