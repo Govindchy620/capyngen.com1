@@ -19,55 +19,56 @@ export default function TopRatedCompany({
   imageHeight = "md:aspect-[4/5]",
 }) {
   return (
-    <div
-      className={`${bgColor} pb-10`}
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+    <section
+      className={`${bgColor} pb-10 bg-no-repeat bg-center bg-cover transition-colors duration-700`}
+      style={{ backgroundImage: `url(${background})` }}
+      aria-label="Top rated company information section"
     >
       <div className="container px-4 md:px-6 lg:px-12 max-w-[90rem] mx-auto text-white">
-        {/* Hero Section */}
         <div
-          className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-8 ${
+          className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
             reverse ? "lg:flex-row-reverse" : ""
           }`}
         >
-          {/* Left/Right Content */}
-          <div className="w-full lg:w-2/3 text-center lg:text-left">
-            <h1 className="mt-2 text-3xl font-bold leading-none sm:text-5xl">
+          {/* Text Content */}
+          <article className="w-full lg:w-2/3 text-center lg:text-left max-w-4xl mx-auto lg:mx-0">
+            <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
               {title}
             </h1>
-            <div className="text-base md:text-lg mt-12 text-white max-w-3xl mx-auto lg:mx-0 space-y-4">
+            <div className="mt-10 md:mt-12 text-base md:text-lg space-y-6 max-w-3xl mx-auto lg:mx-0 text-white/90 drop-shadow-md">
               {Array.isArray(description) ? (
-                description.map((para, idx) => <div key={idx}>{para}</div>)
+                description.map((para, idx) => <p key={idx}>{para}</p>)
               ) : (
                 <p>{description}</p>
               )}
             </div>
-          </div>
+          </article>
 
-          {/* Right/Left Image */}
-          <div className="w-full lg:w-1/3 mx-auto flex justify-center mt-6 md:mt-20">
+          {/* Image Content */}
+          <figure
+            className={`w-full lg:w-1/3 mx-auto flex justify-center mt-6 md:mt-20`}
+          >
             <div
               className={`relative w-full max-w-sm md:max-w-md ${imageHeight}`}
             >
-              {/* Purple border */}
+              {/* Purple border with smooth shadow */}
               <div
-                className={`${isHidden} absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0`}
+                className={`${isHidden} absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0 shadow-lg`}
+                aria-hidden="true"
               />
 
               {/* Image */}
               <img
                 src={image}
                 alt="Business people collaborating"
-                className="relative z-10 w-full h-full object-cover rounded-xl shadow-lg"
+                className="relative z-10 w-full h-full object-cover rounded-xl shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
-          </div>
+          </figure>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

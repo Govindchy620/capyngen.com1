@@ -1,4 +1,3 @@
-// Banner4.jsx
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -18,26 +17,36 @@ const Banner4 = ({ slides }) => {
     pauseOnHover: false,
     arrows: false,
     beforeChange: (_, newIndex) => setActiveSlide(newIndex),
+    accessibility: true,
+    adaptiveHeight: false,
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden bg-gray-900">
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, index) => (
-          <div key={index}>
+          <div
+            key={index}
+            aria-hidden={activeSlide !== index}
+            aria-label={`${slide.title} slide`}
+            role="group"
+          >
             <div
-              className="relative min-h-[80vh] flex items-center justify-start px-6 md:px-20 bg-cover bg-center"
+              className="relative min-h-[80vh] flex items-center justify-start px-6 md:px-20 bg-cover bg-center transition-transform duration-700 ease-in-out"
               style={{ backgroundImage: `url(${slide.image})` }}
+              role="img"
+              aria-roledescription="slide background"
+              alt={slide.title}
             >
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-transparent"></div>
+              {/* Dark gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-transparent pointer-events-none"></div>
 
               {/* Content */}
-              <div className="relative z-10 text-left">
-                <h1 className="text-3xl md:text-5xl font-bold text-white leading-snug">
+              <div className="relative z-20 text-left max-w-3xl">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-md">
                   {slide.title}
                 </h1>
-                <p className="text-lg mt-4 text-white/90 max-w-2xl">
+                <p className="text-base sm:text-xl mt-3 text-white/90 max-w-2xl drop-shadow-sm">
                   {slide.subtitle}
                 </p>
               </div>
@@ -47,17 +56,25 @@ const Banner4 = ({ slides }) => {
       </Slider>
 
       {/* Dots */}
-      <div className="absolute bottom-6 sm:bottom-8 md:bottom-12 w-full flex justify-start space-x-3 px-6 md:px-20 z-10">
+      <nav
+        className="absolute bottom-6 sm:bottom-8 md:bottom-12 w-full flex justify-start space-x-4 px-6 md:px-20 z-30"
+        aria-label="Slide navigation dots"
+      >
         {slides.map((_, index) => (
-          <div
+          <button
             key={index}
             onClick={() => sliderRef.current.slickGoTo(index)}
-            className={`h-[3px] w-8 cursor-pointer rounded-full transition-all duration-300 ${
-              index === activeSlide ? "bg-white" : "bg-white/40"
+            className={`h-1.5 w-10 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
+              index === activeSlide
+                ? "bg-indigo-500 shadow-lg scale-110"
+                : "bg-indigo-500/40 hover:bg-indigo-500/70"
             }`}
-          ></div>
+            aria-current={index === activeSlide ? "true" : "false"}
+            aria-label={`Go to slide ${index + 1}`}
+            type="button"
+          />
         ))}
-      </div>
+      </nav>
     </div>
   );
 };

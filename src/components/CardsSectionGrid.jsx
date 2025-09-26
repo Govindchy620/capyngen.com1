@@ -11,47 +11,74 @@ const CardsSectionGrid = ({
   reverse = false,
 }) => {
   return (
-    <section className="bg-[#121a2b] py-16 px-6 text-white">
+    <section className="relative bg-gradient-to-b from-[#0a0a0f] via-[#101020] to-[#0a0a0f] py-20 px-6 text-gray-100">
       <div
         className={`max-w-7xl mx-auto flex flex-col lg:flex-row ${
           reverse ? "lg:flex-row-reverse" : ""
-        } gap-12 items-start`}
-        // This parent controls the vertical space & flex
-        style={{ minHeight: "70vh" }} // Increase/decrease as per cards count
+        } gap-16 items-start`}
       >
         {/* Cards Grid */}
         <div className="flex-1 w-full relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div
+              <article
                 key={index}
-                className="bg-white text-black rounded-lg p-6 shadow hover:shadow-lg transition"
+                tabIndex={0}
+                className="relative group bg-gradient-to-br from-[#1a1f2f] to-[#101520] rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-indigo-500"
+                aria-labelledby={`card-title-${index}`}
+                aria-describedby={`card-desc-${index}`}
               >
-                <div
-                  className={`w-12 h-12 flex items-center justify-center rounded-full mb-4 ${service.iconBg}`}
-                >
-                  {service.icon}
+                {/* Glow Effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div
+                    className={`w-14 h-14 flex items-center justify-center rounded-xl mb-5 bg-gradient-to-br from-indigo-500 to-cyan-500 text-white shadow-lg`}
+                    aria-hidden="true"
+                  >
+                    {service.icon}
+                  </div>
+
+                  {/* Title */}
+                  <h3
+                    id={`card-title-${index}`}
+                    className="text-2xl font-semibold mb-3 text-white group-hover:text-cyan-400 transition-colors"
+                  >
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    id={`card-desc-${index}`}
+                    className="text-base text-gray-400 group-hover:text-gray-300 leading-relaxed"
+                  >
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-md text-gray-600">{service.description}</p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
 
         {/* Sticky Content section */}
-        <div className="flex-1 w-full lg:sticky lg:top-24 self-start h-fit">
-          <h1 className="mt-2 text-3xl font-bold leading-none sm:text-5xl pb-10">
+        <aside className="flex-1 w-full lg:sticky lg:top-24 self-start h-fit max-w-lg">
+          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight pb-10 text-white">
             {heading}
           </h1>
-          <div className="space-y-4 text-gray-200 text-lg">
+
+          <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
             {Array.isArray(description) ? (
-              description.map((para, idx) => <p key={idx}>{para}</p>)
+              description.map((para, idx) => (
+                <p key={idx} className="hover:text-gray-200 transition-colors">
+                  {para}
+                </p>
+              ))
             ) : (
               <p>{description}</p>
             )}
           </div>
-        </div>
+        </aside>
       </div>
     </section>
   );

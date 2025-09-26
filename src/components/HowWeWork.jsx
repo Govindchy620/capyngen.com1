@@ -2,17 +2,34 @@ import React from "react";
 import { ChevronRight, ChevronDown, ChevronLeft } from "lucide-react";
 
 const StepCard = ({ step, title, description }) => (
-  <div className="rounded-sm p-10 text-center w-full max-w-sm transition-all duration-300 bg-gray-800 hover:bg-blue-500 group hover:shadow-lg hover:scale-105 min-h-[320px] flex flex-col justify-center">
-    <p className="mb-3 text-sm font-medium text-blue-500 group-hover:text-white transition-all duration-300">
+  <article
+    className="rounded-sm py-10 px-5 text-center w-full max-w-sm transition-all duration-300
+      bg-gray-800 hover:bg-blue-800 group hover:shadow-lg hover:scale-105 min-h-[320px]
+      flex flex-col justify-center cursor-default"
+    aria-labelledby={`step-title-${step}`}
+    aria-describedby={`step-desc-${step}`}
+    tabIndex={0}
+  >
+    <p
+      id={`step-step-${step}`}
+      className="mb-3 text-sm font-medium text-blue-600 group-hover:text-white transition-all duration-300"
+      aria-hidden="true"
+    >
       {step}
     </p>
-    <h3 className="text-2xl font-bold mb-4 group-hover:text-black transition-colors duration-300">
+    <h3
+      id={`step-title-${step}`}
+      className="text-2xl font-bold mb-4 group-hover:text-white transition-colors duration-300"
+    >
       {title}
     </h3>
-    <p className="text-md leading-relaxed group-hover:text-black transition-colors duration-300">
+    <p
+      id={`step-desc-${step}`}
+      className="text-md leading-relaxed group-hover:text-white transition-colors duration-300"
+    >
       {description}
     </p>
-  </div>
+  </article>
 );
 
 const HowWeWork = ({
@@ -20,79 +37,100 @@ const HowWeWork = ({
   desc = "We follow a rigorous, high-standard development methodology to deliver robust, error-free, and high-performance mobile applications. Our team ensures each stage is meticulously executed for maximum efficiency and business impact.",
   steps = [],
 }) => {
-  // Group steps into chunks of 3 (first row) and 2 (second row), alternating
+  // Group steps in chunks of 3 for each row
   const rows = [];
-  let i = 0;
-  let forward = true;
-  while (i < steps.length) {
-    const chunkSize = forward ? 3 : 3; // 3 steps forward row, 2 steps backward row
-    rows.push({
-      forward,
-      steps: steps.slice(i, i + chunkSize),
-    });
-    i += chunkSize;
-    forward = !forward;
+  const chunkSize = 3;
+  for (let i = 0; i < steps.length; i += chunkSize) {
+    rows.push(steps.slice(i, i + chunkSize));
   }
 
   return (
-    <section className="bg-black text-white py-10 px-6 md:px-12 lg:px-20">
+    <section
+      className="bg-black text-white py-10 px-6 md:px-12 lg:px-20"
+      aria-label="How We Work Process"
+    >
       {/* Heading */}
-      <div className="text-center mb-16">
-        <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+      <header className="text-center mb-16">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl">
           {heading}
         </h1>
         <p className="mt-4 max-w-6xl text-lg mx-auto text-gray-300">{desc}</p>
-      </div>
+      </header>
 
-      {/* Mobile: stacked with ↓ arrows */}
-      <div className="flex flex-col items-center gap-6 md:hidden">
+      {/* Mobile: stacked with down arrows */}
+      <div
+        className="flex flex-col items-center gap-6 md:hidden"
+        aria-label="Steps mobile view"
+      >
         {steps.map((item, idx) => (
           <React.Fragment key={idx}>
             <StepCard {...item} />
             {idx !== steps.length - 1 && (
-              <ChevronDown size={24} className="text-blue-500" />
+              <ChevronDown
+                size={24}
+                className="text-blue-600"
+                aria-hidden="true"
+              />
             )}
           </React.Fragment>
         ))}
       </div>
 
-      {/* Desktop: alternating rows */}
-      <div className="hidden md:flex flex-col gap-12">
-        {rows.map((row, rowIdx) => (
-          <React.Fragment key={rowIdx}>
-            <div
-              className={`flex items-center ${
-                row.forward ? "justify-center" : "justify-end"
-              } gap-8`}
-            >
-              {/* If backward row, reverse steps so arrows flow correctly */}
-              {(row.forward ? row.steps : [...row.steps].reverse()).map(
-                (step, idx, arr) => (
+      {/* Desktop: alternating aligned rows */}
+      <div
+        className="hidden md:flex flex-col gap-12"
+        aria-label="Steps desktop view"
+      >
+        {rows.map((rowSteps, rowIdx) => {
+          // Alternate alignment: even rows center, odd rows right
+          const isForward = rowIdx % 2 === 0;
+          const stepsInRow = isForward ? rowSteps : [...rowSteps].reverse();
+
+          return (
+            <React.Fragment key={rowIdx}>
+              <div
+                className={`flex items-center ${
+                  isForward ? "justify-center" : "justify-end"
+                } gap-8`}
+                role="list"
+              >
+                {stepsInRow.map((step, idx) => (
                   <React.Fragment key={idx}>
                     <StepCard {...step} />
-                    {idx !== arr.length - 1 &&
-                      (row.forward ? (
-                        <ChevronRight size={44} className="text-blue-500" />
+                    {idx !== stepsInRow.length - 1 &&
+                      (isForward ? (
+                        <ChevronRight
+                          size={44}
+                          className="text-blue-600"
+                          aria-hidden="true"
+                        />
                       ) : (
-                        <ChevronLeft size={44} className="text-blue-500" />
+                        <ChevronLeft
+                          size={44}
+                          className="text-blue-600"
+                          aria-hidden="true"
+                        />
                       ))}
                   </React.Fragment>
-                )
-              )}
-            </div>
-
-            {/* Down arrow between rows */}
-            {rowIdx < rows.length - 1 && (
-              <div
-                className={`flex ${
-                  row.forward ? "justify-end mr-44" : "justify-start ml-44"
-                }`}
-              >
-                <ChevronDown size={44} className="text-blue-500" />
+                ))}
               </div>
-            )}
-          </React.Fragment>
-        ))}
+              {/* Down arrow between rows except last */}
+              {rowIdx < rows.length - 1 && (
+                <div
+                  className={`flex ${
+                    isForward ? "justify-end mr-44" : "justify-start ml-44"
+                  }`}
+                >
+                  <ChevronDown
+                    size={44}
+                    className="text-blue-600"
+                    aria-hidden="true"
+                  />
+                </div>
+              )}
+            </React.Fragment>
+          );
+        })}
       </div>
     </section>
   );

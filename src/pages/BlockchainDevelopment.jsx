@@ -11,15 +11,34 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles, Users } from "lucide-react";
+
 import { ShoppingCart, CreditCard, Smartphone, Store } from "lucide-react";
 import CardsSection from "../components/CardsSection";
 import {
+  FaShieldAlt,
+  FaNetworkWired,
+  FaFileContract,
+  FaClipboardCheck,
+  FaHandshake,
   FaLightbulb,
   FaChartLine,
   FaCogs,
   FaLaptopCode,
   FaProjectDiagram,
   FaTasks,
+  FaLock,
+  FaDollarSign,
+  FaBolt,
+  FaSearchLocation,
+  FaGlobe,
+  FaUsers,
+  FaTools,
+  FaHeadset,
+  FaServer,
+  FaCloud,
+  FaFileAlt,
+  FaChartBar,
+  FaShoppingCart,
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import CardsSectionGrid from "../components/CardsSectionGrid";
@@ -113,117 +132,50 @@ const BlockchainDevelopment = () => {
       desc: "Blockchain protects intellectual property by storing copyrights, patents, and trademarks in unalterable ledgers. Smart contracts enforce royalties and licenses to ensure that creators are given a rightful share. Clear provenance and ownership reduce conflicts, providing secure, verifiable, and globally accessible IP management.",
     },
   ];
-  const servicesData = [
-    {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our Blockchain Development company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
-    },
-    {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced Blockchain Development services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
-    },
-    {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
-    },
-    {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
-    },
-    {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our Blockchain Development solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
-    },
-    {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
-    },
-  ];
-  const cardsSectionDifferentColorData = [
-    {
-      title: "Quality Assurance",
-      description:
-        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
-      icon: <FaLightbulb className="text-4xl" />,
-      cardBg: "bg-red-100 hover:bg-red-400",
-    },
-    {
-      title: "Real Time Support",
-      description:
-        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
-      icon: <FaChartLine className="text-4xl" />,
-      cardBg: "bg-blue-100 hover:bg-blue-400",
-    },
-    {
-      title: "Cost Effectiveness",
-      description:
-        "We provide affordable and superb quality services that fit your budget.",
-      icon: <FaCogs className="text-4xl" />,
-      cardBg: "bg-purple-100 hover:bg-purple-400",
-    },
-    {
-      title: "Quality Assurance",
-      description:
-        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
-      icon: <FaLightbulb className="text-4xl" />,
-      cardBg: "bg-gray-100 hover:bg-gray-400",
-    },
-    {
-      title: "Real Time Support",
-      description:
-        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
-      icon: <FaChartLine className="text-4xl" />,
-      cardBg: "bg-yellow-100 hover:bg-yellow-400",
-    },
-    {
-      title: "Cost Effectiveness",
-      description:
-        "We provide affordable and superb quality services that fit your budget.",
-      icon: <FaCogs className="text-4xl" />,
-      cardBg: "bg-green-100 hover:bg-green-400",
-    },
-  ];
+
   const cardsSectionDifferentColorData1 = [
     {
       title: "Security & Transparency",
       description:
         "Blockchain information is saved in a decentralized and tamper-evident manner. Each transaction or piece of data is saved in a secure ledger that can't be modified, providing total transparency and minimizing the likelihood of fraud.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaShieldAlt className="text-4xl text-white drop-shadow-md" />,
       cardBg: "bg-[#ed5565] hover:bg-[#da4453]",
     },
     {
       title: "Decentralization & Reliability",
       description:
         "In contrast to other systems, blockchain is decentralized, so there is no common point of failure. This enhances reliability, keeps data available at all times, and guards against cyberattacks.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaNetworkWired className="text-4xl text-white drop-shadow-md" />,
       cardBg: "bg-[#5d9cec] hover:bg-[#4a89dc]",
     },
     {
       title: "Smart Contract Automation",
       description:
         "Smart contracts on the blockchain execute agreements automatically on conditions being met. This reduces intermediaries' requests, saves funds, and speeds up processes while ensuring rules' application to the letter.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaFileContract className="text-4xl text-white drop-shadow-md" />,
       cardBg: "bg-[#ac92ec] hover:bg-[#967adc]",
     },
     {
       title: "Scalability & Future-Readiness",
       description:
         "Blockchain technology is designed to scale with increasing user requirements. Blockchain is future-proof and can handle more transactions without compromising performance.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: (
+        <FaProjectDiagram className="text-4xl text-gray-800 drop-shadow-md" />
+      ),
       cardBg: "bg-[#ccd1d9] hover:bg-[#aab2bd]",
     },
     {
       title: "Traceability & Auditability",
       description:
         "All transactions within a blockchain are kept, dated, and are verifiable. This enables full traceability, thus making audits, compliance, and reporting transparent and simple.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaClipboardCheck className="text-4xl text-white drop-shadow-md" />,
       cardBg: "bg-[#ffce54] hover:bg-[#f6bb42]",
     },
     {
       title: "Enhanced Trust & Customer Confidence",
       description:
         "Securing data and making it transparent and verifiable, blockchain encourages stakeholders and users to trust each other. Blockchain ensures accountability and promotes trust in digital transactions and interactions.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaHandshake className="text-4xl text-white drop-shadow-md" />,
       cardBg: "bg-[#a0d468] hover:bg-[#8cc152]",
     },
   ];
@@ -232,56 +184,56 @@ const BlockchainDevelopment = () => {
       title: "Transparency and Immutability",
       description:
         "Blockchain makes sure each transaction is stored forever on a decentralized ledger, which becomes immutable and transparent. Data cannot be deleted or changed once added, offering complete trust and accountability to both customers and businesses.",
-      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
+      icon: <FaLock className="w-6 h-6 text-orange-500" />,
       iconBg: "bg-orange-100",
     },
     {
       title: "Improved Security",
       description:
         "The cryptographic procedures that underlie blockchain, as well as its decentralized network, mean that data is extremely secure. Access or interference by unauthorized users is practically impossible, and transactions, users' information, and companies' records are preserved in a safe manner at all times.",
-      icon: <CreditCard className="w-6 h-6 text-green-500" />,
+      icon: <FaShieldAlt className="w-6 h-6 text-green-500" />,
       iconBg: "bg-green-100",
     },
     {
       title: "Decentralization",
       description:
         "Blockchain eliminates the need for intermediaries such as banks or payment gateways third parties. It reduces expenses, avoids a single point of failure, and enhances operational efficiency in the system through dispersing power among a network of nodes.",
-      icon: <Store className="w-6 h-6 text-lime-500" />,
+      icon: <FaNetworkWired className="w-6 h-6 text-lime-500" />,
       iconBg: "bg-lime-100",
     },
     {
       title: "Smart Contracts",
       description:
         "Smart contracts are programmed software that runs automatically on the blockchain. They automatically enforce stipulated conditions, without the need for human involvement. This enables faster, faultless operations while ensuring all parties stick to agreed premises.",
-      icon: <ShoppingCart className="w-6 h-6 text-red-500" />,
+      icon: <FaFileContract className="w-6 h-6 text-red-500" />,
       iconBg: "bg-red-100",
     },
     {
       title: "Cost Effectiveness",
       description:
         "Freeing processes from middlemen intervention and automation, blockchain minimizes administrative burden, reduces errors, and streamlines operations. This delivers significant cost reduction while maintaining accuracy and reliability.",
-      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
+      icon: <FaDollarSign className="w-6 h-6 text-orange-500" />,
       iconBg: "bg-orange-100",
     },
     {
       title: "Faster Transactions",
       description:
         "Blockchain offers near real-time settlement of transactions compared to traditional systems. Payments, product transfer, and contract execution can be made virtually in real-time, improving efficiency and accelerating business operations.",
-      icon: <CreditCard className="w-6 h-6 text-green-500" />,
+      icon: <FaBolt className="w-6 h-6 text-green-500" />,
       iconBg: "bg-green-100",
     },
     {
       title: "Improved Traceability",
       description:
         "Every transaction on a blockchain can be tracked and audited to the very last. Businesses can monitor the entire history of products or assets, from the origin to the final delivery, for greater accountability, regulatory compliance, and supply chain transparency.",
-      icon: <Store className="w-6 h-6 text-lime-500" />,
+      icon: <FaSearchLocation className="w-6 h-6 text-lime-500" />,
       iconBg: "bg-lime-100",
     },
     {
       title: "World-Wide Access",
       description:
         "Blockchain makes borderless transactions possible without traditional limitations, opening up opportunities to truly service global markets. Business entities can engage with customers around the world while carrying out secure, transparent, and compliant operations.",
-      icon: <ShoppingCart className="w-6 h-6 text-red-500" />,
+      icon: <FaGlobe className="w-6 h-6 text-red-500" />,
       iconBg: "bg-red-100",
     },
   ];
@@ -361,28 +313,27 @@ const BlockchainDevelopment = () => {
         "Improve security, streamline processes, and open up opportunities for large scale corporate activity.",
     },
   ];
-
   const features = [
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaUsers className="w-10 h-10 text-blue-500" />,
       title: "Expert Blockchain Team",
       description:
         "With experienced developers on our team, we develop seamless and secure blockchain solutions which are customized to your business requirements.",
     },
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaTools className="w-10 h-10 text-blue-500" />,
       title: "Customized Solutions",
       description:
         "We develop different blockchain applications and platforms according to your customized business requirements and cutting-edge technologies of the digital age.",
     },
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaLightbulb className="w-10 h-10 text-blue-500" />,
       title: "Quality & Innovation",
       description:
         "Leveraging standards in Indian blockchain development services and using the latest UI/UX features, we provide solutions that burst, engage the user, and excel on performance.",
     },
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaHeadset className="w-10 h-10 text-blue-500" />,
       title: "Client Specific Support",
       description:
         "Our 24/7 client support ensures your blockchain platforms operate without disruption, and delivers steadfast service while you and your department build enduring trust with the solutions that we provide.",
@@ -393,37 +344,37 @@ const BlockchainDevelopment = () => {
       title: "Enterprise Web Portals",
       description:
         "We create secure, scalable, and integrated enterprise web portals that are designed to support complex business requirements through the implementation of custom blockchain development.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaServer className="text-4xl text-white" />,
     },
     {
       title: "API Integration",
       description:
         "We develop and deploy robust API to enable data to flow and function efficiently across your enterprise system.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaProjectDiagram className="text-4xl text-white" />,
     },
     {
       title: "Cloud Apps",
       description:
         "Our cloud based blockchain apps facilitate high availability, secure access and scalable architecture to execute globally.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaCloud className="text-4xl text-white" />,
     },
     {
       title: "Smart CMS",
       description:
         "Manage content more easily via tailored enterprise CMS solutions with flexibility, robust tools, and interlinking with blockchain.",
-      icon: <FaLaptopCode className="text-4xl" />,
+      icon: <FaFileAlt className="text-4xl text-white" />,
     },
     {
       title: "Analytics Dashboards",
       description:
         "Get business insight in real time with interactive dashboards designed to assist enterprise to make business decisions immediately.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+      icon: <FaChartBar className="text-4xl text-white" />,
     },
     {
       title: "Enterprise Grade E Commerce",
       description:
         "Implement securely, and custom e-commerce platforms that are powered by blockchain solutions, which makes possible performance in business optimization.",
-      icon: <FaTasks className="text-4xl" />,
+      icon: <FaShoppingCart className="text-4xl text-white" />,
     },
   ];
   const otherServicesData = [
@@ -474,8 +425,7 @@ const BlockchainDevelopment = () => {
         description={[
           `Capyngen is Blockchain Development Innovative Company that delivers customized blockchain solutions to businesses globally. Our developers adopt a methodical process that allows each project to attain high functioning, smooth operation, and engaging user interfaces.`,
           `Since our inception in 2022, Capyngen has built a team of creators, thinkers, and problem solvers with the objective of delivering cutting edge solutions that are blockchain driven. Our work today consists of developing applications that are scalable, working, and user optimized so that your users have an uninterrupted and immersed experience.`,
-          `Capyngen offers premier end to end blockchain services as a leading Blockchain Development Company in India, enabling businesses to adopt decentralized technologies and seamlessly integrate measurable results.
-`,
+          `Capyngen offers premier end to end blockchain services as a leading Blockchain Development Company in India, enabling businesses to adopt decentralized technologies and seamlessly integrate measurable results.`,
         ]}
         image={assets.blockchainDevelopmentHero1}
         background={assets.patternBg1}
@@ -502,7 +452,7 @@ const BlockchainDevelopment = () => {
         reverse
       />
       <GetStarted
-        reverse={true}
+        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
