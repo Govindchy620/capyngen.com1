@@ -2,11 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import BestHeading from "./BestHeading";
 
-const FAQSection2 = ({
-  title = "FAQs",
-  desc = "Clear All your queries with our comprehensive FAQ section. Get quick answers to common questions about our services, processes, and more.",
-  items,
-}) => {
+const FAQSection2 = ({ title = "FAQs", desc = "", items }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
@@ -24,10 +20,17 @@ const FAQSection2 = ({
           <div
             key={index}
             onClick={() => toggle(index)}
-            className="group py-5 border-b border-gray-700"
+            className="group py-5 border-b border-gray-700 cursor-pointer"
           >
-            <div className="w-full flex justify-between items-center text-left font-semibold text-3xl focus:outline-none">
-              <span className="group-hover:text-blue-500">{item.question}</span>
+            <div className="w-full flex justify-between items-center text-left font-semibold text-xl focus:outline-none">
+              <div>
+                <span className="text-blue-400 font-mono mr-2 select-none">{`${
+                  index < 9 ? "0" : ""
+                }${index + 1}.`}</span>
+                <span className="group-hover:text-blue-500">
+                  {item.question}
+                </span>
+              </div>
               <span className="ml-4 text-xl">
                 {activeIndex === index ? <FaMinus /> : <FaPlus />}
               </span>
@@ -41,7 +44,7 @@ const FAQSection2 = ({
                   : "max-h-0 opacity-0"
               }`}
             >
-              <div className="text-gray-300 text-xl leading-relaxed pl-1">
+              <div className="text-gray-300 text-lg leading-relaxed pl-1">
                 {item.answer}
               </div>
             </div>

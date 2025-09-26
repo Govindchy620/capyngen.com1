@@ -12,10 +12,10 @@ const Banner5 = ({
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-16 lg:grid-cols-12">
         {/* Left Content */}
         <div className="mr-auto place-self-center lg:col-span-7">
-          <h1 className="max-w-3xl mb-4 text-4xl font-extrabold leading-normal md:text-5xl xl:text-7xl dark:text-white">
+          <h1 className="max-w-3xl mb-4 text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl dark:text-white">
             {title}
           </h1>
-          <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl">
+          <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg">
             {description}
           </p>
 

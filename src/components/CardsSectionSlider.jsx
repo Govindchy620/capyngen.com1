@@ -13,7 +13,7 @@ const CardsSectionSlider = ({
   autoplaySpeed = 3000,
   slidesToShow = 4,
   speed = 500,
-  pauseOnHover = true,
+  pauseOnHover = false,
   responsive = [
     { breakpoint: 1280, settings: { slidesToShow: 3 } },
     { breakpoint: 1024, settings: { slidesToShow: 2 } },
@@ -36,9 +36,11 @@ const CardsSectionSlider = ({
     <section className={`py-16 px-6 md:px-12 ${sectionBg}`}>
       <div className={`max-w-6xl mx-auto text-center`}>
         {/* Dynamic Heading */}
-        <h2 className={`text-2xl ${headColor} md:text-3xl font-bold mb-4`}>
+        <h1
+          className={`text-2xl ${headColor} text-3xl sm:text-5xl font-bold mb-4`}
+        >
           {heading}
-        </h2>
+        </h1>
         <p className={`mb-12 max-w-3xl mx-auto ${headColor}`}>{subheading}</p>
 
         {/* Slider */}
@@ -51,11 +53,11 @@ const CardsSectionSlider = ({
                 }`}
               >
                 {/* Content */}
-                <div className="absolute top-3 sm:top-4 lg:top-6 xl:top-8 left-3 sm:left-4 lg:left-5 z-10 max-w-[80%]">
+                <div className="absolute left-0 z-10 w-full py-5 flex flex-col flex-end bg-black/40 hover:bg-black/70 h-full transition-all duration-700">
                   <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base leading-relaxed">
+                  <p className="text-xs sm:text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

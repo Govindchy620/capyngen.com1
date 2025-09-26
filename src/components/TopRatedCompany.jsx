@@ -41,7 +41,7 @@ export default function TopRatedCompany({
             </h1>
             <div className="text-base md:text-lg mt-12 text-white max-w-3xl mx-auto lg:mx-0 space-y-4">
               {Array.isArray(description) ? (
-                description.map((para, idx) => <p key={idx}>{para}</p>)
+                description.map((para, idx) => <div key={idx}>{para}</div>)
               ) : (
                 <p>{description}</p>
               )}

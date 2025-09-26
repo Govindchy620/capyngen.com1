@@ -84,7 +84,7 @@ import careers1 from "./careers1.jpg";
 import careers2 from "./careers2.jpg";
 import careers3 from "./careers3.jpg";
 import companyOverview from "./companyOverview.jpg";
-import workProcess1 from "./workProcess1.webp";
+import workProcess1 from "./workProcess1.jpg";
 import workProcess2 from "./workProcess2.jpg";
 import workProcess3 from "./workProcess3.jpg";
 import workProcess4 from "./workProcess4.jpg";
