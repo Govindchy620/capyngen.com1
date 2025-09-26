@@ -47,18 +47,81 @@ import Banner4 from "../components/Banner4";
 const BlockchainDevelopment = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is Blockchain Development?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "Blockchain Development is the process of building digital systems that are decentralized, secure, and transparent by using the distributed ledger technology.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "What services does a blockchain development company offer?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "A blockchain development company offers blockchain development, smart contract development, blockchain application development, and enterprise blockchain solutions.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question: "What is smart contract development?",
+      answer:
+        "Smart contract development makes automated, self-executing contracts possible, blockchain being the platform that ensures safety, clarity, and that no inefficiency occurs.",
+    },
+    {
+      question: "How can blockchain app development help my business?",
+      answer:
+        "Blockchain app development not only ensures secure transactions but also opens the way for traceability as well as decentralized functionalities for start-ups, big businesses, and financial systems.",
+    },
+    {
+      question: "What are enterprise blockchain solutions?",
+      answer:
+        "Enterprise blockchain solutions are technologies that are implemented on a big scale to manage multifarious business operations, merge with old systems and make the transparency better.",
+    },
+    {
+      question: "What is custom blockchain development?",
+      answer:
+        "Custom blockchain development is the process of redesigning blockchain technology to specifically accommodate your business's needs, providing scalability, security, and flexibility.",
+    },
+    {
+      question: "What is blockchain software development?",
+      answer:
+        "Blockchain Software Development comprises creating blockchain apps, tokenization mechanisms, smart contracts, and safe networks for business use.",
+    },
+    {
+      question: "How can blockchain consulting services benefit my company?",
+      answer:
+        "Blockchain consulting services only come in the form of guidance that includes strategy, feasibility, and actualization, making sure that blockchain projects are flawless and valuable.",
+    },
+    {
+      question: "Are there blockchain development services in India?",
+      answer:
+        "Yes, there are blockchain development services in India that provide the blockchain solutions in India for startups, enterprises, and enterprise-grade blockchain solutions.",
+    },
+    {
+      question:
+        "What makes a company the best blockchain development company for startups?",
+      answer:
+        "One of the best blockchain development companies for startups is made so by factors like the company's expertise in custom blockchain development, the company's innovation, scalability, and the company's provision of being a cost-effective solution tailored for emerging businesses.",
+    },
+    {
+      question: "Can blockchain development integrate with existing systems?",
+      answer:
+        "Yes. Enterprise blockchain solutions as well as blockchain app development can work with the current IT setup without any issues.",
+    },
+    {
+      question: "How secure is blockchain development?",
+      answer:
+        "Blockchain Development services secure their projects through cryptography, decentralization, and by ensuring that the information cannot be changed thus achieving high-security systems.",
+    },
+    {
+      question: "What is the role of a custom blockchain development company?",
+      answer:
+        "The company will come up with, build, and deliver the blockchain system that is genuinely engineered to fulfill your business requirements while also providing smart contract development and consulting.",
+    },
+    {
+      question:
+        "Can blockchain software development support multiple industries?",
+      answer:
+        "Absolutely! The blockchain app development and enterprise blockchain solutions have already demonstrated the benefits that the finance, supply chain, healthcare, and logistics sectors can gain, among the numerous other industries, through the adoption of distributed ledger technology.",
+    },
+    {
+      question: "How long does blockchain development take?",
+      answer:
+        "The duration varies with the specific project scope—developing smaller applications might be accomplished in several weeks, whereas it is easy to expect that enterprise blockchain solutions will take quite a few months to complete.",
     },
   ];
   const technologies = [
@@ -377,33 +440,7 @@ const BlockchainDevelopment = () => {
       icon: <FaShoppingCart className="text-4xl text-white" />,
     },
   ];
-  const otherServicesData = [
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog1,
-    },
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog2,
-    },
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog3,
-    },
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog4,
-    },
-    {
-      title: "Website Development",
-      description: "Custom website solutions tailored to your business needs.",
-      image: assets.blog2,
-    },
-  ];
+
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
@@ -512,11 +549,7 @@ const BlockchainDevelopment = () => {
         buttonText="Contact Us"
         image={assets.getStarted}
       />
-      <OurServices
-        heading="Our Extra Capabilities"
-        intro="Move Your Web Presence to the Next Level with Full Digital Solutions Capyngen provides a full suite of web and digital services with the purpose of moving your business forward, capturing users' interest, and accelerating your online progress. From customized web development to blockchain implementations, Capyngen provides solutions that make you unique from the online community."
-        services={otherServicesData}
-      />
+
       <FAQSection2 items={faqItems} />
       <ScrollRevealEffect />
     </div>
