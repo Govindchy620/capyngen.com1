@@ -19,7 +19,7 @@ const CardsSectionImage = ({
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <h1
-          className={`mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl ${headColor}`}
+          className={`mt-2 text-3xl font-bold tracking-tight sm:text-5xl ${headColor}`}
         >
           {heading}
         </h1>
