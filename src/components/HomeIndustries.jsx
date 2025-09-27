@@ -15,7 +15,7 @@ export default function HomeIndustries() {
           {/* Image */}
           <div className="overflow-hidden object-contain">
             <img
-              src={assets.homeIndustries}
+              src={assets.technologiesImg}
               alt="People discussing IT project"
               className="object-cover w-full md:w-5/6 flex items-end justify-self-end"
             />

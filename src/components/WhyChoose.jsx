@@ -27,7 +27,7 @@ const WhyChoose = ({
         {/* Feature Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-10">
           {features.map((feature, i) => (
-            <div
+            <article
               key={i}
               className="flex flex-col items-center justify-center p-5 sm:p-6
                 bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-lg
@@ -51,7 +51,7 @@ const WhyChoose = ({
               >
                 {feature.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

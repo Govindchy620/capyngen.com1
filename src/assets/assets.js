@@ -92,6 +92,12 @@ import workProcess5 from "./workProcess5.jpg";
 import getStarted from "./getStarted.webp";
 import backgroundVideo from "./backgroundVideo.mp4";
 import heroVideo from "./heroVideo.mp4";
+import technologiesImg from "./technologiesImg.png";
+import blockchainApplications from "./blockchainApplications.jpg";
+import enablingBusinessBlockchain from "./enablingBusinessBlockchain.jpg";
+import blockchainDevelopmentCompany from "./blockchainDevelopmentCompany.png";
+import blockchainBanner1 from "./blockchainBanner1.png";
+import blockchainBanner2 from "./blockchainBanner2.png";
 
 export const assets = {
   homeAboutUs1,
@@ -188,6 +194,12 @@ export const assets = {
   blockchainDevelopmentHero1,
   backgroundVideo,
   heroVideo,
+  technologiesImg,
+  blockchainApplications,
+  enablingBusinessBlockchain,
+  blockchainDevelopmentCompany,
+  blockchainBanner1,
+  blockchainBanner2,
 };
 
 export const navItems = [

@@ -358,13 +358,13 @@ const BlockchainDevelopment = () => {
   ];
   const slides = [
     {
-      image: assets.blockchainDevelopment,
+      image: assets.blockchainBanner1,
       title: "Blockchain Development",
       subtitle:
         "Transforming business through future-proof, scalable, and secure solutions.",
     },
     {
-      image: assets.blockchainDevelopment,
+      image: assets.blockchainBanner2,
       title: "Smart Contract Development",
       subtitle:
         "Implement our smart contract solutions to maximize reduction of human error, enhance transparency, and automate contracts.",
@@ -464,7 +464,7 @@ const BlockchainDevelopment = () => {
           `Since our inception in 2022, Capyngen has built a team of creators, thinkers, and problem solvers with the objective of delivering cutting edge solutions that are blockchain driven. Our work today consists of developing applications that are scalable, working, and user optimized so that your users have an uninterrupted and immersed experience.`,
           `Capyngen offers premier end to end blockchain services as a leading Blockchain Development Company in India, enabling businesses to adopt decentralized technologies and seamlessly integrate measurable results.`,
         ]}
-        image={assets.blockchainDevelopmentHero1}
+        image={assets.blockchainDevelopmentCompany}
         background={assets.patternBg1}
       />
       <GetStarted
@@ -506,7 +506,7 @@ const BlockchainDevelopment = () => {
         heading="Blockchain Applications"
         desc="Blockchain extends far beyond cryptocurrencies, finding innovative uses across industries. From enhancing user experience and data management to revolutionizing healthcare, finance, supply chains, and even voting systems, blockchain’s decentralized, secure, and transparent structure builds trust, reduces fraud, and streamlines operations."
         benefits={benefitsSection1}
-        image={assets.blockchainDevelopment}
+        image={assets.blockchainApplications}
       />
       <HowWeWork
         heading="How Blockchain Development Works"
@@ -547,7 +547,7 @@ const BlockchainDevelopment = () => {
           "Our emphasis on bespoke development includes blockchain development, smart contract, enterprise and cloud solutions; offering scalable, secure and future proofed solutions that suit your business needs.",
         ]}
         buttonText="Contact Us"
-        image={assets.getStarted}
+        image={assets.enablingBusinessBlockchain}
       />
 
       <FAQSection2 items={faqItems} />

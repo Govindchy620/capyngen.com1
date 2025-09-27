@@ -39,7 +39,7 @@ const Banner4 = ({ slides }) => {
               alt={slide.title}
             >
               {/* Dark gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent pointer-events-none"></div>
 
               {/* Content */}
               <div className="relative z-20 text-left max-w-3xl">

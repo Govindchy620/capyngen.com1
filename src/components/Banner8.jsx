@@ -20,35 +20,46 @@ export default function Banner8({
   reverse = false,
 }) {
   return (
-    <div
-      className={`relative min-h-screen ${bgColor} flex items-center justify-center`}
+    <section
+      className={`relative min-h-screen ${bgColor} flex items-center justify-center px-6 sm:px-12 py-12`}
+      aria-label="Ecommerce Design Banner"
     >
-      {/* Content */}
       <div
-        className={`flex flex-col gap-12 sm:flex-row items-center px-12 py-12 rounded-xl w-full max-w-7xl ${
+        className={`flex flex-col gap-2 pt-8 md:gap-12 sm:flex-row items-center w-full max-w-7xl rounded-xl ${
           reverse ? "sm:flex-row-reverse" : "sm:flex-row"
         }`}
       >
-        {/* Left - Text Section */}
-        <div className="flex-1 text-center">
-          <p className="text-blue-500 text-lg font-bold mb-2"></p>
-          <h1 className="text-4xl sm:text-4xl font-black leading-tight">
-            <span className="text-blue-500">{titlePrefix} </span>
-            <br />
-            <span className="text-white text-5xl whitespace-nowrap">
+        {/* Text Section */}
+        <div className="flex-1 text-center sm:text-left px-4 md:px-8">
+          <h1 className="font-extrabold leading-tight">
+            <span className="block text-blue-500 text-lg sm:text-xl md:text-2xl mb-2 uppercase tracking-wide">
+              {titlePrefix}
+            </span>
+            <span className="block text-white text-3xl sm:text-5xl md:text-6xl whitespace-nowrap">
               {titleMain}
             </span>
-            <br />
-            <span className="text-blue-500">{titleSuffix}</span>
+            <span className="block text-blue-500 text-xl sm:text-2xl md:text-3xl mt-2">
+              {titleSuffix}
+            </span>
           </h1>
-          <p className="mt-4 text-gray-400 text-lg">{description}</p>
+          <p className="mt-6 text-gray-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto sm:mx-0 leading-relaxed">
+            {description}
+          </p>
         </div>
 
-        {/* Right - Figure and Services */}
-        <div className="flex-1 mt-8 sm:mt-0 flex flex-col items-center">
-          {imageSrc && <img src={imageSrc} alt={imageAlt} />}
+        {/* Image Section */}
+        <div className="flex-1 mt-8 sm:mt-0 flex justify-center px-4 md:px-8">
+          {imageSrc && (
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="max-w-full max-h-96 sm:max-h-[500px] md:max-h-[600px] rounded-lg shadow-lg object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

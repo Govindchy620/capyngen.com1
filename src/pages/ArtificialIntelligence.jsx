@@ -91,32 +91,6 @@ const ArtificialIntelligence = () => {
       desc: "Through an AI-driven process, one can streamline the organization of work and further enhance productivity.",
     },
   ];
-  const servicesData = [
-    {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our Artificial Intelligence company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
-    },
-    {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced Artificial Intelligence services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
-    },
-    {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
-    },
-    {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
-    },
-    {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our Artificial Intelligence solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
-    },
-    {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
-    },
-  ];
   const cardsSectionImageData1 = [
     {
       title: "Boost Productivity",
@@ -236,7 +210,7 @@ const ArtificialIntelligence = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="md:sticky inset-0">
         <Banner9 />
       </div>
       {/* Foreground Content (scrolls over background) */}

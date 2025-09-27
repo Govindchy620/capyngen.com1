@@ -15,29 +15,97 @@ import Banner8 from "../components/Banner8";
 import GetStarted from "../components/GetStarted";
 import CardsSection from "../components/CardsSection";
 import {
-  FaChartLine,
-  FaCogs,
   FaLaptopCode,
-  FaLightbulb,
-  FaProjectDiagram,
-  FaTasks,
+  FaPaintBrush,
+  FaMobileAlt,
+  FaDatabase,
+  FaPuzzlePiece,
+  FaAppStore,
+  FaMoneyBillWave,
+  FaBuilding,
+  FaIndustry,
+  FaCheckCircle,
+  FaDraftingCompass,
+  FaRocket,
+  FaExchangeAlt,
 } from "react-icons/fa";
 
 const EcommerceDesign = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is e-commerce design?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "E-commerce design revolves around creating a beautiful, easy to navigate, and responsive online store as a way to improve the buying experience.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why is e-commerce design important?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "A good design will, among other things, increase customer engagement, provide higher conversions, decrease bounce rates, and also create a strong brand.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question: "Can you create custom e-commerce designs?",
+      answer:
+        "Yes, our team builds tailor-made online stores that are specifically designed to reflect both your brand and business ambitions.",
+    },
+    {
+      question: "Which platforms do you design for?",
+      answer:
+        "We are creating the designs on platforms like Shopify, Magento, WooCommerce, OpenCart, PrestaShop, and custom CMS.",
+    },
+    {
+      question: "Do you provide mobile-friendly designs?",
+      answer:
+        "Definitely, every one of our e-commerce designs is responsive and fully optimized for cell phones and tablets.",
+    },
+    {
+      question: "Can you redesign an existing e-commerce store?",
+      answer:
+        "Of course, we provide the services related to the redesign for issues like basic features, improvement of looks, and user experience in general.",
+    },
+    {
+      question: "Do you integrate UI/UX best practices?",
+      answer:
+        "Definitely, our designs are in accordance with industry standards that ensure users have an easy time navigating, are accessible as well as providing a smooth shopping journey.",
+    },
+    {
+      question: "Can you create designs for international stores?",
+      answer:
+        "Exactly, we offer solutions for e-commerce that are both multilingual and multi-currency considering the global audience.",
+    },
+    {
+      question: "How do you ensure fast-loading websites?",
+      answer:
+        "We do a good job of making sure that the images, scripts, and layouts that are used are working well and have almost no loading time.",
+    },
+    {
+      question: "Do you provide design mockups before development?",
+      answer:
+        "Definitely, we give wireframes and prototypes for the client's approval before starting full-scale development.",
+    },
+    {
+      question: "Can your designs improve conversion rates?",
+      answer:
+        "The answer is Yes. Along with other best practices, we are focusing on product layout, call-to-action placement, and checkout optimization.",
+    },
+    {
+      question: "Are SEO considerations included in e-commerce design?",
+      answer:
+        "Yes, the designs we make have structures that are friendly to SEO, and also include on-page optimization, that gives visibility in the search engines.",
+    },
+    {
+      question: "Do you integrate payment gateways in your designs?",
+      answer:
+        "Definitely, our designs are allowing a smooth integration with multiple and secure payment gateways.",
+    },
+    {
+      question: "Can your designs handle large product catalogs?",
+      answer:
+        "Yes, we craft e-commerce websites in such a way that they are scalable and thus capable of holding thousands of products without any difficulties.",
+    },
+    {
+      question: "Do you provide post-launch support for your designs?",
+      answer:
+        "Of course, we provide the service that includes maintenance, updates, and the continuous optimization of designs so that your shop remains current.",
     },
   ];
   const technologies = [
@@ -87,109 +155,83 @@ const EcommerceDesign = () => {
       desc: "The transfer of ecommerce websites, apps, and databases to new platforms or upgraded systems has been made smooth and efficient with minimal service interruption and maximum reliability.",
     },
   ];
-  const servicesData = [
-    {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our E-Commerce Design company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
-    },
-    {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced E-Commerce Design services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
-    },
-    {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
-    },
-    {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
-    },
-    {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our E-Commerce Design solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
-    },
-    {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
-    },
-  ];
   const cardsSectionData = [
     {
       title: "Ecommerce Website Design",
       description:
         "The visually attractive ecommerce website design services can power up an online business. The experts of ecommerce website designing craft responsive, user-friendly, and high-converting websites that are equally suitable for startups and enterprises.Ecommerce UI Design",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaPaintBrush className="text-4xl text-white" />,
     },
     {
       title: "Ecommerce App UI Design",
       description:
         "Be reachable by an app instead of a website if you have a smart ecommerce mobile app design. Beautiful Android and iOS apps go with seamless ecommerce app UI design and together they elevate the engagement and loyalty.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
       title: "Ecommerce Database Design",
       description:
         "Help an online store to operate at its best using secure ecommerce database design. The scalable, efficient, and reliable databases support smooth transactions, and data management.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaDatabase className="text-4xl text-white" />,
     },
     {
       title: "Custom Ecommerce Solutions",
       description:
         "Custom e-commerce website design solutions that are specifically tailored to a brand's requirements are the perfect fit. The platforms that are designed are not only flexible and scalable but also designed for growth and conversions.",
-      icon: <FaLaptopCode className="text-4xl" />,
+      icon: <FaPuzzlePiece className="text-4xl text-white" />,
     },
     {
       title: "Ecommerce Web Design Services",
       description:
         "Ecommerce web design services are a perfect match of creativity and technology. The websites are all mobile-responsive, fast, and optimized for user experience and search engines.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+      icon: <FaLaptopCode className="text-4xl text-white" />,
     },
     {
       title: "Ecommerce Mobile App Design",
       description:
         "Increase the number of people who can find your store by mobile app design. The cross-platform apps offer advanced features such as push notifications, personalized dashboards, and seamless payment gateways that allow for easy integration with your store.",
-      icon: <FaTasks className="text-4xl" />,
+      icon: <FaAppStore className="text-4xl text-white" />,
     },
     {
       title: "Affordable Ecommerce Website Design",
       description:
         "Reasonable but professional, affordable ecommerce website design services provide customers with high-quality solutions. With the right plan and good management, startups and small businesses can build powerful online stores that fit their budgets.",
-      icon: <FaLaptopCode className="text-4xl" />,
+      icon: <FaMoneyBillWave className="text-4xl text-white" />,
     },
     {
       title: "Enterprise Ecommerce Solutions",
       description:
         "Give enterprises the best service of e-commerce design for businesses. The end-to-end services of e-commerce website design come with the incorporation of analytics, performance optimization, and advanced UI/UX strategies.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+      icon: <FaBuilding className="text-4xl text-white" />,
     },
     {
       title: "Industries Transformed with Ecommerce Design Solutions",
       description:
         "Customized ecommerce design services empower businesses from all corners of the globe to create cutting-edge web and mobile platforms that foster engagement, increase sales, and surpass customer expectations.",
-      icon: <FaTasks className="text-4xl" />,
+      icon: <FaIndustry className="text-4xl text-white" />,
     },
   ];
   const features = [
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaCheckCircle className="w-10 h-10 text-blue-500" />,
       title: "Proof & MVP",
       description:
         "Create and test Minimum Viable Products for ideas validation purposes through custom e-commerce website design solutions to target concepts and attract investors.",
     },
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaDraftingCompass className="w-10 h-10 text-blue-500" />,
       title: "Prototype Development",
       description:
         "Fabricate working prototypes of ecommerce web design and ecommerce mobile app design to exhibit innovation and ease of use.",
     },
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaRocket className="w-10 h-10 text-blue-500" />,
       title: "Launch Strategy",
       description:
         "Utilize data-driven product release methods for maximum exposure, participation, and conversions through ecommerce website design services.",
     },
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <FaExchangeAlt className="w-10 h-10 text-blue-500" />,
       title: "Flexible models",
       description:
         "For scalable, cost-effective, and quality ecommerce design solutions, you can either go for the time and material or fixed price models.",
@@ -201,7 +243,7 @@ const EcommerceDesign = () => {
     <div className="relative">
       <Banner8 />
       <GetStarted
-        reverse={true}
+        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
@@ -226,7 +268,7 @@ const EcommerceDesign = () => {
         headColor="text-white"
       />
       <GetStarted
-        reverse={true}
+        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
@@ -258,7 +300,7 @@ const EcommerceDesign = () => {
         technologies={technologies}
       />
       <GetStarted
-        reverse={true}
+        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
@@ -269,7 +311,6 @@ const EcommerceDesign = () => {
         ]}
         backgroundVideo={assets.backgroundVideo}
       />
-      <OurServices />
       <FAQSection2 items={faqItems} />
       <ScrollRevealEffect />
     </div>
