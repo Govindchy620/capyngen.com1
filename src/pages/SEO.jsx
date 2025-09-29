@@ -35,18 +35,78 @@ import GetStarted from "../components/GetStarted";
 const SEO = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is SEO and why is it important for my business?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "SEO (Search Engine Optimization) is a tool that can lead your website to real, or organic, traffic if it is properly implemented, and this is quite a powerful tool for businesses as it nearly doubles their customer base. In a few words, SEO makes your website be able to appear on the first pages of search engines which automatically means that more people will visit your site and some of these will turn out to be your potential customers.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "How long does it take to see results from SEO?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Usually, the first SEO outcomes are seen within 3 to 6 months. But the timeframe of success largely depends on competition, website health, and the quality of the content produced.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question: "Do you provide on-page and off-page SEO?",
+      answer:
+        "Yes, we offer a complete on-page (content, meta tags, structure) and off-page (backlinks, social signals) SEO service reaching every aspect of your website.",
+    },
+    {
+      question: "Can you optimize my website for local searches?",
+      answer:
+        "Definitely, Local SEO is one of our core strengths and we can help you gain more local visitors by making sure your website is easily discoverable for local searches.",
+    },
+    {
+      question: "What industries do you provide SEO services for?",
+      answer:
+        "We take on SEO projects from all industries, including the likes of e-commerce, healthcare, finance, education, travel, and many more.",
+    },
+    {
+      question: "Will SEO improve my website’s traffic?",
+      answer:
+        "SEO is definitely the key to your website becoming more visible on the web and as a result, the number of visitors will be organically increased.",
+    },
+    {
+      question: "Do you provide keyword research services?",
+      answer:
+        "SURE! Keyword research is a major part of our services. We try to find those top-performing keywords in each niche, that would be generally easy to rank for, yet would bring in the largest search volume.",
+    },
+    {
+      question: "How do you measure SEO success?",
+      answer:
+        "We look at different key figures like number of visits, keyword rankings, average time on site, bounce rate, and conversion rate to name a few.",
+    },
+    {
+      question: "Is SEO a one-time service or ongoing?",
+      answer:
+        "SEO is a continuous improvement journey in which the possibility of a sudden drop in rankings can always be there. It is very important that, even after moving up the ranks, ranking positions are constantly maintained, engine updates are always taken into consideration and competitors are constantly kept at bay.",
+    },
+    {
+      question: "Can you optimize my website for mobile SEO?",
+      answer:
+        "Yes, we work on the mobile version of your website to make sure that it is easy to access, loads quickly, looks good, and works well on mobile devices, and so your website ranks higher in mobile searches.",
+    },
+    {
+      question: "Do you provide SEO-friendly content creation?",
+      answer:
+        "We have teams of writers who create content around specific keywords, and this content is engaging and also meets the SEO requirements of search engines like Google. These contents could be in blogs, websites, product pages, etc.",
+    },
+    {
+      question: "Will my website be penalized by Google during SEO?",
+      answer: `No, we only adopt "white-hat" SEO techniques which are completely in line with Google's guidelines aimed at safe optimizations, thus, never resulting in penalties.`,
+    },
+    {
+      question: "Do you provide SEO for e-commerce websites?",
+      answer:
+        "Of course, we assist e-commerce websites with SEO in a number of aspects such as product pages and category pages optimization, and the addition of structured data to make e-commerce SEO more friendly for search engines.",
+    },
+    {
+      question: "Can you fix my existing website’s SEO issues?",
+      answer:
+        "Yeah, we check the complete health of your website, figure out the performance barriers, and suggest the easiest and fastest ways to the solution that will increase the ranking of your site.",
+    },
+    {
+      question: "Do you offer SEO reporting and analytics?",
+      answer:
+        "Yes, the SEO reports we produce are based on routine work done on ranking positions, traffic, and performance metrics.",
     },
   ];
   const technologies = [
@@ -69,82 +129,6 @@ const SEO = () => {
     { name: "Azure", logo: assets.azure },
     { name: "AWS", logo: assets.aws },
     { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
-    },
-    {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
-    },
-    {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our SEO company, integrating e-learning tools, course management, and student engagement features.",
-    },
-    {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our SEO services to highlight your skills and attract potential clients.",
-    },
-    {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our SEO company, featuring responsive designs and seamless navigation for a better user experience.",
-    },
-    {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
-    },
-    {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive SEO solutions tailored to your needs.",
-    },
-    {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our SEO company, featuring secure payment gateways, inventory management, and optimized user journeys.",
-    },
-    {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our SEO services, that enhance donor engagement and effectively communicate your mission.",
-    },
-    {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
-    },
-    {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
-    },
-    {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
-    },
-  ];
-  const servicesData = [
-    {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our SEO company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
-    },
-    {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced SEO services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
-    },
-    {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
-    },
-    {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
-    },
-    {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our SEO solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
-    },
-    {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
-    },
   ];
   const cardsSectionData1 = [
     {
