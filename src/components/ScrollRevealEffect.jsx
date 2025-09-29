@@ -8,15 +8,24 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ScrollRevealEffect() {
   const containerRef = useRef(null);
   const sectionsRef = useRef([]);
+  // Track local triggers
   const localTriggers = useRef([]);
 
   useEffect(() => {
     requestAnimationFrame(() => {
       const sections = sectionsRef.current;
       const container = containerRef.current;
-      if (!container || !sections.length) return;
+
+      if (!container || !sections.length) {
+        console.warn("Refs not ready");
+        return;
+      }
+
+      // CLEANUP: Kill only triggers created inside this component
       localTriggers.current.forEach((trigger) => trigger.kill());
       localTriggers.current = [];
+
+      // Pin the container
       const pinTrigger = ScrollTrigger.create({
         trigger: container,
         start: "top top",
@@ -26,6 +35,8 @@ export default function ScrollRevealEffect() {
         pinSpacing: true,
       });
       localTriggers.current.push(pinTrigger);
+
+      // Animate each section in sequence
       sections.forEach((section, i) => {
         if (i === sections.length - 1) return;
         const trigger = gsap.to(section, {
@@ -43,7 +54,9 @@ export default function ScrollRevealEffect() {
         localTriggers.current.push(trigger);
       });
     });
+
     return () => {
+      // CLEANUP: Only kill component's triggers
       localTriggers.current.forEach((trigger) => trigger.kill());
       localTriggers.current = [];
     };
@@ -67,10 +80,10 @@ export default function ScrollRevealEffect() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden"
+      className="relative w-full h-screen overflow-hidden "
     >
       {sections.map((section, i) => (
-        <section
+        <div
           key={i}
           ref={(el) => (sectionsRef.current[i] = el)}
           className={`absolute inset-0 flex items-center justify-center ${section.bg}`}
@@ -78,10 +91,9 @@ export default function ScrollRevealEffect() {
             zIndex: sections.length - i,
             ...(section.style || {}),
           }}
-          aria-label={`Scroll section ${section.text}`}
         >
-          {/* Gradient overlays */}
-          {section.bg ? (
+          {/* Gradient Overlays */}
+          {section.bg && (
             <>
               <div
                 className="absolute -top-20 left-0 w-full h-40 pointer-events-none"
@@ -89,19 +101,18 @@ export default function ScrollRevealEffect() {
                   background:
                     "linear-gradient(to bottom, var(--tw-bg-opacity,1) currentColor, transparent)",
                 }}
-                aria-hidden="true"
-              />
+              ></div>
               <div
                 className="absolute -bottom-20 left-0 w-full h-40 pointer-events-none"
                 style={{
                   background:
                     "linear-gradient(to top, var(--tw-bg-opacity,1) currentColor, transparent)",
                 }}
-                aria-hidden="true"
-              />
+              ></div>
             </>
-          ) : null}
-          {section.style?.backgroundImage ? (
+          )}
+
+          {section.style?.backgroundImage && (
             <>
               <div
                 className="absolute -top-20 left-0 w-full h-40 pointer-events-none"
@@ -113,8 +124,7 @@ export default function ScrollRevealEffect() {
                     "linear-gradient(to bottom, black, transparent)",
                   maskImage: "linear-gradient(to bottom, black, transparent)",
                 }}
-                aria-hidden="true"
-              />
+              ></div>
               <div
                 className="absolute -bottom-20 left-0 w-full h-40 pointer-events-none"
                 style={{
@@ -125,12 +135,13 @@ export default function ScrollRevealEffect() {
                     "linear-gradient(to top, black, transparent)",
                   maskImage: "linear-gradient(to top, black, transparent)",
                 }}
-                aria-hidden="true"
-              />
+              ></div>
             </>
-          ) : null}
+          )}
+
           {section.text === "Form" ? (
             <div className="flex flex-col md:flex-row items-stretch justify-center gap-10 px-4 sm:px-6 lg:px-10 text-white max-w-7xl mx-auto w-full max-h-[90vh]">
+              {/* Left Side (Intro) */}
               <div className="hidden flex-1 min-w-[300px] md:flex flex-col justify-center bg-white/5 backdrop-blur-md p-6 sm:p-10 rounded-2xl shadow-lg">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                   Let’s <span className="text-cyan-400">Talk</span> About Your{" "}
@@ -142,71 +153,62 @@ export default function ScrollRevealEffect() {
                   them to life.
                 </p>
               </div>
+
+              {/* Right Side (Form) */}
               <div className="flex-1 min-w-[300px] bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg">
-                <form className="space-y-3 w-full" autoComplete="off">
+                <form className="space-y-3 w-full">
+                  {/* Name */}
                   <div>
-                    <label
-                      htmlFor="fullName"
-                      className="block mb-2 text-sm font-medium"
-                    >
+                    <label className="block mb-2 text-sm font-medium">
                       Full Name
                     </label>
                     <input
-                      id="fullName"
                       type="text"
                       placeholder="Enter your name"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300
-                        focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     />
                   </div>
+
+                  {/* Email */}
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block mb-2 text-sm font-medium"
-                    >
+                    <label className="block mb-2 text-sm font-medium">
                       Email
                     </label>
                     <input
-                      id="email"
                       type="email"
                       placeholder="Enter your email"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300
-                        focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     />
                   </div>
+
+                  {/* Contact Number */}
                   <div>
-                    <label
-                      htmlFor="contactNumber"
-                      className="block mb-2 text-sm font-medium"
-                    >
+                    <label className="block mb-2 text-sm font-medium">
                       Contact Number
                     </label>
                     <input
-                      id="contactNumber"
                       type="tel"
                       placeholder="Enter your phone number"
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300
-                        focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     />
                   </div>
+
+                  {/* Message */}
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block mb-2 text-sm font-medium"
-                    >
+                    <label className="block mb-2 text-sm font-medium">
                       Message
                     </label>
                     <textarea
-                      id="message"
                       placeholder="Write your message..."
+                      rows="3"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
-                      rows={3}
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300
-                        focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     ></textarea>
                   </div>
+
+                  {/* Submit Button */}
                   <button
                     type="submit"
                     className="w-full py-3 bg-cyan-400 text-black font-semibold rounded-lg shadow-lg hover:bg-cyan-300 transition duration-300"
@@ -221,7 +223,7 @@ export default function ScrollRevealEffect() {
               {section.text}
             </h1>
           )}
-        </section>
+        </div>
       ))}
     </div>
   );

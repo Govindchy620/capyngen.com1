@@ -14,11 +14,14 @@ import { LifeBuoy, Sparkles } from "lucide-react";
 import Banner5 from "../components/Banner5";
 import CardsSection from "../components/CardsSection";
 import {
-  FaChartLine,
-  FaCogs,
-  FaLaptopCode,
-  FaLightbulb,
-  FaProjectDiagram,
+  FaTachometerAlt,
+  FaUsersCog,
+  FaChartPie,
+  FaCloud,
+  FaDatabase,
+  FaBrain,
+  FaTools,
+  FaLayerGroup,
 } from "react-icons/fa";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import GetStarted from "../components/GetStarted";
@@ -102,121 +105,24 @@ const DataAnalytics = () => {
         "We do public and private monitoring, maintenance, and updates that guarantee prime performance of analytics systems that we sell.",
     },
   ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
-    },
-    {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
-    },
-    {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our Data & Analytics company, integrating e-learning tools, course management, and student engagement features.",
-    },
-    {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our Data & Analytics services to highlight your skills and attract potential clients.",
-    },
-    {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our Data & Analytics company, featuring responsive designs and seamless navigation for a better user experience.",
-    },
-    {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
-    },
-    {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive Data & Analytics solutions tailored to your needs.",
-    },
-    {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our Data & Analytics company, featuring secure payment gateways, inventory management, and optimized user journeys.",
-    },
-    {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our Data & Analytics services, that enhance donor engagement and effectively communicate your mission.",
-    },
-    {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
-    },
-    {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
-    },
-    {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
-    },
-  ];
-  const servicesData = [
-    {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our Data & Analytics company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
-    },
-    {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced Data & Analytics services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
-    },
-    {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
-    },
-    {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
-    },
-    {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our Data & Analytics solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
-    },
-    {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
-    },
-  ];
   const cardsSectionData1 = [
     {
       title: "Customer-Facing Analytics Platforms",
       description:
         "Interactive dashboards, real-time reporting, and insights specially designed for strategic decision-making are just some of the features you can offer to your business stakeholders.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaTachometerAlt className="text-4xl" />,
     },
     {
       title: "Admin & Management Panels",
       description:
         "You can control every detail of data sources, integration pipelines, and analytics configurations, including the optimized workflows and the reliable data governance point.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaUsersCog className="text-4xl" />,
     },
     {
       title: "Custom Analytics Services",
       description:
         "While doing the predictive part in a more advanced manner with AI, eventually business will be driven to the best scenarios for which, mixed with your ideas, we will provide custom analytics services as per your requirement.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaChartPie className="text-4xl" />,
     },
   ];
   const cardsSectionData2 = [
@@ -224,31 +130,31 @@ const DataAnalytics = () => {
       title: "Cloud-Based Analytics Services",
       description:
         "The cloud transition of your analytics will keep you from being limited by a lack of capacity and will allow you to have access to your business intelligence securely and at any time, from any place, in most cases by just using your smart device and the internet.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaCloud className="text-4xl" />,
     },
     {
       title: "Big Data Processing",
       description:
         "When data grows to enormous sizes, we handle it highly efficiently by essentially changing the raw part into the usable one which could be done by complex algorithms.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaDatabase className="text-4xl" />,
     },
     {
       title: "Predictive & Prescriptive Analytics",
       description:
         "Being able to decide correctly ahead of time and thereby anticipate the future´s demands, will be enabled by the usage of the most advanced types of AI and ML models that can, without interruption, merge with your data pipelines.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaBrain className="text-4xl" />,
     },
     {
       title: "Custom Data Analytics Solutions",
       description:
         "Specific designs that precisely match the needs of your field, including dashboards, KPIs, and reports that are most important to you.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaTools className="text-4xl" />,
     },
     {
       title: "Business Intelligence Integration",
       description:
         "One simple and efficient platform for combining data from diverse origins, thus, facilitating decision-making and the better running of operations.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaLayerGroup className="text-4xl" />,
     },
   ];
   const cardsSectionSliderData1 = [
@@ -352,7 +258,7 @@ const DataAnalytics = () => {
           textColor="text-white"
           hoverTextColor=""
           textSize="text-md"
-          height="h-72"
+          height="h-78"
         />
         <CardsSection
           heading="Data & Analytics Services We Offer"
@@ -365,7 +271,7 @@ const DataAnalytics = () => {
           textColor="text-white"
           hoverTextColor=""
           textSize="text-md"
-          height="h-72"
+          height="h-86"
         />
 
         <CardsSectionSlider
@@ -481,7 +387,7 @@ const DataAnalytics = () => {
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
         />
         <GetStarted
-          reverse={true}
+          reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
           buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"

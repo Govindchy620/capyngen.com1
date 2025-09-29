@@ -27,13 +27,13 @@ export default function Banner9() {
               for Business
             </span>
           </h1>
-          <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-lg leading-relaxed">
+          <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-2xl leading-relaxed">
             Capyngen creates futuristic artificial intelligence applications and
             AI-enabled solutions to attract radical ideas, save time and
             revenue-making your business blossom. Besides this, custom AI
             development services and consulting empower your business.
           </p>
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 text-left max-w-md mx-auto lg:mx-0">
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 text-left max-w-2xl mx-auto lg:mx-0">
             <ul>
               <HeroCheckItem text="AI-Powered Personalized Product Recommendations" />
               <HeroCheckItem text="AI-Driven Payment Fraud Detection and Security" />
@@ -69,7 +69,7 @@ export default function Banner9() {
 
 function HeroCheckItem({ text }) {
   return (
-    <li className="flex items-center space-x-3 mb-3">
+    <li className="flex items-center space-x-3 mb-3 md:h-15">
       <span
         className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white flex-shrink-0"
         aria-hidden="true"

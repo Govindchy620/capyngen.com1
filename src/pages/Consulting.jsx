@@ -32,6 +32,18 @@ import {
   FaNetworkWired,
   FaProjectDiagram,
   FaVrCardboard,
+  FaCloud,
+  FaBriefcase,
+  FaServer,
+  FaHandshake,
+  FaDigitalOcean,
+  FaBuilding,
+  FaMoneyBillWave,
+  FaBullhorn,
+  FaChartBar,
+  FaHeadset,
+  FaPuzzlePiece,
+  FaTrophy,
 } from "react-icons/fa";
 import AppTypesSection from "../components/AppTypesSection";
 import CardsSectionImage from "../components/CardsSectionImage";
@@ -39,115 +51,83 @@ import CardsSectionImage from "../components/CardsSectionImage";
 const Consulting = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What forms of consulting services have you got?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "We offer IT, business, enterprise, digital, and strategy advisory services.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why should a business work with a consulting firm?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Consultants come with the knowledge, market insights, and out-of-the-box ideas to alleviate the problems of the business and thus make it expand.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
-    },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      question: "Are you in the business of offering startup consulting?",
+      answer:
+        "Definitely, we are the leading provider of affordable, efficient, and scalable startup consulting solutions to achieve rapid growth and smooth operations.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      question:
+        "Would you be able to handle IT strategy and digital transformation?",
+      answer:
+        "Definitely not, our IT consulting services bring to the forefront digital transformation, cloud adoption, and technology optimization.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our Consulting company, integrating e-learning tools, course management, and student engagement features.",
+      question: "In what kinds of industries do you offer consulting services?",
+      answer:
+        "We have worked with and are prepared to work with various industries including finance, healthcare, education, manufacturing, retail, and travel among others.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our Consulting services to highlight your skills and attract potential clients.",
+      question: "Are you engaged in consultations for large organizations?",
+      answer:
+        "Of course, we have enterprise consulting services such as process re-engineering, system integration, and technology roadmaps.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our Consulting company, featuring responsive designs and seamless navigation for a better user experience.",
+      question:
+        "Is business process improvement within your area of expertise?",
+      answer:
+        "Yes, through our consulting solutions, we find the inefficiencies and put in place the strategies that increase productivity and lead to cost reduction.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+      question: "Do you provide remote-access consulting services?",
+      answer:
+        "Yes, our consulting services are available worldwide through online meetings, virtual workshops, and project collaboration platforms.",
     },
     {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive Consulting solutions tailored to your needs.",
+      question: "How do you approach IT consulting projects?",
+      answer:
+        "Requirement analysis is the first step we take, then we do strategy planning, technology recommendations, and implementation support.",
     },
     {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our Consulting company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+      question: "Do you support small businesses in India by giving advice?",
+      answer:
+        "Certainly, we provide the most effective IT consulting services and cost-effective business consulting solutions specially crafted for small businesses in India.",
     },
     {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our Consulting services, that enhance donor engagement and effectively communicate your mission.",
+      question: "Can you assist in regulatory compliance and risk management?",
+      answer:
+        "Yes, our professionals give compliance advisory, support in risk assessment, and risk management services to all the sectors you can imagine.",
     },
     {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+      question:
+        "Do you provide continuous support after consulting engagements?",
+      answer:
+        "Yes, we stay on hand to give continual guidance, keep watch, and encourage with actions as we agree when required for the success of our plans.",
     },
     {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+      question: "Are your services limited only to a certain industry?",
+      answer:
+        "Yes, our specialists comprehend the domain and provide solutions that perfectly fit the requirements of the particular industry.",
     },
     {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
-    },
-  ];
-  const servicesData = [
-    {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our Consulting company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      question:
+        "Does your company offer digital marketing and technology consulting?",
+      answer:
+        "Yes, we provide digital consulting to enhance marketing strategy, technology adoption, and digital transformation initiatives.",
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced Consulting services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
-    },
-    {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
-    },
-    {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
-    },
-    {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our Consulting solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
-    },
-    {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      question: "How would I avail your consulting services?",
+      answer:
+        "Just reach out to our team, describe your needs, and we will organize a session where we can discuss a tailored strategy for your business.",
     },
   ];
   const cardsSectionGridData1 = [
@@ -155,95 +135,96 @@ const Consulting = () => {
       title: "Business Growth Solutions",
       description:
         "Devised the tactics that opened up new revenue streams and improved SMEs' market share.",
-      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
+      icon: <FaChartLine className="w-6 h-6 text-orange-500" />,
       iconBg: "bg-orange-100",
     },
     {
       title: "Digital Transformation Programs",
       description:
         "Facilitated the transition of enterprises into cloud, AI, and automation by providing digital solutions for greater efficiency.",
-      icon: <CreditCard className="w-6 h-6 text-green-500" />,
+      icon: <FaCloud className="w-6 h-6 text-green-500" />,
       iconBg: "bg-green-100",
     },
     {
       title: "Startup Advisory",
       description:
         "Assisted more than 100 startups with IT and business consulting services catering to the creation of sustainable business models.",
-      icon: <Store className="w-6 h-6 text-lime-500" />,
+      icon: <FaLightbulb className="w-6 h-6 text-lime-500" />,
       iconBg: "bg-lime-100",
     },
     {
       title: "End-To-End Consulting Services",
       description:
         "Highly qualified consultants make successful projects for IT, business, and digital consulting that lead your organization to the top of the market. Co-ordinate with the best enterprise consulting company to access the hidden leagues of yours.",
-      icon: <ShoppingCart className="w-6 h-6 text-red-500" />,
+      icon: <FaBriefcase className="w-6 h-6 text-red-500" />,
       iconBg: "bg-red-100",
     },
     {
       title: "IT Consulting Services",
       description:
         "Capyngen offers tailored IT consulting services that will revamp your IT infrastructure, make your process more efficient, and ensure your digital resilience.",
-      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
+      icon: <FaServer className="w-6 h-6 text-orange-500" />,
       iconBg: "bg-orange-100",
     },
     {
       title: "Business Consulting Solutions",
       description:
         "We offer the business consulting services at affordable rates that are primarily focused on optimizing the performance and fostering growth.",
-      icon: <CreditCard className="w-6 h-6 text-green-500" />,
+      icon: <FaHandshake className="w-6 h-6 text-green-500" />,
       iconBg: "bg-green-100",
     },
     {
       title: "Digital Consulting Services",
       description:
         "Our digital consultants make use of the latest technology like AI to help business in transition to the digital world which is constantly changing.",
-      icon: <Store className="w-6 h-6 text-lime-500" />,
+      icon: <FaDigitalOcean className="w-6 h-6 text-lime-500" />,
       iconBg: "bg-lime-100",
     },
     {
       title: "Enterprise Consulting Company",
       description:
         "We lead companies to the right track of achieving efficiency, conforming to the regulations, and developing plans for the future.",
-      icon: <ShoppingCart className="w-6 h-6 text-red-500" />,
+      icon: <FaBuilding className="w-6 h-6 text-red-500" />,
       iconBg: "bg-red-100",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title: "Strategy Consulting",
       description:
         "Such services include high-level business planning, competitive analysis, and revenue growth modeling.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaLightbulb className="text-4xl text-indigo-600" />,
     },
     {
       title: "Management Consulting",
       description:
         "Assistance with organizational restructuring, efficiency optimization, and leadership support.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaChartBar className="text-4xl text-indigo-600" />,
     },
     {
       title: "IT & Technology Consulting",
       description:
         "Digital transformation, IT roadmap, and infrastructure modernization are the main areas of work.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaNetworkWired className="text-4xl text-indigo-600" />,
     },
     {
       title: "Startup Consulting",
       description:
         "Complete support for new businesses starting from ideation until execution.",
-      icon: <FaLaptopCode className="text-4xl" />,
+      icon: <FaLaptopCode className="text-4xl text-indigo-600" />,
     },
     {
       title: "Marketing Consulting",
       description:
         "Specialized in planning, executing, and optimizing marketing strategies that boost visibility, lead generation, and customer engagement in competitive industries.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+      icon: <FaBullhorn className="text-4xl text-indigo-600" />,
     },
     {
       title: "Financial Advisory Consulting",
       description:
         "Provides expert financial planning, budgeting, risk management, and investment strategies tailored to support business sustainability and expansion.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+      icon: <FaMoneyBillWave className="text-4xl text-indigo-600" />,
     },
   ];
   const appTypes = [
@@ -251,25 +232,25 @@ const Consulting = () => {
       title: "Results Are The Top Priority For Us",
       description:
         "Data-synergized-we energize our consulting strategies with insights, analytics, and tried-and-true methods that guarantee results.",
-      icon: <FaApple className="text-4xl text-white" />,
+      icon: <FaTrophy className="text-4xl text-white" />,
     },
     {
       title: "Custom-tailored solutions",
       description:
         "Business consulting solutions are developed on a case-by-case basis.",
-      icon: <FaAndroid className="text-4xl text-white" />,
+      icon: <FaCogs className="text-4xl text-white" />,
     },
     {
       title: "Usable as Illustrative Models",
       description:
         "From startups to corporations, we strive to create customizable and adaptable models that demonstrate the advantages of our strategies.",
-      icon: <FaVrCardboard className="text-4xl text-white" />,
+      icon: <FaPuzzlePiece className="text-4xl text-white" />,
     },
     {
       title: "Expert Support Round The Clock",
       description:
         "They will never fail to assist you in case of any doubts, queries, or difficulties in the situation you find yourself in.",
-      icon: <FaNetworkWired className="text-4xl text-white" />,
+      icon: <FaHeadset className="text-4xl text-white" />,
     },
   ];
   const cardsSectionImageData1 = [
@@ -349,10 +330,11 @@ const Consulting = () => {
             </p>,
           ]}
           image={assets.whyChooseUs}
+          isHidden="hidden"
           background={assets.patternBg1}
         />
         <GetStarted
-          reverse={true}
+          reverse={false}
           backgroundColor="bg-gray-800"
           textColor="text-white"
           buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
@@ -369,7 +351,7 @@ const Consulting = () => {
         />
         <GetStarted
           reverse={true}
-          backgroundColor="bg-blue-800"
+          backgroundColor="bg-blue-900"
           textColor="text-white"
           buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
           buttonTextColor="text-white"
@@ -397,7 +379,7 @@ const Consulting = () => {
           textColor="text-white"
           hoverTextColor=""
           textSize="text-md"
-          height="h-64"
+          height="h-72"
         />
         <AppTypesSection
           heading="What Makes Our Consulting Services Stand Out"
@@ -408,7 +390,7 @@ const Consulting = () => {
           appTypes={appTypes}
         />
         <GetStarted
-          reverse={true}
+          reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
           buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
@@ -435,7 +417,7 @@ const Consulting = () => {
           steps={steps}
         />
         <GetStarted
-          reverse={false}
+          reverse={true}
           backgroundColor="bg-blue-900"
           textColor="text-white"
           buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"

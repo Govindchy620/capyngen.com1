@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";

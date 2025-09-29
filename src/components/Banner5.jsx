@@ -8,14 +8,17 @@ const Banner5 = ({
   image = "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png",
 }) => {
   return (
-    <section className="bg-white dark:bg-gray-900 pt-20">
+    <section
+      className="bg-white dark:bg-gray-900 pt-20"
+      aria-label="DevOps Solutions Banner"
+    >
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-16 lg:grid-cols-12">
         {/* Left Content */}
-        <div className="mr-auto place-self-center lg:col-span-7">
+        <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
           <h1 className="max-w-3xl mb-4 text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl dark:text-white">
             {title}
           </h1>
-          <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg">
+          <p className="max-w-2xl mb-6 font-light text-gray-800 dark:text-gray-300 lg:mb-8 md:text-lg">
             {description}
           </p>
 
@@ -23,7 +26,8 @@ const Banner5 = ({
           {primaryBtnText && (
             <a
               href={primaryBtnLink}
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#1d4ed8] hover:bg-[#1e40af] focus:ring-4 focus:ring-[#2563eb]/50 dark:focus:ring-[#172554]"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-white text-center rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-500/50 dark:focus:ring-blue-900 transition"
+              aria-label={primaryBtnText}
             >
               {primaryBtnText}
               <svg
@@ -31,6 +35,8 @@ const Banner5 = ({
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
               >
                 <path
                   fillRule="evenodd"
@@ -47,8 +53,14 @@ const Banner5 = ({
 
         {/* Right Image */}
         {image && (
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src={image} alt="mockup" />
+          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex justify-center">
+            <img
+              src={image}
+              alt="DevOps solutions mockup"
+              className="max-w-full h-auto rounded-md shadow-lg"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         )}
       </div>
