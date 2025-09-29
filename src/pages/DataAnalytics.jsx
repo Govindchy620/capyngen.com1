@@ -22,6 +22,7 @@ import {
   FaBrain,
   FaTools,
   FaLayerGroup,
+  FaChartBar,
 } from "react-icons/fa";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import GetStarted from "../components/GetStarted";
@@ -155,6 +156,12 @@ const DataAnalytics = () => {
       description:
         "One simple and efficient platform for combining data from diverse origins, thus, facilitating decision-making and the better running of operations.",
       icon: <FaLayerGroup className="text-4xl" />,
+    },
+    {
+      title: "Real-Time Data Visualization",
+      description:
+        "Interactive dashboards and visualization tools that transform raw data into meaningful insights, enabling quicker and more informed decisions.",
+      icon: <FaChartBar className="text-4xl" />,
     },
   ];
   const cardsSectionSliderData1 = [

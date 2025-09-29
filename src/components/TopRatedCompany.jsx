@@ -13,7 +13,7 @@ export default function TopRatedCompany({
     These things help businesses grow and succeed in the long term.`,
   image = assets.whyChooseUs,
   bgColor = "bg-black",
-  background = assets.patternBg2,
+  background = "",
   reverse = false,
   isHidden = "",
   imageHeight = "md:aspect-[4/5]",

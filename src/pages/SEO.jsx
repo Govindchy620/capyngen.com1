@@ -11,6 +11,26 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import Banner5 from "../components/Banner5";
+import CardsSection from "../components/CardsSection";
+import {
+  FaSearch,
+  FaFileAlt,
+  FaLink,
+  FaWrench,
+  FaMapMarkerAlt,
+  FaMicrophone,
+  FaShoppingCart,
+  FaPenFancy,
+  FaChartBar,
+  FaEye,
+  FaMoneyBillWave,
+  FaUsers,
+  FaPuzzlePiece,
+  FaHandshake,
+  FaChartLine,
+} from "react-icons/fa";
+import GetStarted from "../components/GetStarted";
 
 const SEO = () => {
   const faqItems = [
@@ -126,49 +146,250 @@ const SEO = () => {
       desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
     },
   ];
+  const cardsSectionData1 = [
+    {
+      title: "SEO Audit & Strategy",
+      description:
+        "Thorough audits & tailored search engine optimization strategies that unearth the potential for expansion.",
+      icon: <FaSearch className="text-4xl" />,
+    },
+    {
+      title: "On-Page SEO",
+      description:
+        "Along with keyword optimization, meta tags, structured data & internal linking is done for improved search visibility.",
+      icon: <FaFileAlt className="text-4xl" />,
+    },
+    {
+      title: "Off-Page SEO & Link Building",
+      description:
+        "Safety backlink purchase options that provide power and ranking are the features of services offered by us.",
+      icon: <FaLink className="text-4xl" />,
+    },
+    {
+      title: "Technical SEO",
+      description:
+        "Combined efforts of site speed, crawlability, mobile-friendliness, and indexation bring the technical upgrades to your website.",
+      icon: <FaWrench className="text-4xl" />,
+    },
+    {
+      title: "Local SEO",
+      description:
+        "City/region-specific optimization solutions are available for you as the SEO service provider in India.",
+      icon: <FaMapMarkerAlt className="text-4xl" />,
+    },
+    {
+      title: "Voice Search Optimization",
+      description:
+        "Prepare your website content for the growing voice search trend by focusing on conversational queries, natural language, and featured snippets.",
+      icon: <FaMicrophone className="text-4xl" />,
+    },
+    {
+      title: "E-Commerce SEO",
+      description:
+        "Optimize product pages, categories, and user experience for better visibility on search engines and higher conversions for online stores.",
+      icon: <FaShoppingCart className="text-4xl" />,
+    },
+    {
+      title: "Content Strategy & Creation",
+      description:
+        "Blogs, articles, landing pages focusing on the best search engine optimization services for businesses.",
+      icon: <FaPenFancy className="text-4xl" />,
+    },
+    {
+      title: "SEO Monitoring & Reporting",
+      description:
+        "Collect data through analytics & monthly reports to observe the efficiency.",
+      icon: <FaChartBar className="text-4xl" />,
+    },
+  ];
+  const cardsSectionData2 = [
+    {
+      title: "Increase Visibility",
+      description:
+        "Make presence known by getting on top of search results by utilizing SEO services in India and other Google rankings.",
+      icon: <FaEye className="text-4xl" />,
+    },
+    {
+      title: "Affordable Solutions",
+      description:
+        "If you are a startup, this is just the solution that you need. Our cost-effective SEO package is designed to help you grow within a budget.",
+      icon: <FaMoneyBillWave className="text-4xl" />,
+    },
+    {
+      title: "Drive Traffic & Leads",
+      description:
+        "By implementing the right SEO marketing strategies, the desired high-quality traffic and leads will be available for you.",
+      icon: <FaUsers className="text-4xl" />,
+    },
+    {
+      title: "Custom SEO Strategies",
+      description:
+        "By understanding your business and its strengths we craft a bespoke solution just for you.",
+      icon: <FaPuzzlePiece className="text-4xl" />,
+    },
+    {
+      title: "Trusted Agency",
+      description:
+        "A best SEO company in India with a history of accomplishing results is the one you should choose as your partner.",
+      icon: <FaHandshake className="text-4xl" />,
+    },
+    {
+      title: "Boost ROI",
+      description:
+        "Make the most of your returns by benefiting from our full range of services offered by our SEO agency in India.",
+      icon: <FaChartLine className="text-4xl" />,
+    },
+  ];
+  const steps = [
+    {
+      step: "Step 01",
+      title: "Discovery & Goal Setting",
+      description: "get to know your business, target market, and competitors",
+    },
+    {
+      step: "Step 02",
+      title: "Audit & Keyword Research",
+      description:
+        "Uncover areas to improve & concentrate on SEO keywords such as long-tail like custom search engine optimization strategies.",
+    },
+    {
+      step: "Step 03",
+      title: "Strategy Development",
+      description:
+        "Technical corrections, publication of content, link building, local SEO.",
+    },
+    {
+      step: "Step 04",
+      title: "Implementation",
+      description:
+        "Carry out the SEO services that include on-page SEO, off-page SEO, and content optimization.",
+    },
+    {
+      step: "Step 05",
+      title: "Monitoring & Optimization",
+      description:
+        "Regular upgrades, position tracking, and performance tuning.",
+    },
+    {
+      step: "Step 06",
+      title: "Reporting & Feedback",
+      description:
+        "Clear monthly reports; check out the share of profit and put new steps in motions.",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
       <div className="sticky inset-0">
-        <Banner
-          title="SEO"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.seo}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        <Banner5
+          title={
+            <>
+              <span className="text-blue-600">Search Engine Optimization</span>{" "}
+              Services for Businesses
+            </>
+          }
+          description="Capyngen is the best SEO company in India delivering cost-effective SEO solutions for startups, small businesses, and enterprises. Be the owner of the steady online success of yours with our skillful SEO services; get the visibility, traffic, and ROI that you desire."
+          primaryBtnText="Get Free SEO Consultation"
+          primaryBtnLink="#"
+          image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated SEO Company"
+        <CardsSection
+          heading="Our SEO Services"
+          subheading=""
+          services={cardsSectionData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg="bg-black border border-black transition-all duration-400"
+          hoverBg=" hover:border-white"
+          textColor="text-white"
+          hoverTextColor=""
+          textSize="text-md"
+          height=""
+        />
+        <CardsSection
+          heading="Features & Benefits"
+          subheading=""
+          services={cardsSectionData2}
+          sectionBg="bg-black"
+          cardBg="bg-gradient-to-br from-[#000]/90 to-gray-800/90 hover:bg-gradient-to-tl hover:-translate-y-1 transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-white/30"
+          headColor="text-white"
+          hoverBg=" hover:bg-gray-700"
+          textColor="text-white"
+          hoverTextColor=""
+          textSize="text-md"
+          height="h-72"
+        />
+        <HowWeWork heading="SEO Process" desc="" steps={steps} />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title="Take Your Business to the Top of Search Results"
           description={[
-            `RichestSoft provides top-notch and oriented SEO solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch SEO services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best SEO company in India, we provide best-in-class SEO services.`,
+            "Partner with Capyngen, the best SEO company in India, for measurable traffic, leads, and revenue growth.",
+          ]}
+          buttonText="Book Your Free SEO Consultation Today"
+        />
+        <TopRatedCompany
+          title="Why Choose Capyngen as Your SEO Partner"
+          description={[
+            <>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+                {[
+                  {
+                    title: "Proven Track Record",
+                    text: "Delivering best SEO services for small businesses in India & enterprises.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Custom Strategies",
+                    text: "Tailored custom search engine optimization strategies.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Affordable Packages",
+                    text: "Affordable SEO solutions for startups.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Transparent Reporting",
+                    text: "Clear insights on progress & ROI.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Dedicated Support",
+                    text: "Real-time assistance from our SEO agency in India experts.",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    <strong className={`${color} drop-shadow-md`}>
+                      {title}
+                    </strong>{" "}
+                    – {text}
+                  </li>
+                ))}
+              </ul>
+            </>,
           ]}
           image={assets.whyChooseUs}
-          background={assets.patternBg1}
-        />
-
-        <BenefitsSection
-          heading="SEO Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
-        />
-        <HowWeWork />
-        <WhyChoose />
-        <BenefitsSection
-          heading="SEO Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level SEO services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+          isHidden="hidden"
+          imageHeight="aspect-[4/3] md:aspect-[1/1]"
         />
         <TechnologiesCarousel
           title="SEO Technologies We Use"
           description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
           technologies={technologies}
         />
-        <OurServices />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>
