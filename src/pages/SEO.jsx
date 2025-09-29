@@ -31,6 +31,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
+import SeoStatsSection from "../components/SeoStatsSection";
 
 const SEO = () => {
   const faqItems = [
@@ -294,6 +295,7 @@ const SEO = () => {
           textSize="text-md"
           height=""
         />
+        <SeoStatsSection />
         <CardsSection
           heading="Features & Benefits"
           subheading=""

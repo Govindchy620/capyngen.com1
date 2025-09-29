@@ -8,17 +8,14 @@ const Banner5 = ({
   image = "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png",
 }) => {
   return (
-    <section
-      className="bg-white dark:bg-gray-900 pt-20"
-      aria-label="DevOps Solutions Banner"
-    >
+    <section className="bg-gray-900 pt-20" aria-label="DevOps Solutions Banner">
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-16 lg:grid-cols-12">
         {/* Left Content */}
         <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
-          <h1 className="max-w-3xl mb-4 text-4xl font-extrabold leading-tight md:text-5xl dark:text-white">
+          <h1 className="max-w-3xl mb-4 text-4xl font-extrabold leading-tight md:text-5xl text-white">
             {title}
           </h1>
-          <p className="max-w-2xl mb-6 font-light text-gray-800 dark:text-gray-300 lg:mb-8 md:text-lg">
+          <p className="max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg">
             {description}
           </p>
 
@@ -26,7 +23,7 @@ const Banner5 = ({
           {primaryBtnText && (
             <a
               href={primaryBtnLink}
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-white text-center rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-500/50 dark:focus:ring-blue-900 transition"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-white text-center rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-900 transition"
               aria-label={primaryBtnText}
             >
               {primaryBtnText}

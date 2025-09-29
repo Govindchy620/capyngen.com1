@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   LineChart,
   Line,
@@ -34,7 +34,7 @@ const statsData = {
   before: {
     traffic: 3240,
     keywords: 1850,
-    roi: 185,
+    roi: 105,
   },
   after: {
     traffic: 10265,
@@ -66,13 +66,9 @@ function SeoStatsSection() {
     <section
       ref={ref}
       className="w-full py-16 px-6 bg-black text-white text-center"
+      aria-label="SEO Stats Section"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Badge */}
-        <div className="inline-block mb-6 px-4 py-1 rounded-lg bg-blue-100 text-blue-600 font-semibold text-sm">
-          SEO Agency of the Year
-        </div>
-
         {/* Heading */}
         <h2 className="text-4xl font-light leading-tight">
           Expect great things <br />
@@ -83,7 +79,7 @@ function SeoStatsSection() {
           successful Victorious partner.
         </p>
 
-        {/* Charts */}
+        {/* Charts and Stats Grid */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           {/* User Activity Line Chart */}
           <div>
@@ -117,11 +113,12 @@ function SeoStatsSection() {
               </span>
               <button
                 onClick={handleToggle}
-                className={`w-12 h-6 flex items-center rounded-full p-1 transition-all duration-300 hover:scale-110 ${
+                className={`w-12 h-6 flex items-center rounded-full p-1 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
                   seoActive
                     ? "bg-blue-600 shadow-lg"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
+                aria-label="Toggle SEO Stats"
               >
                 <div
                   className={`w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
@@ -218,14 +215,6 @@ function SeoStatsSection() {
           {/* Performance Bar Chart */}
           <div>
             <h4 className="text-white font-semibold mb-3">Performance</h4>
-            <div className="flex justify-center gap-4 mb-3">
-              <button className="text-sm px-3 py-1 rounded-lg bg-blue-600 text-white">
-                Week
-              </button>
-              <button className="text-sm px-3 py-1 rounded-lg bg-gray-200 text-gray-600">
-                Month
-              </button>
-            </div>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={performanceData}>
                 <XAxis dataKey="day" stroke="#999" />

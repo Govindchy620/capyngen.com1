@@ -15,35 +15,106 @@ import {
   FaLightbulb,
   FaChartLine,
   FaCogs,
-  FaLaptopCode,
-  FaProjectDiagram,
-  FaTasks,
+  FaCode,
+  FaWordpressSimple,
+  FaShoppingCart,
+  FaReact,
+  FaLaravel,
+  FaCubes,
+  FaTools,
+  FaDollarSign,
+  FaUsers,
+  FaShieldAlt,
+  FaBullhorn,
+  FaHeart,
 } from "react-icons/fa";
-import { LifeBuoy, Sparkles } from "lucide-react";
 import CardsSection from "../components/CardsSection";
 import WebDevBanner from "../components/WebDevBanner";
 import Banner2 from "../components/Banner2";
 import TechStack from "../components/TechStack";
 import BannerRollingGallery from "../components/BannerRollingGallery";
 import CardsSectionImage from "../components/CardsSectionImage";
+import CardsSectionSlider from "../components/CardsSectionSlider";
 
 const WebDevelopment = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is website development?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "Website development is a process of creating and maintaining websites which include front-end, back-end, and full-stack development along with ensuring functionality, performance, and user experience.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why is professional website development important?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "A professionally developed website is a tool that can enhance trust, attract potential visitors, improve the level of engagement, and increase the number of customers among the visitors.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question: "What services are included in website development services?",
+      answer:
+        "Services covered are: custom website design, responsive design, CMS integration, web application development, e-commerce solutions, SEO, and ongoing maintenance.",
+    },
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "The development period depends on the complexity but the general duration of standard business websites usually falls between 3–12 weeks.",
+    },
+    {
+      question: "Can Capyngen handle custom website development?",
+      answer:
+        "Of course! We create websites that are totally your brand and business that meets your persona and content.",
+    },
+    {
+      question: "Do you provide responsive website design?",
+      answer:
+        "Definitely. All websites are designed to be compatible with desktops, tablets, and mobile devices so that users can have a trouble-free experience.",
+    },
+    {
+      question: "What CMS platforms do you work with?",
+      answer:
+        "We use WordPress, Shopify, Joomla, Drupal, and various other platforms and only choose the one that meets your needs the best.",
+    },
+    {
+      question: "Can you develop e-commerce websites?",
+      answer:
+        "Yes, we provide ecommerce web developer services with the main features such as convenient payment methods, catalog of products, and easy checkout process.",
+    },
+    {
+      question: "Do you offer web application development?",
+      answer:
+        "Yes, we make business web applications that are interactive and scalable for today’s business processes.",
+    },
+    {
+      question: "How do you ensure SEO-friendly development?",
+      answer:
+        "Our developers utilize clean coding, fast loading speeds, optimized images, meta tags, and schema markup in their projects.",
+    },
+    {
+      question: "Can you integrate third-party APIs and tools?",
+      answer:
+        "Yes, we integrate CRMs, analytics tools, payment gateways, marketing platforms, and other third-party services.",
+    },
+    {
+      question: "Do you provide website maintenance services?",
+      answer:
+        "Yes, we provide regular updates, backups, security monitoring, and ongoing technical support.",
+    },
+    {
+      question: "What makes Capyngen the best website development company?",
+      answer:
+        "We combine creative inspiration, the latest technology, and business acumen to deliver high-quality, dependable, and scalable website development services.",
+    },
+    {
+      question: "Can you build multilingual websites?",
+      answer:
+        "Yes, we offer support for multilingual and internationalization apps to assist firms in expanding their customer base all over the world.",
+    },
+    {
+      question: "Do you offer landing page development?",
+      answer:
+        "Of course, we create marketing-driven, optimized-for-campaign landing pages that attract leads and convert visitors into customers.",
     },
   ];
+
   const techStack = [
     {
       title: "Frontend",
@@ -199,284 +270,265 @@ const WebDevelopment = () => {
       ],
     },
   ];
-  const solutionsData = [
+  const cardsSectionData2 = [
     {
-      title: "Casino Game Web Apps",
-      desc: "Create exciting casino game websites with safe payment options, live gaming experiences, and user-friendly interfaces that keep gamers coming back for more.",
-    },
-    {
-      title: "AI-Powered Web Apps (like CandyAI)",
-      desc: "Capyngen makes high-end and easy-to-use web apps like Candy AI and other AR VR dating apps. They do this by leveraging advanced AI algorithms and trustworthy frameworks.",
-    },
-    {
-      title: "Educational Website Development",
-      desc: "Our web development business can create educational websites that offer interactive learning experiences by adding e-learning tools, course administration, and student interaction elements.",
-    },
-    {
-      title: "Portfolio Website Design",
-      desc: "Showcase your work with visually attractive portfolio websites developed by our web development services to emphasize your talents and attract new clients.",
-    },
-    {
-      title: "Offer & Deal Websites",
-      desc: "Promoted bargains work well with bespoke offer websites made by our web development firm. These websites have responsive designs and easy-to-use navigation for a better customer experience.",
-    },
-    {
-      title: "Business Listing Websites",
-      desc: "Promote deals work well with custom offer websites made by our web development company. These websites have responsive designs and easy-to-use navigation for a better user experience.",
-    },
-    {
-      title: "Wiki & Knowledge Websites",
-      desc: "Our website development firm can help you make dynamic listing websites with comprehensive search features and filters for real estate, job boards, and more.",
-    },
-    {
-      title: "E-Commerce Website Solutions",
-      desc: "Our web development firm can help you boost sales with strong e-commerce websites that have secure payment gateways, inventory management, and user journeys that are optimized.",
-    },
-    {
-      title: "Non-Profit Website Development",
-      desc: "Our web development services can help you build interesting non-profit websites that get donors more involved and clearly explain your objective.",
-    },
-    {
-      title: "Entertainment Website Solutions",
-      desc: "Use dynamic entertainment and OTT websites with multimedia integration, interactive features, and responsive design to get people to pay attention to your business.",
-    },
-    {
-      title: "Event Website Development",
-      desc: "Custom event websites with ticketing systems, live streaming, and real-time updates make it easy to manage events and improve the experience and engagement of attendees.",
-    },
-    {
-      title: "Consulting Website Solutions",
-      desc: "Set up your consulting brand online with excellent websites that show off your skills, client reviews, and service options. These sites should be geared to turn visitors into clients.",
-    },
-  ];
-  const cardsSectionData3 = [
-    {
-      title: "Custom Enterprise Web Portal Development",
+      title: "Expertise in the latest technologies",
       description:
-        "Our web development company builds enterprise web portals with seamless integration, strong security, and scalable architecture that can handle even the most complicated business needs.",
-      icon: <FaLightbulb className="text-4xl" />,
+        "We implement solutions using the newest frameworks and tools for a solid website.",
+      icon: <FaTools className="text-4xl" />,
     },
     {
-      title: "API Development & Seamless Integration",
+      title: "Cost-effective, dependable, and scalable solutions",
       description:
-        "Use our advanced web development services to create and connect powerful APIs that will make it easier for your business systems to share data and work better together.",
-      icon: <FaChartLine className="text-4xl" />,
+        "Web development services of excellent quality for startups, SMEs, and enterprises.",
+      icon: <FaDollarSign className="text-4xl" />,
     },
     {
-      title: "Cloud-Based Web Application Solutions",
+      title: "Experienced Team That Creates User-Friendly Designs",
       description:
-        "Our company makes cloud-based web apps for businesses all over the world that are always available, can grow with the business, and are safe to use.",
-      icon: <FaCogs className="text-4xl" />,
+        "Our team guarantees the creation of intuitive, mobile-friendly, and interactive websites.",
+      icon: <FaUsers className="text-4xl" />,
     },
     {
-      title: "Enterprise CMS Design & Development",
+      title: "Focus on Safety, Quickness and SEO-Optimized Websites",
       description:
-        "Our custom-built enterprise CMS solutions make it easy to manage large amounts of content by giving you powerful features and flexibility.",
-      icon: <FaLaptopCode className="text-4xl" />,
+        "Your brand will be more visible on the Internet as your website will be fast, safe, and optimized for search engines.",
+      icon: <FaShieldAlt className="text-4xl" />,
     },
     {
-      title: "Advanced Data Analytics Dashboards",
+      title: "Greater Brand Awareness and Trustworthiness",
       description:
-        "Use our web development services to make interactive data analytics dashboards that give you real-time business insights and help you make smart decisions at the enterprise level.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+        "Professional websites that mirror your brand will help you gain the trust of your audience.",
+      icon: <FaBullhorn className="text-4xl" />,
     },
     {
-      title: "Enterprise-Grade E-Commerce Solutions",
+      title: "Higher Customer Interaction and Loyalty",
       description:
-        "Our website building company can help you grow your online business with enterprise-level e-commerce systems. These systems have advanced customisation, security, and the flexibility to grow.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-  ];
-  const servicesData = [
-    {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our web development company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
-    },
-    {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced web development services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
-    },
-    {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
-    },
-    {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
-    },
-    {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our web development solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
-    },
-    {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+        "Websites are created to enhance conversions and user satisfaction.",
+      icon: <FaHeart className="text-4xl" />,
     },
   ];
   const steps = [
     {
       step: "Step 01",
-      title: "Requirement Gathering",
+      title: "Requirement Analysis & Planning",
       description:
-        "Understand business goals, essential features, target audience, and user behavior to define the website’s purpose and scope.",
+        "Deep diving into your business objectives, target market, and project requirements.",
     },
     {
       step: "Step 02",
-      title: "Prototyping & Design",
+      title: "Design & Prototyping",
       description:
-        "Create wireframes and prototypes aligned with the user journey. Apply UI/UX principles to ensure the site is visually appealing and easy to navigate.",
+        "Developing wireframes and visual mockups for customer validation.",
     },
     {
       step: "Step 03",
-      title: "Front-End Development",
+      title: "Front-End & Back-End Development",
       description:
-        "Build the user interface using technologies like HTML, CSS, JavaScript, ReactJS, or Angular, ensuring seamless interaction for users.",
+        "Crafting websites that are responsive, scalable, and functional.",
     },
     {
       step: "Step 04",
-      title: "Back-End Development",
+      title: "Quality Assurance & Testing",
       description:
-        "Develop the server-side functionality, databases, APIs, and logic using tools such as PHP, Laravel, Node.js, or Python. This ensures data security and smooth functionality.",
+        "Checking for smooth running of the websites across browsers and devices with no errors.",
     },
     {
       step: "Step 05",
-      title: "Full-Stack Development & Integration",
+      title: "Launch & Deployment",
       description:
-        "Some developers handle both front-end and back-end tasks, integrating all components—including the database—for a complete, cohesive project.",
+        "Putting your website on the internet with complete functionality and safety.",
     },
     {
       step: "Step 06",
-      title: "Testing, Launch & Maintenance",
+      title: "Maintenance & Support",
       description:
-        "Perform quality assurance to fix bugs and check performance, compatibility, speed, and security. Launch the website and provide ongoing maintenance to keep it up-to-date and fully functional.",
-    },
-  ];
-  const cardsSectionDifferentColorData = [
-    {
-      title: "Custom AI",
-      description:
-        "Our web development firm adds specialized AI solutions to your web development services. This lets you make decisions based on data, give users a more personalized experience, and automate more of your business.",
-      icon: <FaLightbulb className="text-5xl" />,
-      cardBg: "bg-red-100",
-    },
-    {
-      title: "Intelligent AI Chatbots",
-      description:
-        "AI-powered chatbots that are built right into your web development solutions can help you connect with customers more. They can provide instant support and tailored conversations 24/7.",
-      icon: <FaChartLine className="text-5xl" />,
-      cardBg: "bg-blue-100",
-    },
-    {
-      title: "Advanced RPA Solutions",
-      description:
-        "Integrate RPA into your business to streamline operations. This will let our web development services automate repetitive jobs, cut down on mistakes, and make your systems work more efficiently.",
-      icon: <FaCogs className="text-5xl" />,
-      cardBg: "bg-purple-100",
-    },
-    {
-      title: "AI-Powered Data Analytics",
-      description:
-        "Use our website development company's knowledge of AI-driven data analytics to get useful information, improve business processes, and help your organization expand with cutting-edge web development solutions.",
-      icon: <FaLightbulb className="text-5xl" />,
-      cardBg: "bg-gray-100",
-    },
-    {
-      title: "Machine Learning Solutions",
-      description:
-        "Our web development company uses machine learning algorithms in the services we offer to build your website. This lets us do things like predictive analytics, adaptive content distribution, and better user experiences.",
-      icon: <FaChartLine className="text-5xl" />,
-      cardBg: "bg-yellow-100",
-    },
-    {
-      title: "AI-Driven Security",
-      description:
-        "Add AI-driven security features to your web development solutions to safeguard your enterprise-level web apps by finding and stopping attacks in real time.",
-      icon: <FaCogs className="text-5xl" />,
-      cardBg: "bg-green-100",
+        "Periodic updates, backups, and continuous technical support.",
     },
   ];
   const cardsSectionData1 = [
     {
-      title: "Credibility & Trust",
+      title: "HTML/CSS & JavaScript Development",
       description:
-        "The establishment of trust is performed by a well-designed website. Customers are more willing to do business with companies that own modern, secure, and informative websites of their own.",
-      icon: <FaLightbulb className="text-4xl" />,
+        "At Capyngen, we don't build websites with templates; instead, every website is tailor-made to match the unique needs of your brand. We start from scratch and complete a lightweight, lightning-fast website without compromising maximum performance and a seamless user experience.",
+      icon: <FaCode className="text-4xl text-white" />,
     },
     {
-      title: "Brand Identity",
+      title: "WordPress Development",
       description:
-        "Websites are the medium through which a company can communicate its distinctive attributes, not only through colors, design, and messaging, but also through other means. Custom development ensures that the brand can maintain its uniqueness.",
-      icon: <FaChartLine className="text-4xl" />,
+        "The squad of developers here can, with no trouble, create highly flexible, user-friendly websites for every kind of business - whether it be a blog, portfolio, or corporate site. Capyngen works to give you a website that is both easy to handle and designed to attract and convert your visitors.",
+      icon: <FaWordpressSimple className="text-4xl text-white" />,
     },
     {
-      title: "Accessibility",
+      title: "Shopify & E-commerce Platforms",
       description:
-        "The reach of a physical store is limited by its location. However, a website is not bound by geography, thus making it worldwide. With adequate development, companies can cater to international audiences around the clock.",
-      icon: <FaCogs className="text-4xl" />,
+        "We make it easy for you by delivering trusted, sales-oriented online stores with smooth browsing, safe payment methods, and quick checkout processes. The e-commerce websites of Capyngen are built to increase revenues and customer happiness.",
+      icon: <FaShoppingCart className="text-4xl text-white" />,
     },
     {
-      title: "Growth for Small Businesses",
+      title: "React & Angular Development",
       description:
-        "For the startup entrepreneurs, purchasing affordable website development services for small businesses is the deciding factor. A small and modestly designed website, for one, can bring in clients, act as a platform for products, and also create a professional image.",
-      icon: <FaLaptopCode className="text-4xl" />,
+        "Capyngen constructs vibrant, interactive web applications that reflect the core of your business idea. We guarantee with our React and Angular technologies the delivery of enticing, up-to-date web experiences for the users of your brand, no matter their device, computer, tablet, or smartphone.",
+      icon: <FaReact className="text-4xl text-white" />,
     },
     {
-      title: "Competitive Advantage",
+      title: "PHP & Laravel Development",
       description:
-        "Features like interactive chat systems, e-commerce stores, online reservation services, and electronic payment integration help companies to keep up with or even outclass their rivals are only available for businesses that have had a website developed with the latest technologies.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+        "The team at Capyngen is hard at work designing strong and scalable back-end systems that will suit your company’s needs for years to come. Thus, your website will not only be stable, but it will also be able to easily accommodate any upgrades.",
+      icon: <FaLaravel className="text-4xl text-white" />,
     },
     {
-      title: "Customer Engagement",
+      title: "CMS & Custom Solutions",
       description:
-        "Websites allow companies to actively engage with their customers through blogs, newsletters, feedback forms, and social media integration. This interaction helps build lasting relationships and keeps customers coming back.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+        "The use of platforms such as Joomla, Drupal, as well as other similar ones, is what we do in order to deliver fully personalized CMS solutions that fit your needs perfectly. The customized nature of Capyngen makes sure that you get full access, adaptability, and convenience in running your business.",
+      icon: <FaCubes className="text-4xl text-white" />,
     },
   ];
-
   const cardsSectionImageData1 = [
     {
       title: "Custom Website Development",
       description:
-        "Not every company can make a generic template work for the website. Custom website development is about creating one-of-a-kind services that fit the needs of particular industries. As a matter of illustration, client portals might be the answer for a law firm whereas learning management systems could be the way for an educational institution. Customization is the reassurance of the three benefits such as adaptability, upgradability, and longevity.",
+        "Naturally your site would have been built around you without a doubt. We will thus help you project your business objectives and dreams by creating a spectacular.",
       image: assets.customAiSolution,
       cardBg: "bg-blue-100",
     },
 
     {
-      title: "Good Design",
+      title: "Responsive & Mobile-Friendly Design",
       description:
-        "The necessity of responsive designing can be drawn just from the simple fact that over 50% of web traffic are mobile visitors. A responsive website adjusts its shows to any screen size without any loss in quality. It implies that users who switch between desktop, tablets, and smartphones are guaranteed a smooth viewing experience there.",
+        "The company Capyngen is wonderful in delivering an experience that is the same as great as the one on a desktop or a mobile device.",
       image: assets.appDevelopment,
       cardBg: "bg-green-100",
     },
     {
-      title: "Maintenance for Website",
+      title: "E-commerce Development",
       description:
-        "Web building is only the beginning, of course. Apart from regular updates, even security, restoration, and performance optimization are very important. Website maintenance services keep the sites performing excellent, stop downtime and customer satisfaction are some of the outcomes regarding maintenance services.",
+        "The easiest shopping browsers are the ones you create just like the walkthrough which customers love to use to explore your products and installations running CSE fuels to grow sales.",
       image: assets.customAiSolution,
       cardBg: "bg-yellow-100",
     },
     {
-      title: "Ecommerce Website Development Services",
+      title: "CMS Development",
       description:
-        "Online shopping is getting more and more popular. The services of e-commerce web development cover the building of secure stores that have product listings, shopping carts, and so forth. In addition to the basic functions, various features such as inventory management, order tracking, and customer accounts make shopping convenient and fully satisfactory.",
+        "WordPress, Drupal, Joomla, and other platforms are the content management systems developers use to create user-friendly and effective website management solutions.",
       image: assets.careersAbout1,
       cardBg: "bg-pink-100",
     },
     {
-      title: "Search Engine Optimization (SEO) Services",
+      title: "Web Application Development",
       description:
-        "A beautifully designed website is ineffective if potential customers cannot find it. SEO services optimize a website’s content, structure, and metadata to improve visibility on search engines like Google. This ensures that businesses attract more organic traffic, generate leads, and reach their target audience efficiently.",
+        "As a premier Indian web application development company, we provide the creation of interactive and escalable conversation projects.",
       image: assets.careersAbout1,
       cardBg: "bg-purple-100",
     },
     {
-      title: "Content Management System (CMS) Integration",
+      title: "Progressive Web Apps (PWA)",
       description:
-        "A website needs regular updates to remain relevant and informative. CMS integration allows businesses to manage and publish content easily without technical knowledge. Platforms like WordPress, Drupal, or custom CMS solutions provide flexibility, scalability, and control over the website’s content, saving time and reducing reliance on developers.",
+        "Offer the websites that even without having the internet connection are as fast in performance as the native mobile apps are.",
       image: assets.appDevelopment,
       cardBg: "bg-red-100",
+    },
+    {
+      title: "API Integration Services",
+      description:
+        "API integrations are ways which make not only the website CRMs but also externals i.e. payment gateways plus other software working together with your business to run at peak level.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+
+    {
+      title: "Website Maintenance & Support",
+      description:
+        "Support and maintenance services of Capyngen will not only make your site be safe but also will keep it up to date with the fastest Kit with exclusive warranties, upgrades faster than those experienced in regular services.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Performance Optimization",
+      description:
+        "Remove all your unnecessary disk images, JavaScript, and caching will serve to make your website load at lightning speed and thus to provide excellent user experience.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "SEO-Friendly Development",
+      description:
+        "Create websites that on the SEO-friendly development are starting and completing the sequence by following the best practice that is Google will put it on a higher position of its organic match results and thus will be able to draw more visitors.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "UI/UX Design Services",
+      description:
+        "Making stunning ease of use and confidence building applications will raise user engagement and leave a long-lasting memory.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Multilingual & Internationalization Support",
+      description:
+        "Websites in multi-languages let companies put out their messages close to the world and still have someone there to receive them in the right language.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+    {
+      title: "Cloud-Based Web Solutions",
+      description:
+        "Using secure and scalable cloud platforms allow for better performance, reliability, and flexibility.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "Landing Page Development",
+      description:
+        "Develop the promotion’s high-conversion landing pages that start gathering leads, demand, and efficiently generate sales.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Integration with Analytics & Marketing Tools",
+      description:
+        "Monitoring your site’s performance through the implementation of various tools such as Google Analytics, Hotjar, alongside CRM integrations which make strategizing a whole lot easier.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+  ];
+  const cardsSectionSliderData1 = [
+    {
+      title: "Startups & Small Businesses",
+      desc: "We offer affordable website development services for small businesses.",
+      image: assets.eCommerceSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "E-commerce & Retail",
+      desc: "We provide complete ecommerce website development services to help you increase your sales.",
+      image: assets.websiteDesign,
+      textColor: "text-white",
+    },
+    {
+      title: "Healthcare & Education",
+      desc: "User-friendly and reliable websites for healthcare and education institutions.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Real Estate & Travel",
+      desc: "Visually attractive and user-friendly websites.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Corporate Enterprises",
+      desc: "Custom website designs that are scalable for large organizations.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Trading Sites",
+      desc: " Easy to use, fast, and dependable platforms for trading businesses.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
   ];
 
@@ -489,11 +541,10 @@ const WebDevelopment = () => {
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <TopRatedCompany
-          title="What is Website Development?"
+          title="Why Web Development Matters Today?"
           description={[
-            `Basically, the processes of building, maintaining, and updating websites form website development. It is the fusion of artistic design, logical programming, and market strategy that yields platforms that satisfy the needs of businesses as well as users. Compared to traditional print advertising or offline marketing, websites that are accessible 24 hours a day, seven days a week have turned them into one of the most powerful tools for global reach.`,
-            `Professional website development is not only about static HTML pages. It covers the creation of interactive features, linking of secure payment systems, ensuring the adaptability of mobile devices, search engine optimization, and the maintenance of scalability of the platform as the business grows.`,
-            `Custom website development also gives businesses the opportunity to create websites that are more than just templates. By doing so, developers are able to create special features that not only match the needs of the industry but also of the company in question, for example, healthcare portals, real estate listing, educational LMS platforms, or e-commerce marketplace.`,
+            `Capyngen is convinced that a strong online presence is not a mere luxury any more, but rather a must-have for the expansion of a business. The companies that decide to use our services for the development of their professional websites are the ones that become the most trusted by their target audience, attract more visitors, and raise the level of their engagement.`,
+            `It does not matter whether your company is a startup or a large conglomerate, the services offered by us in the field of custom website development work with the sole objective of getting your brand noticed out of the crowd. Capyngen website is your online success is ensured by every component starting from visually attractive layouts to feature-rich functionality, all of which are meticulously designed to give you a smooth and a captivating user experience.`,
             <p
               key="equation"
               className="text-2xl font-bold text-cyan-400 text-center mt-6"
@@ -505,11 +556,12 @@ const WebDevelopment = () => {
             </p>,
           ]}
           image={assets.whyChooseUs}
+          isHidden={true}
           background={assets.patternBg1}
         />
         <CardsSection
-          heading="Why Businesses Need Website Development Services"
-          subheading="Nowadays, the competition between the businesses is to get access to the online eyeballs. Without a well-designed website, a company's potential customers are more likely to find their way to competitors who offer faster, more comfortable, and more fascinating experiences. Firstly, let's examine the major benefits of website development services:"
+          heading="Our Web Development Services"
+          subheading=""
           services={cardsSectionData1}
           sectionBg="bg-black"
           cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
@@ -521,7 +573,7 @@ const WebDevelopment = () => {
           height="h-90"
         />
         <CardsSectionImage
-          heading="Types of Services for Website Development"
+          heading="Our Web Development Features"
           subheading=""
           services={cardsSectionImageData1}
           sectionBg="bg-gray-800"
@@ -530,39 +582,24 @@ const WebDevelopment = () => {
           textSize="text-md"
           hoverBg="hover:bg-gray-200"
         />
-        <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-          steps={steps}
-        />
         <GetStarted
-          backgroundColor="bg-gray-900"
-          textColor="text-white"
-          buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white text-xl"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
           buttonTextColor="text-white"
-          title="The best web development company to help your business grow"
-          description="Capyngen is a certified web development company that offers truly professional services for hiring web developers."
-          buttonText="Contact Us"
-        />
-        <TopRatedCompany
-          title="Globally Trusted Web Development Partner"
+          title=""
           description={[
-            `After doing a thorough analysis, Capyngen gives our clients the best and most focused web development solutions. Our skilled web developers go through a number of tests for the project as part of a well-planned strategy to make sure the product is of the highest quality. We give our clients' projects better functionality, clarity, and dynamism, which will make it easier for users to use your website.`,
-            `Capyngen has been providing top-notch web development services since 2007. Their team includes innovators, problem solvers, and people who think outside the box. We make sure that your website works and is easy for people to use so that it ranks well in Google. We are the best web development company in India, and we offer the best web development services.`,
+            "Create the online representation of your ideas, that speaks volumes! Reach out to the top web development company in India, Capyngen, for tailored web development solutions by an expert and quality web development services that increase your business and attract the audience.",
           ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-        />
-
-        <BenefitsSection
-          heading="Cutting-Edge Web Development Solutions We Deliver"
-          desc="A web page is the basic building block of the Internet. It has text, multimedia, and links to other pages. At Capyngen, we make and code web pages that are best suited to the needs of each project. We come up with and carry out the Internet strategy through careful and strategic thinking. We come up with new ways to solve the problems that come up on each project."
-          benefits={solutionsData}
+          textSize="text-xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
         />
         <CardsSection
-          heading="Expert Web Development Services Designed for Your Success"
-          subheading="Capyngen can help you with enterprise-level web development by creating custom solutions, integrating APIs, building cloud-based apps, and advanced e-commerce platforms that help your business grow and work more efficiently."
-          services={cardsSectionData3}
+          heading="Why Choose Capyngen for Web Development?"
+          subheading=""
+          services={cardsSectionData2}
           headColor="text-white"
           cardBg="bg-gray-700"
           sectionBg="bg-gray-900"
@@ -570,43 +607,53 @@ const WebDevelopment = () => {
           textColor="text-white"
           hoverTextColor=""
         />
-
-        <GetStarted
-          backgroundColor="bg-gray-900"
-          textColor="text-white"
-          buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Transform Your Vision into Reality with Us"
-          description="We worked with some of the top companies and ideas from around the world that were truly groundbreaking."
-          buttonText="Get Started"
-        />
-        <CardsSection
-          heading="Integrating Advanced Technologies into Web Development"
-          subheading="Add advanced technologies like AI, machine learning, blockchain, and cloud computing to your web projects to make sure you get web development services that are new, safe, and ready to grow with your organization."
-          services={cardsSectionDifferentColorData}
-          height="h-94"
-          sectionBg="bg-gray-900"
-          headColor="text-white"
-          cardBg="bg-gray-50"
-          hoverBg=""
-          cardHeadSize="text-2xl"
-          textSize="text-lg"
+        <CardsSectionSlider
+          heading="Industries We Serve"
+          subheading=""
+          cardBg="bg-transparent"
+          hoverBg=" hover:bg-blue-50"
           textColor="text-gray-800"
           hoverTextColor=""
+          textSize="text-xl"
+          sectionBg="bg-black/90"
+          height="h-78"
+          headColor="text-white"
+          services={cardsSectionSliderData1}
         />
-        <WhyChoose />
-        <BenefitsSection
-          heading="Web Development Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level web development services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white text-xl"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title=""
+          description={[
+            "Have you prepared to be noticed on the Internet? Contact Capyngen in order to receive a website development service that suits your small business which includes e-commerce and a mobile-friendly website that matches your brand.",
+          ]}
+          textSize="text-xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
         />
+        <HowWeWork heading="Our Development Process" desc="" steps={steps} />
         <TechStack
           heading="Transform Your Web Development and Consulting with Our Expert Tech Stack"
-          subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
+          subheading=""
           categories={techStack}
         />
-        <OurServices />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white text-xl"
+          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+          buttonTextColor="text-white"
+          title=""
+          description={[
+            "Do you want a website that will help your business grow? So, for custom website services and professional website development, get in touch with Capyngen, the best website development company in India!",
+          ]}
+          textSize="text-xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>

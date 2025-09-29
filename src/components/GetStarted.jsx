@@ -13,6 +13,7 @@ const GetStarted = ({
   image,
   reverse = false,
   listItems = [],
+  textSize = "text-base sm:text-lg",
 }) => (
   <section className="relative bg-black/90 py-12 overflow-hidden">
     <div
@@ -50,9 +51,7 @@ const GetStarted = ({
           >
             {title}
           </h2>
-          <div
-            className={`space-y-5 text-base sm:text-lg ${textColor} drop-shadow-md`}
-          >
+          <div className={`space-y-5 ${textSize} ${textColor} drop-shadow-md`}>
             {Array.isArray(description) ? (
               description.map((para, i) => <p key={i}>{para}</p>)
             ) : (

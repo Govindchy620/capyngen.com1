@@ -90,20 +90,17 @@ const BannerRollingGallery = ({
   };
 
   return (
-    <section className="bg-black text-white w-full pt-40">
+    <section className="bg-black text-white w-full pt-30">
       {/* Heading + Subheading */}
       <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Website Development for New-Age Businesses
+          Build Future-Ready Websites with Capyngen
         </h1>
         <p className="text-lg md:text-xl max-w-6xl mx-auto pt-5">
-          In today’s digital-first world, a strong online presence is essential
-          for every business. Website development has evolved into creating
-          attractive, responsive digital experiences that connect brands with
-          customers. Whether a startup or a large enterprise, professional and
-          user-friendly websites drive growth. This guide explores the need for
-          custom development, types of services, and how a well-structured site
-          fuels success.
+          Convert your concepts to interactive, responsive, and scalable
+          websites. Attract customers, increase your brand value, and maintain
+          your advantage in the digital world by availing our professional
+          website development services.
         </p>
       </div>
 

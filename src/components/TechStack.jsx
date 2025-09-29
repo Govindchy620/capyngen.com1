@@ -31,7 +31,9 @@ const TechStack = ({ heading, subheading, categories }) => {
     <section className="py-20 px-6 md:px-12 bg-gray-900 text-white">
       {/* Heading */}
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-normal">
+          {heading}
+        </h2>
         <p className="text-lg max-w-2xl mx-auto">{subheading}</p>
       </div>
 
