@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BestHeading2 from "./BestHeading2";
 
-const AppDevHero = ({ slides }) => {
+const Banner12 = ({ slides }) => {
   const sliderRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -91,4 +91,4 @@ const AppDevHero = ({ slides }) => {
   );
 };
 
-export default AppDevHero;
+export default Banner12;

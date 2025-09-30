@@ -314,7 +314,20 @@ const Consulting = () => {
   return (
     <div className="relative">
       <div className="sticky inset-0">
-        <Banner10 />
+        <Banner10
+          title="CONSULTING"
+          highlight="SERVICES COMPANY"
+          description="Capyngen is a premium consulting services company providing a broad spectrum of IT consulting services, business consulting solutions, and digital consulting services to various industries. Our team of 250+ expert consultants delivers tailor-made strategies that empower businesses, upgrade operations, and increase revenue. We are among the top 10 IT consulting companies in India, and our focus is on startups, SMEs, and enterprises; we help them become self-sufficient to achieve sustainable growth."
+          buttonText="Start Your Project"
+          buttonAria="Start Your Project"
+          services={[
+            "Custom IT Consulting",
+            "Business Consulting Solutions",
+            "Digital Consulting Services",
+            "Enterprise Consulting Company",
+          ]}
+          image={assets.capyngen3d}
+        />
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">

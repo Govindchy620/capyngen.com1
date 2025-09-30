@@ -18,7 +18,7 @@ import {
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import TechStack from "../components/TechStack";
-import AppDevHero from "../components/AppDevHero";
+import Banner13 from "../components/Banner13";
 
 const AppDevelopment = () => {
   const faqItems = [
@@ -462,117 +462,123 @@ const AppDevelopment = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
-        <AppDevHero slides={slides} />;
-      </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <AppTypesSection />
-        <CardsSection
-          heading="Why App Development Matters"
-          subheading=""
-          services={cardsSectionData1}
-          headColor="text-white"
-          cardBg="bg-gray-700"
-          sectionBg="bg-gray-900"
-          hoverBg="hover:bg-blue-800 hover:scale-98"
-          textColor="text-white"
-          hoverTextColor=""
-        />
-        <GetStarted
-          backgroundColor="bg-gray-900"
-          textColor="text-white"
-          buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Comprehensive Guidance for Transforming Your Mobile App Vision from Initial Concept to Successful Launch"
-          description="Our seasoned consulting team provides comprehensive, end-to-end mobile application development solutions, converting innovative concepts into high-impact, enterprise-grade digital platforms. From strategic ideation to flawless deployment, every stage is meticulously orchestrated to deliver maximum operational and business value."
-          buttonText="Contact Us"
-        />
-        <CardsSection
-          heading="Transform Industries with Advanced Mobile App Development Consulting"
-          subheading="Unlock the potential of state-of-the-art mobile applications across diverse industries, enhancing operational efficiency, streamlining processes, and driving measurable growth and innovation."
-          services={cardsSectionData2}
-          headColor="text-white"
-          sectionBg="bg-gray-900"
-          cardBg="bg-transparent"
-          hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
-          textColor="text-white"
-          hoverTextColor=""
-        />
-        <TechStack
-          heading="Transform Your Mobile Development and Consulting with Our Expert Tech Stack"
-          subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
-          categories={techStack}
-        />
-        <CardsSection
-          heading="Harnessing Advanced Technologies for High-Performance Mobile Apps"
-          subheading="Leverage the power of advanced technologies to transform your mobile applications into robust, secure, and high-performing digital solutions. Our consulting expertise ensures your apps are designed for maximum efficiency, scalability, and business impact."
-          services={cardsSectionData3}
-          headColor="text-white"
-          cardBg="bg-gray-700"
-          sectionBg="bg-gray-900"
-          hoverBg="hover:bg-blue-800 hover:scale-98"
-          textColor="text-white"
-          hoverTextColor=""
-        />
-        <GetStarted
-          backgroundColor="bg-gray-900"
-          textColor="text-white"
-          buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Future-Proof Your App with Advanced Technology Solutions"
-          description="Elevate your application’s capabilities through our expert technology integration services. From AI-driven intelligence to secure blockchain solutions, we provide end-to-end innovations that ensure your app remains robust, scalable, and ahead of the market."
-          buttonText="Contact Us"
-        />
+      <Banner13
+        title="Professional"
+        highlight="App Development Services"
+        title2="to Grow Your Business"
+        description="Scalable, secure, and user-friendly mobile applications for Android, iOS, and cross-platform solutions."
+        services={[
+          "Custom IT Consulting",
+          "Business Consulting Solutions",
+          "Digital Consulting Services",
+        ]}
+        videoSrc={assets.heroVideo}
+      />
+      <AppTypesSection />
+      <CardsSection
+        heading="Why App Development Matters"
+        subheading=""
+        services={cardsSectionData1}
+        headColor="text-white"
+        cardBg="bg-gray-700"
+        sectionBg="bg-gray-900"
+        hoverBg="hover:bg-blue-800 hover:scale-98"
+        textColor="text-white"
+        hoverTextColor=""
+      />
+      <GetStarted
+        backgroundColor="bg-gray-900"
+        textColor="text-white"
+        buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Comprehensive Guidance for Transforming Your Mobile App Vision from Initial Concept to Successful Launch"
+        description="Our seasoned consulting team provides comprehensive, end-to-end mobile application development solutions, converting innovative concepts into high-impact, enterprise-grade digital platforms. From strategic ideation to flawless deployment, every stage is meticulously orchestrated to deliver maximum operational and business value."
+        buttonText="Contact Us"
+      />
+      <CardsSection
+        heading="Transform Industries with Advanced Mobile App Development Consulting"
+        subheading="Unlock the potential of state-of-the-art mobile applications across diverse industries, enhancing operational efficiency, streamlining processes, and driving measurable growth and innovation."
+        services={cardsSectionData2}
+        headColor="text-white"
+        sectionBg="bg-gray-900"
+        cardBg="bg-transparent"
+        hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
+        textColor="text-white"
+        hoverTextColor=""
+      />
+      <TechStack
+        heading="Transform Your Mobile Development and Consulting with Our Expert Tech Stack"
+        subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
+        categories={techStack}
+      />
+      <CardsSection
+        heading="Harnessing Advanced Technologies for High-Performance Mobile Apps"
+        subheading="Leverage the power of advanced technologies to transform your mobile applications into robust, secure, and high-performing digital solutions. Our consulting expertise ensures your apps are designed for maximum efficiency, scalability, and business impact."
+        services={cardsSectionData3}
+        headColor="text-white"
+        cardBg="bg-gray-700"
+        sectionBg="bg-gray-900"
+        hoverBg="hover:bg-blue-800 hover:scale-98"
+        textColor="text-white"
+        hoverTextColor=""
+      />
+      <GetStarted
+        backgroundColor="bg-gray-900"
+        textColor="text-white"
+        buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Future-Proof Your App with Advanced Technology Solutions"
+        description="Elevate your application’s capabilities through our expert technology integration services. From AI-driven intelligence to secure blockchain solutions, we provide end-to-end innovations that ensure your app remains robust, scalable, and ahead of the market."
+        buttonText="Contact Us"
+      />
 
-        <HowWeWork
-          heading="Mobile App Development Process"
-          desc="We follow a rigorous, high-standard development methodology to deliver robust, error-free, and high-performance mobile applications. Our team ensures each stage is meticulously executed for maximum efficiency and business impact."
-          steps={steps}
-        />
-        <CardsSection
-          heading="Comprehensive Mobile App Development & Consulting for All Types of App"
-          subheading="We provide high-caliber mobile app development and expert consulting for startups and enterprises, delivering end-to-end solutions that transform ideas into robust, scalable, and market-ready applications."
-          services={cardsSectionData4}
-          sectionBg="bg-gray-900"
-          cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-          hoverBg=""
-          textColor="text-white"
-          hoverTextColor=""
-          headColor="text-white"
-        />
-        <CardsSection
-          heading="Why Partner with Us for Elite Mobile App Development Consulting"
-          subheading="We deliver strategic, high-impact mobile app solutions that redefine business performance and unlock future growth potential. Our approach combines innovation, precision, and expertise to craft apps that truly stand out."
-          services={cardsSectionDifferentColorData}
-          height="h-76"
-          sectionBg="bg-gray-900"
-          headColor="text-white"
-          cardBg="bg-gray-50"
-          hoverBg=""
-          cardHeadSize="text-2xl"
-          textSize="text-lg"
-          textColor="text-gray-800"
-          hoverTextColor=""
-        />
-        <OurServices />
-        <GetStarted
-          backgroundColor="bg-gray-900"
-          textColor="text-white"
-          buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Premium Mobile Application Development Consulting Services"
-          description={[
-            "We go beyond conventional app development, offering comprehensive consulting and end-to-end solutions, which makes us one of the top mobile app development service providers in the industry.",
-            "Our team of expert developers delivers high-quality applications across Android, iOS, and cross-platform environments, leveraging the latest technologies and industry best practices. Every project is executed with precision, efficiency, and scalability.",
-            "With our highly skilled full-stack developers, we design apps for exceptional performance, maximum user engagement, and optimized downloads on Google Play Store and Apple App Store.",
-          ]}
-          image={assets.appDevelopment}
-          reverse={true}
-        />
-        <FAQSection2 items={faqItems} />
-        <ScrollRevealEffect />
-      </div>
+      <HowWeWork
+        heading="Mobile App Development Process"
+        desc="We follow a rigorous, high-standard development methodology to deliver robust, error-free, and high-performance mobile applications. Our team ensures each stage is meticulously executed for maximum efficiency and business impact."
+        steps={steps}
+      />
+      <CardsSection
+        heading="Comprehensive Mobile App Development & Consulting for All Types of App"
+        subheading="We provide high-caliber mobile app development and expert consulting for startups and enterprises, delivering end-to-end solutions that transform ideas into robust, scalable, and market-ready applications."
+        services={cardsSectionData4}
+        sectionBg="bg-gray-900"
+        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
+        hoverBg=""
+        textColor="text-white"
+        hoverTextColor=""
+        headColor="text-white"
+      />
+      <CardsSection
+        heading="Why Partner with Us for Elite Mobile App Development Consulting"
+        subheading="We deliver strategic, high-impact mobile app solutions that redefine business performance and unlock future growth potential. Our approach combines innovation, precision, and expertise to craft apps that truly stand out."
+        services={cardsSectionDifferentColorData}
+        height="h-76"
+        sectionBg="bg-gray-900"
+        headColor="text-white"
+        cardBg="bg-gray-50"
+        hoverBg=""
+        cardHeadSize="text-2xl"
+        textSize="text-lg"
+        textColor="text-gray-800"
+        hoverTextColor=""
+      />
+      <OurServices />
+      <GetStarted
+        backgroundColor="bg-gray-900"
+        textColor="text-white"
+        buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Premium Mobile Application Development Consulting Services"
+        description={[
+          "We go beyond conventional app development, offering comprehensive consulting and end-to-end solutions, which makes us one of the top mobile app development service providers in the industry.",
+          "Our team of expert developers delivers high-quality applications across Android, iOS, and cross-platform environments, leveraging the latest technologies and industry best practices. Every project is executed with precision, efficiency, and scalability.",
+          "With our highly skilled full-stack developers, we design apps for exceptional performance, maximum user engagement, and optimized downloads on Google Play Store and Apple App Store.",
+        ]}
+        image={assets.appDevelopment}
+        reverse={true}
+      />
+      <FAQSection2 items={faqItems} />
+      <ScrollRevealEffect />
     </div>
   );
 };
