@@ -241,7 +241,24 @@ const EcommerceDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <Banner8 />
+      <Banner8
+        titleMain="Ecommerce Design"
+        titlePrefix="Professional"
+        titleSuffix="Transforms Your Digital Store"
+        description={`A professionally designed store is the best way to let your products
+                and services shine through. In short, the process of ecommerce UI
+                design, ecommerce app UI design, and ecommerce database design turns
+                out to be a story of creating eye-popping as well as high-functional
+                platforms that create engagement, convert sales and turn the
+                business into rake revenue. The best part of your next endeavor
+                could be teaming up with an established ecommerce website designing
+                company.`}
+        imageSrc={assets.eCommerceDesign}
+        imageAlt="Ecommerce Design Illustration"
+        bgColor="bg-gray-900"
+        iconColor="bg-blue-700"
+        reverse={false}
+      />
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"

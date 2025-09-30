@@ -31,8 +31,8 @@ export default function TopRatedCompany({
           }`}
         >
           {/* Text Content */}
-          <article className="w-full lg:w-2/3 text-center lg:text-left max-w-4xl mx-auto lg:mx-0">
-            <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
+          <article className="w-full lg:w-2/3 text-left max-w-4xl mx-auto lg:mx-0">
+            <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg text-center">
               {title}
             </h1>
             <div className="mt-10 md:mt-12 text-base md:text-lg space-y-6 max-w-3xl mx-auto lg:mx-0 text-white/90 drop-shadow-md">

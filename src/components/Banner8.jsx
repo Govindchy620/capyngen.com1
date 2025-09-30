@@ -31,7 +31,7 @@ export default function Banner8({
       >
         {/* Text Section */}
         <div className="flex-1 text-center sm:text-left px-4 md:px-8">
-          <h1 className="font-extrabold leading-tight">
+          <h1 className="font-extrabold leading-normal">
             <span className="block text-blue-500 text-lg sm:text-xl md:text-2xl mb-2 uppercase tracking-wide">
               {titlePrefix}
             </span>
@@ -42,7 +42,7 @@ export default function Banner8({
               {titleSuffix}
             </span>
           </h1>
-          <p className="mt-6 text-gray-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto sm:mx-0 leading-relaxed">
+          <p className="mt-6 text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto sm:mx-0 leading-relaxed">
             {description}
           </p>
         </div>

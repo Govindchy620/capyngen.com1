@@ -12,297 +12,529 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
 import { HeroParallax } from "../components/HeroParallax";
+import Banner8 from "../components/Banner8";
+import GetStarted from "../components/GetStarted";
+import CardsSectionImage from "../components/CardsSectionImage";
+import {
+  FaClipboardCheck,
+  FaFileContract,
+  FaHandshake,
+  FaNetworkWired,
+  FaProjectDiagram,
+  FaShieldAlt,
+  FaHandsHelping,
+  FaSearch,
+  FaTags,
+  FaPalette,
+  FaBullhorn,
+  FaUsers,
+} from "react-icons/fa";
+import CardsSection from "../components/CardsSection";
+import CardsSectionSlider from "../components/CardsSectionSlider";
 
 const WebSiteDesign = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What are Website Design Services?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "Website Design Services are the services that include the creation of professional, responsive, and user-friendly websites that represent your brand and are in line with your business objectives.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why should I hire the best website design company?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "The company that is right for you is the one that guarantees you top-notch designs, smooth and responsive functionalities that pull customer traffic and engagement.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
-    },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      question: "What are Custom Website Design Services?",
+      answer:
+        "Custom Website Design Services mean the creation of one-of-a-kind and tailor-made websites that represent your brand and are designed to achieve your business objectives.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      question: "Do you provide Responsive Website Design Services?",
+      answer:
+        "Yes, we make sure that your website has perfect functionality on desktops, tablets, and smartphones so that every user gets the best experience.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our Website Design company, integrating e-learning tools, course management, and student engagement features.",
+      question: "What are Creative Website Design Services?",
+      answer:
+        "Creative Website Design Services are those that attract users by offering interactive, modern, and visually engaging designs and at the same time help your brand to be unique.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our Website Design services to highlight your skills and attract potential clients.",
+      question: "Do you offer Corporate Website Design Services?",
+      answer:
+        "Of course, we create professional and scalable corporate websites that generate trust and loyalty for companies and B2B businesses.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our Website Design company, featuring responsive designs and seamless navigation for a better user experience.",
+      question: "Can you build E-commerce websites?",
+      answer:
+        "Yes, we offer E-commerce Website Design Services that comprise the set-up of secure and easy-to-use online stores that are optimized for conversions and provide a seamless shopping experience for customers.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+      question: "How long does it take to design a website?",
+      answer:
+        "Based on the level of difficulty, timelines can be different; still, the majority of the projects range between 3 and 8 weeks depending on features and customizations are completed.",
     },
     {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive Website Design solutions tailored to your needs.",
+      question: "Are your website designs SEO-friendly?",
+      answer:
+        "Without any doubt! Our website designs comply with SEO standards, which, in turn, make it easier for web pages to be found by increasing their loading speed, and ranking in search engines.",
     },
     {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our Website Design company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+      question: "Do you provide affordable website design services?",
+      answer:
+        "Yes, Capyngen is the creative affordable website design service provider that is characterized by high quality, creativity, and performance besides being budget-friendly.",
     },
     {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our Website Design services, that enhance donor engagement and effectively communicate your mission.",
+      question: "Can you redesign my existing website?",
+      answer:
+        "Yes, we give web redesign services to update your site, make it user-friendly, and increase user interaction.",
     },
     {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+      question: "Do you provide ongoing support and maintenance?",
+      answer:
+        "Our services comprise all the necessary continuous updates, and security monitoring, as well as technical support for your website.",
     },
     {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+      question: "What industries do you serve?",
+      answer:
+        "We are the perfect fit for the needs of startups, SMEs, corporate enterprises, e-commerce businesses, and organizations across healthcare, education, real estate, and much more.",
     },
     {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      question: "Can you integrate third-party tools into my website?",
+      answer:
+        "Of course, we can. We bring in different tools like CRMs, analytics tools, payment gateways, and other platforms to better the functionality and performance of your website.",
+    },
+    {
+      question:
+        "Why choose Capyngen as the best website design company in India?",
+      answer:
+        "Combining creativity, technology, and business tactics, Capyngen takes the trust of Indian businesses to create tailor-made, responsive, and scalable website design services across the length and breadth of India.",
     },
   ];
-  const servicesData = [
+  const benefitsData = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our Website Design company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      title: "Custom Design",
+      desc: "Tailor-made layouts that simply flaunt your brand identity.",
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced Website Design services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      title: "Responsive Design",
+      desc: "Easy access to your website and users can even navigate through it on their mobile phones, tablets, as well as desktops.",
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      title: "Creative UI/UX",
+      desc: "Trendy, entertaining, and easy-to-navigate interfaces that visitors find irresistible to leave.",
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      title: "E-commerce Solutions",
+      desc: "Online stores that are safe, sufficient in terms of capacity, and are customer conversion-focused in order to increase sales.",
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our Website Design solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      title: "Corporate Solutions",
+      desc: "The professional as well as the scalable designs that are capable of having a positive influence on your company image.",
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      title: "SEO Integration",
+      desc: "All the elements come together to facilitate search rankings e.g. structure, meta tags, and of content.",
+    },
+    {
+      title: "Performance Optimization",
+      desc: "User experience gets better with a very fast loading of the website and functionalities which are so smooth.",
+    },
+    {
+      title: "Analytics & Tracking",
+      desc: "Tools that are fully integrated to effectively capture the data of visitors, their activities on the website, and the performance of the website.",
+    },
+    {
+      title: "Ongoing Support",
+      desc: "Regular maintenance, timely updates, and long-term technical assistance are available.",
     },
   ];
   const steps = [
     {
       step: "Step 01",
-      title: "Discovery & Strategic Planning",
+      title: "Discovery & Research",
       description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
+        "Getting to know your brand, audience, and objectives to create a strong base.",
     },
     {
       step: "Step 02",
-      title: "Custom Design & Prototyping",
+      title: "Strategy & Planning",
       description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
+        "Working out details of the site structure, user flow, and key features for a clear plan.",
     },
     {
       step: "Step 03",
-      title: "Front-End Development",
+      title: "Wireframing & UI Design",
       description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
+        "Creating simple layouts and impressive visuals that reflect your ideas.",
     },
     {
       step: "Step 04",
-      title: "Back-End Development",
+      title: "Development",
       description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
+        "Making websites that are fast, safe, and responsive with the latest technology from the designs.",
     },
     {
       step: "Step 05",
-      title: "Quality Assurance & Testing",
+      title: "Content Integration",
       description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
+        "Incorporating SEO-friendly text, interactive media, and attractive CTAs.",
     },
     {
       step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
+      title: "Testing & Quality Assurance",
       description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
+        "Checking that the performance is good on all browsers and devices.",
+    },
+    {
+      step: "Step 07",
+      title: "Launch",
+      description: "Easy installation and going live without any trouble.",
+    },
+    {
+      step: "Step 08",
+      title: "Analytics & Optimization",
+      description:
+        "Monitoring user behavior and making your website better for continuous growth.",
+    },
+    {
+      step: "Step 09",
+      title: "Ongoing Support & Maintenance",
+      description:
+        "Regular updates, tracking, and patches to keep your site at its best.",
     },
   ];
-  const products = [
+  const cardsSectionImageData1 = [
     {
-      title: "Moonbeam",
-      link: "https://gomoonbeam.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-    },
-    {
-      title: "Cursor",
-      link: "https://cursor.so",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-    },
-    {
-      title: "Rogue",
-      link: "https://userogue.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+      title: "Custom Website Design Services",
+      description:
+        "We make websites that are one-of-a-kind and show off your brand’s identity. Nothing is standard, even the smallest detail is to ensure your business gets noticed online.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
     },
 
     {
-      title: "Editorially",
-      link: "https://editorially.org",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+      title: "Responsive Website Design Services",
+      description:
+        "It doesn’t matter whether someone is visiting your site on a desktop computer, tablet, or mobile phone; it will always be perfect for them and hence a quick and trouble-free user experience.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
     },
     {
-      title: "Editrix AI",
-      link: "https://editrix.ai",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+      title: "Creative Website Design Services",
+      description:
+        "Website designs are modern, eye-catching, and user-friendly that attract new visitors and make them stay on the site for a longer period of time.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
     },
     {
-      title: "Pixel Perfect",
-      link: "https://app.pixelperfect.quest",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+      title: "Corporate Website Design Services",
+      description:
+        "Websites that are designed professionally and are scalable get you loved by your customers and hence, your business becomes more powerful.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
     },
+    {
+      title: "E-commerce Website Design Services",
+      description:
+        "Online stores that are safe, simple to use with easy and quick checkout are designed just to increase your selling.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Landing Page Design Services",
+      description:
+        "Landing pages with high conversion rates are made to be the source of leads, sign-ups, and get the targeted audience to take the desired next step.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+  ];
+  const cardsSectionDifferentColorData1 = [
+    {
+      title: "Hands-On Experience",
+      description:
+        "The company has the know-how of years and a commendable record of success in creating high-performing websites from diverse sectors.",
+      icon: (
+        <FaHandsHelping className="text-4xl text-white transition-transform duration-300" />
+      ),
+      cardBg:
+        "bg-gradient-to-tr from-[#1e3a8a] to-[#1e40af] hover:from-[#1d4ed8] hover:to-[#2563eb]", // deep to vibrant blue
+    },
+    {
+      title: "SEO-Compatible Method",
+      description:
+        "Good quality programming, quick loading times, and search-friendly structures that increase your online visibility.",
+      icon: (
+        <FaSearch className="text-4xl text-white transition-transform duration-300" />
+      ),
+      cardBg:
+        "bg-gradient-to-tr from-[#111827] to-[#374151] hover:from-[#1f2937] hover:to-[#4b5563]", // black to gray
+    },
+    {
+      title: "Cheap Web Design Services",
+      description:
+        "The customer gets tailor-made solutions in every way, including the price, that do not slightly compromise the quality.",
+      icon: (
+        <FaTags className="text-4xl text-white transition-transform duration-300" />
+      ),
+      cardBg:
+        "bg-gradient-to-tr from-blue-500 to-[#1e293b] hover:from-blue-500 hover:to-blue-500", // navy black to slate gray
+    },
+    {
+      title: "Bright Side of Design",
+      description:
+        "Just the right combination of contemporary beauty and customer-centric practicality.",
+      icon: (
+        <FaPalette className="text-4xl text-white transition-transform duration-300" />
+      ),
+      cardBg:
+        "bg-gradient-to-tr from-[#374151] to-[#6b7280] hover:from-[#4b5563] hover:to-[#9ca3af]", // mid gray to light gray
+    },
+    {
+      title: "Action-Oriented Campaigns",
+      description:
+        "It is precisely the kind of design that strongly engages the audience, turns visitors into contacts, and eventually to conversions.",
+      icon: (
+        <FaBullhorn className="text-4xl text-white transition-transform duration-300" />
+      ),
+      cardBg:
+        "bg-gradient-to-tr from-[#1e293b] to-[#3b82f6] hover:from-[#2563eb] hover:to-[#60a5fa]", // dark navy to bright blue
+    },
+    {
+      title: "Always There for You",
+      description:
+        "Our crew, from scheduling to post-launch, is totally committed to smooth communication and continuous support.",
+      icon: (
+        <FaUsers className="text-4xl text-white transition-transform duration-300" />
+      ),
+      cardBg:
+        "bg-gradient-to-tr from-[#0f172a] to-[#4b5563] hover:from-[#1e293b] hover:to-[#6b7280]", // dark slate to gray
+    },
+  ];
 
+  const cardsSectionSliderData1 = [
     {
-      title: "Algochurn",
-      link: "https://algochurn.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+      title: "E-commerce & Retail",
+      desc: "",
+      image: assets.eCommerceSolution,
+      textColor: "text-white",
     },
     {
-      title: "Aceternity UI",
-      link: "https://ui.aceternity.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+      title: "Healthcare & Wellness",
+      desc: "",
+      image: assets.websiteDesign,
+      textColor: "text-white",
     },
     {
-      title: "Tailwind Master Kit",
-      link: "https://tailwindmasterkit.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+      title: "Education & E-learning",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
     {
-      title: "SmartBridge",
-      link: "https://smartbridgetech.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+      title: "Real Estate",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
     {
-      title: "Renderwork Studio",
-      link: "https://renderwork.studio",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-    },
-
-    {
-      title: "Creme Digital",
-      link: "https://cremedigital.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+      title: "IT & Software",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
     {
-      title: "Golden Bells Academy",
-      link: "https://goldenbellsacademy.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+      title: "Corporate & Enterprise Solutions",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
     {
-      title: "Invoker Labs",
-      link: "https://invoker.lol",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+      title: "Travel & Hospitality",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
     {
-      title: "E Free Invoice",
-      link: "https://efreeinvoice.com",
-      thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      title: "Startups & Entrepreneurs",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
   ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <HeroParallax products={products} />
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated Website Design Company"
-          description={[
-            `RichestSoft provides top-notch and oriented Website Design solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch Website Design services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best Website Design company in India, we provide best-in-class Website Design services.`,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-        />
-
-        <BenefitsSection
-          heading="Website Design Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
-        />
-        <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-          steps={steps}
-        />
-        <WhyChoose />
-        <BenefitsSection
-          heading="Website Design Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level Website Design services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
-        />
-        <TechnologiesCarousel
-          title="Website Design Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
-        />
-        <OurServices />
-        <FAQSection2 items={faqItems} />
-        <ScrollRevealEffect />
-      </div>
+      <Banner8
+        titleMain="Website Design"
+        titlePrefix=""
+        titleSuffix="That Works for Your Business"
+        description={`The world sees your business through your website. Capyngen has the solution for you - Website Design Services, which combine eye-catching design, clever technology, and a clear strategy. We don’t just build websites that look beautiful, they also function. Are you looking for a corporate website, a visually engaging portfolio, or an e-commerce site that attracts and retains customers? Our team is on a mission to deliver your brand the right amount of visibility in the digital space. `}
+        imageSrc={assets.eCommerceDesign}
+        imageAlt="Ecommerce Design Illustration"
+        bgColor="bg-gray-900"
+        iconColor="bg-blue-700"
+        reverse={false}
+      />
+      <GetStarted
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        title=""
+        description={[
+          "Do you need the professional services of a web designer? Then contact Capyngen, the best website design company in India, and get tailor-made website design services which take your brand to the next level.",
+        ]}
+        textSize="text-2xl"
+        buttonText="Contact Us"
+        backgroundVideo={assets.backgroundVideo}
+      />
+      <TopRatedCompany
+        title="Why Choose Capyngen for Website Design Services?"
+        description={[
+          <>
+            <p>
+              We at Capyngen are not just a service provider - we are your
+              digital growth partner. Through our expertise and the skilled
+              team, we develop websites that are visually attractive, easy to
+              navigate, mobile-friendly, and conversion-focused.
+            </p>
+            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+              {[
+                {
+                  title: "Custom Website Designs",
+                  text: " that reflect your brand concept.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Fully Responsive Layouts",
+                  text: " to ensure that the user can get the same experience on any device.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Creative & Modern Interfaces",
+                  text: " that attract more attention to your brand.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Corporate Web Solutions",
+                  text: " to a professional online identity that is both strong and reliable.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "E-commerce Website Designs",
+                  text: " that are not only scalable but also redirect to increase your revenue.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Recognized by the Industry",
+                  text: " as One of the Best Website Designers.",
+                  color: "text-blue-500",
+                },
+              ].map(({ title, text, color }, idx) => (
+                <li
+                  key={idx}
+                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                >
+                  <strong className={`${color} drop-shadow-md`}>{title}</strong>{" "}
+                  {text}
+                </li>
+              ))}
+            </ul>
+          </>,
+        ]}
+        image={assets.whyChooseUs}
+        background={assets.patternBg1}
+        isHidden="hidden"
+        imageHeight="aspect-[4/3] md:aspect-[3/4]"
+      />
+      <CardsSectionImage
+        heading="Our Web Development Features"
+        subheading=""
+        services={cardsSectionImageData1}
+        sectionBg="bg-gray-800"
+        headColor="text-white"
+        cardBg=""
+        textSize="text-md"
+        hoverBg="hover:bg-gray-200"
+      />
+      <GetStarted
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        title=""
+        description={[
+          "Are you searching for the services of a responsive or creative website design for your company? Contact Capyngen right now and get the affordable and best website design services directed towards your requirements.",
+        ]}
+        textSize="text-2xl"
+        buttonText="Contact Us"
+        backgroundVideo={assets.backgroundVideo}
+      />
+      <HowWeWork
+        heading="Capyngen Website Design Process"
+        desc="At Capyngen, we combine creativity, strategy, and technology to deliver websites that really work. Our organized process guarantees every project to be orderly, open, and results-driven:"
+        steps={steps}
+      />
+      <CardsSection
+        heading="Why Capyngen is the Best Website Design Company"
+        subheading="Capyngen shines out of the pack by creatively combining the art, the science, and the strategy to create websites that merely are not visually striking — but also produce tangible outcomes. This is why we are the first preference of decision-makers in startups, SMEs, and enterprises:"
+        services={cardsSectionDifferentColorData1}
+        cardBg=""
+        headColor="text-white"
+        sectionBg="bg-black"
+        hoverBg=""
+        height="h-72"
+        textColor="text-white"
+        hoverTextColor="transition-all"
+      />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        title=""
+        description={[
+          "To become one of the Best Website Design Companies, Capyngen has had to fuse creative thinking, the latest technology, and a sound commercial approach to build a solid reputation that spans the digital domain. The company is recognized as a leader in providing digital experiences that make a difference in the lives of startups, SMEs and enterprises, and hence, they trust them for such engagements.",
+        ]}
+        textSize="text-2xl"
+        buttonText="Contact Us"
+        image={assets.getStarted}
+        backgroundVideo={assets.backgroundVideo}
+      />
+      <BenefitsSection
+        heading="Key Features of Our Website Design Services"
+        desc="At Capyngen, our website design services are specifically made to bring about a positive impact, functionality, and value for the long term. Here are our unique selling points:"
+        benefits={benefitsData}
+        image={assets.blockchainApplications}
+        footerNote=""
+      />
+      <CardsSectionSlider
+        heading="Industries We Serve"
+        subheading="Our web design and development services span a variety of industries, namely:"
+        cardBg="bg-transparent"
+        hoverBg=" hover:bg-blue-50"
+        textColor="text-gray-800"
+        hoverTextColor=""
+        textSize="text-xl"
+        sectionBg="bg-black/90"
+        height="h-78"
+        headColor="text-white"
+        services={cardsSectionSliderData1}
+        footerNote="We create websites compliant with your industry and business objectives regardless of your niche."
+      />
+      <GetStarted
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        title=""
+        description={[
+          "Crave a stylish, expandable, and captivating website? Acquire Capyngen's corporate website design services and e-commerce website design services to be the first in the line to grow your business online from the best website design company.",
+        ]}
+        textSize="text-2xl"
+        buttonText="Contact Us"
+        backgroundVideo={assets.backgroundVideo}
+      />
+      <FAQSection2 items={faqItems} />
+      <ScrollRevealEffect />
     </div>
   );
 };

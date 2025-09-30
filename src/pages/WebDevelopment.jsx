@@ -585,12 +585,12 @@ const WebDevelopment = () => {
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
-          textColor="text-white text-xl"
+          textColor="text-white"
           title=""
           description={[
             "Create the online representation of your ideas, that speaks volumes! Reach out to the top web development company in India, Capyngen, for tailored web development solutions by an expert and quality web development services that increase your business and attract the audience.",
           ]}
-          textSize="text-xl"
+          textSize="text-2xl"
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />
@@ -621,12 +621,12 @@ const WebDevelopment = () => {
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
-          textColor="text-white text-xl"
+          textColor="text-white"
           title=""
           description={[
             "Have you prepared to be noticed on the Internet? Contact Capyngen in order to receive a website development service that suits your small business which includes e-commerce and a mobile-friendly website that matches your brand.",
           ]}
-          textSize="text-xl"
+          textSize="text-2xl"
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />
@@ -639,12 +639,12 @@ const WebDevelopment = () => {
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
-          textColor="text-white text-xl"
+          textColor="text-white"
           title=""
           description={[
             "Do you want a website that will help your business grow? So, for custom website services and professional website development, get in touch with Capyngen, the best website development company in India!",
           ]}
-          textSize="text-xl"
+          textSize="text-2xl"
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />

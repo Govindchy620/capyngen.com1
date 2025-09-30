@@ -9,15 +9,15 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import AppTypesSection from "../components/AppTypesSection";
 import CardsSection from "../components/CardsSection";
 import {
-  FaLightbulb,
-  FaChartLine,
   FaCogs,
-  FaLaptopCode,
-  FaProjectDiagram,
-  FaTasks,
+  FaExpandArrowsAlt,
+  FaShieldAlt,
+  FaUserFriends,
+  FaClock,
+  FaMobileAlt,
+  FaSmile,
   FaAndroid,
   FaApple,
-  FaMobileAlt,
   FaCode,
   FaCheckCircle,
 } from "react-icons/fa";
@@ -142,36 +142,36 @@ const AppDevelopment = () => {
       title: "Scalable Solutions",
       description:
         "Your application will be developed to be capable of accommodating the growth and expansion of your business.",
-      icon: <FaLightbulb className="text-4xl" />,
+      icon: <FaExpandArrowsAlt className="text-4xl" />,
     },
     {
       title: "Enhanced Security",
       description:
         "Make sure the data of your users privacy and compliance are met.",
-      icon: <FaChartLine className="text-4xl" />,
+      icon: <FaShieldAlt className="text-4xl" />,
     },
     {
       title: "User-Friendly Design",
       description: "Provide your customers with easy and engaging interfaces.",
-      icon: <FaCogs className="text-4xl" />,
+      icon: <FaUserFriends className="text-4xl" />,
     },
     {
       title: "Cost-Effective Development",
       description:
         "Lower your development time and make the most of your return on investment.",
-      icon: <FaLaptopCode className="text-4xl" />,
+      icon: <FaClock className="text-4xl" />,
     },
     {
       title: "Cross-Platform Reach",
       description:
         "Applications that are compatible with both Android and iOS.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+      icon: <FaMobileAlt className="text-4xl" />,
     },
     {
       title: "Improved Engagement & Retention",
       description:
         "Let your customers benefit from a smooth and easy to use service and thus increase their loyalty towards you.",
-      icon: <FaTasks className="text-4xl" />,
+      icon: <FaSmile className="text-4xl" />,
     },
   ];
   const techStack = [
@@ -454,14 +454,14 @@ const AppDevelopment = () => {
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
-        textColor="text-white text-xl"
+        textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
         title=""
         description={[
           "Is it time to get your mobile app off the ground? Contact Capyngen, a top mobile app development services company, and let our expert app developers turn your dream into a living reality.",
         ]}
-        textSize="text-xl"
+        textSize="text-2xl"
         buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
       />
@@ -476,14 +476,14 @@ const AppDevelopment = () => {
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
-        textColor="text-white text-xl"
+        textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
         title=""
         description={[
           "Trying to find a trustworthy Android app development company or iOS app development company? Contact Capyngen now to get the apps that are scalable, secure, and high-performing.",
         ]}
-        textSize="text-xl"
+        textSize="text-2xl"
         buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
       />
@@ -507,14 +507,14 @@ const AppDevelopment = () => {
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
-        textColor="text-white text-xl"
+        textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
         title=""
         description={[
           "Looking for custom app development services or enterprise app development solutions? Reach out to Capyngen, a foremost cross-platform app development company, and grow your digital footprint.",
         ]}
-        textSize="text-xl"
+        textSize="text-2xl"
         buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
       />

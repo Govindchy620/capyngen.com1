@@ -11,6 +11,7 @@ const CardsSectionSlider = ({
   sectionBg = "bg-white",
   textColor = "text-gray-900",
   autoplay = true,
+  footerNote = "",
   autoplaySpeed = 3000,
   slidesToShow = 4,
   speed = 500,
@@ -47,7 +48,7 @@ const CardsSectionSlider = ({
         </h1>
         {subheading && (
           <p
-            className={`mb-12 max-w-3xl mx-auto ${headColor} text-base md:text-lg`}
+            className={`mb-5 max-w-3xl mx-auto ${headColor} text-base md:text-lg`}
           >
             {subheading}
           </p>
@@ -91,6 +92,10 @@ const CardsSectionSlider = ({
           ))}
         </Slider>
       </div>
+      {/* Footer Note */}
+      <p className="text-center text-white mt-16 text-lg md:text-xl font-medium max-w-6xl mx-auto leading-relaxed ">
+        {footerNote}
+      </p>
     </section>
   );
 };

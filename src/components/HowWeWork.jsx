@@ -4,7 +4,7 @@ import { ChevronRight, ChevronDown, ChevronLeft } from "lucide-react";
 const StepCard = ({ step, title, description }) => (
   <article
     className="rounded-sm py-10 px-5 text-center w-full max-w-sm transition-all duration-300
-      bg-gray-800 hover:bg-blue-800 group hover:shadow-lg hover:scale-105 min-h-[320px]
+      bg-gray-800 hover:bg-blue-800 group hover:shadow-lg hover:scale-105 min-h-[260px]
       flex flex-col justify-center cursor-default"
     aria-labelledby={`step-title-${step}`}
     aria-describedby={`step-desc-${step}`}
