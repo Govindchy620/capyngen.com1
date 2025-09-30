@@ -11,13 +11,25 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import Banner5 from "../components/Banner5";
+import GetStarted from "../components/GetStarted";
+import CardsSectionImage from "../components/CardsSectionImage";
+import CardsSection from "../components/CardsSection";
+import {
+  FaAppStore,
+  FaBuilding,
+  FaIndustry,
+  FaLaptopCode,
+  FaMoneyBillWave,
+  FaPuzzlePiece,
+} from "react-icons/fa";
 
 const BrandingIdentityDesign = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What are branding design services?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "In order to develop a cohesive brand identity, these services incorporate logo design, visual identity, packaging, stationery, and digital branding.",
     },
     {
       question: "What is the minimum deposit requirement?",
@@ -29,146 +41,368 @@ const BrandingIdentityDesign = () => {
       answer: "No, PrimeForex Markets charges no fees for depositing funds.",
     },
   ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
+  const cardsSectionImageData1 = [
     {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      title: "Logo Design",
+      description:
+        "One-of-a-kind designs that immediately are the names of products and services the brand is recognizable and are also a familiar occurrence in the matter of trust.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      title: "Visual Identity",
+      description:
+        "Design elements such as the colors, fonts, icons, and images used for all the channels in order to keep the look uniform.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our Branding & Identity Design company, integrating e-learning tools, course management, and student engagement features.",
+      title: "Brand Guidelines",
+      description:
+        "A rule book that assists in the performance of close-knit communities in print, web, and social media.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our Branding & Identity Design services to highlight your skills and attract potential clients.",
+      title: "Packaging Design",
+      description:
+        "Beautiful packages for the customers, who at the same time are the mirror of your brand.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our Branding & Identity Design company, featuring responsive designs and seamless navigation for a better user experience.",
+      title: "Stationery & Collateral Design",
+      description:
+        "Business cards, brochures, and promotional materials are designed.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
-    },
-    {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive Branding & Identity Design solutions tailored to your needs.",
-    },
-    {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our Branding & Identity Design company, featuring secure payment gateways, inventory management, and optimized user journeys.",
-    },
-    {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our Branding & Identity Design services, that enhance donor engagement and effectively communicate your mission.",
-    },
-    {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
-    },
-    {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
-    },
-    {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      title: "Digital Branding",
+      description:
+        "The digital avenues like your website, social media, and campaign that make your online presence simple and easy to follow.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
     },
   ];
-  const servicesData = [
+  const cardsSectionData1 = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our Branding & Identity Design company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      title: "Richly articulated designs",
+      description:
+        "Brand market research leads to brand identities that connect with the most suitable target group.",
+      icon: <FaPuzzlePiece className="text-4xl text-white" />,
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced Branding & Identity Design services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      title: "Tailored Solutions",
+      description:
+        "The designs are personalized and crafted with the opposite personality and intrinsic objectives of the brand.",
+      icon: <FaLaptopCode className="text-4xl text-white" />,
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      title: "Creative Expertise",
+      description:
+        "One of the primary reasons for the longevity of innovative concepts in the memory of the visual users is that they are creatively designed.",
+      icon: <FaAppStore className="text-4xl text-white" />,
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      title: "Cross-Platform Consistency",
+      description:
+        "A brand identity both visually and conceptually standardized across all media such as digital, print, and social media platforms.",
+      icon: <FaMoneyBillWave className="text-4xl text-white" />,
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our Branding & Identity Design solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      title: "Strategic Approach",
+      description:
+        "A brand’s story and business goals are the anchor of every design evolved.",
+      icon: <FaBuilding className="text-4xl text-white" />,
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      title: "Worldwide Experience",
+      description:
+        "Capyngen is the solution to branding requests from different parts of the world.",
+      icon: <FaIndustry className="text-4xl text-white" />,
+    },
+  ];
+  const steps = [
+    {
+      step: "Step 01",
+      title: "Discovery & Research",
+      description:
+        "Dig into the business, target market, and competitors to construct a proper foundation.",
+    },
+    {
+      step: "Step 02",
+      title: "Strategy Development",
+      description: "Decide on brand position, communication, and visuals.",
+    },
+    {
+      step: "Step 03",
+      title: "Creative Conceptualization",
+      description:
+        "Begin and refine the ideas of logos, typography, and color palettes.",
+    },
+    {
+      step: "Step 04",
+      title: "Design Execution",
+      description:
+        "Create brand guidelines, stationery, and digital collateral with final assets.",
+    },
+    {
+      step: "Step 05",
+      title: "Brand Implementation",
+      description:
+        "Use the new brand identity on websites, social media, packaging, and marketing.",
+    },
+    {
+      step: "Step 06",
+      title: "Ongoing Support",
+      description:
+        "Regular updates and coaching to keep your brand fresh anywhere on the globe, that is Benefits of Professional Branding Design",
+    },
+    {
+      step: "Step 07",
+      title: "Enhanced Credibility",
+      description:
+        "A brand that is consistent and designed professionally worldwide will gain the trust of the diverse global community.",
+    },
+    {
+      step: "Step 08",
+      title: "Higher Engagement",
+      description:
+        "Attractive designs entice and involve the audience's attention span.",
+    },
+    {
+      step: "Step 09",
+      title: "Stronger Loyalty",
+      description:
+        "Customers' emotional attachment to the brand that in turn energizes the process of advocacy among them.",
+    },
+    {
+      step: "Step 10",
+      title: "Market Leadership",
+      description:
+        "Become the trendsetter instead of the follower in your area.",
+    },
+    {
+      step: "Step 11",
+      title: "Improved ROI",
+      description:
+        "Branding which is coherent strengthens promotional activities resulting in increased conversion rates.",
+    },
+    {
+      step: "Step 12",
+      title: "Global Brand Presence",
+      description:
+        "With Capyngen, your brand will be able to attract the audience not only here but there also in diverse cultures and geographies.",
+    },
+  ];
+  const cardsSectionImageData2 = [
+    {
+      title: "Minimalist Design",
+      description:
+        "Neat and straightforward visuals effectively deliver the message.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "Bold Typography",
+      description:
+        "Hard-to-find fonts are a good way to grab people's attention towards your brand.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "Vibrant Color Palettes",
+      description: "Colors that trigger feelings and memory.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Custom Illustrations",
+      description:
+        "Greeting cards for your brand with which no other company can match.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Dynamic Logos",
+      description:
+        "Logos which are flexible for both printed and virtual worlds.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Interactive Digital Branding",
+      description:
+        "The use of motion graphics and animations for grabbing the attention of consumers makes the digital branding process easier and more effective.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
     },
   ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
-        <Banner
-          title="Branding & Identity Design"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.websiteDesign}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
-        />
-      </div>
+      <Banner5
+        title={
+          <>
+            Branding Design Services :
+            <span className="text-cyan-400">
+              Revamp Your Identity, Revive Your Followers
+            </span>
+          </>
+        }
+        description="Capyngen's branding design services, a branding professional who is always ready to come up with fresh, simple, and globally consistent brand identities. As a result, we can represent companies of every size, from the mere idea stage to the establishment of a multinational corporation, to be able to create brand identities that are not only eye-catching but also cross geographical borders."
+        primaryBtnText="Get started"
+        primaryBtnLink="#"
+        image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+      />
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated Branding & Identity Design Company"
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-white hover:scale-105"
+          buttonTextColor="text-black"
+          title=""
           description={[
-            `RichestSoft provides top-notch and oriented Branding & Identity Design solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch Branding & Identity Design services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best Branding & Identity Design company in India, we provide best-in-class Branding & Identity Design services.`,
+            "Become the sensation of the world with Capyngen's professional branding design services. Unleash the original logo, digital branding, and packaging that fit your style spot now!",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="Why branding design matters?"
+          description={[
+            `Social media, ads, and the 24/7 news cycle have not only changed the way people communicate but also the speed of the modern world. Moreover, a brand is nothing but a brand name in this frenzy of interconnectedness where the brand is the customer loyalty is the narrative, the emotion, and the entire customer's experience. Capyngen's branding design services help international clients to systematically and creatively discover their unique identities and thus differentiate in a deep and lasting way as well as to cultivate loyalty to the brand. A company with a harmonized visual identity is able to differentiate itself from other competitors, become valued by customers, and even take the marketing to higher levels of engagement and conversions.`,
+          ]}
+          image={assets.whyChooseUs}
+          isHidden={true}
+          imageHeight="aspect-[1/1]"
+          background={assets.patternBg1}
+        />
+        <CardsSectionImage
+          heading="What are branding design services?"
+          subheading="It is not only the visual attractiveness of design products by Capyngen that makes them stand out but also the inclusion of a full range of branding solutions."
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
+        />
+        <TopRatedCompany
+          title="Why your business needs branding design?"
+          description={[
+            <>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+                {[
+                  {
+                    title: "Create a Lasting First Impression",
+                    text: "You, together with your audience, are better able to see and remember each other due to professional branding.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Establish Brand Awareness and Loyalty",
+                    text: "Done right, branding will not only increase the recognizability of the business but also the trust of the customers.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Communicate Values Clearly",
+                    text: "As the brand's mission and personality become evident just by the style and presentation of the designs.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Stand Out from Competitors",
+                    text: "Great looking and well-differentiated brands will not get lost even in a saturated market.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Amplify Marketing Impact",
+                    text: "Strong and creative branding will lead to higher engagements, conversions, and ROI.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Global Reach",
+                    text: "Your brand is able to communicate with foreign markets due to Capyngen's international know-how.",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    <strong className={`${color} drop-shadow-md`}>
+                      {title}
+                    </strong>{" "}
+                    – {text}
+                  </li>
+                ))}
+              </ul>
+            </>,
           ]}
           image={assets.whyChooseUs}
           background={assets.patternBg1}
+          isHidden="hidden"
+          imageHeight="aspect-[4/3] md:aspect-[3/4]"
         />
-
-        <BenefitsSection
-          heading="Branding & Identity Design Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
+        <CardsSection
+          heading="What makes professional branding design services stand out?"
+          subheading=""
+          services={cardsSectionData1}
+          sectionBg="bg-gray-900"
+          cardBg="border-2 border-white shadow-2xl shadow-gray-800"
+          hoverBg=""
+          height="h-96"
+          textColor="text-white"
+          hoverTextColor=""
+          headColor="text-white"
         />
-        <HowWeWork />
-        <WhyChoose />
-        <BenefitsSection
-          heading="Branding & Identity Design Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level Branding & Identity Design services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-white hover:scale-105"
+          buttonTextColor="text-black"
+          title=""
+          description={[
+            "Want tailored branding solutions that make a mark? Partner up with Capyngen, a branding design services leader from all over the globe, and lift your brand presence to the following level.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
         />
-        <TechnologiesCarousel
-          title="Branding & Identity Design Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
+        <HowWeWork
+          heading="Our Branding Design Process"
+          desc=""
+          steps={steps}
         />
-        <OurServices />
+        <CardsSectionImage
+          heading="What are branding design services?"
+          subheading="It is not only the visual attractiveness of design products by Capyngen that makes them stand out but also the inclusion of a full range of branding solutions."
+          services={cardsSectionImageData2}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          buttonColor="bg-white hover:scale-105"
+          buttonTextColor="text-black"
+          title=""
+          description={[
+            "Develop a brand identity that is memorable, consistent, and interesting with Capyngen’s branding design services. Call us for a free consultation today!",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>

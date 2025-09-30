@@ -374,8 +374,8 @@ const CustomAiSolution = () => {
     <div className="relative">
       <div className="sticky inset-0">
         <Banner3
-          title="Custom AI Solution"
-          subtitle="Transforming the future of healthcare with AI-driven innovations."
+          title="Custom AI Solutions for a Faster Business Growth"
+          subtitle="Tap into better decision-making, streamline your business activities, and foster innovation by using Capyngen’s bespoke AI solutions designed to meet your business requirements globally.Tap into better decision-making, streamline your business activities, and foster innovation by using Capyngen’s bespoke AI solutions designed to meet your business requirements globally."
           backgroundImage={assets.customAiSolution}
           overlayColor="bg-black"
           diagonalShape="polygon(0 0, 100% 0, 100% 40%, 0 100%)"

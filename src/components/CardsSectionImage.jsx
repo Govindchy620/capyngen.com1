@@ -16,7 +16,7 @@ const CardsSectionImage = ({
 }) => {
   return (
     <section className={`${sectionBg} py-16 px-6 md:px-12`}>
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center space-y-5">
         {/* Heading */}
         <h1
           className={`mt-2 text-3xl font-bold tracking-tight sm:text-5xl ${headColor}`}
@@ -24,7 +24,7 @@ const CardsSectionImage = ({
           {heading}
         </h1>
         <p
-          className={`mb-12 max-w-3xl mx-auto ${headColor} text-base md:text-lg leading-relaxed`}
+          className={`mb-12 max-w-3xl mx-auto ${headColor} text-base md:text-lg`}
         >
           {subheading}
         </p>

@@ -23,8 +23,8 @@ export default function Banner3({
       >
         <div className="w-[90vw] mx-auto py-16">
           {/* Text */}
-          <div className="space-y-6 max-w-5xl">
-            <h1 className="text-5xl lg:text-8xl font-bold text-white leading-[1.1]">
+          <div className="space-y-6 max-w-3xl">
+            <h1 className="text-5xl font-bold text-white leading-[1.1]">
               {title}
             </h1>
 

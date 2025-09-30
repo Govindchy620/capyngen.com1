@@ -211,7 +211,7 @@ export const navItems = [
         links: [
           { label: "Web Development", href: "/web-development" },
           { label: "App Development", href: "/app-development" },
-          { label: "Custom AI Solution", href: "/ai-solutions" },
+          { label: "Custom AI Solution", href: "/custom-ai-solutions" },
           {
             label: "E-Commerce Solutions",
             href: "/ecommerce-solutions",

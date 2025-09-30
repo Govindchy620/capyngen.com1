@@ -1,27 +1,14 @@
-import React from "react";
-import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import { HeroParallax } from "../components/HeroParallax";
 import Banner8 from "../components/Banner8";
 import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
 import {
-  FaClipboardCheck,
-  FaFileContract,
-  FaHandshake,
-  FaNetworkWired,
-  FaProjectDiagram,
-  FaShieldAlt,
   FaHandsHelping,
   FaSearch,
   FaTags,
@@ -377,164 +364,168 @@ const WebSiteDesign = () => {
         iconColor="bg-blue-700"
         reverse={false}
       />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title=""
-        description={[
-          "Do you need the professional services of a web designer? Then contact Capyngen, the best website design company in India, and get tailor-made website design services which take your brand to the next level.",
-        ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        title="Why Choose Capyngen for Website Design Services?"
-        description={[
-          <>
-            <p>
-              We at Capyngen are not just a service provider - we are your
-              digital growth partner. Through our expertise and the skilled
-              team, we develop websites that are visually attractive, easy to
-              navigate, mobile-friendly, and conversion-focused.
-            </p>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
-              {[
-                {
-                  title: "Custom Website Designs",
-                  text: " that reflect your brand concept.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Fully Responsive Layouts",
-                  text: " to ensure that the user can get the same experience on any device.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Creative & Modern Interfaces",
-                  text: " that attract more attention to your brand.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Corporate Web Solutions",
-                  text: " to a professional online identity that is both strong and reliable.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "E-commerce Website Designs",
-                  text: " that are not only scalable but also redirect to increase your revenue.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Recognized by the Industry",
-                  text: " as One of the Best Website Designers.",
-                  color: "text-blue-500",
-                },
-              ].map(({ title, text, color }, idx) => (
-                <li
-                  key={idx}
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                >
-                  <strong className={`${color} drop-shadow-md`}>{title}</strong>{" "}
-                  {text}
-                </li>
-              ))}
-            </ul>
-          </>,
-        ]}
-        image={assets.whyChooseUs}
-        background={assets.patternBg1}
-        isHidden="hidden"
-        imageHeight="aspect-[4/3] md:aspect-[3/4]"
-      />
-      <CardsSectionImage
-        heading="Our Web Development Features"
-        subheading=""
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title=""
-        description={[
-          "Are you searching for the services of a responsive or creative website design for your company? Contact Capyngen right now and get the affordable and best website design services directed towards your requirements.",
-        ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <HowWeWork
-        heading="Capyngen Website Design Process"
-        desc="At Capyngen, we combine creativity, strategy, and technology to deliver websites that really work. Our organized process guarantees every project to be orderly, open, and results-driven:"
-        steps={steps}
-      />
-      <CardsSection
-        heading="Why Capyngen is the Best Website Design Company"
-        subheading="Capyngen shines out of the pack by creatively combining the art, the science, and the strategy to create websites that merely are not visually striking — but also produce tangible outcomes. This is why we are the first preference of decision-makers in startups, SMEs, and enterprises:"
-        services={cardsSectionDifferentColorData1}
-        cardBg=""
-        headColor="text-white"
-        sectionBg="bg-black"
-        hoverBg=""
-        height="h-72"
-        textColor="text-white"
-        hoverTextColor="transition-all"
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title=""
-        description={[
-          "To become one of the Best Website Design Companies, Capyngen has had to fuse creative thinking, the latest technology, and a sound commercial approach to build a solid reputation that spans the digital domain. The company is recognized as a leader in providing digital experiences that make a difference in the lives of startups, SMEs and enterprises, and hence, they trust them for such engagements.",
-        ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
-        image={assets.getStarted}
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <BenefitsSection
-        heading="Key Features of Our Website Design Services"
-        desc="At Capyngen, our website design services are specifically made to bring about a positive impact, functionality, and value for the long term. Here are our unique selling points:"
-        benefits={benefitsData}
-        image={assets.blockchainApplications}
-        footerNote=""
-      />
-      <CardsSectionSlider
-        heading="Industries We Serve"
-        subheading="Our web design and development services span a variety of industries, namely:"
-        cardBg="bg-transparent"
-        hoverBg=" hover:bg-blue-50"
-        textColor="text-gray-800"
-        hoverTextColor=""
-        textSize="text-xl"
-        sectionBg="bg-black/90"
-        height="h-78"
-        headColor="text-white"
-        services={cardsSectionSliderData1}
-        footerNote="We create websites compliant with your industry and business objectives regardless of your niche."
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title=""
-        description={[
-          "Crave a stylish, expandable, and captivating website? Acquire Capyngen's corporate website design services and e-commerce website design services to be the first in the line to grow your business online from the best website design company.",
-        ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+      <div className="relative z-10">
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title=""
+          description={[
+            "Do you need the professional services of a web designer? Then contact Capyngen, the best website design company in India, and get tailor-made website design services which take your brand to the next level.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="Why Choose Capyngen for Website Design Services?"
+          description={[
+            <>
+              <p>
+                We at Capyngen are not just a service provider - we are your
+                digital growth partner. Through our expertise and the skilled
+                team, we develop websites that are visually attractive, easy to
+                navigate, mobile-friendly, and conversion-focused.
+              </p>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+                {[
+                  {
+                    title: "Custom Website Designs",
+                    text: " that reflect your brand concept.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Fully Responsive Layouts",
+                    text: " to ensure that the user can get the same experience on any device.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Creative & Modern Interfaces",
+                    text: " that attract more attention to your brand.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Corporate Web Solutions",
+                    text: " to a professional online identity that is both strong and reliable.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "E-commerce Website Designs",
+                    text: " that are not only scalable but also redirect to increase your revenue.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Recognized by the Industry",
+                    text: " as One of the Best Website Designers.",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    <strong className={`${color} drop-shadow-md`}>
+                      {title}
+                    </strong>{" "}
+                    {text}
+                  </li>
+                ))}
+              </ul>
+            </>,
+          ]}
+          image={assets.whyChooseUs}
+          background={assets.patternBg1}
+          isHidden="hidden"
+          imageHeight="aspect-[4/3] md:aspect-[3/4]"
+        />
+        <CardsSectionImage
+          heading="Our Web Development Features"
+          subheading=""
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title=""
+          description={[
+            "Are you searching for the services of a responsive or creative website design for your company? Contact Capyngen right now and get the affordable and best website design services directed towards your requirements.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <HowWeWork
+          heading="Capyngen Website Design Process"
+          desc="At Capyngen, we combine creativity, strategy, and technology to deliver websites that really work. Our organized process guarantees every project to be orderly, open, and results-driven:"
+          steps={steps}
+        />
+        <CardsSection
+          heading="Why Capyngen is the Best Website Design Company"
+          subheading="Capyngen shines out of the pack by creatively combining the art, the science, and the strategy to create websites that merely are not visually striking — but also produce tangible outcomes. This is why we are the first preference of decision-makers in startups, SMEs, and enterprises:"
+          services={cardsSectionDifferentColorData1}
+          cardBg=""
+          headColor="text-white"
+          sectionBg="bg-black"
+          hoverBg=""
+          height="h-72"
+          textColor="text-white"
+          hoverTextColor="transition-all"
+        />
+        <GetStarted
+          reverse={true}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title=""
+          description={[
+            "To become one of the Best Website Design Companies, Capyngen has had to fuse creative thinking, the latest technology, and a sound commercial approach to build a solid reputation that spans the digital domain. The company is recognized as a leader in providing digital experiences that make a difference in the lives of startups, SMEs and enterprises, and hence, they trust them for such engagements.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          image={assets.getStarted}
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <BenefitsSection
+          heading="Key Features of Our Website Design Services"
+          desc="At Capyngen, our website design services are specifically made to bring about a positive impact, functionality, and value for the long term. Here are our unique selling points:"
+          benefits={benefitsData}
+          image={assets.blockchainApplications}
+          footerNote=""
+        />
+        <CardsSectionSlider
+          heading="Industries We Serve"
+          subheading="Our web design and development services span a variety of industries, namely:"
+          cardBg="bg-transparent"
+          hoverBg=" hover:bg-blue-50"
+          textColor="text-gray-800"
+          hoverTextColor=""
+          textSize="text-xl"
+          sectionBg="bg-black/90"
+          height="h-78"
+          headColor="text-white"
+          services={cardsSectionSliderData1}
+          footerNote="We create websites compliant with your industry and business objectives regardless of your niche."
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title=""
+          description={[
+            "Crave a stylish, expandable, and captivating website? Acquire Capyngen's corporate website design services and e-commerce website design services to be the first in the line to grow your business online from the best website design company.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <FAQSection2 items={faqItems} />
+        <ScrollRevealEffect />
+      </div>
     </div>
   );
 };
