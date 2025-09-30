@@ -1,22 +1,44 @@
 import React from "react";
 
-const IndustryServices = ({ heading, subheading, services }) => {
+const IndustryServices = ({
+  heading,
+  subheading,
+  services = [],
+  // New props for customization
+  sectionBg = "bg-black",
+  sectionText = "text-white",
+  headingColor = "text-white",
+  subheadingColor = "text-gray-300",
+  gridCols = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  cardBg = "bg-white",
+  cardText = "text-gray-900",
+  cardDescText = "text-gray-600",
+  cardShadow = "shadow-md hover:shadow-xl",
+}) => {
   return (
-    <section className="bg-black text-white py-5 md:py-10 px-6 md:px-12">
+    <section
+      className={`${sectionBg} ${sectionText} py-5 md:py-10 px-6 md:px-12`}
+    >
       {/* Header */}
       <div className="max-w-[90vw] mx-auto text-center mb-12">
         {heading && (
-          <h2 className="text-3xl md:text-4xl font-bold">{heading}</h2>
+          <h2 className={`text-3xl md:text-4xl font-bold ${headingColor}`}>
+            {heading}
+          </h2>
         )}
-        {subheading && <p className="mt-4 max-w-3xl mx-auto">{subheading}</p>}
+        {subheading && (
+          <p className={`mt-4 max-w-3xl mx-auto ${subheadingColor}`}>
+            {subheading}
+          </p>
+        )}
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-        {services?.map((service, index) => (
+      <div className={`grid ${gridCols} gap-2`}>
+        {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white shadow-md hover:shadow-xl transition-all duration-300 text-center flex flex-col"
+            className={`${cardBg} ${cardShadow} transition-all duration-300 text-center flex flex-col`}
           >
             {/* Image */}
             {service.image && (
@@ -31,10 +53,10 @@ const IndustryServices = ({ heading, subheading, services }) => {
 
             {/* Content */}
             <div className="px-6 pb-6 flex flex-col gap-3">
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className={`text-xl font-bold ${cardText}`}>
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className={`${cardDescText} text-md leading-relaxed`}>
                 {service.desc}
               </p>
             </div>

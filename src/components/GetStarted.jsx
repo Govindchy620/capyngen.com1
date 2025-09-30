@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 
 const GetStarted = ({
   title = "Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies",
   description = "Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled.",
   buttonText = "Get Started Today",
-  buttonColor = "bg-red-600 hover:bg-red-700",
-  buttonTextColor = "text-white",
+  buttonColor = "bg-white hover:scale-105",
+  buttonTextColor = "text-black",
   backgroundColor = "bg-[#0a1b52]",
   backgroundVideo,
   textColor = "text-white",
@@ -86,10 +87,12 @@ const GetStarted = ({
             className="md:flex-shrink-0 z-10 flex justify-center md:justify-start"
           >
             <button
-              className={`${buttonColor} ${buttonTextColor} font-semibold px-8 py-3 rounded-lg shadow-lg transition focus:outline-none focus:ring-4 focus:ring-red-600`}
+              className={`${buttonColor} ${buttonTextColor} font-bold px-8 py-3 rounded-lg shadow-lg flex items-center gap-3 transition`}
               aria-label="Get started today"
             >
-              {buttonText} →
+              <FaPhoneAlt className="text-lg" aria-hidden="true" />
+              {buttonText}
+              <FaArrowRight className="text-lg ml-1" aria-hidden="true" />
             </button>
           </motion.div>
         )}

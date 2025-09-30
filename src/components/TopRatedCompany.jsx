@@ -53,7 +53,9 @@ export default function TopRatedCompany({
             >
               {/* Purple border with smooth shadow */}
               <div
-                className={`${isHidden} absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0 shadow-lg`}
+                className={`${
+                  isHidden && "hidden"
+                } absolute inset-0 rounded-xl border-2 border-purple-500 transform translate-x-4 md:translate-x-6 -translate-y-4 md:-translate-y-6 z-0 shadow-lg`}
                 aria-hidden="true"
               />
 

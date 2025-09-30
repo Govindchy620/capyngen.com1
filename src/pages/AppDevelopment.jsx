@@ -15,195 +15,162 @@ import {
   FaLaptopCode,
   FaProjectDiagram,
   FaTasks,
+  FaAndroid,
+  FaApple,
+  FaMobileAlt,
+  FaCode,
+  FaCheckCircle,
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import TechStack from "../components/TechStack";
 import Banner13 from "../components/Banner13";
+import TopRatedCompany from "../components/TopRatedCompany";
+import IndustryServices from "../components/IndustryServices";
 
 const AppDevelopment = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What are the Capyngen Services related to app Development?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "We provide Android, iOS, cross-platform, custom app development, enterprise app solutions, testing, and app maintenance services that fall under our mobile app development umbrella.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question:
+        "Why should I select Capyngen to be my app development company?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Capyngen is made up of expert app developers, has the advantages of a comprehensive skill set, and is known for delivering highly secure, scalable, user-friendly apps that facilitate the achievement of business goals.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question:
+        "Is it possible for you to develop custom Android applications?",
+      answer:
+        "Exactly! We offer custom android app development services for startups, SMEs, and enterprises.",
+    },
+    {
+      question: "Is it true that you handle iPhone app development?",
+      answer:
+        "Yes, we are an iOS app development company that is reliable and delivers high-quality apps for iPhone and iPad.",
+    },
+    {
+      question: "Do you create cross-platform apps?",
+      answer:
+        "Yes, taking a leading position in cross platform app development we create apps that are compatible with both Android and iOS.",
+    },
+    {
+      question: "Do you have any plans for developing enterprise applications?",
+      answer:
+        "Yes, we have the most flexible enterprise app development solutions to face challenges in business processes and workflows.",
+    },
+    {
+      question: "What exactly is mobile application testing?",
+      answer:
+        "Mobile application testing is the process of exhaustively checking mobile apps for bugs, security, usability, and performance issues. Capyngen provides Mobile Application Testing services along with the regular workflow.",
+    },
+    {
+      question: "Do you have app maintenance services?",
+      answer:
+        "Certainly, our app maintenance services include regular updates, bug fixing, feature expansion, and performance monitoring.",
+    },
+    {
+      question: "How much time is required for app development?",
+      answer:
+        "Development timeline mainly depends on app complexity and for most of the apps, it ranges from 6 to 16 weeks.",
+    },
+    {
+      question:
+        "Is it possible for you to link APIs and other third-party resources with my app?",
+      answer:
+        "Sure enough, we integrate your app with payment gateways, analytics tools, CRMs, and other services.",
+    },
+    {
+      question: "Are your apps safe and easily scalable?",
+      answer:
+        "Of course. Security and scalability are always on the table when we discuss our custom app solutions.",
+    },
+    {
+      question: "Do you create e-commerce apps?",
+      answer:
+        "As one of the best eCommerce app development companies in India, we specialize in eCommerce apps for online stores with easy shopping experiences.",
+    },
+    {
+      question:
+        "Is it possible for Capyngen to offer assistance and take part in formulating the app strategy?",
+      answer:
+        "Definitely, we offer comprehensive consulting, strategy, development, testing, and support services for mobile applications.",
     },
   ];
   const cardsSectionData1 = [
     {
-      title: "Massive Reach",
-      description: "There are billions of smartphone users around the globe.",
-      icon: <FaLightbulb className="text-4xl" />,
+      title: "Android App Development",
+      description:
+        "We as a top android app development company make responsive and user-friendly apps that are designed for Android devices. Our services involve creating custom android app development solutions that include all the necessary features plus functionality and visuals to meet your business requirements.",
+      icon: <FaAndroid className="text-4xl text-white" />,
     },
     {
-      title: "Enhanced Engagement",
+      title: "iOS App Development",
       description:
-        "Users get more involved through push notifications and interactive features, hence they keep coming back.",
-      icon: <FaChartLine className="text-4xl" />,
+        "The whole point is that we stand as the most reliable iOS app development company. We offer apps that work perfectly well and easily along with giving joyful use and strong security measures to iPhone and iPad users.",
+      icon: <FaApple className="text-4xl text-white" />,
     },
     {
-      title: "Revenue Generation",
+      title: "Cross-Platform App Development",
       description:
-        "By means of e-commerce, ads, and subscriptions, apps can become the new income sources for your company.",
-      icon: <FaCogs className="text-4xl" />,
+        "The services of our cross platform app development company let you get your app on various platforms but only with one codebase, thus not only you save time but also money and at the same time you keep a continuous experience.",
+      icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
-      title: "Brand Recognition",
+      title: "Custom App Development",
       description:
-        "Powerful apps are the reason why customers trust brands and remain loyal to them.",
-      icon: <FaLaptopCode className="text-4xl" />,
+        "Not only do we do custom app development for services but also for enterprise app development solutions, making apps that are a perfect match for your business processes, workflows, and unique requirements.",
+      icon: <FaCode className="text-4xl text-white" />,
     },
     {
-      title: "Efficiency",
+      title: "Mobile Application Testing",
       description:
-        "Internal business processes can be simplified through custom android app development solutions.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+        "Our mobile application testing services include everything that users would expect from a testing team who ensures that apps are bug-free, secure, and also that they perform flawlessly across devices.",
+      icon: <FaCheckCircle className="text-4xl text-white" />,
     },
     {
-      title: "Competitive Advantage",
+      title: "App Maintenance Services",
       description:
-        "Innovative and well-designed mobile apps differentiate your business from competitors, enabling you to capture market share and lead industry trends.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+        "We offer the best app maintenance services which basically keep your apps up to date, safe, and run smoothly just the way any user would want, this also includes giving off some of the apps features for a longer time and the removal of bugs.",
+      icon: <FaCogs className="text-4xl text-white" />,
     },
   ];
-
   const cardsSectionData2 = [
     {
-      title: "Healthcare",
+      title: "Scalable Solutions",
       description:
-        "Mobile solutions for telemedicine, patient management, health monitoring, and appointment scheduling, enabling efficient and secure healthcare delivery.",
+        "Your application will be developed to be capable of accommodating the growth and expansion of your business.",
       icon: <FaLightbulb className="text-4xl" />,
     },
     {
-      title: "Banking & Finance",
+      title: "Enhanced Security",
       description:
-        "Apps for mobile banking, financial management, investment tracking, and payment processing, delivering secure, fast, and reliable financial services.",
+        "Make sure the data of your users privacy and compliance are met.",
       icon: <FaChartLine className="text-4xl" />,
     },
     {
-      title: "Real Estate",
-      description:
-        "Digital platforms for property listings, virtual tours, agent-client communication, and property management, creating seamless and interactive real estate experiences.",
+      title: "User-Friendly Design",
+      description: "Provide your customers with easy and engaging interfaces.",
       icon: <FaCogs className="text-4xl" />,
     },
     {
-      title: "Automotive",
+      title: "Cost-Effective Development",
       description:
-        "Applications to track vehicles, schedule maintenance, and integrate smart features, ensuring optimized fleet management and enhanced user engagement.",
+        "Lower your development time and make the most of your return on investment.",
       icon: <FaLaptopCode className="text-4xl" />,
     },
     {
-      title: "E-commerce",
+      title: "Cross-Platform Reach",
       description:
-        "Mobile apps for browsing, secure payments, and personalized recommendations, driving higher conversions and customer satisfaction.",
+        "Applications that are compatible with both Android and iOS.",
       icon: <FaProjectDiagram className="text-4xl" />,
     },
     {
-      title: "Oil & Gas",
+      title: "Improved Engagement & Retention",
       description:
-        "Apps for real-time monitoring, equipment management, and data analytics, boosting operational efficiency, safety, and productivity.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-  ];
-  const cardsSectionData3 = [
-    {
-      title: "Custom AI Solutions",
-      description:
-        "Implement AI tailored to your goals, enabling intelligent insights, predictive analytics, and optimized app performance.",
-      icon: <FaLightbulb className="text-4xl" />,
-    },
-    {
-      title: "AI-Powered Chatbots",
-      description:
-        "Integrate chatbots to automate customer interactions, accelerate response times, and deliver exceptional support.",
-      icon: <FaChartLine className="text-4xl" />,
-    },
-    {
-      title: "AI Feature Integration",
-      description:
-        "Add smart AI capabilities such as personalized recommendations, adaptive algorithms, and intelligent search to boost engagement and usability.",
-      icon: <FaCogs className="text-4xl" />,
-    },
-    {
-      title: "Cloud Infrastructure",
-      description:
-        "Utilize cloud platforms for scalable computing, seamless data processing, and resilient app performance across all devices.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "IoT Connectivity",
-      description:
-        "Develop IoT-enabled apps to link devices, capture real-time data, and automate operational workflows across industries.",
-      icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "Blockchain Solutions",
-      description:
-        "Employ blockchain for secure, transparent, and tamper-proof transactions, perfect for applications requiring high integrity and trust.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-  ];
-  const cardsSectionData4 = [
-    {
-      title: "On-Demand Apps",
-      description:
-        "Build apps for taxi booking, food and grocery delivery, logistics, flowers, entertainment, and advanced AI-driven platforms.",
-      icon: <FaLightbulb className="text-4xl" />,
-    },
-    {
-      title: "Education & Learning Apps",
-      description:
-        "Develop platforms for STEM, language learning, skill enhancement, audiobooks, and specialized educational solutions.",
-      icon: <FaChartLine className="text-4xl" />,
-    },
-    {
-      title: "Real Estate Apps",
-      description:
-        "Create apps for property listings, agent management, tenant-landlord communication, auctions, investments, and virtual/metaverse real estate experiences.",
-      icon: <FaCogs className="text-4xl" />,
-    },
-    {
-      title: "Healthcare Apps",
-      description:
-        "Design apps for doctor booking, medicine delivery, diagnosis assistance, home health care, telemedicine, and pharmacy services.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "Automotive Apps",
-      description:
-        "Develop solutions for vehicle diagnostics, control systems, fuel management, navigation, and smart parking services.",
-      icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "IoT & Smart Device Apps",
-      description:
-        "Integrate IoT for real-time connectivity, automation, and seamless interaction across devices.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-    {
-      title: "Gaming Apps",
-      description:
-        "Craft AAA games, strategy and role-playing games, blockchain gaming, casino apps, and educational gaming platforms.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "Travel & Hospitality Apps",
-      description:
-        "Deliver apps for ticketing, hotel bookings, travel insurance, translation tools, deals, and property rentals.",
-      icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "Social Media Apps",
-      description:
-        "Bring your digital platform to life with precision, security, and a seamless user experience.",
+        "Let your customers benefit from a smooth and easy to use service and thus increase their loyalty towards you.",
       icon: <FaTasks className="text-4xl" />,
     },
   ];
@@ -362,100 +329,74 @@ const AppDevelopment = () => {
       ],
     },
   ];
-  const cardsSectionDifferentColorData = [
-    {
-      title: "Uncompromising Quality",
-      description:
-        "We apply rigorous development standards to ensure every app is robust, secure, and high-performing.",
-      icon: <FaLightbulb className="text-5xl" />,
-      cardBg: "bg-red-100",
-    },
-    {
-      title: "Immediate, Proactive Support",
-      description:
-        "Our experts provide real-time assistance across multiple channels, ensuring your operations run smoothly at all times.",
-      icon: <FaChartLine className="text-5xl" />,
-      cardBg: "bg-blue-100",
-    },
-    {
-      title: "Optimized Cost Efficiency",
-      description:
-        "We provide top-tier solutions at competitive investment levels, maximizing ROI without compromising quality.",
-      icon: <FaCogs className="text-5xl" />,
-      cardBg: "bg-purple-100",
-    },
-    {
-      title: "Deep Technical Expertise",
-      description:
-        "Our team builds apps on a solid, scalable foundation, leveraging advanced technologies to ensure long-term reliability.",
-      icon: <FaLightbulb className="text-5xl" />,
-      cardBg: "bg-gray-100",
-    },
-    {
-      title: "Outcome-Focused Delivery",
-      description:
-        "We drive projects to timely completion with measurable results, guaranteeing your objectives are met efficiently.",
-      icon: <FaChartLine className="text-5xl" />,
-      cardBg: "bg-yellow-100",
-    },
-    {
-      title: "Trust & Reliability",
-      description:
-        "We foster long-term client partnerships, delivering consistent performance and maintaining absolute transparency.",
-      icon: <FaCogs className="text-5xl" />,
-      cardBg: "bg-green-100",
-    },
-  ];
   const steps = [
     {
       step: "Step 01",
-      title: "UI Strategy",
+      title: "Requirement Analysis",
       description:
-        "Design intuitive and high-performance user interfaces for iOS and Android platforms, enhancing usability and engagement.",
+        "Know your goals, the people for whom the app is intended, and the app's functionality.",
     },
     {
       step: "Step 02",
-      title: "Requirement Analysis",
+      title: "UI/UX Design",
       description:
-        "Thoroughly gather and analyze client requirements to create a precise and actionable development roadmap.",
+        "Designing aesthetically pleasing and easy-to-use interfaces.",
     },
     {
       step: "Step 03",
-      title: "Wireframing",
+      title: "Frontend & Backend Development",
       description:
-        "Develop detailed wireframes and mockups that visualize app structure, flow, and functionality before development.",
+        "Create apps that are scalable, secure, and responsive to client needs.",
     },
     {
       step: "Step 04",
-      title: "Development",
+      title: "Testing",
       description:
-        "Implement the application using state-of-the-art tools and frameworks, adhering to industry best practices and quality standards.",
+        "End-to-end mobile application testing for ensuring the quality of the app.",
     },
     {
       step: "Step 05",
-      title: "Testing & QA",
+      title: "Deployment",
       description:
-        "Perform comprehensive testing to ensure flawless performance, security, and reliability across all devices.",
+        "Start the software on Google Play Store, Apple App Store, or distribute it on enterprise platforms.",
     },
     {
       step: "Step 06",
-      title: "Handover & Deployment",
+      title: "Maintenance & Support",
       description:
-        "Deliver the fully tested app with seamless deployment, ready for launch and end-user adoption.",
+        "Ongoing updates and app maintenance services for the app to stay reliable in the long run.",
     },
   ];
-  const slides = [
+  const servicesData = [
     {
-      image: assets.appDevelopment,
-      title: "App Development : From Concept to Launch",
-      description:
-        "Mobile applications have ceased to be mere tools, they are the main drivers of business expansion. Mobile application knowledge can assist entrepreneurs, startups, and managers in accessing worldwide markets, promoting customer loyalty, and improving incomes. This guide explains Android, iOS, cross-platform, and enterprise applications, offering the inside stories that go beyond creation, testing, maintenance, and optimization of an idea to a successful and user-friendly application.",
+      image: assets.bg1,
+      title: "Experience with different platforms",
+      desc: "Android, iPhone, and cross-platform solutions.",
     },
     {
-      image: assets.appDevelopment,
-      title: "Your Vision, Our Expertise",
-      description:
-        "From idea to launch, our app development solutions are tailored to your business needs.",
+      image: assets.bg1,
+      title: "A team of professional app developers",
+      desc: "An experienced team that can provide you with the dependable and scalable apps you need.",
+    },
+    {
+      image: assets.bg1,
+      title: "Custom and enterprise solutions",
+      desc: "The applications that match your company objectives.",
+    },
+    {
+      image: assets.bg1,
+      title: "Testing of Mobile Applications",
+      desc: "Ensure perfect functionality, safety, and quickness.",
+    },
+    {
+      image: assets.bg1,
+      title: "Service of App Maintenance",
+      desc: "Periodic update, feature improvement, and continuous support.",
+    },
+    {
+      image: assets.bg1,
+      title: "Affordable and Return On Investment (ROI) focussed",
+      desc: "Make the biggest influence without exceeding your budget.",
     },
   ];
 
@@ -466,38 +407,95 @@ const AppDevelopment = () => {
         title="Professional"
         highlight="App Development Services"
         title2="to Grow Your Business"
-        description="Scalable, secure, and user-friendly mobile applications for Android, iOS, and cross-platform solutions."
+        description={
+          <>
+            <strong>Scalable</strong>, <strong>secure</strong>, and{" "}
+            <strong>user-friendly</strong> mobile applications for{" "}
+            <span className="font-bold text-blue-500">Android</span>,{" "}
+            <span className="font-bold text-blue-500">iOS</span>, and{" "}
+            <span className="font-bold text-blue-500">cross-platform</span>{" "}
+            solutions.
+          </>
+        }
         services={[
-          "Custom IT Consulting",
-          "Business Consulting Solutions",
-          "Digital Consulting Services",
+          "Native App Development",
+          "Cross-Platform App Development",
+          "Enterprise Mobile Solutions",
+          "App Maintenance & Support",
         ]}
         videoSrc={assets.heroVideo}
       />
-      <AppTypesSection />
+      <TopRatedCompany
+        title="Introduction to App Development"
+        description={[
+          `In the modern digital world, mobile applications have become a vital tool for businesses to attract customers, increase revenues, and simplify the business processes. The range is wide: it is from start-ups to large companies. Having an app with thoughtful design keeps you in the race.`,
+          `Capyngen is an app development company india that you can count on for the on-demand consulting app development services, enterprise app development solutions, and cross-platform mobile apps that deliver security, scalability, and easy-to-use features.`,
+          `By employing the services of our team of professional app developers, you get excellent mobile app development services that lead to better user experience, higher engagement, and greater return on investment.`,
+        ]}
+        imageHeight="md:aspect-[1/1]"
+        image={assets.whyChooseUs}
+        isHidden={true}
+        background={assets.patternBg1}
+      />
+      {/* <AppTypesSection /> */}
       <CardsSection
-        heading="Why App Development Matters"
+        heading="Our App Development Services"
         subheading=""
         services={cardsSectionData1}
         headColor="text-white"
-        cardBg="bg-gray-700"
+        cardBg="bg-gradient-to-br from-gray-900 to-blue-800"
+        textSize="text-md"
         sectionBg="bg-gray-900"
-        hoverBg="hover:bg-blue-800 hover:scale-98"
+        hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
         textColor="text-white"
+        height="h-84"
         hoverTextColor=""
       />
       <GetStarted
-        backgroundColor="bg-gray-900"
-        textColor="text-white"
-        buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Comprehensive Guidance for Transforming Your Mobile App Vision from Initial Concept to Successful Launch"
-        description="Our seasoned consulting team provides comprehensive, end-to-end mobile application development solutions, converting innovative concepts into high-impact, enterprise-grade digital platforms. From strategic ideation to flawless deployment, every stage is meticulously orchestrated to deliver maximum operational and business value."
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white text-xl"
+        buttonColor="bg-white hover:scale-105"
+        buttonTextColor="text-black"
+        title=""
+        description={[
+          "Is it time to get your mobile app off the ground? Contact Capyngen, a top mobile app development services company, and let our expert app developers turn your dream into a living reality.",
+        ]}
+        textSize="text-xl"
         buttonText="Contact Us"
+        backgroundVideo={assets.backgroundVideo}
       />
+      <IndustryServices
+        heading="Why use Capyngen for Mobile Application Development"
+        subheading=""
+        cardBg="bg-gray-700"
+        cardText="text-white"
+        cardDescText="text-white"
+        services={servicesData}
+      />
+      <GetStarted
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white text-xl"
+        buttonColor="bg-white hover:scale-105"
+        buttonTextColor="text-black"
+        title=""
+        description={[
+          "Trying to find a trustworthy Android app development company or iOS app development company? Contact Capyngen now to get the apps that are scalable, secure, and high-performing.",
+        ]}
+        textSize="text-xl"
+        buttonText="Contact Us"
+        backgroundVideo={assets.backgroundVideo}
+      />
+      <TechStack
+        heading="Transform Your Mobile Development and Consulting with Our Expert Tech Stack"
+        subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
+        categories={techStack}
+      />
+      <HowWeWork heading="Our App Development Process" desc="" steps={steps} />
       <CardsSection
-        heading="Transform Industries with Advanced Mobile App Development Consulting"
-        subheading="Unlock the potential of state-of-the-art mobile applications across diverse industries, enhancing operational efficiency, streamlining processes, and driving measurable growth and innovation."
+        heading="Benefits of Our App Development Services"
+        subheading=""
         services={cardsSectionData2}
         headColor="text-white"
         sectionBg="bg-gray-900"
@@ -506,76 +504,19 @@ const AppDevelopment = () => {
         textColor="text-white"
         hoverTextColor=""
       />
-      <TechStack
-        heading="Transform Your Mobile Development and Consulting with Our Expert Tech Stack"
-        subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
-        categories={techStack}
-      />
-      <CardsSection
-        heading="Harnessing Advanced Technologies for High-Performance Mobile Apps"
-        subheading="Leverage the power of advanced technologies to transform your mobile applications into robust, secure, and high-performing digital solutions. Our consulting expertise ensures your apps are designed for maximum efficiency, scalability, and business impact."
-        services={cardsSectionData3}
-        headColor="text-white"
-        cardBg="bg-gray-700"
-        sectionBg="bg-gray-900"
-        hoverBg="hover:bg-blue-800 hover:scale-98"
-        textColor="text-white"
-        hoverTextColor=""
-      />
       <GetStarted
-        backgroundColor="bg-gray-900"
-        textColor="text-white"
-        buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Future-Proof Your App with Advanced Technology Solutions"
-        description="Elevate your application’s capabilities through our expert technology integration services. From AI-driven intelligence to secure blockchain solutions, we provide end-to-end innovations that ensure your app remains robust, scalable, and ahead of the market."
-        buttonText="Contact Us"
-      />
-
-      <HowWeWork
-        heading="Mobile App Development Process"
-        desc="We follow a rigorous, high-standard development methodology to deliver robust, error-free, and high-performance mobile applications. Our team ensures each stage is meticulously executed for maximum efficiency and business impact."
-        steps={steps}
-      />
-      <CardsSection
-        heading="Comprehensive Mobile App Development & Consulting for All Types of App"
-        subheading="We provide high-caliber mobile app development and expert consulting for startups and enterprises, delivering end-to-end solutions that transform ideas into robust, scalable, and market-ready applications."
-        services={cardsSectionData4}
-        sectionBg="bg-gray-900"
-        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-        hoverBg=""
-        textColor="text-white"
-        hoverTextColor=""
-        headColor="text-white"
-      />
-      <CardsSection
-        heading="Why Partner with Us for Elite Mobile App Development Consulting"
-        subheading="We deliver strategic, high-impact mobile app solutions that redefine business performance and unlock future growth potential. Our approach combines innovation, precision, and expertise to craft apps that truly stand out."
-        services={cardsSectionDifferentColorData}
-        height="h-76"
-        sectionBg="bg-gray-900"
-        headColor="text-white"
-        cardBg="bg-gray-50"
-        hoverBg=""
-        cardHeadSize="text-2xl"
-        textSize="text-lg"
-        textColor="text-gray-800"
-        hoverTextColor=""
-      />
-      <OurServices />
-      <GetStarted
-        backgroundColor="bg-gray-900"
-        textColor="text-white"
-        buttonColor="bg-blue-900 hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Premium Mobile Application Development Consulting Services"
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white text-xl"
+        buttonColor="bg-white hover:scale-105"
+        buttonTextColor="text-black"
+        title=""
         description={[
-          "We go beyond conventional app development, offering comprehensive consulting and end-to-end solutions, which makes us one of the top mobile app development service providers in the industry.",
-          "Our team of expert developers delivers high-quality applications across Android, iOS, and cross-platform environments, leveraging the latest technologies and industry best practices. Every project is executed with precision, efficiency, and scalability.",
-          "With our highly skilled full-stack developers, we design apps for exceptional performance, maximum user engagement, and optimized downloads on Google Play Store and Apple App Store.",
+          "Looking for custom app development services or enterprise app development solutions? Reach out to Capyngen, a foremost cross-platform app development company, and grow your digital footprint.",
         ]}
-        image={assets.appDevelopment}
-        reverse={true}
+        textSize="text-xl"
+        buttonText="Contact Us"
+        backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
       <ScrollRevealEffect />
