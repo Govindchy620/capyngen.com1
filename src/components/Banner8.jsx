@@ -30,7 +30,7 @@ export default function Banner8({
         }`}
       >
         {/* Text Section */}
-        <div className="max-w-2/3 flex-1 text-center sm:text-left px-4 md:px-8">
+        <div className="max-w-1/2 flex-1 text-center sm:text-left px-4 md:px-8">
           <h1 className="font-extrabold leading-relaxed tracking-tight mb-10">
             <span className="block text-blue-500 text-lg sm:text-xl md:text-2xl mb-2 uppercase tracking-wide">
               {titlePrefix}
@@ -51,7 +51,7 @@ export default function Banner8({
         </div>
 
         {/* Image Section */}
-        <div className="max-w-1/3 flex-1 mt-8 sm:mt-0 flex justify-center px-4 md:px-8">
+        <div className="max-w-1/2 flex-1 mt-8 sm:mt-0 flex justify-center px-4 md:px-8">
           {imageSrc && (
             <img
               src={imageSrc}

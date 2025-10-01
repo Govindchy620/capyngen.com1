@@ -21,18 +21,20 @@ const CardsSection = ({
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <h1
-          className={`mt-2 text-3xl sm:text-4xl md:text-5xl  font-bold tracking-tight ${headColor} drop-shadow-md`}
+          className={`mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight ${headColor} drop-shadow-md`}
         >
           {heading}
         </h1>
-        <div
-          className={`mt-6 mb-12 text-lg max-w-6xl mx-auto ${headColor} drop-shadow-sm`}
-        >
-          {subheading}
-        </div>
+        {subheading && (
+          <div
+            className={`mt-6 mb-12 text-lg max-w-6xl mx-auto ${headColor} drop-shadow-sm`}
+          >
+            {subheading}
+          </div>
+        )}
 
         {/* Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 pt-12">
           {services.map((service, index) => (
             <article
               key={index}
@@ -43,6 +45,7 @@ const CardsSection = ({
               aria-labelledby={`card-title-${index}`}
               aria-describedby={`card-desc-${index}`}
             >
+              {/* Icon / Image */}
               <div className="mb-6 flex justify-center">
                 {service.image ? (
                   <img
@@ -55,15 +58,30 @@ const CardsSection = ({
                   service.icon
                 )}
               </div>
+
+              {/* Title */}
               <h3
                 id={`card-title-${index}`}
                 className={`${cardHeadSize} font-bold mb-3`}
               >
                 {service.title}
               </h3>
-              <p id={`card-desc-${index}`} className={`${textSize} flex-grow`}>
-                {service.description}
-              </p>
+
+              {/* Description or Points */}
+              <div
+                id={`card-desc-${index}`}
+                className={`${textSize} flex-grow`}
+              >
+                {Array.isArray(service.points) ? (
+                  <ul className="list-disc pl-5 space-y-2 text-left">
+                    {service.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{service.description}</p>
+                )}
+              </div>
             </article>
           ))}
         </div>
