@@ -15,8 +15,9 @@ const GetStarted = ({
   reverse = false,
   listItems = [],
   textSize = "text-base sm:text-lg",
+  sectionBg = "bg-black/90",
 }) => (
-  <section className="relative bg-black/90 py-12 overflow-hidden">
+  <section className={`relative ${sectionBg} py-12 overflow-hidden`}>
     <div
       className={`relative z-10 py-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto rounded-3xl overflow-hidden backdrop-blur-sm ${
         backgroundVideo ? "bg-black/50" : backgroundColor

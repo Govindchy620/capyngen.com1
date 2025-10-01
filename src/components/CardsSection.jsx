@@ -18,18 +18,18 @@ const CardsSection = ({
     <section
       className={`py-16 px-6 md:px-12 ${sectionBg} transition-colors duration-500`}
     >
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <h1
           className={`mt-2 text-3xl sm:text-4xl md:text-5xl  font-bold tracking-tight ${headColor} drop-shadow-md`}
         >
           {heading}
         </h1>
-        <p
+        <div
           className={`mt-6 mb-12 text-lg max-w-6xl mx-auto ${headColor} drop-shadow-sm`}
         >
           {subheading}
-        </p>
+        </div>
 
         {/* Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

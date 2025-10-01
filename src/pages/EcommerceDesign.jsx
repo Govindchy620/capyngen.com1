@@ -28,6 +28,11 @@ import {
   FaDraftingCompass,
   FaRocket,
   FaExchangeAlt,
+  FaCommentsDollar,
+  FaShieldAlt,
+  FaCloudUploadAlt,
+  FaHeadset,
+  FaTools,
 } from "react-icons/fa";
 
 const EcommerceDesign = () => {
@@ -108,51 +113,36 @@ const EcommerceDesign = () => {
         "Of course, we provide the service that includes maintenance, updates, and the continuous optimization of designs so that your shop remains current.",
     },
   ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
   const solutionsData = [
     {
       title: "E-commerce Consulting",
       desc: "Expert support helps businesses adopt more effective e-commerce website design services strategies, improve UX, and reach higher conversions with less effort.",
+      icon: <FaCommentsDollar className="text-3xl text-blue-800" />,
     },
     {
       title: "E-commerce Security",
       desc: "Store data and user information are guarded with innovative security solutions, secure payment integrations, and constant monitoring that assures online transactions' safety.",
+      icon: <FaShieldAlt className="text-3xl text-gray-800" />,
     },
     {
       title: "E-commerce Implementation",
       desc: "The installation of tailor-made e-commerce website design solutions, apps, and third-party services is carried out without hindering the existing platform's services and is aimed at increasing the functionality and user-friendliness of the platform.",
+      icon: <FaCloudUploadAlt className="text-3xl text-blue-700" />,
     },
     {
       title: "E-commerce Help Desk Services",
       desc: "A support system which is always available for solving e-commerce website and mobile app design-related problems is the kind which ensures easy store operations as well as the satisfaction of customers.",
+      icon: <FaHeadset className="text-3xl text-gray-900" />,
     },
     {
       title: "E-commerce Management & Support",
       desc: "Support and management continue to be available for e-commerce websites and apps so that the platforms are not only run efficiently and updated but also perform optimally all the time.",
+      icon: <FaTools className="text-3xl text-blue-900" />,
     },
     {
       title: "E-commerce Migration",
       desc: "The transfer of e-commerce websites, apps, and databases to new platforms or upgraded systems has been made smooth and efficient with minimal service interruption and maximum reliability.",
+      icon: <FaExchangeAlt className="text-3xl text-gray-700" />,
     },
   ];
   const cardsSectionData = [

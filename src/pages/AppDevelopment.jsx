@@ -448,7 +448,6 @@ const AppDevelopment = () => {
         sectionBg="bg-gray-900"
         hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
         textColor="text-white"
-        height="h-84"
         hoverTextColor=""
       />
       <GetStarted
