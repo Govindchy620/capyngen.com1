@@ -9,11 +9,11 @@ const BenefitsSection = ({
   footerNote = "One stop for development and maintenance of ecommerce websites, mobile apps, and online platforms to ensure effortless shopping experiences.",
 }) => {
   return (
-    <section className="relative bg-gradient-to-b from-[#0a0a0f] via-[#111827] to-[#0a0a0f] text-white px-6 md:px-12 py-20">
+    <section className="relative bg-gradient-to-b from-[#0a0a0f] via-[#111827] to-[#0a0a0f] text-white px-6 md:px-12 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
         {/* LEFT COLUMN */}
         <div
-          className={`md:sticky md:top-24 self-start flex flex-col gap-6 ${
+          className={`md:sticky md:top-16 self-start flex flex-col gap-6 ${
             reverse ? "md:order-2" : "md:order-1"
           }`}
         >

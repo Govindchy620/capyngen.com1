@@ -131,83 +131,83 @@ const EcommerceDesign = () => {
   ];
   const solutionsData = [
     {
-      title: "Ecommerce Consulting",
-      desc: "Expert support helps businesses adopt more effective ecommerce website design services strategies, improve UX, and reach higher conversions with less effort.",
+      title: "E-commerce Consulting",
+      desc: "Expert support helps businesses adopt more effective e-commerce website design services strategies, improve UX, and reach higher conversions with less effort.",
     },
     {
-      title: "Ecommerce Security",
+      title: "E-commerce Security",
       desc: "Store data and user information are guarded with innovative security solutions, secure payment integrations, and constant monitoring that assures online transactions' safety.",
     },
     {
-      title: "Ecommerce Implementation",
+      title: "E-commerce Implementation",
       desc: "The installation of tailor-made e-commerce website design solutions, apps, and third-party services is carried out without hindering the existing platform's services and is aimed at increasing the functionality and user-friendliness of the platform.",
     },
     {
-      title: "Ecommerce Help Desk Services",
+      title: "E-commerce Help Desk Services",
       desc: "A support system which is always available for solving e-commerce website and mobile app design-related problems is the kind which ensures easy store operations as well as the satisfaction of customers.",
     },
     {
-      title: "Ecommerce Management & Support",
-      desc: "Support and management continue to be available for ecommerce websites and apps so that the platforms are not only run efficiently and updated but also perform optimally all the time.",
+      title: "E-commerce Management & Support",
+      desc: "Support and management continue to be available for e-commerce websites and apps so that the platforms are not only run efficiently and updated but also perform optimally all the time.",
     },
     {
-      title: "Ecommerce Migration",
-      desc: "The transfer of ecommerce websites, apps, and databases to new platforms or upgraded systems has been made smooth and efficient with minimal service interruption and maximum reliability.",
+      title: "E-commerce Migration",
+      desc: "The transfer of e-commerce websites, apps, and databases to new platforms or upgraded systems has been made smooth and efficient with minimal service interruption and maximum reliability.",
     },
   ];
   const cardsSectionData = [
     {
-      title: "Ecommerce Website Design",
+      title: "E-commerce Website Design",
       description:
-        "The visually attractive ecommerce website design services can power up an online business. The experts of ecommerce website designing craft responsive, user-friendly, and high-converting websites that are equally suitable for startups and enterprises.Ecommerce UI Design",
+        "The visually attractive e-commerce website design services can power up an online business. The experts of e-commerce website designing craft responsive, user-friendly, and high-converting websites that are equally suitable for startups and enterprises.E-commerce UI Design",
       icon: <FaPaintBrush className="text-4xl text-white" />,
     },
     {
-      title: "Ecommerce App UI Design",
+      title: "E-commerce App UI Design",
       description:
-        "Be reachable by an app instead of a website if you have a smart ecommerce mobile app design. Beautiful Android and iOS apps go with seamless ecommerce app UI design and together they elevate the engagement and loyalty.",
+        "Be reachable by an app instead of a website if you have a smart e-commerce mobile app design. Beautiful Android and iOS apps go with seamless e-commerce app UI design and together they elevate the engagement and loyalty.",
       icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
-      title: "Ecommerce Database Design",
+      title: "E-commerce Database Design",
       description:
-        "Help an online store to operate at its best using secure ecommerce database design. The scalable, efficient, and reliable databases support smooth transactions, and data management.",
+        "Help an online store to operate at its best using secure e-commerce database design. The scalable, efficient, and reliable databases support smooth transactions, and data management.",
       icon: <FaDatabase className="text-4xl text-white" />,
     },
     {
-      title: "Custom Ecommerce Solutions",
+      title: "Custom E-commerce Solutions",
       description:
         "Custom e-commerce website design solutions that are specifically tailored to a brand's requirements are the perfect fit. The platforms that are designed are not only flexible and scalable but also designed for growth and conversions.",
       icon: <FaPuzzlePiece className="text-4xl text-white" />,
     },
     {
-      title: "Ecommerce Web Design Services",
+      title: "E-commerce Web Design Services",
       description:
-        "Ecommerce web design services are a perfect match of creativity and technology. The websites are all mobile-responsive, fast, and optimized for user experience and search engines.",
+        "E-commerce web design services are a perfect match of creativity and technology. The websites are all mobile-responsive, fast, and optimized for user experience and search engines.",
       icon: <FaLaptopCode className="text-4xl text-white" />,
     },
     {
-      title: "Ecommerce Mobile App Design",
+      title: "E-commerce Mobile App Design",
       description:
         "Increase the number of people who can find your store by mobile app design. The cross-platform apps offer advanced features such as push notifications, personalized dashboards, and seamless payment gateways that allow for easy integration with your store.",
       icon: <FaAppStore className="text-4xl text-white" />,
     },
     {
-      title: "Affordable Ecommerce Website Design",
+      title: "Affordable E-commerce Website Design",
       description:
-        "Reasonable but professional, affordable ecommerce website design services provide customers with high-quality solutions. With the right plan and good management, startups and small businesses can build powerful online stores that fit their budgets.",
+        "Reasonable but professional, affordable e-commerce website design services provide customers with high-quality solutions. With the right plan and good management, startups and small businesses can build powerful online stores that fit their budgets.",
       icon: <FaMoneyBillWave className="text-4xl text-white" />,
     },
     {
-      title: "Enterprise Ecommerce Solutions",
+      title: "Enterprise E-commerce Solutions",
       description:
         "Give enterprises the best service of e-commerce design for businesses. The end-to-end services of e-commerce website design come with the incorporation of analytics, performance optimization, and advanced UI/UX strategies.",
       icon: <FaBuilding className="text-4xl text-white" />,
     },
     {
-      title: "Industries Transformed with Ecommerce Design Solutions",
+      title: "Industries Transformed with E-commerce Design Solutions",
       description:
-        "Customized ecommerce design services empower businesses from all corners of the globe to create cutting-edge web and mobile platforms that foster engagement, increase sales, and surpass customer expectations.",
+        "Customized e-commerce design services empower businesses from all corners of the globe to create cutting-edge web and mobile platforms that foster engagement, increase sales, and surpass customer expectations.",
       icon: <FaIndustry className="text-4xl text-white" />,
     },
   ];
@@ -222,19 +222,19 @@ const EcommerceDesign = () => {
       icon: <FaDraftingCompass className="w-10 h-10 text-blue-500" />,
       title: "Prototype Development",
       description:
-        "Fabricate working prototypes of ecommerce web design and ecommerce mobile app design to exhibit innovation and ease of use.",
+        "Fabricate working prototypes of e-commerce web design and e-commerce mobile app design to exhibit innovation and ease of use.",
     },
     {
       icon: <FaRocket className="w-10 h-10 text-blue-500" />,
       title: "Launch Strategy",
       description:
-        "Utilize data-driven product release methods for maximum exposure, participation, and conversions through ecommerce website design services.",
+        "Utilize data-driven product release methods for maximum exposure, participation, and conversions through e-commerce website design services.",
     },
     {
       icon: <FaExchangeAlt className="w-10 h-10 text-blue-500" />,
       title: "Flexible models",
       description:
-        "For scalable, cost-effective, and quality ecommerce design solutions, you can either go for the time and material or fixed price models.",
+        "For scalable, cost-effective, and quality e-commerce design solutions, you can either go for the time and material or fixed price models.",
     },
   ];
 
@@ -242,19 +242,12 @@ const EcommerceDesign = () => {
   return (
     <div className="relative">
       <Banner8
-        titleMain="Ecommerce Design"
-        titlePrefix="Professional"
-        titleSuffix="Transforms Your Digital Store"
-        description={`A professionally designed store is the best way to let your products
-                and services shine through. In short, the process of ecommerce UI
-                design, ecommerce app UI design, and ecommerce database design turns
-                out to be a story of creating eye-popping as well as high-functional
-                platforms that create engagement, convert sales and turn the
-                business into rake revenue. The best part of your next endeavor
-                could be teaming up with an established ecommerce website designing
-                company.`}
+        titleMain="Best E-Commerce Design"
+        titlePrefix="Transform Your Digital Store with"
+        titleSuffix=""
+        description={`We create innovative e-commerce websites and apps with user-friendly e-commerce UI design, responsive e-commerce web design, and scalable e-commerce database design for businesses worldwide.`}
         imageSrc={assets.eCommerceDesign}
-        imageAlt="Ecommerce Design Illustration"
+        imageAlt="E-commerce Design Illustration"
         bgColor="bg-gray-900"
         iconColor="bg-blue-700"
         reverse={false}
@@ -265,16 +258,37 @@ const EcommerceDesign = () => {
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
         buttonTextColor="text-white"
-        title="Partner with a Company for Successful Ecommerce!"
+        title="Get a Free Consultation"
         description={[
-          "Revolutionize online businesses by using ecommerce design ideas that are the perfect reflection of brand goals. YouTube will be creating an excellent UI mobile app and web design if you share your concept with them, along with other things such as making the concept flawless.",
+          "Talk to Capyngen’s e-commerce design experts to create a visually stunning, high-converting online store or mobile app.",
         ]}
         backgroundVideo={assets.backgroundVideo}
       />
-
+      <TopRatedCompany
+        title="E-Commerce Design Transforms Your Digital Store"
+        description={[
+          `A professionally designed store is the best way to let your products and services shine through. In short, the process of e-commerce UI design, e-commerce app UI design, and e-commerce database design turns out to be a story of creating eye-popping as well as high-functional platforms that create engagement, convert sales and turn the business into rake revenue. The best part of your next endeavor could be teaming up with an established e-commerce website designing company.`,
+        ]}
+        image={assets.whyChooseUs}
+        isHidden={true}
+        imageHeight="aspect-[1/1]"
+        background={assets.patternBg1}
+      />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
+        buttonTextColor="text-white"
+        title="Partner with a Company for Successful e-commerce!"
+        description={[
+          "Revolutionize online businesses by using e-commerce design ideas that are the perfect reflection of brand goals. Capyngen will be creating an excellent UI mobile app and web design if you share your concept with them, along with other things such as making the concept flawless.",
+        ]}
+        image={assets.getStarted}
+      />
       <CardsSection
-        heading="Designing Ecommerce Solutions That Drive Sales"
-        subheading="Winning big with ecommerce design services that are precise and creative. As the top ecommerce website designing company, the team creates the startups' and enterprise businesses' scalable and aesthetically pleasing platforms to attract engagement and revenue growth."
+        heading="Designing E-commerce Solutions That Drive Sales"
+        subheading="Winning big with e-commerce design services that are precise and creative. As the top e-commerce website designing company, the team creates the startups' and enterprise businesses' scalable and aesthetically pleasing platforms to attract engagement and revenue growth."
         services={cardsSectionData}
         sectionBg="bg-gray-900"
         cardBg="border-2 border-white shadow-2xl shadow-gray-800"
@@ -290,41 +304,42 @@ const EcommerceDesign = () => {
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
         buttonTextColor="text-white"
-        title="Empowering Growth Through Ecommerce Design Partnerships"
+        title="Empowering Growth Through E-commerce Design Partnerships"
         description={[
-          "Top ecommerce design professionals constitute a network that collaborates on elevating your online business. The team of experts comprising UI/UX specialists and mobile app designers delivers you innovative solutions that lead to increased sales, improved user experience, and a competitive edge in digital marketplace.",
+          "Top E-commerce design professionals constitute a network that collaborates on elevating your online business. The team of experts comprising UI/UX specialists and mobile app designers delivers you innovative solutions that lead to increased sales, improved user experience, and a competitive edge in digital marketplace.",
         ]}
         backgroundVideo={assets.backgroundVideo}
       />
 
       <WhyChoose
-        heading="Ecommerce Solutions, Investor-Ready, by Designers That Are Experts"
-        intro="Custom e-commerce website design solutions are accompanied with market validation, user testing, scalable architecture, launch strategy, and customer feedback integration. Make your online store or app available for testing by investors and refine it so as to be a high-performing conversion-driven ecommerce platform."
+        heading="E-commerce Solutions by Expert Designers"
+        intro="Custom e-commerce website design solutions are accompanied with market validation, user testing, scalable architecture, launch strategy, and customer feedback integration. Make your online store or app available for testing by investors and refine it so as to be a high-performing conversion-driven e-commerce platform."
         features={features}
       />
 
       <BenefitsSection
         heading="Flexible engagement models"
         desc={[
-          "Flexible engagement models are not a one-size-fits-all solution but rather be adjusted according to the specific needs of each ecommerce project. These models guarantee smooth partnership, low costs, and timely delivery, thus becoming the e-commerce website design solution that tailors the clients' needs and gives the highest quality results for online stores and mobile apps.",
-          "Solutions for ecommerce design and development have been the power source behind green brands ranging from startups to large global enterprises turning digital outlets and their mobile apps to reign over the online competitive market by engaging target audiences, sales promotions, and growth accelerator strategies.",
+          "Flexible engagement models are not a one-size-fits-all solution but rather be adjusted according to the specific needs of each e-commerce project. These models guarantee smooth partnership, low costs, and timely delivery, thus becoming the e-commerce website design solution that tailors the clients' needs and gives the highest quality results for online stores and mobile apps.",
+          <>
+            <h3 className="text-4xl text-white font-semibold">
+              Worldwide acclaimed by businesses
+            </h3>
+          </>,
+          "Solutions for e-commerce design and development have been the power source behind green brands ranging from startups to large global enterprises turning digital outlets and their mobile apps to reign over the online competitive market by engaging target audiences, sales promotions, and growth accelerator strategies.",
         ]}
         benefits={solutionsData}
       />
-      <TechnologiesCarousel
-        title="E-Commerce Design Technologies We Use"
-        description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-        technologies={technologies}
-      />
+
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
         buttonTextColor="text-white"
-        title="Get in touch with one of the most reputable Ecommerce Design Professionals right now!"
+        title="Contact Our Designers"
         description={[
-          "Willing to take your online business to the next level? Get in touch with a premier ecommerce design consultant to benefit from his personal expertise and guidance on tailor-made e-commerce website design solutions, mobile apps, and web platforms. The high-end and conversion-driven online store of your dreams can be a reality as early as today!",
+          "Connect with our global e-commerce design team to build custom web and mobile platforms that increase conversions and drive growth.",
         ]}
         backgroundVideo={assets.backgroundVideo}
       />

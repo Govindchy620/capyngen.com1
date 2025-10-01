@@ -32,13 +32,76 @@ const BrandingIdentityDesign = () => {
         "In order to develop a cohesive brand identity, these services incorporate logo design, visual identity, packaging, stationery, and digital branding.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why is branding important for businesses?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Among the benefits of strong branding are increased recognition, customer loyalty, and competition in the market.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question: "Does Capyngen provide global branding services?",
+      answer:
+        "Capyngen is a professional branding design company that serves clients all over the world. Through their services, businesses can go international.",
+    },
+    {
+      question: "Can you design logos for startups?",
+      answer:
+        "Of course! We do tailor-made branding works both for startups and for existing companies.",
+    },
+    {
+      question: "Do you create brand guidelines?",
+      answer:
+        "Yes, we assist with brand guidelines in order to achieve correct brand usage across all forums.",
+    },
+    {
+      question: "Can you design packaging and collateral?",
+      answer:
+        "Indeed, the team is available to accomplish a task of packaging design, or create your business cards, brochures, and stationery for you.",
+    },
+    {
+      question: "Do you handle digital branding?",
+      answer:
+        "Yes, all-inclusive Web design, social media graphics, and getting online campaigns ready for a digital appearance are parts of digital branding.",
+    },
+    {
+      question: "How long does branding design take?",
+      answer:
+        "Just about 4–8 weeks, it really depends on the size of the worldwide launch and the intricacy of the design work.",
+    },
+    {
+      question: "Do you offer rebranding services?",
+      answer:
+        "Absolutely! The company Capyngen provides top-notch rebranding solutions for those businesses that want change.",
+    },
+    {
+      question: "Are your designs research-backed?",
+      answer:
+        "Indeed, each project comes with market and competitor research that facilitates creating a brand strategy.",
+    },
+    {
+      question: "Do you ensure cross-platform consistency?",
+      answer:
+        "Yes, no matter what platform you use - digital, print, or social media - we make sure that everything is harmonized.",
+    },
+    {
+      question:
+        "Can you handle multilingual branding for international markets?",
+      answer:
+        "Yes, Capyngen provides branding design services to the widest possible audience regardless of their location and language.",
+    },
+    {
+      question: "Do you offer ongoing brand support?",
+      answer:
+        "Yes, we are always here ready to help through brand updates and offering expert advice to remain at the leading edge.",
+    },
+    {
+      question: "Can Capyngen help improve marketing ROI through branding?",
+      answer:
+        "Definitely, a well thought out and professionally done brand can increase customer interaction, sales, and overall campaign productivity.",
+    },
+    {
+      question:
+        "How do I get started with Capyngen’s branding design services?",
+      answer:
+        "Take a look at the schedule on our website and pick a time that works for you to receive a free consultation to share your ideas and business needs.",
     },
   ];
   const cardsSectionImageData1 = [
@@ -355,7 +418,7 @@ const BrandingIdentityDesign = () => {
           sectionBg="bg-gray-900"
           cardBg="border-2 border-white shadow-2xl shadow-gray-800"
           hoverBg=""
-          height="h-96"
+          height="h-72"
           textColor="text-white"
           hoverTextColor=""
           headColor="text-white"
@@ -380,8 +443,8 @@ const BrandingIdentityDesign = () => {
           steps={steps}
         />
         <CardsSectionImage
-          heading="What are branding design services?"
-          subheading="It is not only the visual attractiveness of design products by Capyngen that makes them stand out but also the inclusion of a full range of branding solutions."
+          heading="Branding Design Trends for 2025"
+          subheading=""
           services={cardsSectionImageData2}
           sectionBg="bg-gray-800"
           headColor="text-white"
