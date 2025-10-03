@@ -32,82 +32,83 @@ import {
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import SeoStatsSection from "../components/SeoStatsSection";
+import CardsSectionImage from "../components/CardsSectionImage";
 
 const SEO = () => {
   const faqItems = [
     {
-      question: "What is SEO and why is it important for my business?",
+      question: "What is SEO?",
       answer:
-        "SEO (Search Engine Optimization) is a tool that can lead your website to real, or organic, traffic if it is properly implemented, and this is quite a powerful tool for businesses as it nearly doubles their customer base. In a few words, SEO makes your website be able to appear on the first pages of search engines which automatically means that more people will visit your site and some of these will turn out to be your potential customers.",
+        "Search Engine Optimization (SEO) is the process where you make your website more eye-catching to search engines to draw in more organic traffic of fair quality.",
+    },
+    {
+      question: "Why is SEO important for my business?",
+      answer:
+        "SEO makes your website rank on the first page of various search engines, targeting the right audience, increasing the visitors, and thus sales or leads, providing better results according to your business model.",
     },
     {
       question: "How long does it take to see results from SEO?",
       answer:
-        "Usually, the first SEO outcomes are seen within 3 to 6 months. But the timeframe of success largely depends on competition, website health, and the quality of the content produced.",
+        "Generally, the outcomes of SEO are seen within 3-6 months if the competition is moderate, the website is in good standing, and the strategy is sufficient.",
     },
     {
-      question: "Do you provide on-page and off-page SEO?",
+      question: "What is the difference between on-page and off-page SEO?",
       answer:
-        "Yes, we offer a complete on-page (content, meta tags, structure) and off-page (backlinks, social signals) SEO service reaching every aspect of your website.",
+        "The main on-page SEO activities consist of content optimization and website structure, whereas off-page SEO generally refers to backlinks, social media, PR, and other external factors.",
     },
     {
-      question: "Can you optimize my website for local searches?",
+      question: "What are keywords in SEO?",
       answer:
-        "Definitely, Local SEO is one of our core strengths and we can help you gain more local visitors by making sure your website is easily discoverable for local searches.",
+        "Keywords are the phrases searchers use. If you use the right keywords targeting, people looking for the information you provide will come across your website.",
     },
     {
-      question: "What industries do you provide SEO services for?",
+      question: "How does content affect SEO?",
       answer:
-        "We take on SEO projects from all industries, including the likes of e-commerce, healthcare, finance, education, travel, and many more.",
+        "High-quality, relevant content to the user's request tends to rank better, keeps users around longer, and eventually gets more links.",
     },
     {
-      question: "Will SEO improve my website’s traffic?",
+      question: "What is link building in SEO?",
       answer:
-        "SEO is definitely the key to your website becoming more visible on the web and as a result, the number of visitors will be organically increased.",
+        "Link building refers to the activity of connecting other websites' backlinks to your website with the objectives of authority, trust, and positioning in the search results are improved.",
     },
     {
-      question: "Do you provide keyword research services?",
+      question: "What are meta tags?",
       answer:
-        "SURE! Keyword research is a major part of our services. We try to find those top-performing keywords in each niche, that would be generally easy to rank for, yet would bring in the largest search volume.",
+        "Meta tags give clues to the search engine about the topic of a web page, the font used, and the title, description, and keywords.",
     },
     {
-      question: "How do you measure SEO success?",
+      question: "How does mobile optimization affect SEO?",
       answer:
-        "We look at different key figures like number of visits, keyword rankings, average time on site, bounce rate, and conversion rate to name a few.",
+        "Creating mobile-friendly websites is part of ensuring that users have a positive experience and rankings on the desktop and mobile are consequently higher as the search engines, give priority to the mobile-responsive sites.",
     },
     {
-      question: "Is SEO a one-time service or ongoing?",
+      question: "What is local SEO?",
       answer:
-        "SEO is a continuous improvement journey in which the possibility of a sudden drop in rankings can always be there. It is very important that, even after moving up the ranks, ranking positions are constantly maintained, engine updates are always taken into consideration and competitors are constantly kept at bay.",
+        "Local SEO assists businesses to be found effectively through local searches and then attracts the locality customers into the business.",
     },
     {
-      question: "Can you optimize my website for mobile SEO?",
+      question: "How do I track SEO performance?",
       answer:
-        "Yes, we work on the mobile version of your website to make sure that it is easy to access, loads quickly, looks good, and works well on mobile devices, and so your website ranks higher in mobile searches.",
+        "Install Google Analytics, Google Search Console, and make use of other SEO software to check the traffic, ranking, and conversion completion.",
     },
     {
-      question: "Do you provide SEO-friendly content creation?",
+      question: "Can SEO guarantee #1 rankings on Google?",
+      answer: `SEO does not guarantee top rankings quite simply, however, it visibly increases traffic and the chances of the website showing up in the top results of competitors in the search engine.`,
+    },
+    {
+      question: "What is technical SEO?",
       answer:
-        "We have teams of writers who create content around specific keywords, and this content is engaging and also meets the SEO requirements of search engines like Google. These contents could be in blogs, websites, product pages, etc.",
+        "Technical SEO means websites that load really fast, show the correct information to search engines by accessibility, can be easily indexed, are safely encrypted, and even allow search engines to deal with structured data.",
     },
     {
-      question: "Will my website be penalized by Google during SEO?",
-      answer: `No, we only adopt "white-hat" SEO techniques which are completely in line with Google's guidelines aimed at safe optimizations, thus, never resulting in penalties.`,
-    },
-    {
-      question: "Do you provide SEO for e-commerce websites?",
+      question: "How often should SEO strategies be updated?",
       answer:
-        "Of course, we assist e-commerce websites with SEO in a number of aspects such as product pages and category pages optimization, and the addition of structured data to make e-commerce SEO more friendly for search engines.",
+        "SEO is a very dynamic area where strategies, methods, and goals should be adapted to trends and changing algorithms which means in practice that a strategy always be updated periodically.",
     },
     {
-      question: "Can you fix my existing website’s SEO issues?",
+      question: "Why choose a professional SEO company?",
       answer:
-        "Yeah, we check the complete health of your website, figure out the performance barriers, and suggest the easiest and fastest ways to the solution that will increase the ranking of your site.",
-    },
-    {
-      question: "Do you offer SEO reporting and analytics?",
-      answer:
-        "Yes, the SEO reports we produce are based on routine work done on ranking positions, traffic, and performance metrics.",
+        "One like Capyngen has an SEO consultant and a team of professionals who deliver tailor-made solutions, ongoing SEO, and quantifying proofs that work for your business online growth and expansion.",
     },
   ];
   const technologies = [
@@ -133,58 +134,40 @@ const SEO = () => {
   ];
   const cardsSectionData1 = [
     {
-      title: "SEO Audit & Strategy",
+      title: "Increase Visibility",
       description:
-        "Thorough audits & tailored search engine optimization strategies that unearth the potential for expansion.",
+        "Make presence known by getting on top of search results by utilizing SEO services in India and other Google rankings.",
       icon: <FaSearch className="text-4xl" />,
     },
     {
-      title: "On-Page SEO",
+      title: "Affordable Solutions",
       description:
-        "Along with keyword optimization, meta tags, structured data & internal linking is done for improved search visibility.",
+        "If you are a startup, this is just the solution that you need. Our cost-effective SEO package is designed to help you grow within a budget.",
       icon: <FaFileAlt className="text-4xl" />,
     },
     {
-      title: "Off-Page SEO & Link Building",
+      title: "Drive Traffic & Leads",
       description:
-        "Safety backlink purchase options that provide power and ranking are the features of services offered by us.",
+        "By implementing the right SEO marketing strategies, the desired high-quality traffic and leads will be available for you.",
       icon: <FaLink className="text-4xl" />,
     },
     {
-      title: "Technical SEO",
+      title: "Custom SEO Strategies",
       description:
-        "Combined efforts of site speed, crawlability, mobile-friendliness, and indexation bring the technical upgrades to your website.",
+        "By understanding your business and its strengths we craft a bespoke solution just for you.",
       icon: <FaWrench className="text-4xl" />,
     },
     {
-      title: "Local SEO",
+      title: "Trusted Agency",
       description:
-        "City/region-specific optimization solutions are available for you as the SEO service provider in India.",
+        "A best SEO company in India with a history of accomplishing results is the one you should choose as your partner.",
       icon: <FaMapMarkerAlt className="text-4xl" />,
     },
     {
-      title: "Voice Search Optimization",
+      title: "Boost ROI",
       description:
-        "Prepare your website content for the growing voice search trend by focusing on conversational queries, natural language, and featured snippets.",
+        "Make the most of your returns by benefiting from our full range of services offered by our SEO agency in India.",
       icon: <FaMicrophone className="text-4xl" />,
-    },
-    {
-      title: "E-Commerce SEO",
-      description:
-        "Optimize product pages, categories, and user experience for better visibility on search engines and higher conversions for online stores.",
-      icon: <FaShoppingCart className="text-4xl" />,
-    },
-    {
-      title: "Content Strategy & Creation",
-      description:
-        "Blogs, articles, landing pages focusing on the best search engine optimization services for businesses.",
-      icon: <FaPenFancy className="text-4xl" />,
-    },
-    {
-      title: "SEO Monitoring & Reporting",
-      description:
-        "Collect data through analytics & monthly reports to observe the efficiency.",
-      icon: <FaChartBar className="text-4xl" />,
     },
   ];
   const cardsSectionData2 = [
@@ -262,6 +245,51 @@ const SEO = () => {
         "Clear monthly reports; check out the share of profit and put new steps in motions.",
     },
   ];
+  const cardsSectionImageData1 = [
+    {
+      title: "SEO Audit & Strategy",
+      description:
+        "Thorough audits & tailored search engine optimization strategies that unearth the potential for expansion.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+
+    {
+      title: "On-Page SEO",
+      description:
+        "Along with keyword optimization, meta tags, structured data & internal linking is done for improved search visibility.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Off-Page SEO & Link Building",
+      description:
+        "Safety backlink purchase options that provide power and ranking are the features of services offered by us.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Technical SEO",
+      description:
+        "Combined efforts of site speed, crawlability, mobile-friendliness, and indexation bring the technical upgrades to your website.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "Local SEO",
+      description:
+        "City/region-specific optimization solutions are available for you as the SEO service provider in India.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Content Strategy & Creation",
+      description:
+        "Blogs, articles, landing pages focusing on the best search engine optimization services for businesses.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
@@ -270,20 +298,44 @@ const SEO = () => {
         <Banner5
           title={
             <>
-              <span className="text-blue-600">Search Engine Optimization</span>{" "}
-              Services for Businesses
+              <span className="text-3xl md:text-4xl">
+                Boost Your Brand Visibility with{" "}
+              </span>
+              <br />
+              <span className="text-blue-600">SEO Services</span>
             </>
           }
           description="Capyngen is the best SEO company in India delivering cost-effective SEO solutions for startups, small businesses, and enterprises. Be the owner of the steady online success of yours with our skillful SEO services; get the visibility, traffic, and ROI that you desire."
-          primaryBtnText="Get Free SEO Consultation"
+          primaryBtnText="Improve Your Website Rankings"
           primaryBtnLink="#"
           image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <CardsSection
+        <CardsSectionImage
           heading="Our SEO Services"
+          subheading=""
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Schedule a SEO Consultation"
+          description={[
+            "Learn the power of our SEO services in India which can bring you more visitors, enhance the sales, and offer you a return on investment that you can track.",
+          ]}
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <CardsSection
+          heading="Features & Benefits"
           subheading=""
           services={cardsSectionData1}
           sectionBg="bg-gray-800"
@@ -293,35 +345,10 @@ const SEO = () => {
           textColor="text-white"
           hoverTextColor=""
           textSize="text-md"
-          height=""
-        />
-        <SeoStatsSection />
-        <CardsSection
-          heading="Features & Benefits"
-          subheading=""
-          services={cardsSectionData2}
-          sectionBg="bg-black"
-          cardBg="bg-gradient-to-br from-[#000]/90 to-gray-800/90 hover:bg-gradient-to-tl hover:-translate-y-1 transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-white/30"
-          headColor="text-white"
-          hoverBg=" hover:bg-gray-700"
-          textColor="text-white"
-          hoverTextColor=""
-          textSize="text-md"
           height="h-72"
         />
+        <SeoStatsSection />
         <HowWeWork heading="SEO Process" desc="" steps={steps} />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Take Your Business to the Top of Search Results"
-          description={[
-            "Partner with Capyngen, the best SEO company in India, for measurable traffic, leads, and revenue growth.",
-          ]}
-          buttonText="Book Your Free SEO Consultation Today"
-        />
         <TopRatedCompany
           title="Why Choose Capyngen as Your SEO Partner"
           description={[
@@ -370,11 +397,17 @@ const SEO = () => {
           image={assets.whyChooseUs}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
-        />
-        <TechnologiesCarousel
-          title="SEO Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
+        />{" "}
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Take Your Business to the Top of Search Results"
+          description={[
+            "Partner with Capyngen, the best SEO company in India, for measurable traffic, leads, and revenue growth.",
+          ]}
+          buttonText="Book Your Free SEO Consultation Today"
+          backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />

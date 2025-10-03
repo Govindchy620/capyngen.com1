@@ -8,7 +8,7 @@ const WhyChoose = ({
 }) => {
   return (
     <section
-      className="relative min-h-[100vh] bg-black text-white py-20 px-4 sm:px-6 md:px-12"
+      className="relative bg-black text-white py-20 px-4 sm:px-6 md:px-12"
       aria-label="Why Choose Capyngen"
     >
       <div className="max-w-7xl mx-auto text-center">
@@ -25,14 +25,14 @@ const WhyChoose = ({
         )}
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-10">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-8 sm:mt-10">
           {features.map((feature, i) => (
             <article
               key={i}
               className="flex flex-col items-center justify-center p-5 sm:p-6
-                bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-lg
-                transform transition duration-300 hover:scale-105 hover:shadow-blue-500/40
-                h-full min-h-[230px]"
+        bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-lg
+        transform transition duration-300 hover:scale-105 hover:shadow-blue-500/40
+        h-full min-h-[230px] flex-1 basis-[18%] max-w-[18%]"
               role="region"
               aria-labelledby={`feature-title-${i}`}
               aria-describedby={`feature-desc-${i}`}

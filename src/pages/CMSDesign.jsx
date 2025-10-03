@@ -11,119 +11,169 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import Banner14 from "../components/Banner14";
+import GetStarted from "../components/GetStarted";
+import CardsSection from "../components/CardsSection";
+import { FaCode, FaShoppingCart, FaWordpressSimple } from "react-icons/fa";
 
 const CMSDesign = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is CMS design?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "CMS design basically is the creation of content management systems that are user-friendly, scalable, and secure in order to manage websites, apps, and digital platforms efficiently.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why do I need a CMS for my website?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Content management systems make content creation much easier, taking less time and thus improving the general workflow of teams.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question: "Do you offer custom CMS designs?",
+      answer:
+        "Indeed, Capyngen crafts CMS solutions that are fully tailored to fit your business needs as well as the workflow and design requirements.",
     },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
+    {
+      question: "Which CMS platforms do you work with?",
+      answer:
+        "We work on WordPress, Drupal, Joomla, Magento, and even fully custom-built CMS platforms to create the right fit for enterprises and startups.",
+    },
+    {
+      question: "Is website performance better when CMS is designed properly?",
+      answer:
+        "Absolutely, optimized CMS design increases site speed, makes navigation more user and thus ensures hassle-free content updates and scalability.",
+    },
+    {
+      question: "Are CMS and mobile applications integrated?",
+      answer:
+        "We definitely make the CMS platforms mobile-friendly and also integrate the apps for uninterrupted content management while on the move.",
+    },
+    {
+      question: "Is CMS with Capyngen secure?",
+      answer:
+        "Yes, we pay special attention in access control data encryption as well as the fulfillment of security standards for enterprise CMS all over the world.",
+    },
+    {
+      question: "Is it possible to manage multiple websites with one CMS?",
+      answer:
+        "Yes, the CMS we designed provides multi-site management and at the same time there is a central control from where the publishing of all web properties can be done.",
+    },
+    {
+      question: "Do you offer CMS support and maintenance?",
+      answer:
+        "We maintain and service your CMS platform whenever necessary and also provide continuous support to it.",
+    },
+    {
+      question: "How long does it take to build a CMS?",
+      answer:
+        "Usually, depending on factors like the complexity of the project and the level of customization, the time for CMS projects to be completely designed and rolled out is between 4 and 10 weeks.",
+    },
+    {
+      question:
+        "Is Capyngen able to connect 3rd-party applications with a CMS?",
+      answer:
+        "Yes, we don't just make CRM, marketing, and analytics tools work with your CMS but also e-commerce and other tools for maximum functionality and connection.",
+    },
+    {
+      question: "Do you design CMS that are friendly to SEO?",
+      answer:
+        "Yes, our CMS are built in a way that they follow SEO best practices and thus enjoy fast indexing, better rankings, and more visibility.",
+    },
+    {
+      question: "Is it possible for non-technical users to operate the CMS?",
+      answer:
+        "Definitely! Our CMS interfaces are super user-friendly thus content management is really a breeze for those who are non-technically inclined.",
+    },
+    {
+      question: "Do you have any solutions for enterprise CMS?",
+      answer:
+        "Yes, Capyngen develops powerful and scalable CMS platforms for big organizations thus making sure that the system is always efficient and content is securely managed.",
+    },
+    {
+      question: "Why choose Capyngen for CMS design?",
+      answer:
+        "With worldwide experience, dedicated designers and an emphasis on user-friendliness, Capyngen does not only provide content management solutions that are simple to use but also boost productivity.",
+    },
   ];
   const solutionsData = [
     {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      title: "Innovation & Problem-Solving",
+      desc: "Experienced in developing creative solutions to complex technical challenges, improving efficiency and performance across systems.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      title: "CMS Design & Optimization",
+      desc: "Skilled in designing and implementing user-friendly, scalable content management systems that enhance workflow efficiency and content delivery.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our CMS Design company, integrating e-learning tools, course management, and student engagement features.",
+      title: "Suitable Solutions",
+      desc: "Custom CMS development that is in line with your company’s goals.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our CMS Design services to highlight your skills and attract potential clients.",
+      title: "Responsive & Scalable",
+      desc: "Designs that are mobile-ready for any platform.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our CMS Design company, featuring responsive designs and seamless navigation for a better user experience.",
+      title: "Intelligent Content Management",
+      desc: "Simplified operations and convenient content updates.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
-    },
-    {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive CMS Design solutions tailored to your needs.",
-    },
-    {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our CMS Design company, featuring secure payment gateways, inventory management, and optimized user journeys.",
-    },
-    {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our CMS Design services, that enhance donor engagement and effectively communicate your mission.",
-    },
-    {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
-    },
-    {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
-    },
-    {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      title: "Continuous Operation",
+      desc: "Provision of all needs like training, updates, and continuous optimization.",
     },
   ];
-  const servicesData = [
+  const cardsSectionData1 = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our CMS Design company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      title: "Responsive CMS Design",
+      description:
+        "You can be confident that your CMS-based website will be great looking on all different types of devices. Our responsive CMS design service makes sure that the information is suitable for desktop computers, tablets, and smartphones.",
+      icon: <FaCode className="text-4xl text-white" />,
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced CMS Design services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      title: "CMS UI/UX Design",
+      description:
+        "Get users hooked with simple browsing, quick loading, and non-disturbing transitions that are some features of our CMS UI/UX design services specifically made for franchise customer satisfaction.",
+      icon: <FaWordpressSimple className="text-4xl text-white" />,
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      title: "CMS Design and Creation",
+      description:
+        "Our CMS design and services are the ones that cover from CMS installation to the complete customization of the digital ecosystem.",
+      icon: <FaShoppingCart className="text-4xl text-white" />,
+    },
+  ];
+  const steps = [
+    {
+      step: "Step 01",
+      title: "Assess Requirements",
+      description:
+        "Find out how your business works and what you need from CMS",
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      step: "Step 02",
+      title: "UI/UX Planning & Platform Selection",
+      description:
+        "Create user-friendly and responsive interfaces. Decide on the best CMS (WordPress, Drupal, Joomla, etc.)",
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our CMS Design solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      step: "Step 03",
+      title: "Custom Design",
+      description:
+        "Create CMS templates and features that are specifically for your business.",
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      step: "Step 04",
+      title: "Integration",
+      description: "Install the required plugins, APIs, and tools.",
+    },
+    {
+      step: "Step 05",
+      title: "Testing & Optimization",
+      description: "Verify the speed, security, and performance.",
+    },
+    {
+      step: "Step 06",
+      title: "Launch & Support",
+      description: "Support after the release and ongoing improvement.",
     },
   ];
 
@@ -131,44 +181,116 @@ const CMSDesign = () => {
   return (
     <div className="relative">
       <div className="sticky inset-0">
-        <Banner
-          title="CMS Design"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.cms}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        <Banner14
+          imageSrc={assets.blockchainDevelopment}
+          imageAlt="Blockchain development illustration"
+          title="Simplify Your Content Using a"
+          highlighted="Professional CMS Design"
+          subtitle=""
+          description="Get the most out of your company using content management systems that are secure, intelligent, and scalable for the web, mobile, and enterprise applications."
+          reverse={false}
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated CMS Design Company"
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Request a free consultation"
           description={[
-            `RichestSoft provides top-notch and oriented CMS Design solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch CMS Design services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best CMS Design company in India, we provide best-in-class CMS Design services.`,
+            "Discuss with Capyngen’s CMS design specialists the design of content management systems that are safe, scalable, and user-friendly for your business.",
+          ]}
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="Best CMS website Design services"
+          description={[
+            `Capyngen provides innovative CMS design services of the highest quality that enable companies to manage, grow, and simplify their online digital presence. Our skilled designers and developers create personalized CMS design solutions that are the perfect match for your distinctive needs — be it websites, apps, or enterprise platforms. Bearing in mind the responsive CMS design, user-friendly UI/UX, and smooth operation, we certify that your content management system will be of great performance and easy to use.`,
+            `Experience the benefits of a great CMS design that will make your work simpler, better use of resources and create exciting digital experiences. In case you require services for CMS web design, CMS UI/UX design, or complete CMS development and design, Capyngen will stand by your side like a true partner.`,
           ]}
           image={assets.whyChooseUs}
+          isHidden={true}
           background={assets.patternBg1}
         />
-
+        <GetStarted
+          reverse={true}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="CMS Website Design Solutions for Scalable & User-Friendly Digital Experiences"
+          description={[
+            `Custom CMS website design solutions from Capyngen allow you to change the way your business processes through digital experiences that are user-friendly. Our CMS professionals guarantee that the designs are extendable, mobile-friendly, and efficient for sustainable growth.`,
+            <>
+              <h2 className="text-4xl font-bold mb-5">Custom CMS Design</h2>
+              <p>
+                Capyngen’s custom CMS design solutions allow you to not only
+                manage and update your website content with ease but also to
+                expand your platform with your business and maintain the steady
+                operation of your business while effectively meeting your
+                business objectives.
+              </p>
+            </>,
+          ]}
+          image={assets.blockchainDevelopmentCompany}
+        />
+        <CardsSection
+          heading="CMS Web Design Services"
+          subheading="We offer CMS Web Design services which mainly focus on combining a clean layout, the latest user interfaces, and responsive features to keep your audience engaged and achieve fantastic outcomes."
+          services={cardsSectionData1}
+          sectionBg="bg-black"
+          cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
+          headColor="text-white"
+          hoverBg=" hover:bg-gray-700"
+          textColor="text-white"
+          hoverTextColor=""
+          textSize="text-md"
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Experience a Demo"
+          description={[
+            "Feel our bespoke CMS solutions and understand how Capyngen can make your content flow, publishing, and team collaboration seamless.",
+          ]}
+          buttonText="Book a Demo"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <HowWeWork
+          heading="Our Working Process"
+          desc="We follow a well-defined process to provide the top CMS design services to businesses:"
+          steps={steps}
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Get in touch with our CMS Designers"
+          description={[
+            "Meet our international CMS design team to develop platforms that are easy for enterprises and that help with content creation, management, and updates. ",
+          ]}
+          buttonText="Get in Touch"
+          backgroundVideo={assets.backgroundVideo}
+        />
         <BenefitsSection
-          heading="CMS Design Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
+          heading="Reasons to Choose Capyngen for CMS Design?"
+          desc=""
           benefits={solutionsData}
+          footerNote=""
+          image={assets.applicationSolution}
         />
-        <HowWeWork />
-        <WhyChoose />
-        <BenefitsSection
-          heading="CMS Design Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level CMS Design services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Do You Need the Best CMS Design Services for Your Company?"
+          description={[
+            "Get a team of professional CMS experts visiting your business to deliver clients tailored CMS web design solutions that are fast, secure, and engaging.",
+          ]}
+          buttonText="Get in Touch"
+          backgroundVideo={assets.backgroundVideo}
         />
-        <TechnologiesCarousel
-          title="CMS Design Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
-        />
-        <OurServices />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>

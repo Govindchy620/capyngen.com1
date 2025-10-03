@@ -22,6 +22,7 @@ import {
   FaProjectDiagram,
   FaTasks,
 } from "react-icons/fa";
+import Banner15 from "../components/Banner15";
 
 const SMM = () => {
   const faqItems = [
@@ -197,18 +198,7 @@ const SMM = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <Banner8
-        titleMain="Social Media Marketing"
-        titlePrefix=""
-        titleSuffix="Services & Custom Strategies"
-        description={`Promote your brand with the help of a professional social media marketing that goes in tandem with creative initiatives, strategic planning, and smooth implementation. Targeted social media advertising and social media management services guarantee rise of engagement, improved conversion and trackable outcomes.`}
-        imageSrc={assets.socialMediaMarketing}
-        imageAlt="Social Media Marketing"
-        bgColor="bg-gray-900"
-        iconColor="bg-blue-700"
-        reverse={true}
-      />
-
+      <Banner15 />
       <TopRatedCompany
         title="Professional social media marketing is the key to a business transformation"
         description={[
@@ -254,7 +244,6 @@ const SMM = () => {
         height="h-96"
         textSize="text-lg"
       />
-
       <BenefitsSection
         heading="SMM Solutions We Offer"
         desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."

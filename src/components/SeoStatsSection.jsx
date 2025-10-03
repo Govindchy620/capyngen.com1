@@ -70,11 +70,11 @@ function SeoStatsSection() {
     >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-light leading-tight">
-          Expect great things <br />
+        <h2 className="text-4xl md:text-5xl font-light leading-tight">
+          Expect great things{" "}
           <span className="font-bold">from your SEO Agency</span>
         </h2>
-        <p className="mt-4 text-white max-w-2xl mx-auto">
+        <p className="mt-4 text-white text-xl">
           Believe it because you've seen it. Here are real numbers from just one
           successful Victorious partner.
         </p>

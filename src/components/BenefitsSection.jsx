@@ -10,7 +10,7 @@ const BenefitsSection = ({
 }) => {
   return (
     <section className="relative bg-gradient-to-b from-[#0a0a0f] via-[#111827] to-[#0a0a0f] text-white px-6 md:px-12 py-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      <div className="max-w-[90vw] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
         {/* LEFT COLUMN */}
         <div
           className={`md:sticky md:top-16 self-start flex flex-col gap-6 ${

@@ -235,7 +235,15 @@ const NetworkSolutionServices = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <Banner14 />
+      <Banner14
+        imageSrc={assets.blockchainDevelopment}
+        imageAlt="Blockchain development illustration"
+        title="Creative"
+        highlighted="Network Solutions and Services"
+        subtitle="for Contemporary Businesses"
+        description="Capyngen provides efficient, safe, and adaptable technology network solutions and services that assist your business in achieving maximum performance."
+        reverse={false}
+      />
 
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">

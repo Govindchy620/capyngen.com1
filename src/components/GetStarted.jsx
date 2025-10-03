@@ -55,9 +55,9 @@ const GetStarted = ({
           </h2>
           <div className={`space-y-5 ${textSize} ${textColor} drop-shadow-md`}>
             {Array.isArray(description) ? (
-              description.map((para, i) => <p key={i}>{para}</p>)
+              description.map((para, i) => <div key={i}>{para}</div>)
             ) : (
-              <p>{description}</p>
+              <div>{description}</div>
             )}
 
             {listItems.length > 0 && (
