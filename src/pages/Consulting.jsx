@@ -47,232 +47,167 @@ import {
 } from "react-icons/fa";
 import AppTypesSection from "../components/AppTypesSection";
 import CardsSectionImage from "../components/CardsSectionImage";
+import CardsSectionSlider from "../components/CardsSectionSlider";
 
 const Consulting = () => {
   const faqItems = [
     {
-      question: "What forms of consulting services have you got?",
+      question: "What are IT consulting services?",
       answer:
-        "We offer IT, business, enterprise, digital, and strategy advisory services.",
+        "IT consulting services refer to the involvement of experts who provide advisory and implementation support for technology strategy, infrastructure, security, cloud adoption, and digital transformation. Consultants evaluate the current systems, suggest changes, and facilitate the implementation of solutions that are in line with business goals.",
     },
     {
-      question: "Why should a business work with a consulting firm?",
+      question: "Why should businesses hire IT consultants?",
       answer:
-        "Consultants come with the knowledge, market insights, and out-of-the-box ideas to alleviate the problems of the business and thus make it expand.",
+        "IT consultants are the specialists who bring highly specialized knowledge, industry experience, and unbiased opinions that an internal team cannot provide to a company. With their help, businesses can avoid making expensive mistakes, speed up the process of adopting new technology, make better use of their investments, and get the right guidance for difficult technology decisions.",
     },
     {
-      question: "Are you in the business of offering startup consulting?",
+      question: "What makes Capyngen a top consulting company in India?",
       answer:
-        "Definitely, we are the leading provider of affordable, efficient, and scalable startup consulting solutions to achieve rapid growth and smooth operations.",
+        "Capyngen is empowered with the combination of the sound experience of over the years, proven methodologies, and industry-specific expertise backed by rich services, client-centric approach, and consistent delivery of measurable results. Our client successes and awards make us stand out from the rest and lead us to be ranked one of the top consulting companies in India.",
     },
     {
-      question:
-        "Would you be able to handle IT strategy and digital transformation?",
+      question: "Do you provide business consulting solutions beyond IT?",
       answer:
-        "Definitely not, our IT consulting services bring to the forefront digital transformation, cloud adoption, and technology optimization.",
+        "Indeed! Our main focus is IT consulting, yet we provide all-inclusive business consultation solutions comprising growth strategy, operational effectiveness, financial planning, market research, and organization development, all seamlessly integrated with technology recommendations.",
     },
     {
-      question: "In what kinds of industries do you offer consulting services?",
+      question: "How much do consulting services cost?",
       answer:
-        "We have worked with and are prepared to work with various industries including finance, healthcare, education, manufacturing, retail, and travel among others.",
+        "The costs are dependent on various factors such as the scope of the project, duration, the level of expertise required, and the mode of engagement. We have several ways of pricing, which include hourly rates, fees for specific projects, and retainer arrangements. To receive a personalized quote that fits your budget, please get in touch with us.",
     },
     {
-      question: "Are you engaged in consultations for large organizations?",
+      question: "Can small businesses afford your consulting services?",
       answer:
-        "Of course, we have enterprise consulting services such as process re-engineering, system integration, and technology roadmaps.",
+        "Definitely! We provide excellent IT consulting services suitable for small businesses in India with scalable solutions that can accommodate different budgets. As an affordable business consulting agency in India, we have specially tailored packages for startups and SMBs.",
     },
     {
-      question:
-        "Is business process improvement within your area of expertise?",
+      question: "What industries does Capyngen serve?",
       answer:
-        "Yes, through our consulting solutions, we find the inefficiencies and put in place the strategies that increase productivity and lead to cost reduction.",
+        "Capyngen has a vast range of client base throughout the world from different industries and sectors such as healthcare, finance, manufacturing, retail, education, government, technology, hospitality, logistics, and professional services and has the knowledge of all of these industries and offers customized solutions to them.",
     },
     {
-      question: "Do you provide remote-access consulting services?",
+      question: "How long does a typical consulting engagement last?",
       answer:
-        "Yes, our consulting services are available worldwide through online meetings, virtual workshops, and project collaboration platforms.",
-    },
-    {
-      question: "How do you approach IT consulting projects?",
-      answer:
-        "Requirement analysis is the first step we take, then we do strategy planning, technology recommendations, and implementation support.",
-    },
-    {
-      question: "Do you support small businesses in India by giving advice?",
-      answer:
-        "Certainly, we provide the most effective IT consulting services and cost-effective business consulting solutions specially crafted for small businesses in India.",
-    },
-    {
-      question: "Can you assist in regulatory compliance and risk management?",
-      answer:
-        "Yes, our professionals give compliance advisory, support in risk assessment, and risk management services to all the sectors you can imagine.",
+        "The length of the engagement depends on the nature of the project. For instance, Quick assessments may take 2-4 weeks, while comprehensive transformations can span 6-12 months. We provide detailed timelines during initial discussions.",
     },
     {
       question:
-        "Do you provide continuous support after consulting engagements?",
+        "Do you provide implementation support or just recommendations?",
       answer:
-        "Yes, we stay on hand to give continual guidance, keep watch, and encourage with actions as we agree when required for the success of our plans.",
+        "We are there with the client throughout the journey from coming up with the strategy to its implementation. Unlike consultants who only deliver recommendations, Capyngen equips and guides the implementation of solutions, thus assuring the successful deployment and adoption.",
     },
     {
-      question: "Are your services limited only to a certain industry?",
+      question: "What is digital transformation consulting?",
       answer:
-        "Yes, our specialists comprehend the domain and provide solutions that perfectly fit the requirements of the particular industry.",
+        "Digital transformation consulting is a service that helps businesses update their ways of operation, use new technologies, and automate their processes. Besides that, they can introduce changes in the organization through digital transformation which may include the adoption of cloud computing, implementation of AI, redesigning the customer experience, and managing the cultural change.",
     },
     {
-      question:
-        "Does your company offer digital marketing and technology consulting?",
+      question: "How do you ensure consulting recommendations are practical?",
       answer:
-        "Yes, we provide digital consulting to enhance marketing strategy, technology adoption, and digital transformation initiatives.",
+        "The recommendations are drawn from the thorough assessment, industry best practices, and the consideration of your resources, restrictions, and capabilities. We focus on solutions that can be implemented right away without sacrificing long-term strategic initiatives.",
     },
     {
-      question: "How would I avail your consulting services?",
+      question: "Can you help with cloud migration?",
       answer:
-        "Just reach out to our team, describe your needs, and we will organize a session where we can discuss a tailored strategy for your business.",
+        "Certainly! Our cloud consulting activities envelop migration strategy, platform selection, application assessment, data migration, security implementation, and post-migration optimization pushing for a smooth transition with less downtime.",
+    },
+    {
+      question: "Do you provide cybersecurity consulting?",
+      answer:
+        "Yes, of course! We offer web security services that include risk evaluations, designing security architecture, providing guidance on compliance, planning for incident responses, training on security awareness, and offering recommendations for continuous monitoring of digital assets.",
+    },
+    {
+      question: "What's your approach to change management?",
+      answer:
+        "We are fully aware that the success of technology largely depends on the people's acceptance. Our change management strategy involves stakeholder engagement, communication planning, training programs, feedback mechanisms, continuous support that ensures organization buy-in and successful transformation.",
+    },
+    {
+      question: "How do I get started with Capyngen consulting services?",
+      answer:
+        "Just get in touch with us to book a free initial consultation. We will understand your issues, goals, and needs, then offer a customized consulting engagement plan that outlines the approach, duration, deliverables, and investment required.",
     },
   ];
-  const cardsSectionGridData1 = [
-    {
-      title: "Business Growth Solutions",
-      description:
-        "Devised the tactics that opened up new revenue streams and improved SMEs' market share.",
-      icon: <FaChartLine className="w-6 h-6 text-orange-500" />,
-      iconBg: "bg-orange-100",
-    },
-    {
-      title: "Digital Transformation Programs",
-      description:
-        "Facilitated the transition of enterprises into cloud, AI, and automation by providing digital solutions for greater efficiency.",
-      icon: <FaCloud className="w-6 h-6 text-green-500" />,
-      iconBg: "bg-green-100",
-    },
-    {
-      title: "Startup Advisory",
-      description:
-        "Assisted more than 100 startups with IT and business consulting services catering to the creation of sustainable business models.",
-      icon: <FaLightbulb className="w-6 h-6 text-lime-500" />,
-      iconBg: "bg-lime-100",
-    },
-    {
-      title: "End-To-End Consulting Services",
-      description:
-        "Highly qualified consultants make successful projects for IT, business, and digital consulting that lead your organization to the top of the market. Co-ordinate with the best enterprise consulting company to access the hidden leagues of yours.",
-      icon: <FaBriefcase className="w-6 h-6 text-red-500" />,
-      iconBg: "bg-red-100",
-    },
-    {
-      title: "IT Consulting Services",
-      description:
-        "Capyngen offers tailored IT consulting services that will revamp your IT infrastructure, make your process more efficient, and ensure your digital resilience.",
-      icon: <FaServer className="w-6 h-6 text-orange-500" />,
-      iconBg: "bg-orange-100",
-    },
-    {
-      title: "Business Consulting Solutions",
-      description:
-        "We offer the business consulting services at affordable rates that are primarily focused on optimizing the performance and fostering growth.",
-      icon: <FaHandshake className="w-6 h-6 text-green-500" />,
-      iconBg: "bg-green-100",
-    },
-    {
-      title: "Digital Consulting Services",
-      description:
-        "Our digital consultants make use of the latest technology like AI to help business in transition to the digital world which is constantly changing.",
-      icon: <FaDigitalOcean className="w-6 h-6 text-lime-500" />,
-      iconBg: "bg-lime-100",
-    },
-    {
-      title: "Enterprise Consulting Company",
-      description:
-        "We lead companies to the right track of achieving efficiency, conforming to the regulations, and developing plans for the future.",
-      icon: <FaBuilding className="w-6 h-6 text-red-500" />,
-      iconBg: "bg-red-100",
-    },
-  ];
-
   const cardsSectionData1 = [
     {
-      title: "Strategy Consulting",
+      title: "Expert IT Advisors",
       description:
-        "Such services include high-level business planning, competitive analysis, and revenue growth modeling.",
+        "Our team's combined experience of the last several decades in different sectors and technologies is just amazing. As the leading management consultants, working with startups both in India and abroad, and nurturing mature enterprises, we provide strategic direction, support by hands-on expertise, and a track record of success.",
       icon: <FaLightbulb className="text-4xl text-indigo-600" />,
     },
     {
-      title: "Management Consulting",
+      title: "Customized Solutions",
       description:
-        "Assistance with organizational restructuring, efficiency optimization, and leadership support.",
+        "We do not agree that it is appropriate to use one successful formula for all cases. Every business consulting solution will be customized to fit your industry, company, situation, challenges, and objectives. Our tailor-made strategies will ensure that they are the most relevant and effective for you.",
       icon: <FaChartBar className="text-4xl text-indigo-600" />,
     },
     {
-      title: "IT & Technology Consulting",
+      title: "End-to-End Support",
       description:
-        "Digital transformation, IT roadmap, and infrastructure modernization are the main areas of work.",
+        "The services provided by Capyngen during your technology transformation period range from initial assessment and strategy development all the way through implementation, training, and ongoing optimization. We are not just advisors; we are partners.",
       icon: <FaNetworkWired className="text-4xl text-indigo-600" />,
     },
     {
-      title: "Startup Consulting",
+      title: "Proven Track Record",
       description:
-        "Complete support for new businesses starting from ideation until execution.",
+        "Our portfolio tells about the successful transformations of IT projects from different industries with measurable results such as cost reduction, efficiency improvement, revenue growth, and customer satisfaction enhancement. The success stories of our clients are testimonies to our proficiency to deliver.",
       icon: <FaLaptopCode className="text-4xl text-indigo-600" />,
     },
     {
-      title: "Marketing Consulting",
+      title: "Future-Ready Technology",
       description:
-        "Specialized in planning, executing, and optimizing marketing strategies that boost visibility, lead generation, and customer engagement in competitive industries.",
+        "Our goal in the market as an IT consulting firm is to be the trendsetter in the technology world. We will guide you through the adoption of the latest tools, platforms, and methods, such as cloud computing, AI, automation, and analytics, that will give your company a winning edge in the long run.",
       icon: <FaBullhorn className="text-4xl text-indigo-600" />,
     },
     {
-      title: "Financial Advisory Consulting",
+      title: "Industry Recognition",
       description:
-        "Provides expert financial planning, budgeting, risk management, and investment strategies tailored to support business sustainability and expansion.",
+        "Capyngen is one of the top consulting companies in India. The company has been able to establish a solid reputation by consistently providing high-quality services, constantly coming up with new solutions, and showing unflagging commitment to customer success in a variety of markets.",
       icon: <FaMoneyBillWave className="text-4xl text-indigo-600" />,
-    },
-  ];
-  const appTypes = [
-    {
-      title: "Results Are The Top Priority For Us",
-      description:
-        "Data-synergized-we energize our consulting strategies with insights, analytics, and tried-and-true methods that guarantee results.",
-      icon: <FaTrophy className="text-4xl text-white" />,
-    },
-    {
-      title: "Custom-tailored solutions",
-      description:
-        "Business consulting solutions are developed on a case-by-case basis.",
-      icon: <FaCogs className="text-4xl text-white" />,
-    },
-    {
-      title: "Usable as Illustrative Models",
-      description:
-        "From startups to corporations, we strive to create customizable and adaptable models that demonstrate the advantages of our strategies.",
-      icon: <FaPuzzlePiece className="text-4xl text-white" />,
-    },
-    {
-      title: "Expert Support Round The Clock",
-      description:
-        "They will never fail to assist you in case of any doubts, queries, or difficulties in the situation you find yourself in.",
-      icon: <FaHeadset className="text-4xl text-white" />,
     },
   ];
   const cardsSectionImageData1 = [
     {
-      title: "AI & Analytics Consulting",
+      title: "IT Strategy & Planning",
       description:
-        "Making enterprise AI-ready with predictive models and AI experimentation strategies.",
+        "The creation of strategic IT roadmaps that integrate technology projects with business objectives and the overall mission of the company.",
       image: assets.customAiSolution,
       cardBg: "bg-blue-100",
     },
 
     {
-      title: "Cloud & IT Infrastructure",
+      title: "Cloud Consulting",
       description:
-        "We focus on industrial upgrading of cloud computing, data center, and storage to make your IT solution more scalable, flexible, and reliable.",
+        "A cloud uptake plan that charts the best cloud method (public, private, hybrid) for the set of requirements.",
       image: assets.appDevelopment,
       cardBg: "bg-green-100",
     },
     {
-      title: "Digital Business Models",
+      title: "Cybersecurity Consulting",
       description:
-        "The program’s goal is to get traditional businesses to switch over to modern digital-first models by providing the needed help.",
+        "The security risk assessment which uncovers the security gaps, threats, and possible ways of attack in the whole infrastructure.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Digital Transformation Consulting",
+      description:
+        "Business process simplification by identifying the suitable RPA, AI, and workflow tools to use for the process of automation.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+
+    {
+      title: "IT Infrastructure Consulting",
+      description:
+        "The improvements in network architecture that make network infrastructures high-performance, secure, and scalable for growth.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Business Consulting Solutions",
+      description:
+        "Development of the growth strategy that is composed of detailed plans for market expansion, new product launches, and partnerships.",
       image: assets.customAiSolution,
       cardBg: "bg-yellow-100",
     },
@@ -280,33 +215,59 @@ const Consulting = () => {
   const steps = [
     {
       step: "Step 01",
-      title: "Requirement Gathering",
+      title: "Discovery & Assessment",
       description:
-        "Identify areas for improvement, challenges, and missed opportunities in the business.",
+        "The discovery sessions form the core of our understanding of your IT landscape, business objectives, challenges and opportunities. These sessions include technology audits, stakeholder interviews, process mapping, and competitive analysis which together establish a foundation for strategy.",
     },
     {
       step: "Step 02",
-      title: "Research & Strategy Work",
+      title: "Strategy Development",
       description:
-        "Build a prescriptive model that reflects the industrial norm.",
+        "The experts of our team design a tailor-made roadmap based on the assessment findings and aligned to your business goals. Such a roadmap comprises prioritized recommendations, implementation timelines, resource requirements, budget planning, and expected ROI which makes the way ahead unequivocal.",
     },
     {
       step: "Step 03",
-      title: "Execution & Implementation",
+      title: "Implementation Support",
       description:
-        "The point where you get to show off your business and even further your consulting services.",
+        "We don’t just provide recommendations and leave. Our team is with yours all the way during the implementation process, offering technical expertise, project management, change management support, and generally making sure that the implementation is going on with minimal disturbance to the rest of the organization.",
+    },
+  ];
+  const cardsSectionSliderData1 = [
+    {
+      title: "Healthcare",
+      desc: "IT systems that are HIPAA-compliant, platforms for telemedicine, electronic health records, patient management solutions, and healthcare analytics that can be helpful in improving patient care and also the operational efficiency.",
+      image: assets.eCommerceSolution,
+      textColor: "text-white",
     },
     {
-      step: "Step 04",
-      title: "Testing",
-      description:
-        "Testing and measuring strategies have a positive impact on revenue streams, brand, and so on.",
+      title: "Finance & Banking",
+      desc: "Financial systems that are secure, solutions for regulatory compliance, fraud detection, risk management, platforms for digital banking, and fintech innovations that are in line with the strict requirements of the industry.",
+      image: assets.websiteDesign,
+      textColor: "text-white",
     },
     {
-      step: "Step 05",
-      title: "Post-Consulting Support",
-      description:
-        "The support provided after the completion of consulting continues indefinitely.",
+      title: "Manufacturing",
+      desc: "The implementation of ERP, the optimization of the supply chain, the integration of IoT, solutions for the predictive maintenance, quality management systems, and the productive efficiency for the improvement of the competitive advantage.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Retail & E-Commerce",
+      desc: "Omnichannel platforms, the management of inventory, analytics of customers, systems for point-of-sale, e-commerce solutions, and engines for personalization that are leading to the increase of the sales and also the satisfaction.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Education & EdTech",
+      desc: "Systems for learning management, platforms for virtual classrooms, student information systems, educational analytics, and digital transformation initiatives that are helpful in education delivery of the modern kind.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Government & Public Sector",
+      desc: "The digitization of citizen services, platforms for e-governance, solutions for data security, management of compliance, and technology modernization that is improving public service delivery efficiency.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
   ];
 
@@ -315,10 +276,9 @@ const Consulting = () => {
     <div className="relative">
       <div className="sticky inset-0">
         <Banner10
-          title="CONSULTING"
-          highlight="SERVICES COMPANY"
-          description="Capyngen is a premium consulting services company providing a broad spectrum of IT consulting services, business consulting solutions, and digital consulting services to various industries. Our team of 250+ expert consultants delivers tailor-made strategies that empower businesses, upgrade operations, and increase revenue. We are among the top 10 IT consulting companies in India, and our focus is on startups, SMEs, and enterprises; we help them become self-sufficient to achieve sustainable growth."
-          buttonText="Start Your Project"
+          title="Expert IT Consulting "
+          highlight="That Helps Your Business Growth"
+          description="The company in the world of technology and digital is advisory in this same world to different companies, especially Indian ones. We pack our consulting into Angola-customized, and the primary objective of the exercises is to make processes in businesses simpler, increase their productivity and expand their reach through the market."
           buttonAria="Start Your Project"
           services={[
             "Custom IT Consulting",
@@ -331,58 +291,18 @@ const Consulting = () => {
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <TopRatedCompany
-          title="Why Capyngen for Consulting Services?"
-          description={[
-            `Recent reports from Statista indicate that the global consulting services market is expected to go beyond $1.3 trillion by 2030 with a consistent CAGR growth. Such increase is fueled by the need for digital transformation, IT consulting, and business process optimization, which in turn points to the necessity of trustworthy consulting firms in India as well as worldwide.`,
-            <p className="text-xl">
-              Choosing <strong>Capyngen</strong> for consulting services means
-              gaining a partner that delivers advanced generative solutions,
-              leveraging cutting-edge technology and a customer-centric approach
-              to help clients future-proof their strategies and operations.
-            </p>,
-          ]}
-          image={assets.whyChooseUs}
-          isHidden="hidden"
-          background={assets.patternBg1}
-        />
         <GetStarted
           reverse={false}
-          backgroundColor="bg-gray-800"
-          textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Consulting Services Company Accredited By"
-          description="Capyngen has been recognized and rewarded not only by Clutch, GoodFirms, and Upwork but also by other leading industry platforms for our IT consulting services and business consulting solutions."
-          buttonText="Contact Us"
-          listItems={[
-            "70+ Reviews on Clutch",
-            "Top Rated” Title on Upwork with 100% Job Success",
-            "GoodFirms: Top IT & Business Consulting Services Company",
-            "Bark: Professional Digital Consulting Agency",
-          ]}
-        />
-        <GetStarted
-          reverse={true}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Top Consulting Company in India & USA"
-          description="Capyngen’s consulting professionals have a comprehensive background with IT, business, and digital consulting services. We develop inspiring and scalable solutions using the latest methodologies which are beneficial to all over in a competitive landscape. Our consulting portfolio is our client’s testimony to us."
-          buttonText="Contact Us"
-          image={assets.capyngen3d}
-        />
-        <CardsSectionGrid
-          heading="Our Consulting Portfolio"
+          title="Request for a Complimentary Consultation"
           description={[
-            "Capyngen's consulting portfolio showcases a robust suite of solutions designed to empower businesses at every stage of their growth journey. Their Business Growth Solutions have enabled SMEs to unlock new revenue streams and enhance their market positioning. With a specialty in Digital Transformation, Capyngen seamlessly guides enterprises into the realms of cloud, AI, and automation—dramatically boosting operational efficiency and digital innovation. Their Startup Advisory services have already assisted over a hundred startups in establishing resilient, scalable business models through specialized IT and business consulting.",
+            "You Experience Our Strategic Technology Solutions and Reach Your Business Growing with Us - Collaborate with One of the Top Indian IT Advisory Firms!",
           ]}
-          services={cardsSectionGridData1}
-          reverse
+          backgroundVideo={assets.backgroundVideo}
         />
         <CardsSection
-          heading="Explore Our Consulting Models"
+          heading="Why should you choose Capyngen Consulting?"
           subheading=""
           services={cardsSectionData1}
           sectionBg="bg-black"
@@ -392,30 +312,19 @@ const Consulting = () => {
           textColor="text-white"
           hoverTextColor=""
           textSize="text-md"
-          height="h-72"
-        />
-        <AppTypesSection
-          heading="What Makes Our Consulting Services Stand Out"
-          subheading1=""
-          subheading2=""
-          desc=""
-          cardHeight="h-70"
-          appTypes={appTypes}
         />
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Want to Grow With the Best Consulting Company?"
+          title="Request for a Complimentary Consultation"
           description={[
-            "Think of Capyngen as your reliable consulting companion. We have an extensive experience-based team that delivers affordable IT consulting services for small businesses in India and enterprise solutions for clients anywhere in the world.",
+            "Do you want to change your IT strategy and make it more efficient? Then, get in touch with Capyngen's expert consultants today and find out how your business can grow rapidly with a well-planned technology strategy by us!",
           ]}
           backgroundVideo={assets.backgroundVideo}
         />
         <CardsSectionImage
-          heading="The Latest Technologies We Embrace While Offering Consulting Services"
+          heading="Our Comprehensive Consulting Services"
           subheading=""
           services={cardsSectionImageData1}
           sectionBg="bg-gray-800"
@@ -424,22 +333,32 @@ const Consulting = () => {
           textSize="text-md"
           hoverBg="hover:bg-gray-200"
         />
+        <CardsSectionSlider
+          heading="Industries We Serve"
+          subheading=""
+          cardBg="bg-transparent"
+          hoverBg=" hover:bg-blue-50"
+          textColor="text-gray-800"
+          hoverTextColor=""
+          textSize="text-xl"
+          sectionBg="bg-black/90"
+          height="h-78"
+          headColor="text-white"
+          services={cardsSectionSliderData1}
+        />
         <HowWeWork
-          heading="The Process of Custom Consulting"
-          desc="Capyngen has a specific client-centric consulting process that considers your preferences and requirements:"
+          heading="How We Deliver Results - Our Consulting Approach"
+          desc=""
           steps={steps}
         />
         <GetStarted
-          reverse={true}
+          reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="We Are the Best Consulting Company For a Reason"
+          title=""
           description={[
-            "Our ambition is not to settle for the basics. Capyngen is an IT consulting digital solutions company that has the expertise to deliver the highest quality. Our small business consulting services in India are just a start, as we have the customer satisfaction globe covering our client reach.",
+            "Why not make use of our free IT consultation? First, our technology experts get to know your needs, then they create tailored strategies that really move your company forward and give you a return on your investment!",
           ]}
-          image={assets.getStarted}
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />
