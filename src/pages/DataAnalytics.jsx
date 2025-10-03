@@ -26,154 +26,137 @@ import {
 } from "react-icons/fa";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import GetStarted from "../components/GetStarted";
+import CardsSectionImage from "../components/CardsSectionImage";
 
 const DataAnalytics = () => {
   const faqItems = [
     {
-      question: "What is Data Analytics?",
+      question: "What are data analytics services?",
       answer:
-        "Data Analytics is the practice of examining data in its native format to recognize trends, insights, and other characteristics useful for decision making in business.",
+        "Data analytics services refer to the collection, processing, analysis, and visualization of business data for the purpose of extracting actionable insights. The range of services may include business intelligence, predictive analytics, data modeling, and strategic consulting.",
     },
     {
-      question: "Why is Data Analytics important for businesses?",
+      question: "Why should businesses invest in data analytics?",
       answer:
-        "Just informative decision making by the organization is the output of data analytics which in turn enriches the organization process besides enhancing it further, identifying new opportunities and also taking care of the customers.",
+        "Data analytics is a means to uncover how customers behave, streamline processes, identify new opportunities, lower expenses, predict trends, and obtain a competitive edge all which lead to a company becoming more profitable and efficient.",
     },
     {
-      question: "What types of Data Analytics services do you offer?",
+      question: "What makes Capyngen the best data analytics company in India?",
       answer:
-        "We provide the major analytics services with the addition of descriptive, diagnostic, predictive and prescriptive analytics coupled with cloud-based and on-demand analytics services.",
-    },
-    {
-      question: "Can small businesses benefit from Data Analytics?",
-      answer:
-        "Surely, even small businesses will be able to take advantage of data analytics to optimize their operations, improve their marketing strategies and get a leg up.",
-    },
-    {
-      question: "What industries can use your Data Analytics services?",
-      answer:
-        "Almost any industry that needs to make sense out of their data can benefit from the Data Analytics services such as finance, health, retail, manufacturing, logistics, education, etc.",
-    },
-    {
-      question: "Do you provide cloud-based Data Analytics services?",
-      answer:
-        "Yes, we do offer secured and scalable cloud-based analytics solutions that provide real-time data processing and enable you to access the insights.",
-    },
-    {
-      question: "What is the role of AI in Data Analytics?",
-      answer:
-        "Artificial Intelligence augments analytics by presenting predictive insights, automation, pattern recognition, and personalized suggestions.",
-    },
-    {
-      question: "Can you integrate Data Analytics into existing systems?",
-      answer:
-        "The different systems which are related to business like Enterprise Resource Planning, Customer Relationship Management software, Business Intelligence, and other platforms can be connected to our solutions for analytics.",
-    },
-    {
-      question: "Do you offer real-time analytics??",
-      answer:
-        "Ours is a real-time solution that comes with dashboards and reporting facilities to let you keep an eye on your business anytime, anywhere.",
-    },
-    {
-      question: "How can Data Analytics improve marketing strategies?",
-      answer:
-        "The use of analytics facilitates the understanding of consumer buying behavior, audience segmentation, campaign optimization, and efficient monitoring of the return on investment.",
-    },
-    {
-      question: "Do you provide custom Data Analytics solutions?",
-      answer:
-        "Of course, we are the ones who customize analytics according to your industry, business needs, and data infrastructure.",
-    },
-    {
-      question: "Can Data Analytics help in risk management?",
-      answer:
-        "Of course, risk prediction and even risk prescriptions that are enabled by analytics can assist in accomplishing risk identifications, preventing the occurrence of fraud, and also facilitation of decision-making.",
-    },
-    {
-      question: "Do you offer Data Analytics consulting services?",
-      answer:
-        "Yes, Our Professionals serve as a guide to businesses in formulating strategy, choosing the right technology, executing, and improving analytics processes.",
-    },
-    {
-      question: "How long does it take to implement Data Analytics solutions?",
-      answer:
-        "The period of implementation depends on the complexity of the data, project scope, and customization, and it mostly takes weeks to months.",
+        "Leveraging technology and expertise, Capyngen has the edge of technical skill, industry experience and the use of the latest technology, with a track record of success with enterprise clients, tailored customer engagements, end-to-end services, and committed support as one of the top providers of data analytics solutions.",
     },
     {
       question:
-        "Do you provide post-deployment support for analytics solutions?",
+        "What is the difference between business intelligence and data analytics?",
       answer:
-        "We do public and private monitoring, maintenance, and updates that guarantee prime performance of analytics systems that we sell.",
+        "Business intelligence mainly relies on descriptive analytics, that is, the presentation of data through reports and dashboards. Data analytics refers to all kinds of analytics depending on the stage of the data journey from collection to the use of AI and machine learning.",
+    },
+    {
+      question: "How long does implementation take?",
+      answer:
+        "We usually say 4-6 weeks for the completion of Simple BI dashboards whereas a comprehensive analytics platform of 3-6 months is required. We tailor a more precise schedule according to the project during the discovery phase.",
+    },
+    {
+      question: "What are cloud data analytics services?",
+      answer:
+        "Cloud data analytics services mean they make use of different cloud platforms (AWS, Azure, Google Cloud) for storage, data processing, and analysis that are simply scalable, cost-efficient, and have high accessibility without any major infrastructure investment upfront.",
+    },
+    {
+      question: "How much do data analytics services cost?",
+      answer:
+        "The cost will be determined depending upon the scope, the volume of data, how complex it is, and the technology used. We have many pricing options to choose from to best suit our clients which include project-based, subscriptions, and managed services. Get in touch with us for tailored quotes.",
+    },
+    {
+      question: "Can analytics work with existing systems?",
+      answer:
+        "Definitely! Our solutions for data integration permit access to nearly every source, be it abandoned databases, cloud software, ERP, CRM, IoT, or API interface.",
+    },
+    {
+      question: "How do you ensure data security?",
+      answer:
+        "Our enterprise-grade security system is complete with encryption, rigorous access control, detailed audit trails, and compliance with different security and privacy regulations, such as GDPR, HIPAA, and SOC 2.",
+    },
+    {
+      question: "What industries does Capyngen serve?",
+      answer:
+        "With demographic-specific modifications, we deliver that solution to the banking and finance industry, healthcare, retail, industrial sectors, IT, professional services, and education as well as hotels and restaurants.",
+    },
+    {
+      question: "Do you provide training?",
+      answer:
+        "Of course! Tool-specific training, dashboard use, data analysis and interpretation, and industry best systems customized for every user role.Of course! Tool-specific training, dashboard use, data analysis and interpretation, and industry best systems customized for every user role.",
+    },
+    {
+      question: "What is predictive analytics?",
+      answer:
+        "Through the use of historical data as well as machine learning, predictive analytics aims to foresee the most likely scenarios in the future such as sales demand, customer churn, risks, and trends, thus empowering decision-making to be proactive.",
+    },
+    {
+      question: "Can small businesses benefit from analytics?",
+      answer:
+        "For sure! We are tailoring and scaling flexible custom data analytics services for all business sizes and database our engagement with growing clientele on essentials of BI.",
+    },
+    {
+      question: "How do you measure success?",
+      answer:
+        "We set KPIs that are congruent with business imperatives like ROI, cost-cutting, revenue increase, productivity enhancement, prediction precision, and user onboarding rates.",
+    },
+    {
+      question:
+        "What's the difference between data analytics and data science?",
+      answer:
+        "Data analytics focuses on existing data to find answers to business questions. Data science is broader and includes advanced modeling, machine learning, and algorithm development. Capyngen provides both.",
     },
   ];
   const cardsSectionData1 = [
     {
-      title: "Customer-Facing Analytics Platforms",
+      title: "Data Strategy & Consulting",
       description:
-        "Interactive dashboards, real-time reporting, and insights specially designed for strategic decision-making are just some of the features you can offer to your business stakeholders.",
+        "Visualization of data is the core of the strategic backbone of company goals planning and implementing the analytics base for successful use in the company.",
       icon: <FaTachometerAlt className="text-4xl" />,
     },
     {
-      title: "Admin & Management Panels",
+      title: "Business Intelligence (BI) & Reporting",
       description:
-        "You can control every detail of data sources, integration pipelines, and analytics configurations, including the optimized workflows and the reliable data governance point.",
+        "On-demand real-time data visualization along with KPI monitoring enables instant insight through interactive custom dashboards.",
       icon: <FaUsersCog className="text-4xl" />,
     },
     {
-      title: "Custom Analytics Services",
+      title: "Advanced Analytics & Data Modeling",
       description:
-        "While doing the predictive part in a more advanced manner with AI, eventually business will be driven to the best scenarios for which, mixed with your ideas, we will provide custom analytics services as per your requirement.",
+        "The challenge is to implement the use of machine learning algorithms as a predictive tool for most accurate trend and outcome setting in the future.",
+      icon: <FaChartPie className="text-4xl" />,
+    },
+    {
+      title: "Big Data & Cloud Analytics",
+      description:
+        "Big data services that are scalable on AWS, Azure, or Google Cloud can support large datasets without running into inefficiency.",
+      icon: <FaTachometerAlt className="text-4xl" />,
+    },
+    {
+      title: "Data Integration & Management",
+      description:
+        "Different data sources are being integrated seamlessly to provide a single source of truth for data analysis.",
+      icon: <FaUsersCog className="text-4xl" />,
+    },
+    {
+      title: "Data Security & Governance",
+      description:
+        "Enterprise security that covers encryption, access control, and conforms to standards like GDPR and HIPAA, etc. ",
       icon: <FaChartPie className="text-4xl" />,
     },
   ];
-  const cardsSectionData2 = [
-    {
-      title: "Cloud-Based Analytics Services",
-      description:
-        "The cloud transition of your analytics will keep you from being limited by a lack of capacity and will allow you to have access to your business intelligence securely and at any time, from any place, in most cases by just using your smart device and the internet.",
-      icon: <FaCloud className="text-4xl" />,
-    },
-    {
-      title: "Big Data Processing",
-      description:
-        "When data grows to enormous sizes, we handle it highly efficiently by essentially changing the raw part into the usable one which could be done by complex algorithms.",
-      icon: <FaDatabase className="text-4xl" />,
-    },
-    {
-      title: "Predictive & Prescriptive Analytics",
-      description:
-        "Being able to decide correctly ahead of time and thereby anticipate the future´s demands, will be enabled by the usage of the most advanced types of AI and ML models that can, without interruption, merge with your data pipelines.",
-      icon: <FaBrain className="text-4xl" />,
-    },
-    {
-      title: "Custom Data Analytics Solutions",
-      description:
-        "Specific designs that precisely match the needs of your field, including dashboards, KPIs, and reports that are most important to you.",
-      icon: <FaTools className="text-4xl" />,
-    },
-    {
-      title: "Business Intelligence Integration",
-      description:
-        "One simple and efficient platform for combining data from diverse origins, thus, facilitating decision-making and the better running of operations.",
-      icon: <FaLayerGroup className="text-4xl" />,
-    },
-    {
-      title: "Real-Time Data Visualization",
-      description:
-        "Interactive dashboards and visualization tools that transform raw data into meaningful insights, enabling quicker and more informed decisions.",
-      icon: <FaChartBar className="text-4xl" />,
-    },
-  ];
+
   const cardsSectionSliderData1 = [
     {
       title: "Retail & E-Commerce",
-      desc: "Customer behavioral analysis, inventory management, sales analysis.",
+      desc: "The industries that might get the best benefits from data science technologies are customer behavior analytics, demand forecasting, and enterprise analytics for retail operations.",
       image: assets.eCommerceSolution,
       textColor: "text-white",
     },
     {
       title: "Healthcare",
-      desc: "Patient data analytics, healthcare process optimization, predictive health analytics.",
+      desc: "Patient outcome prediction, operational efficiency, healthcare compliance through data analytics are the areas where machine learning can be applied.",
       image: assets.websiteDesign,
       textColor: "text-white",
     },
@@ -199,40 +182,88 @@ const DataAnalytics = () => {
   const steps = [
     {
       step: "Step 01",
-      title: "Requirement Gathering",
+      title: "Discovery & Assessment",
       description:
-        "Know how your business excels, what data sources are there, and what KPIs need to be met.",
+        "Exploration of data landscape, business objectives, and analytics maturity in detail.",
     },
     {
       step: "Step 02",
       title: "Data Collection & Integration",
       description:
-        "Bring together data from numerous platforms, and make sure it is accurate, is reliable, and is complete.",
+        "Getting to the data in all the places where it is stored and establishing strong pipelines.",
     },
     {
       step: "Step 03",
-      title: "Analytics & Insights Generation",
+      title: "Analysis & Modeling",
       description:
-        "Introduce dashboards, prediction models, and up-to-the-minute reporting as decision-makers require.",
+        "Building logical models with the help of advanced statistics and machine learning methods.",
+    },
+  ];
+  const cardsSectionImageData1 = [
+    {
+      title: "Top Data Analytics Firm of India",
+      description:
+        "The track record of the delivery of transformative solutions that have a positive impact on the ROI of enterprises worldwide is easily recognizable.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+
+    {
+      title: "State-of-the-art Technology",
+      description:
+        "The company uses the very latest technology including AI-driven analytics, machine learning, and automation of insights to achieve the target.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
     },
     {
-      step: "Step 04",
-      title: "Testing & Quality Assurance",
+      title: "Personalized Solutions",
       description:
-        "Data visualization accuracy, data solution’s standard and_speed, checked here Deployment & Support",
+        "Just the right fit of data analytics services have been created specifically for your industry, business model, and goals.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
     },
     {
-      step: "Step 05",
-      title: "Deployment & Support",
+      title: "Cloud Mastery",
       description:
-        "Offer cloud data analytics services on the market, along with routine maintenance, upgrades, and feature additions.",
+        "The top provider of cloud-based business intelligence and analytics services over all major platforms.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
     },
     {
-      step: "Step 06",
-      title: "Continuous Improvement & Optimization",
+      title: "Domain Knowledge",
       description:
-        "Regularly analyze performance metrics to identify opportunities for refining analytics models and processes, ensuring your data solutions evolve with your business needs.",
+        "Deep Knowledge of Finance, Healthcare, Retail, Manufacturing, and the Technology sectors.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
     },
+    {
+      title: "Assistance Anytime",
+      description:
+        "Fully committed to consulting, training, and support at any hour of the day or night which therefore guarantees the continuity of success.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+  ];
+  const technologies = [
+    { name: "JavaScript", logo: assets.js },
+    { name: "Python", logo: assets.python },
+    { name: "CSS3", logo: assets.css3 },
+    { name: "C++", logo: assets.cplusplus },
+    { name: "PHP", logo: assets.php },
+    { name: "React", logo: assets.react },
+    { name: "Vue.js", logo: assets.vuejs },
+    { name: "AngularJS", logo: assets.angular },
+    { name: "JQuery", logo: assets.jquery },
+    { name: "Next.js", logo: assets.nextjs },
+    { name: "MongoDB", logo: assets.mongodb },
+    { name: "MySQL", logo: assets.mysql },
+    { name: "PostgreSQL", logo: assets.postgresql },
+    { name: "Node.js", logo: assets.nodejs },
+    { name: "Laravel", logo: assets.laravel },
+    { name: "Express.js", logo: assets.expressjs },
+    { name: "Azure", logo: assets.azure },
+    { name: "AWS", logo: assets.aws },
+    { name: "Google Cloud", logo: assets.googlecloud },
   ];
 
   useSplitTextAnimation("h1");
@@ -242,11 +273,13 @@ const DataAnalytics = () => {
         <Banner5
           title={
             <>
-              Make Better Decisions with{" "}
+              <span className="text-3xl md:text-4xl ">
+                Transform Your Business with Advanced{" "}
+              </span>
               <span className="text-cyan-400">Data & Analytics Solutions</span>
             </>
           }
-          description="The potential of data to change your business is at your fingertips. Capyngen provides complete data analytics services and cloud solutions that enable organizations to make quicker, smarter, and data-driven decisions. The professional team of us will guide any company ranging from a startup to an enterprise in uncovering the valuable insights that will accelerate their business growth, improve the utilization of the supply chain, and increase the benefits to the highest extent of their business."
+          description="Drive your enterprise with Capyngen’s data-driven approaches and analytic services that allow you to discover, automate, and lead the business to the growth that lasts."
           primaryBtnText="Get started"
           primaryBtnLink="#"
           image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
@@ -254,9 +287,30 @@ const DataAnalytics = () => {
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Become Brilliant with Data Analytics"
+          buttonText="Get Started"
+          description={[
+            "Your Data is the Gateway to the Smarter Business Decisions with Capyngen’s Proven Technology & Expert Services!",
+          ]}
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="Why Data & Analytics Are Necessary for Modern Businesses"
+          description={[
+            `We are in a market where data is king, and the digital economy era is the one we live in. Capyngen is the player that makes data do work for you by simplifying it and reporting the results in a way that decision-makers find easy to follow. As a data analytics company, we are the ones that take care of all the data-related needs from strategizing to implementing advanced analytics and visualizing the results. Our cloud data analytics efforts lead to companies uncovering more opportunities earlier than competitors, changing operations to utilize resources more efficiently, and finding trends with high accuracy. The question of how much the business is big or how complicated the BI level is, the answer is always Capyngen.`,
+          ]}
+          image={assets.whyChooseUs}
+          isHidden={true}
+          imageHeight="aspect-[1/1]"
+          background={assets.patternBg1}
+        />
         <CardsSection
-          heading="Our Data & Analytics Deliverables"
-          subheading="Capyngen’s data analytics services are designed to help you simplify your data processes, uncover actionable insights, and ultimately, make informed business decisions. The solutions we offer are not only scalable and customizable, but they are also cloud-ready."
+          heading="Comprehensive Data & Analytics Solutions"
+          subheading=""
           services={cardsSectionData1}
           sectionBg="bg-black"
           cardBg="bg-gray-800 hover:bg-gray-900 transition-all duration-400 ease-in-out hover:shadow-2xl hover:shadow-gray-700/70 hover:-translate-y-2"
@@ -267,18 +321,27 @@ const DataAnalytics = () => {
           textSize="text-md"
           height="h-78"
         />
-        <CardsSection
-          heading="Data & Analytics Services We Offer"
-          subheading=""
-          services={cardsSectionData2}
-          sectionBg="bg-blue-900"
-          headColor="text-white"
-          cardBg="bg-blue-900 border border-white transition-all duration-400"
-          hoverBg=" hover:border-black"
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
           textColor="text-white"
-          hoverTextColor=""
+          title=""
+          buttonText="Get Started"
+          textSize="text-2xl"
+          description={[
+            "Turn off the lights, request a free demo, and discover how Capyngen analytics solutions can transform your business if you really want to harness the power of your data!",
+          ]}
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <CardsSectionImage
+          heading="Why Businesses Trust Capyngen"
+          subheading=""
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
           textSize="text-md"
-          height="h-86"
+          hoverBg="hover:bg-gray-200"
         />
 
         <CardsSectionSlider
@@ -294,104 +357,15 @@ const DataAnalytics = () => {
           headColor="text-white"
           services={cardsSectionSliderData1}
         />
-
-        <TopRatedCompany
-          title="Why Choose Capyngen as Your Data & Analytics Partner"
-          description={[
-            <>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
-                {[
-                  {
-                    title: "Expert Team",
-                    text: "Certified in cloud data analytics services, BI, and predictive modeling.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Tailored Solutions",
-                    text: "We build data analytics programs that attract your industry.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Flexible & Problem-free",
-                    text: "Solutions made to cope with increased datasets and changing business requirements.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Data-Driven Decisions",
-                    text: "Convert dull data into the user-friendly forms that encourage growth and save time.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "India's Premier Analytics Company",
-                    text: "Honored for providing excellent data analytics services in a variety of fields.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                  >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>{" "}
-                    – {text}
-                  </li>
-                ))}
-              </ul>
-            </>,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-          isHidden="hidden"
-          imageHeight="aspect-[4/3] md:aspect-[1/1]"
+        <HowWeWork
+          heading="Our Data & Analytics Process"
+          desc=""
+          steps={steps}
         />
-
-        <HowWeWork heading="How Our AI Process Works" desc="" steps={steps} />
-        <TopRatedCompany
-          reverse={true}
-          title="Advanced Technologies We Integrate"
-          description={[
-            <>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
-                {[
-                  {
-                    title: "AI & Machine Learning",
-                    text: "For forecasting and recommending actions through analytics.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Cloud Computing",
-                    text: "Client-friendly, secure, and adaptable cloud-based business intelligence products.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Data Visualization Tools",
-                    text: "Interactive reporting with Power BI, Tableau, and in-house implementations.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Big Data Frameworks",
-                    text: "Technologies such as Hadoop, Spark, and scalable data pipelines.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                  >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>{" "}
-                    – {text}
-                  </li>
-                ))}
-              </ul>
-            </>,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-          isHidden="hidden"
-          imageHeight="aspect-[4/3] md:aspect-[1/1]"
+        <TechnologiesCarousel
+          title="Custom AI Solution Technologies We Use"
+          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+          technologies={technologies}
         />
         <GetStarted
           reverse={false}
@@ -399,10 +373,11 @@ const DataAnalytics = () => {
           textColor="text-white"
           buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
           buttonTextColor="text-white"
-          title="Start Your Data-Driven Transformation Today"
+          title=""
+          textSize="text-2xl"
           buttonText="Get Started"
           description={[
-            "Associate with Capyngen to avail top-grade data analytics solutions, which not only optimize your business operations but also open a wide variety of growth opportunities. Just ask for a no-charge demonstration and know how with our tailor-made data analytics.",
+            "You just need to make a single click and Capyngen experts will be available for a free consultation on data analytics. They are the only people who can locate your requirements, equip you with customized solutions and deliver visible business results.",
           ]}
           backgroundVideo={assets.backgroundVideo}
         />

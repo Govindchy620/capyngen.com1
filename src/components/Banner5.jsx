@@ -9,10 +9,10 @@ const Banner5 = ({
 }) => {
   return (
     <section className="bg-gray-900 pt-20" aria-label="DevOps Solutions Banner">
-      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-16 lg:grid-cols-12">
+      <div className="grid max-w-[90vw] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-16 lg:grid-cols-12">
         {/* Left Content */}
         <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
-          <h1 className="max-w-3xl mb-4 text-4xl font-extrabold leading-tight md:text-5xl text-white">
+          <h1 className="mb-4 text-4xl font-extrabold leading-tight md:text-5xl text-white">
             {title}
           </h1>
           <p className="max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg">

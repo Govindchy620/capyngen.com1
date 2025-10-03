@@ -36,7 +36,7 @@ export default function Banner8({
               {titlePrefix}
             </span>
             <span
-              className="block text-white text-4xl sm:text-5xl md:text-6xl"
+              className="block text-white text-4xl sm:text-5xl"
               tabIndex={0}
             >
               {titleMain}

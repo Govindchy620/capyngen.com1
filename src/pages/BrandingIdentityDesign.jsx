@@ -315,7 +315,7 @@ const BrandingIdentityDesign = () => {
             </span>
           </>
         }
-        description="Capyngen's branding design services, a branding professional who is always ready to come up with fresh, simple, and globally consistent brand identities. As a result, we can represent companies of every size, from the mere idea stage to the establishment of a multinational corporation, to be able to create brand identities that are not only eye-catching but also cross geographical borders."
+        description="One of the main reasons consumers choose a certain product over another is the branding. Capyngen's branding design services, a branding expert who is always prepared to think out of the box, come up with ways to simply and globally standardize brand identities. Thus, we are not limited in representing companies of various sizes and in different stages of their development, ranging from the idea stage to that of a multinational corporation, which allows us to produce brand identities that are visually attractive and that can go beyond geographical borders."
         primaryBtnText="Get started"
         primaryBtnLink="#"
         image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
@@ -330,16 +330,16 @@ const BrandingIdentityDesign = () => {
           buttonTextColor="text-black"
           title=""
           description={[
-            "Become the sensation of the world with Capyngen's professional branding design services. Unleash the original logo, digital branding, and packaging that fit your style spot now!",
+            "Turn into a global sensation with the help of Capyngen's expert branding design services. Stop the original logo, digital branding, and packaging that are just right for you from rolling now!",
           ]}
           textSize="text-2xl"
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />
         <TopRatedCompany
-          title="Why branding design matters?"
+          title="Reasons for branding design to be considered"
           description={[
-            `Social media, ads, and the 24/7 news cycle have not only changed the way people communicate but also the speed of the modern world. Moreover, a brand is nothing but a brand name in this frenzy of interconnectedness where the brand is the customer loyalty is the narrative, the emotion, and the entire customer's experience. Capyngen's branding design services help international clients to systematically and creatively discover their unique identities and thus differentiate in a deep and lasting way as well as to cultivate loyalty to the brand. A company with a harmonized visual identity is able to differentiate itself from other competitors, become valued by customers, and even take the marketing to higher levels of engagement and conversions.`,
+            `The social media revolution, the ads, and the 24/7 news cycle have not only altered the people's way of communicating but also the speed of the modern world. In addition, a brand is just a brand name in this interconnected world where the brand is the customer loyalty is the narrative, the emotion, and the whole customer's experience. Capyngen's branding design services provide the necessary tools to clients worldwide to do it systematically and creatively to find their unique identities and hence stand out in a deep and lasting way as well as to nurture loyalty to the brand. A company with a harmonized visual identity is able to differentiate itself from other competitors, become valued by customers, and even take the marketing to higher levels of engagement and conversions.`,
           ]}
           image={assets.whyChooseUs}
           isHidden={true}
