@@ -46,7 +46,7 @@ export default function Banner15() {
       </div>
 
       {/* Right: Offer/Points */}
-      <aside className="flex-1 max-w-xl w-full mx-auto lg:mx-0 flex flex-col justify-center bg-gray-700 p-10 lg:p-16 relative z-10">
+      <aside className="flex-1 max-w-xl w-full mx-auto lg:mx-0 flex flex-col justify-center bg-gray-700 p-10 lg:p-10 lg:pt-24 relative z-10">
         <h2 className="text-2xl font-bold text-white leading-snug">
           What is{" "}
           <span className="text-blue-600 italic font-extrabold">
@@ -67,6 +67,10 @@ export default function Banner15() {
           <OfferCheckItem text="Earns the confidence and the name." />
           <OfferCheckItem text="Pulls the right leads and sales." />
         </ul>
+        <p className="mt-6 text-white text-base lg:text-lg max-w-2xl leading-relaxed">
+          To be more accurate, social media marketing is the modern way to
+          connect with your consumers through your brand.
+        </p>
       </aside>
     </section>
   );
