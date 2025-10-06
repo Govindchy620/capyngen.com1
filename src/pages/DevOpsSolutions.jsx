@@ -1,5 +1,3 @@
-import React from "react";
-import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
 import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
@@ -10,7 +8,6 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
 import BusinessValueStats from "../components/BusinessValueStats";
 import CardsSection from "../components/CardsSection";
 import {
@@ -22,7 +19,6 @@ import {
   FaTasks,
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
-import Banner4 from "../components/Banner4";
 import Banner5 from "../components/Banner5";
 import IndustryServices from "../components/IndustryServices";
 
