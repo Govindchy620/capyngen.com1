@@ -24,6 +24,7 @@ import {
 import GetStarted from "../components/GetStarted";
 import Banner4 from "../components/Banner4";
 import Banner5 from "../components/Banner5";
+import IndustryServices from "../components/IndustryServices";
 
 const DevOpsSolutions = () => {
   const faqItems = [
@@ -209,28 +210,49 @@ const DevOpsSolutions = () => {
   ];
   const servicesData = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our DevOps Solutions company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      image: assets.bg1,
+      title: "Scalable Cloud Infrastructure",
+      desc: "Establish a cloud environment that is solid, adaptable, and of top quality that is capable of scaling your business needs without any hiccup.",
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced DevOps Solutions services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      image: assets.bg1,
+      title: "Automated Cloud Deployments",
+      desc: "Facilitate and speed up the release cycles by having fully automated deployment pipelines resulting in fewer manual efforts and error-free releases.",
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      image: assets.bg1,
+      title: "Continuous Integration & Delivery (CI/CD)",
+      desc: "Sign up for faster, safer, and more dependable software delivery that is driven by automation of integration, testing, and deployment.",
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      image: assets.bg1,
+      title: "Cloud Security & Compliance",
+      desc: "Secure your applications and data by adopting security practices that comply with the set standards in the industry and other regulatory requirements.",
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our DevOps Solutions solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      image: assets.bg1,
+      title: "Infrastructure as Code (IaC)",
+      desc: "Efficiently manage, set up, and provision infrastructure using code for easily repeatable and error-free installations.",
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      image: assets.bg1,
+      title: "Multi-Cloud Optimization",
+      desc: "Use the most attractive features of different cloud providers to your advantage while you keep your expenses at bay and make full use of the resources of the cloud provider.",
+    },
+    {
+      image: assets.bg1,
+      title: "Disaster Recovery Solutions",
+      desc: "Protect essential hardware and software programs from shutdowns or sudden destructions with recovery programs that are strong and reliable.",
+    },
+    {
+      image: assets.bg1,
+      title: "Performance Monitoring & Optimization",
+      desc: "Keep on tracking the health of the application, finding the places where the flow of performance is slowed down, and making the software work at its best to give users great experiences.",
+    },
+    {
+      image: assets.bg1,
+      title: "Custom Cloud Solutions",
+      desc: "Design cloud plans and cloud architectures that are the right fit for your business requirements and growth goals.",
     },
   ];
   const steps = [
@@ -321,6 +343,107 @@ const DevOpsSolutions = () => {
           backgroundColor="bg-[#0a1b2e]"
           textColor="text-white"
           highlightColor="text-red-500"
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Increase Your Software Delivery Speed"
+          description={[
+            "Make your development and deployment pipelines more efficient using the expert DevOps solutions and services of Capyngen.",
+          ]}
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="What is DevOps?"
+          description={[
+            `DevOps refers to the implementation of specific practices that integrate software development (Dev) and IT operations (Ops) with the aim of reducing the software development lifecycle while maintaining the quality of the software. The main characteristics of DevOps are the use of automation, teamwork, continuous integration, and continuous deployment, these being some of the requirements for achieving a fast and reliable software release.`,
+            `Capyngen’s DevOps consultant working with DevOps companies guides companies to implement DevOps strategies in an efficient and effective way, thereby gaining better productivity and fostering positive change.`,
+          ]}
+          image={assets.whyChooseUs}
+          isHidden={true}
+          background={assets.patternBg1}
+          imageHeight="aspect-[1/1]"
+        />
+        <TopRatedCompany
+          title="Importance of DevOps in Modern Software Development"
+          description={[
+            `DevOps is Comprehensively responsible for the present software environment:`,
+            <>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+                {[
+                  {
+                    title: "Quicker Software Delivery",
+                    text: "Get time to market improved release cycles through your pipelines.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Better Collaboration",
+                    text: "Get rid of ‘walls’ or ‘barriers’ between dev and ops teams.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Scalability & Reliability",
+                    text: "Make it possible for software to perform well under any kind of load… etc.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Security Features Improved Over Time",
+                    text: "Risk is reduced through compliance and continuous monitoring.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Give Back to the Company",
+                    text: "Efficient management of the infrastructure leads to operational costs getting lower.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "",
+                    text: "Going up or down in your ecommerce business without any hustle when you gain.",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    <strong className={`${color} drop-shadow-md`}>
+                      {title}
+                    </strong>
+                    {text}
+                  </li>
+                ))}
+              </ul>
+              <p>
+                Thanks to Capyngen's DevOps deployment services, businesses can
+                realize operational excellence that is measurable and gain a
+                unique advantage over their competitors.
+              </p>
+            </>,
+          ]}
+          image={assets.whyChooseUs}
+          isHidden={true}
+          background={assets.patternBg1}
+        />
+        <IndustryServices
+          heading="DevOps Services We Offer"
+          subheading="Capyngen offers end-to-end DevOps services that are specifically designed for large enterprises needs:"
+          cardBg="bg-gray-700"
+          cardText="text-white"
+          cardDescText="text-white"
+          services={servicesData}
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Schedule a Consultation for Free"
+          description={[
+            "Discuss with our DevOps specialists and get tailor-made strategies for your business operations.",
+          ]}
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
         />
         <CardsSection
           heading="Transform Your App Vision with Our App Development Consulting Services"

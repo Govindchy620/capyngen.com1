@@ -2,8 +2,22 @@ import React from "react";
 
 const Banner5 = ({
   title = "DevOps Solutions",
-  description = "When it comes to software delivery, DevOps Solutions are no longer an optional add-on, rather, they are an integral component of the process. Businesses in modern times need more than speed, they need swift, secure, and ideal synchronized collaboration. With the appropriate DevOps services, one can establish an operational and developmental interface that optimally removes silos and facilitates innovative breakthroughs.",
-  primaryBtnText = "Get started",
+  description = (
+    <>
+      <p className="my-4 font-bold text-xl">
+        Accelerate your software delivery and streamline operations with
+        Capyngen’s expert DevOps solutions.
+      </p>
+      <p>
+        Capyngen delivers DevOps solutions worldwide which help to improve
+        teamwork, simplify the delivery of software, and maintain infrastructure
+        that is secure, scalable, and reliable. By delivering customized plans,
+        complete implementation, and round-the-clock assistance for companies of
+        various sectors, we are different.
+      </p>
+    </>
+  ),
+  primaryBtnText = "Start using the Capyngen DevOps Solutions",
   primaryBtnLink = "#",
   image = "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png",
 }) => {

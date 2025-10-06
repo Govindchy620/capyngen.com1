@@ -27,235 +27,129 @@ import {
   FaShieldAlt,
   FaBullhorn,
   FaHeart,
+  FaReact,
+  FaLaravel,
+  FaCubes,
 } from "react-icons/fa";
 import Banner5 from "../components/Banner5";
 import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
+import IndustryServices from "../components/IndustryServices";
+import TechStack from "../components/TechStack";
 
 const ECommerceSolution = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is an e-commerce solution?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "An e-commerce solution is a complete system that supports companies in selling their products or services over the internet. It includes website design, development, payment integration, marketing, and support.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why does my business need an e-commerce website?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "An e-commerce website enables your company to make sales 24/7, reach global customers, reduce operating costs, and offer a pleasant shopping experience that boosts purchasing power.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
-    },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      question:
+        "Do you offer a mobile e-commerce application for both Android and iOS devices?",
+      answer:
+        "Yes! Capyngen builds fast and reliable mobile e-commerce apps for Android and iOS using technologies like Flutter, React Native, and native languages.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      question:
+        "Could a platform like Capyngen be able to create a multi-vendor marketplace similar to Amazon?",
+      answer:
+        "Absolutely. We develop scalable multi-vendor marketplaces where multiple sellers can list and sell products, similar to Amazon or Flipkart.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our E-Commerce Solutions company, integrating e-learning tools, course management, and student engagement features.",
+      question: "Which payment gateways are available for integration?",
+      answer:
+        "We support major global and local payment gateways including Stripe, PayPal, Razorpay, and many others for fast and reliable transactions.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our E-Commerce Solutions services to highlight your skills and attract potential clients.",
+      question:
+        "Do you provide SEO and digital marketing services for e-commerce?",
+      answer:
+        "Yes. We implement SEO and digital marketing strategies to improve site ranking, attract visitors, and convert them into customers effectively.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our E-Commerce Solutions company, featuring responsive designs and seamless navigation for a better user experience.",
+      question:
+        "Do you think Capyngen can help me develop my e-store to be accessible worldwide?",
+      answer:
+        "Indeed. Our solutions support global accessibility with features like multi-currency, multi-language, and international shipping options.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+      question: "How much time is needed to build an e-commerce website?",
+      answer:
+        "Depending on the project scope, it typically takes between 3 to 8 weeks from planning to launch.",
     },
     {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive E-Commerce Solutions solutions tailored to your needs.",
+      question: "Do you assure maintenance of the project after it goes live?",
+      answer:
+        "Definitely. We provide ongoing support and maintenance to ensure smooth operation, security, and updates for your e-commerce store.",
     },
     {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our E-Commerce Solutions company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+      question: "Is it possible for you to link CRM and ERP systems together?",
+      answer:
+        "Yes! We integrate leading CRM and ERP platforms to streamline and enhance your business operations.",
     },
     {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our E-Commerce Solutions services, that enhance donor engagement and effectively communicate your mission.",
+      question:
+        "Do you have any subscription-based models for e-commerce purposes?",
+      answer:
+        "Yes. We build subscription and membership platforms with recurring billing for products, services, or SaaS businesses.",
     },
     {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+      question: "What types of businesses are you willing to help?",
+      answer:
+        "We work with a wide range of industries including retail, food, medical, education, travel, hospitality, and B2B wholesale.",
     },
     {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+      question: "Will my e-commerce website be optimized for smartphones?",
+      answer:
+        "Yes. All our e-commerce websites are fully responsive and mobile-friendly for seamless shopping on any device.",
     },
     {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      question: "Is it possible to have my custom domain and hosting?",
+      answer:
+        "Yes. You can use your own domain and hosting, or we can manage it for you.",
+    },
+    {
+      question: "How to start a project with Capyngen?",
+      answer:
+        "Simply book a free consultation or message our team. We'll understand your goals and craft a tailored e-commerce solution for you.",
     },
   ];
   const servicesData = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our E-Commerce Solutions company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      image: assets.bg1,
+      title: "Search Engine Optimization (SEO)",
+      desc: "Make your website be ranked at the top of Google.",
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced E-Commerce Solutions services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      image: assets.bg1,
+      title: "Social Media Integration",
+      desc: "Get more customers and advertising your products directly on Instagram, Facebook, and LinkedIn.",
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      image: assets.bg1,
+      title: "Email & SMS Campaigns",
+      desc: "Revive relationships with customers and stimulate repeat purchases.",
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      image: assets.bg1,
+      title: "Content Marketing",
+      desc: "Gain the trust of visitors and attract the traffic with helpful content.",
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our E-Commerce Solutions solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      image: assets.bg1,
+      title: "Paid Advertising (PPC)",
+      desc: "Get targeted traffic to your online shop right away.",
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
-    },
-  ];
-  const cardsSectionGridData1 = [
-    {
-      title: "Ecommerce App Development",
-      description:
-        "We create a mobile-friendly app with an ecommerce foundation to provide fantastic on-the-go access to any screen size.",
-      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
-      iconBg: "bg-orange-100",
-    },
-    {
-      title: "Payment Gateway Integration",
-      description:
-        "Increase business accommodations and user association by integrating excellent payment gateway modes into popular ecommerce schemas.",
-      icon: <CreditCard className="w-6 h-6 text-green-500" />,
-      iconBg: "bg-green-100",
-    },
-    {
-      title: "Responsive Shopping Application",
-      description:
-        "We provide you with dynamic potential from data query, analysis, and enterprise reporting to complete check-out analysis.",
-      icon: <Store className="w-6 h-6 text-lime-500" />,
-      iconBg: "bg-lime-100",
-    },
-    {
-      title: "Shopping Cart Development",
-      description:
-        "Our well-tailored shopping cart development services enhance customer engagement and the latest business adaptations.",
-      icon: <ShoppingCart className="w-6 h-6 text-red-500" />,
-      iconBg: "bg-red-100",
-    },
-  ];
-  const cardsSectionDifferentColorData = [
-    {
-      title: "Quality Assurance",
-      description:
-        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
-      icon: <FaLightbulb className="text-4xl" />,
-      cardBg: "bg-red-100",
-    },
-    {
-      title: "Real Time Support",
-      description:
-        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
-      icon: <FaChartLine className="text-4xl" />,
-      cardBg: "bg-blue-100",
-    },
-    {
-      title: "Cost Effectiveness",
-      description:
-        "We provide affordable and superb quality services that fit your budget.",
-      icon: <FaCogs className="text-4xl" />,
-      cardBg: "bg-purple-100",
-    },
-    {
-      title: "Quality Assurance",
-      description:
-        "Our developers use prominent app development solutions ensuring better quality of product is delivered.",
-      icon: <FaLightbulb className="text-4xl" />,
-      cardBg: "bg-gray-100",
-    },
-    {
-      title: "Real Time Support",
-      description:
-        "We offer full range of support for our clients in real-time: phone, e-mail, and online.",
-      icon: <FaChartLine className="text-4xl" />,
-      cardBg: "bg-yellow-100",
-    },
-    {
-      title: "Cost Effectiveness",
-      description:
-        "We provide affordable and superb quality services that fit your budget.",
-      icon: <FaCogs className="text-4xl" />,
-      cardBg: "bg-green-100",
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Strategic Planning",
-      description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
-    },
-    {
-      step: "Step 02",
-      title: "Custom Design & Prototyping",
-      description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
-    },
-    {
-      step: "Step 03",
-      title: "Front-End Development",
-      description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
-    },
-    {
-      step: "Step 04",
-      title: "Back-End Development",
-      description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
-    },
-    {
-      step: "Step 05",
-      title: "Quality Assurance & Testing",
-      description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
-    },
-    {
-      step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
-      description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
+      image: assets.bg1,
+      title: "Analytics & Conversion Tracking",
+      desc: "Evaluate the results and evolve effectively.",
     },
   ];
   const cardsSectionImageData1 = [
@@ -325,6 +219,26 @@ const ECommerceSolution = () => {
       cardBg: "bg-yellow-100",
     },
   ];
+  const cardsSectionData1 = [
+    {
+      title: "CRM & ERP Systems",
+      description:
+        "Make the flow of your business data more efficient for easier management.",
+      icon: <FaReact className="text-4xl text-white" />,
+    },
+    {
+      title: "AI-Powered Product Suggestions",
+      description:
+        "Get more sales through intelligent suggestions of products.",
+      icon: <FaLaravel className="text-4xl text-white" />,
+    },
+    {
+      title: "Chatbots for Support",
+      description:
+        "Let chatbots give instant help and raise customer happiness level.",
+      icon: <FaCubes className="text-4xl text-white" />,
+    },
+  ];
   const cardsSectionData2 = [
     {
       title: "B2C (Business to Consumer) Stores",
@@ -361,6 +275,221 @@ const ECommerceSolution = () => {
       description:
         "With the help of integrated shopping features, you can sell directly on social media platforms.",
       icon: <FaHeart className="text-4xl" />,
+    },
+  ];
+  const solutionsData = [
+    {
+      title: "Fast & Secure Checkout Process",
+      desc: "Eliminate cart abandonment to a great extent with an effortless payment flow.",
+    },
+    {
+      title: "Scalable & Flexible for Business Growth",
+      desc: "Our ecommerce website design will be with you whether you are a small town business or take it to the international market.",
+    },
+    {
+      title: "Increased Sales & Brand Reach",
+      desc: "Make your brand visible to the targeted audience by utilizing the robust ecommerce business solutions.",
+    },
+    {
+      title: "Advanced Integrations & Automation",
+      desc: "Cut down on time and errors considerably with the implementation of smart systems.",
+    },
+    {
+      title: "Dedicated Support & Maintenance",
+      desc: "Always get the assistance of a professional, no matter where you are in the world.",
+    },
+  ];
+  const techStack = [
+    {
+      title: "Frontend",
+      items: [
+        {
+          name: "React",
+          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+        },
+        {
+          name: "Angular",
+          icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
+        },
+        {
+          name: "Next.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+        },
+        {
+          name: "Vue.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+        {
+          name: "Kotlin",
+          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
+        },
+        {
+          name: "Vue.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+        {
+          name: "Kotlin",
+          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
+        },
+      ],
+    },
+    {
+      title: "Backend",
+      items: [
+        {
+          name: "Node.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+        },
+        {
+          name: "Python",
+          icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+        },
+        {
+          name: "Ruby on Rails",
+          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
+        },
+        {
+          name: "Java",
+          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+        },
+        {
+          name: "PHP",
+          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+        },
+        {
+          name: "Ruby on Rails",
+          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
+        },
+        {
+          name: "Java",
+          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+        },
+        {
+          name: "PHP",
+          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+        },
+      ],
+    },
+    {
+      title: "Platforms",
+      items: [
+        {
+          name: "iOS",
+          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
+        },
+        {
+          name: "Android",
+          icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
+        },
+        {
+          name: "React Native",
+          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+      ],
+    },
+    {
+      title: "Database",
+      items: [
+        {
+          name: "MongoDB",
+          icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+        },
+        {
+          name: "MySQL",
+          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+        },
+        {
+          name: "Firebase",
+          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+        },
+        {
+          name: "Firebase",
+          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+        },
+        {
+          name: "Oracle",
+          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
+        },
+      ],
+    },
+    {
+      title: "UI/UX",
+      items: [
+        {
+          name: "Adobe XD",
+          icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
+        },
+        {
+          name: "Sketch",
+          icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
+        },
+        {
+          name: "Figma",
+          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        },
+        {
+          name: "Figma",
+          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        },
+        {
+          name: "InVision",
+          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
+        },
+      ],
+    },
+  ];
+  const steps = [
+    {
+      step: "Step 01",
+      title: "Requirement Analysis",
+      description:
+        "Get a detailed insight into the business goals, target audience, and, in general, the needs of the application. Such an approach guarantees that the tailored e-commerce design and development solutions will be built on a solid foundation.",
+    },
+    {
+      step: "Step 02",
+      title: "Planning & Strategy",
+      description:
+        "Construct a detailed roadmap, pick the suitable technologies, and establish your milestones. With a good plan, the work keeps the project on track in terms of time and business goals.",
+    },
+    {
+      step: "Step 03",
+      title: "UI/UX Design",
+      description:
+        "Come up with eye-catching and user-friendly interfaces which allow users to enjoy their experience. Successful e-commerce UI/UX design is the main driver of customer engagement and conversions growing.",
+    },
+    {
+      step: "Step 04",
+      title: "Development",
+      description:
+        "Develop e-commerce websites or mobile apps that are sturdy, scalable, and high-performing. Our development process is centered on security, future scalability, and clean coding.",
+    },
+    {
+      step: "Step 05",
+      title: "Integration & Testing",
+      description:
+        "Connect APIs, payment gateways, databases, and third-party tools without any trouble. Hardcore testing is the time when they iron out any bugs which therefore should result in the flawless function, quickness, and security on all devices.",
+    },
+    {
+      step: "Step 06",
+      title: "Deployment & Maintenance",
+      description:
+        "The platform is going to be easily launched and will receive updates and technical assistance continually. Systematic maintenance is taking care of your e-commerce solutions to run smoothly, be fast and fully optimized.",
     },
   ];
 
@@ -489,69 +618,66 @@ const ECommerceSolution = () => {
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />
-        <TopRatedCompany
-          title="Top-Rated E-Commerce Solutions Company"
-          description={[
-            `RichestSoft provides top-notch and oriented E-Commerce Solutions solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch E-Commerce Solutions services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best E-Commerce Solutions company in India, we provide best-in-class E-Commerce Solutions services.`,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
-          reverse
+        <CardsSection
+          heading="Smart Integrations That Power Your Store"
+          subheading="Capyngen links your ecommerce web solutions with high-impact resources to increase your site’s performance:"
+          services={cardsSectionData1}
+          sectionBg="bg-black"
+          cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
+          headColor="text-white"
+          hoverBg=" hover:bg-gray-700"
+          textColor="text-white"
+          hoverTextColor=""
+          textSize="text-md"
+          height="h-72"
         />
-        <CardsSectionGrid
-          heading="Absolute Ecommerce Mobile App Development Solutions"
-          description={[
-            "We are a reliable Ecommerce application developer specializing in developing highly-scalable on-demand ecommerce development services. Our knowledgeable Ecommerce mobile app development Company services are globally renowned for providing avant-garde and reliable mobile app solutions.",
-            "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
-            "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
-          ]}
-          services={cardsSectionGridData1}
+        <IndustryServices
+          heading="E-Commerce Marketing Made Simple"
+          subheading="Capyngen data-driven marketing helps your ecommerce platform solutions to reach the right audience:"
+          cardBg="bg-gray-700"
+          cardText="text-white"
+          cardDescText="text-white"
+          services={servicesData}
         />
-
         <BenefitsSection
-          heading="E-Commerce Solutions Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
+          heading="Benefits of Choosing Capyngen’s E-Commerce Solutions"
+          desc="User-Friendly Experience for Customers – Rapid, intuitive, and simple-to-use stores that increase interaction with users."
           benefits={solutionsData}
+          footerNote=""
+          image={assets.applicationSolution}
         />
-        <CardsSectionGrid
-          heading="Absolute Ecommerce Mobile App Development Solutions"
-          description={[
-            "We are a reliable Ecommerce application developer specializing in developing highly-scalable on-demand ecommerce development services. Our knowledgeable Ecommerce mobile app development Company services are globally renowned for providing avant-garde and reliable mobile app solutions.",
-            "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
-            "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
-          ]}
-          services={cardsSectionGridData1}
-          reverse={true}
+        <TechStack
+          heading="Technologies Capyngen Uses for Ecommerce Mobile Apps"
+          subheading=""
+          categories={techStack}
         />
         <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
+          heading="E-Commerce Solutions Process"
+          desc=""
           steps={steps}
         />
-        <WhyChoose />
-        <CardsSection
-          heading="Transform Your App Vision with Our App Development Consulting Services"
-          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
-          services={cardsSectionDifferentColorData}
-          height="h-76"
-          cardBg="bg-gray-50"
-          hoverBg=""
-          textColor="text-gray-800"
-          hoverTextColor=""
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Why Capyngen is the Right Partner for E-Commerce Growth"
+          description={[
+            "Capyngen is a worldwide e-commerce solutions provider who is relied on by startups, small and medium-sized businesses, and large corporate companies. Our profound knowledge in e-commerce website development and e-commerce app development allows us to provide solutions that are not only scalable and secure but also future-ready. So, if you are starting your very first online store or aiming to reach out to foreign e-commerce markets, Capyngen will still be the right pick for your speedy growth.",
+          ]}
+          buttonText="Contact Us"
+          image={assets.getStarted}
         />
-        <BenefitsSection
-          heading="E-Commerce Solutions Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level E-Commerce Solutions services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Scale Your Ecommerce Business"
+          description={[
+            "With Capyngen’s ecommerce web solutions, you can have everything at your fingertips to grow your business — fast websites, secure checkouts, marketing tools, and expert support.",
+          ]}
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
         />
-        <TechnologiesCarousel
-          title="E-Commerce Solutions Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
-        />
-        <OurServices />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>
