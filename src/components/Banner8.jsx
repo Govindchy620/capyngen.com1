@@ -21,22 +21,22 @@ export default function Banner8({
 }) {
   return (
     <section
-      className={`relative min-h-screen ${bgColor} flex items-center justify-center px-6 sm:px-12 py-12`}
       aria-label="Ecommerce Design Banner"
+      className={`relative min-h-screen ${bgColor} flex items-center justify-center py-12`}
     >
       <div
-        className={`flex flex-col gap-6 pt-8 md:gap-12 sm:flex-row items-center w-full max-w-[90vw] rounded-xl ${
+        className={`flex flex-col gap-6 pt-8 md:gap-4 sm:flex-row items-between justify-between w-full max-w-[90vw] rounded-xl ${
           reverse ? "sm:flex-row-reverse" : "sm:flex-row"
         }`}
       >
         {/* Text Section */}
-        <div className="max-w-1/2 flex-1 text-center sm:text-left px-4 md:px-8">
+        <div className="basis-full sm:basis-1/2 flex-1 text-center sm:text-left">
           <h1 className="font-extrabold leading-relaxed tracking-tight mb-10">
             <span className="block text-blue-500 text-lg sm:text-xl md:text-2xl mb-2 uppercase tracking-wide">
               {titlePrefix}
             </span>
             <span
-              className="block text-white text-4xl sm:text-5xl"
+              className="block text-white text-4xl md:text-5xl"
               tabIndex={0}
             >
               {titleMain}
@@ -51,12 +51,12 @@ export default function Banner8({
         </div>
 
         {/* Image Section */}
-        <div className="max-w-1/2 flex-1 mt-8 sm:mt-0 flex justify-center px-4 md:px-8">
+        <div className="basis-full sm:basis-1/2 flex-1 mt-8 sm:mt-0 flex justify-center px-4 md:px-8">
           {imageSrc && (
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="w-full rounded-lg shadow-lg object-contain"
+              className="w-full max-w-lg rounded-lg shadow-lg object-contain"
               loading="lazy"
               decoding="async"
               role="img"

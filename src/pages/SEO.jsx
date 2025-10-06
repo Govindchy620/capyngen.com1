@@ -111,27 +111,6 @@ const SEO = () => {
         "One like Capyngen has an SEO consultant and a team of professionals who deliver tailor-made solutions, ongoing SEO, and quantifying proofs that work for your business online growth and expansion.",
     },
   ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
   const cardsSectionData1 = [
     {
       title: "Increase Visibility",
@@ -168,44 +147,6 @@ const SEO = () => {
       description:
         "Make the most of your returns by benefiting from our full range of services offered by our SEO agency in India.",
       icon: <FaMicrophone className="text-4xl" />,
-    },
-  ];
-  const cardsSectionData2 = [
-    {
-      title: "Increase Visibility",
-      description:
-        "Make presence known by getting on top of search results by utilizing SEO services in India and other Google rankings.",
-      icon: <FaEye className="text-4xl" />,
-    },
-    {
-      title: "Affordable Solutions",
-      description:
-        "If you are a startup, this is just the solution that you need. Our cost-effective SEO package is designed to help you grow within a budget.",
-      icon: <FaMoneyBillWave className="text-4xl" />,
-    },
-    {
-      title: "Drive Traffic & Leads",
-      description:
-        "By implementing the right SEO marketing strategies, the desired high-quality traffic and leads will be available for you.",
-      icon: <FaUsers className="text-4xl" />,
-    },
-    {
-      title: "Custom SEO Strategies",
-      description:
-        "By understanding your business and its strengths we craft a bespoke solution just for you.",
-      icon: <FaPuzzlePiece className="text-4xl" />,
-    },
-    {
-      title: "Trusted Agency",
-      description:
-        "A best SEO company in India with a history of accomplishing results is the one you should choose as your partner.",
-      icon: <FaHandshake className="text-4xl" />,
-    },
-    {
-      title: "Boost ROI",
-      description:
-        "Make the most of your returns by benefiting from our full range of services offered by our SEO agency in India.",
-      icon: <FaChartLine className="text-4xl" />,
     },
   ];
   const steps = [

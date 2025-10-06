@@ -29,23 +29,23 @@ const ArtificialIntelligence = () => {
     {
       question: "What is Artificial Intelligence (AI)?",
       answer:
-        "AI is a method where human intelligence is imitated in machines so that they have the ability to learn, think, and perform operations just like a human.",
+        "Artificial Intelligence is the tech that will allow machines to carry out tasks that usually call for human intelligence like teaching, logical thinking, problem-solving, and decision-making.",
     },
     {
       question: "How can AI benefit my business?",
       answer:
-        "AI can make a business run more effectively with less human input, human errors, and very costly decisions. AI can also lead a business to unlimited new ways in improving the customer experience to attract more customers and especially after-sale service to build loyalty and could bring positive up scaling.",
+        "AI helps companies execute tasks that can be automated, gather information in a way that makes it easier to draw patterns, make correct decisions based on the collected data, improve the relationship with customers through the provision of individual services and calculate expenses.",
     },
     {
       question: "What types of AI services do you offer?",
       answer:
-        "Our services consist of machine learning, natural language processin, AI chatbots, computer vision, predictive analytics, and custom AI solutions.",
+        "These are AI-powered technological tools fashioned for the purpose of solving business problems, e.g., automation tools, predictive analytics, chatbots, and intelligent applications.",
     },
     {
       question:
         "Is it possible that AI would be integrated into those systems that already exist?",
       answer:
-        "Indeed, our AI applications can be effortlessly merged into your existing business programs and processes with minimal downtime.",
+        "Yes, AI systems can be easily merged with your existing software, CRM, ERP, or website to upgrade without making big changes.",
     },
     {
       question: "Are you offering AI for mobile and web apps?",
@@ -55,27 +55,27 @@ const ArtificialIntelligence = () => {
     {
       question: "What industries can benefit from AI?",
       answer:
-        "AI has no boundaries and can fill in the blanks in every sector the most prominent being the areas of healthcare, finance, retail, e-commerce, logistics, education, manufacturing, etc.",
+        "The use of AI spans the different sectors e.g. healthcare, finance, retail, manufacturing, real estate, education, travel, and logistics where automation, personalization, and data analysis are some of the major fields of activity.",
     },
     {
       question: "How long does it take to implement AI solutions?",
       answer:
-        "The duration of the AI solution implementation depends on the complexity of the solution, the accessibility of the data, and the level of customization, and it can be from a few weeks to several months.",
+        "The deadline will depend on the difficulty of the problem, the available data, and the customization that is required, but in most cases, AI solutions are ready within 3–6 months.",
     },
     {
       question: "Is it safe that AI is integrated with my data?",
       answer:
-        "Yes, we implement strict security measures and follow data privacy protocols to be sure that the AI deployment is safe.",
+        "Yes, when accompanied with the correct protocols, AI systems do comply with all rigorous security standards to protect private data and also conform to regulations.",
     },
     {
       question: "Is it possible for AI to improve customer support?",
       answer:
-        "Yes, the deployment of AI chatbots and virtual assistants results in customer support being available 24/7; hence, the response time is lowered and the satisfaction of customers is improved.",
+        "Artificial intelligence enables custom-fitted services, chatbots that are accessible at all times, predictive suggestions, and smarter communication that attracts more user satisfaction.",
     },
     {
       question: "Do you provide AI consulting services?",
       answer:
-        "Yes, we provide expert advice and strategies for AI, suggest the perfect technology for you, and make an implementation plan.",
+        "Yes, Capyngen has a complete package of AI consulting that includes business requirement analysis, opportunity identification, development of the AI strategy that is most suitable, and so on.",
     },
     {
       question: "Can AI help with business analytics?",
@@ -85,12 +85,12 @@ const ArtificialIntelligence = () => {
     {
       question: "Is AI suitable for small businesses?",
       answer:
-        "Definitely, AI solutions that can be adjusted for production volume can be designed to meet the needs of the startup and small business to accelerate the growth and streamline the operations.",
+        "Definitely, AI solutions can be a great help to small and medium businesses as they can make the companies more efficient by automating repetitive tasks and providing insights for marketing and data.",
     },
     {
       question: "Do you provide custom AI development?",
       answer:
-        "Yes, we develop AI products specifically tailored for your company, including predictive models and automation tools.",
+        "Yes, Capyngen is the provider of AI development solutions that are adaptable to the requirements of startups as well as large corporations, the main purpose being to encourage their innovation and growth.",
     },
     {
       question: "Can AI help in marketing?",
@@ -101,6 +101,27 @@ const ArtificialIntelligence = () => {
       question: "Do you offer post-deployment AI support?",
       answer:
         "Sure, we offer continuous supervision, upkeep, and regular updates to make sure your AI system is as good as it was when it was first launched.",
+    },
+    {
+      question:
+        "What are the most popular Artificial Intelligence applications?",
+      answer:
+        "Among the most popular application areas of AI are chatbots, recommendation engines, image recognition, predictive maintenance, fraud detection, voice assistants, and automated data processing.",
+    },
+    {
+      question: "How is machine learning necessary for AI solutions?",
+      answer:
+        "Machine learning is a fundamental part of AI, which makes the software easy for the system to learn from the data, spot the patterns, and make judgments that require less human intervention.",
+    },
+    {
+      question: "What are the factors that make Capyngen's AI unique?",
+      answer:
+        "We employ not only cutting-edge AI technology but also business-driven tactics, thus, we offer custom development, smooth integration as well as constant support for eco-friendly growth.",
+    },
+    {
+      question: "The way to business AI",
+      answer:
+        "Perhaps, you can first get a consultation with one of our experts. We will lay down your targets and find the best AI strategies to apply in a simple way through a clear implementation plan.",
     },
   ];
   const technologies = [

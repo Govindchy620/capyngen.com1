@@ -24,7 +24,7 @@ const CardsSectionImage = ({
           {heading}
         </h1>
         <p
-          className={`mb-12 max-w-3xl mx-auto ${headColor} text-base md:text-lg`}
+          className={`mb-12 max-w-4xl mx-auto ${headColor} text-base md:text-lg`}
         >
           {subheading}
         </p>

@@ -21,7 +21,16 @@ import {
   FaLaptopCode,
   FaProjectDiagram,
   FaTasks,
+  FaTools,
+  FaDollarSign,
+  FaUsers,
+  FaShieldAlt,
+  FaBullhorn,
+  FaHeart,
 } from "react-icons/fa";
+import Banner5 from "../components/Banner5";
+import GetStarted from "../components/GetStarted";
+import CardsSectionImage from "../components/CardsSectionImage";
 
 const ECommerceSolution = () => {
   const faqItems = [
@@ -249,20 +258,237 @@ const ECommerceSolution = () => {
         "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
     },
   ];
+  const cardsSectionImageData1 = [
+    {
+      title: "Enhanced User Engagement & Retention",
+      description:
+        "Start building user-centered and interactive offerings which attract users to come back thus increasing loyalty and long-term engagement. User-engagement platforms keep users discovering more about your platform and coming back regularly.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+
+    {
+      title: "Improved Conversion Rates",
+      description:
+        "Selecting layouts and workflows that engage visitors is the main factor in motivating visitors to take the desired action, thus increasing sales, sign-ups, and leads. Strategically placed call-to-actions and persuasive design elements take conversions a step further.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Intuitive, Responsive, and Accessible Design",
+      description:
+        "Make sure that the user experience is equally good on all devices, including those for users with disabilities. Accessibility-focused design widens your audience base and strengthens your brand image.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Faster Load Times & Optimized Performance",
+      description:
+        "Fast-loading pages, easy navigation, and efficient apps decrease visits that leave immediately. Optimized performance improves user delight and promotes longer sessions.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "Scalable Architecture for Growth",
+      description:
+        "Develop changes that would be able to absorb more traffic, new features, and bigger geographic features without losing quality. Scalable systems give room for businesses to grow with stability and without needing to redesign the platform.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Strong Branding & Visual Identity",
+      description:
+        "Appealing, regular, designs bring across the company’s ideals to its customers in a clear and somewhat memorable manner. One visual identity at the core of recognition and trust with users.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+    {
+      title: "Seamless Integration with Tools & Services",
+      description:
+        "Connect CRMs, payment gateways, analytics, or any other third-party services to form a complete ecosystem. Integration guarantees operational efficiency as well as a better user experience.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+
+    {
+      title: "Data-Driven Decision Making",
+      description:
+        "With the help of analytics and understanding of user behavior, you can improve UI/UX, marketing strategies, and product offerings. Optimization on a daily basis engages users further, their loyalty increases, which in turn leads to a higher overall ROI.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Security & Privacy Compliance",
+      description:
+        "Employ all the security measures that are in line with the industry provisions and the best cybersecurity practices to secure users' data. Adhering to compliance and gaining users' trust will make your platform reliable as well as safe for all users.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+  ];
+  const cardsSectionData2 = [
+    {
+      title: "B2C (Business to Consumer) Stores",
+      description:
+        "These are direct online retail stores created to sell products to end customers.",
+      icon: <FaTools className="text-4xl" />,
+    },
+    {
+      title: "B2B (Business to Business) Platforms",
+      description:
+        "These are scalable ecommerce services that are developed to meet the needs of wholesale and enterprise.",
+      icon: <FaDollarSign className="text-4xl" />,
+    },
+    {
+      title: "Multi-Vendor Marketplaces",
+      description:
+        "Multiple vendors can list their products and sell them through your platform.",
+      icon: <FaUsers className="text-4xl" />,
+    },
+    {
+      title: "Subscription-Based Ecommerce",
+      description:
+        "This is a perfect billing model for recurring transactions such as subscription boxes and memberships.",
+      icon: <FaShieldAlt className="text-4xl" />,
+    },
+    {
+      title: "Dropshipping Stores",
+      description:
+        "You can start an ecommerce business with a small amount of money and no stock.",
+      icon: <FaBullhorn className="text-4xl" />,
+    },
+    {
+      title: "Social Commerce Solutions",
+      description:
+        "With the help of integrated shopping features, you can sell directly on social media platforms.",
+      icon: <FaHeart className="text-4xl" />,
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
-        <Banner
-          title="E-Commerce Solutions"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.eCommerceSolution}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+      <div className="">
+        <Banner5
+          title={
+            <>
+              <span className="text-2xl md:text-4xl">
+                Transform Your Business with{" "}
+              </span>
+              <span className="text-blue-600">Smart E-Commerce Solutions</span>
+            </>
+          }
+          description="Use the efficient and intuitive e-commerce solution provided by Capyngen to construct, expand and prosper your online store keeping in mind the contemporary business trends."
+          primaryBtnText="Start your Store Today"
+          primaryBtnLink="#"
+          image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title=""
+          description={[
+            "Get your ecommerce business up and running with Capyngen’s intuitive ecommerce solutions. We don’t only design, develop and market; we also take you and your store to the other side of the world to make you thrive.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="Why Your Business Needs an E-Commerce Solution"
+          description={[
+            `It is no longer enough to have an ecommerce platform that you can rely on - it is now essential. By employing a well-crafted ecommerce web development plan, your enterprise is capable of:`,
+            <>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+                {[
+                  {
+                    title: "",
+                    text: "Getting in touch with a worldwide audience and selling products at any time of a day or night.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "",
+                    text: "Lowering your business expenses compared to traditional stores.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "",
+                    text: "Establishing customer confidence through payment systems that are safe.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "",
+                    text: "Effectively controlling stocks and orders.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "",
+                    text: "Giving customers the opportunity to have a quick and easy shopping experience.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "",
+                    text: "Going up or down in your ecommerce business without any hustle when you gain.",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    <strong className={`${color} drop-shadow-md`}>
+                      {title}
+                    </strong>
+                    {text}
+                  </li>
+                ))}
+              </ul>
+              <p>
+                The web solutions that Capyngen has for the ecommerce are
+                designed to align with your business objectives, whether you are
+                a newcomer to the market or planning to go abroad.
+              </p>
+            </>,
+          ]}
+          image={assets.whyChooseUs}
+          isHidden={true}
+          background={assets.patternBg1}
+        />
+        <CardsSectionImage
+          heading="E-Commerce Solutions Services We Offer"
+          subheading="We create a comprehensive set of online store solutions that are industry-specific and depend on the size of the business, ranging from:"
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
+        />
+        <CardsSection
+          heading="Why Choose Capyngen for Web Development?"
+          subheading=""
+          services={cardsSectionData2}
+          headColor="text-white"
+          cardBg="bg-gray-700"
+          sectionBg="bg-gray-900"
+          hoverBg="hover:bg-blue-800 hover:scale-98"
+          textColor="text-white"
+          hoverTextColor=""
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Book a Free Consultation"
+          description={[
+            "Schedule a call with our online business experts to learn about our ecommerce development services that can revamp your enterprise. Sharing your online victory with us is made easy.",
+          ]}
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
         <TopRatedCompany
           title="Top-Rated E-Commerce Solutions Company"
           description={[

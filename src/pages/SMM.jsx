@@ -23,175 +23,287 @@ import {
   FaTasks,
 } from "react-icons/fa";
 import Banner15 from "../components/Banner15";
+import IndustryServices from "../components/IndustryServices";
 
 const SMM = () => {
   const faqItems = [
     {
       question: "How long does it take for funds to show in my wallet?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous.",
     },
     {
       question: "What is the minimum deposit requirement?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method.",
     },
     {
       question: "Are there any fees associated with depositing funds?",
       answer: "No, PrimeForex Markets charges no fees for depositing funds.",
     },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
     {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      question: "What is social media marketing?",
+      answer:
+        "It is promoting goods, services or brands of a company via social media channels namely Facebook, Instagram, LinkedIn, Twitter and so on to arouse awareness and/or participation of the user.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      question: "Why is social media marketing important for businesses?",
+      answer:
+        "Social media helps promote businesses by using technologies that were once exclusive to large companies. It enables small businesses to build relationships, drive traffic and sales, and create engaging content for target audiences.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our SMM company, integrating e-learning tools, course management, and student engagement features.",
+      question: "What services does a social media marketing agency provide?",
+      answer:
+        "Services include social media management, ad campaigns, content generation, data interpretation, and strategy development.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our SMM services to highlight your skills and attract potential clients.",
+      question: "Can social media marketing help small businesses grow?",
+      answer:
+        "Yes. Strategically planned campaigns help small businesses gain visibility among potential customers, making it a cost-effective way to generate leads.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our SMM company, featuring responsive designs and seamless navigation for a better user experience.",
+      question: "What is social media advertising?",
+      answer:
+        "It refers to paying for the promotion of media or content to reach a specific target audience and achieve marketing goals.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+      question: "How do social media management services work?",
+      answer:
+        "They handle the entire marketing cycle—from content planning and production to running ad campaigns and analyzing results.",
     },
     {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive SMM solutions tailored to your needs.",
+      question: "Can Capyngen handle social media promotion for enterprises?",
+      answer:
+        "Yes. We work with top-tier clients worldwide to deliver effective social media campaigns using our expertise and resources.",
     },
     {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our SMM company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+      question: "Which platforms do you cover for social media marketing?",
+      answer:
+        "We offer services on Facebook, Instagram, LinkedIn, Twitter, YouTube, and emerging social networks.",
     },
     {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our SMM services, that enhance donor engagement and effectively communicate your mission.",
+      question:
+        "How long does it take to see results from social media marketing?",
+      answer:
+        "Results in engagement and traffic typically appear within 1–3 months, while brand authority builds gradually.",
     },
     {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+      question:
+        "Can social media marketing increase website traffic and sales?",
+      answer:
+        "Yes. Targeted traffic and promotional offers through social media marketing can increase website visits and sales.",
     },
     {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+      question: "Do you provide analytics and reporting?",
+      answer:
+        "Yes. We monitor key performance indicators like engagement, reach, clicks, and ROI to evaluate campaign success.",
     },
     {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      question: "How do you create effective social media content?",
+      answer:
+        "We conduct detailed research, follow current trends, use appealing visuals, and apply data-driven strategies to craft engaging posts.",
+    },
+    {
+      question:
+        "Can social media marketing integrate with other digital marketing efforts?",
+      answer:
+        "Yes. Our campaigns can be integrated with SEO, email marketing, and paid advertising for a cohesive digital strategy.",
+    },
+    {
+      question: "Are social media marketing services suitable for startups?",
+      answer:
+        "Yes. Social media promotion is a cost-effective tool for startups to build brand awareness and attract customers quickly.",
+    },
+    {
+      question:
+        "How can I get started with Capyngen social media marketing services?",
+      answer:
+        "Please arrange a time with us to begin crafting a personalized social media marketing plan tailored to your business goals.",
     },
   ];
   const servicesData = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our SMM company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      image: assets.bg1,
+      title: "Content Personalization",
+      desc: "Making posts more suitable for your followers' likes and dislikes.",
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced SMM services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      image: assets.bg1,
+      title: "Storytelling Marketing",
+      desc: "Gaining the audience's sympathy by offering them stories to read.",
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      image: assets.bg1,
+      title: "Hashtag Campaigns",
+      desc: "Raising visibility through partnering with trending hashtags.",
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      image: assets.bg1,
+      title: "Video First Strategy",
+      desc: "Employing reels, shorts, and live sessions to draw attention.",
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our SMM solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      image: assets.bg1,
+      title: "Paid + Organic Mix",
+      desc: "Working social media advertising and organic content side by side.",
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      image: assets.bg1,
+      title: "Data-Driven Optimization",
+      desc: "Keeping an eye on the numbers and making good use of them to increase performance.",
     },
   ];
-  const cardsSectionData2 = [
+  const solutionsData = [
     {
-      title: "Social Media Marketing Services",
-      description:
-        "Amplify your brand with finely targeted social media marketing services, designed around the preferences of your audience and the goals of your business.",
-      icon: <FaLightbulb className="text-4xl" />,
-    },
-    {
-      title: "Social Media Promotion",
-      description:
-        "Utilize the power of social media promotion to spread the word of your brand through various techniques like organic reach, influencer marketing, and paid campaigns.",
-      icon: <FaChartLine className="text-4xl" />,
+      title: "Social Media Strategy & Planning",
+      desc: (
+        <>
+          <p>
+            We come up with a strategy specifically tailored to your brand
+            objectives, the current trends in the industry, and customer
+            behaviour.
+          </p>
+          <p className="py-5">Incorporates:</p>
+          <ul className="list-disc list-inside space-y-3">
+            <li>Competitor analysis</li>
+            <li>
+              Platform selection (Facebook, Instagram, LinkedIn, Twitter,
+              YouTube, TikTok, etc.)
+            </li>
+            <li>Content calendar planning</li>
+            <li>Hashtag and trend research</li>
+          </ul>
+        </>
+      ),
     },
     {
       title: "Social Media Management Services",
-      description:
-        "Save time managing accounts with social media management services that guarantee regular posting, community engagement, and performance tracking.",
-      icon: <FaCogs className="text-4xl" />,
+      desc: (
+        <>
+          <p>
+            Running social media accounts needs both regularity and good ideas.
+            Our social media management services make sure your brand stays
+            alive and attractive on all the social media platforms.
+          </p>
+          <p className="py-5">We Handle:</p>
+          <ul className="list-disc list-inside space-y-3">
+            <li>Content creation (posts, stories, reels, graphics, videos)</li>
+            <li>Content scheduling and publishing</li>
+            <li>Community management (comments, DMs, queries)</li>
+            <li>Brand reputation monitoring</li>
+          </ul>
+        </>
+      ),
     },
     {
       title: "Social Media Advertising",
-      description:
-        "Reach your goals quickly by social media advertising, bettering campaign to raise traffic, conversions, and ROI.",
-      icon: <FaLaptopCode className="text-4xl" />,
+      desc: (
+        <>
+          <p>
+            Paid advertisements are the quickest way to get noticed. Our social
+            media advertising specialists set up very focused ads so as to get
+            the maximum return of investment.
+          </p>
+          <p className="py-5">
+            The services we provide under the advertisement umbrella are:
+          </p>
+          <ul className="list-disc list-inside space-y-3">
+            <li>Facebook & Instagram Ads</li>
+            <li>LinkedIn Sponsored Content</li>
+            <li>YouTube Ads</li>
+            <li>Twitter (X) Ads</li>
+            <li>Retargeting campaigns</li>
+          </ul>
+          <p className="pt-5">
+            With paid promotions, you reach the right audience at the right
+            time.
+          </p>
+        </>
+      ),
     },
     {
-      title: "Custom Social Media Campaigns",
-      description:
-        "Creating personal campaigns that are your brand's and your audience's to healthily communicate the results are measurable and online visibility is enhanced.",
-      icon: <FaProjectDiagram className="text-4xl" />,
+      title: "Creative Content Production",
+      desc: (
+        <>
+          <p>
+            Social media is the medium, but content is the mainstay of promotion
+            through social media. To engage and entice, we produce captivating
+            visuals and copy that reflect with your target market.
+          </p>
+          <p className="py-5">The content we make are:</p>
+          <ul className="list-disc list-inside space-y-3">
+            <li>Graphics & infographics</li>
+            <li>Short-form videos & reels</li>
+            <li>GIFs & animations</li>
+            <li>Blogs & captions</li>
+            <li>User-generated content campaigns</li>
+          </ul>
+        </>
+      ),
     },
     {
-      title: "Affordable Social Media Marketing Services",
-      description:
-        "Though priced reasonably, social media marketing services are always professional and effective in helping startups and small businesses create a high impact in the market within their budget.",
-      icon: <FaTasks className="text-4xl" />,
+      title: "Influencer Marketing & Collaborations",
+      desc: (
+        <>
+          <p>
+            Social media personalities have the ability to tremendously
+            influence customers' decision-making process. We as a social media
+            marketing agency, link your brand to the influencers that will
+            increase your reach.
+          </p>
+          <p className="py-5">We do this by:</p>
+          <ul className="list-disc list-inside space-y-3">
+            <li>Finding influencers who are relevant to the targeted niche</li>
+            <li>Handling influencer partnerships</li>
+            <li>Monitoring How Well Your Campaign Works</li>
+          </ul>
+        </>
+      ),
     },
     {
-      title: "Enterprise Social Media Solutions",
+      title: "Analytics & Reporting",
+      desc: (
+        <>
+          <p>
+            Almost all the campaigns that we have are based on data. We deliver
+            comprehensive reports to our clients which include various metrics
+            of the performance such as the number of people reached, engagement,
+            clicks, and conversions.
+          </p>
+          <p className="pt-3">
+            We use this information to get an improved return on our
+            investments.
+          </p>
+        </>
+      ),
+    },
+  ];
+  const steps = [
+    {
+      step: "Step 01",
+      title: "Research & Audit",
       description:
-        "Detailed planning for corporations includes data measurement, efficiency, and creative social media marketing, carried out by a professional social media marketing agency for enterprises.",
-      icon: <FaTasks className="text-4xl" />,
+        "Getting to know your brand inside and out, identifying the competition.",
     },
     {
-      title: "Industries Transformed with Social Media Marketing",
-      description:
-        "Businesses across the globe are enabled by bespoke social media marketing to boost their presence, attract the audience, and garner tangible growth in their respective markets.",
-      icon: <FaTasks className="text-4xl" />,
+      step: "Step 02",
+      title: "Strategy Development",
+      description: "Decide on the content and the advertising plan.",
     },
     {
-      title: "Social Media Collaborations for Business Empowerment",
-      description:
-        "Professionals in social media marketing of the highest caliber team up to improve your digital visibility. The mix of content creators, strategists, and advertising specialists energizes your brand with campaigns that lead to the growth of engagement, audience, and brand awareness.",
-      icon: <FaTasks className="text-4xl" />,
+      step: "Step 03",
+      title: "Content Creation",
+      description: "Making posts, videos, and campaigns come to life.",
+    },
+    {
+      step: "Step 04",
+      title: "Execution",
+      description: "Posting, managing ads, and communicating with users.",
+    },
+    {
+      step: "Step 05",
+      title: "Monitoring & Reporting",
+      description: "Evaluating results and fine-tuning the campaigns.",
     },
   ];
 
@@ -199,70 +311,151 @@ const SMM = () => {
   return (
     <div className="relative">
       <Banner15 />
+      <div className="pt-10 bg-black"></div>
       <TopRatedCompany
-        title="Professional social media marketing is the key to a business transformation"
+        title="Importance of Social Media Marketing"
         description={[
-          `One of the main benefits of social media is the potential it possesses to be a driver of business growth and a key element in the whole company business strategy. The best social media marketing strategies and the professional social media agency for enterprises ensure that the campaigns lead to the audience getting attracted, creating a community, and generating substantial results.`,
+          <>
+            <p>
+              If you are pondering the significance of social media marketing,
+              below are some factors out of many why firms are prepared to
+              allocate their resources in social media marketing:
+            </p>
+            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+              {[
+                {
+                  title: "Massive Audience Reach",
+                  text: "The number of social media users globally is in excess of 5 billion.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Cost-Effective Promotion",
+                  text: "A more affordable way compared to traditional advertising methods.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Targeted Advertising",
+                  text: "The ad can be customized to be more appealing to the age, location, likes, and behavior.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Brand Visibility",
+                  text: "Through regular social media advertising, brand loyalty is established.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Customer Engagement",
+                  text: "Communicate with customers whenever you want.",
+                  color: "text-blue-500",
+                },
+                {
+                  title: "Increased Conversions",
+                  text: "Social proof along with feedback is a significant factor that buyers consider before making decisions.",
+                  color: "text-blue-500",
+                },
+              ].map(({ title, text, color }, idx) => (
+                <li
+                  key={idx}
+                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                >
+                  <strong className={`${color} drop-shadow-md`}>{title}</strong>{" "}
+                  – {text}
+                </li>
+              ))}
+            </ul>
+          </>,
         ]}
         image={assets.whyChooseUs}
         background={assets.patternBg1}
+        isHidden="hidden"
+      />
+      <BenefitsSection
+        heading="Our Social Media Marketing Services"
+        desc="As a leading social media marketing company, we provide end-to-end solutions tailored to your business needs."
+        benefits={solutionsData}
+        image={assets.blockchainDevelopment}
+        footerNote=""
       />
       <GetStarted
-        reverse={true}
+        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Get the Win with a Social Media Marketing Agency Partner"
+        title="Amplify Your Brand on Social Media"
         description={[
-          "Use social media marketing that matches with company objectives to bring a change to your digital presence. Team up with one of the leading agencies in social media marketing, to make your campaigns successful on Facebook, Instagram, LinkedIn, Twitter, and TikTok where they can get the most attention and interaction.",
+          "Use the social media marketing services to increase your interactions, reach, and your turnover by collaborating with Capyngen, a top social media marketing agency, and utilizing social media marketing services.",
         ]}
         backgroundVideo={assets.backgroundVideo}
       />
+      <IndustryServices
+        heading="Top Social Media Marketing Tactics"
+        subheading="Our company does not rely on lucky shots, that's for sure. Our strategies are a product of creative minds, numbers, and trends. Some of the main social media marketing approaches we make use of are here:"
+        cardBg="bg-gray-700"
+        cardText="text-white"
+        cardDescText="text-white"
+        services={servicesData}
+      />
       <GetStarted
         reverse={true}
         backgroundColor="bg-blue-900"
         textColor="text-white"
         buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
         buttonTextColor="text-white"
-        title="Designing Social Media Marketing Campaigns That Convert"
+        title="Why Choose Us as Your Social Media Marketing Partner?"
         description={[
-          "Grow your business through social media advertising and campaigns that are innovative, targeted, and result-oriented. Being one of the top social media marketing firms, we create scalable projects for startups and enterprises that aim to bring in new followers, interaction, and revenue.",
+          <>
+            <p>
+              There is no limit to the number of agencies in the market.
+              However, the five points below are what make us stand out:
+            </p>
+            <ul className="list-disc list-inside space-y-2 py-4 text-lg max-w-3xl mx-auto">
+              <li className={` relative pl-4`}>
+                We don't use ready-made plans – Our customized strategies are as
+                unique as your business.
+              </li>
+              <li className={` relative pl-4`}>
+                We have a vibrant and inventive team – Our designers, writers,
+                and strategists work in harmony.
+              </li>
+              <li className={` relative pl-4`}>
+                We have credibility through the demonstration of our skill –
+                Years of experience in local and foreign markets, leading to
+                diverse industry bases.
+              </li>
+            </ul>
+            <p>
+              As soon as you join us,you are not simply hiring a social media
+              marketing agency but rather you are getting a growth partner.
+            </p>
+          </>,
         ]}
         image={assets.getStarted}
       />
-      <CardsSection
-        heading="Social Media Marketing Services"
-        subheading=""
-        services={cardsSectionData2}
-        headColor="text-white"
-        sectionBg="bg-gray-900"
-        cardBg="bg-transparent"
-        hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
+      <HowWeWork
+        heading="Our Social Media Marketing Process"
+        desc="We follow a tried and tested, step-by-step approach to bring about the success of our campaigns:"
+        steps={steps}
+      />
+      <TopRatedCompany
+        title="Final Thoughts"
+        description={[
+          `The world is all about social interactions and your brand needs to keep up with that trend. Social media marketing is simply not the numbers game that most people think it is. The main goal in that marketing is to gain trust, increase the interactions and, finally, sales.`,
+          `Our social media marketing agency is a perfect blend of creative ideas, analytics-based strategy, and targeted social media ads that you get by selecting us.`,
+          `It does not make a difference whether you are a young company or an already existing brand; our social media management services will be the key to your sustainable growth by regular and effective social media promotion.`,
+        ]}
+        image={assets.whyChooseUs}
+        isHidden={true}
+        background={assets.patternBg1}
+      />
+      <GetStarted
+        reverse={false}
+        backgroundColor="bg-blue-900"
         textColor="text-white"
-        hoverTextColor=""
-        height="h-96"
-        textSize="text-lg"
+        title="Get a Social Media Consultation"
+        description={[
+          "Figuring out the most efficient social media marketing tactics specifically tailored for your business to result in maximum impact and growth.",
+        ]}
+        backgroundVideo={assets.backgroundVideo}
       />
-      <BenefitsSection
-        heading="SMM Solutions We Offer"
-        desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-        benefits={solutionsData}
-      />
-      <HowWeWork />
-      <WhyChoose />
-      <BenefitsSection
-        heading="SMM Services We Offer"
-        desc="Partner with RichestSoft for enterprise-level SMM services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-        benefits={servicesData}
-        reverse
-      />
-      <TechnologiesCarousel
-        title="SMM Technologies We Use"
-        description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-        technologies={technologies}
-      />
-      <OurServices />
       <FAQSection2 items={faqItems} />
       <ScrollRevealEffect />
     </div>

@@ -11,164 +11,405 @@ import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
+import Banner5 from "../components/Banner5";
+import GetStarted from "../components/GetStarted";
+import IndustryServices from "../components/IndustryServices";
+import CardsSectionImage from "../components/CardsSectionImage";
+import CardsSectionSlider from "../components/CardsSectionSlider";
 
 const Cybersecurity = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is cybersecurity?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "Cybersecurity entails all measures against hackers to protect the networks, systems, and data of an organization.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why is cybersecurity important to businesses?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "The main benefits of cybersecurity are the following: no leak of data, the security of sensitive informational assets, the observance of the law, and maintenance of customer trust.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
-    },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      question: "What are managed security services?",
+      answer:
+        "Such services consist of continuous monitoring, threat detection, incident response, vulnerability management, and disaster recovery.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      question: "Do security services have a positive impact on startups?",
+      answer:
+        "Definitely. Capyngen delivers on-demand security to startups at a fraction of the usual price to protect their valuable information and keep their business going.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our Cybersecurity company, integrating e-learning tools, course management, and student engagement features.",
+      question: "What is network security?",
+      answer:
+        "Network structure is the protection of internal networks against unauthorized entry and cyber-attacks to computers, servers, and other connected hardware devices.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our Cybersecurity services to highlight your skills and attract potential clients.",
+      question: "What is Capyngen's data protection approach?",
+      answer:
+        "We protect confidential data through encryption, other means of safe storage, backup, and by using access controls.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our Cybersecurity company, featuring responsive designs and seamless navigation for a better user experience.",
+      question: "Can your cybersecurity services help if I have an enterprise?",
+      answer:
+        "Yes, of course. Among the offers Capyngen has for corporations, there is working staff on call for professional advice and guidance well-structured and wide-ranged security.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+      question: "What is penetration testing?",
+      answer:
+        "Hackers are simulated in penetration testing, in order to show the vulnerabilities present in a system, and which greatly, in a very short time, they can be found and used by the attackers.",
     },
     {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive Cybersecurity solutions tailored to your needs.",
+      question: "Are you providing cloud security solutions?",
+      answer:
+        "The answer is yes. We offer secure environments for the cloud, as well as for applications and storage using security measures that comply with industry standards.",
     },
     {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our Cybersecurity company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+      question:
+        "Are there any means to stop ransomware attacks through cybersecurity?",
+      answer:
+        "Yes. Some of the measures that are used to fight ransomware against include threat monitoring, backups, and endpoint security.",
     },
     {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our Cybersecurity services, that enhance donor engagement and effectively communicate your mission.",
+      question: "How do you monitor cybersecurity threats?",
+      answer:
+        "We use SIEM tools paired with 24/7 monitoring, intrusion detection, and analytics to spot and react to threats.",
     },
     {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+      question:
+        "What are the industries that could gain from cyber security services?",
+      answer:
+        "Finance, healthcare, retail, education, IT, travel — basically any data-driven company dealing with sensitive customer information.",
     },
     {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+      question: "How much do cybersecurity services cost?",
+      answer:
+        "There is a variety of prices depending on the size of the business, security requirements, and the services needed. Capyngen offers scalable and affordable cybersecurity solutions.",
     },
     {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      question: "What services are IT security services?",
+      answer:
+        "Endpoint protection, network security, patch management, anti-virus, and employee training.",
+    },
+    {
+      question: "How do I get started with Capyngen cybersecurity services?",
+      answer:
+        "Schedule a free consultation to evaluate your security requirements and receive a custom-made cybersecurity plan for your business.",
     },
   ];
   const servicesData = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our Cybersecurity company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      image: assets.bg1,
+      title: "Managed Cybersecurity Services",
+      desc: "A service that offers continuous monitoring, threat detection, and incident response.",
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced Cybersecurity services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      image: assets.bg1,
+      title: "IT Security Services",
+      desc: "The security of the system, server, and endpoint against vulnerabilities.",
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      image: assets.bg1,
+      title: "Network Security Services",
+      desc: "The use of firewalls, VPNs, and intrusion prevention systems for safe networks.",
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      image: assets.bg1,
+      title: "Data Protection Services",
+      desc: "The use of encryption, backup, and secure storage solutions for sensitive data.",
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our Cybersecurity solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      image: assets.bg1,
+      title: "Cloud Security Solutions",
+      desc: "The security of cloud applications, storage, and virtual environments.",
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      image: assets.bg1,
+      title: "Cybersecurity Consulting",
+      desc: "The strategic guidance to put in place the robust security frameworks.",
+    },
+  ];
+  const cardsSectionImageData1 = [
+    {
+      title: "Firewalls & Intrusion Detection Systems (IDS/IPS)",
+      description: "",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "Anti-Malware & Anti-Virus Software",
+      description: "",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "Security Information & Event Management (SIEM)",
+      description: "",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Data Encryption & Backup Solutions",
+      description: "",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Cloud Security Platforms (AWS, Azure, GCP)",
+      description: "",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "VPNs & Secure Remote Access",
+      description: "",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
+    },
+  ];
+  const cardsSectionSliderData1 = [
+    {
+      title: "Finance & Banking",
+      desc: "Financial data and transactions are secured.",
+      image: assets.eCommerceSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Healthcare",
+      desc: "Patients' privacy is ensured and medical records are secure.",
+      image: assets.websiteDesign,
+      textColor: "text-white",
+    },
+    {
+      title: "E-Commerce & Retail",
+      desc: "Online stores and payment data are protected.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Education & E-Learning",
+      desc: "Students' information and the digital platform are secured.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Travel & Hospitality",
+      desc: "Booking systems and customer data are safeguarded.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Information Technology & Software",
+      desc: "Applications, networks, and client data are secured.",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
   ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
-        <Banner
-          title="Cybersecurity"
-          overlayBg="bg-black/60"
-          backgroundImage={assets.cybersecurity}
-          description="Unlock the Power of Web Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+      <div className="">
+        <Banner5
+          title={
+            <>
+              <span className="text-2xl md:text-4xl">
+                Protect your business from cyber threats with{" "}
+              </span>
+              <span className="text-blue-600">
+                Capyngen’s comprehensive cybersecurity services
+              </span>
+            </>
+          }
+          description="In order to protect your information, systems, and business processes, we offer security for information technology, security for networks, and the administration of security for the organization through cybersecurity programs. Capyngen is a reliable worldwide supplier of all kinds of business cybersecurity software that offers solutions to problems faced by small, medium, and large enterprises."
+          primaryBtnText="Protect Your Business"
+          primaryBtnLink="#"
+          image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated Cybersecurity Company"
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Keep Your Business Safe from Cyber Threats"
           description={[
-            `RichestSoft provides top-notch and oriented Cybersecurity solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch Cybersecurity services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best Cybersecurity company in India, we provide best-in-class Cybersecurity services.`,
+            "Protect your systems, networks, and data with our managed cybersecurity services at Capyngen and enjoy round-the-clock security.",
+          ]}
+          buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="What is Cybersecurity?"
+          description={[
+            `Cybersecurity revolves around the protection of the systems, networks, and data from any form of digital attacks, stealing, or destruction. The corporate world, today, is being targeted constantly by different types of hackers, malware infections, and data leaks. Capyngen provides the well-qualified cybersecurity consulting services catered for corporates, startups, and small and medium enterprises which help to eradicate the cyber risks, protect the less expensive data and maintain the uninterruptible business flow.`,
+            <>
+              <p className="mb-3 font-semibold">
+                Importance of Cybersecurity in Modern Businesses
+              </p>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+                {[
+                  {
+                    title: "Protect Sensitive Data",
+                    text: "Protect and secure data of customers, employees, and finance.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Prevent Financial Loss",
+                    text: "Extent the breach-related costs are reduced significantly alongside the costs of downtime and data theft.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Ensure Regulatory Compliance",
+                    text: "Attain compliance with standards from all over the world such as GDPR, HIPAA, and ISO.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Maintain Customer Trust",
+                    text: "Demonstrate to clients that their data is in safe hands when it comes to your company.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Enhance Operational Security",
+                    text: "Obtain security for your networks, endpoints as well as for the cloud infrastructure.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Support Business Continuity",
+                    text: "Be the last one to be impacted by cyber incidents.",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    <strong className={`${color} drop-shadow-md`}>
+                      {title}
+                    </strong>{" "}
+                    – {text}
+                  </li>
+                ))}
+              </ul>
+              <p>
+                By using Capyngen’s leading cybersecurity solutions, your
+                business will remain unstoppable and non-vulnerable.
+              </p>
+            </>,
+          ]}
+          image={assets.whyChooseUs}
+          isHidden={true}
+          background={assets.patternBg1}
+        />
+        <IndustryServices
+          heading="Cybersecurity Services We Offer"
+          subheading="We provide a range of cybersecurity solutions that serve to keep businesses safe from malicious threats and ensure their safe progression in the market."
+          cardBg="bg-gray-700"
+          cardText="text-white"
+          cardDescText="text-white"
+          services={servicesData}
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Get a consultation on Cybersecurity"
+          description={[
+            "Reach out to our specialists and find out the most effective cybersecurity solutions for your company which will help you avoid breaches and loss of data.",
+          ]}
+          buttonText="Get a Consultation"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <CardsSectionImage
+          heading="Technologies & Tools Used in Cybersecurity"
+          subheading=""
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
+        />
+        <TopRatedCompany
+          title="Benefits of Choosing Capyngen Cybersecurity Services"
+          description={[
+            <>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+                {[
+                  {
+                    title: "24/7 Protection & Monitoring",
+                    text: "Enjoy security all day and night.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Reduced Risk of Data Breaches",
+                    text: "Keep your business and customer data safe.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Compliance with Global Standards",
+                    text: "Achieve GDPR, ISO, HIPAA, and other regulatory requirements.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Cost-Effective Security Solutions",
+                    text: "Cybersecurity solutions at a price that startups and SMBs can afford.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Expert Guidance & Support",
+                    text: "Cybersecurity consulting service by a professional for enterprises.",
+                    color: "text-blue-500",
+                  },
+                  {
+                    title: "Relax with Confidence",
+                    text: "Concentrating on business development is yours while we safeguard it.",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    <strong className={`${color} drop-shadow-md`}>
+                      {title}
+                    </strong>{" "}
+                    – {text}
+                  </li>
+                ))}
+              </ul>
+            </>,
           ]}
           image={assets.whyChooseUs}
           background={assets.patternBg1}
+          isHidden="hidden"
+          imageHeight="aspect-[4/3] md:aspect-[1/1]"
         />
-
-        <BenefitsSection
-          heading="Cybersecurity Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
+        <CardsSectionSlider
+          heading="Industries We Serve"
+          subheading=""
+          cardBg="bg-transparent"
+          hoverBg=" hover:bg-blue-50"
+          textColor="text-gray-800"
+          hoverTextColor=""
+          textSize="text-xl"
+          sectionBg="bg-black/90"
+          height="h-78"
+          headColor="text-white"
+          services={cardsSectionSliderData1}
         />
-        <HowWeWork />
-        <WhyChoose />
-        <BenefitsSection
-          heading="Cybersecurity Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level Cybersecurity services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Get a Free Cybersecurity Consultation"
+          description={[
+            "Talk to our experts and discover the best cybersecurity services for businesses to prevent breaches and data loss.",
+          ]}
+          buttonText="Get a Consultation"
+          backgroundVideo={assets.backgroundVideo}
         />
-        <TechnologiesCarousel
-          title="Cybersecurity Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
-        />
-        <OurServices />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>

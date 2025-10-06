@@ -30,7 +30,7 @@ export default function Banner9() {
           <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-2xl leading-relaxed">
             Capyngen creates futuristic artificial intelligence applications and
             AI-enabled solutions to attract radical ideas, save time and
-            revenue-making your business blossom. Besides this, custom AI
+            revenue- making your business blossom- Besides this, custom AI
             development services and consulting empower your business.
           </p>
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 text-left max-w-2xl mx-auto lg:mx-0">
@@ -50,9 +50,7 @@ export default function Banner9() {
       <aside className="flex-1 max-w-xl w-full mx-auto lg:mx-0 flex flex-col justify-center bg-gray-700 p-10 lg:p-16 relative z-10">
         <h2 className="text-2xl font-bold text-white leading-snug">
           Artificial Intelligence{" "}
-          <span className="text-blue-600 italic font-extrabold">
-            Solutions Tailored
-          </span>{" "}
+          <span className="text-blue-600 italic font-extrabold">Services </span>{" "}
           for Your Business
         </h2>
         <ul className="mt-8 space-y-6">
