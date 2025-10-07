@@ -1,36 +1,8 @@
 import { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 
-function ExpandableGallery() {
+function ExpandableGallery({ panels = panels }) {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const panels = [
-    {
-      image: assets.gallery1,
-      title: "Panel 1",
-      desc: "Digital Art • Illustrations",
-    },
-    {
-      image: assets.gallery2,
-      title: "Panel 2",
-      desc: "Digital Art • Illustrations",
-    },
-    {
-      image: assets.gallery3,
-      title: "Panel 3",
-      desc: "Digital Art • Illustrations",
-    },
-    {
-      image: assets.gallery4,
-      title: "SEO Speed Up Website",
-      desc: "Digital Art • Illustrations",
-    },
-    {
-      image: assets.blog3,
-      title: "Panel 5",
-      desc: "Digital Art • Illustrations",
-    },
-  ];
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -67,7 +39,7 @@ function ExpandableGallery() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 flex flex-col justify-end p-6 text-white 
+                className={`absolute inset-0 flex flex-col justify-end bg-black/30 p-6 text-white 
                 transition-all duration-700 ease-in-out
                 ${activeIndex === index ? "opacity-100" : "opacity-0"}
               `}

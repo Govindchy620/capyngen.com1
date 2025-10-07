@@ -56,7 +56,9 @@ const IndustryServices = ({
               <h3 className={`text-xl font-bold ${cardText}`}>
                 {service.title}
               </h3>
-              <p className={`${cardDescText} text-md leading-relaxed`}>
+              <p
+                className={`${cardDescText} text-md text-left leading-relaxed`}
+              >
                 {service.desc}
               </p>
             </div>

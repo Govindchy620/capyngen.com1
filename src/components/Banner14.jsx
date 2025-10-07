@@ -11,7 +11,7 @@ const Banner14 = ({
 }) => {
   return (
     <section
-      className="pt-20 flex items-center py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4 sm:px-6 lg:px-8"
+      className="pt-28 flex items-center py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4 sm:px-6 lg:px-8"
       aria-label="Capyngen Network Solutions Banner"
     >
       <div className="container max-w-[90vw] mx-auto">
