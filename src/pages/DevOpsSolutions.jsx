@@ -21,93 +21,265 @@ import {
 import GetStarted from "../components/GetStarted";
 import Banner5 from "../components/Banner5";
 import IndustryServices from "../components/IndustryServices";
+import TechStack from "../components/TechStack";
 
 const DevOpsSolutions = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is DevOps?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "DevOps is the combination of software development and IT operations with the main goal of more rapid and reliable delivery of applications.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why is DevOps important for modern software development?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Communication is improved, so fewer errors happen, the release cycles become faster and at the same time are more stable and scalable, and that makes the applications more reliable.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question: "Does Capyngen provide DevOps consulting?",
+      answer:
+        "Yes, we are a team of certified specialists that confidently offer our expertise in the field of DevOps, guiding business leaders about the right tools and practices to adopt to.",
+    },
+    {
+      question: "Can you implement automated deployments?",
+      answer:
+        "Of course, we help you establish and maintain automated deployments via the use of the CI/CD pipeline that will be quick, safe, and reliable.",
+    },
+    {
+      question: "What industries can benefit from DevOps solutions?",
+      answer:
+        "The list of such industries goes on, but in general, the mentioned ones are among the most common such as finance, healthcare, e-commerce, information technology, telecommunication, media, education, and travel industries.",
+    },
+    {
+      question: "Do you offer managed DevOps services?",
+      answer:
+        "We at Capyngen are committed to giving you our fully managed DevOps services that cover monitoring, optimization, and maintenance for you.",
+    },
+    {
+      question: "Which cloud platforms do you support?",
+      answer:
+        "Particularly, cloud solutions for scalable requirements on Amazon Web Services, Microsoft Azure, and Google Cloud are all offered by us.",
+    },
+    {
+      question: "Can you help with multi-cloud optimization?",
+      answer:
+        "Sure thing. Our work consists of making sure that both performance and cost-effectiveness are optimized when the workload is divided between more than one cloud service provider.",
+    },
+    {
+      question: "Do you provide disaster recovery solutions?",
+      answer:
+        "Yes. Our DevOps solutions have strong disaster recovery plans, which is a big plus for business' continuity and success in case of unfortunate events.",
+    },
+    {
+      question: "How do you monitor performance?",
+      answer:
+        "We ensure maximum uptime and performance through the employment of cutting-edge monitoring, logging, and alerting tools.",
+    },
+    {
+      question: "Do you integrate DevOps with software development teams?",
+      answer:
+        "Definitely. We do a perfect synchronization between DevOps and the development teams in order to have a smooth workflow.",
+    },
+    {
+      question: "Are your DevOps solutions suitable for enterprises?",
+      answer:
+        "We provide enterprises with the best DevOps solutions ranging from scalable and secure infrastructure to the other ones.",
+    },
+    {
+      question: "How long does a DevOps implementation take?",
+      answer:
+        "The timeframe varies depending on the complexity, but digital transformation through DevOps is usually completed within 4 to 12 weeks.",
+    },
+    {
+      question: "Do you provide ongoing support?",
+      answer:
+        "Yes, you're never alone. All our DevOps services come with the package of continuous monitoring, optimization, and support.",
+    },
+    {
+      question: "How can I get started with Capyngen DevOps Solutions?",
+      answer:
+        "First, schedule a free consultation with us to analyze your requirements. After that, we'll come up with a specific and tailor-made DevOps strategy for your company.",
     },
   ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
+  const techStack = [
+    {
+      title: "Cloud Platforms",
+      items: [
+        {
+          name: "AWS",
+          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+        },
+        {
+          name: "Azure",
+          icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
+        },
+        {
+          name: "Google Cloud",
+          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+        },
+        {
+          name: "Vue.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+        {
+          name: "Kotlin",
+          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
+        },
+        {
+          name: "Vue.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+        {
+          name: "Kotlin",
+          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
+        },
+      ],
+    },
+    {
+      title: "Backend",
+      items: [
+        {
+          name: "Node.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+        },
+        {
+          name: "Python",
+          icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+        },
+        {
+          name: "Ruby on Rails",
+          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
+        },
+        {
+          name: "Java",
+          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+        },
+        {
+          name: "PHP",
+          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+        },
+        {
+          name: "Ruby on Rails",
+          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
+        },
+        {
+          name: "Java",
+          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+        },
+        {
+          name: "PHP",
+          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+        },
+      ],
+    },
+    {
+      title: "Platforms",
+      items: [
+        {
+          name: "iOS",
+          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
+        },
+        {
+          name: "Android",
+          icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
+        },
+        {
+          name: "React Native",
+          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+      ],
+    },
+    {
+      title: "Database",
+      items: [
+        {
+          name: "MongoDB",
+          icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+        },
+        {
+          name: "MySQL",
+          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+        },
+        {
+          name: "Firebase",
+          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+        },
+        {
+          name: "Firebase",
+          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+        },
+        {
+          name: "Oracle",
+          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
+        },
+      ],
+    },
+    {
+      title: "UI/UX",
+      items: [
+        {
+          name: "Adobe XD",
+          icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
+        },
+        {
+          name: "Sketch",
+          icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
+        },
+        {
+          name: "Figma",
+          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        },
+        {
+          name: "Figma",
+          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        },
+        {
+          name: "InVision",
+          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
+        },
+      ],
+    },
   ];
   const solutionsData = [
     {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      title: "More Efficient Software Delivery & Early Market Access",
+      desc: "You can extend your development timelines and deliver software in a short time while ensuring quality and security. Thus, your company would be able to remain a step ahead of the competition.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      title: "Team Cooperation & Collaboration at its Best",
+      desc: "Good communication and teamwork among development and operations teams lead to time saving, elimination of bottleneck and project efficient upgrading.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our DevOps Solutions company, integrating e-learning tools, course management, and student engagement features.",
+      title: "Strengthened Scalability & Reliability",
+      desc: "To keep the application running smoothly and reliably, it is even better if the number of users is high. The company can then continue to grow without causing stability or the user experience to be compromised.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our DevOps Solutions services to highlight your skills and attract potential clients.",
+      title: "Automation of Deployment & Reduced Human Errors",
+      desc: "The number of mistakes and the manual interventions can be minimized by automating the deployment processes, which in turn ensures software delivery that is safer and more consistent.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our DevOps Solutions company, featuring responsive designs and seamless navigation for a better user experience.",
+      title: "Real-Time System Health Checking & Performance Increasing",
+      desc: "Through constant monitoring they can identify the parts of the system that cause delay and even improve performance so that the application is always running at its best.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
-    },
-    {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive DevOps Solutions solutions tailored to your needs.",
-    },
-    {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our DevOps Solutions company, featuring secure payment gateways, inventory management, and optimized user journeys.",
-    },
-    {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our DevOps Solutions services, that enhance donor engagement and effectively communicate your mission.",
-    },
-    {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
-    },
-    {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
-    },
-    {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      title: "Cloud Management Made More Cost-Effective",
+      desc: "You can use the cloud resources and infrastructure in a way that benefits you the most thus giving back the investment in full while at the same time lowering your operational costs and increasing your efficiency.",
     },
   ];
   const cardsSectionData1 = [
@@ -254,59 +426,57 @@ const DevOpsSolutions = () => {
   const steps = [
     {
       step: "Step 01",
-      title: "Discovery & Strategic Planning",
+      title: "Requirement Analysis & Strategy",
       description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
+        "Analyze business objectives, workflows, and project requirements that lead to the creation of a roadmap for DevOps implementation as well as long-term success.",
     },
     {
       step: "Step 02",
-      title: "Custom Design & Prototyping",
+      title: "Planning & Roadmap Design",
       description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
+        "Identify key elements of a custom-made digital strategy for the DevOps project, pick the proper tools, and construct a flexible and viable infrastructure plan that matches your business goals.",
     },
     {
       step: "Step 03",
-      title: "Front-End Development",
+      title: "Environment Setup",
       description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
+        "Set up and optimize cloud platforms, servers, and their supporting infrastructure through installation, configuration, and maintenance aiming at a stable and efficient development environment.",
     },
     {
       step: "Step 04",
-      title: "Back-End Development",
+      title: "Version Control & Code Management",
       description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
+        "Start Git-based repositories to manage code which is efficient, collaborative, easy to change simultaneously among different development teams and is to be updated version by version.",
     },
     {
       step: "Step 05",
-      title: "Quality Assurance & Testing",
+      title: "Continuous Integration (CI)",
       description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
+        "Make code building, testing, and integration automated so issues can be found at their very beginning stage and guarantee software delivery of high quality and reliability.",
     },
     {
       step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
+      title: "Continuous Deployment (CD)",
       description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
-    },
-  ];
-  const slides = [
-    {
-      image: assets.devops,
-      title: "DevOps Solutions",
-      subtitle:
-        "Streamline KYC compliance with AI, cloud, and process automation",
+        "The automated release stage assists you in carrying out activities with lower manual efforts and thereby speed operation cycles are shortened and by-products reach market faster than before.",
     },
     {
-      image: assets.blockchainDevelopment,
-      title: "Blockchain Development",
-      subtitle:
-        "Streamline KYC compliance with AI, cloud, and process automation",
+      step: "Step 07",
+      title: "Monitoring & Logging",
+      description:
+        "In a real-time manner, keep on closely monitoring the application that involves its health, performance, as well as, security so that the problem can be fixed before it becomes a source of trouble.",
     },
     {
-      image: assets.blockchainDevelopment,
-      title: "Blockchain Development",
-      subtitle:
-        "Streamline KYC compliance with AI, cloud, and process automation",
+      step: "Step 08",
+      title: "Feedback & Optimization",
+      description:
+        "Use the user's opinion along with the data on performance to develop processes, enhance system reliability and cut down on the time when the system is not available.",
+    },
+    {
+      step: "Step 09",
+      title: "Scaling & Continuous Improvement",
+      description:
+        "Through process optimization, the firm can support its expansion, keep its tasks stable, and make operational reliability its great-term solution.",
     },
   ];
   useSplitTextAnimation("h1");
@@ -441,100 +611,34 @@ const DevOpsSolutions = () => {
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />
-        <CardsSection
-          heading="Transform Your App Vision with Our App Development Consulting Services"
-          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
-          services={cardsSectionData2}
-          headColor="text-white"
-          sectionBg="bg-blue-900"
-          cardBg="bg-transparent"
-          hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
-          textColor="text-white"
-          hoverTextColor=""
-        />
-        <GetStarted
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
-          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
-          buttonText="Contact Us"
-          image={assets.getStarted}
-        />
-        <CardsSection
-          heading="Transform Your App Vision with Our App Development Consulting Services"
-          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
-          services={cardsSectionData1}
-          cardBg="bg-gray-50"
-          hoverBg=""
-          textColor="text-gray-800"
-          hoverTextColor=""
-        />
-        <CardsSection
-          heading="Transform Your App Vision with Our App Development Consulting Services"
-          subheading="Partner with us to bring your app ideas to life with our services, leveraging the latest technologies and expert guidance for exceptional results."
-          services={cardsSectionData2}
-          headColor="text-black"
-          sectionBg="bg-white"
-          cardBg="bg-transparent"
-          hoverBg="border border-gray-100 hover:border-black hover:scale-105 transition-all"
-          textColor="text-black"
-          hoverTextColor=""
-        />
-        <TopRatedCompany
-          title="Top-Rated DevOps Solutions Company"
-          description={[
-            `RichestSoft provides top-notch and oriented DevOps Solutions solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch DevOps Solutions services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best DevOps Solutions company in India, we provide best-in-class DevOps Solutions services.`,
-          ]}
-          image={assets.whyChooseUs}
-          background={assets.patternBg1}
+        <TechStack
+          heading="Cutting-Edge DevOps Tools and Technologies that Capyngen Use"
+          subheading=""
+          categories={techStack}
         />
         <BenefitsSection
-          heading="DevOps Solutions Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
+          heading="Benefits of Choosing Capyngen DevOps Solutions"
+          desc=""
           benefits={solutionsData}
+          image={assets.devops}
+          footerNote="Capyngen’s DevOps consulting and implementation services are a powerful lever for businesses to change their IT operations with freedom and velocity."
         />
         <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
+          heading="DevOps Solution Process at Capyngen"
+          desc=""
           steps={steps}
         />
-        <CardsSection
-          heading="DevOps Services and Solutions Procedure We Follow"
-          subheading="Our DevOps services and solutions procedure ensures a seamless transition to automated, scalable, and secure operations, from assessment and planning to continuous integration, monitoring, and compliance tailored to your business needs."
-          services={cardsSectionData2}
-          headColor="text-white"
-          height="h-80"
-          sectionBg="bg-gray-800"
-          cardBg="bg-gray-700"
-          hoverBg=""
-          textColor="text-white"
-          hoverTextColor=""
-        />
         <GetStarted
+          reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
-          title="Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies"
-          description="Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled."
+          title="Check Our DevOps Packages"
+          description={[
+            "Expand infrastructure, increase performance, and workflow automation with Capyngen’s enterprise-grade DevOps solutions.",
+          ]}
           buttonText="Contact Us"
+          backgroundVideo={assets.backgroundVideo}
         />
-        <WhyChoose />
-        <BenefitsSection
-          heading="DevOps Solutions Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level DevOps Solutions services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
-        />
-        <TechnologiesCarousel
-          title="DevOps Solutions Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
-        />
-        <OurServices />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>

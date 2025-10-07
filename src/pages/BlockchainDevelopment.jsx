@@ -43,261 +43,123 @@ import {
 import GetStarted from "../components/GetStarted";
 import CardsSectionGrid from "../components/CardsSectionGrid";
 import Banner4 from "../components/Banner4";
+import IndustryServices from "../components/IndustryServices";
+import TechStack from "../components/TechStack";
 
 const BlockchainDevelopment = () => {
   const faqItems = [
     {
-      question: "What is Blockchain Development?",
+      question: "What is blockchain development?",
       answer:
-        "Blockchain Development is the process of building digital systems that are decentralized, secure, and transparent by using the distributed ledger technology.",
+        "Blockchain development refers to the process of designing and implementing secure and decentralized systems that store their data on distributed ledgers.",
     },
     {
-      question: "What services does a blockchain development company offer?",
+      question: "Why is blockchain important for businesses?",
       answer:
-        "A blockchain development company offers blockchain development, smart contract development, blockchain application development, and enterprise blockchain solutions.",
+        "Blockchain is important as it optimizes trust, security, and efficiency, thus helping businesses to lower expenses and raise loyalty with consumers and business partners.",
     },
     {
-      question: "What is smart contract development?",
+      question: "Does Capyngen offer custom blockchain development?",
       answer:
-        "Smart contract development makes automated, self-executing contracts possible, blockchain being the platform that ensures safety, clarity, and that no inefficiency occurs.",
+        "Absolutely. We offer custom-made blockchain services to the extent your business goals and requirements of the blockchain network.",
     },
     {
-      question: "How can blockchain app development help my business?",
+      question: "Can you build smart contracts?",
       answer:
-        "Blockchain app development not only ensures secure transactions but also opens the way for traceability as well as decentralized functionalities for start-ups, big businesses, and financial systems.",
+        "Definitely. By our team, we develop smart contracts for different platforms, such as Ethereum, BSC, Solana, etc.",
     },
     {
-      question: "What are enterprise blockchain solutions?",
+      question: "Do you provide blockchain app development?",
       answer:
-        "Enterprise blockchain solutions are technologies that are implemented on a big scale to manage multifarious business operations, merge with old systems and make the transparency better.",
+        "Yes, we build blockchain-based decentralized applications (DApps) that are secure, scalable, and have a user-friendly interface.",
     },
     {
-      question: "What is custom blockchain development?",
+      question: "Which industries can use blockchain solutions?",
       answer:
-        "Custom blockchain development is the process of redesigning blockchain technology to specifically accommodate your business's needs, providing scalability, security, and flexibility.",
+        "Blockchain is one of the new technologies that the healthcare, finance, insurance, supply chain, education, transport, retail, and so on industries can adopt.",
     },
     {
-      question: "What is blockchain software development?",
+      question: "What blockchain platforms do you work with?",
       answer:
-        "Blockchain Software Development comprises creating blockchain apps, tokenization mechanisms, smart contracts, and safe networks for business use.",
+        "We use a variety of different blockchain platforms depending on the client's needs. Some of the main platforms include Ethereum, Hyperledger, Solana, Binance Smart Chain, Polkadot, Cardano, etc.",
     },
     {
-      question: "How can blockchain consulting services benefit my company?",
+      question: "Is blockchain secure for enterprises?",
       answer:
-        "Blockchain consulting services only come in the form of guidance that includes strategy, feasibility, and actualization, making sure that blockchain projects are flawless and valuable.",
-    },
-    {
-      question: "Are there blockchain development services in India?",
-      answer:
-        "Yes, there are blockchain development services in India that provide the blockchain solutions in India for startups, enterprises, and enterprise-grade blockchain solutions.",
-    },
-    {
-      question:
-        "What makes a company the best blockchain development company for startups?",
-      answer:
-        "One of the best blockchain development companies for startups is made so by factors like the company's expertise in custom blockchain development, the company's innovation, scalability, and the company's provision of being a cost-effective solution tailored for emerging businesses.",
-    },
-    {
-      question: "Can blockchain development integrate with existing systems?",
-      answer:
-        "Yes. Enterprise blockchain solutions as well as blockchain app development can work with the current IT setup without any issues.",
-    },
-    {
-      question: "How secure is blockchain development?",
-      answer:
-        "Blockchain Development services secure their projects through cryptography, decentralization, and by ensuring that the information cannot be changed thus achieving high-security systems.",
-    },
-    {
-      question: "What is the role of a custom blockchain development company?",
-      answer:
-        "The company will come up with, build, and deliver the blockchain system that is genuinely engineered to fulfill your business requirements while also providing smart contract development and consulting.",
-    },
-    {
-      question:
-        "Can blockchain software development support multiple industries?",
-      answer:
-        "Absolutely! The blockchain app development and enterprise blockchain solutions have already demonstrated the benefits that the finance, supply chain, healthcare, and logistics sectors can gain, among the numerous other industries, through the adoption of distributed ledger technology.",
+        "Yes, it is. Blockchain employs cryptography and decentralized networks that make it difficult for hackers to penetrate compared to traditional systems.",
     },
     {
       question: "How long does blockchain development take?",
       answer:
-        "The duration varies with the specific project scope—developing smaller applications might be accomplished in several weeks, whereas it is easy to expect that enterprise blockchain solutions will take quite a few months to complete.",
+        "The period of time to develop a blockchain project depends on how detailed it is. Usually, it would take from 4 to 12 weeks for most of the projects.",
     },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
+    {
+      question: "Do you offer blockchain consulting services?",
+      answer:
+        "Indeed. We provide the whole service of blockchain consulting, from planning to putting it into action, resulting in successful projects.",
+    },
+    {
+      question: "Can Capyngen integrate blockchain into my existing systems?",
+      answer:
+        "Yes. We provide blockchain integration services as a seamless way to connect your existing systems securely.",
+    },
+    {
+      question: "Do you work with startups?",
+      answer:
+        "Yes. One of the main reasons why we're among the top blockchain development companies for startups is because we're offering cost-effective solutions for all kinds of projects.",
+    },
+    {
+      question: "Do you provide post-launch support?",
+      answer:
+        "Yes. Capyngen is the answer for all the continuous needs of maintenance, updates, and support for all blockchain solutions.",
+    },
+    {
+      question: "Is blockchain scalable for global operations?",
+      answer:
+        "Yes. Blockchain can easily be scaled to handle global transactions and users with the proper architecture.",
+    },
+    {
+      question: "How do I start my blockchain project with Capyngen?",
+      answer:
+        "Just fill in the form to request a free consultation. Our specialists will examine your aims and come up with a comprehensive blockchain strategy for you.",
+    },
   ];
   const benefitsSection1 = [
     {
-      title: "Blockchain in UX Design",
-      desc: "Blockchain enhances the user experience with transparency and secure interaction. Secure, tamper-proof transaction records and decentralized authentication build trust. Token-based rewards and smart contract operations create higher engagement and better operations. Users can verify ownership and action without trusting central powers to create a secure, trustworthy, and user-friendly digital world.",
+      title: "Enhanced Security & Data Protection",
+      desc: "Blockchain protects data by employing complex encryption and distributed networks. In this way, the potential for breaches, fraud, and unauthorized access is minimized.",
     },
     {
-      title: "Blockchain in Data Management",
-      desc: "Blockchain revolutionizes data management by offering decentralized, tamper-evident storage. Every record is encrypted and signed by various nodes, ensuring integrity and security. Smart contracts and real-time monitoring regulate and abide automatically. This gives organizations the ability to access accurate, auditable, and reliable data, facilitating better decision-making and operational efficiency.",
+      title: "Transparency & Traceability",
+      desc: "Each transaction is logged on a shared ledger, so the transaction can be traced and verified with great ease. By doing so, trust among stakeholders is enhanced, and the commitment to social responsibility is ensured.",
     },
     {
-      title: "Blockchain in Ride Sharing",
-      desc: "Decentralized blockchain networks increase ride-sharing platforms via secure identification verification, transparent transactions, and automatic payments via smart contracts. Inherited ride histories avoid disputes, and live tracking and decentralized storage enhance reliability. Blockchain reduces the expense of middlemen and creates trust between riders, drivers, and service providers.",
+      title: "Reduced Transaction Costs",
+      desc: "By using blockchain to eliminate intermediaries, businesses can significantly reduce transaction fees and overhead, making operations more cost-effective.",
     },
     {
-      title: "Blockchain in Supply Chains",
-      desc: "Blockchain enables end-to-end traceability across supply chains, with each product movement from source to delivery documented. Decentralized ledgers prevent errors, fraud, and delays, and automation of payment and order processing with smart contracts. Real-time access to unalterable information increases collaboration, transparency, and operating efficiency for customers and businesses.",
+      title: "Faster Transactions & Settlements",
+      desc: "Blockchain enables near-instant execution of transactions without delays caused by intermediaries. What once took days can now be completed in minutes.",
     },
     {
-      title: "Blockchain in Digital Identity",
-      desc: "Blockchain offers safe, decentralized digital identities. Individuals control personal information with private keys, exposing only what's needed. Authentication and access are delegated through smart contracts, protecting against identity theft and fraud. Indelible ledgers foster trust, privacy, and auditable histories for people and organizations in digital interactions.",
+      title: "Decentralization & Trustless Systems",
+      desc: "With no single authority controlling the network, blockchain ensures fairness and reliability. Trust is built into the system through encryption, not intermediaries.",
     },
     {
-      title: "Blockchain on Social Networking",
-      desc: "Blockchain disrupts social networks by decentralizing data ownership and giving transparency. Crowdfunding and reward schemes work with smart contracts, ensuring secure, transparent contribution. Users control their content, privacy, and digital property, while immutable records reduce censorship and fraud, building community-led, safe social networks.",
+      title: "Immutable & Tamper-Proof Records",
+      desc: "Once stored on the blockchain, data cannot be altered or deleted, ensuring a permanent and secure record of all transactions.",
     },
     {
-      title: "Blockchain in Asset Management",
-      desc: "Blockchain provides secure and transparent asset tracking within investments, physical holdings, and digital assets. Immutable ledgers safeguard against fraud and errors, smart contracts enable automatic transactions, compliance, and payments. Real-time data can be authenticated by a variety of stakeholders, ensuring efficiency, security, and confidence in asset management processes.",
-    },
-    {
-      title: "Blockchain in Healthcare",
-      desc: "Blockchain secures medical records and patient data in tamper-resistant, decentralized ledgers. Provider-to-provider, lab-to-provider, and payer-to-provider interoperability is improved, and automated consent and claims are made easy through smart contracts. Faults, frauds, and delays are reduced, and secure, transparent, and efficient healthcare administration is provided to patients and institutions.",
-    },
-    {
-      title: "Blockchain in Real Estate",
-      desc: "Blockchain streamlines real estate transactions by making ownership of property, transfers, and contracts unalterable. Smart contracts facilitate payment, leasing, and transferring of assets automatically, reducing delays and fraud. Decentralized verification increases transparency, while tokenization facilitates fractional ownership. Blockchain secures, makes transparent, and efficient real estate transactions.",
-    },
-    {
-      title: "Blockchain in Voting Systems",
-      desc: "Blockchain enables secure, transparent voting by casting votes immutably. Safe voter identity authentication and accurate counting are ensured by smart contracts. Manipulation is prevented through decentralization, and auditability allows independent verification without invading privacy. Blockchain builds trustworthy and responsible electoral systems.",
-    },
-    {
-      title: "Blockchain in Financial Services",
-      desc: "Blockchain improves financial transactions through tamper-proof ledgers and real-time settlement. Smart contracts execute trading, lending, and compliance automatically with fewer errors and less fraud. Decentralized finance enables peer-to-peer lending and trading. Blockchain delivers secure, efficient, and transparent financial services.",
-    },
-    {
-      title: "Blockchain in Intellectual Property Management",
-      desc: "Blockchain protects intellectual property by storing copyrights, patents, and trademarks in unalterable ledgers. Smart contracts enforce royalties and licenses to ensure that creators are given a rightful share. Clear provenance and ownership reduce conflicts, providing secure, verifiable, and globally accessible IP management.",
-    },
-  ];
-
-  const cardsSectionDifferentColorData1 = [
-    {
-      title: "Security & Transparency",
-      description:
-        "Blockchain information is saved in a decentralized and tamper-evident manner. Each transaction or piece of data is saved in a secure ledger that can't be modified, providing total transparency and minimizing the likelihood of fraud.",
-      icon: <FaShieldAlt className="text-4xl text-white drop-shadow-md" />,
-      cardBg: "bg-[#ed5565] hover:bg-[#da4453]",
-    },
-    {
-      title: "Decentralization & Reliability",
-      description:
-        "In contrast to other systems, blockchain is decentralized, so there is no common point of failure. This enhances reliability, keeps data available at all times, and guards against cyberattacks.",
-      icon: <FaNetworkWired className="text-4xl text-white drop-shadow-md" />,
-      cardBg: "bg-[#5d9cec] hover:bg-[#4a89dc]",
+      title: "Improved Supply Chain Management",
+      desc: "Blockchain provides full transparency and traceability across the supply chain, reducing fraud, delays, and errors while improving efficiency.",
     },
     {
       title: "Smart Contract Automation",
-      description:
-        "Smart contracts on the blockchain execute agreements automatically on conditions being met. This reduces intermediaries' requests, saves funds, and speeds up processes while ensuring rules' application to the letter.",
-      icon: <FaFileContract className="text-4xl text-white drop-shadow-md" />,
-      cardBg: "bg-[#ac92ec] hover:bg-[#967adc]",
+      desc: "Smart contracts execute agreed actions automatically when conditions are met, reducing paperwork, errors, and manual intervention.",
     },
     {
-      title: "Scalability & Future-Readiness",
-      description:
-        "Blockchain technology is designed to scale with increasing user requirements. Blockchain is future-proof and can handle more transactions without compromising performance.",
-      icon: (
-        <FaProjectDiagram className="text-4xl text-gray-800 drop-shadow-md" />
-      ),
-      cardBg: "bg-[#ccd1d9] hover:bg-[#aab2bd]",
-    },
-    {
-      title: "Traceability & Auditability",
-      description:
-        "All transactions within a blockchain are kept, dated, and are verifiable. This enables full traceability, thus making audits, compliance, and reporting transparent and simple.",
-      icon: <FaClipboardCheck className="text-4xl text-white drop-shadow-md" />,
-      cardBg: "bg-[#ffce54] hover:bg-[#f6bb42]",
-    },
-    {
-      title: "Enhanced Trust & Customer Confidence",
-      description:
-        "Securing data and making it transparent and verifiable, blockchain encourages stakeholders and users to trust each other. Blockchain ensures accountability and promotes trust in digital transactions and interactions.",
-      icon: <FaHandshake className="text-4xl text-white drop-shadow-md" />,
-      cardBg: "bg-[#a0d468] hover:bg-[#8cc152]",
-    },
-  ];
-  const cardsSectionGridData1 = [
-    {
-      title: "Transparency and Immutability",
-      description:
-        "Blockchain makes sure each transaction is stored forever on a decentralized ledger, which becomes immutable and transparent. Data cannot be deleted or changed once added, offering complete trust and accountability to both customers and businesses.",
-      icon: <FaLock className="w-6 h-6 text-orange-500" />,
-      iconBg: "bg-orange-100",
-    },
-    {
-      title: "Improved Security",
-      description:
-        "The cryptographic procedures that underlie blockchain, as well as its decentralized network, mean that data is extremely secure. Access or interference by unauthorized users is practically impossible, and transactions, users' information, and companies' records are preserved in a safe manner at all times.",
-      icon: <FaShieldAlt className="w-6 h-6 text-green-500" />,
-      iconBg: "bg-green-100",
-    },
-    {
-      title: "Decentralization",
-      description:
-        "Blockchain eliminates the need for intermediaries such as banks or payment gateways third parties. It reduces expenses, avoids a single point of failure, and enhances operational efficiency in the system through dispersing power among a network of nodes.",
-      icon: <FaNetworkWired className="w-6 h-6 text-lime-500" />,
-      iconBg: "bg-lime-100",
-    },
-    {
-      title: "Smart Contracts",
-      description:
-        "Smart contracts are programmed software that runs automatically on the blockchain. They automatically enforce stipulated conditions, without the need for human involvement. This enables faster, faultless operations while ensuring all parties stick to agreed premises.",
-      icon: <FaFileContract className="w-6 h-6 text-red-500" />,
-      iconBg: "bg-red-100",
-    },
-    {
-      title: "Cost Effectiveness",
-      description:
-        "Freeing processes from middlemen intervention and automation, blockchain minimizes administrative burden, reduces errors, and streamlines operations. This delivers significant cost reduction while maintaining accuracy and reliability.",
-      icon: <FaDollarSign className="w-6 h-6 text-orange-500" />,
-      iconBg: "bg-orange-100",
-    },
-    {
-      title: "Faster Transactions",
-      description:
-        "Blockchain offers near real-time settlement of transactions compared to traditional systems. Payments, product transfer, and contract execution can be made virtually in real-time, improving efficiency and accelerating business operations.",
-      icon: <FaBolt className="w-6 h-6 text-green-500" />,
-      iconBg: "bg-green-100",
-    },
-    {
-      title: "Improved Traceability",
-      description:
-        "Every transaction on a blockchain can be tracked and audited to the very last. Businesses can monitor the entire history of products or assets, from the origin to the final delivery, for greater accountability, regulatory compliance, and supply chain transparency.",
-      icon: <FaSearchLocation className="w-6 h-6 text-lime-500" />,
-      iconBg: "bg-lime-100",
-    },
-    {
-      title: "World-Wide Access",
-      description:
-        "Blockchain makes borderless transactions possible without traditional limitations, opening up opportunities to truly service global markets. Business entities can engage with customers around the world while carrying out secure, transparent, and compliant operations.",
-      icon: <FaGlobe className="w-6 h-6 text-red-500" />,
-      iconBg: "bg-red-100",
+      title: "Global Accessibility & Scalability",
+      desc: "Blockchain networks are accessible worldwide and can scale to support growing user bases and business demands without centralized control.",
     },
   ];
   const steps = [
@@ -305,69 +167,70 @@ const BlockchainDevelopment = () => {
       step: "Step 01",
       title: "Requirement Analysis",
       description:
-        "Begin with defining business goals and what blockchain can add value to. Define processes that can benefit from decentralization, smart contracts, or secure ledgers to make sure the solution aligns with strategic and operational objectives.",
+        "Understanding business objectives, obstacles, and project breadth to lay down a solid base. This step guarantees that the blockchain solution fits perfectly with the organization's needs.",
     },
     {
       step: "Step 02",
-      title: "Platform Selection",
+      title: "Blockchain Platform Selection",
       description:
-        "Choose a blockchain platform that fits project requirements, considering scalability, consensus algorithms, security options, and integration capacity to enable simple and effective deployment.",
+        "Picking the most fitting blockchain platform such as Ethereum, Hyperledger, or Solana. Such a choice is determined by scalability, security, transaction feasibility, and the proper use of the product.",
     },
     {
       step: "Step 03",
-      title: "Architecture & Technical Design",
+      title: "Design & Architecture",
       description:
-        "Design the blockchain system architecture, APIs, node setups, and database schemas to support secure integration with front-end applications and seamless communication between all components.",
+        "The system scheme is designed which includes nodes, network topologies, and the type of governance model. The security and scalability that are the main features of the system are ensured by the great architecture.",
     },
     {
       step: "Step 04",
       title: "Smart Contract Development",
       description:
-        "Create smart contracts to execute agreements, transactions, and workflow processes automatically. Design them secure, effective, and in line with business logic to avoid errors and limit manual interventions.",
+        "Code the business workflows and then automate with smart contracts. These contracts facilitate operations by reducing manual intervention and increasing transparency.",
     },
     {
       step: "Step 05",
-      title: "Application Development",
+      title: "Decentralized Application (DApp) Development",
       description:
-        "Build the blockchain solution by pairing front-end interfaces with decentralized ledgers and smart contracts. Prioritize usability, scalability, and security in building a strong and user-friendly product.",
+        "Build easy-to-use DApps that bring actual benefits and practicality to the end-users. These applications operate on the blockchain and deliver decentralized functionality.",
     },
     {
       step: "Step 06",
-      title: "Testing & Validation",
+      title: "Integration with Existing Systems",
       description:
-        "Thoroughly test all blockchain components such as nodes, smart contracts, and interfaces. Validate functionality, security, and performance to confirm error-free operation and data integrity.",
+        "Develop blockchain solutions that are compatible with your existing databases, ERP systems, and applications. This ensures smooth data transfer and uninterrupted operations.",
     },
     {
       step: "Step 07",
-      title: "Deployment",
+      title: "Testing & Security Audit",
       description:
-        "Deploy the blockchain application onto the chosen network. Implement nodes, smart contracts, and supporting infrastructure to enable the system to function well and securely in production.",
+        "Smart contracts are tested for functionality, performance, limitations, and security. Audits help identify flaws early, ensuring a safe and reliable environment.",
     },
     {
       step: "Step 08",
-      title: "Monitoring & Maintenance",
+      title: "Deployment",
       description:
-        "Regularly monitor blockchain performance, apply updates, and fix vulnerabilities. Regular maintenance ensures security, scalability, and long-term reliability of the blockchain solution. ",
+        "Implement the blockchain network, DApps, and smart contracts in a walk-through version. This ensures full component functionality and secure user access.",
     },
     {
       step: "Step 09",
-      title: "Handover & Documentation",
+      title: "Maintenance & Upgrades",
       description:
-        "Achieve a complete, safe transfer of the blockchain application thoroughly documented. Enable stakeholders to operate, maintain, and grow the system with confidence.",
+        "Support, updates, and scalability improvements are available round-the-clock after launch. Maintenance ensures security, efficiency, and adaptability to evolving demands.",
     },
   ];
   const slides = [
     {
       image: assets.blockchainBanner1,
-      title: "Blockchain Development",
+      title: "Begin your blockchain transformation with our expert team.",
       subtitle:
-        "Transforming business through future-proof, scalable, and secure solutions.",
+        "Use Capyngen's dependable, clear, and scalable blockchain solutions to simplify your operations, gain customer trust, and open up new business possibilities.",
     },
     {
       image: assets.blockchainBanner2,
-      title: "Smart Contract Development",
+      title:
+        "Revolutionize Your Business with Cutting-Edge Blockchain Development",
       subtitle:
-        "Implement our smart contract solutions to maximize reduction of human error, enhance transparency, and automate contracts.",
+        "Utilize the Capyngen blockchain technology that is reliable, transparent, and scalable to change your processes, gain customer loyalty, and open up new horizons.",
     },
     {
       image: assets.blockchainDevelopment,
@@ -376,68 +239,191 @@ const BlockchainDevelopment = () => {
         "Improve security, streamline processes, and open up opportunities for large scale corporate activity.",
     },
   ];
-  const features = [
+  const servicesData = [
     {
-      icon: <FaUsers className="w-10 h-10 text-blue-500" />,
-      title: "Expert Blockchain Team",
-      description:
-        "With experienced developers on our team, we develop seamless and secure blockchain solutions which are customized to your business requirements.",
+      image: assets.bg1,
+      title: "Smart Contract Development",
+      desc: "Secure and simplify the operation of your agreements using smart contracts through our service.",
     },
     {
-      icon: <FaTools className="w-10 h-10 text-blue-500" />,
-      title: "Customized Solutions",
-      description:
-        "We develop different blockchain applications and platforms according to your customized business requirements and cutting-edge technologies of the digital age.",
+      image: assets.bg1,
+      title: "Decentralized Application (DApp) Development",
+      desc: "Design and develop reliable and secure applications on the blockchain platform.",
     },
     {
-      icon: <FaLightbulb className="w-10 h-10 text-blue-500" />,
-      title: "Quality & Innovation",
-      description:
-        "Leveraging standards in Indian blockchain development services and using the latest UI/UX features, we provide solutions that burst, engage the user, and excel on performance.",
+      image: assets.bg1,
+      title: "Private Blockchain Solutions",
+      desc: "Customized blockchain networks that are specially designed for your business internal use.",
     },
     {
-      icon: <FaHeadset className="w-10 h-10 text-blue-500" />,
-      title: "Client Specific Support",
-      description:
-        "Our 24/7 client support ensures your blockchain platforms operate without disruption, and delivers steadfast service while you and your department build enduring trust with the solutions that we provide.",
+      image: assets.bg1,
+      title: "Public Blockchain Solutions",
+      desc: "Utilize publicly available blockchain networks to gain the most extensive access.",
+    },
+    {
+      image: assets.bg1,
+      title: "Token Development (Crypto Tokens & NFTs)",
+      desc: "Digitize your business through issuing tokens, digital assets, or NFTs.",
+    },
+    {
+      image: assets.bg1,
+      title: "Blockchain Integration with Existing Systems",
+      desc: "The process of connecting the current applications with blockchain technology continues without causing any interruption.",
     },
   ];
-  const cardsSectionData = [
+  const techStack = [
     {
-      title: "Enterprise Web Portals",
-      description:
-        "We create secure, scalable, and integrated enterprise web portals that are designed to support complex business requirements through the implementation of custom blockchain development.",
-      icon: <FaServer className="text-4xl text-white" />,
+      title: "Frontend",
+      items: [
+        {
+          name: "React",
+          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+        },
+        {
+          name: "Angular",
+          icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
+        },
+        {
+          name: "Next.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+        },
+        {
+          name: "Vue.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+        {
+          name: "Kotlin",
+          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
+        },
+        {
+          name: "Vue.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+        {
+          name: "Kotlin",
+          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
+        },
+      ],
     },
     {
-      title: "API Integration",
-      description:
-        "We develop and deploy robust API to enable data to flow and function efficiently across your enterprise system.",
-      icon: <FaProjectDiagram className="text-4xl text-white" />,
+      title: "Backend",
+      items: [
+        {
+          name: "Node.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+        },
+        {
+          name: "Python",
+          icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+        },
+        {
+          name: "Ruby on Rails",
+          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
+        },
+        {
+          name: "Java",
+          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+        },
+        {
+          name: "PHP",
+          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+        },
+        {
+          name: "Ruby on Rails",
+          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
+        },
+        {
+          name: "Java",
+          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
+        },
+        {
+          name: "PHP",
+          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+        },
+      ],
     },
     {
-      title: "Cloud Apps",
-      description:
-        "Our cloud based blockchain apps facilitate high availability, secure access and scalable architecture to execute globally.",
-      icon: <FaCloud className="text-4xl text-white" />,
+      title: "Platforms",
+      items: [
+        {
+          name: "iOS",
+          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
+        },
+        {
+          name: "Android",
+          icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
+        },
+        {
+          name: "React Native",
+          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+      ],
     },
     {
-      title: "Smart CMS",
-      description:
-        "Manage content more easily via tailored enterprise CMS solutions with flexibility, robust tools, and interlinking with blockchain.",
-      icon: <FaFileAlt className="text-4xl text-white" />,
+      title: "Database",
+      items: [
+        {
+          name: "MongoDB",
+          icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+        },
+        {
+          name: "MySQL",
+          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+        },
+        {
+          name: "Firebase",
+          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+        },
+        {
+          name: "Firebase",
+          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+        },
+        {
+          name: "Oracle",
+          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
+        },
+      ],
     },
     {
-      title: "Analytics Dashboards",
-      description:
-        "Get business insight in real time with interactive dashboards designed to assist enterprise to make business decisions immediately.",
-      icon: <FaChartBar className="text-4xl text-white" />,
-    },
-    {
-      title: "Enterprise Grade E Commerce",
-      description:
-        "Implement securely, and custom e-commerce platforms that are powered by blockchain solutions, which makes possible performance in business optimization.",
-      icon: <FaShoppingCart className="text-4xl text-white" />,
+      title: "UI/UX",
+      items: [
+        {
+          name: "Adobe XD",
+          icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
+        },
+        {
+          name: "Sketch",
+          icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
+        },
+        {
+          name: "Figma",
+          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        },
+        {
+          name: "Figma",
+          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        },
+        {
+          name: "InVision",
+          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
+        },
+      ],
     },
   ];
 
@@ -445,111 +431,175 @@ const BlockchainDevelopment = () => {
   return (
     <div className="relative">
       <Banner4 slides={slides} />
-
-      <CardsSection
-        heading="Characteristics of Blockchain Technology"
-        subheading="Blockchain is a cutting-edge technology that rediscovers data and transaction management. It provides transparency, security, and efficiency in various industries, infusing trust and accountability into digital systems."
-        services={cardsSectionDifferentColorData1}
-        cardBg=""
-        headColor="text-white"
-        sectionBg="bg-black"
-        hoverBg=""
-        textColor="text-gray-800"
-        hoverTextColor="hover:text-gray-900 transition-all"
+      <GetStarted
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        title="Build the Future with Blockchain"
+        description="Capyngen is your go-to-place for cutting-edge, secure, and scalable blockchain solutions to transform your business. Our team of specialists will assist you in innovating more rapidly and maintaining your competitive advantage in the international market."
+        buttonText="Contact Us"
+        backgroundVideo={assets.backgroundVideo}
       />
       <TopRatedCompany
-        title="Innovative Blockchain Development Company"
-        description={[
-          `Capyngen is Blockchain Development Innovative Company that delivers customized blockchain solutions to businesses globally. Our developers adopt a methodical process that allows each project to attain high functioning, smooth operation, and engaging user interfaces.`,
-          `Since our inception in 2022, Capyngen has built a team of creators, thinkers, and problem solvers with the objective of delivering cutting edge solutions that are blockchain driven. Our work today consists of developing applications that are scalable, working, and user optimized so that your users have an uninterrupted and immersed experience.`,
-          `Capyngen offers premier end to end blockchain services as a leading Blockchain Development Company in India, enabling businesses to adopt decentralized technologies and seamlessly integrate measurable results.`,
+        reverse={true}
+        title="What is Blockchain Development Technology?"
+        desCcription={[
+          `Blockchain development is basically building systems that are safe from hacking, have no middlemen and store data in the most honest and unbreakable way. In contrast to standard databases, the blockchain relies on transaction records from distributed ledgers, which is why it is very suitable for industries that demand trust, security, and transparency.`,
+          `Capyngen offers blockchain software development and blockchain app development to help businesses build innovative digital solutions powered by smart contracts, tokens, and decentralized networks.`,
         ]}
         image={assets.blockchainDevelopmentCompany}
         background={assets.patternBg1}
+        isHidden={true}
+        imageHeight="aspect-[1/1]"
       />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Turn Your Ideas into Reality with Our Blockchain Development Solutions"
-        description="There is full consulting & development assistance available that can assist you to propel your project from concept to market with scalable, secure and high-performing apps."
-        buttonText="Contact Us"
-        image={assets.getStarted}
-      />
-      <CardsSectionGrid
-        heading="Benefits of Blockchain Development"
+      <TopRatedCompany
+        title="Importance of Blockchain in Modern Businesses"
         description={[
-          "Blockchain technology, being decentralized and having the properties of smart contracts, provides a strong base for secure, trusted, and transparent digital transactions. This is how it restructures business processes and customer experience.",
-          "Our team of experts is capable of creating highly-customizable mobile solutions for business-specified Ecommerce needs.",
-          "If you are willing to lead your business globally and connect with your customers worldwide, rely on our dependable Ecommerce development services.",
+          <>
+            <p className="mb-3 font-semibold">
+              Blockchain technology has been shaking up the whole world from one
+              industry to another. Its decentralized design delivers businesses
+              with:
+            </p>
+            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+              {[
+                {
+                  text: "Improved security utilizing encryption through cryptography",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Open and verifiable logs for better trustworthiness",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Reduced operating expenses due to the elimination of intermediaries",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Quicker cross-border transactions",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Data storage that is immutable, hence tamper-proof",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Accessibility at the global level, making it possible for enterprises to grow effectively",
+                  color: "text-blue-500",
+                },
+              ].map(({ title, text, color }, idx) => (
+                <li
+                  key={idx}
+                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                >
+                  {text}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Capyngen’s blockchain development services are the solution for
+              businesses to upgrade their processes and be the leaders of the
+              digital era.
+            </p>
+          </>,
         ]}
-        services={cardsSectionGridData1}
-        reverse
+        image={assets.whyChooseUs}
+        isHidden={true}
+        background={assets.patternBg1}
+      />
+      <IndustryServices
+        heading="Blockchain Services We Offer"
+        subheading="Capyngen, being the top custom blockchain development company, offers comprehensive services to both startups and enterprises:"
+        cardBg="bg-gray-700"
+        cardText="text-white"
+        cardDescText="text-white"
+        services={servicesData}
+      />
+      <TechStack
+        heading="Transform Your Web Development and Consulting with Our Expert Tech Stack"
+        subheading=""
+        categories={techStack}
       />
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="What Blockchain Development Services You Can Expect"
-        description={[
-          "Capyngen offers complete proof Blockchain Consulting Services and Enterprise Blockchain Services to meet your specific enterprise needs. We integrate strategic planning, rigorous analysis, and critical thinking to construct and deploy blockchain solutions that solve complex problems in an economical manner.",
-          "We strive to deliver custom, high-value solutions to improve operational efficiency, introduce transparency, and allow business to leverage the full potential of blockchain technology. We approach each project with precision to deploy on scalability, security, and business requirements to fit your existing business environment.",
-        ]}
+        title="Schedule a Free Blockchain Consultation"
+        description="Set up a meeting with our blockchain experts to learn what the best method for your business is. Capyngen is with you all the way from idea to implementation."
+        buttonText="Schedule a Consulation"
         backgroundVideo={assets.backgroundVideo}
       />
-
       <BenefitsSection
-        heading="Blockchain Applications"
-        desc="Blockchain extends far beyond cryptocurrencies, finding innovative uses across industries. From enhancing user experience and data management to revolutionizing healthcare, finance, supply chains, and even voting systems, blockchain’s decentralized, secure, and transparent structure builds trust, reduces fraud, and streamlines operations."
+        heading="Benefits of Blockchain Solutions"
+        desc="Capyngen’s blockchain solutions have the potential to impact the business in a real way:"
         benefits={benefitsSection1}
         image={assets.blockchainApplications}
       />
       <HowWeWork
         heading="How Blockchain Development Works"
-        desc="Blockchain development follows a structured process designed to ensure security, transparency, and efficiency at every stage. From analyzing requirements and selecting the right platform to smart contract creation, testing, deployment, and long-term maintenance, each phase ensures that the final solution aligns with business objectives while being reliable, scalable, and user-friendly."
+        desc="Capyngen uses a well-organized development process to cater blockchain solutions which are extremely useful:"
         steps={steps}
       />
-      <WhyChoose
-        heading="Why Partner with Capyngen"
-        intro="At the best Custom Blockchain Development Company, we offer powerful digital experiences that let your company succeed. We combine strategy and imagination with cutting-edge blockchain technology to deliver groundbreaking, scalable, and user-focused solutions tailored for you."
-        features={features}
-      />
-      <CardsSection
-        heading="Blockchain Services We Provide"
-        subheading="Collaborate with Capyngen, a leading Blockchain Development Company in India, to craft business level blockchain solutions that include bespoke applications, API integration, cloud based platforms, and e-commerce solutions that provide growth and efficiency."
-        services={cardsSectionData}
-        sectionBg="bg-gray-900"
-        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-        hoverBg=""
-        height="h-72"
-        textColor="text-white"
-        hoverTextColor=""
-        headColor="text-white"
-      />
-      <TechnologiesCarousel
-        title="The Blockchain Technologies We Use"
-        description="At Capyngen, we utilize the latest blockchain technologies to develop secure, scalable, and easy-to-use solutions for companies. Our staff blends meticulous planning with innovative thinking and the latest technology to design digital experiences that grow and evolve your company."
-        technologies={technologies}
+      <TopRatedCompany
+        title="Why Choose Capyngen for Blockchain Development"
+        description={[
+          <>
+            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+              {[
+                {
+                  text: "Experienced and Skilled Blockchain Developers",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Complete Solutions from Concept to Implementation",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Tailored Blockchain Strategies That Match the Unique Business of You",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Trusted and Safe Blockchain Executions",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Regular Upkeep and Problem Solving Assistance",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Industry-Leading Technology Stack and Trendy Solutions",
+                  color: "text-blue-500",
+                },
+              ].map(({ title, text, color }, idx) => (
+                <li
+                  key={idx}
+                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                >
+                  {text}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Capyngen is acknowledged as one of the top blockchain development
+              companies for startups and enterprises. We empower companies
+              worldwide to bring their blockchain-based ideas to life with our
+              onshore, nearshore, and offshore delivery models.
+            </p>
+          </>,
+        ]}
+        image={assets.whyChooseUs}
+        isHidden={true}
+        background={assets.patternBg1}
       />
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Enabling Businesses with Blockchain"
-        description={[
-          "Using emerging blockchain technologies, Capyngen creates solutions that are secure, fast and simple to use. Our experts combine emerging thinking, innovation and leading edge technology to create digital experiences that drive business success and keep you ahead of your rivals.",
-          "Our emphasis on bespoke development includes blockchain development, smart contract, enterprise and cloud solutions; offering scalable, secure and future proofed solutions that suit your business needs.",
-        ]}
-        buttonText="Contact Us"
-        image={assets.enablingBusinessBlockchain}
+        title="Launch Your Blockchain Project"
+        description="Capyngen achieves the delivery of the enterprise blockchain solutions with great speed, high security, and continuous innovation. Why don’t we create your blockchain-powered future?"
+        buttonText="Launch your Project Now"
+        backgroundVideo={assets.backgroundVideo}
       />
-
       <FAQSection2 items={faqItems} />
       <ScrollRevealEffect />
     </div>

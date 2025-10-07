@@ -13,7 +13,7 @@ const Banner4 = ({ slides }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     pauseOnHover: false,
     arrows: false,
     beforeChange: (_, newIndex) => setActiveSlide(newIndex),
@@ -42,7 +42,7 @@ const Banner4 = ({ slides }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent pointer-events-none"></div>
 
               {/* Content */}
-              <div className="relative z-20 text-left max-w-3xl">
+              <div className="relative z-20 text-left max-w-4xl">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-md">
                   {slide.title}
                 </h1>

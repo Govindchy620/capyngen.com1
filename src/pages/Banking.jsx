@@ -73,7 +73,6 @@ const Industries = () => {
       desc: "Get a tailored real estate CRM to manage customer relationships efficiently, track business leads, and streamline business communication. We build with ASP.NET MVC, SQL, IIS, Azure, Avoma, etc technologies.",
     },
   ];
-
   const typesData = [
     {
       icon: <FaBuilding />,

@@ -12,157 +12,216 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
 import Banner7 from "../components/Banner7";
+import GetStarted from "../components/GetStarted";
+import CardsSectionImage from "../components/CardsSectionImage";
+import IndustryServices from "../components/IndustryServices";
 
 const UiUxDesign = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is UI/UX design?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "UI/UX design involves the creation of user interfaces and experiences that are not only visually appealing but also intuitive and easy to navigate.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Why is UI/UX a matter of businesses?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Good UI/UX leads engagement, thus retaining the users and enhancing conversions.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
-    },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      question: "Are you offering mobile app UI/UX design services?",
+      answer:
+        "Definitely, we build attractive and responsive interfaces for iOS and Android apps.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      question:
+        "Is it possible for you to design websites that follow UI/UX best practices?",
+      answer:
+        "Indeed, our website UI/UX design services guarantee a smooth user journey and better user interaction.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our UI/UX Design company, integrating e-learning tools, course management, and student engagement features.",
+      question: "Do you deliver custom UI/UX design services in India?",
+      answer:
+        "Yes, we design personalized UI/UX solutions that are in line with your company requirements.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our UI/UX Design services to highlight your skills and attract potential clients.",
+      question: "What sorts of businesses are your clients?",
+      answer:
+        "Health care, banking, online shopping, education, travel, hotel business, SaaS, and others.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our UI/UX Design company, featuring responsive designs and seamless navigation for a better user experience.",
+      question: "What instruments do you use for UI/UX design?",
+      answer:
+        "Figma, Sketch, Adobe XD, InVision, Zeplin, Marvel, and Axure RP.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+      question: "Are UX audits and optimization services offered by you?",
+      answer:
+        "Sure. We check the interface for usability and engagement and then optimize it.",
     },
     {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive UI/UX Design solutions tailored to your needs.",
+      question:
+        "Is it possible for Capyngen to improve accessibility in designs?",
+      answer:
+        "Definitely. We strive to make all digital products accessible and compliant with the standards.",
     },
     {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our UI/UX Design company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+      question:
+        "Do you give the user experience constant attention and improvement?",
+      answer:
+        "Yes. We analyze user habits and tweak the layout to the best solution.",
     },
     {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our UI/UX Design services, that enhance donor engagement and effectively communicate your mission.",
+      question: "Are your UI/UX services affordable for startups?",
+      answer:
+        "Yes. We provide reasonably priced UI UX design services without slimming off quality.",
     },
     {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+      question: "What is the time span for a UI/UX design project?",
+      answer:
+        "Schedules for projects are different but most will fall between 3–8 weeks of duration based on their complexity.",
     },
     {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+      question: "Do you connect designs with development teams?",
+      answer:
+        "Yeah. We arrange for the easy design handoff along with detailed instructions for developers.",
     },
     {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      question: "Can you make interactive prototypes?",
+      answer:
+        "Most definitely. We design interactive prototypes that allow users to go through the flow before developers do the actual coding.",
+    },
+    {
+      question: "How can I get started with Capyngen UI/UX design services?",
+      answer:
+        "The very first step is to really understand your need by booking a free consultation then custom design plan are delivered to you.",
     },
   ];
   const servicesData = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our UI/UX Design company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      image: assets.bg1,
+      title: "Enhanced User Engagement & Retention",
+      desc: "Develop user-focused and interactive experiences that attract users back, thereby increasing loyalty and long-lasting engagement.",
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced UI/UX Design services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      image: assets.bg1,
+      title: "Improved Conversion Rates",
+      desc: "Wisely chosen layouts and workflows motivate visitors to take specific actions, boosting sales, sign-ups, and overall engagement.",
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      image: assets.bg1,
+      title: "Intuitive, Responsive, and Accessible Design",
+      desc: "Deliver smooth experiences across all devices, ensuring usability for everyone—including users with disabilities.",
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      image: assets.bg1,
+      title: "Faster Load Times & Optimized Performance",
+      desc: "Quick-loading apps with seamless navigation reduce bounce rates and enhance user satisfaction.",
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our UI/UX Design solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      image: assets.bg1,
+      title: "Scalable Architecture for Growth",
+      desc: "Build platforms that can handle increased traffic, new features, and expansion without compromising performance or stability.",
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      image: assets.bg1,
+      title: "Strong Branding & Visual Identity",
+      desc: "Design consistent and visually appealing interfaces that clearly communicate your brand values and leave a lasting impression.",
+    },
+    {
+      image: assets.bg1,
+      title: "Seamless Integration with Tools & Services",
+      desc: "Connect your app with CRMs, payment gateways, analytics, and other third-party services to create a unified ecosystem.",
+    },
+    {
+      image: assets.bg1,
+      title: "Data-Driven Decision Making",
+      desc: "Use analytics and user behavior insights to refine UI/UX, marketing strategies, and product offerings.",
+    },
+    {
+      image: assets.bg1,
+      title: "Security & Privacy Compliance",
+      desc: "Protect user data and build trust by adhering to industry standards, regulations, and cybersecurity best practices.",
     },
   ];
   const steps = [
     {
       step: "Step 01",
-      title: "Discovery & Strategic Planning",
+      title: "Requirement Gathering & User Research",
       description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
+        "Define business goals, user needs, and lifestyle of the target audience to guide every design decision. By doing so, the end product will be in harmony with both the goals and the user's expectations.",
     },
     {
       step: "Step 02",
-      title: "Custom Design & Prototyping",
+      title: "Information Architecture & Wireframes",
       description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
+        "Arrange the information and depict the user-flows to have navigation easily understandable. Wireframes act as a user's cross-platform journey map ensuring that the movement is fast and logical.",
     },
     {
       step: "Step 03",
-      title: "Front-End Development",
+      title: "Visual & Interaction Design",
       description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
+        "Creating the designs that are not only attractive but also easy to use significantly contributes to increased user engagement and guidance. The interaction part of the product is being made user-friendly by the company to improve the WebApp experience as a whole.",
     },
     {
       step: "Step 04",
-      title: "Back-End Development",
+      title: "Prototyping & User Testing",
       description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
+        "Creating working models and asking real users for their opinions. The test is to check the correctness of the designer's decisions and to identify shortcomings that can be fixed before the coding stage.",
     },
     {
       step: "Step 05",
-      title: "Quality Assurance & Testing",
+      title: "Design Handoff & Implementation",
       description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
+        "Work and communicate effectively with developers to have an easy integration and successful implementation. The product will be the one that works in the same way as the design and looks exactly like the design.",
     },
     {
       step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
+      title: "Continuous UX Improvement",
       description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
+        "Observe users‘ behavior and suggestions for the iterative updating of the design. Regular improvements increase the site's usability, users' engagement and conversion rates with time.",
+    },
+  ];
+  const cardsSectionImageData1 = [
+    {
+      title: "User Research & Analysis",
+      description: "Get to know your users, their behaviors, and preferences.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "Wireframing & Prototyping",
+      description:
+        "Visualize app and website layouts before the coding process.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Visual & Interaction Design",
+      description:
+        "Make the user interface visually attractive and interactive.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Mobile & Web UI/UX Design",
+      description:
+        "Create apps and websites that are compatible with all devices and are user-friendly.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "UX Audit & Optimization",
+      description: "Locate the problem areas and improve usability.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Accessibility & Usability Design",
+      description:
+        "Designing digital products that are accessible and easy to use for the entire user base.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
     },
   ];
 
@@ -174,39 +233,111 @@ const UiUxDesign = () => {
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Book a Consultation"
+          description={["Discuss your project with our UI/UX experts."]}
+          textSize="text-2xl"
+          buttonText="Book a Consultation"
+          backgroundVideo={assets.backgroundVideo}
+        />
         <TopRatedCompany
-          title="Top-Rated UI/UX Design Company"
+          title="What Are UI/UX Design?"
           description={[
-            `RichestSoft provides top-notch and oriented UI/UX Design solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch UI/UX Design services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best UI/UX Design company in India, we provide best-in-class UI/UX Design services.`,
+            `UI (User Interface) and UX (User Experience) design refer to the creation of visually attractive, user-friendly, and simple-to-navigate interfaces. The former revolves around the appearance and structure of applications or websites whereas the latter aims at giving a hassle-free and delightful experience.`,
+            `One of the reasons why Capyngen is the most sought after company for UI UX design services in India is that their expert team delivers tailor-made solutions that make web and mobile platforms more user-friendly, engaging, and result-oriented.`,
           ]}
           image={assets.whyChooseUs}
+          isHidden={true}
+          imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
         />
-
-        <BenefitsSection
-          heading="UI/UX Design Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
-        />
-        <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-          steps={steps}
-        />
-        <WhyChoose />
-        <BenefitsSection
+        <CardsSectionImage
           heading="UI/UX Design Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level UI/UX Design services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+          subheading=""
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
         />
-        <TechnologiesCarousel
-          title="UI/UX Design Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
+        <p className="bg-gray-800 pb-5 text-white w-full text-2xl text-center">
+          Our UI UX design services India are customized to support businesses
+          in increasing their{" "}
+          <span className="font-semibold text-blue-500">engagement</span>,{" "}
+          <span className="font-semibold text-blue-500">satisfaction</span>, and{" "}
+          <span className="font-semibold text-blue-500">retention</span>.
+        </p>
+        <HowWeWork heading="Our UI/UX Design Process" desc="" steps={steps} />
+        <IndustryServices
+          heading="Why use Capyngen for Mobile Application Development"
+          subheading=""
+          cardBg="bg-gray-700"
+          cardText="text-white"
+          cardDescText="text-white"
+          services={servicesData}
         />
-        <OurServices />
+        <TopRatedCompany
+          title="Why to Choose Capyngen for UI/UX Design"
+          description={[
+            <>
+              <p className="mb-3 font-semibold">
+                Importance of Cybersecurity in Modern Businesses
+              </p>
+              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+                {[
+                  {
+                    text: "Knowledge of mobile, and web UI UX design service",
+                    color: "text-blue-500",
+                  },
+                  {
+                    text: "Original designs centering on end-users for startups and companies with vast business volume",
+                    color: "text-blue-500",
+                  },
+                  {
+                    text: "Delivery anywhere in the world at prices that are attractive and solutions that can be scaled up or down",
+                    color: "text-blue-500",
+                  },
+                  {
+                    text: "Concentration on engagement, retention, and conversions",
+                    color: "text-blue-500",
+                  },
+                  {
+                    text: "Committed group with up-to-date equipment and design methods",
+                    color: "text-blue-500",
+                  },
+                  {
+                    text: "Reliability in the production of user-friendly digital interactions across the globe",
+                    color: "text-blue-500",
+                  },
+                ].map(({ title, text, color }, idx) => (
+                  <li
+                    key={idx}
+                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  >
+                    {text}
+                  </li>
+                ))}
+              </ul>
+            </>,
+          ]}
+          image={assets.whyChooseUs}
+          isHidden={true}
+          background={assets.patternBg1}
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Explore Design Packages"
+          description={["Choose the right plan for your business."]}
+          textSize="text-2xl"
+          buttonText="Explore"
+          backgroundVideo={assets.backgroundVideo}
+        />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>

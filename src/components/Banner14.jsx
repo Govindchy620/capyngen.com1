@@ -11,7 +11,7 @@ const Banner14 = ({
 }) => {
   return (
     <section
-      className="min-h-screen pt-20 flex items-center py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4 sm:px-6 lg:px-8"
+      className="pt-20 flex items-center py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4 sm:px-6 lg:px-8"
       aria-label="Capyngen Network Solutions Banner"
     >
       <div className="container max-w-[90vw] mx-auto">
@@ -38,11 +38,9 @@ const Banner14 = ({
           <div className="w-full lg:w-7/12 py-5">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               {title.split(highlighted)[0]}
-              <br />
               <span className="text-blue-500 text-3xl md:text-5xl font-extrabold">
                 {highlighted}
               </span>
-              <br />
               {subtitle}
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">

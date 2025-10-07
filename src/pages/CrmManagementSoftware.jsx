@@ -12,248 +12,397 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
 import CardSwap, { Card } from "../components/CardSwap";
+import Banner14 from "../components/Banner14";
+import GetStarted from "../components/GetStarted";
+import CardsSection from "../components/CardsSection";
+import {
+  FaAndroid,
+  FaApple,
+  FaBullhorn,
+  FaCheckCircle,
+  FaCode,
+  FaCogs,
+  FaDollarSign,
+  FaHeart,
+  FaMobileAlt,
+  FaShieldAlt,
+  FaTools,
+  FaUsers,
+} from "react-icons/fa";
+import IndustryServices from "../components/IndustryServices";
+import CardsSectionImage from "../components/CardsSectionImage";
 
 const CrmManagementSoftware = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question: "What is the primary function of CRM?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "CRM systems aim to facilitate the management of customer relationships by organizing customer data, pursuing sales leads, and improving customer loyalty as a way to increase sales and customer retention.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "Is CRM a good fit for small businesses?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Sure. Cloud-based and modular solutions make CRM available and manageable for small businesses.",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
-    },
-  ];
-  const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
-  ];
-  const solutionsData = [
-    {
-      title: "Casino Game Web App",
-      desc: "Launch captivating casino game websites with secure payment gateways, real-time gaming experiences, and engaging user interfaces that keep players returning for more.",
+      question: "How different is ERP from CRM?",
+      answer:
+        "ERP deals with the internal affairs and necessary resources of a company meanwhile CRM takes care of all the customer relations, sales, and marketing aspects.",
     },
     {
-      title: "Web App like CandyAI",
-      desc: "RichestSoft develops high-end and user-friendly web apps, such as Candy AI, and other AR VR dating apps, using advanced AI algorithms and reliable frameworks.",
+      question: "What is the price of a CRM system?",
+      answer:
+        "Depending on the features, number of users, and deployment type (cloud or on-premise) the prices vary. Capyngen has flexible packages available to fit any business size.",
     },
     {
-      title: "Educational Websites",
-      desc: "Deliver interactive learning experiences with educational websites designed by our CRM & Management Software company, integrating e-learning tools, course management, and student engagement features.",
+      question: "Is it possible for CRM to enhance sales performance?",
+      answer:
+        "Indeed, CRM makes the process of lead management more efficient, makes the opportunities tracking easier, and provides the insights necessary to the sales increase.",
     },
     {
-      title: "Portfolio Websites",
-      desc: "Showcase your work with visually compelling portfolio websites crafted by our CRM & Management Software services to highlight your skills and attract potential clients.",
+      question: "Do you provide custom CRM solutions?",
+      answer:
+        "Yes. Capyngen gives CRM software made to fit your business process and operations.",
     },
     {
-      title: "Offer Websites",
-      desc: "Promote deals effectively with custom offer websites built by our CRM & Management Software company, featuring responsive designs and seamless navigation for a better user experience.",
+      question:
+        "Without an issue, can CRM work with the tools that I am currently using?",
+      answer:
+        "Yes, indeed. We provide services that allow CRM to integrate with ERP, marketing, or project management software.",
     },
     {
-      title: "Listing Websites",
-      desc: "Create dynamic listing websites with advanced search functionalities and filters developed by our website development company for real estate, job boards, and more.",
+      question: "Which sectors can benefit from the use of CRM?",
+      answer:
+        "From small businesses to enterprises, e-commerce, healthcare, real estate, finance, etc.",
     },
     {
-      title: "Wiki Websites",
-      desc: "Build informative wiki websites with collaborative tools and easy content management using our comprehensive CRM & Management Software solutions tailored to your needs.",
+      question: "Does CRM contribute to customer retention?",
+      answer:
+        "Yes. CRM gathers the history of customer interactions, helps in the resolution of problems, and increases loyalty.",
     },
     {
-      title: "E-Commerce Websites",
-      desc: "Drive sales with robust e-commerce websites designed by our CRM & Management Software company, featuring secure payment gateways, inventory management, and optimized user journeys.",
+      question: "Is there a mobile version of CRM available?",
+      answer:
+        "Yes. Mobile CRM applications allow the sales force to have access to customer information and operations anywhere, anytime.",
     },
     {
-      title: "Non-Profit Websites",
-      desc: "Support your cause with engaging non-profit websites, developed by our CRM & Management Software services, that enhance donor engagement and effectively communicate your mission.",
+      question: "How do I switch to a different CRM?",
+      answer:
+        "Capyngen offers CRM migration & upgrade alternatives for a safe switch from old systems.",
     },
     {
-      title: "Entertainment Website Development",
-      desc: "Engage audiences with dynamic entertainment and OTT websites featuring multimedia integration, interactive features, and responsive design, all tailored to your brand's unique needs.",
+      question: "Is a CRM system training provided?",
+      answer:
+        "Yes. We provide training and documentation to ensure teams can fully utilize the system.",
     },
     {
-      title: "Event Website Development",
-      desc: "Seamlessly manage events with custom event websites that offer ticketing systems, live streaming, and real-time updates, enhancing attendee experiences and engagement.",
+      question: "Is CRM data used for the company’s decisions?",
+      answer:
+        "Definitely, Analytical CRM leads the organization to make use of marketing, sales, and customer service plans by providing the required insights.",
     },
     {
-      title: "Consulting Website Development",
-      desc: "Establish your consulting brand online with professional websites that showcase your expertise, client testimonials, and service offerings, designed to convert visitors into clients.",
+      question: "To what extent can the CRM system be considered safe?",
+      answer:
+        "Our CRM software includes encryption, access based on user roles, and follows the compliance standards thus securing the data.",
+    },
+    {
+      question: "How do I start Capyngen CRM solutions?",
+      answer:
+        "Contact or book a free consultation to discuss your business requirements and together we will design the most efficient CRM strategy for your business.",
     },
   ];
-  const servicesData = [
+  const cardsSectionData1 = [
     {
-      title: "Custom Enterprise Web Portals",
-      desc: "Our CRM & Management Software company designs enterprise web portals with seamless integration, robust security, and scalable architecture tailored to meet complex business needs.",
+      title: "Improved Customer Relationships",
+      description:
+        "Turn clients into loyal supporters by knowing each detail of your relationship with them and personalizing the way you communicate.",
+      icon: <FaAndroid className="text-4xl text-white" />,
     },
     {
-      title: "API Development and Integration",
-      desc: "Leverage our advanced CRM & Management Software services to build and integrate powerful APIs, ensuring smooth data exchange and enhanced functionality across your enterprise systems.",
+      title: "Increased Sales & Revenue",
+      description:
+        "Sales procedures can be automated and made more efficient and leads can be better managed in such a way that the rate of conversion of sales will increase.",
+      icon: <FaApple className="text-4xl text-white" />,
     },
     {
-      title: "Cloud-Based Web Applications",
-      desc: "Our website development company specializes in creating cloud-based web applications that offer high availability, scalability, and secure access for global enterprises.",
+      title: "Improved Productivity & Collaboration",
+      description:
+        "Employees can have access to customer data and can also use project management software to interact with no friction.",
+      icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
-      title: "Enterprise CMS Development",
-      desc: "Simplify content management with our custom-built enterprise CMS solutions, which offer powerful features and flexibility for effortlessly managing large volumes of content.",
+      title: "Data-Driven Decision Making",
+      description:
+        "Analyze the consumption behavior patterns of customers and use the business as a measuring tool to set criteria for taking appropriate actions.",
+      icon: <FaCode className="text-4xl text-white" />,
     },
     {
-      title: "Data Analytics Dashboards",
-      desc: "Utilize our CRM & Management Software solutions to create interactive data analytics dashboards, enabling real-time business insights and informed decision-making at the enterprise level.",
+      title: "Improved Customer Loyalty & Retention",
+      description:
+        "Understand customer needs before they even become aware of them and witness the dependency and loyalty grow.",
+      icon: <FaCheckCircle className="text-4xl text-white" />,
     },
     {
-      title: "Enterprise E-Commerce Solutions",
-      desc: "Elevate your online business with enterprise-grade e-commerce platforms developed by our website development company. These platforms feature advanced customization, security, and scalability.",
+      title: "Marketing Activities Made Easier",
+      description:
+        "Use integrated CRM analytics for the planning and execution of your targeted campaigns.",
+      icon: <FaCogs className="text-4xl text-white" />,
     },
   ];
-  const steps = [
+  const cardsSectionImageData2 = [
     {
-      step: "Step 01",
-      title: "Discovery & Strategic Planning",
-      description:
-        "Our web development company starts with a comprehensive investigation and planning phase to make sure that our services fit with your business goals and target audience.",
+      image: assets.bg1,
+      title: "Development of CRM Software tailored to your needs",
+      desc: "Solutions of customer relationship management that are ideally suited for your specific business processes and goals.",
     },
     {
-      step: "Step 02",
-      title: "Custom Design & Prototyping",
-      description:
-        "As a top web development firm, we make unique designs and prototypes that are personalized to your business identity. We offer web development solutions that are both visually appealing and user-friendly.",
+      image: assets.bg1,
+      title: "CRM Integration Services",
+      desc: "Use a connector to link your CRM to other enterprise software, such as ERP, marketing, and sales tools.",
     },
     {
-      step: "Step 03",
-      title: "Front-End Development",
-      description:
-        "Our web development services focus on front-end development and employ the latest technology to create responsive, dynamic, and visually attractive websites that are optimized for performance and user experience.",
+      image: assets.bg1,
+      title: "CRM Migration & Upgrade Solutions",
+      desc: "Systematic transition from old to new, scalable CRM platforms without any complications.",
     },
     {
-      step: "Step 04",
-      title: "Back-End Development",
-      description:
-        "Our web development firm focuses on strong back-end development, which means we can make web development solutions that are safe, scalable, and efficient, and that can handle complex tasks and manage data smoothly.",
+      image: assets.bg1,
+      title: "CRM Consulting & Strategy",
+      desc: "Expert guidance in selecting, installing, and making efficient use of the suitable CRM product.",
     },
     {
-      step: "Step 05",
-      title: "Quality Assurance & Testing",
-      description:
-        "Our web development services include strict quality assurance and testing processes to make sure your site meets the greatest requirements for performance, security, and ease of use.",
+      image: assets.bg1,
+      title: "CRM Support & Maintenance",
+      desc: "The continued effort to solve the problem of the smoothness of the system and its updates.",
     },
     {
-      step: "Step 06",
-      title: "Deployment & Ongoing Maintenance",
+      image: assets.bg1,
+      title: "Mobile CRM Solutions",
+      desc: "Feel free to access CRM tools via handy and user-friendly mobile applications while on the go.",
+    },
+  ];
+  const cardsSectionData2 = [
+    {
+      title: "Operational CRM",
       description:
-        "After the website is up and running, our website creation firm will keep it up to date, safe, and completely optimized for continued success.",
+        "It is a software that is created to handle the automation of the daily customer interactions processes which include sales, marketing, and service.",
+      icon: <FaTools className="text-4xl" />,
+    },
+    {
+      title: "Analytical CRM",
+      description:
+        "Gather customer data for generating useful insights and making the decision facilitation process easier.",
+      icon: <FaDollarSign className="text-4xl" />,
+    },
+    {
+      title: "Collaborative CRM",
+      description:
+        "Is an instrument used for the improvement of communication and the collaboration of departments as well as teams that lie within the same organization.",
+      icon: <FaUsers className="text-4xl" />,
+    },
+    {
+      title: "Strategic CRM",
+      description:
+        "Focuses mostly on building up the long-term relationships with customers and updating the company growth strategies.",
+      icon: <FaShieldAlt className="text-4xl" />,
+    },
+    {
+      title: "Management of Campaign CRM",
+      description:
+        "Makes it easier to carry out marketing campaigns using functions such as tracking, segmentation, and reporting.",
+      icon: <FaBullhorn className="text-4xl" />,
+    },
+    {
+      title: "Social CRM",
+      description: "Permits the coupling of social media channels.",
+      icon: <FaHeart className="text-4xl" />,
+    },
+  ];
+  const cardsSectionImageData1 = [
+    {
+      title: "Define Your Business Goals and Needs",
+      description:
+        "Prior to defining the specific needs you have, you should simply figure out what goals in sales, marketing, and customer support you want to achieve.",
+      image: assets.customAiSolution,
+      cardBg: "bg-blue-100",
+    },
+    {
+      title: "Put a List of Necessary Features",
+      description:
+        "Set a priority for features like analytics, automation, reporting, and integration.",
+      image: assets.appDevelopment,
+      cardBg: "bg-green-100",
+    },
+    {
+      title: "Consider the Industry-Specific Requirements",
+      description:
+        "Try a CRM for your business and narrowly focus on the best results that you could have in the business area.",
+      image: assets.customAiSolution,
+      cardBg: "bg-yellow-100",
+    },
+    {
+      title: "Evaluate Ease of Use and User Experience",
+      description:
+        "Check if the platform is user-friendly and it is easy for your team to get familiar with it.",
+      image: assets.careersAbout1,
+      cardBg: "bg-pink-100",
+    },
+    {
+      title: "Confirm Integration Capabilities with Existing Tools",
+      description:
+        "Ensure that the software is compatible with all the other software you use such as ERP, email marketing, and project management tools.",
+      image: assets.careersAbout1,
+      cardBg: "bg-purple-100",
+    },
+    {
+      title: "Check if the Software Vendor Is Trusted",
+      description:
+        "Are there positive reviews written by their customers? Make sure the vendor has a proven track record of reliability and support.",
+      image: assets.appDevelopment,
+      cardBg: "bg-red-100",
     },
   ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div
-        style={{ height: "600px" }}
-        className="bg-black overflow-hidden sticky inset-0 pt-30"
-      >
-        <div className="text-white font-bold px-20 text-8xl flex flex-col gap-10">
-          <h1 className=" max-w-2xl">CRM & Management Software</h1>
-          <p className="text-base max-w-3xl">
-            Our consulting process can help you see your app in a new light. At
-            Capyngen, we don't just build apps; we also aid you every step of
-            the way. You may be confident that you'll get professional guidance
-            from the idea stage to the launch with our mobile app development
-            consulting services.
-          </p>
-        </div>
-        <CardSwap
-          cardDistance={60}
-          verticalDistance={70}
-          delay={5000}
-          pauseOnHover={false}
-        >
-          <Card
-            customClass=" text-white p-6 flex flex-col items-center justify-center"
-            style={{ backgroundImage: `url(${assets.crmManagement})` }}
-          >
-            <h3 className="text-xl font-bold mb-2">Card 1</h3>
-            <p className="text-sm opacity-80 text-center">
-              Beautiful gradients with images and custom text.
-            </p>
-          </Card>
-          <Card
-            customClass=" text-white p-6 flex flex-col items-center justify-center"
-            style={{ backgroundImage: `url(${assets.appDevelopment})` }}
-          >
-            <h3 className="text-xl font-bold mb-2">Card 1</h3>
-            <p className="text-sm opacity-80 text-center">
-              Beautiful gradients with images and custom text.
-            </p>
-          </Card>
-          <Card
-            customClass=" text-white p-6 flex flex-col items-center justify-center"
-            style={{ backgroundImage: `url(${assets.webDevelopment})` }}
-          >
-            <h3 className="text-xl font-bold mb-2">Card 1</h3>
-            <p className="text-sm opacity-80 text-center">
-              Beautiful gradients with images and custom text.
-            </p>
-          </Card>
-        </CardSwap>
-      </div>
+      <Banner14
+        imageSrc={assets.blockchainDevelopment}
+        imageAlt="Blockchain development illustration"
+        title="Powerful "
+        highlighted="CRM Management Solutions"
+        subtitle=" to Grow Your Business"
+        description="Organize client communications, increase revenue, and nurture customer loyalty with Capyngen’s state-of-the-art CRM tools tailored for small, medium, and large businesses."
+        reverse={false}
+      />
 
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <TopRatedCompany
-          title="Top-Rated CRM & Management Software Company"
+        <GetStarted
+          reverse={true}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="What Capyngen Does Uniquely"
           description={[
-            `RichestSoft provides top-notch and oriented CRM & Management Software solutions to our clients after a proper analysis is completed. Our expert web developers undergo various tests for the project through well-structured planning or strategy to ensure the quality of the product is exclusive. We offer our client's project superior functionality, clarity, and great dynamism, which will facilitate the user's experience on your website.`,
-            `RichestSoft has a team of innovators, problem solvers, and out-of-box thinkers who have been delivering top-notch CRM & Management Software services since 2007. We ensure that your website is functional and easy for users to rank highly in Google. Being the best CRM & Management Software company in India, we provide best-in-class CRM & Management Software services.`,
+            "Our products are customer relationship management system (CRM)software solutions that are customizable to client needs and are also enterprise-grade systems that produce business growth through customer engagement, process automation, and business optimization.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Get in Touch"
+          image={assets.getStarted}
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title=""
+          description={[
+            "Upgrade customer relations, simplify business operations, and increase your revenue through the CRM management solutions offered by Capyngen. Reserve your session and experience the power of efficient business relationship management.",
+          ]}
+          textSize="text-2xl"
+          buttonText="Get in Touch"
+          backgroundVideo={assets.backgroundVideo}
+        />
+        <TopRatedCompany
+          title="What Are CRM Management Solutions?"
+          description={[
+            `CRM Management Solutions products are computer programs developed to facilitate customer relationship processes in companies, sales tracking, and making a business work on its own. These systems collect data on a customer's buying trends, enable the exchange of data between the various departments and, most importantly, assist in business process management solutions that boost productivity through organization and time-saving.`,
+            `Capyngen bespoke cloud CRM solutions and CRM software development have the power to simplify business operations, win better customer relations and increase the business of your company.`,
           ]}
           image={assets.whyChooseUs}
+          isHidden={true}
+          imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
         />
-
-        <BenefitsSection
-          heading="CRM & Management Software Solutions We Offer"
-          desc="A web page is the fundamental element of the Internet, composed of texts, multimedia content, and links to other pages. At RichestSoft, we design and program the web pages best adapted to the different needs of each project. From strategic and rigorous thinking, we define and execute the Internet strategy with in-depth analysis. We focus on and effectively solve the challenges of each project with innovative answers."
-          benefits={solutionsData}
+        <CardsSection
+          heading="Advantages of Implementing CRM Management Solutions"
+          subheading=""
+          services={cardsSectionData1}
+          headColor="text-white"
+          cardBg="bg-gradient-to-r from-gray-900 via-gray-900 to-blue-900"
+          textSize="text-md"
+          sectionBg="bg-gray-900"
+          hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
+          textColor="text-white"
+          hoverTextColor=""
         />
-        <HowWeWork
-          heading="Comprehensive Web Development Process"
-          desc="Capyngen offers a whole web development process, from initial exploration and planning to design, development, testing, and deployment. This ensures that you get custom, high-performing solutions that help you reach your business goals."
-          steps={steps}
+        <IndustryServices
+          heading="Why Businesses Trust Capyngen"
+          subheading=""
+          cardBg="bg-gray-700"
+          cardText="text-white"
+          cardDescText="text-white"
+          services={cardsSectionImageData2}
         />
-        <WhyChoose />
-        <BenefitsSection
-          heading="CRM & Management Software Services We Offer"
-          desc="Partner with RichestSoft for enterprise-level CRM & Management Software services, delivering custom solutions, API integration, cloud-based apps, and advanced e-commerce platforms that drive business growth and efficiency."
-          benefits={servicesData}
-          reverse
+        <CardsSection
+          heading="CRM Management Solutions varieties"
+          subheading=""
+          services={cardsSectionData2}
+          headColor="text-white"
+          cardBg="bg-gray-700"
+          sectionBg="bg-gray-900"
+          hoverBg="hover:bg-blue-800 hover:scale-98"
+          textColor="text-white"
+          hoverTextColor=""
         />
-        <TechnologiesCarousel
-          title="CRM & Management Software Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
-          technologies={technologies}
+        <CardsSectionImage
+          heading="How to Choose the Best CRM Management Solution for Your Business"
+          subheading=""
+          services={cardsSectionImageData1}
+          sectionBg="bg-gray-800"
+          headColor="text-white"
+          cardBg=""
+          textSize="text-md"
+          hoverBg="hover:bg-gray-200"
         />
-        <OurServices />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Future Trends in CRM Management Solutions"
+          description={[
+            <>
+              <li>
+                The application of AI and machine learning in CRM – Better
+                anticipation of the customer needs with the customization of the
+                customer journeys.
+              </li>
+              <li>
+                CRM solutions designed primarily for mobile devices – Get your
+                customer information on the go, at any time, or any place.
+              </li>
+              <li>
+                Customer insights through predictive analytics – To make the
+                right strategic decisions by forecasting the market trends and
+                customer behavior.
+              </li>
+            </>,
+          ]}
+          image={assets.appDevelopment}
+        />
+        <GetStarted
+          reverse={false}
+          backgroundColor="bg-blue-900"
+          textColor="text-white"
+          title="Why Choose Our CRM Management Solutions?"
+          description={[
+            <>
+              <li>
+                Unique features & benefits – Customised solutions that fit your
+                company specifications.
+              </li>
+              <li>
+                Security & compliance – Keep your customers' data safe using
+                security procedures that are up to par with the industry's
+                standards.
+              </li>
+              <li>
+                Customer success stories – A history that shows increased
+                customer engagement, sales, and retention worldwide.
+              </li>
+            </>,
+          ]}
+          backgroundVideo={assets.backgroundVideo}
+        />
         <FAQSection2 items={faqItems} />
         <ScrollRevealEffect />
       </div>
