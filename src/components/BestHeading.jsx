@@ -14,7 +14,10 @@ export default function BestHeading({
           {title}
         </h1>
       )}
-      <TextType
+      <p className="text-center flex justify-center items-center text-4xl md:text-5xl font-extrabold text-white">
+        {highlight}
+      </p>
+      {/* <TextType
         text={highlight}
         typingSpeed={70}
         startOnVisible={true}
@@ -22,7 +25,7 @@ export default function BestHeading({
         textColor={textColor}
         textSize="5rem"
         className="text-4xl font-extrabold"
-      />
+      /> */}
     </div>
   );
 }
