@@ -597,8 +597,8 @@ const ECommerceSolution = () => {
           hoverBg="hover:bg-gray-200"
         />
         <CardsSection
-          heading="Why Choose Capyngen for Web Development?"
-          subheading=""
+          heading="Types of E-Commerce Solutions"
+          subheading="Capyngen provides adaptable ecommerce software that fits any business model:"
           services={cardsSectionData2}
           headColor="text-white"
           cardBg="bg-gray-700"

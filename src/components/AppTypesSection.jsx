@@ -11,6 +11,7 @@ const AppTypesSection = ({
   subheading1 = "What is App Development?",
   desc = "App development refers to the process of coming up with software applications that are intended to work with portable digital gadgets. Mobile apps focus on speed, usability, and efficiency rather than the features of traditional desktop programs, thus ensuring that users get quite smooth experiences on their smartphones and tablets.",
   cardHeight = "h-58",
+  textAlign = "text-left",
   subheading2 = "What is App Development?",
   appTypes = [
     {
@@ -58,7 +59,11 @@ const AppTypesSection = ({
         <h2 className="mt-10 text-2xl font-semibold sm:text-3xl lg:text-4xl">
           {subheading1}
         </h2>
-        <p className="mt-2 mb-12 max-w-5xl text-lg leading-relaxed">{desc}</p>
+        <p
+          className={`mt-2 mb-12 max-w-5xl text-lg leading-relaxed ${textAlign}`}
+        >
+          {desc}
+        </p>
         <h2 className="mt-10 text-2xl font-semibold sm:text-3xl lg:text-4xl">
           {subheading2}
         </h2>

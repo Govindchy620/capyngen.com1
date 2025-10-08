@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { assets, navItems } from "../assets/assets";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,13 +11,21 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const dropdownRef = useRef(null);
 
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    setActiveDropdown(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // ✅ Scroll to top if same link, navigate otherwise
+  const handleSameLinkClick = (to) => {
+    if (location.pathname === to) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate(to);
+    }
   };
 
+  // ✅ Navbar scroll hide/show
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -24,11 +33,11 @@ const Navbar = () => {
       setScrolled(currentScrollY > 20);
       setLastScrollY(currentScrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // ✅ Disable background scroll when mobile menu open
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? "hidden" : "unset";
     return () => {
@@ -36,14 +45,43 @@ const Navbar = () => {
     };
   }, [mobileMenuOpen]);
 
+  // ✅ Keyboard accessibility: Escape + focus loss closes dropdown
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setActiveDropdown(null);
+        setIsHovered(false);
+      }
+    };
+
+    const handleFocusOut = (e) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.relatedTarget)
+      ) {
+        setActiveDropdown(null);
+        setIsHovered(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("focusout", handleFocusOut);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("focusout", handleFocusOut);
+    };
+  }, []);
+
   const shouldBeDark = scrolled || isHovered;
+  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const handleDropdownClick = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
+  // ✅ Keyboard toggle for dropdown (Enter / Down Arrow)
+  const handleDropdownKey = (e, idx) => {
+    if (e.key === "Enter" || e.key === "ArrowDown" || e.key === " ") {
+      e.preventDefault();
+      setActiveDropdown(activeDropdown === idx ? null : idx);
+      setIsHovered(true);
+    }
   };
 
   return (
@@ -59,46 +97,68 @@ const Navbar = () => {
       >
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
+            {/* Logo */}
             <NavLink
               to="/"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSameLinkClick("/");
+              }}
               className="flex-shrink-0 z-50 transition-transform hover:scale-105"
             >
               <img
-                src={shouldBeDark ? assets.capyngenLogo : assets.capyngenLogo}
+                src={assets.capyngenLogo}
                 className="w-26 md:w-36"
-                alt="logo"
+                alt="Capyngen Logo"
               />
             </NavLink>
 
+            {/* Desktop Menu */}
             <div
               className="hidden lg:flex items-center space-x-1"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               {navItems.map((item, idx) => (
-                <div key={idx} className="relative group">
+                <div
+                  key={idx}
+                  className="relative"
+                  onMouseEnter={() => setActiveDropdown(idx)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
                   {item.dropdown ? (
-                    <NavLink
-                      to={item.link}
-                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1 ${
+                    <button
+                      onClick={() =>
+                        setActiveDropdown(activeDropdown === idx ? null : idx)
+                      }
+                      onKeyDown={(e) => handleDropdownKey(e, idx)}
+                      aria-haspopup="true"
+                      aria-expanded={activeDropdown === idx}
+                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1 focus:outline-none ${
                         shouldBeDark
-                          ? "text-slate-100 hover:text-white hover:bg-slate-800/60"
-                          : "text-white hover:text-slate-200 hover:bg-white/10"
+                          ? "text-slate-100 hover:text-white hover:bg-slate-800/60 focus:bg-slate-800/60"
+                          : "text-white hover:text-slate-200 hover:bg-white/10 focus:bg-white/10"
                       }`}
                     >
                       {item.label}
                       <ChevronDown
                         size={14}
-                        className="transition-transform group-hover:rotate-180"
+                        className={`transition-transform ${
+                          activeDropdown === idx ? "rotate-180" : ""
+                        }`}
                       />
-                    </NavLink>
+                    </button>
                   ) : (
                     <NavLink
                       to={item.href}
-                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSameLinkClick(item.href);
+                      }}
+                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none ${
                         shouldBeDark
-                          ? "text-slate-100 hover:text-white hover:bg-slate-800/60"
-                          : "text-white hover:text-slate-200 hover:bg-white/10"
+                          ? "text-slate-100 hover:text-white hover:bg-slate-800/60 focus:bg-slate-800/60"
+                          : "text-white hover:text-slate-200 hover:bg-white/10 focus:bg-white/10"
                       }`}
                     >
                       {item.label}
@@ -107,7 +167,16 @@ const Navbar = () => {
 
                   {/* Dropdown */}
                   {item.dropdown && (
-                    <div className="absolute top-full left-0 right-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2">
+                    <div
+                      ref={dropdownRef}
+                      role="menu"
+                      aria-label={`${item.label} menu`}
+                      className={`absolute top-full left-0 right-0 transition-all duration-200 pt-2 ${
+                        activeDropdown === idx
+                          ? "opacity-100 visible"
+                          : "opacity-0 invisible"
+                      }`}
+                    >
                       <div className="fixed inset-x-0 top-16 lg:top-20 bg-slate-900/98 backdrop-blur-lg border-b border-slate-700/30 shadow-2xl">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                           {item.label === "INDUSTRIES" ? (
@@ -130,7 +199,23 @@ const Navbar = () => {
                                         <li key={linkIdx}>
                                           <NavLink
                                             to={link.href}
-                                            className="text-sm text-slate-300  hover:text-blue-400 transition-colors duration-200 block py-1 hover:translate-x-1"
+                                            tabIndex={0}
+                                            onClick={(e) => {
+                                              e.preventDefault();
+                                              handleSameLinkClick(link.href);
+                                              setActiveDropdown(null);
+                                            }}
+                                            onKeyDown={(e) => {
+                                              if (
+                                                e.key === "Enter" ||
+                                                e.key === " "
+                                              ) {
+                                                e.preventDefault();
+                                                handleSameLinkClick(link.href);
+                                                setActiveDropdown(null);
+                                              }
+                                            }}
+                                            className="text-sm text-slate-300 hover:text-blue-400 transition-colors duration-200 block py-1 hover:translate-x-1 focus:text-blue-400"
                                           >
                                             {link.label}
                                           </NavLink>
@@ -155,7 +240,23 @@ const Navbar = () => {
                                       <li key={linkIdx}>
                                         <NavLink
                                           to={link.href}
-                                          className="text-sm text-slate-300 hover:text-white transition-colors duration-200 block py-1 hover:translate-x-1"
+                                          tabIndex={0}
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            handleSameLinkClick(link.href);
+                                            setActiveDropdown(null);
+                                          }}
+                                          onKeyDown={(e) => {
+                                            if (
+                                              e.key === "Enter" ||
+                                              e.key === " "
+                                            ) {
+                                              e.preventDefault();
+                                              handleSameLinkClick(link.href);
+                                              setActiveDropdown(null);
+                                            }
+                                          }}
+                                          className="text-sm text-slate-300 hover:text-white transition-colors duration-200 block py-1 hover:translate-x-1 focus:text-white"
                                         >
                                           {link.label}
                                         </NavLink>
@@ -199,70 +300,94 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40">
-          <div className="bg-slate-900 h-full overflow-y-auto">
-            <div className="px-4 py-6 space-y-4 mt-16">
-              {navItems.map((item, idx) => (
-                <div key={idx}>
-                  {item.dropdown ? (
-                    <div>
-                      <NavLink
-                        to={item.link}
-                        onClick={() => handleDropdownClick(idx)}
-                        className="w-full flex items-center justify-between py-3 text-left text-slate-100 hover:text-white transition-colors"
-                      >
-                        <span className="font-medium">{item.label}</span>
-                        <ChevronDown
-                          size={18}
-                          className={`transition-transform ${
-                            activeDropdown === idx ? "rotate-180" : ""
-                          }`}
-                        />
-                      </NavLink>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            key="mobileMenu"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="fixed inset-0 z-40 bg-slate-900 lg:hidden"
+          >
+            <div className="bg-slate-900 h-full overflow-y-auto">
+              <div className="px-4 py-6 space-y-4 mt-16">
+                {navItems.map((item, idx) => (
+                  <div key={idx}>
+                    {item.dropdown ? (
+                      <div>
+                        <NavLink
+                          to={item.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setActiveDropdown(
+                              activeDropdown === idx ? null : idx
+                            );
+                          }}
+                          className="w-full flex items-center justify-between py-3 text-left text-slate-100 hover:text-white transition-colors"
+                        >
+                          <span className="font-medium">{item.label}</span>
+                          <ChevronDown
+                            size={18}
+                            className={`transition-transform ${
+                              activeDropdown === idx ? "rotate-180" : ""
+                            }`}
+                          />
+                        </NavLink>
 
-                      {activeDropdown === idx && (
-                        <div className="mt-2 pl-4 space-y-4">
-                          {item.dropdown.map((section, secIdx) => (
-                            <div key={secIdx}>
-                              {section.title && (
-                                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                                  {section.title}
-                                </h4>
-                              )}
-                              <ul className="space-y-2 mb-4">
-                                {section.links.map((link, linkIdx) => (
-                                  <li key={linkIdx}>
-                                    <NavLink
-                                      to={link.href}
-                                      onClick={toggleMobileMenu}
-                                      className="text-sm text-slate-300 hover:text-white transition-colors block py-1"
-                                    >
-                                      {link.label}
-                                    </NavLink>
-                                  </li>
-                                ))}
-                              </ul>
+                        {activeDropdown === idx && (
+                          <div className=" mt-2 pl-4 space-y-4">
+                            <div className="max-h-[60vh] overflow-y-auto pr-2 lg:max-h-none lg:overflow-y-visible">
+                              {item.dropdown.map((section, secIdx) => (
+                                <div key={secIdx}>
+                                  {section.title && (
+                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                                      {section.title}
+                                    </h4>
+                                  )}
+                                  <ul className="space-y-2 mb-4">
+                                    {section.links.map((link, linkIdx) => (
+                                      <li key={linkIdx}>
+                                        <NavLink
+                                          to={link.href}
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            handleSameLinkClick(link.href);
+                                            setMobileMenuOpen(false);
+                                          }}
+                                          className="text-sm text-slate-300 hover:text-white transition-colors block py-1"
+                                        >
+                                          {link.label}
+                                        </NavLink>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
                             </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <NavLink
-                      to={item.href}
-                      onClick={toggleMobileMenu}
-                      className="block py-3 text-slate-100 hover:text-white font-medium transition-colors"
-                    >
-                      {item.label}
-                    </NavLink>
-                  )}
-                </div>
-              ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <NavLink
+                        to={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleSameLinkClick(item.href);
+                          setMobileMenuOpen(false);
+                        }}
+                        className="block py-3 text-slate-100 hover:text-white font-medium transition-colors"
+                      >
+                        {item.label}
+                      </NavLink>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

@@ -1,6 +1,6 @@
-"use client";
+// "use client";
 
-import TextType from "./TextType";
+// import TextType from "./TextType";
 
 export default function BestHeading({
   title = "Our Best",

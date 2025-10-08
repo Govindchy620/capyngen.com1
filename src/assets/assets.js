@@ -98,6 +98,10 @@ import enablingBusinessBlockchain from "./enablingBusinessBlockchain.jpg";
 import blockchainDevelopmentCompany from "./blockchainDevelopmentCompany.png";
 import blockchainBanner1 from "./blockchainBanner1.png";
 import blockchainBanner2 from "./blockchainBanner2.png";
+import seoAndContent from "./seoAndContent.png";
+import socialMediaMarketing from "./socialMediaMarketing.png";
+import paidAdvertising from "./paidAdvertising.png";
+import emailCampaigns from "./emailCampaigns.png";
 
 export const assets = {
   homeAboutUs1,
@@ -200,6 +204,10 @@ export const assets = {
   blockchainDevelopmentCompany,
   blockchainBanner1,
   blockchainBanner2,
+  seoAndContent,
+  socialMediaMarketing,
+  paidAdvertising,
+  emailCampaigns,
 };
 
 export const navItems = [
@@ -300,7 +308,7 @@ export const navItems = [
           },
           {
             label: "Manufacturing & Automotive",
-            href: "/industries/manufacturing",
+            href: "/industries/manufacturing-and-automotive",
           },
           { label: "Public Service", href: "/industries/public-service" },
           { label: "E-Commerce", href: "/industries/e-commerce" },

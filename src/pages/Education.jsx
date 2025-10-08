@@ -338,7 +338,7 @@ const Education = () => {
         backgroundVideo={assets.backgroundVideo}
       />
       <TopRatedCompany
-        title="Introduction / Overview"
+        title=""
         description={[
           <>
             <p>

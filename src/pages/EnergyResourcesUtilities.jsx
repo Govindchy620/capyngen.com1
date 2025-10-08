@@ -43,191 +43,128 @@ import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
+import CardsSectionSlider from "../components/CardsSectionSlider";
 
 const EnergyResourcesUtilities = () => {
   const faqItems = [
     {
-      question: "What are banking software development services?",
+      question: "What are energy management software solutions?",
       answer:
-        "EnergyResourcesUtilities software development services involve multiple activities such as creating, constructing, and rolling out software solutions for banks which include core banking systems, mobile applications, payment gateways, customer relationship management, security systems, and digital transformation initiatives customized to banking requirements.",
+        "These are the software that assists the utilities, oil & gas, and renewable companies to easily see, control, and maintain the energy that they produce and distribute.",
+    },
+    {
+      question: "Is it possible for Capyngen to design smart grid software?",
+      answer:
+        "Of course, we are the ones who bring smart grid technology to life and thus facilitate energy flow that is more efficient with up-to-the-minute supervision.",
+    },
+    {
+      question: "Does your company provide utility billing software?",
+      answer:
+        "Definitely, our software is designed to simplify invoicing, collecting payments, and reporting for the utilities sector.",
     },
     {
       question:
-        "Why is Capyngen the best banking software development company in India?",
+        "Are you able to do the development for the renewable energy software?",
       answer:
-        "Capyngen stands out from the crowd by combining deep banking domain expertise, a successful track record with major financial institutions, state-of-the-art technology, a security-first approach, sound regulatory knowledge, and delivering tangible outcomes that make us a bank's trusted partner.",
+        "We specialize in the renewable energy industry to work out the solar, wind, and hydro energy generation and the management as well.",
     },
     {
-      question: "What are core banking solutions?",
+      question: "Which business areas or branches do you cover?",
       answer:
-        "Core banking solutions refer to software platforms that cover the whole range of banking operations such as account management, deposits, loans, and transactions. So, customer data and all the banking processes integration through the unified system enable centralized operations across branches.",
+        "We are the ones to offer our services to companies in the power, utilities, oil & gas, renewable energy, and smart grid sectors.",
     },
     {
-      question: "How secure are your banking applications?",
+      question: "Is your software scalable?",
       answer:
-        "The secure banking applications we develop go through top-notch security measures such as multi-factor authentication, encryption from end to end, biometric confirmation, fraud detection, regular security audits, compliance with PCI DSS, and RBI standards altogether that ensure the highest possible protection.",
+        "Our energy management software solutions are adaptable or adjustable to any size of enterprises, be it small or large ones.",
     },
     {
-      question: "Do you develop mobile banking software?",
+      question: "Do you provide for integration with IoT?",
       answer:
-        "We definitely do! We are experts in mobile banking software development for both iOS and Android platforms by using native as well as cross-platform technologies. Our apps come with the following qualities: they have user-friendly interfaces, are well protected, have practically all the features you may need, and can easily correspond to the core banking systems.",
+        "Yes, our solutions sync up with smart meters, sensors, and IoT gadgets to bring about real-time monitoring.",
     },
     {
-      question: "What is blockchain in banking, and how do you implement it?",
+      question: "Can you develop custom oil & gas management software?",
       answer:
-        "The application of blockchain in banking allows for the provision of a ledger that is available to all involved parties, shows the history of the transaction, guarantees data security, and cyber-attack resistance. The team relies on implementing bank and finance-related blockchain projects using platforms like Hyperledger and Ethereum.",
+        "Yes, we create highly personalized ERP and management solutions for oil & gas companies.",
     },
     {
-      question: "How long does banking software development take?",
+      question: "What is energy analytics software?",
       answer:
-        "Timeframes depend on the breadth of the project. The making of a mobile app with simple functions takes 3-4 months, whereas the building of a comprehensive core banking system may consume 8-12 months. We do our best: during planning, we lay out detailed milestones with respect to timeliness according to your particular wishes and difficulty.",
+        "Software that ingests energy data and then generates actionable business intelligence, which in turn fosters customer engagement and reduces energy waste.",
     },
     {
-      question: "What is the cost of banking software development?",
+      question: "Do you support smart meter data management?",
       answer:
-        "The amount spent is a function of the required features, complexity, technology used, integration needs, and support. We provide flexible working modes including fixed-price initiatives, time and material, and dedicated teams. Please get in touch with us if you want a tailored quote.",
+        "Yes, we have the tools that help with smart meter data monitoring, management, and reporting without errors.",
     },
     {
-      question: "Can you integrate with our existing banking systems?",
+      question: "Are your solutions compliant with industry regulations?",
       answer:
-        "Yes, sure! Our banking IT services comprise compatibility procedures with older systems that do not support new technologies, other software that is used by your bank, gateways that enable various payment methods, platforms that help banks comply with regulations and services that are outside your bank and accessed via APIs, middleware, and verified integration patterns that result in minimum disruption.",
-    },
-    {
-      question: "Do you provide FinTech app development for startups?",
-      answer:
-        "Certainly! Our FinTech app development service targets new businesses, and the products we develop include digital wallets, lending platforms, investment apps, payment solutions, and other financial services that are innovative. We understand startups' needs for quick development, scalability and affordable prices.",
-    },
-    {
-      question: "How do you ensure regulatory compliance?",
-      answer:
-        "We follow the guidelines of RBI, PCI DSS, GDPR, AML/KYC requirements and other international standards. Our digital solutions are equipped with compliance as a default function, for example, they have automatic reporting and audit trails.",
-    },
-    {
-      question: "What technologies do you use for banking software?",
-      answer:
-        "We opt for a full tech stack that includes Java, .NET, Python for development, Oracle, MySQL, MongoDB for databases, AWS, Azure for cloud, AI/ML for intelligence, blockchain for security, and latest frameworks to make sure that we provide modern and scalable solutions.",
-    },
-    {
-      question: "Do you provide ongoing support and maintenance?",
-      answer:
-        "Of course! Our services are very inclusive of a wide range of needs such as 24/7 monitoring, bug fixing, security updates, performance optimization, feature enhancement, and technical assistance all of which ensure that your banking software solutions are running smoothly and continue to evolve with the market trends and your requirements.",
+        "Yes, we make sure that our products and services adhere to the regulations and standards for the energy sector.",
     },
     {
       question:
-        "Can you help with digital transformation for traditional banks?",
+        "Could a small utility firm be capable of harnessing your software?",
       answer:
-        "Indeed! Our digital banking solutions and consulting services facilitate modernizing the outdated systems in traditional banks, adopting cloud technologies, implementing AI, leveraging blockchain, and revolutionizing customer experiences thus making them ready for a digital-first future.",
+        "Yes, the software which we have developed is equally compatible with small utilities and large energy enterprises.",
+    },
+    {
+      question: "Do you provide maintenance and support?",
+      answer:
+        "Yes, we definitely do. We provide continuous updates and support to the customer so that they can go about their daily activities without disruptions.",
     },
     {
       question:
-        "What makes your custom banking app development services unique?",
+        "What about software that you have if it can work nicely with old systems?",
       answer:
-        "Custom banking app development at our hands is the combination of banking domain expertise, user-centric design, most advanced technology, strong security, regulatory compliance, smooth integration capabilities, and proven delivery methods leading to solutions that are the real difference of your institution.",
+        "Yes, it is very simple and convenient to communicate with previously installed infrastructure and ERP systems through our software.",
+    },
+    {
+      question:
+        "What are the factors that can lead to Capyngen being the preferred one for giving off energy management software?",
+      answer:
+        "We harness professional knowledge, technical advancements, flexibility, and committed assistance to create the most effective energy solutions for you.",
     },
   ];
   const servicesData = [
     {
       image: assets.bg1,
-      title: "Specialized EnergyResourcesUtilities Solutions",
-      desc: "Of course, every financial institution is different in terms of necessities, processes, and objectives. Our custom banking application development services are yours alone so that your firm can implement the most suitable remedies to your workflow processes, customer demands, and strategic aspirations without having to adapt.",
+      title: "Smart Grid Software",
+      desc: "Implement predictive analytics, load balancing, and real-time monitoring to manage energy distribution in an effective manner.",
     },
     {
       image: assets.bg1,
-      title: "Security & Compliance First",
-      desc: "Actually, banking is a security-oriented industry. Our practice includes multi-factor authentications, end-to-end encryptions, secure APIs, and the like, strictly following the top global security standards. Our products and service offerings comply with RBI guidelines, PCI DSS standards, GDPR, ISO 27001, and other regulatory frameworks, ensuring complete compliance and data protection.",
+      title: "Utility Billing Software",
+      desc: "Facilitate the processes of invoicing, payment collection, and billing through the use of software for electricity, water, and gas utilities.",
     },
     {
       image: assets.bg1,
-      title: "Scalability & Performance",
-      desc: "The structure of our banking software development projects ensures seamless scalability. Our systems maintain consistent performance across distributed environments—whether serving a few thousand or a few million customers—without compromising speed or reliability.",
+      title: "Renewable Energy Software",
+      desc: "Make efficient solar, wind, and hydro energy generation, storage, and distribution.",
     },
     {
       image: assets.bg1,
-      title: "Innovative Technology Incorporation",
-      desc: "We employ advanced technologies like AI for fraud detection, blockchain for financial transparency and security, cloud computing for easy accessibility, big data for actionable insights, and IoT to deliver next-generation banking services that keep you ahead of the competition.",
+      title: "Oil & Gas ERP Solutions",
+      desc: "Develop easy methods for exploration, production, supply chain, and reporting operations.",
     },
     {
       image: assets.bg1,
-      title: "Seamless Integration Abilities",
-      desc: "Our banking products coexist harmoniously with your existing infrastructure, including legacy systems, third-party software, payment gateways, and regulatory reporting tools—ensuring smooth integration and uninterrupted operations.",
+      title: "Energy Analytics Software",
+      desc: "Make good use of utilities and power plants through advanced analytics, real-time dashboards, and performance reporting.",
     },
     {
       image: assets.bg1,
-      title: "Proven Track Record",
-      desc: "As one of the top banking software development companies in India, we’ve successfully delivered transformative digital solutions to leading financial institutions—helping them overcome operational challenges and achieve measurable growth.",
-    },
-  ];
-  const servicesData1 = [
-    {
-      image: assets.bg1,
-      title: "Retail Banks",
-      desc: "Comprehensive software solutions designed to streamline the daily operations of retail banks — including account management, deposits, loans, cards, and customer service. Our systems ensure smooth, secure, and personalized banking experiences for individual customers.",
-    },
-    {
-      image: assets.bg1,
-      title: "Corporate Banks",
-      desc: "Robust enterprise banking platforms built to manage complex corporate relationships, trade finance, treasury operations, and cash management. Empower your business clients with tailored tools that support large-scale, high-value financial activities efficiently.",
-    },
-    {
-      image: assets.bg1,
-      title: "Investment Banks",
-      desc: "Advanced trading platforms, portfolio management systems, risk analytics, and regulatory reporting tools — all integrated to support effective investment operations and wealth management with precision and compliance.",
-    },
-    {
-      image: assets.bg1,
-      title: "Microfinance Institutions",
-      desc: "Purpose-built software that streamlines microfinance operations, including group lending, repayment tracking, mobile-first interfaces, and on-field support — enabling institutions to reach underserved communities efficiently and securely.",
-    },
-    {
-      image: assets.bg1,
-      title: "FinTech Startups",
-      desc: "Next-generation fintech development for digital wallets, peer-to-peer lending platforms, robo-advisors, cryptocurrency exchanges, and disruptive financial applications that leverage the latest technologies for innovation and growth.",
-    },
-    {
-      image: assets.bg1,
-      title: "Payment Service Providers",
-      desc: "End-to-end payment infrastructure covering payment gateway development, transaction processing platforms, merchant services, settlement systems, and aggregation solutions — creating open, fast, and reliable payment ecosystems.",
-    },
-  ];
-
-  const typesData = [
-    {
-      icon: <FaCogs />,
-      title: "Operational Efficiency Improved",
-      desc: "Automate manual processes, streamline workflows, reduce processing time, and eliminate human errors. By optimizing resource utilization, your staff can focus on high-value, customer-centric tasks rather than repetitive operations.",
-    },
-    {
-      icon: <FaShieldAlt />,
-      title: "Transactions that are Secure and Compliant",
-      desc: "Enterprise-grade security ensures the protection of sensitive financial data, customer information, and transaction integrity. Our systems fully comply with RBI, PCI DSS, GDPR, and other global regulatory frameworks—minimizing risk and maintaining trust.",
-    },
-    {
-      icon: <FaUsers />,
-      title: "Customer Engagement Improved",
-      desc: "Deliver personalized and omnichannel banking experiences with AI-driven assistance, proactive communication, and seamless self-service options. Enhance customer satisfaction, loyalty, retention, and lifetime value through intelligent digital interactions.",
-    },
-    {
-      icon: <FaChartLine />,
-      title: "Lowered Operational Costs",
-      desc: "Leverage cloud infrastructure, automation, and optimized resource allocation to minimize manual effort and reduce operating expenses—while maintaining high-quality, reliable, and efficient banking services.",
-    },
-    {
-      icon: <FaChartPie />,
-      title: "Real-Time Analytics and Reporting",
-      desc: "Access actionable insights on customer behavior, detect fraud in real time, fulfill regulatory reporting requirements, and support data-driven strategic decisions with intelligent, real-time analytics dashboards.",
-    },
-    {
-      icon: <FaExpand />,
-      title: "Expandability for Future Development",
-      desc: "Future-ready, scalable systems designed to grow with your institution—capable of handling increasing customers, transactions, and data volumes without compromising performance, reliability, or security.",
+      title: "Smart Meter Data Management",
+      desc: "Measure consumption in the most accurate way, organize smart meters, and communicate usage trends well.",
     },
   ];
   const panels = [
     {
       image: assets.gallery1,
       title:
-        "Breakthrough the EnergyResourcesUtilities with Future-type Software Solutions",
-      desc: "A bank of the future that accepts and incorporates technology as much as it innovates customer experience within the banking space.",
+        "Revolutionize Your Energy Activities By Using The Most Sophisticated Energy Management Software Solutions",
+      desc: "Capyngen provides tech-forward IT solutions for utilities, oil & gas, renewable energy, and smart grids that enable you to save money, improve efficiency, and promote sustainable practices.",
     },
     {
       image: assets.gallery2,
@@ -252,84 +189,113 @@ const EnergyResourcesUtilities = () => {
   ];
   const cardsSectionData1 = [
     {
-      title: "Core EnergyResourcesUtilities Development Software",
-      description:
-        "Comprehensive and fully integrated core banking systems that enable smooth operation of accounts, deposits, loans, and transactions — all on a single unified platform.",
+      title:
+        "Demonstrated knowledge in the creation of tailored software to manage oil & gas activities.",
+      description: "",
       icon: <FaDatabase className="text-4xl text-white" />,
     },
     {
-      title: "Cell Phone & Internet EnergyResourcesUtilities Solutions",
-      description:
-        "Natively built and cross-platform mobile banking applications for iOS and Android, offering intuitive and secure user interfaces that enhance accessibility and convenience.",
+      title:
+        "Expandable IoT solutions for the energy and utilities industries.",
+      description: "",
       icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
-      title: "Payment Gateway & Transaction Solutions",
-      description:
-        "Robust payment systems that ensure timely and secure settlements, capable of handling high transaction volumes with accuracy, reliability, and uninterrupted performance.",
+      title:
+        "Measurement of energy use software carried out in the present to promote energy saving in operations.",
+      description: "",
       icon: <FaCreditCard className="text-4xl text-white" />,
     },
     {
-      title: "EnergyResourcesUtilities CRM & Customer Experience Solutions",
-      description:
-        "A unified customer engagement and transaction platform providing complete interaction history, intelligent analytics, and personalized dashboards for improved customer satisfaction.",
+      title:
+        "Intelligent network solutions that allow for the distribution of energy in a more effective way.",
+      description: "",
       icon: <FaUsers className="text-4xl text-white" />,
     },
     {
-      title: "FinTech & Digital Transformation Advisory",
-      description:
-        "Strategic consulting and implementation for digital banking initiatives — including modernization, process automation, technology enhancement, and innovation-driven transformation.",
+      title: "No barriers when linking with older systems.",
+      description: "",
       icon: <FaLightbulb className="text-4xl text-white" />,
     },
     {
-      title: "Security & Compliance Management",
-      description:
-        "End-to-end security frameworks designed for every system layer, ensuring full compliance with RBI, PCI DSS, GDPR, ISO, and other international data protection standards.",
+      title:
+        "A support and care service that guarantees the proper functioning.",
+      description: "",
       icon: <FaShieldAlt className="text-4xl text-white" />,
     },
   ];
-  const cardsSectionImageData1 = [
+  const cardsSectionData2 = [
     {
-      title: "Programming Languages",
-      description:
-        "Java for enterprise-level scalability, .NET for seamless integration within the Microsoft ecosystem, Python for AI and machine learning capabilities, C++ for high-transaction processing, and Kotlin for developing modern Android banking applications.",
+      title: "Scalable software deployment is done through cloud platforms.",
+      description: "",
+      icon: <FaDatabase className="text-4xl text-white" />,
+    },
+    {
+      title:
+        "The use of AI and Machine Learning is made for setting up predictive energy analytics.",
+      description: "",
+      icon: <FaMobileAlt className="text-4xl text-white" />,
+    },
+    {
+      title:
+        "Energy monitoring through IoT which is made up of smart meters, and sensors.",
+      description: "",
+      icon: <FaCreditCard className="text-4xl text-white" />,
+    },
+    {
+      title:
+        "The use of data visualization and dashboards has made it possible for businesses to have insights that are actionable.",
+      description: "",
+      icon: <FaUsers className="text-4xl text-white" />,
+    },
+    {
+      title:
+        "The use of blockchain has been the way for energy transactions to be made secure.",
+      description: "",
+      icon: <FaLightbulb className="text-4xl text-white" />,
+    },
+    {
+      title: "Integration tools for ERP and legacy energy systems",
+      description: "",
+      icon: <FaShieldAlt className="text-4xl text-white" />,
+    },
+  ];
+  const cardsSectionSliderData1 = [
+    {
+      title: "Power and Utilities Companies",
+      desc: "",
+      image: assets.eCommerceSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Oil and Gas Enterprises.",
+      desc: "",
+      image: assets.websiteDesign,
+      textColor: "text-white",
+    },
+    {
+      title: "Producers of Renewable Energy.",
+      desc: "",
       image: assets.customAiSolution,
-      cardBg: "bg-blue-100",
+      textColor: "text-white",
     },
     {
-      title: "Databases & Storage",
-      description:
-        "Oracle for core banking operations, MySQL for web-based services, MongoDB for flexible and adaptive data models, PostgreSQL for advanced database functionalities, and Redis for caching and real-time computations.",
-      image: assets.appDevelopment,
-      cardBg: "bg-green-100",
-    },
-    {
-      title: "Frameworks & Libraries",
-      description:
-        "Spring Boot for building microservices architectures, Angular for dynamic web interfaces, React for responsive and interactive user experiences, Node.js for scalable backend development, and Flutter for creating cross-platform mobile applications.",
+      title: "Smart Grid Networks.",
+      desc: "",
       image: assets.customAiSolution,
-      cardBg: "bg-yellow-100",
+      textColor: "text-white",
     },
     {
-      title: "Cloud Platforms",
-      description:
-        "AWS for comprehensive cloud services, Azure for Microsoft-based environments, Google Cloud for AI and ML-driven solutions, IBM Cloud for enterprise-grade banking infrastructure, along with hybrid and multi-cloud deployment support.",
-      image: assets.careersAbout1,
-      cardBg: "bg-pink-100",
+      title: "Energy Analytics and IoT Integration Providers.",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
     {
-      title: "Security Technologies",
-      description:
-        "Multi-factor authentication (MFA), end-to-end encryption, tokenization, biometric verification, blockchain for immutable transactions, SSL/TLS protocols, secure APIs, intrusion detection systems, and SIEM platforms for robust, multi-layered protection.",
-      image: assets.careersAbout1,
-      cardBg: "bg-purple-100",
-    },
-    {
-      title: "Analytics & AI",
-      description:
-        "Machine learning for fraud detection, predictive analytics for customer behavior forecasting, natural language processing for intelligent chatbots, big data platforms for deep insights, real-time dashboards, and business intelligence tools for data-driven decision-making.",
-      image: assets.appDevelopment,
-      cardBg: "bg-red-100",
+      title: "Utility Management Enterprises.",
+      desc: "",
+      image: assets.customAiSolution,
+      textColor: "text-white",
     },
   ];
 
@@ -342,51 +308,113 @@ const EnergyResourcesUtilities = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title=""
+        title="Start efficiency making possible through renewable & oil & gas software"
         description={[
-          "Contact me for no charge consultation. EnergyResourcesUtilities Innovations for Secure, Scalable, and Creative Technical Solutions From India's Leading Partner in EnergyResourcesUtilities Software!",
+          "Utilize cutting-edge energy analytics software to make better decisions and attain resource-saving goals.",
         ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
+        buttonText="Expert Consultation"
         backgroundVideo={assets.backgroundVideo}
       />
       <TopRatedCompany
-        title="Industry Has Lastly Managed To Go The Tech Road"
+        title="Industry Has Lastly Managed To Go The Tech RoadLeading Energy Management Software Solutions for Modern Utilities"
         description={[
-          `The financial sector is fast moving whereby banks and financial institutions should partner tech firms that are not only tech savvy but also well conversant with the industry-specific challenges so as to provide the right solutions. Capyngen is a top bank software development company in India, which is always on the front line, coming up with secure, scalable, and innovative bank software solutions that not only radically transform the way financial institutions work but also are adaptive to customer needs.`,
-          `We have considerable experience in effectively providing banking industry solutions that include the retail and commercial business sectors along with corporate as well as investment banking and microfinance and fintech startups. We have a comprehensive array of banking software development services that include core banking solutions, mobile banking software, digital payment systems along with FinTech app development that can realize operation efficiency, customer satisfaction, and regulatory compliance.`,
+          `Capyngen is an energy management software solutions leader that provides the smart grid software, utility billing software, and renewable energy software.`,
+          `Energy analytics software and IoT solutions for energy and utilities that accompany us to the store of news agents are the same as those that allow us to automate operations, optimize energy distribution, and enhance sustainability in our businesses.`,
+          <>
+            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+              {[
+                {
+                  text: "Power and utilities advanced software",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Oil, gas, and renewable scalable solutions",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Energy analytics software driven by data for wise decision-making",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Real-time monitoring with smart grid solutions",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "Utility software for automated billing and consumption tracking",
+                  color: "text-blue-500",
+                },
+                {
+                  text: "IoT integrations for smart energy management",
+                  color: "text-blue-500",
+                },
+              ].map(({ title, text, color }, idx) => (
+                <li
+                  key={idx}
+                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                >
+                  {text}
+                </li>
+              ))}
+            </ul>
+          </>,
         ]}
-        imageHeight="md:aspect-[1/1]"
         image={assets.whyChooseUs}
         isHidden={true}
         background={assets.patternBg1}
       />
       <IndustryServices
-        heading="Why Top Banks Rely on Capyngen"
+        heading="Our Energy & Utility Software Solutions"
         subheading=""
         services={servicesData}
       />
+      <GetStarted
+        reverse={false}
+        backgroundColor="bg-blue-900"
+        textColor="text-white"
+        buttonColor="bg-white hover:scale-105"
+        buttonTextColor="text-black"
+        title="Realize Smart Grid & Energy Utility Solutions"
+        description={[
+          "Become a Capyngen partner to achieve smart grid software installation and billing system automation.",
+        ]}
+        buttonText="Schedule a Free Consultation"
+        backgroundVideo={assets.backgroundVideo}
+      />
       <CardsSection
-        heading="EnergyResourcesUtilities Software Solutions Development"
+        heading="Why Top Energy Companies Rely on Capyngen"
         subheading=""
         services={cardsSectionData1}
         headColor="text-white"
-        cardBg="bg-gradient-to-br from-gray-900 to-blue-800"
-        textSize="text-md"
         sectionBg="bg-gray-900"
-        hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
+        cardBg="bg-transparent"
+        hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
         textColor="text-white"
         hoverTextColor=""
       />
-      <CardsSectionImage
-        heading="New-age Tech Stack to Serve EnergyResourcesUtilities Excellence"
+      <CardsSectionSlider
+        heading="Every Segment of the Energy Industry has been catered to."
         subheading=""
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
+        cardBg="bg-transparent"
+        hoverBg=" hover:bg-blue-50"
+        textColor="text-gray-800"
+        hoverTextColor=""
+        textSize="text-xl"
+        sectionBg="bg-black/90"
+        height="h-78"
         headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
+        services={cardsSectionSliderData1}
+      />
+      <CardsSection
+        heading="Why Choose Capyngen for Application Solutions"
+        subheading=""
+        services={cardsSectionData2}
+        sectionBg="bg-gray-900"
+        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
+        hoverBg=""
+        height="h-72"
+        textColor="text-white"
+        hoverTextColor=""
+        headColor="text-white"
       />
       <GetStarted
         reverse={false}
@@ -394,38 +422,11 @@ const EnergyResourcesUtilities = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title=""
+        title="Make the most of your energy resources today"
         description={[
-          "Want to Totally Change Your EnergyResourcesUtilities Experience? Make an Appointment for a Free Demonstration & Find Out for Yourself How Capyngens EnergyResourcesUtilities Software Solutions Can Make Security, Efficiency, and Customer Satisfaction Grow!",
+          "Increase productivity and lower your expenses with the help of Capyngen software solutions for energy management.",
         ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TypesWeDevelop
-        heading="Making Banks Digitally Fit"
-        subheading=""
-        buttonText="Let's Contact"
-        image="https://via.placeholder.com/300x550.png" // replace with actual phone image
-        types={typesData}
-      />
-      <IndustryServices
-        heading="Serving All EnergyResourcesUtilities & Financial Sectors"
-        subheading=""
-        services={servicesData1}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title=""
-        description={[
-          "Why Not Work with Us to Create the Future of EnergyResourcesUtilities – Contact Capyngen Today for Custom EnergyResourcesUtilities Software Development Services & Groundbreaking FinTech Solutions That Help You Get Ahead!",
-        ]}
-        textSize="text-2xl"
-        buttonText="Work With Us"
+        buttonText="Request a demo"
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />

@@ -2,7 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import BestHeading from "./BestHeading";
 
-const FAQSection2 = ({ title = "FAQs", desc = "", items }) => {
+const FAQSection2 = ({
+  title = "FAQs",
+  desc = "",
+  items,
+  bgColor = "bg-black",
+}) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
@@ -10,7 +15,9 @@ const FAQSection2 = ({ title = "FAQs", desc = "", items }) => {
   };
 
   return (
-    <div className="bg-black text-white py-10 pb-16 px-4 md:px-10 flex flex-col items-center">
+    <div
+      className={`${bgColor} text-white py-10 pb-16 px-4 md:px-10 flex flex-col items-center`}
+    >
       <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
         {title}
       </h1>

@@ -342,22 +342,22 @@ const DigitalMarketing = () => {
   ];
   const marketingCards = [
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-1.jpg",
+      img: assets.seoAndContent,
       alt: "Christmas background 3D cartoon",
       text: "SEO & Content",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-2.jpg",
+      img: assets.socialMediaMarketing,
       alt: "A beautiful glowing flower",
       text: "Social Media Marketing",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-3.jpg",
+      img: assets.paidAdvertising,
       alt: "A magical leopard",
       text: "Paid Advertising",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-4.jpg",
+      img: assets.emailCampaigns,
       alt: "A female 3D cartoon holding a wrapped gift box",
       text: "Email Campaigns",
     },
