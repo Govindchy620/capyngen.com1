@@ -340,12 +340,39 @@ const DigitalMarketing = () => {
       description: "Unambiguous monthly reports with outcomes.",
     },
   ];
+  const marketingCards = [
+    {
+      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-1.jpg",
+      alt: "Christmas background 3D cartoon",
+      text: "SEO & Content",
+    },
+    {
+      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-2.jpg",
+      alt: "A beautiful glowing flower",
+      text: "Social Media Marketing",
+    },
+    {
+      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-3.jpg",
+      alt: "A magical leopard",
+      text: "Paid Advertising",
+    },
+    {
+      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-4.jpg",
+      alt: "A female 3D cartoon holding a wrapped gift box",
+      text: "Email Campaigns",
+    },
+  ];
 
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
       <div className="sticky inset-0">
-        <Banner11 />
+        <Banner11
+          heading="to Grow Your Business"
+          highlight="Digital Marketing Services"
+          description="Boost visibility, engagement, and conversions with tailored digital marketing strategies designed for your brand."
+          cards={marketingCards}
+        />
       </div>
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">

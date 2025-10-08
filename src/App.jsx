@@ -38,6 +38,10 @@ import EnterpriseSolutions from "./pages/EnterpriseSolutions";
 import DataAnalytics from "./pages/DataAnalytics";
 import Consulting from "./pages/Consulting";
 import Education from "./pages/Education";
+import CapitalMarket from "./pages/CapitalMarket";
+import LifeScience from "./pages/LifeScience";
+import HealthcareAndFitness from "./pages/HealthcareAndFitness";
+import EnergyResourcesUtilities from "./pages/EnergyResourcesUtilities";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -98,6 +102,19 @@ const App = () => {
           <Route path="/industries" element={<Industries />} />
           <Route path="/industries/banking" element={<Banking />} />
           <Route path="/industries/education" element={<Education />} />
+          <Route
+            path="/industries/capital-market"
+            element={<CapitalMarket />}
+          />
+          <Route path="/industries/life-science" element={<LifeScience />} />
+          <Route
+            path="/industries/healthcare-fitness"
+            element={<HealthcareAndFitness />}
+          />
+          <Route
+            path="/industries/energy-resources-utilities"
+            element={<EnergyResourcesUtilities />}
+          />
 
           <Route path="/company-overview" element={<CompanyOverview />} />
           <Route path="/careers" element={<Careers />} />
