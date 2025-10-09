@@ -220,7 +220,6 @@ const ArtificialIntelligence = () => {
       cardBg: "bg-red-100",
     },
   ];
-
   const cardsSectionData1 = [
     {
       title: "Startups & SMEs",
@@ -259,7 +258,6 @@ const ArtificialIntelligence = () => {
       icon: <FaUniversity className="text-4xl text-indigo-600" />,
     },
   ];
-
   const steps = [
     {
       step: "Step 01",

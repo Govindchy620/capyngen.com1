@@ -322,7 +322,7 @@ const Education = () => {
         showDots={true}
         textColor="text-white"
         arrowColor="text-white"
-        bgHover="hover:bg-gray-700"
+        bgHover="hover:bg-white/20"
       />
       <GetStarted
         reverse={false}

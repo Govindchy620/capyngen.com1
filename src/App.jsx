@@ -44,6 +44,10 @@ import HealthcareAndFitness from "./pages/HealthcareAndFitness";
 import EnergyResourcesUtilities from "./pages/EnergyResourcesUtilities";
 import ManufacturingAutomotive from "./pages/ManufacturingAutomotive";
 import PublicService from "./pages/PublicService";
+import ECommerceIndustry from "./pages/ECommerceIndustry";
+import HighTech from "./pages/HighTech";
+import TravelAndLogistics from "./pages/TravelAndLogistics";
+import CpgDistribution from "./pages/CpgDistribution";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -124,6 +128,19 @@ const App = () => {
           <Route
             path="/industries/public-service"
             element={<PublicService />}
+          />
+          <Route
+            path="/industries/e-commerce"
+            element={<ECommerceIndustry />}
+          />
+          <Route path="/industries/high-tech" element={<HighTech />} />
+          <Route
+            path="/industries/travel-logistics"
+            element={<TravelAndLogistics />}
+          />
+          <Route
+            path="/industries/cpg-distribution"
+            element={<CpgDistribution />}
           />
 
           <Route path="/company-overview" element={<CompanyOverview />} />

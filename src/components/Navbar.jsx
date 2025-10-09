@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { assets, navItems } from "../assets/assets";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
@@ -11,12 +11,20 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    setActiveDropdown(null);
+  // ✅ Must be declared at top level
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // ✅ Handles same-page scroll and normal navigation
+  const handleSameLinkClick = (to) => {
+    if (location.pathname === to) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate(to);
+    }
   };
 
+  // Navbar scroll visibility logic
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -29,6 +37,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Prevent background scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? "hidden" : "unset";
     return () => {
@@ -37,17 +46,13 @@ const Navbar = () => {
   }, [mobileMenuOpen]);
 
   const shouldBeDark = scrolled || isHovered;
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const handleDropdownClick = (index) => {
+  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  const handleDropdownClick = (index) =>
     setActiveDropdown(activeDropdown === index ? null : index);
-  };
 
   return (
     <>
+      {/* Navbar */}
       <nav
         className={`fixed top-0 left-0 w-full transition-all duration-300 z-50 ${
           showNavbar ? "translate-y-0" : "-translate-y-full"
@@ -59,27 +64,42 @@ const Navbar = () => {
       >
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
+            {/* Logo */}
             <NavLink
               to="/"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSameLinkClick("/");
+              }}
               className="flex-shrink-0 z-50 transition-transform hover:scale-105"
             >
               <img
-                src={shouldBeDark ? assets.capyngenLogo : assets.capyngenLogo}
+                src={assets.capyngenLogo}
                 className="w-26 md:w-36"
                 alt="logo"
               />
             </NavLink>
 
+            {/* Desktop Menu */}
             <div
               className="hidden lg:flex items-center space-x-1"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               {navItems.map((item, idx) => (
-                <div key={idx} className="relative group">
+                <div
+                  key={idx}
+                  className="relative"
+                  onMouseEnter={() => setActiveDropdown(idx)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
                   {item.dropdown ? (
                     <NavLink
-                      to={item.link}
+                      to={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSameLinkClick(item.href);
+                      }}
                       className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1 ${
                         shouldBeDark
                           ? "text-slate-100 hover:text-white hover:bg-slate-800/60"
@@ -89,12 +109,18 @@ const Navbar = () => {
                       {item.label}
                       <ChevronDown
                         size={14}
-                        className="transition-transform group-hover:rotate-180"
+                        className={`transition-transform ${
+                          activeDropdown === idx ? "rotate-180" : ""
+                        }`}
                       />
                     </NavLink>
                   ) : (
                     <NavLink
                       to={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSameLinkClick(item.href);
+                      }}
                       className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                         shouldBeDark
                           ? "text-slate-100 hover:text-white hover:bg-slate-800/60"
@@ -107,7 +133,13 @@ const Navbar = () => {
 
                   {/* Dropdown */}
                   {item.dropdown && (
-                    <div className="absolute top-full left-0 right-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2">
+                    <div
+                      className={`absolute top-full left-0 right-0 transition-all duration-200 pt-2 ${
+                        activeDropdown === idx
+                          ? "opacity-100 visible"
+                          : "opacity-0 invisible"
+                      }`}
+                    >
                       <div className="fixed inset-x-0 top-16 lg:top-20 bg-slate-900/98 backdrop-blur-lg border-b border-slate-700/30 shadow-2xl">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                           {item.label === "INDUSTRIES" ? (
@@ -130,7 +162,12 @@ const Navbar = () => {
                                         <li key={linkIdx}>
                                           <NavLink
                                             to={link.href}
-                                            className="text-sm text-slate-300  hover:text-blue-400 transition-colors duration-200 block py-1 hover:translate-x-1"
+                                            onClick={(e) => {
+                                              e.preventDefault();
+                                              handleSameLinkClick(link.href);
+                                              setActiveDropdown(null);
+                                            }}
+                                            className="text-sm text-slate-300 hover:text-blue-400 transition-colors duration-200 block py-1 hover:translate-x-1"
                                           >
                                             {link.label}
                                           </NavLink>
@@ -155,6 +192,11 @@ const Navbar = () => {
                                       <li key={linkIdx}>
                                         <NavLink
                                           to={link.href}
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            handleSameLinkClick(link.href);
+                                            setActiveDropdown(null);
+                                          }}
                                           className="text-sm text-slate-300 hover:text-white transition-colors duration-200 block py-1 hover:translate-x-1"
                                         >
                                           {link.label}
@@ -208,8 +250,11 @@ const Navbar = () => {
                   {item.dropdown ? (
                     <div>
                       <NavLink
-                        to={item.link}
-                        onClick={() => handleDropdownClick(idx)}
+                        to={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleDropdownClick(idx);
+                        }}
                         className="w-full flex items-center justify-between py-3 text-left text-slate-100 hover:text-white transition-colors"
                       >
                         <span className="font-medium">{item.label}</span>
@@ -235,7 +280,11 @@ const Navbar = () => {
                                   <li key={linkIdx}>
                                     <NavLink
                                       to={link.href}
-                                      onClick={toggleMobileMenu}
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        handleSameLinkClick(link.href);
+                                        setMobileMenuOpen(false);
+                                      }}
                                       className="text-sm text-slate-300 hover:text-white transition-colors block py-1"
                                     >
                                       {link.label}
@@ -251,7 +300,11 @@ const Navbar = () => {
                   ) : (
                     <NavLink
                       to={item.href}
-                      onClick={toggleMobileMenu}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSameLinkClick(item.href);
+                        setMobileMenuOpen(false);
+                      }}
                       className="block py-3 text-slate-100 hover:text-white font-medium transition-colors"
                     >
                       {item.label}

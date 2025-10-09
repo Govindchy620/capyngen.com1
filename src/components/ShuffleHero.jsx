@@ -42,7 +42,7 @@ const ShuffleHero = ({
           {buttonText && (
             <button
               onClick={onButtonClick}
-              className={`bg-${themeColor}-500 text-white font-medium py-4 px-8 text-lg rounded transition-all hover:bg-${themeColor}-600 active:scale-95`}
+              className={`${themeColor} text-white font-medium py-4 px-8 text-lg rounded transition-all active:scale-95`}
             >
               {buttonText}
             </button>
@@ -94,7 +94,11 @@ const ShuffleGrid = ({ images, gridCols, gridRows, shuffleInterval }) => {
 
   return (
     <div
-      className={`grid grid-cols-${gridCols} grid-rows-${gridRows} h-[450px] gap-1`}
+      className="grid h-[450px] gap-1"
+      style={{
+        gridTemplateColumns: `repeat(${gridCols}, 1fr)`,
+        gridTemplateRows: `repeat(${gridRows}, 1fr)`,
+      }}
     >
       {squares.map((sq) => sq)}
     </div>

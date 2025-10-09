@@ -75,7 +75,7 @@ const Banner6 = ({
   textColor = "text-white",
   ctaStyle = "py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100",
   arrowColor = "text-white",
-  bgHover = "hover:bg-white/20",
+  bgHover = "",
 }) => {
   const settings = {
     dots: showDots,

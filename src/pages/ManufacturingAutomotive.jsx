@@ -390,7 +390,7 @@ const ManufacturingAutomotive = () => {
           </>
         }
         buttonText="Explore Now"
-        themeColor="blue"
+        themeColor="bg-blue-500 hover:bg-blue-600"
         bgColor="bg-gray-900"
         images={heroImages}
         gridCols={4}
@@ -438,7 +438,7 @@ const ManufacturingAutomotive = () => {
         height="h-72"
         textColor="text-white"
         hoverTextColor="transition-all"
-      />{" "}
+      />
       <GetStarted
         reverse={false}
         backgroundColor="bg-gray-700"

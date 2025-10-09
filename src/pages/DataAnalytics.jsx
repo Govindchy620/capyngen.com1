@@ -13,17 +13,7 @@ import TopRatedCompany from "../components/TopRatedCompany";
 import { LifeBuoy, Sparkles } from "lucide-react";
 import Banner5 from "../components/Banner5";
 import CardsSection from "../components/CardsSection";
-import {
-  FaTachometerAlt,
-  FaUsersCog,
-  FaChartPie,
-  FaCloud,
-  FaDatabase,
-  FaBrain,
-  FaTools,
-  FaLayerGroup,
-  FaChartBar,
-} from "react-icons/fa";
+import { FaTachometerAlt, FaUsersCog, FaChartPie } from "react-icons/fa";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";

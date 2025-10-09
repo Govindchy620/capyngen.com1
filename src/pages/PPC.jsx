@@ -383,6 +383,7 @@ const PPC = () => {
           desc="As a PPC company that is results-focused, we provide paid advertising services from start to finish that are specifically designed to meet the goals of your business."
           benefits={solutionsData}
           image={assets.blockchainBanner1}
+          footerNote=""
         />
         <GetStarted
           reverse={false}
@@ -489,7 +490,7 @@ const PPC = () => {
           ]}
           backgroundVideo={assets.backgroundVideo}
         />
-        <FAQSection2 items={faqItems} />
+        {/* <FAQSection2 items={faqItems} /> */}
         <ScrollRevealEffect />
       </div>
     </div>

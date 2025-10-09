@@ -407,7 +407,7 @@ const CapitalMarket = () => {
         isHidden="hidden"
       />
       <CardsSection
-        heading="Our Web Development Services"
+        heading="Challenges in Capital Market Sector"
         subheading=""
         services={cardsSectionData1}
         sectionBg="bg-black"

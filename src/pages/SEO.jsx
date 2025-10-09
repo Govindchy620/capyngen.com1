@@ -1,16 +1,9 @@
-import React from "react";
-import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
 import Banner5 from "../components/Banner5";
 import CardsSection from "../components/CardsSection";
 import {
@@ -20,15 +13,6 @@ import {
   FaWrench,
   FaMapMarkerAlt,
   FaMicrophone,
-  FaShoppingCart,
-  FaPenFancy,
-  FaChartBar,
-  FaEye,
-  FaMoneyBillWave,
-  FaUsers,
-  FaPuzzlePiece,
-  FaHandshake,
-  FaChartLine,
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import SeoStatsSection from "../components/SeoStatsSection";
