@@ -48,6 +48,10 @@ import ECommerceIndustry from "./pages/ECommerceIndustry";
 import HighTech from "./pages/HighTech";
 import TravelAndLogistics from "./pages/TravelAndLogistics";
 import CpgDistribution from "./pages/CpgDistribution";
+import Gaming from "./pages/Gaming";
+import CommunicationMediaIT from "./pages/CommunicationMediaIT";
+import Insurance from "./pages/Insurance";
+import RealEstate from "./pages/RealEstate";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -142,6 +146,13 @@ const App = () => {
             path="/industries/cpg-distribution"
             element={<CpgDistribution />}
           />
+          <Route path="/industries/insurance" element={<Insurance />} />
+          <Route
+            path="/industries/communication-media-it"
+            element={<CommunicationMediaIT />}
+          />
+          <Route path="/industries/real-estate" element={<RealEstate />} />
+          <Route path="/industries/gaming" element={<Gaming />} />
 
           <Route path="/company-overview" element={<CompanyOverview />} />
           <Route path="/careers" element={<Careers />} />

@@ -8,7 +8,7 @@ const WhyChoose = ({
 }) => {
   return (
     <section
-      className="relative bg-black text-white pt-20 pb-5 px-4 sm:px-6 md:px-12"
+      className="relative bg-black text-white pt-20 pb-10 md:pb-20 px-4 sm:px-6 md:px-12"
       aria-label="Why Choose Capyngen"
     >
       <div className="max-w-7xl mx-auto text-center">

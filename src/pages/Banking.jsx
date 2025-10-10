@@ -429,12 +429,6 @@ const Banking = () => {
       />
       <FAQSection2 items={faqItems} />
       <ScrollRevealEffect />
-      <SeoToolsSection />
-      <SeoStatsSection />
-      <Timeline />
-      <CreativeAgencyFAQ />
-      <StartupAgency />
-      <SeoAgency />
     </div>
   );
 };

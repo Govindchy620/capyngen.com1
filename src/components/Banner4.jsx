@@ -42,7 +42,7 @@ const Banner4 = ({ slides }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent pointer-events-none"></div>
 
               {/* Content */}
-              <div className="relative z-20 text-left max-w-4xl">
+              <div className="relative z-20 text-left max-w-5xl">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-md">
                   {slide.title}
                 </h1>
