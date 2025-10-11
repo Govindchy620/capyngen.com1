@@ -19,10 +19,15 @@ import {
   FaRobot,
   FaBalanceScale,
   FaHandsHelping,
+  FaUserCog,
+  FaMicrochip,
+  FaHandshake,
+  FaHeadset,
 } from "react-icons/fa";
 import CardsSection from "../components/CardsSection";
 import HowWeWork from "../components/HowWeWork";
 import TopRatedCompany from "../components/TopRatedCompany";
+import BenefitsSection from "../components/BenefitsSection";
 
 const Insurance = () => {
   const slides = [
@@ -49,304 +54,232 @@ const Insurance = () => {
   ];
   const cardsSectionImageData1 = [
     {
-      title: "Public Sector ERP Solutions",
+      title: "Cellular Insurance Apps",
       description:
-        "Financials, HR, procurement and administrative software that enhance transparency and operational effectiveness.",
+        "Design insurance mobile apps for iOS and Android that will process basic activities such as policy delivery, claim registration, and fraud detection automatically.",
       image: assets.customAiSolution,
       cardBg: "bg-blue-100",
     },
     {
-      title: "Citizen Service Portals",
+      title: "Policy Management System",
       description:
-        "Self-service payments, permit, registration and record platforms that eliminate queues and enhance satisfaction.",
+        "For policy management software, we develop the kind that will fully automate the whole policy lifecycle from creation through renewal while remaining accurate, compliant, and scalable software.",
       image: assets.appDevelopment,
       cardBg: "bg-green-100",
     },
     {
-      title: "E-Government Solutions",
+      title: "Claims Management System",
       description:
-        "Automating workflow, case management, and electronic forms to accelerate approvals and enhance accountability.",
+        "The right step is to develop a highly technologically sophisticated claims management system through which all such operations such as submission of claims, checking thereof, identification of frauds/wrong claims, if any, and payment thereof are conducted speedily and conveniently.",
       image: assets.customAiSolution,
       cardBg: "bg-yellow-100",
     },
     {
-      title: "Smart City Platforms",
+      title: "Insurance CRM Solutions",
       description:
-        "IoT-based services for energy, waste, lighting and public safety converged into a single dashboard.",
+        "The installation of a tailored CRM for the benefit of the insurers is the key to a successful customer relationship management system as it enables the offering of personalized services, customer tracking, and the use of integrated help panels.",
       image: assets.careersAbout1,
       cardBg: "bg-pink-100",
     },
     {
-      title: "Healthcare IT for Government",
+      title: "Health & Life Insurance Software",
       description:
-        "Secure EHR integrations, telemedicine portals, and public health analytics.",
-      image: assets.careersAbout1,
+        "Capyngen provides life insurance software and health insurance software featuring robust reporting along with analytics powered by artificial intelligence and integration.",
+      image: assets.appDevelopment,
       cardBg: "bg-purple-100",
     },
     {
-      title: "Education & Learning Portals",
+      title: "Insurance ERP Development",
       description:
-        "Virtual classrooms, student management, and distance learning systems built for scale.",
-      image: assets.appDevelopment,
-      cardBg: "bg-red-100",
-    },
-    {
-      title: "Transport & Mobility IT",
-      description:
-        "Ticketing automation, fleet management, and traffic monitoring to enhance urban mobility.",
+        "Insurance ERP software is the easiest way to consolidate all the activities of the company that involves engaging agents, customers, policyholders, and regulatory compliance.",
       image: assets.customAiSolution,
-      cardBg: "bg-indigo-100",
-    },
-    {
-      title: "Utility Management Software",
-      description:
-        "Metering, billing, complaint tracking and maintenance workflows for water, gas, and electricity utilities.",
-      image: assets.careersAbout1,
-      cardBg: "bg-teal-100",
-    },
-    {
-      title: "Public Safety & Emergency Response Systems",
-      description:
-        "Real-time monitoring, alerting, and coordination platforms for disaster management, law enforcement, and citizen safety.",
-      image: assets.appDevelopment,
-      cardBg: "bg-orange-100",
+      cardBg: "bg-red-100",
     },
   ];
   const faqItems = [
     {
-      question: "What Are Public Service Digital Solutions?",
+      question: "What type of insurance software solutions do you provide?",
       answer:
-        "They are technology-driven platforms that help not only governments but also public organizations improve their efficiency, clarity, and citizen engagement.",
+        "Our work ranges from custom insurance apps, CRM systems, claims management platforms, and policy management portals to anything else that is necessary for the insurance sector.",
     },
     {
-      question: "Do you Provide E-Governance Solutions?",
+      question: "Can you develop a digital platform for policy management?",
       answer:
-        "Indeed, we work on the development of e-Governance platforms that are safe and easy for users to access.",
+        "Definitely. We craft platforms that allow users to purchase, renew, and monitor their policies with ease and security.",
     },
     {
-      question: "Are you Able to Construct Citizen Service Applications?",
+      question: "Do you provide insurance mobile app development?",
       answer:
-        "Sure, as our team can do mobile apps for public services such as bill payments, complaint tracking, and document requests.",
+        "Of course, we create iOS and Android apps for life, health, auto, and general insurance companies.",
     },
     {
-      question: "Do you Provide Smart City Solutions?",
+      question: "Can you build AI-powered claim settlement systems?",
       answer:
-        "Certainly, our company is fully dedicated to the development of IoT-based smart city solutions for traffic, energy, and waste management.",
+        "Yes, our AI-driven solutions automate the claims process and help in detecting and minimizing fraudulent activities.",
     },
     {
-      question:
-        "Is the Healthcare System of the Public Sector Able to be Improved by Your Solutions?",
+      question: "Do you create customer self-service portals?",
       answer:
-        "Definitely, we build comprehensive digital healthcare systems for hospitals, health monitoring, and vaccination drives.",
+        "Yes, we develop self-service portals where policyholders can purchase policies, renew them, and register claims effortlessly.",
     },
     {
-      question: "Are You Creating Educational Platforms for Government Use?",
+      question: "Can you integrate chatbots into insurance apps?",
       answer:
-        "Absolutely, we do e-learning portals and digital classrooms for public education.",
+        "Yes, we embed AI chatbots for instant customer support, claim assistance, and personalized policy recommendations.",
     },
     {
-      question: "Can You Deliver Data Analytics for Public Services?",
+      question: "Do you provide solutions for health insurance companies?",
       answer:
-        "We build data visualizations that allow policy makers to grasp critical public data trends.",
+        "Yes, we design apps and portals for health insurance companies featuring claim tracking, policy management, and telemedicine integration.",
     },
     {
-      question: "Are You Producing Apps for the Safety of the Public?",
+      question: "Can you develop auto insurance apps with telematics?",
       answer:
-        "We make public safety apps for the areas of emergency response, disaster management, and law enforcement.",
+        "Yes, our auto insurance apps incorporate telematics that enable usage-based insurance models and real-time tracking.",
     },
     {
-      question:
-        "Are You Able to Integrate Your Solutions with Current Government Systems?",
+      question: "Do you offer solutions for life insurance companies?",
       answer:
-        "Of course, our integration into ERP, legacy systems, and third-party APIs goes effortlessly.",
+        "Yes, we provide platforms for life insurance companies with premium calculators, reminders, and policy management tools.",
     },
     {
-      question:
-        "Do You Offer Solutions for the Identification of a Digital Identity?",
+      question: "Can your software reduce claim processing time?",
       answer:
-        "Definitely, we design the identity verification and identity authentication systems in a secured manner.",
+        "Through AI automation and digital workflows, our software significantly accelerates claim settlement processes.",
     },
     {
-      question: "How Safe Are Your Public Service Solutions?",
+      question: "Do you provide cloud-based insurance solutions?",
       answer:
-        "We have implemented a fully encrypted security system, we comply with international standards and we also do the secure hosting of the cloud.",
+        "Yes, we deploy cloud-based insurance platforms that are scalable, secure, and ensure uninterrupted service availability.",
     },
     {
-      question: "Are You Able to Automate Government Workflows?",
+      question: "Can your insurance solutions help reduce fraud?",
       answer:
-        "Yes, we can offer services for process automation that include approvals, file tracking, and document management.",
+        "Yes, we leverage AI and data analytics to detect fraudulent claims and uncover suspicious activity patterns.",
     },
     {
-      question: "Are You Creators of Portals for Public Grievances?",
+      question: "Do you integrate payment gateways for insurance premiums?",
       answer:
-        "Yes, we create and design complaint management systems that work in ways that are transparent regarding the handling of complaints.",
+        "Yes, we integrate secure payment gateways supporting cards, UPI, wallets, and net banking for smooth premium transactions.",
     },
     {
       question:
-        "Can Your Solutions Be Made to Support Multi-Language Accessibility?",
+        "Can your platforms integrate with third-party systems like hospitals or vehicle databases?",
       answer:
-        "Yes, it is possible to create bilingual, trilingual, or multilingual platforms depending on the needs of the local community.",
+        "Yes, we build APIs that enable seamless integration with external systems for faster data verification and claim validation.",
     },
     {
-      question: "Do You Provide Support for Public Service Projects?",
+      question: "Do you offer ongoing support for insurance applications?",
       answer:
-        "In fact, our team offers assistance in the form of 24/7 support, control, and routine system upgrades.",
+        "Yes, we provide complete lifecycle support, including development, maintenance, updates, and continuous monitoring.",
     },
   ];
   const servicesData = [
     {
       image: assets.bg1,
-      title: "Citizen Portals",
-      desc: "Rapid access to services, status monitoring, and secure payments via integrated e-commerce capabilities for public sector requirements.",
+      title: "Robotic Process Automation (RPA)",
+      desc: "Automate routine insurance processes to significantly reduce manual workloads involved in claims processing, renewals, and compliance tasks.",
     },
     {
       image: assets.bg1,
-      title: "Smart City Platforms",
-      desc: "Unified dashboards melding IoT feeds and analytics and AI solutions for public sector planning.",
+      title: "AI Chatbot Integration",
+      desc: "Deploy intelligent assistants to provide 24/7 customer support, instantly resolving policy, claim, and inquiry issues while enhancing user satisfaction.",
     },
     {
       image: assets.bg1,
-      title: "Public Finance ERP",
-      desc: "Transparent budgeting, payroll, and reporting to facilitate compliant fiscal management.",
+      title: "Blockchain in Insurance",
+      desc: "Implement blockchain-based solutions for fraud prevention, secure policy validation, and tamper-proof smart contracts across insurance workflows.",
     },
     {
       image: assets.bg1,
-      title: "Healthcare Systems",
-      desc: "Telehealth and interoperable patient records to increase access to care.",
+      title: "Cloud Integration",
+      desc: "Enable secure, scalable, and cost-efficient deployment of insurance software through seamless cloud infrastructure integration and maintenance.",
     },
     {
       image: assets.bg1,
-      title: "E-Government Apps",
-      desc: "Outreach and mobile-first services enhancing citizen engagement.",
+      title: "Web3 & InsurTech Solutions",
+      desc: "Leverage decentralized technologies to create next-generation, user-owned insurance platforms with transparent operations and digital asset support.",
     },
     {
       image: assets.bg1,
-      title: "Education IT",
-      desc: "Remote and blended learning supported by LMS and admin systems.",
-    },
-    {
-      image: assets.bg1,
-      title: "Transport Systems",
-      desc: "Automation of route optimization, ticketing, and real-time commuter information.",
-    },
-    {
-      image: assets.bg1,
-      title: "Data Analytics & AI",
-      desc: "Predictive analytics and ML models for efficient resource prioritization and enhanced public outcomes.",
-    },
-    {
-      image: assets.bg1,
-      title: "Custom Software Solutions for Public Sector",
-      desc: "From custom case management applications to enterprise-wide integrations that sunset legacy silos.",
+      title: "Predictive Analytics for Risk Assessment",
+      desc: "Use advanced data analytics and machine learning models to predict customer behavior, assess risk, and optimize underwriting accuracy and pricing.",
     },
   ];
   const cardsSectionData1 = [
     {
-      title: "Transparency & Auditability",
+      title: "Customer-Specific Solutions",
       description:
-        "Unambiguous audit trails and public-facing dashboards to establish trust.",
-      icon: <FaSearch className="text-4xl text-white" />,
+        "Our insurance application development solutions are carefully crafted to meet your organization’s unique business and operational needs.",
+      icon: <FaUserCog className="text-4xl text-white" />,
     },
     {
-      title: "Scalability",
+      title: "Cutting-Edge Technology",
       description:
-        "Architectures that support city-wide use and national rollouts.",
-      icon: <FaExpand className="text-4xl text-white" />,
+        "We build future-ready insurance software empowered with AI, RPA, blockchain, and cloud innovations for maximum efficiency and scalability.",
+      icon: <FaMicrochip className="text-4xl text-white" />,
     },
     {
-      title: "Industry-specific Security & Compliance",
+      title: "Robust Security",
       description:
-        "Encryption, role-based access, and compliance mapping for local laws and standards.",
+        "Implementing multi-factor authentication, advanced data encryption, and full compliance with insurance data protection standards.",
       icon: <FaShieldAlt className="text-4xl text-white" />,
     },
     {
-      title: "Integration",
-      description: "Integrate legacy systems with new APIs and data platforms.",
-      icon: <FaPlug className="text-4xl text-white" />,
-    },
-    {
-      title: "Accessible UI/UX",
+      title: "Trusted Experience",
       description:
-        "Accessible design and UI/UX for public sector websites to satisfy WCAG and accessibility standards.",
-      icon: <FaUniversalAccess className="text-4xl text-white" />,
+        "With over 15 years of experience in insurance and financial software development, we deliver solutions trusted worldwide.",
+      icon: <FaHandshake className="text-4xl text-white" />,
     },
     {
-      title: "Real-Time Monitoring",
+      title: "Support 24/7",
       description:
-        "Operations dashboards and alerting for mission-critical services.",
-      icon: <FaChartLine className="text-4xl text-white" />,
+        "Continuous technical support, maintenance, and updates to ensure your application’s uninterrupted performance and reliability.",
+      icon: <FaHeadset className="text-4xl text-white" />,
     },
-  ];
-  const cardsSectionData2 = [
     {
-      title: "Proven Results",
+      title: "Regulatory Compliance Expertise",
       description:
-        "Implementing the finest IT solutions for public sector customers, with quantifiable service delivery improvements.",
-      icon: <FaCheckCircle className="text-4xl text-white" />,
-    },
-    {
-      title: "End-to-End Delivery",
-      description:
-        "Strategy, UI/UX design for public sector websites, build, deployment and 24/7 support.",
-      icon: <FaCogs className="text-4xl text-white" />,
-    },
-    {
-      title: "Custom & Secure",
-      description:
-        "We design custom software solutions for public sector workflows, not one-size-fits-all products.",
-      icon: <FaLock className="text-4xl text-white" />,
-    },
-    {
-      title: "AI-Led Efficiency",
-      description:
-        "Practical AI solutions for public sector use-cases such as demand forecasting, fraud detection, and case prioritization.",
-      icon: <FaRobot className="text-4xl text-white" />,
-    },
-    {
-      title: "Transparent Governance",
-      description: "Clear progress tracking, SLAs, and stakeholder reporting.",
+        "Our systems are developed in line with industry regulations, ensuring compliance with standards like GDPR, HIPAA, and ISO 27001.",
       icon: <FaBalanceScale className="text-4xl text-white" />,
     },
-    {
-      title: "Long-Term Support",
-      description:
-        "Training, operations, and continuous improvement to keep services running reliably.",
-      icon: <FaHandsHelping className="text-4xl text-white" />,
-    },
   ];
-  const steps = [
+  const solutionsData = [
     {
-      step: "Step 01",
-      title: "Consultation & Needs Capture",
-      description:
-        "Identify policy objectives, data regulations, and citizen requirements.",
+      title: "Insurance App Consultation",
+      desc: "360-degree consultation for policy management, claims processing, and digital insurance workflow optimization.",
     },
     {
-      step: "Step 02",
-      title: "Design & Compliance Planning",
-      description:
-        "Architecture, security, and accessibility (WCAG) design — including UI/UX design for government websites.",
+      title: "Custom Insurance Software Solutions",
+      desc: "Fully managed software solutions covering claims, policy administration, and customer relationship management systems.",
     },
     {
-      step: "Step 03",
-      title: "Development & Integration",
-      description: "Secure coding, API integration, and legacy migration.",
+      title: "Digital Transformation for Insurance Companies",
+      desc: "Empowering insurers to move beyond traditional data processing with next-generation InsurTech-driven digital ecosystems.",
     },
     {
-      step: "Step 04",
-      title: "Testing & Certification",
-      description:
-        "Performance, security, and accessibility testing to ensure audit compliance.",
+      title: "Mobile Insurance Development",
+      desc: "Develop secure, scalable, and user-friendly mobile insurance applications with a focus on data protection and reliability.",
     },
     {
-      step: "Step 05",
-      title: "Deployment & Training",
-      description: "Phased deployment, admin training, and change management.",
+      title: "Blockchain Integration",
+      desc: "Integrate blockchain to enable transparent, tamper-proof, and trusted insurance transactions and smart contracts.",
     },
     {
-      step: "Step 06",
-      title: "Operate & Optimize",
-      description: "Monitoring, analytics, and iterative feature delivery.",
+      title: "Regulatory Compliance Solutions",
+      desc: "Ensure full compliance with AML, KYC, HIPAA, GDPR, and other regulatory standards for global insurance operations.",
+    },
+    {
+      title: "Business Intelligence Integration",
+      desc: "Execute real-time data visualization, analytics, and reporting to enhance strategic decision-making and efficiency.",
+    },
+    {
+      title: "Cybersecurity Solutions",
+      desc: "Protect insurance data storage and transmission from vulnerabilities through multi-layered cybersecurity frameworks.",
+    },
+    {
+      title: "Insurance CRM System",
+      desc: "Deliver easy-to-use, interactive CRM systems with personalized dashboards for agents, brokers, and customers.",
     },
   ];
 
@@ -377,8 +310,8 @@ const Insurance = () => {
         isHidden="hidden"
       />
       <CardsSectionImage
-        heading="Explore Our Presence: Public Sector Solutions We Offer"
-        subheading="We offer end-to-end public sector solutions designed specifically for local, regional, and national organizations:"
+        heading="Insurance Software Development Experience"
+        subheading="We are an insurance software development team fully dedicated to building the right, scalable, and secure solutions for all situations, in general, and all types of industries."
         services={cardsSectionImageData1}
         sectionBg="bg-gray-800"
         headColor="text-white"
@@ -386,26 +319,38 @@ const Insurance = () => {
         textSize="text-md"
         hoverBg="hover:bg-gray-200"
       />
+      <IndustryServices
+        heading="Latest Technology We Implement"
+        subheading="Today, we are blending the best IT solutions for insurance industry cutting-edge and advanced technology with time-tested insurance software services that are most dependable, hence coming out with successful applications that have such qualities as speed, precision, and revolutionary."
+        services={servicesData}
+      />
+      <GetStarted
+        reverse={true}
+        backgroundColor="bg-gray-700"
+        textColor="text-white"
+        buttonColor="bg-white hover:scale-105"
+        buttonTextColor="text-black"
+        title="Future of IT solutions for insurance industry"
+        description={[
+          "Insurance technology solutions (InsurTech), artificial-intelligence-driven claims processing, and digital policy platforms are the future of the insurance industry. With Capyngen in simple terms, it's incredibly simple and fast to execute the process of completely overhauling the outdated systems, uplifting customer interaction, and merging cloud insurance platforms.",
+        ]}
+        image={assets.getStarted}
+      />
       <GetStarted
         reverse={false}
         backgroundColor="bg-gray-700"
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title="Initiate a Public Sector Transformation"
+        title="Introduce Smart Tech to Your CPG Distribution Network to Lift It Up"
         description={[
-          "Book a complimentary discovery call to examine IT solutions for public sector modernization and ask for a customized roadmap.",
+          "Why not work together now on creating a smart and connected network that will be the engine of your growth and will please your customers?",
         ]}
-        buttonText="Book Now!"
+        buttonText="Contact Our Experts for a Consultation"
         backgroundVideo={assets.backgroundVideo}
       />
-      <IndustryServices
-        heading="Empowering Governance with Modern Public IT Services"
-        subheading="Capyngen services assist agencies in becoming more efficient and building citizen trust:"
-        services={servicesData}
-      />
       <CardsSection
-        heading="Public Sector IT Solutions — Main Features"
+        heading="Why Capygen for Insurance Software Development?"
         subheading=""
         services={cardsSectionData1}
         sectionBg="bg-gray-900"
@@ -416,18 +361,23 @@ const Insurance = () => {
         hoverTextColor=""
         headColor="text-white"
       />
-      <CardsSection
-        heading="Why Choose Capyngen for Public Sector IT Solutions?"
-        subheading=""
-        services={cardsSectionData2}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg="bg-black border border-black transition-all duration-400"
-        hoverBg=" hover:border-white"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-        height="h-64"
+      <BenefitsSection
+        heading="Insurance Software Solutions Development Services"
+        desc="We are open-to-close insurance software development providers to attain precision, creativity, and customer satisfaction in the insurance sector."
+        image={assets.eCommerceSolution}
+        benefits={solutionsData}
+        footerNote=""
+      />
+      <TopRatedCompany
+        reverse={false}
+        title="Life Application Insurance Health Insurance Program"
+        description={[
+          "Take Advantage of the Unique and Exceptional Software development For insurance companiesCapyngen is one of India's foremost providers of insurtech that offers you sustainable, flexible and user-friendly solutions. We specialize in policy management software, claims management systems and developing proprietary insurance apps. That not only enables us to offer you highly scalable solutions but highly secure ones as well. Schedule your free consultation today",
+        ]}
+        image={assets.whyChooseUs}
+        background={assets.patternBg1}
+        imageHeight="aspect-[4/3]"
+        isHidden="hidden"
       />
       <GetStarted
         reverse={false}
@@ -435,41 +385,11 @@ const Insurance = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title="Ask for an AI Pilot for Government Services"
+        title="Request Your Free Demo & Strategy Session Right Now"
         description={[
-          "Experience how AI public sector solutions can better utilize resource allocation—schedule a 2-week pilot to show returns.",
+          "Work closely with us to build the brand’s future-proof systems that are adaptable and scalable for long-term benefits.",
         ]}
-        buttonText="Schedule Now!"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <HowWeWork
-        heading="How we implement public sector projects"
-        desc=""
-        steps={steps}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Ready to Modernize Public Services?"
-        description={[
-          "Capyngen is poised to collaborate on initiatives that transform citizen experience and operational effectiveness. We craft and deploy reliable IT solutions for public sector Industry that scale and secure public value.",
-        ]}
-        image={assets.blockchainBanner1}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Introduce Secure Digital Payments & Portals"
-        description={[
-          "Enforce compliant public sector e-commerce solutions for public sector fee collection and licensing with accelerated time-to-value.",
-        ]}
-        buttonText="Contact Us"
+        buttonText="Request Now"
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
