@@ -92,7 +92,7 @@ const BannerRollingGallery = ({
   return (
     <section className="bg-black text-white w-full pt-30">
       {/* Heading + Subheading */}
-      <div className="text-center">
+      <div className="text-center  max-w-[90vw] mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Build Future-Ready Websites with Capyngen
         </h1>

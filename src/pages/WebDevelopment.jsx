@@ -545,10 +545,7 @@ const WebDevelopment = () => {
           description={[
             `Capyngen is convinced that a strong online presence is not a mere luxury any more, but rather a must-have for the expansion of a business. The companies that decide to use our services for the development of their professional websites are the ones that become the most trusted by their target audience, attract more visitors, and raise the level of their engagement.`,
             `It does not matter whether your company is a startup or a large conglomerate, the services offered by us in the field of custom website development work with the sole objective of getting your brand noticed out of the crowd. Capyngen website is your online success is ensured by every component starting from visually attractive layouts to feature-rich functionality, all of which are meticulously designed to give you a smooth and a captivating user experience.`,
-            <p
-              key="equation"
-              className="text-2xl font-bold text-cyan-400 text-center mt-6"
-            >
+            <p key="equation" className="text-2xl font-bold text-cyan-400 mt-6">
               Web Development ={" "}
               <span className="text-purple-400">Technology</span> +{" "}
               <span className="text-pink-400">Creativity</span> +{" "}
@@ -570,7 +567,6 @@ const WebDevelopment = () => {
           textColor="text-white"
           hoverTextColor=""
           textSize="text-md"
-          height="h-90"
         />
         <CardsSectionImage
           heading="Our Web Development Features"
