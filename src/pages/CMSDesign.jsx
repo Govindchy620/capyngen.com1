@@ -180,9 +180,9 @@ const CMSDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner14
-          imageSrc={assets.blockchainDevelopment}
+          imageSrc={assets.cms1}
           imageAlt="Blockchain development illustration"
           title="Simplify Your Content Using a"
           highlighted="Professional CMS Design"
@@ -210,7 +210,7 @@ const CMSDesign = () => {
             `Capyngen provides innovative CMS design services of the highest quality that enable companies to manage, grow, and simplify their online digital presence. Our skilled designers and developers create personalized CMS design solutions that are the perfect match for your distinctive needs — be it websites, apps, or enterprise platforms. Bearing in mind the responsive CMS design, user-friendly UI/UX, and smooth operation, we certify that your content management system will be of great performance and easy to use.`,
             `Experience the benefits of a great CMS design that will make your work simpler, better use of resources and create exciting digital experiences. In case you require services for CMS web design, CMS UI/UX design, or complete CMS development and design, Capyngen will stand by your side like a true partner.`,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.cms2}
           isHidden={true}
           background={assets.patternBg1}
         />
@@ -232,7 +232,7 @@ const CMSDesign = () => {
               </p>
             </>,
           ]}
-          image={assets.blockchainDevelopmentCompany}
+          image={assets.cms3}
         />
         <CardsSection
           heading="CMS Web Design Services"
@@ -278,7 +278,7 @@ const CMSDesign = () => {
           desc=""
           benefits={solutionsData}
           footerNote=""
-          image={assets.applicationSolution}
+          image={assets.cms4}
         />
         <GetStarted
           reverse={false}

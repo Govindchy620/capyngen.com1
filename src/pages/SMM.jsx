@@ -123,32 +123,32 @@ const SMM = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.smm3,
       title: "Content Personalization",
       desc: "Making posts more suitable for your followers' likes and dislikes.",
     },
     {
-      image: assets.bg1,
+      image: assets.smm4,
       title: "Storytelling Marketing",
       desc: "Gaining the audience's sympathy by offering them stories to read.",
     },
     {
-      image: assets.bg1,
+      image: assets.smm5,
       title: "Hashtag Campaigns",
       desc: "Raising visibility through partnering with trending hashtags.",
     },
     {
-      image: assets.bg1,
+      image: assets.smm6,
       title: "Video First Strategy",
       desc: "Employing reels, shorts, and live sessions to draw attention.",
     },
     {
-      image: assets.bg1,
+      image: assets.smm7,
       title: "Paid + Organic Mix",
       desc: "Working social media advertising and organic content side by side.",
     },
     {
-      image: assets.bg1,
+      image: assets.smm8,
       title: "Data-Driven Optimization",
       desc: "Keeping an eye on the numbers and making good use of them to increase performance.",
     },
@@ -365,7 +365,7 @@ const SMM = () => {
             </ul>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.smm1}
         background={assets.patternBg1}
         isHidden="hidden"
       />
@@ -373,7 +373,7 @@ const SMM = () => {
         heading="Our Social Media Marketing Services"
         desc="As a leading social media marketing company, we provide end-to-end solutions tailored to your business needs."
         benefits={solutionsData}
-        image={assets.blockchainDevelopment}
+        image={assets.smm2}
         footerNote=""
       />
       <GetStarted
@@ -428,7 +428,7 @@ const SMM = () => {
             </p>
           </>,
         ]}
-        image={assets.getStarted}
+        image={assets.smm9}
       />
       <HowWeWork
         heading="Our Social Media Marketing Process"
@@ -436,13 +436,13 @@ const SMM = () => {
         steps={steps}
       />
       <TopRatedCompany
-        title="Final Thoughts"
+        title=""
         description={[
           `The world is all about social interactions and your brand needs to keep up with that trend. Social media marketing is simply not the numbers game that most people think it is. The main goal in that marketing is to gain trust, increase the interactions and, finally, sales.`,
           `Our social media marketing agency is a perfect blend of creative ideas, analytics-based strategy, and targeted social media ads that you get by selecting us.`,
           `It does not make a difference whether you are a young company or an already existing brand; our social media management services will be the key to your sustainable growth by regular and effective social media promotion.`,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.smm10}
         isHidden={true}
         background={assets.patternBg1}
       />

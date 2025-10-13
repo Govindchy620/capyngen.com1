@@ -39,9 +39,10 @@ const Banner14 = ({
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               {title.split(highlighted)[0]}
               <span className="text-blue-500 text-3xl md:text-5xl font-extrabold">
-                {highlighted}
+                {" "}
+                {highlighted}{" "}
               </span>
-              {subtitle}
+              {subtitle}{" "}
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
               {description}

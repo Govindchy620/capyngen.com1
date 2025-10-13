@@ -63,7 +63,7 @@ export default function TopRatedCompany({
               <img
                 src={image}
                 alt="Business people collaborating"
-                className="relative z-10 w-full h-full object-cover rounded-xl shadow-xl"
+                className="relative z-10 w-full h-full object-contain rounded-xl shadow-xl"
                 loading="lazy"
                 decoding="async"
               />

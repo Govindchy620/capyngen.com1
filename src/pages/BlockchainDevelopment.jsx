@@ -241,32 +241,32 @@ const BlockchainDevelopment = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.blockchain2,
       title: "Smart Contract Development",
       desc: "Secure and simplify the operation of your agreements using smart contracts through our service.",
     },
     {
-      image: assets.bg1,
+      image: assets.blockchain3,
       title: "Decentralized Application (DApp) Development",
       desc: "Design and develop reliable and secure applications on the blockchain platform.",
     },
     {
-      image: assets.bg1,
+      image: assets.blockchain4,
       title: "Private Blockchain Solutions",
       desc: "Customized blockchain networks that are specially designed for your business internal use.",
     },
     {
-      image: assets.bg1,
+      image: assets.blockchain5,
       title: "Public Blockchain Solutions",
       desc: "Utilize publicly available blockchain networks to gain the most extensive access.",
     },
     {
-      image: assets.bg1,
+      image: assets.blockchain6,
       title: "Token Development (Crypto Tokens & NFTs)",
       desc: "Digitize your business through issuing tokens, digital assets, or NFTs.",
     },
     {
-      image: assets.bg1,
+      image: assets.blockchain7,
       title: "Blockchain Integration with Existing Systems",
       desc: "The process of connecting the current applications with blockchain technology continues without causing any interruption.",
     },
@@ -503,7 +503,7 @@ const BlockchainDevelopment = () => {
             </p>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.blockchain1}
         isHidden={true}
         background={assets.patternBg1}
       />
@@ -587,7 +587,7 @@ const BlockchainDevelopment = () => {
             </p>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.blockchain8}
         isHidden={true}
         background={assets.patternBg1}
       />

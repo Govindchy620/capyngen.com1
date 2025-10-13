@@ -180,7 +180,7 @@ const ArtificialIntelligence = () => {
       title: "Boost Productivity",
       description:
         "Save time with the help of AI solutions while also removing the possibility of errors.",
-      image: assets.customAiSolution,
+      image: assets.ai2,
       cardBg: "bg-blue-100",
     },
 
@@ -188,35 +188,35 @@ const ArtificialIntelligence = () => {
       title: "Custom AI Development",
       description:
         "The development of AI applications is tailored to startups, enterprises, and other areas.",
-      image: assets.appDevelopment,
+      image: assets.ai3,
       cardBg: "bg-green-100",
     },
     {
       title: "AI-Powered Insights",
       description:
         "Accelerate the data-driven decision-making process with the aid of AI-powered tools.",
-      image: assets.customAiSolution,
+      image: assets.ai4,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Cost-Effective Automation",
       description:
         "Use AI software development to cut down on your operational costs.",
-      image: assets.careersAbout1,
+      image: assets.ai5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Scalable & Reliable",
       description:
         "Leverage strong artificial intelligence technology as a tool to boost your business.",
-      image: assets.careersAbout1,
+      image: assets.ai6,
       cardBg: "bg-purple-100",
     },
     {
       title: "Future-Ready AI",
       description:
         "Integrate the future of AI with your operations and position yourself ahead of the pack.",
-      image: assets.appDevelopment,
+      image: assets.ai7,
       cardBg: "bg-red-100",
     },
   ];
@@ -304,7 +304,7 @@ const ArtificialIntelligence = () => {
           desc=""
           benefits={benefitsData1}
           reverse={false}
-          image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+          image={assets.ai1}
           footerNote=""
         />
         <CardsSectionImage
@@ -381,7 +381,7 @@ const ArtificialIntelligence = () => {
               </ul>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.ai8}
           background={assets.patternBg1}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"

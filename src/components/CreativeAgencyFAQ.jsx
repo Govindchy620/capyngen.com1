@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const CreativeAgencyFAQ = ({
   slides = [],
   slideDuration = 4000,
-  headingClass = "text-4xl lg:text-6xl font-black leading-tight mb-8",
+  headingClass = "text-3xl lg:text-5xl font-black leading-loose mb-8",
   descClass = "text-xl leading-relaxed mb-8 max-w-xl",
   priceLabel = "Monthly Price",
   buttonLabel = "READ MORE",
@@ -56,7 +56,7 @@ const CreativeAgencyFAQ = ({
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            className="flex items-center gap-8 lg:gap-16"
+            className="flex flex-col md:flex-row items-center gap-8 lg:gap-16"
             initial="enter"
             animate="center"
             exit="exit"
@@ -67,7 +67,7 @@ const CreativeAgencyFAQ = ({
               <img
                 src={slides[index].image}
                 alt={slides[index].heading || "Slide image"}
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full max-h-[500px] object-cover rounded-2xl"
               />
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {slides.map((_, i) => (

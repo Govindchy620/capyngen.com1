@@ -105,32 +105,32 @@ const NetworkSolutionServices = () => {
   ];
   const cardsSectionImageData2 = [
     {
-      image: assets.bg1,
+      image: assets.network3,
       title: "Expert IT Professionals",
       desc: "We are a team of certified network engineers and IT specialists, who have accumulated a lot of experience in different industries. We keep ourselves updated with the latest technologies and best practices to provide state-of-the-art solutions.",
     },
     {
-      image: assets.bg1,
+      image: assets.network4,
       title: "Customized Solutions",
       desc: "We do not believe in universal solutions. If you are looking for affordable managed network services for a small business or if you are looking for a network security solution provider for enterprise capabilities, we will adjust our services to meet your specific requirements and budget.",
     },
     {
-      image: assets.bg1,
+      image: assets.network5,
       title: "Best Network Solutions Company in India",
       desc: "Capyngen has been able to convince companies all over India that it is the best solution for the network by offering such services as the most reliable, secure, and high-performing as necessary without fail. -No need for us to say it, our Incidents of Success already tell the story well enough.",
     },
     {
-      image: assets.bg1,
+      image: assets.network6,
       title: "Cost-Effective & Scalable",
       desc: "We are aware of how important it is to optimize the budget. Our services are aimed at providing you with the best value while still being flexible enough to scale up as your business develops.",
     },
     {
-      image: assets.bg1,
+      image: assets.network7,
       title: "Proactive Approach",
       desc: "We don't just react to problems – we prevent them. Our preventive care through watchful monitoring and upkeep, reduces the time your network is off and keeps your network at its maximum output.",
     },
     {
-      image: assets.bg1,
+      image: assets.network8,
       title: "24/7 Support & Monitoring",
       desc: "Work hours for business are never just from 9 to 5 and our working hours for support and monitoring services are never 0. So it is basically the same as businesses not sleeping. -Inadequate situation is always rejected, as even the strictest off-duty observation and support leave only restoration of their network uninterrupted operations.",
     },
@@ -236,7 +236,7 @@ const NetworkSolutionServices = () => {
   return (
     <div className="relative">
       <Banner14
-        imageSrc={assets.blockchainDevelopment}
+        imageSrc={assets.network1}
         imageAlt="Blockchain development illustration"
         title="Creative"
         highlighted="Network Solutions and Services"
@@ -265,7 +265,7 @@ const NetworkSolutionServices = () => {
             `We live in a world where everything must be done digitally and therefore your network becomes the most important thing in the chain of your business operations. At Capyngen, we know very well that your connectivity processes must be without any type of failure, and besides that, security and performance must be also at their zenith. Hence we provide the kind of customer and business solutions that enable organizations of any size to achieve their greatest potential.`,
             `We are your one-stop shop for all things related to networking, including solutions that are hosted on windows and to support round the clock. With Capyngen, your organization would become a move powered by network services professionals are better you can get.`,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.network2}
           isHidden={true}
           imageHeight="aspect-[1/1]"
           background={assets.patternBg1}

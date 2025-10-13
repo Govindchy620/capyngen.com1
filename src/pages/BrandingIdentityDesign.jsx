@@ -109,28 +109,28 @@ const BrandingIdentityDesign = () => {
       title: "Logo Design",
       description:
         "One-of-a-kind designs that immediately are the names of products and services the brand is recognizable and are also a familiar occurrence in the matter of trust.",
-      image: assets.customAiSolution,
+      image: assets.brandingLogoDesign,
       cardBg: "bg-blue-100",
     },
     {
       title: "Visual Identity",
       description:
         "Design elements such as the colors, fonts, icons, and images used for all the channels in order to keep the look uniform.",
-      image: assets.careersAbout1,
+      image: assets.brandingVisualIdentity,
       cardBg: "bg-pink-100",
     },
     {
       title: "Brand Guidelines",
       description:
         "A rule book that assists in the performance of close-knit communities in print, web, and social media.",
-      image: assets.appDevelopment,
+      image: assets.brandingBrandGuidelines,
       cardBg: "bg-green-100",
     },
     {
       title: "Packaging Design",
       description:
         "Beautiful packages for the customers, who at the same time are the mirror of your brand.",
-      image: assets.customAiSolution,
+      image: assets.brandingPackagingDesign,
       cardBg: "bg-yellow-100",
     },
     {

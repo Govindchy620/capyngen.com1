@@ -143,7 +143,7 @@ const EnterpriseSolutions = () => {
       title: "Enterprise Network & IT Solutions",
       description:
         "A scalable IT infrastructure that is tailored to back a business's rise, you get all the things that are necessary for your daily routine to go on without a hitch such as robust architecture, high-speed connectivity, data center solutions, unified communications, IT asset management, and disaster recovery planning.",
-      image: assets.customAiSolution,
+      image: assets.enterprise3,
       cardBg: "bg-blue-100",
     },
 
@@ -151,35 +151,35 @@ const EnterpriseSolutions = () => {
       title: "Enterprise Cloud Solutions",
       description:
         "Basically, business will be more cost-effective and scalable through cloud migration services, hybrid cloud architecture, multi-cloud management, secure cloud storage, advanced cloud security, and continuous cloud optimization.",
-      image: assets.appDevelopment,
+      image: assets.enterprise4,
       cardBg: "bg-green-100",
     },
     {
       title: "Enterprise Application Solutions",
       description:
         "Some of the services that have been provided as a means of helping the below processes to be simplified in businesses are enumerated as: custom application development, application integration, legacy modernization, mobile enterprise apps, API development, and comprehensive application maintenance.",
-      image: assets.customAiSolution,
+      image: assets.enterprise5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Enterprise Security Solutions",
       description:
         "The advanced threat protection, security compliance management, identity, and access management, security audits, incident response protocols, and security awareness training offered to you belong to the critical business assets category.",
-      image: assets.careersAbout1,
+      image: assets.enterprise6,
       cardBg: "bg-pink-100",
     },
     {
       title: "Enterprise Consulting Services",
       description:
         "Some of the services that we are always ready to offer to you to be the first in the race of innovation and operational excellence include digital transformation strategy, IT governance frameworks, process optimization, technology roadmap planning, vendor management, and change management guidance.",
-      image: assets.careersAbout1,
+      image: assets.enterprise7,
       cardBg: "bg-purple-100",
     },
     {
       title: "Enterprise Data & Analytics Solutions",
       description:
         "The services that we provide to change the unstructured data into the insights which are actionable for your business include business intelligence dashboards, data warehousing, predictive analytics, data governance, real-time analytics, and seamless data migration.",
-      image: assets.appDevelopment,
+      image: assets.enterprise8,
       cardBg: "bg-red-100",
     },
   ];
@@ -268,7 +268,7 @@ const EnterpriseSolutions = () => {
         titlePrefix="Advanced"
         titleSuffix="To Transform Your Business"
         description={`Capyngen is the main source of enterprise IT solutions that are scalable, safe, and efficient, created for the purpose of raising up and digitally transforming the various fields of industries.`}
-        imageSrc={assets.eCommerceDesign}
+        imageSrc={assets.enterprise1}
         imageAlt="Ecommerce Design Illustration"
         bgColor="bg-gray-900"
         iconColor="bg-blue-700"
@@ -293,7 +293,7 @@ const EnterpriseSolutions = () => {
           `Capyngen is the problem-solved provider of enterprise solutions that changes the whole game from hard to smooth sailing for your organization.`,
           `With enterprises running on custom solutions, Capyngen can give you an exceptional customer experience that combines modern technology, the best standards of the industry, and a commitment to your success.`,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.enterprise2}
         background={assets.patternBg1}
         isHidden="hidden"
         imageHeight="aspect-[4/3] md:aspect-[1/1]"

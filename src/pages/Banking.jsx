@@ -127,69 +127,68 @@ const Banking = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.banking2,
       title: "Specialized Banking Solutions",
       desc: "Of course, every financial institution is different in terms of necessities, processes, and objectives. Our custom banking application development services are yours alone so that your firm can implement the most suitable remedies to your workflow processes, customer demands, and strategic aspirations without having to adapt.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking3,
       title: "Security & Compliance First",
       desc: "Actually, banking is a security-oriented industry. Our practice includes multi-factor authentications, end-to-end encryptions, secure APIs, and the like, strictly following the top global security standards. Our products and service offerings comply with RBI guidelines, PCI DSS standards, GDPR, ISO 27001, and other regulatory frameworks, ensuring complete compliance and data protection.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking4,
       title: "Scalability & Performance",
       desc: "The structure of our banking software development projects ensures seamless scalability. Our systems maintain consistent performance across distributed environments—whether serving a few thousand or a few million customers—without compromising speed or reliability.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking5,
       title: "Innovative Technology Incorporation",
       desc: "We employ advanced technologies like AI for fraud detection, blockchain for financial transparency and security, cloud computing for easy accessibility, big data for actionable insights, and IoT to deliver next-generation banking services that keep you ahead of the competition.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking6,
       title: "Seamless Integration Abilities",
       desc: "Our banking products coexist harmoniously with your existing infrastructure, including legacy systems, third-party software, payment gateways, and regulatory reporting tools—ensuring smooth integration and uninterrupted operations.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking7,
       title: "Proven Track Record",
       desc: "As one of the top banking software development companies in India, we’ve successfully delivered transformative digital solutions to leading financial institutions—helping them overcome operational challenges and achieve measurable growth.",
     },
   ];
   const servicesData1 = [
     {
-      image: assets.bg1,
+      image: assets.banking15,
       title: "Retail Banks",
       desc: "Comprehensive software solutions designed to streamline the daily operations of retail banks — including account management, deposits, loans, cards, and customer service. Our systems ensure smooth, secure, and personalized banking experiences for individual customers.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking16,
       title: "Corporate Banks",
       desc: "Robust enterprise banking platforms built to manage complex corporate relationships, trade finance, treasury operations, and cash management. Empower your business clients with tailored tools that support large-scale, high-value financial activities efficiently.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking17,
       title: "Investment Banks",
       desc: "Advanced trading platforms, portfolio management systems, risk analytics, and regulatory reporting tools — all integrated to support effective investment operations and wealth management with precision and compliance.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking18,
       title: "Microfinance Institutions",
       desc: "Purpose-built software that streamlines microfinance operations, including group lending, repayment tracking, mobile-first interfaces, and on-field support — enabling institutions to reach underserved communities efficiently and securely.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking19,
       title: "FinTech Startups",
       desc: "Next-generation fintech development for digital wallets, peer-to-peer lending platforms, robo-advisors, cryptocurrency exchanges, and disruptive financial applications that leverage the latest technologies for innovation and growth.",
     },
     {
-      image: assets.bg1,
+      image: assets.banking20,
       title: "Payment Service Providers",
       desc: "End-to-end payment infrastructure covering payment gateway development, transaction processing platforms, merchant services, settlement systems, and aggregation solutions — creating open, fast, and reliable payment ecosystems.",
     },
   ];
-
   const typesData = [
     {
       icon: <FaCogs />,
@@ -224,27 +223,27 @@ const Banking = () => {
   ];
   const panels = [
     {
-      image: assets.gallery1,
+      image: assets.bankingBanner1,
       title: "Breakthrough the Banking with Future-type Software Solutions",
       desc: "A bank of the future that accepts and incorporates technology as much as it innovates customer experience within the banking space.",
     },
     {
-      image: assets.gallery2,
+      image: assets.bankingBanner2,
       title: "Panel 2",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.gallery3,
+      image: assets.bankingBanner3,
       title: "Panel 3",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.gallery4,
+      image: assets.bankingBanner4,
       title: "SEO Speed Up Website",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.blog3,
+      image: assets.bankingBanner5,
       title: "Panel 5",
       desc: "Digital Art • Illustrations",
     },
@@ -292,42 +291,42 @@ const Banking = () => {
       title: "Programming Languages",
       description:
         "Java for enterprise-level scalability, .NET for seamless integration within the Microsoft ecosystem, Python for AI and machine learning capabilities, C++ for high-transaction processing, and Kotlin for developing modern Android banking applications.",
-      image: assets.customAiSolution,
+      image: assets.banking8,
       cardBg: "bg-blue-100",
     },
     {
       title: "Databases & Storage",
       description:
         "Oracle for core banking operations, MySQL for web-based services, MongoDB for flexible and adaptive data models, PostgreSQL for advanced database functionalities, and Redis for caching and real-time computations.",
-      image: assets.appDevelopment,
+      image: assets.banking9,
       cardBg: "bg-green-100",
     },
     {
       title: "Frameworks & Libraries",
       description:
         "Spring Boot for building microservices architectures, Angular for dynamic web interfaces, React for responsive and interactive user experiences, Node.js for scalable backend development, and Flutter for creating cross-platform mobile applications.",
-      image: assets.customAiSolution,
+      image: assets.banking10,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Cloud Platforms",
       description:
         "AWS for comprehensive cloud services, Azure for Microsoft-based environments, Google Cloud for AI and ML-driven solutions, IBM Cloud for enterprise-grade banking infrastructure, along with hybrid and multi-cloud deployment support.",
-      image: assets.careersAbout1,
+      image: assets.banking11,
       cardBg: "bg-pink-100",
     },
     {
       title: "Security Technologies",
       description:
         "Multi-factor authentication (MFA), end-to-end encryption, tokenization, biometric verification, blockchain for immutable transactions, SSL/TLS protocols, secure APIs, intrusion detection systems, and SIEM platforms for robust, multi-layered protection.",
-      image: assets.careersAbout1,
+      image: assets.banking12,
       cardBg: "bg-purple-100",
     },
     {
       title: "Analytics & AI",
       description:
         "Machine learning for fraud detection, predictive analytics for customer behavior forecasting, natural language processing for intelligent chatbots, big data platforms for deep insights, real-time dashboards, and business intelligence tools for data-driven decision-making.",
-      image: assets.appDevelopment,
+      image: assets.banking13,
       cardBg: "bg-red-100",
     },
   ];
@@ -356,7 +355,7 @@ const Banking = () => {
           `We have considerable experience in effectively providing banking industry solutions that include the retail and commercial business sectors along with corporate as well as investment banking and microfinance and fintech startups. We have a comprehensive array of banking software development services that include core banking solutions, mobile banking software, digital payment systems along with FinTech app development that can realize operation efficiency, customer satisfaction, and regulatory compliance.`,
         ]}
         imageHeight="md:aspect-[1/1]"
-        image={assets.whyChooseUs}
+        image={assets.banking1}
         isHidden={true}
         background={assets.patternBg1}
       />
@@ -405,7 +404,7 @@ const Banking = () => {
         heading="Making Banks Digitally Fit"
         subheading=""
         buttonText="Let's Contact"
-        image="https://via.placeholder.com/300x550.png" // replace with actual phone image
+        image={assets.banking14}
         types={typesData}
       />
       <IndustryServices

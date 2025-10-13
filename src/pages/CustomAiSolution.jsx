@@ -166,42 +166,42 @@ const CustomAiSolution = () => {
       title: "Machine Learning Solutions",
       description:
         "You can easily use machine learning technology to collect data, recognize patterns and make true predictions in order to improve your company's performance.",
-      image: assets.customAiSolution,
+      image: assets.customAi2,
       cardBg: "bg-blue-100",
     },
     {
       title: "Natural Language Processing (NLP)",
       description:
         "You can implement an AI-powered chatbot to make communication between the customer and your company easier and quicker. Besides this, there is sentiment analysis and intelligent text processing.",
-      image: assets.careersAbout1,
+      image: assets.customAi3,
       cardBg: "bg-pink-100",
     },
     {
       title: "Predictive Analytics",
       description:
         "Take the lead by turning your data into insightful forecasts, risk management plans, and making strategic decisions.",
-      image: assets.appDevelopment,
+      image: assets.customAi4,
       cardBg: "bg-green-100",
     },
     {
       title: "AI-Powered Automation",
       description:
         "The workflow that is normally done in a slow and complicated way can be automated by the help of AI, and this will allow you to have efficiency increased, productivity boosted and in general a good working environment.",
-      image: assets.customAiSolution,
+      image: assets.customAi5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Computer Vision & Image Recognition",
       description:
         "Smart technologies behind the scenes can simply take photos of us, find our faces, and even help us analyze what’s in the picture.",
-      image: assets.careersAbout1,
+      image: assets.customAi6,
       cardBg: "bg-purple-100",
     },
     {
       title: "Recommendation & Personalization Engines",
       description:
         "Help the companies to keep the customers coming back by providing them with the offer which is specifically suitable for them and their likes thus making the engagement strong and fruitful.",
-      image: assets.appDevelopment,
+      image: assets.customAi7,
       cardBg: "bg-red-100",
     },
   ];
@@ -247,11 +247,11 @@ const CustomAiSolution = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner3
           title="Custom AI Solutions for a Faster Business Growth"
           subtitle="Tap into better decision-making, streamline your business activities, and foster innovation by using Capyngen’s bespoke AI solutions designed to meet your business requirements globally."
-          backgroundImage={assets.customAiSolution}
+          backgroundImage={assets.customAi1}
           overlayColor="bg-black"
           diagonalShape="polygon(0 0, 100% 0, 100% 40%, 0 100%)"
         />
@@ -259,7 +259,7 @@ const CustomAiSolution = () => {
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <GetStarted
-          reverse={false}
+          reverse={true}
           backgroundColor="bg-gradient-to-br from-gray-900 to-gray-600"
           textColor="text-white"
           buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"

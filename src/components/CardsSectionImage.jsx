@@ -12,7 +12,7 @@ const CardsSectionImage = ({
   textColor = "text-gray-800",
   textSize = "text-lg",
   hoverTextColor = "hover:text-black",
-  imageHeight = "h-40", // dynamic image height
+  imageHeight = "max-h-[350px]", // dynamic image height
 }) => {
   return (
     <section className={`${sectionBg} py-16 px-6 md:px-12`}>

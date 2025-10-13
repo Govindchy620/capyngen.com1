@@ -282,143 +282,49 @@ const DevOpsSolutions = () => {
       desc: "You can use the cloud resources and infrastructure in a way that benefits you the most thus giving back the investment in full while at the same time lowering your operational costs and increasing your efficiency.",
     },
   ];
-  const cardsSectionData1 = [
-    {
-      title: "Ideation and Concept",
-      description:
-        "Our team refines your app ideas, ensuring a clear, viable concept that meets market needs.",
-      icon: <FaLightbulb className="text-4xl" />,
-    },
-    {
-      title: "Market Research",
-      description:
-        "We conduct thorough market research to understand trends, competition, and target audience, providing actionable insights to guide the app development process.",
-      icon: <FaChartLine className="text-4xl" />,
-    },
-    {
-      title: "Technology Stack Selection",
-      description:
-        "Our experts advise on the best technologies, frameworks, and tools for app development.",
-      icon: <FaCogs className="text-4xl" />,
-    },
-    {
-      title: "UX/UI Design",
-      description:
-        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "Prototyping and MVP",
-      description:
-        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
-      icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "Project Management",
-      description:
-        "We provide project management services, ensuring timely delivery and risk management.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-    {
-      title: "UX/UI Design",
-      description:
-        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "Prototyping and MVP",
-      description:
-        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
-      icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "Project Management",
-      description:
-        "We provide project management services, ensuring timely delivery and risk management.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-  ];
-  const cardsSectionData2 = [
-    {
-      title: "Ideation and Concept",
-      description:
-        "Our team refines your app ideas, ensuring a clear, viable concept that meets market needs.",
-      icon: <FaLightbulb className="text-4xl" />,
-    },
-    {
-      title: "Market Research",
-      description:
-        "We conduct thorough market research to understand trends, competition, and target audience, providing actionable insights to guide the app development process.",
-      icon: <FaChartLine className="text-4xl" />,
-    },
-    {
-      title: "Technology Stack Selection",
-      description:
-        "Our experts advise on the best technologies, frameworks, and tools for app development.",
-      icon: <FaCogs className="text-4xl" />,
-    },
-    {
-      title: "UX/UI Design",
-      description:
-        "We craft intuitive, engaging UX/UI designs that enhance user satisfaction.",
-      icon: <FaLaptopCode className="text-4xl" />,
-    },
-    {
-      title: "Prototyping and MVP",
-      description:
-        "Our team develops prototypes and MVPs to validate concepts and minimize risks.",
-      icon: <FaProjectDiagram className="text-4xl" />,
-    },
-    {
-      title: "Project Management",
-      description:
-        "We provide project management services, ensuring timely delivery and risk management.",
-      icon: <FaTasks className="text-4xl" />,
-    },
-  ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.devOps4,
       title: "Scalable Cloud Infrastructure",
       desc: "Establish a cloud environment that is solid, adaptable, and of top quality that is capable of scaling your business needs without any hiccup.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps5,
       title: "Automated Cloud Deployments",
       desc: "Facilitate and speed up the release cycles by having fully automated deployment pipelines resulting in fewer manual efforts and error-free releases.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps6,
       title: "Continuous Integration & Delivery (CI/CD)",
       desc: "Sign up for faster, safer, and more dependable software delivery that is driven by automation of integration, testing, and deployment.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps7,
       title: "Cloud Security & Compliance",
       desc: "Secure your applications and data by adopting security practices that comply with the set standards in the industry and other regulatory requirements.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps8,
       title: "Infrastructure as Code (IaC)",
       desc: "Efficiently manage, set up, and provision infrastructure using code for easily repeatable and error-free installations.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps9,
       title: "Multi-Cloud Optimization",
       desc: "Use the most attractive features of different cloud providers to your advantage while you keep your expenses at bay and make full use of the resources of the cloud provider.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps10,
       title: "Disaster Recovery Solutions",
       desc: "Protect essential hardware and software programs from shutdowns or sudden destructions with recovery programs that are strong and reliable.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps11,
       title: "Performance Monitoring & Optimization",
       desc: "Keep on tracking the health of the application, finding the places where the flow of performance is slowed down, and making the software work at its best to give users great experiences.",
     },
     {
-      image: assets.bg1,
+      image: assets.devOps12,
       title: "Custom Cloud Solutions",
       desc: "Design cloud plans and cloud architectures that are the right fit for your business requirements and growth goals.",
     },
@@ -482,7 +388,7 @@ const DevOpsSolutions = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner5 />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -527,7 +433,7 @@ const DevOpsSolutions = () => {
             `DevOps refers to the implementation of specific practices that integrate software development (Dev) and IT operations (Ops) with the aim of reducing the software development lifecycle while maintaining the quality of the software. The main characteristics of DevOps are the use of automation, teamwork, continuous integration, and continuous deployment, these being some of the requirements for achieving a fast and reliable software release.`,
             `Capyngen’s DevOps consultant working with DevOps companies guides companies to implement DevOps strategies in an efficient and effective way, thereby gaining better productivity and fostering positive change.`,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.devOps2}
           isHidden={true}
           background={assets.patternBg1}
           imageHeight="aspect-[1/1]"
@@ -588,7 +494,7 @@ const DevOpsSolutions = () => {
               </p>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.devOps3}
           isHidden={true}
           background={assets.patternBg1}
         />

@@ -129,32 +129,32 @@ const EnergyResourcesUtilities = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.energyResources7,
       title: "Smart Grid Software",
       desc: "Implement predictive analytics, load balancing, and real-time monitoring to manage energy distribution in an effective manner.",
     },
     {
-      image: assets.bg1,
+      image: assets.energyResources8,
       title: "Utility Billing Software",
       desc: "Facilitate the processes of invoicing, payment collection, and billing through the use of software for electricity, water, and gas utilities.",
     },
     {
-      image: assets.bg1,
+      image: assets.energyResources9,
       title: "Renewable Energy Software",
       desc: "Make efficient solar, wind, and hydro energy generation, storage, and distribution.",
     },
     {
-      image: assets.bg1,
+      image: assets.energyResources10,
       title: "Oil & Gas ERP Solutions",
       desc: "Develop easy methods for exploration, production, supply chain, and reporting operations.",
     },
     {
-      image: assets.bg1,
+      image: assets.energyResources11,
       title: "Energy Analytics Software",
       desc: "Make good use of utilities and power plants through advanced analytics, real-time dashboards, and performance reporting.",
     },
     {
-      image: assets.bg1,
+      image: assets.energyResources12,
       title: "Smart Meter Data Management",
       desc: "Measure consumption in the most accurate way, organize smart meters, and communicate usage trends well.",
     },
@@ -264,37 +264,37 @@ const EnergyResourcesUtilities = () => {
     {
       title: "Power and Utilities Companies",
       desc: "",
-      image: assets.eCommerceSolution,
+      image: assets.energyResources15,
       textColor: "text-white",
     },
     {
-      title: "Oil and Gas Enterprises.",
+      title: "Oil and Gas Enterprises",
       desc: "",
-      image: assets.websiteDesign,
+      image: assets.energyResources14,
       textColor: "text-white",
     },
     {
-      title: "Producers of Renewable Energy.",
+      title: "Producers of Renewable Energy",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.energyResources13,
       textColor: "text-white",
     },
     {
-      title: "Smart Grid Networks.",
+      title: "Smart Grid Networks",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.energyResources17,
       textColor: "text-white",
     },
     {
-      title: "Energy Analytics and IoT Integration Providers.",
-      desc: "",
-      image: assets.customAiSolution,
-      textColor: "text-white",
-    },
-    {
-      title: "Utility Management Enterprises.",
+      title: "Energy Analytics and IoT Integration Providers",
       desc: "",
       image: assets.customAiSolution,
+      textColor: "text-white",
+    },
+    {
+      title: "Utility Management Enterprises",
+      desc: "",
+      image: assets.energyResources16,
       textColor: "text-white",
     },
   ];
@@ -358,7 +358,7 @@ const EnergyResourcesUtilities = () => {
             </ul>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.energyResources6}
         isHidden={true}
         background={assets.patternBg1}
       />

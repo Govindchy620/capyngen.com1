@@ -151,32 +151,32 @@ const CrmManagementSoftware = () => {
   ];
   const cardsSectionImageData2 = [
     {
-      image: assets.bg1,
+      image: assets.crm4,
       title: "Development of CRM Software tailored to your needs",
       desc: "Solutions of customer relationship management that are ideally suited for your specific business processes and goals.",
     },
     {
-      image: assets.bg1,
+      image: assets.crm5,
       title: "CRM Integration Services",
       desc: "Use a connector to link your CRM to other enterprise software, such as ERP, marketing, and sales tools.",
     },
     {
-      image: assets.bg1,
+      image: assets.crm6,
       title: "CRM Migration & Upgrade Solutions",
       desc: "Systematic transition from old to new, scalable CRM platforms without any complications.",
     },
     {
-      image: assets.bg1,
+      image: assets.crm7,
       title: "CRM Consulting & Strategy",
       desc: "Expert guidance in selecting, installing, and making efficient use of the suitable CRM product.",
     },
     {
-      image: assets.bg1,
+      image: assets.crm8,
       title: "CRM Support & Maintenance",
       desc: "The continued effort to solve the problem of the smoothness of the system and its updates.",
     },
     {
-      image: assets.bg1,
+      image: assets.crm9,
       title: "Mobile CRM Solutions",
       desc: "Feel free to access CRM tools via handy and user-friendly mobile applications while on the go.",
     },
@@ -223,42 +223,42 @@ const CrmManagementSoftware = () => {
       title: "Define Your Business Goals and Needs",
       description:
         "Prior to defining the specific needs you have, you should simply figure out what goals in sales, marketing, and customer support you want to achieve.",
-      image: assets.customAiSolution,
+      image: assets.crm10,
       cardBg: "bg-blue-100",
     },
     {
       title: "Put a List of Necessary Features",
       description:
         "Set a priority for features like analytics, automation, reporting, and integration.",
-      image: assets.appDevelopment,
+      image: assets.crm11,
       cardBg: "bg-green-100",
     },
     {
       title: "Consider the Industry-Specific Requirements",
       description:
         "Try a CRM for your business and narrowly focus on the best results that you could have in the business area.",
-      image: assets.customAiSolution,
+      image: assets.crm12,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Evaluate Ease of Use and User Experience",
       description:
         "Check if the platform is user-friendly and it is easy for your team to get familiar with it.",
-      image: assets.careersAbout1,
+      image: assets.crm13,
       cardBg: "bg-pink-100",
     },
     {
       title: "Confirm Integration Capabilities with Existing Tools",
       description:
         "Ensure that the software is compatible with all the other software you use such as ERP, email marketing, and project management tools.",
-      image: assets.careersAbout1,
+      image: assets.crm14,
       cardBg: "bg-purple-100",
     },
     {
       title: "Check if the Software Vendor Is Trusted",
       description:
         "Are there positive reviews written by their customers? Make sure the vendor has a proven track record of reliability and support.",
-      image: assets.appDevelopment,
+      image: assets.crm15,
       cardBg: "bg-red-100",
     },
   ];
@@ -267,7 +267,7 @@ const CrmManagementSoftware = () => {
   return (
     <div className="relative">
       <Banner14
-        imageSrc={assets.blockchainDevelopment}
+        imageSrc={assets.crm1}
         imageAlt="Blockchain development illustration"
         title="Powerful "
         highlighted="CRM Management Solutions"
@@ -279,7 +279,7 @@ const CrmManagementSoftware = () => {
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <GetStarted
-          reverse={true}
+          reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
           title="What Capyngen Does Uniquely"
@@ -288,7 +288,7 @@ const CrmManagementSoftware = () => {
           ]}
           textSize="text-2xl"
           buttonText="Get in Touch"
-          image={assets.getStarted}
+          image={assets.crm2}
         />
         <GetStarted
           reverse={false}
@@ -308,7 +308,7 @@ const CrmManagementSoftware = () => {
             `CRM Management Solutions products are computer programs developed to facilitate customer relationship processes in companies, sales tracking, and making a business work on its own. These systems collect data on a customer's buying trends, enable the exchange of data between the various departments and, most importantly, assist in business process management solutions that boost productivity through organization and time-saving.`,
             `Capyngen bespoke cloud CRM solutions and CRM software development have the power to simplify business operations, win better customer relations and increase the business of your company.`,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.crm3}
           isHidden={true}
           imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
@@ -377,7 +377,7 @@ const CrmManagementSoftware = () => {
               </li>
             </>,
           ]}
-          image={assets.appDevelopment}
+          image={assets.crm16}
         />
         <GetStarted
           reverse={false}

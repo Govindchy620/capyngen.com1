@@ -122,32 +122,32 @@ const ECommerceSolution = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.eCommSol12,
       title: "Search Engine Optimization (SEO)",
       desc: "Make your website be ranked at the top of Google.",
     },
     {
-      image: assets.bg1,
+      image: assets.eCommSol13,
       title: "Social Media Integration",
       desc: "Get more customers and advertising your products directly on Instagram, Facebook, and LinkedIn.",
     },
     {
-      image: assets.bg1,
+      image: assets.eCommSol14,
       title: "Email & SMS Campaigns",
       desc: "Revive relationships with customers and stimulate repeat purchases.",
     },
     {
-      image: assets.bg1,
+      image: assets.eCommSol15,
       title: "Content Marketing",
       desc: "Gain the trust of visitors and attract the traffic with helpful content.",
     },
     {
-      image: assets.bg1,
+      image: assets.eCommSol16,
       title: "Paid Advertising (PPC)",
       desc: "Get targeted traffic to your online shop right away.",
     },
     {
-      image: assets.bg1,
+      image: assets.eCommSol17,
       title: "Analytics & Conversion Tracking",
       desc: "Evaluate the results and evolve effectively.",
     },
@@ -157,7 +157,7 @@ const ECommerceSolution = () => {
       title: "Enhanced User Engagement & Retention",
       description:
         "Start building user-centered and interactive offerings which attract users to come back thus increasing loyalty and long-term engagement. User-engagement platforms keep users discovering more about your platform and coming back regularly.",
-      image: assets.customAiSolution,
+      image: assets.eCommSol3,
       cardBg: "bg-blue-100",
     },
 
@@ -165,57 +165,56 @@ const ECommerceSolution = () => {
       title: "Improved Conversion Rates",
       description:
         "Selecting layouts and workflows that engage visitors is the main factor in motivating visitors to take the desired action, thus increasing sales, sign-ups, and leads. Strategically placed call-to-actions and persuasive design elements take conversions a step further.",
-      image: assets.appDevelopment,
+      image: assets.eCommSol4,
       cardBg: "bg-green-100",
     },
     {
       title: "Intuitive, Responsive, and Accessible Design",
       description:
         "Make sure that the user experience is equally good on all devices, including those for users with disabilities. Accessibility-focused design widens your audience base and strengthens your brand image.",
-      image: assets.customAiSolution,
+      image: assets.eCommSol5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Faster Load Times & Optimized Performance",
       description:
         "Fast-loading pages, easy navigation, and efficient apps decrease visits that leave immediately. Optimized performance improves user delight and promotes longer sessions.",
-      image: assets.careersAbout1,
+      image: assets.eCommSol6,
       cardBg: "bg-pink-100",
     },
     {
       title: "Scalable Architecture for Growth",
       description:
         "Develop changes that would be able to absorb more traffic, new features, and bigger geographic features without losing quality. Scalable systems give room for businesses to grow with stability and without needing to redesign the platform.",
-      image: assets.careersAbout1,
+      image: assets.eCommSol7,
       cardBg: "bg-purple-100",
     },
     {
       title: "Strong Branding & Visual Identity",
       description:
         "Appealing, regular, designs bring across the company’s ideals to its customers in a clear and somewhat memorable manner. One visual identity at the core of recognition and trust with users.",
-      image: assets.appDevelopment,
+      image: assets.eCommSol8,
       cardBg: "bg-red-100",
     },
     {
       title: "Seamless Integration with Tools & Services",
       description:
         "Connect CRMs, payment gateways, analytics, or any other third-party services to form a complete ecosystem. Integration guarantees operational efficiency as well as a better user experience.",
-      image: assets.customAiSolution,
+      image: assets.eCommSol9,
       cardBg: "bg-blue-100",
     },
-
     {
       title: "Data-Driven Decision Making",
       description:
         "With the help of analytics and understanding of user behavior, you can improve UI/UX, marketing strategies, and product offerings. Optimization on a daily basis engages users further, their loyalty increases, which in turn leads to a higher overall ROI.",
-      image: assets.appDevelopment,
+      image: assets.eCommSol10,
       cardBg: "bg-green-100",
     },
     {
       title: "Security & Privacy Compliance",
       description:
         "Employ all the security measures that are in line with the industry provisions and the best cybersecurity practices to secure users' data. Adhering to compliance and gaining users' trust will make your platform reliable as well as safe for all users.",
-      image: assets.customAiSolution,
+      image: assets.eCommSol11,
       cardBg: "bg-yellow-100",
     },
   ];
@@ -509,7 +508,7 @@ const ECommerceSolution = () => {
           description="Use the efficient and intuitive e-commerce solution provided by Capyngen to construct, expand and prosper your online store keeping in mind the contemporary business trends."
           primaryBtnText="Start your Store Today"
           primaryBtnLink="#"
-          image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+          image={assets.eCommSol1}
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -582,7 +581,7 @@ const ECommerceSolution = () => {
               </p>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.eCommSol2}
           isHidden={true}
           background={assets.patternBg1}
         />
@@ -644,7 +643,7 @@ const ECommerceSolution = () => {
           desc="User-Friendly Experience for Customers – Rapid, intuitive, and simple-to-use stores that increase interaction with users."
           benefits={solutionsData}
           footerNote=""
-          image={assets.applicationSolution}
+          image={assets.eCommSol18}
         />
         <TechStack
           heading="Technologies Capyngen Uses for Ecommerce Mobile Apps"

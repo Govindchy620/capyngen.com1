@@ -389,7 +389,7 @@ const WebDevelopment = () => {
       title: "Custom Website Development",
       description:
         "Naturally your site would have been built around you without a doubt. We will thus help you project your business objectives and dreams by creating a spectacular.",
-      image: assets.customAiSolution,
+      image: assets.webDev2,
       cardBg: "bg-blue-100",
     },
 
@@ -397,42 +397,42 @@ const WebDevelopment = () => {
       title: "Responsive & Mobile-Friendly Design",
       description:
         "The company Capyngen is wonderful in delivering an experience that is the same as great as the one on a desktop or a mobile device.",
-      image: assets.appDevelopment,
+      image: assets.webDev3,
       cardBg: "bg-green-100",
     },
     {
       title: "E-commerce Development",
       description:
         "The easiest shopping browsers are the ones you create just like the walkthrough which customers love to use to explore your products and installations running CSE fuels to grow sales.",
-      image: assets.customAiSolution,
+      image: assets.webDev4,
       cardBg: "bg-yellow-100",
     },
     {
       title: "CMS Development",
       description:
         "WordPress, Drupal, Joomla, and other platforms are the content management systems developers use to create user-friendly and effective website management solutions.",
-      image: assets.careersAbout1,
+      image: assets.webDev5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Web Application Development",
       description:
         "As a premier Indian web application development company, we provide the creation of interactive and escalable conversation projects.",
-      image: assets.careersAbout1,
+      image: assets.webDev6,
       cardBg: "bg-purple-100",
     },
     {
       title: "Progressive Web Apps (PWA)",
       description:
         "Offer the websites that even without having the internet connection are as fast in performance as the native mobile apps are.",
-      image: assets.appDevelopment,
+      image: assets.webDev7,
       cardBg: "bg-red-100",
     },
     {
       title: "API Integration Services",
       description:
         "API integrations are ways which make not only the website CRMs but also externals i.e. payment gateways plus other software working together with your business to run at peak level.",
-      image: assets.customAiSolution,
+      image: assets.webDev8,
       cardBg: "bg-blue-100",
     },
 
@@ -440,56 +440,56 @@ const WebDevelopment = () => {
       title: "Website Maintenance & Support",
       description:
         "Support and maintenance services of Capyngen will not only make your site be safe but also will keep it up to date with the fastest Kit with exclusive warranties, upgrades faster than those experienced in regular services.",
-      image: assets.appDevelopment,
+      image: assets.webDev9,
       cardBg: "bg-green-100",
     },
     {
       title: "Performance Optimization",
       description:
         "Remove all your unnecessary disk images, JavaScript, and caching will serve to make your website load at lightning speed and thus to provide excellent user experience.",
-      image: assets.customAiSolution,
+      image: assets.webDev10,
       cardBg: "bg-yellow-100",
     },
     {
       title: "SEO-Friendly Development",
       description:
         "Create websites that on the SEO-friendly development are starting and completing the sequence by following the best practice that is Google will put it on a higher position of its organic match results and thus will be able to draw more visitors.",
-      image: assets.careersAbout1,
+      image: assets.webDev11,
       cardBg: "bg-pink-100",
     },
     {
       title: "UI/UX Design Services",
       description:
         "Making stunning ease of use and confidence building applications will raise user engagement and leave a long-lasting memory.",
-      image: assets.careersAbout1,
+      image: assets.webDev12,
       cardBg: "bg-purple-100",
     },
     {
       title: "Multilingual & Internationalization Support",
       description:
         "Websites in multi-languages let companies put out their messages close to the world and still have someone there to receive them in the right language.",
-      image: assets.appDevelopment,
+      image: assets.webDev13,
       cardBg: "bg-red-100",
     },
     {
       title: "Cloud-Based Web Solutions",
       description:
         "Using secure and scalable cloud platforms allow for better performance, reliability, and flexibility.",
-      image: assets.careersAbout1,
+      image: assets.webDev14,
       cardBg: "bg-pink-100",
     },
     {
       title: "Landing Page Development",
       description:
         "Develop the promotion’s high-conversion landing pages that start gathering leads, demand, and efficiently generate sales.",
-      image: assets.careersAbout1,
+      image: assets.webDev15,
       cardBg: "bg-purple-100",
     },
     {
       title: "Integration with Analytics & Marketing Tools",
       description:
         "Monitoring your site’s performance through the implementation of various tools such as Google Analytics, Hotjar, alongside CRM integrations which make strategizing a whole lot easier.",
-      image: assets.appDevelopment,
+      image: assets.webDev16,
       cardBg: "bg-red-100",
     },
   ];
@@ -497,37 +497,37 @@ const WebDevelopment = () => {
     {
       title: "Startups & Small Businesses",
       desc: "We offer affordable website development services for small businesses.",
-      image: assets.eCommerceSolution,
+      image: assets.webDev17,
       textColor: "text-white",
     },
     {
       title: "E-commerce & Retail",
       desc: "We provide complete ecommerce website development services to help you increase your sales.",
-      image: assets.websiteDesign,
+      image: assets.webDev18,
       textColor: "text-white",
     },
     {
       title: "Healthcare & Education",
       desc: "User-friendly and reliable websites for healthcare and education institutions.",
-      image: assets.customAiSolution,
+      image: assets.webDev19,
       textColor: "text-white",
     },
     {
       title: "Real Estate & Travel",
       desc: "Visually attractive and user-friendly websites.",
-      image: assets.customAiSolution,
+      image: assets.webDev20,
       textColor: "text-white",
     },
     {
       title: "Corporate Enterprises",
       desc: "Custom website designs that are scalable for large organizations.",
-      image: assets.customAiSolution,
+      image: assets.webDev21,
       textColor: "text-white",
     },
     {
       title: "Trading Sites",
       desc: " Easy to use, fast, and dependable platforms for trading businesses.",
-      image: assets.customAiSolution,
+      image: assets.webDev22,
       textColor: "text-white",
     },
   ];
@@ -552,7 +552,7 @@ const WebDevelopment = () => {
               <span className="text-green-400">Strategy</span>
             </p>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.webDev1}
           isHidden={true}
           background={assets.patternBg1}
         />
@@ -645,7 +645,7 @@ const WebDevelopment = () => {
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />
-        <ScrollRevealEffect />
+        {/* <ScrollRevealEffect /> */}
       </div>
     </div>
   );

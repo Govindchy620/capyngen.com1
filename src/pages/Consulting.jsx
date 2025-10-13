@@ -274,7 +274,7 @@ const Consulting = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner10
           title="Expert IT Consulting "
           highlight="That Helps Your Business Growth"

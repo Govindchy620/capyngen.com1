@@ -369,32 +369,32 @@ const AppDevelopment = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.appDev3,
       title: "Experience with different platforms",
       desc: "Android, iPhone, and cross-platform solutions.",
     },
     {
-      image: assets.bg1,
+      image: assets.appDev4,
       title: "A team of professional app developers",
       desc: "An experienced team that can provide you with the dependable and scalable apps you need.",
     },
     {
-      image: assets.bg1,
+      image: assets.appDev5,
       title: "Custom and enterprise solutions",
       desc: "The applications that match your company objectives.",
     },
     {
-      image: assets.bg1,
+      image: assets.appDev6,
       title: "Testing of Mobile Applications",
       desc: "Ensure perfect functionality, safety, and quickness.",
     },
     {
-      image: assets.bg1,
+      image: assets.appDev7,
       title: "Service of App Maintenance",
       desc: "Periodic update, feature improvement, and continuous support.",
     },
     {
-      image: assets.bg1,
+      image: assets.appDev8,
       title: "Affordable and Return On Investment (ROI) focussed",
       desc: "Make the biggest influence without exceeding your budget.",
     },
@@ -433,7 +433,7 @@ const AppDevelopment = () => {
           `By employing the services of our team of professional app developers, you get excellent mobile app development services that lead to better user experience, higher engagement, and greater return on investment.`,
         ]}
         imageHeight="md:aspect-[1/1]"
-        image={assets.whyChooseUs}
+        image={assets.appDev2}
         isHidden={true}
         background={assets.patternBg1}
       />

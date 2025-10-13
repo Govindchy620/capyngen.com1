@@ -42,7 +42,7 @@ const IndustryServices = ({
           >
             {/* Image */}
             {service.image && (
-              <div className="w-full h-48 overflow-hidden p-5">
+              <div className="w-full overflow-hidden p-5">
                 <img
                   src={service.image}
                   alt={service.title}

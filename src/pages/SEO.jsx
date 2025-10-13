@@ -175,7 +175,7 @@ const SEO = () => {
       title: "SEO Audit & Strategy",
       description:
         "Thorough audits & tailored search engine optimization strategies that unearth the potential for expansion.",
-      image: assets.customAiSolution,
+      image: assets.seo1,
       cardBg: "bg-blue-100",
     },
 
@@ -183,35 +183,35 @@ const SEO = () => {
       title: "On-Page SEO",
       description:
         "Along with keyword optimization, meta tags, structured data & internal linking is done for improved search visibility.",
-      image: assets.appDevelopment,
+      image: assets.seo2,
       cardBg: "bg-green-100",
     },
     {
       title: "Off-Page SEO & Link Building",
       description:
         "Safety backlink purchase options that provide power and ranking are the features of services offered by us.",
-      image: assets.customAiSolution,
+      image: assets.seo3,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Technical SEO",
       description:
         "Combined efforts of site speed, crawlability, mobile-friendliness, and indexation bring the technical upgrades to your website.",
-      image: assets.careersAbout1,
+      image: assets.seo4,
       cardBg: "bg-pink-100",
     },
     {
       title: "Local SEO",
       description:
         "City/region-specific optimization solutions are available for you as the SEO service provider in India.",
-      image: assets.careersAbout1,
+      image: assets.seo5,
       cardBg: "bg-purple-100",
     },
     {
       title: "Content Strategy & Creation",
       description:
         "Blogs, articles, landing pages focusing on the best search engine optimization services for businesses.",
-      image: assets.appDevelopment,
+      image: assets.seo6,
       cardBg: "bg-red-100",
     },
   ];
@@ -233,7 +233,7 @@ const SEO = () => {
           description="Capyngen is the best SEO company in India delivering cost-effective SEO solutions for startups, small businesses, and enterprises. Be the owner of the steady online success of yours with our skillful SEO services; get the visibility, traffic, and ROI that you desire."
           primaryBtnText="Improve Your Website Rankings"
           primaryBtnLink="#"
-          image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+          image={assets.seoHero}
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -319,7 +319,7 @@ const SEO = () => {
               </ul>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.seo7}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
         />{" "}

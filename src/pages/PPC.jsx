@@ -186,21 +186,21 @@ const PPC = () => {
     {
       title: "SEO",
       description: "A slow process that fosters credibility.",
-      image: assets.customAiSolution,
+      image: assets.ppc6,
       cardBg: "bg-blue-100",
     },
     {
       title: "Social Media Marketing",
       description:
         "Good brand visibility; however, it may not always bring immediate revenue.",
-      image: assets.careersAbout1,
+      image: assets.ppc7,
       cardBg: "bg-pink-100",
     },
     {
       title: "PPC Marketing",
       description:
         "Makes real-time customer contacts and provides accountable ROI.",
-      image: assets.careersAbout1,
+      image: assets.ppc8,
       cardBg: "bg-pink-100",
     },
   ];
@@ -208,14 +208,14 @@ const PPC = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner8
           titleMain="Pay-Per-Click Advertising Services"
           titlePrefix=""
           titleSuffix="That Drive Instant Results"
           description={
             <>
-              <p className="text-lg">
+              <p className="text-sm md:text-lg">
                 The need for quick and top-notch leads is the main focus of any
                 business to grow in the digital market of today. Though SEO and
                 content marketing are effective in the long run, businesses
@@ -223,7 +223,7 @@ const PPC = () => {
                 to track their return on investment. It is just the case where
                 Pay-Per-Click (PPC) advertising would act as a solution.
               </p>
-              <p className="text-lg">
+              <p className="text-sm md:text-lg">
                 Being the top PPC agency, we are the experts in doing PPC ad
                 campaigns that perform well and bring in the right set of
                 visitors, lead to the generation of leads and the creation of
@@ -234,7 +234,7 @@ const PPC = () => {
               </p>
             </>
           }
-          imageSrc={assets.eCommerceDesign}
+          imageSrc={assets.ppc1}
           imageAlt="Ecommerce Design Illustration"
           bgColor="bg-gray-900"
           iconColor="bg-blue-700"
@@ -305,7 +305,7 @@ const PPC = () => {
               </p>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.ppc2}
           background={assets.patternBg1}
           isHidden="hidden"
         />
@@ -374,7 +374,7 @@ const PPC = () => {
               </p>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.ppc3}
           background={assets.patternBg1}
           isHidden="hidden"
         />
@@ -382,7 +382,7 @@ const PPC = () => {
           heading="Our Pay-Per-Click Advertising Services"
           desc="As a PPC company that is results-focused, we provide paid advertising services from start to finish that are specifically designed to meet the goals of your business."
           benefits={solutionsData}
-          image={assets.blockchainBanner1}
+          image={assets.ppc4}
           footerNote=""
         />
         <GetStarted
@@ -438,7 +438,7 @@ const PPC = () => {
               </p>
             </>,
           ]}
-          image={assets.getStarted}
+          image={assets.ppc5}
         />
         <WhyChoose
           heading="Why Choose  Us"

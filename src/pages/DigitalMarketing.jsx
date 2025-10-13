@@ -408,7 +408,7 @@ const DigitalMarketing = () => {
               </p>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.digitalMarketing1}
           isHidden={true}
           background={assets.patternBg1}
         />
@@ -428,7 +428,7 @@ const DigitalMarketing = () => {
           heading="Our Digital Marketing Services"
           desc="We are delighted to offer digital solutions that are ideally comprehensive for achieving myriad business objectives online."
           benefits={solutionsData}
-          image={assets.blockchainDevelopment}
+          image={assets.digitalMarketing2}
           footerNote=""
         />
         <GetStarted
@@ -469,13 +469,13 @@ const DigitalMarketing = () => {
               </ul>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.digitalMarketing3}
           imageHeight="aspect-[1/1]"
           isHidden={true}
           background={assets.patternBg1}
         />
         <GetStarted
-          reverse={true}
+          reverse={false}
           backgroundColor="bg-black"
           textColor="text-white"
           title="Enhance Your Web Presence Now"
@@ -485,7 +485,7 @@ const DigitalMarketing = () => {
             "If you want to be ahead of the competition, my digital marketing services can be the tool to take your business up to the next level efficiently and effectively in today’s cutthroat market.",
           ]}
           buttonText="Contact Us"
-          image={assets.digitalMarketing}
+          image={assets.digitalMarketing4}
         />
         <GetStarted
           reverse={false}

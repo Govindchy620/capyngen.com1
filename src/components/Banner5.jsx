@@ -1,4 +1,5 @@
 import React from "react";
+import { assets } from "../assets/assets";
 
 const Banner5 = ({
   title = "DevOps Solutions",
@@ -19,7 +20,7 @@ const Banner5 = ({
   ),
   primaryBtnText = "Start using the Capyngen DevOps Solutions",
   primaryBtnLink = "#",
-  image = "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png",
+  image = assets.devOps1,
 }) => {
   return (
     <section className="bg-gray-900 pt-20" aria-label="DevOps Solutions Banner">
@@ -68,10 +69,9 @@ const Banner5 = ({
             <img
               src={image}
               alt="DevOps solutions mockup"
-              className="max-w-full h-auto rounded-md"
+              className="max-w-full h-auto rounded-md object-cover"
               loading="lazy"
               decoding="async"
-              style={{ maxWidth: "350px" }}
             />
           </div>
         )}

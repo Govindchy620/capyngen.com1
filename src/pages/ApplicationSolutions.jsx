@@ -107,62 +107,62 @@ const ApplicationSolutions = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.applicationSolution4,
       title: "Web Application Development",
       desc: "We create slick, secure, and purpose-built web applications that are tailored to meet your business goals. We work as a digital marketing agency to help organizations rank better on the search engine pages, increase their user base, and thus, enhance their business.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution5,
       title: "Mobile Application Development",
       desc: "We build top-performing native and cross-mobile apps for iOS and Android. Every app is designed to work without any issues, with contemporary styling, and also with great user engagement.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution6,
       title: "Enterprise Application Solutions",
       desc: "We provide stable and extensible business suites to smooth communication in bureaucratic giant business enterprises. These computer-based co-operative enhancements increase productivity, employee interaction, and are an excellent discipline for long-term development.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution7,
       title: "Cloud-Native Applications",
       desc: "Our cloud-native apps offer freedom of feature usage, simple updates, and quick overall performance. Given that they are based on top cloud platforms, they enable companies to grow quickly and efficiently.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution8,
       title: "Custom Software Solutions",
       desc: "We compose software precisely for your specifically intricate corporate products and services. If you think about that as an innovation, security, and foresight company at the same time, our custom software guarantees customer loyalty for a long time.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution9,
       title: "E-Commerce Applications",
       desc: "We develop fully functional, engaging digital shops and bazaars that generate growth and quick turnover. In every step of the way of the user's journey, the main aim is the smooth functioning of the checkout process.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution10,
       title: "SaaS (Software as a Service) Applications",
       desc: "We produce SaaS applications that are easily scalable and secure with subscription models that are user-friendly and very flexible. The cloud-based products are not only easy to handle but also budget-friendly and best suited for fast development.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution12,
       title: "Cross-Platform Application Development",
       desc: "We create software that one can install on any device, whether it is a smartphone, tablet, laptop, or desktop computer, allowing the user to experience the same user flow and functionality. In this way, the user will have the same experience independently from the platform, and there is not even a need to develop an additional app.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution13,
       title: "API Development & Integration",
       desc: "Good API developers present a true connector for your chosen software and potential associated applications so that data is shared easily, faster communication networks are created, and business operations are improved. This partly allows you to access your data in a much easier way and also exchange information among various other different company operations.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution14,
       title: "Legacy Application Modernization",
       desc: "We integrate new technology to legacy software so as to upgrade the software to deliver in terms of speed, safety, and user-friendliness. Consequently, this will quite possibly maintain and solve the issue of usability/harmonizing with today’s standards thought to be based on developments in the tech.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution15,
       title: "CRM & ERP Application Solutions",
       desc: "We develop CRM and ERP software systems that consist of integrated business logic and data related to customer interactions. These tools empower strategy formulation by refining the decision-making process, enhancing operational efficiency, and adapting to the trend of building stronger client-company connections.",
     },
     {
-      image: assets.bg1,
+      image: assets.applicationSolution16,
       title: "AI-Powered Applications",
       desc: "We create artificially intelligent application solutions that embrace the usage of AI (Artificial Intelligence) and ML (Machine Learning). Such software helps companies to save time, give predictive analysis, and also that way be abreast with the competition.",
     },
@@ -207,7 +207,7 @@ const ApplicationSolutions = () => {
   ];
   const slidesData = [
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.applicationSolution1,
       heading: "Custom Application Solutions to Power Your Business Growth",
       description: (
         <>
@@ -229,7 +229,7 @@ const ApplicationSolutions = () => {
       price: "",
     },
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.applicationSolution2,
       heading: "Transform Your Business with Custom Applications",
       description: (
         <>
@@ -243,7 +243,7 @@ const ApplicationSolutions = () => {
       price: "",
     },
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.applicationSolution3,
       heading: "Top-Rated Application Solutions Company",
       description: (
         <>
@@ -389,7 +389,7 @@ const ApplicationSolutions = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <CreativeAgencyFAQ
           slides={slidesData}
           slideDuration={4000}
@@ -475,7 +475,7 @@ const ApplicationSolutions = () => {
               </p>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.applicationSolution17}
           isHidden={true}
           background={assets.patternBg1}
         />
@@ -484,7 +484,7 @@ const ApplicationSolutions = () => {
           desc="We adhere to a transparent and well-organized process from start to finish to guarantee that every application meets the highest standards:"
           steps={steps}
         />
-        <CardsSectionImage
+        {/* <CardsSectionImage
           heading="Application Solutions Services We Offer"
           subheading="Capyngen delivers application development services from start to finish which are the solutions that enable the businesses to widen their horizons and take the next step further:"
           services={cardsSectionImageData1}
@@ -493,7 +493,7 @@ const ApplicationSolutions = () => {
           cardBg=""
           textSize="text-md"
           hoverBg="hover:bg-gray-200"
-        />
+        /> */}
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"

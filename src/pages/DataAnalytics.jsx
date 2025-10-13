@@ -141,31 +141,31 @@ const DataAnalytics = () => {
     {
       title: "Retail & E-Commerce",
       desc: "The industries that might get the best benefits from data science technologies are customer behavior analytics, demand forecasting, and enterprise analytics for retail operations.",
-      image: assets.eCommerceSolution,
+      image: assets.eComm,
       textColor: "text-white",
     },
     {
       title: "Healthcare",
       desc: "Patient outcome prediction, operational efficiency, healthcare compliance through data analytics are the areas where machine learning can be applied.",
-      image: assets.websiteDesign,
+      image: assets.healthcare,
       textColor: "text-white",
     },
     {
       title: "Finance & Banking",
       desc: "Financial risk control, fraud detection, and investment advisory.",
-      image: assets.customAiSolution,
+      image: assets.banking,
       textColor: "text-white",
     },
     {
       title: "Education",
       desc: "Analysis of student engagement and academic output, enrollment monitoring, etc.",
-      image: assets.customAiSolution,
+      image: assets.education,
       textColor: "text-white",
     },
     {
       title: "Manufacturing",
       desc: "Complete supply chain visibility, production process streamlining, predictive maintenance.",
-      image: assets.customAiSolution,
+      image: assets.manufacturing,
       textColor: "text-white",
     },
   ];
@@ -194,7 +194,7 @@ const DataAnalytics = () => {
       title: "Top Data Analytics Firm of India",
       description:
         "The track record of the delivery of transformative solutions that have a positive impact on the ROI of enterprises worldwide is easily recognizable.",
-      image: assets.customAiSolution,
+      image: assets.dataAndAnalytics2,
       cardBg: "bg-blue-100",
     },
 
@@ -202,35 +202,35 @@ const DataAnalytics = () => {
       title: "State-of-the-art Technology",
       description:
         "The company uses the very latest technology including AI-driven analytics, machine learning, and automation of insights to achieve the target.",
-      image: assets.appDevelopment,
+      image: assets.dataAndAnalytics3,
       cardBg: "bg-green-100",
     },
     {
       title: "Personalized Solutions",
       description:
         "Just the right fit of data analytics services have been created specifically for your industry, business model, and goals.",
-      image: assets.customAiSolution,
+      image: assets.dataAndAnalytics4,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Cloud Mastery",
       description:
         "The top provider of cloud-based business intelligence and analytics services over all major platforms.",
-      image: assets.careersAbout1,
+      image: assets.dataAndAnalytics5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Domain Knowledge",
       description:
         "Deep Knowledge of Finance, Healthcare, Retail, Manufacturing, and the Technology sectors.",
-      image: assets.careersAbout1,
+      image: assets.dataAndAnalytics6,
       cardBg: "bg-purple-100",
     },
     {
       title: "Assistance Anytime",
       description:
         "Fully committed to consulting, training, and support at any hour of the day or night which therefore guarantees the continuity of success.",
-      image: assets.appDevelopment,
+      image: assets.dataAndAnalytics7,
       cardBg: "bg-red-100",
     },
   ];
@@ -259,7 +259,7 @@ const DataAnalytics = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner5
           title={
             <>
@@ -272,7 +272,7 @@ const DataAnalytics = () => {
           description="Drive your enterprise with Capyngen’s data-driven approaches and analytic services that allow you to discover, automate, and lead the business to the growth that lasts."
           primaryBtnText="Get started"
           primaryBtnLink="#"
-          image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+          image={assets.dataAndAnalytics}
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -293,7 +293,7 @@ const DataAnalytics = () => {
           description={[
             `We are in a market where data is king, and the digital economy era is the one we live in. Capyngen is the player that makes data do work for you by simplifying it and reporting the results in a way that decision-makers find easy to follow. As a data analytics company, we are the ones that take care of all the data-related needs from strategizing to implementing advanced analytics and visualizing the results. Our cloud data analytics efforts lead to companies uncovering more opportunities earlier than competitors, changing operations to utilize resources more efficiently, and finding trends with high accuracy. The question of how much the business is big or how complicated the BI level is, the answer is always Capyngen.`,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.dataAndAnalytics1}
           isHidden={true}
           imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
