@@ -21,7 +21,7 @@ const servicesData = [
     title: "Banking",
     icon: "ShieldCheck",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Banking",
+      image: assets.homepageBanking,
       description:
         "Empowering financial institutions with scalable, secure, and cutting-edge digital solutions.",
       features: [
@@ -36,7 +36,7 @@ const servicesData = [
     title: "Education",
     icon: "BookOpen",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Education",
+      image: assets.homepageEducation,
       description:
         "Revolutionizing learning for schools, colleges, and online platforms with advanced digital solutions.",
       features: [
@@ -52,7 +52,7 @@ const servicesData = [
     title: "Capital Market",
     icon: "TrendingUp",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Capital+Market",
+      image: assets.capitalMarket1,
       description:
         "Driving safer and smarter capital market operations with reliable data-driven IT solutions.",
       features: [
@@ -68,7 +68,7 @@ const servicesData = [
     title: "Life Sciences",
     icon: "FlaskRound",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Life+Sciences",
+      image: assets.homepageLifeScience,
       description:
         "Fostering healthcare, biotech, and pharma innovation with IT-driven solutions.",
       features: [
@@ -84,7 +84,7 @@ const servicesData = [
     title: "Healthcare & Fitness",
     icon: "HeartPulse",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Healthcare",
+      image: assets.homepageHealth,
       description:
         "Delivering tailored digital solutions for patients, providers, and wellness businesses.",
       features: [
@@ -100,7 +100,7 @@ const servicesData = [
     title: "Energy & Utilities",
     icon: "BatteryCharging",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=Energy",
+      image: assets.homepageEnergy,
       description:
         "Improving efficiency and sustainability in the energy and utilities sector.",
       features: [
@@ -116,7 +116,7 @@ const servicesData = [
     title: "More Industries",
     icon: "Globe2",
     card: {
-      image: "/placeholder.svg?height=200&width=300&text=More+Industries",
+      image: assets.homepageIndustries,
       description:
         "Powering diverse sectors with scalable IT, cloud, and digital innovations.",
       features: [

@@ -430,6 +430,13 @@ import realEstate18 from "./realEstate18.png";
 import realEstate19 from "./realEstate19.png";
 import realEstate20 from "./realEstate20.png";
 import realEstate21 from "./realEstate21.jpg";
+import homepageBanking from "./homepageBanking.jpg";
+import homepageEducation from "./homepageEducation.png";
+// import homepageCapitalMarket from "./homepageCapitalMarket.png";
+import homepageLifeScience from "./homepageLifeScience.png";
+import homepageEnergy from "./homepageEnergy.png";
+import homepageHealth from "./homepageHealth.png";
+import homepageIndustries from "./homepageIndustries.png";
 
 export const assets = {
   homeAboutUs1,
@@ -864,6 +871,13 @@ export const assets = {
   realEstate19,
   realEstate20,
   realEstate21,
+  homepageBanking,
+  homepageEducation,
+  // homepageCapitalMarket,
+  homepageLifeScience,
+  homepageEnergy,
+  homepageHealth,
+  homepageIndustries,
 };
 
 export const navItems = [

@@ -534,6 +534,7 @@ const BlockchainDevelopment = () => {
         desc="Capyngen’s blockchain solutions have the potential to impact the business in a real way:"
         benefits={benefitsSection1}
         image={assets.blockchainApplications}
+        footerNote=""
       />
       <HowWeWork
         heading="How Blockchain Development Works"

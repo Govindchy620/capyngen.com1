@@ -1,20 +1,11 @@
 import React from "react";
-import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
 import GetStarted from "../components/GetStarted";
 import {
-  FaLightbulb,
-  FaChartLine,
-  FaCogs,
   FaCode,
   FaWordpressSimple,
   FaShoppingCart,
@@ -29,12 +20,10 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import CardsSection from "../components/CardsSection";
-import WebDevBanner from "../components/WebDevBanner";
-import Banner2 from "../components/Banner2";
-import TechStack from "../components/TechStack";
 import BannerRollingGallery from "../components/BannerRollingGallery";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import TechStack from "../components/TechStack";
 
 const WebDevelopment = () => {
   const faqItems = [
@@ -128,32 +117,24 @@ const WebDevelopment = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
         },
         {
+          name: "Vue.js",
+          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+        },
+        {
           name: "Next.js",
           icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
         },
         {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+          name: "Svelte",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg",
         },
         {
-          name: "Flutter",
+          name: "TypeScript",
+          icon: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+        },
+        {
+          name: "Flutter (Web)",
           icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
-        },
-        {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
         },
       ],
     },
@@ -165,7 +146,7 @@ const WebDevelopment = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
         },
         {
-          name: "Python",
+          name: "Python (Django/Flask)",
           icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
         },
         {
@@ -173,24 +154,20 @@ const WebDevelopment = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
         },
         {
-          name: "Java",
+          name: "Java (Spring)",
           icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
         },
         {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+          name: "PHP (Laravel)",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
         },
         {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
+          name: "Go",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg",
         },
         {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+          name: ".NET",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg",
         },
       ],
     },
@@ -199,7 +176,7 @@ const WebDevelopment = () => {
       items: [
         {
           name: "iOS",
-          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
         },
         {
           name: "Android",
@@ -224,7 +201,7 @@ const WebDevelopment = () => {
         },
         {
           name: "MySQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
         },
         {
           name: "PostgreSQL",
@@ -235,18 +212,22 @@ const WebDevelopment = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
         },
         {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
           name: "Oracle",
           icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
+        },
+        {
+          name: "Redis",
+          icon: "https://cdn.worldvectorlogo.com/logos/redis.svg",
         },
       ],
     },
     {
       title: "UI/UX",
       items: [
+        {
+          name: "Figma",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+        },
         {
           name: "Adobe XD",
           icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
@@ -255,21 +236,10 @@ const WebDevelopment = () => {
           name: "Sketch",
           icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
         },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "InVision",
-          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
-        },
       ],
     },
   ];
+
   const cardsSectionData2 = [
     {
       title: "Expertise in the latest technologies",
@@ -308,6 +278,7 @@ const WebDevelopment = () => {
       icon: <FaHeart className="text-4xl" />,
     },
   ];
+
   const steps = [
     {
       step: "Step 01",
@@ -346,6 +317,7 @@ const WebDevelopment = () => {
         "Periodic updates, backups, and continuous technical support.",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title: "HTML/CSS & JavaScript Development",
@@ -384,6 +356,7 @@ const WebDevelopment = () => {
       icon: <FaCubes className="text-4xl text-white" />,
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "Custom Website Development",
@@ -392,7 +365,6 @@ const WebDevelopment = () => {
       image: assets.webDev2,
       cardBg: "bg-blue-100",
     },
-
     {
       title: "Responsive & Mobile-Friendly Design",
       description:
@@ -435,7 +407,6 @@ const WebDevelopment = () => {
       image: assets.webDev8,
       cardBg: "bg-blue-100",
     },
-
     {
       title: "Website Maintenance & Support",
       description:
@@ -493,6 +464,7 @@ const WebDevelopment = () => {
       cardBg: "bg-red-100",
     },
   ];
+
   const cardsSectionSliderData1 = [
     {
       title: "Startups & Small Businesses",
@@ -533,12 +505,10 @@ const WebDevelopment = () => {
   ];
 
   useSplitTextAnimation("h1");
+
   return (
     <div className="relative">
-      {/* <WebDevBanner backgroundImage={assets.webDevelopment} /> */}
       <BannerRollingGallery autoplay={true} pauseOnHover={true} />
-
-      {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <TopRatedCompany
           title="Why Web Development Matters Today?"
@@ -565,7 +535,6 @@ const WebDevelopment = () => {
           headColor="text-white"
           hoverBg=" hover:bg-gray-700"
           textColor="text-white"
-          hoverTextColor=""
           textSize="text-md"
         />
         <CardsSectionImage
@@ -582,7 +551,6 @@ const WebDevelopment = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          title=""
           description={[
             "Create the online representation of your ideas, that speaks volumes! Reach out to the top web development company in India, Capyngen, for tailored web development solutions by an expert and quality web development services that increase your business and attract the audience.",
           ]}
@@ -599,7 +567,6 @@ const WebDevelopment = () => {
           sectionBg="bg-gray-900"
           hoverBg="hover:bg-blue-800 hover:scale-98"
           textColor="text-white"
-          hoverTextColor=""
         />
         <CardsSectionSlider
           heading="Industries We Serve"
@@ -607,7 +574,6 @@ const WebDevelopment = () => {
           cardBg="bg-transparent"
           hoverBg=" hover:bg-blue-50"
           textColor="text-gray-800"
-          hoverTextColor=""
           textSize="text-xl"
           sectionBg="bg-black/90"
           height="h-78"
@@ -618,7 +584,6 @@ const WebDevelopment = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          title=""
           description={[
             "Have you prepared to be noticed on the Internet? Contact Capyngen in order to receive a website development service that suits your small business which includes e-commerce and a mobile-friendly website that matches your brand.",
           ]}
@@ -636,7 +601,6 @@ const WebDevelopment = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          title=""
           description={[
             "Do you want a website that will help your business grow? So, for custom website services and professional website development, get in touch with Capyngen, the best website development company in India!",
           ]}
@@ -645,7 +609,6 @@ const WebDevelopment = () => {
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
       </div>
     </div>
   );

@@ -7,12 +7,8 @@ import WhyChoose from "../components/WhyChoose";
 import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import Banner2 from "../components/Banner2";
-import Banner6 from "../components/Banner6";
 import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
 import IndustryServices from "../components/IndustryServices";
 import GetStarted from "../components/GetStarted";
@@ -260,92 +256,6 @@ const ApplicationSolutions = () => {
         </>
       ),
       price: "",
-    },
-  ];
-  const cardsSectionImageData1 = [
-    {
-      title: "Web Application Development",
-      description:
-        "Develop custom and attractive web applications that are designed to increase your online visibility and customer engagement. Boost your productivity, scalability, and ensure smooth digital interactions.",
-      image: assets.customAiSolution,
-      cardBg: "bg-blue-100",
-    },
-    {
-      title: "Mobile Application Development",
-      description:
-        "Design speedy and user-friendly mobile applications that help you interact with customers while they are on the move. We are with you every step of the way the project becomes a functional, stylish, and user-friendly app.",
-      image: assets.careersAbout1,
-      cardBg: "bg-pink-100",
-    },
-    {
-      title: "Enterprise Application Solutions",
-      description:
-        "Build dependable software solutions that adjust to intricate business scenarios. Make company processes efficient and boost the use of employees with tools customized for your enterprise and its needs.",
-      image: assets.appDevelopment,
-      cardBg: "bg-green-100",
-    },
-    {
-      title: "Cloud-Native Applications",
-      description:
-        "Exploit the cloud and make your company more efficient and adaptable. Install applications that are scalable, safe, and cheap, and that develop with your.",
-      image: assets.customAiSolution,
-      cardBg: "bg-yellow-100",
-    },
-    {
-      title: "Custom Software Solutions",
-      description:
-        "Enjoy software designed exclusively for your business to solve your particular problems. We are the facelift of a dead concept in software, actually delivering innovative and reliable solutions.",
-      image: assets.careersAbout1,
-      cardBg: "bg-purple-100",
-    },
-    {
-      title: "E-Commerce Applications",
-      description:
-        "Create complete e-commerce sites that attract buyers and foster their loyalty. We build smooth and easy online shopping, from product browsing to checkout processes.",
-      image: assets.appDevelopment,
-      cardBg: "bg-red-100",
-    },
-    {
-      title: "SaaS Applications",
-      description:
-        "Provide SaaS platforms that are scalable and safe and that can be adjusted to your budget. Make subscription-based software accessible, and keep it continuously up and running at high performance.",
-      image: assets.customAiSolution,
-      cardBg: "bg-indigo-100",
-    },
-    {
-      title: "Cross-Platform Development",
-      description:
-        "Get the use of applications to the maximum and enjoy the same high-standard performance on every device. We develop programs that are compatible with iOS, Android, and web-based platforms.",
-      image: assets.careersAbout1,
-      cardBg: "bg-teal-100",
-    },
-    {
-      title: "API Development & Integration",
-      description:
-        "Link several systems without complications by using powerful and secure API integrations. Make interactions among platforms simple and quick so that you can have better workflows.",
-      image: assets.appDevelopment,
-      cardBg: "bg-orange-100",
-    },
-    {
-      title: "Legacy Modernization",
-      description:
-        "Overhaul aging software into modern, effective solutions. Make the software faster, more secure, more user-friendly, and keep all the old stuff in place.",
-      image: assets.customAiSolution,
-      cardBg: "bg-lime-100",
-    },
-    {
-      title: "CRM & ERP Solutions",
-      description:
-        "Transform your day to day work processes with high tech CRM and ERP systems. Empower your company with CRM and ERP technologies that will automate workflows, improve data management, and multiply the productivity of your team.",
-      image: assets.careersAbout1,
-      cardBg: "bg-amber-100",
-    },
-    {
-      title: "AI-Powered Applications",
-      description:
-        "Install intelligent AI-enabled applications that can learn and improve themselves. Support greater decision-making with the help of AI that will simplify processes and enrich customer experience.",
-      image: assets.appDevelopment,
-      cardBg: "bg-cyan-100",
     },
   ];
   const cardsSectionData1 = [

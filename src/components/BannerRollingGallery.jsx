@@ -27,18 +27,19 @@ const BannerRollingGallery = ({
 }) => {
   images = images.length > 0 ? images : IMGS;
 
-  const [isScreenSizeSm, setIsScreenSizeSm] = useState(
-    window.innerWidth <= 640
-  );
+  // Detect screen sizes with breakpoint for sm (640px)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
-    const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640);
+    const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cylinderWidth = isScreenSizeSm ? 1200 : 2400;
+  // Adjust cylinderWidth and image sizes based on screen width
+  // Larger screens get bigger carousel, smaller screens get scaled down
+  const cylinderWidth = windowWidth <= 640 ? 900 : 2400;
   const faceCount = images.length;
-  const faceWidth = (cylinderWidth / faceCount) * 1.7; // ✅ fixed
+  const faceWidth = (cylinderWidth / faceCount) * 1.7;
   const radius = cylinderWidth / (2 * Math.PI);
 
   const dragFactor = 0.05;
@@ -90,14 +91,29 @@ const BannerRollingGallery = ({
     }
   };
 
+  // Image size adjustments based on screen width for responsive scaling
+  const getImageSizes = () => {
+    if (windowWidth <= 640) {
+      return { height: 180, width: 280 };
+    } else if (windowWidth <= 1024) {
+      return { height: 250, width: 400 };
+    } else {
+      return { height: 320, width: 500 };
+    }
+  };
+  const { height: imgHeight, width: imgWidth } = getImageSizes();
+
+  // Responsive container height scaling
+  const containerHeight = windowWidth <= 640 ? 400 : 600;
+
   return (
-    <section className="bg-black text-white w-full pt-30">
+    <section className="bg-black text-white w-full pt-20">
       {/* Heading + Subheading */}
-      <div className="text-center  max-w-[90vw] mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+      <div className="text-center max-w-[90vw] mx-auto px-4">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
           Build Future-Ready Websites with Capyngen
         </h1>
-        <p className="text-lg md:text-xl max-w-6xl mx-auto pt-5">
+        <p className="text-base sm:text-lg md:text-xl max-w-6xl mx-auto pt-5 leading-relaxed">
           Convert your concepts to interactive, responsive, and scalable
           websites. Attract customers, increase your brand value, and maintain
           your advantage in the digital world by availing our professional
@@ -106,16 +122,19 @@ const BannerRollingGallery = ({
       </div>
 
       {/* Gallery */}
-      <div className="relative h-[600px] w-full overflow-hidden">
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ height: containerHeight }}
+      >
         {/* fade edges */}
         <div
-          className="absolute top-0 left-0 h-full w-[80px] z-10"
+          className="absolute top-0 left-0 h-full w-16 z-10"
           style={{
             background: "linear-gradient(to left, rgba(0,0,0,0) 0%, #000 100%)",
           }}
         />
         <div
-          className="absolute top-0 right-0 h-full w-[80px] z-10"
+          className="absolute top-0 right-0 h-full w-16 z-10"
           style={{
             background:
               "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 100%)",
@@ -152,8 +171,8 @@ const BannerRollingGallery = ({
                 <img
                   src={url}
                   alt="gallery"
-                  className="pointer-events-none h-[250px] w-[400px] md:h-[320px] md:w-[500px] rounded-xl border-[4px] border-white object-cover shadow-lg
-                             transition-transform duration-300 ease-out group-hover:scale-105"
+                  className="pointer-events-none rounded-xl border-[4px] border-white object-cover shadow-lg transition-transform duration-300 ease-out group-hover:scale-105"
+                  style={{ height: imgHeight, width: imgWidth }}
                 />
               </div>
             ))}

@@ -1,7 +1,5 @@
 import React from "react";
-import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
@@ -99,6 +97,7 @@ const AppDevelopment = () => {
         "Definitely, we offer comprehensive consulting, strategy, development, testing, and support services for mobile applications.",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title: "Android App Development",
@@ -137,6 +136,7 @@ const AppDevelopment = () => {
       icon: <FaCogs className="text-4xl text-white" />,
     },
   ];
+
   const cardsSectionData2 = [
     {
       title: "Scalable Solutions",
@@ -174,45 +174,34 @@ const AppDevelopment = () => {
       icon: <FaSmile className="text-4xl" />,
     },
   ];
+
   const techStack = [
     {
-      title: "Frontend",
+      title: "Frontend / Mobile",
       items: [
         {
-          name: "React",
+          name: "React Native",
           icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+        },
+        {
+          name: "Flutter",
+          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+        },
+        {
+          name: "Swift (iOS)",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg",
+        },
+        {
+          name: "Kotlin (Android)",
+          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
         },
         {
           name: "Angular",
           icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
         },
         {
-          name: "Next.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
-        },
-        {
           name: "Vue.js",
           icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
-        },
-        {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
         },
       ],
     },
@@ -224,7 +213,7 @@ const AppDevelopment = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
         },
         {
-          name: "Python",
+          name: "Python (Django/Flask)",
           icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
         },
         {
@@ -232,24 +221,16 @@ const AppDevelopment = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
         },
         {
-          name: "Java",
+          name: "Java (Spring)",
           icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
         },
         {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+          name: "PHP (Laravel)",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
         },
         {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+          name: "Go",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg",
         },
       ],
     },
@@ -258,54 +239,50 @@ const AppDevelopment = () => {
       items: [
         {
           name: "iOS",
-          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
         },
         {
           name: "Android",
           icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
         },
         {
-          name: "React Native",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+          name: "Windows",
+          icon: "https://cdn.worldvectorlogo.com/logos/windows-3.svg",
         },
       ],
     },
     {
-      title: "Database",
+      title: "Database & Cloud",
       items: [
+        {
+          name: "Firebase",
+          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+        },
         {
           name: "MongoDB",
           icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
         },
         {
           name: "MySQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
         },
         {
           name: "PostgreSQL",
           icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
         },
         {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Oracle",
-          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
+          name: "Redis",
+          icon: "https://cdn.worldvectorlogo.com/logos/redis.svg",
         },
       ],
     },
     {
-      title: "UI/UX",
+      title: "UI/UX Design",
       items: [
+        {
+          name: "Figma",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+        },
         {
           name: "Adobe XD",
           icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
@@ -314,21 +291,10 @@ const AppDevelopment = () => {
           name: "Sketch",
           icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
         },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "InVision",
-          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
-        },
       ],
     },
   ];
+
   const steps = [
     {
       step: "Step 01",
@@ -367,6 +333,7 @@ const AppDevelopment = () => {
         "Ongoing updates and app maintenance services for the app to stay reliable in the long run.",
     },
   ];
+
   const servicesData = [
     {
       image: assets.appDev3,
@@ -440,7 +407,6 @@ const AppDevelopment = () => {
       {/* <AppTypesSection /> */}
       <CardsSection
         heading="Our App Development Services"
-        subheading=""
         services={cardsSectionData1}
         headColor="text-white"
         cardBg="bg-gradient-to-br from-gray-900 to-blue-800"
@@ -448,7 +414,6 @@ const AppDevelopment = () => {
         sectionBg="bg-gray-900"
         hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
         textColor="text-white"
-        hoverTextColor=""
       />
       <GetStarted
         reverse={false}
@@ -456,7 +421,6 @@ const AppDevelopment = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title=""
         description={[
           "Is it time to get your mobile app off the ground? Contact Capyngen, a top mobile app development services company, and let our expert app developers turn your dream into a living reality.",
         ]}
@@ -466,7 +430,6 @@ const AppDevelopment = () => {
       />
       <IndustryServices
         heading="Why use Capyngen for Mobile Application Development"
-        subheading=""
         cardBg="bg-gray-700"
         cardText="text-white"
         cardDescText="text-white"
@@ -478,7 +441,6 @@ const AppDevelopment = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title=""
         description={[
           "Trying to find a trustworthy Android app development company or iOS app development company? Contact Capyngen now to get the apps that are scalable, secure, and high-performing.",
         ]}
@@ -491,17 +453,15 @@ const AppDevelopment = () => {
         subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
         categories={techStack}
       />
-      <HowWeWork heading="Our App Development Process" desc="" steps={steps} />
+      <HowWeWork heading="Our App Development Process" steps={steps} />
       <CardsSection
         heading="Benefits of Our App Development Services"
-        subheading=""
         services={cardsSectionData2}
         headColor="text-white"
         sectionBg="bg-gray-900"
         cardBg="bg-transparent"
         hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
         textColor="text-white"
-        hoverTextColor=""
       />
       <GetStarted
         reverse={false}
@@ -509,7 +469,6 @@ const AppDevelopment = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title=""
         description={[
           "Looking for custom app development services or enterprise app development solutions? Reach out to Capyngen, a foremost cross-platform app development company, and grow your digital footprint.",
         ]}

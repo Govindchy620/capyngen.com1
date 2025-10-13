@@ -67,7 +67,7 @@ const CreativeAgencyFAQ = ({
               <img
                 src={slides[index].image}
                 alt={slides[index].heading || "Slide image"}
-                className="w-full h-full max-h-[500px] object-cover rounded-2xl"
+                className="w-full h-full max-h-[500px] md:max-w-[500px] object-cover rounded-2xl"
               />
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {slides.map((_, i) => (

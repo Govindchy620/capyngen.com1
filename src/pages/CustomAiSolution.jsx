@@ -102,27 +102,80 @@ const CustomAiSolution = () => {
         "Sure thing! We are a custom AI solutions company that offers consulting services as well as solutions to clients all over the world.",
     },
   ];
+
   const technologies = [
-    { name: "JavaScript", logo: assets.js },
-    { name: "Python", logo: assets.python },
-    { name: "CSS3", logo: assets.css3 },
-    { name: "C++", logo: assets.cplusplus },
-    { name: "PHP", logo: assets.php },
-    { name: "React", logo: assets.react },
-    { name: "Vue.js", logo: assets.vuejs },
-    { name: "AngularJS", logo: assets.angular },
-    { name: "JQuery", logo: assets.jquery },
-    { name: "Next.js", logo: assets.nextjs },
-    { name: "MongoDB", logo: assets.mongodb },
-    { name: "MySQL", logo: assets.mysql },
-    { name: "PostgreSQL", logo: assets.postgresql },
-    { name: "Node.js", logo: assets.nodejs },
-    { name: "Laravel", logo: assets.laravel },
-    { name: "Express.js", logo: assets.expressjs },
-    { name: "Azure", logo: assets.azure },
-    { name: "AWS", logo: assets.aws },
-    { name: "Google Cloud", logo: assets.googlecloud },
+    {
+      name: "Python",
+      logo: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+    },
+    {
+      name: "TensorFlow",
+      logo: "https://cdn.worldvectorlogo.com/logos/tensorflow-2.svg",
+    },
+    {
+      name: "PyTorch",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Pytorch_logo.png",
+    },
+    {
+      name: "JavaScript",
+      logo: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+    },
+    {
+      name: "Node.js",
+      logo: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+    },
+    {
+      name: "React",
+      logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    },
+    {
+      name: "Flask",
+      logo: "https://flask.palletsprojects.com/en/2.3.x/_images/flask-logo.png",
+    },
+    {
+      name: "FastAPI",
+      logo: "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
+    },
+    {
+      name: "Docker",
+      logo: "https://cdn.worldvectorlogo.com/logos/docker.svg",
+    },
+    {
+      name: "Kubernetes",
+      logo: "https://cdn.worldvectorlogo.com/logos/kubernetes.svg",
+    },
+    {
+      name: "AWS",
+      logo: "https://cdn.worldvectorlogo.com/logos/amazon-web-services-2.svg",
+    },
+    {
+      name: "Azure",
+      logo: "https://cdn.worldvectorlogo.com/logos/microsoft-azure.svg",
+    },
+    {
+      name: "Google Cloud",
+      logo: "https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg",
+    },
+    {
+      name: "MongoDB",
+      logo: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+    },
+    {
+      name: "PostgreSQL",
+      logo: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+    },
+    { name: "Redis", logo: "https://cdn.worldvectorlogo.com/logos/redis.svg" },
+    {
+      name: "OpenCV",
+      logo: "https://opencv.org/wp-content/uploads/2020/07/openCV_logo_horizontal_RGB-300x103.png",
+    },
+    {
+      name: "Scikit-learn",
+      logo: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png",
+    },
+    { name: "Jupyter", logo: "https://jupyter.org/assets/main-logo.svg" },
   ];
+
   const cardsSectionData2 = [
     {
       title: "Making Decisions Based on Data",
@@ -161,6 +214,7 @@ const CustomAiSolution = () => {
       icon: <FaTasks className="text-4xl" />,
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "Machine Learning Solutions",
@@ -205,6 +259,7 @@ const CustomAiSolution = () => {
       cardBg: "bg-red-100",
     },
   ];
+
   const steps = [
     {
       step: "Step 01",
@@ -245,6 +300,7 @@ const CustomAiSolution = () => {
   ];
 
   useSplitTextAnimation("h1");
+
   return (
     <div className="relative">
       <div className="lg:sticky inset-0">
@@ -256,7 +312,7 @@ const CustomAiSolution = () => {
           diagonalShape="polygon(0 0, 100% 0, 100% 40%, 0 100%)"
         />
       </div>
-      {/* Foreground Content (scrolls over background) */}
+
       <div className="relative z-10">
         <GetStarted
           reverse={true}
@@ -303,19 +359,16 @@ const CustomAiSolution = () => {
           headColor="text-white"
           hoverBg=" hover:bg-gray-700"
           textColor="text-white"
-          hoverTextColor=""
           textSize="text-md"
           height="h-72"
         />
         <CardsSectionImage
           heading="Our Custom AI Services Tailored for Your Needs"
-          subheading=""
           services={cardsSectionImageData1}
           sectionBg="bg-gray-800"
           headColor="text-white"
-          cardBg=""
-          textSize="text-md"
           hoverBg="hover:bg-gray-200"
+          textSize="text-md"
         />
         <GetStarted
           reverse={false}
@@ -329,11 +382,7 @@ const CustomAiSolution = () => {
           buttonText="Get in Touch"
           backgroundVideo={assets.backgroundVideo}
         />
-        <HowWeWork
-          heading="How We Develop Custom AI Solutions"
-          desc=""
-          steps={steps}
-        />
+        <HowWeWork heading="How We Develop Custom AI Solutions" steps={steps} />
         <TechnologiesCarousel
           title="Custom AI Solution Technologies We Use"
           description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
