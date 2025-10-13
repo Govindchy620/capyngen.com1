@@ -17,21 +17,21 @@ const HorizontalProcessSection = () => {
       title: "Goal Setting & Strategy",
       description:
         "We start by establishing business objectives and identifying key performance indicators (KPIs) that are consistent with your vision. Such a plan will make sure that every digital marketing service will have a measurable positive effect.",
-      image: assets.workProcess1,
+      image: assets.homepageGoal,
     },
     {
       id: 2,
       title: "Audience Research & Insights",
       description:
         "We dig into the numbers to find the best customers for your company. By discovering their needs and wants, we can develop products that will attract their attention and keep them engaged.",
-      image: assets.workProcess2,
+      image: assets.homepageAudience,
     },
     {
       id: 3,
       title: "Data-Driven Performance",
       description:
         "Every act we perform is followed up with the latest data that we have. As we spot patterns and opportunities, we adjust our strategy to make sure that your SEO, social media & marketing efforts will give you the greatest possible return on your investment.",
-      image: assets.workProcess3,
+      image: assets.homepageDataDriven,
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const HorizontalProcessSection = () => {
       title: "Reporting & Transparent Communication",
       description:
         "We make accessible reports and keep you posted at each step, thus enabling full understanding of and quantifiable outcomes from your IT consulting services and custom software development initiatives.",
-      image: assets.workProcess5,
+      image: assets.homepageReporting,
     },
   ];
 

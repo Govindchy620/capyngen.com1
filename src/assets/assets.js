@@ -437,8 +437,16 @@ import homepageLifeScience from "./homepageLifeScience.png";
 import homepageEnergy from "./homepageEnergy.png";
 import homepageHealth from "./homepageHealth.png";
 import homepageIndustries from "./homepageIndustries.png";
+import homepageGoal from "./homepageGoal.png";
+import homepageAudience from "./homepageAudience.png";
+import homepageReporting from "./homepageReporting.png";
+import homepageDataDriven from "./homepageDataDriven.png";
 
 export const assets = {
+  homepageGoal,
+  homepageAudience,
+  homepageReporting,
+  homepageDataDriven,
   homeAboutUs1,
   homeAboutUs2,
   team1,
