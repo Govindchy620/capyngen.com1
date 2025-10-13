@@ -182,6 +182,11 @@ import blockchain5 from "./blockchain5.png";
 import blockchain6 from "./blockchain6.png";
 import blockchain7 from "./blockchain7.png";
 import blockchain8 from "./blockchain8.png";
+import energyResourcesBanner1 from "./energyResourcesBanner1.png";
+import energyResourcesBanner2 from "./energyResourcesBanner2.png";
+import energyResourcesBanner3 from "./energyResourcesBanner3.png";
+import energyResourcesBanner4 from "./energyResourcesBanner4.png";
+import energyResourcesBanner5 from "./energyResourcesBanner5.png";
 import energyResources6 from "./energyResources6.png";
 import energyResources7 from "./energyResources7.png";
 import energyResources8 from "./energyResources8.png";
@@ -194,6 +199,7 @@ import energyResources14 from "./energyResources14.png";
 import energyResources15 from "./energyResources15.png";
 import energyResources16 from "./energyResources16.png";
 import energyResources17 from "./energyResources17.png";
+import energyResources18 from "./energyResources18.png";
 import webdevBanner1 from "./webdevBanner1.jpg";
 import webdevBanner2 from "./webdevBanner2.jpg";
 import webdevBanner3 from "./webdevBanner3.jpg";
@@ -332,6 +338,98 @@ import banking17 from "./banking17.jpg";
 import banking18 from "./banking18.jpg";
 import banking19 from "./banking19.jpg";
 import banking20 from "./banking20.jpg";
+import educationBanner1 from "./educationBanner1.jpg";
+import educationBanner2 from "./educationBanner2.jpg";
+import education1 from "./education1.jpg";
+import education2 from "./education2.jpg";
+import education3 from "./education3.jpg";
+import education4 from "./education4.jpg";
+import education5 from "./education5.jpg";
+import education6 from "./education6.jpg";
+import education7 from "./education7.jpg";
+import education8 from "./education8.jpg";
+import education9 from "./education9.jpg";
+import education10 from "./education10.jpg";
+import education11 from "./education11.jpg";
+import capitalMarket1 from "./capitalMarket1.jpg";
+import capitalMarket2 from "./capitalMarket2.jpg";
+import capitalMarket3 from "./capitalMarket3.jpg";
+import capitalMarket4 from "./capitalMarket4.jpg";
+import capitalMarket5 from "./capitalMarket5.jpg";
+import capitalMarket6 from "./capitalMarket6.jpg";
+import capitalMarket7 from "./capitalMarket7.jpg";
+import capitalMarket8 from "./capitalMarket8.jpg";
+import capitalMarket9 from "./capitalMarket9.jpg";
+import capitalMarket10 from "./capitalMarket10.jpg";
+import capitalMarket11 from "./capitalMarket11.jpg";
+import capitalMarket12 from "./capitalMarket12.jpg";
+import capitalMarket13 from "./capitalMarket13.jpg";
+import capitalMarket14 from "./capitalMarket14.jpg";
+import manufacturingBanner1 from "./manufacturingBanner1.png";
+import manufacturingBanner2 from "./manufacturingBanner2.png";
+import manufacturingBanner3 from "./manufacturingBanner3.png";
+import manufacturingBanner4 from "./manufacturingBanner4.png";
+import manufacturingBanner5 from "./manufacturingBanner5.png";
+import manufacturingBanner6 from "./manufacturingBanner6.png";
+import manufacturingBanner7 from "./manufacturingBanner7.png";
+import manufacturingBanner8 from "./manufacturingBanner8.png";
+import manufacturingBanner9 from "./manufacturingBanner9.png";
+import manufacturingBanner10 from "./manufacturingBanner10.png";
+import manufacturingBanner11 from "./manufacturingBanner11.png";
+import manufacturingBanner12 from "./manufacturingBanner12.png";
+import manufacturingBanner13 from "./manufacturingBanner13.png";
+import manufacturingBanner14 from "./manufacturingBanner14.png";
+import manufacturingBanner15 from "./manufacturingBanner15.png";
+import manufacturingBanner16 from "./manufacturingBanner16.png";
+import manufacturing1 from "./manufacturing1.png";
+import manufacturing2 from "./manufacturing2.png";
+import manufacturing3 from "./manufacturing3.png";
+import manufacturing4 from "./manufacturing4.png";
+import manufacturing5 from "./manufacturing5.png";
+import manufacturing6 from "./manufacturing6.png";
+import manufacturing7 from "./manufacturing7.png";
+import manufacturing8 from "./manufacturing8.png";
+import manufacturing9 from "./manufacturing9.png";
+import manufacturing10 from "./manufacturing10.png";
+import manufacturing11 from "./manufacturing11.png";
+import manufacturing12 from "./manufacturing12.png";
+import manufacturing13 from "./manufacturing13.png";
+import manufacturing14 from "./manufacturing14.png";
+import communicationMediaBanner1 from "./communicationMediaBanner1.jpg";
+import communicationMediaBanner2 from "./communicationMediaBanner2.jpg";
+import communicationMediaBanner3 from "./communicationMediaBanner3.jpg";
+import communicationMediaBanner4 from "./communicationMediaBanner4.jpg";
+import communicationMediaBanner5 from "./communicationMediaBanner5.jpg";
+import communicationMedia1 from "./communicationMedia1.jpg";
+import communicationMedia2 from "./communicationMedia2.jpg";
+import communicationMedia3 from "./communicationMedia3.jpg";
+import communicationMedia4 from "./communicationMedia4.jpg";
+import communicationMedia5 from "./communicationMedia5.jpg";
+import communicationMedia6 from "./communicationMedia6.jpg";
+import communicationMedia7 from "./communicationMedia7.jpg";
+import realEstateBanner1 from "./realEstateBanner1.jpg";
+import realEstateBanner2 from "./realEstateBanner2.jpg";
+import realEstate1 from "./realEstate1.jpg";
+import realEstate2 from "./realEstate2.jpg";
+import realEstate3 from "./realEstate3.jpg";
+import realEstate4 from "./realEstate4.jpg";
+import realEstate5 from "./realEstate5.jpg";
+import realEstate6 from "./realEstate6.jpg";
+import realEstate7 from "./realEstate7.jpg";
+import realEstate8 from "./realEstate8.jpg";
+import realEstate9 from "./realEstate9.jpg";
+import realEstate10 from "./realEstate10.jpg";
+import realEstate11 from "./realEstate11.jpg";
+import realEstate12 from "./realEstate12.png";
+import realEstate13 from "./realEstate13.jpg";
+import realEstate14 from "./realEstate14.jpg";
+import realEstate15 from "./realEstate15.png";
+import realEstate16 from "./realEstate16.png";
+import realEstate17 from "./realEstate17.png";
+import realEstate18 from "./realEstate18.png";
+import realEstate19 from "./realEstate19.png";
+import realEstate20 from "./realEstate20.png";
+import realEstate21 from "./realEstate21.jpg";
 
 export const assets = {
   homeAboutUs1,
@@ -518,6 +616,11 @@ export const assets = {
   blockchain6,
   blockchain7,
   blockchain8,
+  energyResourcesBanner1,
+  energyResourcesBanner2,
+  energyResourcesBanner3,
+  energyResourcesBanner4,
+  energyResourcesBanner5,
   energyResources6,
   energyResources7,
   energyResources8,
@@ -530,6 +633,7 @@ export const assets = {
   energyResources15,
   energyResources16,
   energyResources17,
+  energyResources18,
   webdevBanner1,
   webdevBanner2,
   webdevBanner3,
@@ -668,6 +772,98 @@ export const assets = {
   banking18,
   banking19,
   banking20,
+  educationBanner1,
+  educationBanner2,
+  education1,
+  education2,
+  education3,
+  education4,
+  education5,
+  education6,
+  education7,
+  education8,
+  education9,
+  education10,
+  education11,
+  capitalMarket1,
+  capitalMarket2,
+  capitalMarket3,
+  capitalMarket4,
+  capitalMarket5,
+  capitalMarket6,
+  capitalMarket7,
+  capitalMarket8,
+  capitalMarket9,
+  capitalMarket10,
+  capitalMarket11,
+  capitalMarket12,
+  capitalMarket13,
+  capitalMarket14,
+  manufacturingBanner1,
+  manufacturingBanner2,
+  manufacturingBanner3,
+  manufacturingBanner4,
+  manufacturingBanner5,
+  manufacturingBanner6,
+  manufacturingBanner7,
+  manufacturingBanner8,
+  manufacturingBanner9,
+  manufacturingBanner10,
+  manufacturingBanner11,
+  manufacturingBanner12,
+  manufacturingBanner13,
+  manufacturingBanner14,
+  manufacturingBanner15,
+  manufacturingBanner16,
+  manufacturing1,
+  manufacturing2,
+  manufacturing3,
+  manufacturing4,
+  manufacturing5,
+  manufacturing6,
+  manufacturing7,
+  manufacturing8,
+  manufacturing9,
+  manufacturing10,
+  manufacturing11,
+  manufacturing12,
+  manufacturing13,
+  manufacturing14,
+  communicationMediaBanner1,
+  communicationMediaBanner2,
+  communicationMediaBanner3,
+  communicationMediaBanner4,
+  communicationMediaBanner5,
+  communicationMedia1,
+  communicationMedia2,
+  communicationMedia3,
+  communicationMedia4,
+  communicationMedia5,
+  communicationMedia6,
+  communicationMedia7,
+  realEstateBanner1,
+  realEstateBanner2,
+  realEstate1,
+  realEstate2,
+  realEstate3,
+  realEstate4,
+  realEstate5,
+  realEstate6,
+  realEstate7,
+  realEstate8,
+  realEstate9,
+  realEstate10,
+  realEstate11,
+  realEstate12,
+  realEstate13,
+  realEstate14,
+  realEstate15,
+  realEstate16,
+  realEstate17,
+  realEstate18,
+  realEstate19,
+  realEstate20,
+  realEstate21,
 };
 
 export const navItems = [

@@ -31,9 +31,9 @@ const TypesWeDevelop = ({ heading, subheading, buttonText, image, types }) => {
           {image && (
             <div className="mt-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
               <img
-                src={assets.blockchainBanner1}
+                src={image}
                 alt="Real estate app"
-                className="max-h-[550px] mx-auto lg:mx-0 object-cover hover:scale-[1.03] transition-transform duration-500"
+                className=" mx-auto lg:mx-0 object-cover hover:scale-[1.03] transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
               />

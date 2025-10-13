@@ -107,67 +107,67 @@ const ManufacturingAutomotive = () => {
   const heroImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.manufacturingBanner1,
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.manufacturingBanner2,
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.manufacturingBanner3,
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.manufacturingBanner4,
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      src: assets.manufacturingBanner5,
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.manufacturingBanner6,
     },
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.manufacturingBanner7,
     },
     {
       id: 8,
-      src: "https://plus.unsplash.com/premium_photo-1671436824833-91c0741e89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.manufacturingBanner8,
     },
     {
       id: 9,
-      src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.manufacturingBanner9,
     },
     {
       id: 10,
-      src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.manufacturingBanner10,
     },
     {
       id: 11,
-      src: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
+      src: assets.manufacturingBanner11,
     },
     {
       id: 12,
-      src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+      src: assets.manufacturingBanner12,
     },
     {
       id: 13,
-      src: "https://images.unsplash.com/photo-1560089000-7433a4ebbd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      src: assets.manufacturingBanner13,
     },
     {
       id: 14,
-      src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
+      src: assets.manufacturingBanner14,
     },
     {
       id: 15,
-      src: "https://images.unsplash.com/photo-1606244864456-8bee63fce472?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80",
+      src: assets.manufacturingBanner15,
     },
     {
       id: 16,
-      src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+      src: assets.manufacturingBanner16,
     },
   ];
   const cardsSectionDifferentColorData1 = [
@@ -264,32 +264,32 @@ const ManufacturingAutomotive = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.manufacturing2,
       title: "IoT in Manufacturing",
       desc: "Just-in-time data sharing and prediction of maintenance.",
     },
     {
-      image: assets.bg1,
+      image: assets.manufacturing3,
       title: "Artificial Intelligence (AI/ML)",
       desc: "More intelligent creation planning and quality assurance.",
     },
     {
-      image: assets.bg1,
+      image: assets.manufacturing4,
       title: "Cloud Computing",
       desc: "Easily expandable storage, off-site control, and uninterrupted connection.",
     },
     {
-      image: assets.bg1,
+      image: assets.manufacturing5,
       title: "Blockchain",
       desc: "Open and safe supply chain administration.",
     },
     {
-      image: assets.bg1,
+      image: assets.manufacturing6,
       title: "AR/VR",
       desc: "Fascinating education and distant supervision facilities.",
     },
     {
-      image: assets.bg1,
+      image: assets.manufacturing7,
       title: "Cybersecurity",
       desc: "Strong security against the industrial enemies.",
     },
@@ -298,38 +298,38 @@ const ManufacturingAutomotive = () => {
     {
       title: "Real-time Production Monitoring",
       description: "",
-      image: assets.customAiSolution,
+      image: assets.manufacturing8,
       cardBg: "bg-blue-100",
     },
 
     {
       title: "User-Friendly Dashboards",
       description: "",
-      image: assets.appDevelopment,
+      image: assets.manufacturing9,
       cardBg: "bg-green-100",
     },
     {
       title: "Machine & IoT Connectivity",
       description: "",
-      image: assets.customAiSolution,
+      image: assets.manufacturing10,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Predictive Analytics & Reporting",
       description: "",
-      image: assets.careersAbout1,
+      image: assets.manufacturing11,
       cardBg: "bg-pink-100",
     },
     {
       title: "Remote Diagnostics & Updates",
       description: "",
-      image: assets.careersAbout1,
+      image: assets.manufacturing12,
       cardBg: "bg-purple-100",
     },
     {
       title: "Customizable Modules",
       description: "",
-      image: assets.appDevelopment,
+      image: assets.manufacturing13,
       cardBg: "bg-red-100",
     },
   ];
@@ -422,7 +422,7 @@ const ManufacturingAutomotive = () => {
           "We provide custom manufacturing software solutions that energize the factories, Original Equipment Manufacturers, and supply chains with a digital solution that is digital, scalable, and future-ready at Capyngen.",
         ]}
         buttonText="Get in touch now!"
-        image={assets.getStarted}
+        image={assets.manufacturing1}
       />
       <CardsSection
         heading="High-End Manufacturing Software Development Services"
@@ -482,7 +482,7 @@ const ManufacturingAutomotive = () => {
           `Manufacturing software solutions enable businesses to automate practically everything via IoT, ERP, supply chain management, etc. We offer smart factory software, industrial automation solutions for production lines, and various other high-tech tools which ultimately lead to the lowering of expenses while increasing productivity.`,
           `Make a call to us today and take your manufacturing operations to the next level with the help of Capyngen.`,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.manufacturing14}
         isHidden={true}
         imageHeight="aspect-[1/1]"
         background={assets.patternBg1}

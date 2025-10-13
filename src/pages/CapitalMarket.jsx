@@ -118,32 +118,32 @@ const CapitalMarket = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.capitalMarket9,
       title: "Real-time trading and portfolio analytics",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.capitalMarket10,
       title: "Predictive analytics powered by AI for smarter investment",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.capitalMarket11,
       title: "Trading platform interoperability with multi-asset management",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.capitalMarket12,
       title: "Advanced risk and compliance management",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.capitalMarket13,
       title: "Financial system API for easy integration",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.capitalMarket14,
       title: "Security for FinTech and compliance with regulation",
       desc: "",
     },
@@ -197,7 +197,7 @@ const CapitalMarket = () => {
           </ul>
         </>
       ),
-      image: assets.customAiSolution,
+      image: assets.capitalMarket2,
       cardBg: "bg-blue-100",
     },
     {
@@ -211,7 +211,7 @@ const CapitalMarket = () => {
           </ul>
         </>
       ),
-      image: assets.customAiSolution,
+      image: assets.capitalMarket3,
       cardBg: "bg-blue-100",
     },
     {
@@ -225,7 +225,7 @@ const CapitalMarket = () => {
           </ul>
         </>
       ),
-      image: assets.customAiSolution,
+      image: assets.capitalMarket4,
       cardBg: "bg-blue-100",
     },
     {
@@ -242,7 +242,7 @@ const CapitalMarket = () => {
           </ul>
         </>
       ),
-      image: assets.customAiSolution,
+      image: assets.capitalMarket5,
       cardBg: "bg-blue-100",
     },
     {
@@ -259,7 +259,7 @@ const CapitalMarket = () => {
           </ul>
         </>
       ),
-      image: assets.customAiSolution,
+      image: assets.capitalMarket6,
       cardBg: "bg-blue-100",
     },
     {
@@ -273,7 +273,7 @@ const CapitalMarket = () => {
           </ul>
         </>
       ),
-      image: assets.customAiSolution,
+      image: assets.capitalMarket7,
       cardBg: "bg-blue-100",
     },
   ];
@@ -401,7 +401,7 @@ const CapitalMarket = () => {
             </p>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.capitalMarket1}
         background={assets.patternBg1}
         imageHeight="aspect-[1/1]"
         isHidden="hidden"
@@ -445,7 +445,7 @@ const CapitalMarket = () => {
         heading="Benefits of Choosing Capyngen"
         desc="Why Partner with Capyngen for Capital Market IT Services"
         benefits={solutionsData}
-        image={assets.blockchainDevelopment}
+        image={assets.capitalMarket8}
         footerNote=""
       />
       <IndustryServices

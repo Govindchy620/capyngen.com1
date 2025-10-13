@@ -161,28 +161,28 @@ const EnergyResourcesUtilities = () => {
   ];
   const panels = [
     {
-      image: assets.gallery1,
+      image: assets.energyResourcesBanner1,
       title:
         "Revolutionize Your Energy Activities By Using The Most Sophisticated Energy Management Software Solutions",
       desc: "Capyngen provides tech-forward IT solutions for utilities, oil & gas, renewable energy, and smart grids that enable you to save money, improve efficiency, and promote sustainable practices.",
     },
     {
-      image: assets.gallery2,
+      image: assets.energyResourcesBanner2,
       title: "Panel 2",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.gallery3,
+      image: assets.energyResourcesBanner3,
       title: "Panel 3",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.gallery4,
+      image: assets.energyResourcesBanner4,
       title: "SEO Speed Up Website",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.blog3,
+      image: assets.energyResourcesBanner5,
       title: "Panel 5",
       desc: "Digital Art • Illustrations",
     },
@@ -288,7 +288,7 @@ const EnergyResourcesUtilities = () => {
     {
       title: "Energy Analytics and IoT Integration Providers",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.energyResources18,
       textColor: "text-white",
     },
     {

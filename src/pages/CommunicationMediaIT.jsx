@@ -124,7 +124,7 @@ const CommunicationMediaIT = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.communicationMedia2,
       title:
         "Lead Generation Through Digital Solutions For Media and Communication",
       desc: (
@@ -139,7 +139,7 @@ const CommunicationMediaIT = () => {
       ),
     },
     {
-      image: assets.bg1,
+      image: assets.communicationMedia3,
       title: "Reduction in Operational Costs",
       desc: (
         <>
@@ -153,7 +153,7 @@ const CommunicationMediaIT = () => {
       ),
     },
     {
-      image: assets.bg1,
+      image: assets.communicationMedia4,
       title: "Sales & Engagement Expansion",
       desc: (
         <>
@@ -167,7 +167,7 @@ const CommunicationMediaIT = () => {
       ),
     },
     {
-      image: assets.bg1,
+      image: assets.communicationMedia5,
       title: "Predicted Results",
       desc: (
         <>
@@ -181,7 +181,7 @@ const CommunicationMediaIT = () => {
       ),
     },
     {
-      image: assets.bg1,
+      image: assets.communicationMedia6,
       title: "Advanced Communication Infrastructure",
       desc: (
         <>
@@ -195,7 +195,7 @@ const CommunicationMediaIT = () => {
       ),
     },
     {
-      image: assets.bg1,
+      image: assets.communicationMedia7,
       title: "Smart Media Analytics & Audience Insights",
       desc: (
         <>
@@ -211,27 +211,27 @@ const CommunicationMediaIT = () => {
   ];
   const panels = [
     {
-      image: assets.gallery1,
+      image: assets.communicationMediaBanner1,
       title: "IT Solution For Media and Communication by Capyngen",
       desc: " Lead the market with IT solutions For Media and communication  sectors from Capyngen. Receive custom-made broadcasting software, streaming platforms, telecom, and CMS for your business.",
     },
     {
-      image: assets.gallery2,
+      image: assets.communicationMediaBanner2,
       title: "Panel 2",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.gallery3,
+      image: assets.communicationMediaBanner3,
       title: "Panel 3",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.gallery4,
+      image: assets.communicationMediaBanner4,
       title: "SEO Speed Up Website",
       desc: "Digital Art • Illustrations",
     },
     {
-      image: assets.blog3,
+      image: assets.communicationMediaBanner5,
       title: "Panel 5",
       desc: "Digital Art • Illustrations",
     },
@@ -315,7 +315,7 @@ const CommunicationMediaIT = () => {
           `With Capyngen, however, you are not only buying software but also the technology, guidance, and experience that are essential for your success in the media and communication field.`,
         ]}
         imageHeight="md:aspect-[1/1]"
-        image={assets.whyChooseUs}
+        image={assets.communicationMedia1}
         isHidden={true}
         background={assets.patternBg1}
       />

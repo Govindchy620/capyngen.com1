@@ -119,7 +119,7 @@ const Education = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.education2,
       title: "Learning Management System (LMS) Development",
       desc: (
         <>
@@ -137,7 +137,7 @@ const Education = () => {
       ),
     },
     {
-      image: assets.bg1,
+      image: assets.education3,
       title: "Cloud Solutions for Education",
       desc: (
         <>
@@ -156,7 +156,7 @@ const Education = () => {
       ),
     },
     {
-      image: assets.bg1,
+      image: assets.education4,
       title: "Data Analytics & Insights",
       desc: (
         <>
@@ -219,7 +219,7 @@ const Education = () => {
       title: "Creative and Technical IT Solutions for the Educational Sector",
       subtitle:
         "Offering educational organizations digital tools, cloud services and data-driven learning management System that are futuristic and versatile.",
-      image: assets.applicationSolution,
+      image: assets.educationBanner1,
       ctaText: "Explore Projects",
       ctaLink: "#projects",
     },
@@ -227,8 +227,7 @@ const Education = () => {
       id: 2,
       title: "Seamless Performance",
       subtitle: "Mobile-first, future-ready solutions.",
-      image:
-        "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920",
+      image: assets.educationBanner2,
       ctaText: "Get Started",
       ctaLink: "#contact",
     },
@@ -274,41 +273,41 @@ const Education = () => {
     {
       title: "Deep knowledge of the EdTech area and LMS development",
       description: "",
-      image: assets.customAiSolution,
+      image: assets.education6,
       cardBg: "bg-blue-100",
     },
     {
       title:
         "Complete support — from the development of the strategy to the actual implementation",
       description: "",
-      image: assets.appDevelopment,
+      image: assets.education7,
       cardBg: "bg-green-100",
     },
     {
       title: "Open, adaptable, and forward-looking solutions",
       description: "",
-      image: assets.customAiSolution,
+      image: assets.education8,
       cardBg: "bg-yellow-100",
     },
     {
       title:
         "A complete range of IT consulting services for educational institutions",
       description: "",
-      image: assets.careersAbout1,
+      image: assets.education9,
       cardBg: "bg-pink-100",
     },
     {
       title:
         "The track record of success with schools, colleges, and EdTech startups",
       description: "",
-      image: assets.careersAbout1,
+      image: assets.education10,
       cardBg: "bg-purple-100",
     },
     {
       title:
         "Experience around the world with education strategies targeted at specific areas",
       description: "",
-      image: assets.appDevelopment,
+      image: assets.education11,
       cardBg: "bg-red-100",
     },
   ];
@@ -387,7 +386,7 @@ const Education = () => {
             </ul>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.education1}
         background={assets.patternBg1}
         isHidden="hidden"
       />
@@ -424,7 +423,7 @@ const Education = () => {
         heading="Benefits of Choosing Capyngen"
         subheading="By partnering with Capyngen, you bring a whole new dimension to your education ecosystem that is visible through the following benefits:"
         buttonText="Let's Contact"
-        image="https://via.placeholder.com/300x550.png" // replace with actual phone image
+        image={assets.education5}
         types={typesData}
       />
       <CardsSectionImage

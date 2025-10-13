@@ -124,64 +124,64 @@ const RealEstate = () => {
   ];
   const servicesData1 = [
     {
-      image: assets.bg1,
+      image: assets.realEstate3,
       title: "Real Estate Websites & Apps",
       desc: "You can make user-friendly property listing websites by implementing UI & UX Design for Real estate Industry along with advanced search, filter and contact features.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate4,
       title: "MLS/IDX Integration",
       desc: "Directly link your site with the most significant multiple listing service databases to keep your property listings up to date and get market insights.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate5,
       title: "3D Virtual Tours & AR/VR",
       desc: "Enable buyers to take a feel of your property through immersive visualizations and, in such way, you can attract them.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate6,
       title: "CRM Integration",
       desc: "Manage the generated leads, follow-ups, and deals in an efficient way.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate7,
       title: "Cloud & Hosting",
       desc: "The provision of safe, fast, and powerful platforms for seamless data storage and transfer is ensured by us.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate8,
       title: "Maintenance & Support",
       desc: "Offer a service that will keep your real estate sites updated and accessible to anyone at any time.",
     },
   ];
   const servicesData2 = [
     {
-      image: assets.bg1,
+      image: assets.realEstate9,
       title: "SEO for Real Estate Websites",
       desc: "By getting listed on local property-related queries, your website's traffic will increase.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate10,
       title: "Local SEO & Maps Optimization",
       desc: "Find local buyers using Google Maps who are searching for your property.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate11,
       title: "Social Media Marketing",
       desc: "Effortlessly gain more visibility on Facebook, Instagram, and LinkedIn.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate12,
       title: "Lead Gen Ads",
       desc: "Run targeted Google and social campaigns which are specifically designed to deliver qualified leads.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate13,
       title: "Content & Video Advertising",
       desc: "Build brand trust through blogs, reels, and walkthroughs.",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate14,
       title: "Email & Automation",
       desc: "Nurture your leads with updates and promotions regarding the property.",
     },
@@ -224,7 +224,7 @@ const RealEstate = () => {
       title: "IT Services for Real Estate",
       subtitle:
         "Not only real estate companies supported by Capyngen IT Services create excellent leads but also close deals in a very short time. As a result of our professional IT Services for Real Estate, the organizations become able to scale without difficulty and get more buyers in a time-effective way.",
-      image: assets.applicationSolution,
+      image: assets.realEstateBanner1,
       ctaText: "Explore Projects",
       ctaLink: "#projects",
     },
@@ -232,35 +232,34 @@ const RealEstate = () => {
       id: 2,
       title: "Seamless Performance",
       subtitle: "Mobile-first, future-ready solutions.",
-      image:
-        "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920",
+      image: assets.realEstateBanner2,
       ctaText: "Get Started",
       ctaLink: "#contact",
     },
   ];
   const cardsSectionSliderData1 = [
     {
-      image: assets.bg1,
+      image: assets.realEstate15,
       title: "Real Estate Agencies & Brokers",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate16,
       title: "Property Developers & Builders",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate17,
       title: "Property Listing Portals",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate18,
       title: "Rental & Leasing Businesses",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate19,
       title: "Co-working & Commercial Spaces",
     },
     {
-      image: assets.bg1,
+      image: assets.realEstate20,
       title: "Luxury Real Estate Brands",
     },
   ];
@@ -295,7 +294,7 @@ const RealEstate = () => {
           "Day by day, technology is rapidly evolving and so are said technologies have to be applied in the real estate sector. Hence, real estate businesses have to adopt modern IT tools to keep up their competitive advantages over their rivals, improve the customer experience, and simplify their operational processes.",
           "Our company offers real estate IT solutions which are uniquely tailored to the specific requirements of the real estate sector. If you are a real estate developer, agent, or broker, we can help you work more efficiently with our IT solutions in the real estate field through listings, process flows, and client interaction, etc.",
         ]}
-        image={assets.whyChooseUs}
+        image={assets.realEstate1}
         background={assets.patternBg1}
         isHidden="hidden"
         imageHeight="aspect-[1/1]"
@@ -307,7 +306,7 @@ const RealEstate = () => {
           "Adding a robust online presence supplemented by IT solutions for property is turning out to be a winning strategy as it creates trust, brings more visibility, and speeds up the process of reaching out to potential customers.",
           "Capyngen's Web Designing for Real Estate combines both technology and strategy to provide real estate businesses with the tools to showcase the properties effectively, save on marketing expenses, and make more profits through real estate CRM solutions, property management software, and enhanced web design for real estate.",
         ]}
-        image={assets.whyChooseUs}
+        image={assets.realEstate2}
         background={assets.patternBg1}
         reverse={true}
         isHidden="hidden"
@@ -342,7 +341,7 @@ const RealEstate = () => {
         heading="Features & Benefits"
         subheading=""
         buttonText="Let's Contact"
-        image="https://via.placeholder.com/300x550.png" // replace with actual phone image
+        image={assets.realEstate14}
         types={typesData}
       />
       <CardsSectionSlider
@@ -369,7 +368,7 @@ const RealEstate = () => {
           "Capyngen brings real estate IT solutions tailored for performance and growth. Combining marketing and IT under one roof, we provide seamless implementation, better lead generation, and faster growth. Our expertise in real estate web design, property management software, and CRM integration undoubtedly makes you the market leader.",
           "If you want to sell properties faster, get more leads, and enhance your brand, then Capyngen is the tech partner for you.",
         ]}
-        image={assets.getStarted}
+        image={assets.realEstate21}
       />
       <GetStarted
         reverse={false}
