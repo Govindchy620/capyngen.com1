@@ -366,7 +366,7 @@ const DigitalMarketing = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner11
           heading="to Grow Your Business"
           highlight="Digital Marketing Services"
@@ -375,7 +375,7 @@ const DigitalMarketing = () => {
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
+      <div className="relative lg:z-10">
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
