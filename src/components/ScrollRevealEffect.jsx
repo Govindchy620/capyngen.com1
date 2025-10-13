@@ -8,11 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ScrollRevealEffect() {
   const containerRef = useRef(null);
   const sectionsRef = useRef([]);
-  // Track local triggers
   const localTriggers = useRef([]);
 
   useEffect(() => {
-    requestAnimationFrame(() => {
+    const setupAnimations = () => {
       const sections = sectionsRef.current;
       const container = containerRef.current;
 
@@ -21,24 +20,26 @@ export default function ScrollRevealEffect() {
         return;
       }
 
-      // CLEANUP: Kill only triggers created inside this component
+      // Kill any existing local triggers before re-creating
       localTriggers.current.forEach((trigger) => trigger.kill());
       localTriggers.current = [];
 
-      // Pin the container
+      // Pin container
       const pinTrigger = ScrollTrigger.create({
         trigger: container,
         start: "top top",
-        end: `+=${sections.length * window.innerHeight}`,
+        end: () => `+=${sections.length * window.innerHeight}`,
         pin: true,
         scrub: true,
         pinSpacing: true,
+        invalidateOnRefresh: true,
       });
       localTriggers.current.push(pinTrigger);
 
-      // Animate each section in sequence
+      // Animate sections sequentially
       sections.forEach((section, i) => {
         if (i === sections.length - 1) return;
+
         const trigger = gsap.to(section, {
           rotate: 90,
           transformOrigin: "0 0",
@@ -51,14 +52,39 @@ export default function ScrollRevealEffect() {
             invalidateOnRefresh: true,
           },
         }).scrollTrigger;
+
         localTriggers.current.push(trigger);
       });
-    });
+
+      // Refresh ScrollTrigger to fix early start/blank space issues
+      ScrollTrigger.refresh();
+    };
+
+    // Run setup once layout & assets are ready
+    const handleReady = () => {
+      requestAnimationFrame(setupAnimations);
+    };
+
+    if (document.readyState === "complete") {
+      handleReady();
+    } else {
+      window.addEventListener("load", handleReady);
+    }
+
+    // Refresh on resize for accurate height calculations
+    const handleResize = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      // CLEANUP: Only kill component's triggers
+      // Cleanup all triggers from this component only
       localTriggers.current.forEach((trigger) => trigger.kill());
       localTriggers.current = [];
+
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("load", handleReady);
+
+      // Refresh global ScrollTriggers in case others exist
+      ScrollTrigger.refresh();
     };
   }, []);
 
@@ -80,7 +106,7 @@ export default function ScrollRevealEffect() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden "
+      className="relative w-full h-screen overflow-hidden"
     >
       {sections.map((section, i) => (
         <div

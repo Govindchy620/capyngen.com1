@@ -24,6 +24,7 @@ import BannerRollingGallery from "../components/BannerRollingGallery";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import TechStack from "../components/TechStack";
+import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
 const WebDevelopment = () => {
   const faqItems = [
@@ -609,6 +610,7 @@ const WebDevelopment = () => {
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />
+        <ScrollRevealEffect />
       </div>
     </div>
   );

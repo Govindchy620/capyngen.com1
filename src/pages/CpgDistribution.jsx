@@ -15,7 +15,7 @@ const CpgDistribution = () => {
       title: "IT and Web Solutions",
       desc: (
         <>
-          <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+          <ul className="list-disc list-inside space-y-4 text-lg w-full lg:max-w-3xl mx-auto mt-8 text-gray-300">
             {[
               {
                 title: "B2B and B2C E-commerce Portals",
@@ -64,7 +64,7 @@ const CpgDistribution = () => {
       title: "Digital Marketing Solution For CPG industry",
       desc: (
         <>
-          <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+          <ul className="list-disc list-inside space-y-4 text-lg w-full lg:max-w-3xl mx-auto mt-8 text-gray-300">
             {[
               {
                 title: "SEO for Distributor Websites",

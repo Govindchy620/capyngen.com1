@@ -219,7 +219,7 @@ const SEO = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner5
           title={
             <>
