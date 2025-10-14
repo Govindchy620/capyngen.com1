@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
+import Banner from "../components/Banner";
 import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
 import WhyChoose from "../components/WhyChoose";
@@ -10,19 +10,20 @@ import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
 import BenefitsSection from "../components/BenefitsSection";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import Banner9 from "../components/Banner9";
+import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
+import IndustryServices from "../components/IndustryServices";
+import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSection from "../components/CardsSection";
 import {
-  FaRocket,
+  FaAppStore,
   FaBuilding,
-  FaHeartbeat,
-  FaShoppingCart,
   FaIndustry,
-  FaUniversity,
+  FaLaptopCode,
+  FaMoneyBillWave,
+  FaPuzzlePiece,
 } from "react-icons/fa";
-import GetStarted from "../components/GetStarted";
+import Banner9 from "../components/Banner9";
 
 const ArtificialIntelligence = () => {
   const faqItems = [
@@ -55,7 +56,7 @@ const ArtificialIntelligence = () => {
     {
       question: "What industries can benefit from AI?",
       answer:
-        "The use of AI spans the different sectors e.g. healthcare, finance, retail, manufacturing, real estate, education, travel, and logistics where automation, personalization, and data analysis are some of the major fields of activity.",
+        "The use of AI spans different sectors e.g. healthcare, finance, retail, manufacturing, real estate, education, travel, and logistics where automation, personalization, and data analysis are some of the major fields of activity.",
     },
     {
       question: "How long does it take to implement AI solutions?",
@@ -124,6 +125,7 @@ const ArtificialIntelligence = () => {
         "Perhaps, you can first get a consultation with one of our experts. We will lay down your targets and find the best AI strategies to apply in a simple way through a clear implementation plan.",
     },
   ];
+
   const technologies = [
     { name: "JavaScript", logo: assets.js },
     { name: "Python", logo: assets.python },
@@ -145,6 +147,7 @@ const ArtificialIntelligence = () => {
     { name: "AWS", logo: assets.aws },
     { name: "Google Cloud", logo: assets.googlecloud },
   ];
+
   const benefitsData1 = [
     {
       title: "AI Consulting Services",
@@ -175,6 +178,7 @@ const ArtificialIntelligence = () => {
       desc: "Through an AI-driven process, one can streamline the organization of work and further enhance productivity.",
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "Boost Productivity",
@@ -183,7 +187,6 @@ const ArtificialIntelligence = () => {
       image: assets.ai2,
       cardBg: "bg-blue-100",
     },
-
     {
       title: "Custom AI Development",
       description:
@@ -220,6 +223,7 @@ const ArtificialIntelligence = () => {
       cardBg: "bg-red-100",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title: "Startups & SMEs",
@@ -258,6 +262,7 @@ const ArtificialIntelligence = () => {
       icon: <FaUniversity className="text-4xl text-indigo-600" />,
     },
   ];
+
   const steps = [
     {
       step: "Step 01",
@@ -287,50 +292,44 @@ const ArtificialIntelligence = () => {
       step: "Step 05",
       title: "Deployment & Support",
       description:
-        "Make scalable AI systems accessible to the users, with an indefinite amount of support and up-gradation.",
+        "Make scalable AI systems accessible to users, with indefinite support and updates.",
     },
   ];
 
   useSplitTextAnimation("h1");
+
   return (
     <div className="relative">
       <div className="md:sticky inset-0">
         <Banner9 />
       </div>
-      {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
         <BenefitsSection
           heading="Our AI Services"
-          desc=""
           benefits={benefitsData1}
           reverse={false}
           image={assets.ai1}
-          footerNote=""
         />
         <CardsSectionImage
           heading="Benefits & Features"
-          subheading=""
           services={cardsSectionImageData1}
           sectionBg="bg-gray-800"
           headColor="text-white"
-          cardBg=""
-          textSize="text-md"
           hoverBg="hover:bg-gray-200"
+          textSize="text-md"
         />
         <CardsSection
           heading="Industries We Serve"
-          subheading=""
           services={cardsSectionData1}
           sectionBg="bg-black"
           cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
           headColor="text-white"
-          hoverBg=" hover:bg-gray-700"
+          hoverBg="hover:bg-gray-700"
           textColor="text-white"
-          hoverTextColor=""
           textSize="text-md"
           height=""
         />
-        <HowWeWork heading="How Our AI Process Works" desc="" steps={steps} />
+        <HowWeWork heading="How Our AI Process Works" steps={steps} />
         <TechnologiesCarousel
           title="Artificial Intelligence Technologies We Use"
           description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
@@ -400,6 +399,7 @@ const ArtificialIntelligence = () => {
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />
+        {/* <ScrollRevealEffect /> */}
       </div>
     </div>
   );

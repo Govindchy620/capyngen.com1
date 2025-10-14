@@ -1,16 +1,10 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
 import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import TopRatedCompany from "../components/TopRatedCompany";
-import Banner from "../components/Banner";
-import CardsSection from "../components/CardsSection";
+import GetStarted from "../components/GetStarted";
 import {
   FaLightbulb,
   FaChartLine,
@@ -19,10 +13,10 @@ import {
   FaProjectDiagram,
   FaTasks,
 } from "react-icons/fa";
+import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
-import CardsSectionSlider from "../components/CardsSectionSlider";
+import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import Banner3 from "../components/Banner3";
-import GetStarted from "../components/GetStarted";
 
 const CustomAiSolution = () => {
   const faqItems = [

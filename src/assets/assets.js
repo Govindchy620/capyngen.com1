@@ -102,9 +102,6 @@ import seoAndContent from "./seoAndContent.png";
 import socialMediaMarketing from "./socialMediaMarketing.png";
 import paidAdvertising from "./paidAdvertising.png";
 import emailCampaigns from "./emailCampaigns.png";
-import brandingLogoDesign from "./brandingLogoDesign.png";
-import brandingVisualIdentity from "./brandingVisualIdentity.png";
-import brandingPackagingDesign from "./brandingPackagingDesign.png";
 import digitalMarketing1 from "./digitalMarketing1.jpg";
 import digitalMarketing2 from "./digitalMarketing2.png";
 import digitalMarketing3 from "./digitalMarketing3.png";
@@ -526,16 +523,21 @@ import webDesign15 from "./webDesign15.png";
 import webDesign16 from "./webDesign16.png";
 import webDesign17 from "./webDesign17.png";
 import webDesign18 from "./webDesign18.png";
-import brandingDesign1 from "./brandingDesign1.png";
-import brandingDesign3 from "./brandingDesign3.png";
-import brandingDesign4 from "./brandingDesign4.png";
-import brandingDesign6 from "./brandingDesign6.png";
-import brandingDesign7 from "./brandingDesign7.png";
-import brandingDesign8 from "./brandingDesign8.png";
-import brandingDesign10 from "./brandingDesign10.png";
-import brandingDesign11 from "./brandingDesign11.png";
-import brandingDesign14 from "./brandingDesign14.png";
-import brandingDesign15 from "./brandingDesign15.png";
+import branding1 from "./branding1.jpg";
+import branding2 from "./branding2.jpg";
+import branding3 from "./branding3.png";
+import branding4 from "./branding4.png";
+import branding5 from "./branding5.png";
+import branding6 from "./branding6.png";
+import branding7 from "./branding7.png";
+import branding8 from "./branding8.png";
+import branding9 from "./branding9.png";
+import branding10 from "./branding10.png";
+import branding11 from "./branding11.png";
+import branding12 from "./branding12.png";
+import branding13 from "./branding13.png";
+import branding14 from "./branding14.png";
+import branding15 from "./branding15.png";
 import eCommDesign1 from "./eCommDesign1.png";
 import eCommDesign2 from "./eCommDesign2.png";
 import eCommDesign3 from "./eCommDesign3.png";
@@ -663,9 +665,6 @@ export const assets = {
   socialMediaMarketing,
   paidAdvertising,
   emailCampaigns,
-  brandingLogoDesign,
-  brandingVisualIdentity,
-  brandingPackagingDesign,
   digitalMarketing1,
   digitalMarketing2,
   digitalMarketing3,
@@ -1032,16 +1031,21 @@ export const assets = {
   consulting10,
   consulting11,
   webDesign1,
-  brandingDesign1,
-  brandingDesign3,
-  brandingDesign4,
-  brandingDesign6,
-  brandingDesign7,
-  brandingDesign8,
-  brandingDesign10,
-  brandingDesign11,
-  brandingDesign14,
-  brandingDesign15,
+  branding1,
+  branding2,
+  branding3,
+  branding4,
+  branding5,
+  branding6,
+  branding7,
+  branding8,
+  branding9,
+  branding10,
+  branding11,
+  branding12,
+  branding13,
+  branding14,
+  branding15,
   eCommDesign1,
   eCommDesign2,
   eCommDesign3,

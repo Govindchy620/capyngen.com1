@@ -100,13 +100,13 @@ const HowWeWork = ({
                     {idx !== stepsInRow.length - 1 &&
                       (isForward ? (
                         <ChevronRight
-                          size={44}
+                          size={180}
                           className="text-blue-600"
                           aria-hidden="true"
                         />
                       ) : (
                         <ChevronLeft
-                          size={44}
+                          size={180}
                           className="text-blue-600"
                           aria-hidden="true"
                         />

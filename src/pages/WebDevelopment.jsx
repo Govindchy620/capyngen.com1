@@ -24,7 +24,6 @@ import BannerRollingGallery from "../components/BannerRollingGallery";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import TechStack from "../components/TechStack";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 
 const WebDevelopment = () => {
   const faqItems = [
@@ -529,7 +528,6 @@ const WebDevelopment = () => {
         />
         <CardsSection
           heading="Our Web Development Services"
-          subheading=""
           services={cardsSectionData1}
           sectionBg="bg-black"
           cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
@@ -540,13 +538,11 @@ const WebDevelopment = () => {
         />
         <CardsSectionImage
           heading="Our Web Development Features"
-          subheading=""
           services={cardsSectionImageData1}
           sectionBg="bg-gray-800"
           headColor="text-white"
-          cardBg=""
-          textSize="text-md"
           hoverBg="hover:bg-gray-200"
+          textSize="text-md"
         />
         <GetStarted
           reverse={false}
@@ -561,7 +557,6 @@ const WebDevelopment = () => {
         />
         <CardsSection
           heading="Why Choose Capyngen for Web Development?"
-          subheading=""
           services={cardsSectionData2}
           headColor="text-white"
           cardBg="bg-gray-700"
@@ -571,7 +566,6 @@ const WebDevelopment = () => {
         />
         <CardsSectionSlider
           heading="Industries We Serve"
-          subheading=""
           cardBg="bg-transparent"
           hoverBg=" hover:bg-blue-50"
           textColor="text-gray-800"
@@ -592,10 +586,9 @@ const WebDevelopment = () => {
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />
-        <HowWeWork heading="Our Development Process" desc="" steps={steps} />
+        <HowWeWork heading="Our Development Process" steps={steps} />
         <TechStack
           heading="Transform Your Web Development and Consulting with Our Expert Tech Stack"
-          subheading=""
           categories={techStack}
         />
         <GetStarted

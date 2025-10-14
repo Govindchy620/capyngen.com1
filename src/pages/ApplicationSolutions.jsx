@@ -33,7 +33,7 @@ const ApplicationSolutions = () => {
     {
       question: "Why should businesses invest in custom application solutions?",
       answer:
-        "Custom solutions allow the businesses to be more specific, and optimized, and offer more functionalities than the general ones, thus giving an enterprise a competitive advantage.",
+        "Custom solutions allow the businesses to be more specific, optimized, and offer more functionalities than the general ones, thus giving an enterprise a competitive advantage.",
     },
     {
       question: "Does Capyngen offer enterprise application solutions?",
@@ -53,22 +53,22 @@ const ApplicationSolutions = () => {
     {
       question: "Can Capyngen build cloud-native apps?",
       answer:
-        "Exactly. We are experts in providing cloud solutions that are not only scalable and flexible but also cost-effective.",
+        "Exactly. We are experts in providing cloud solutions that are scalable, flexible, and cost-effective.",
     },
     {
       question: "Do you modernize legacy applications?",
       answer:
-        "A definite Yes. In fact, we take the old software which is no longer useful and upgrade it to new standards of business and technology application.",
+        "A definite Yes. We upgrade legacy software to new standards of business and technology application.",
     },
     {
       question: "Which industries do you serve?",
       answer:
-        "We work with different industries such as the medical, financial, commercial, educational, entertainment, software, and telecommunication sectors.",
+        "We work with industries such as medical, financial, commercial, educational, entertainment, software, and telecommunication sectors.",
     },
     {
       question: "Are your applications secure and scalable?",
       answer:
-        "Certainly. We strictly adhere to rigorous security standards and also build every product to be scalable in the long run.",
+        "Certainly. We adhere to rigorous security standards and build scalable products.",
     },
     {
       question: "Do you offer SaaS application development?",
@@ -78,129 +78,132 @@ const ApplicationSolutions = () => {
     {
       question: "Can your applications integrate with existing systems?",
       answer:
-        "Yes. We design APIs for easy synchronization of your application with other platforms and software.",
+        "Yes. We design APIs for easy synchronization with other platforms and software.",
     },
     {
       question: "How long does it take to build an application?",
       answer:
-        "The timelines depend on the complexity of the project, but generally, the duration is between 4-10 weeks.",
+        "Timelines depend on project complexity, generally between 4-10 weeks.",
     },
     {
       question: "Do you offer post-launch support?",
       answer:
-        "Yes. We give full support in the form of maintenance and updates after you have put the application into operation.",
+        "Yes. We provide full support for maintenance and updates after deployment.",
     },
     {
       question: "Are your solutions suitable for startups and enterprises?",
       answer:
-        "Indeed. Capyngen can be the perfect partner for businesses of any size, from early-stage ventures to multinational companies, in delivering the most efficient application solutions.",
+        "Indeed. We partner with any size business to deliver efficient application solutions.",
     },
     {
       question: "How can I get started with Capyngen?",
       answer:
-        "Take the time to set up a no-cost consultation with us. Our team would be thrilled to work with you to devise feasible application solutions for your enterprise.",
+        "Set up a no-cost consultation with us to devise feasible application solutions for your enterprise.",
     },
   ];
+
   const servicesData = [
     {
       image: assets.applicationSolution4,
       title: "Web Application Development",
-      desc: "We create slick, secure, and purpose-built web applications that are tailored to meet your business goals. We work as a digital marketing agency to help organizations rank better on the search engine pages, increase their user base, and thus, enhance their business.",
+      desc: "We create slick, secure, and purpose-built web applications tailored to your business goals, helping improve search rankings and user base.",
     },
     {
       image: assets.applicationSolution5,
       title: "Mobile Application Development",
-      desc: "We build top-performing native and cross-mobile apps for iOS and Android. Every app is designed to work without any issues, with contemporary styling, and also with great user engagement.",
+      desc: "We build top-performing native and cross-platform mobile apps with modern styling and great engagement.",
     },
     {
       image: assets.applicationSolution6,
       title: "Enterprise Application Solutions",
-      desc: "We provide stable and extensible business suites to smooth communication in bureaucratic giant business enterprises. These computer-based co-operative enhancements increase productivity, employee interaction, and are an excellent discipline for long-term development.",
+      desc: "Stable and extensible business suites to improve communication, productivity, and employee interaction.",
     },
     {
       image: assets.applicationSolution7,
       title: "Cloud-Native Applications",
-      desc: "Our cloud-native apps offer freedom of feature usage, simple updates, and quick overall performance. Given that they are based on top cloud platforms, they enable companies to grow quickly and efficiently.",
+      desc: "Cloud-based apps offering feature freedom, simple updates, and quick performance enabling scalable growth.",
     },
     {
       image: assets.applicationSolution8,
       title: "Custom Software Solutions",
-      desc: "We compose software precisely for your specifically intricate corporate products and services. If you think about that as an innovation, security, and foresight company at the same time, our custom software guarantees customer loyalty for a long time.",
+      desc: "Custom software tailored to complex corporate needs ensuring innovation, security, and customer loyalty.",
     },
     {
       image: assets.applicationSolution9,
       title: "E-Commerce Applications",
-      desc: "We develop fully functional, engaging digital shops and bazaars that generate growth and quick turnover. In every step of the way of the user's journey, the main aim is the smooth functioning of the checkout process.",
+      desc: "Fully functional digital shops focused on smooth user journeys and checkout processes.",
     },
     {
       image: assets.applicationSolution10,
       title: "SaaS (Software as a Service) Applications",
-      desc: "We produce SaaS applications that are easily scalable and secure with subscription models that are user-friendly and very flexible. The cloud-based products are not only easy to handle but also budget-friendly and best suited for fast development.",
+      desc: "Scalable, secure subscription-based cloud apps that are budget-friendly and fast to develop.",
     },
     {
       image: assets.applicationSolution12,
       title: "Cross-Platform Application Development",
-      desc: "We create software that one can install on any device, whether it is a smartphone, tablet, laptop, or desktop computer, allowing the user to experience the same user flow and functionality. In this way, the user will have the same experience independently from the platform, and there is not even a need to develop an additional app.",
+      desc: "Software providing consistent user experience across devices without needing multiple apps.",
     },
     {
       image: assets.applicationSolution13,
       title: "API Development & Integration",
-      desc: "Good API developers present a true connector for your chosen software and potential associated applications so that data is shared easily, faster communication networks are created, and business operations are improved. This partly allows you to access your data in a much easier way and also exchange information among various other different company operations.",
+      desc: "API design enabling easy data exchange and improved business operation connectivity.",
     },
     {
       image: assets.applicationSolution14,
       title: "Legacy Application Modernization",
-      desc: "We integrate new technology to legacy software so as to upgrade the software to deliver in terms of speed, safety, and user-friendliness. Consequently, this will quite possibly maintain and solve the issue of usability/harmonizing with today’s standards thought to be based on developments in the tech.",
+      desc: "Upgrading legacy software for speed, safety, and user-friendliness to meet modern standards.",
     },
     {
       image: assets.applicationSolution15,
       title: "CRM & ERP Application Solutions",
-      desc: "We develop CRM and ERP software systems that consist of integrated business logic and data related to customer interactions. These tools empower strategy formulation by refining the decision-making process, enhancing operational efficiency, and adapting to the trend of building stronger client-company connections.",
+      desc: "Integrated CRM and ERP systems enhancing business intelligence and client connections.",
     },
     {
       image: assets.applicationSolution16,
       title: "AI-Powered Applications",
-      desc: "We create artificially intelligent application solutions that embrace the usage of AI (Artificial Intelligence) and ML (Machine Learning). Such software helps companies to save time, give predictive analysis, and also that way be abreast with the competition.",
+      desc: "Intelligent AI and ML applications helping companies save time and gain predictive insights.",
     },
   ];
+
   const steps = [
     {
       step: "Step 01",
       title: "Requirement Analysis",
       description:
-        "Get to know your business goals, challenges, and user expectations more thoroughly. We dissect every detail to visualize the right path that signals the application to meet your goals. This stage sets the base for a triumphant and scalable solution.",
+        "Understand business goals, challenges, and user expectations to set the foundation for scalable solutions.",
     },
     {
       step: "Step 02",
       title: "UI/UX Design",
       description:
-        "Design of engaging, intuitive, aesthetically pleasing, and easy-to-use interfaces that draw your users. The main focus is on easy navigation, current styles, and the accessibility of any user. Besides beautifying the app, great design contributes to satisfying and retaining users.",
+        "Create engaging, intuitive, and accessible interfaces that enhance user retention and satisfaction.",
     },
     {
       step: "Step 03",
       title: "Development & Integration",
       description:
-        "Secure and high-performing applications are developed which are tailored to your business needs. Our development process guarantees trouble-free integration with third-party tools, databases, and APIs. We put the major focus on clean code, scalability, and long-term stability.",
+        "Develop secure, high-performance applications integrated smoothly with third-party tools and databases.",
     },
     {
       step: "Step 04",
       title: "Testing & QA",
       description:
-        "Every aspect of the app is tested to achieve perfection in function and high performance. Besides security, compatibility, and speed, we also test the application's usability to deliver a stable one. The QA team confirms that every last detail of the product meets the pinnacle of quality standards in the industry.",
+        "Conduct thorough testing to ensure functionality, security, compatibility, and high performance.",
     },
     {
       step: "Step 05",
       title: "Deployment & Support",
       description:
-        "We facilitate the smooth and easy installation of your app on all platforms and different environments. The continued help supported by the technical team is for solving problems and keeping everything running smoothly. In addition to the easy deployment, you also have the access to support at any time for the period of your assistance.",
+        "Deploy applications efficiently and provide ongoing technical support and maintenance.",
     },
     {
       step: "Step 06",
       title: "Continuous Optimization",
       description:
-        "Not even a second after deployment do we stop from keeping the app on its point of excellence. Jointly with user feedback, app performance analysis, and the use of new technologies, we boost your scalability and UX. This guarantees your app to always be the market competitor at its fastest and most future-ready state.",
+        "Maintain app excellence with performance analysis, user feedback, and tech updates for competitiveness.",
     },
   ];
+
   const slidesData = [
     {
       image: assets.applicationSolution1,
@@ -208,17 +211,12 @@ const ApplicationSolutions = () => {
       description: (
         <>
           <p>
-            We create and develop scalable applications that are specifically
-            designed to meet your unique business requirements, whether it be
-            through a web or mobile platform.
+            We create scalable applications tailored to your unique business
+            needs on web or mobile.
           </p>
           <p className="mt-3">
-            Capyngen is an application solution company that leads the market
-            globally, offering businesses timely and impactful digital products
-            to drive their transformation journey. We are proficient in
-            enterprise application solutions, custom application solutions,
-            cloud application solutions, and mobile and web application
-            solutions for contemporary business advancement.
+            Capyngen leads globally in delivering impactful digital products,
+            including enterprise, cloud, and mobile apps.
           </p>
         </>
       ),
@@ -230,9 +228,8 @@ const ApplicationSolutions = () => {
       description: (
         <>
           <p>
-            Become the creator of the future with safe, stable, and scalable
-            applications powered by Capyngen. We are not only helping businesses
-            grow but doing it smarter and quicker out of the box.
+            Build safe, stable, and scalable apps powered by Capyngen to grow
+            your business smarter and faster.
           </p>
         </>
       ),
@@ -244,20 +241,15 @@ const ApplicationSolutions = () => {
       description: (
         <>
           <p>
-            Capyngen is known as one of the best app solutions providers
-            companies that produce software that is ahead of the time for
-            startups, enterprises, and global brands. Our team utilizes current
-            technologies and follows successful strategies to develop safe,
-            scalable, and user-friendly applications. No matter if you are
-            looking for tailor-made application solutions for enterprises or
-            high-end cloud-native applications, the experts of Capyngen would be
-            glad to turn your ideas into reality.
+            We use modern technologies and strategies to deliver safe, scalable,
+            tailor-made software for startups, enterprises, and global brands.
           </p>
         </>
       ),
       price: "",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title:
@@ -297,6 +289,7 @@ const ApplicationSolutions = () => {
   ];
 
   useSplitTextAnimation("h1");
+
   return (
     <div className="relative">
       <div className="lg:sticky inset-0">
@@ -309,7 +302,7 @@ const ApplicationSolutions = () => {
           priceLabel=""
         />
       </div>
-      {/* Foreground Content (scrolls over background) */}
+
       <div className="relative z-10">
         <IndustryServices
           heading="Application Solutions We Offer"
@@ -339,32 +332,32 @@ const ApplicationSolutions = () => {
                 {[
                   {
                     title: "Increased Efficiency and Productivity",
-                    text: "These effects are a result of the simplification of the workflow and the automation of the tasks.",
+                    text: "Simplified workflow and task automation.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Boost in Customer Engagement",
-                    text: "By creating user-friendly apps, organizations improve relationships with customers.",
+                    text: "User-friendly apps improve customer relationships.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Safe, Scalable, and Future-Oriented Apps",
-                    text: "Such apps are designed with latest tech to be compatible with your business.",
+                    text: "Designed with latest tech for business compatibility.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Shorter Route to Sales",
-                    text: "This is accomplished by the rapid development of your business keeping it ahead in the market with the competitors.",
+                    text: "Rapid business growth ahead of competitors.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Integration Without Any Hassle",
-                    text: "Users can easily access their current systems or even get the tools from the third party.",
+                    text: "Easily access current systems or third-party tools.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Solutions that are Affordable",
-                    text: "The strategy of optimized development can help companies save on operational costs.",
+                    text: "Optimized development saves operational costs.",
                     color: "text-blue-500",
                   },
                 ].map(({ title, text, color }, idx) => (
@@ -374,7 +367,7 @@ const ApplicationSolutions = () => {
                   >
                     <strong className={`${color} drop-shadow-md`}>
                       {title}
-                    </strong>
+                    </strong>{" "}
                     {text}
                   </li>
                 ))}
@@ -394,16 +387,6 @@ const ApplicationSolutions = () => {
           desc="We adhere to a transparent and well-organized process from start to finish to guarantee that every application meets the highest standards:"
           steps={steps}
         />
-        {/* <CardsSectionImage
-          heading="Application Solutions Services We Offer"
-          subheading="Capyngen delivers application development services from start to finish which are the solutions that enable the businesses to widen their horizons and take the next step further:"
-          services={cardsSectionImageData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        /> */}
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
@@ -417,14 +400,11 @@ const ApplicationSolutions = () => {
         />
         <CardsSection
           heading="Why Choose Capyngen for Application Solutions"
-          subheading=""
           services={cardsSectionData1}
           sectionBg="bg-gray-900"
           cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-          hoverBg=""
           height="h-72"
           textColor="text-white"
-          hoverTextColor=""
           headColor="text-white"
         />
         <FAQSection2 items={faqItems} />

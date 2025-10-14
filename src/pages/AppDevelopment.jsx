@@ -3,21 +3,19 @@ import { assets } from "../assets/assets";
 import HowWeWork from "../components/HowWeWork";
 import FAQSection2 from "../components/FAQSection2";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import AppTypesSection from "../components/AppTypesSection";
 import CardsSection from "../components/CardsSection";
 import {
+  FaAndroid,
+  FaApple,
+  FaMobileAlt,
+  FaCode,
+  FaCheckCircle,
   FaCogs,
   FaExpandArrowsAlt,
   FaShieldAlt,
   FaUserFriends,
   FaClock,
-  FaMobileAlt,
   FaSmile,
-  FaAndroid,
-  FaApple,
-  FaCode,
-  FaCheckCircle,
 } from "react-icons/fa";
 import GetStarted from "../components/GetStarted";
 import TechStack from "../components/TechStack";
@@ -368,6 +366,7 @@ const AppDevelopment = () => {
   ];
 
   useSplitTextAnimation("h1");
+
   return (
     <div className="relative">
       <Banner13
@@ -388,10 +387,11 @@ const AppDevelopment = () => {
           "Native App Development",
           "Cross-Platform App Development",
           "Enterprise Mobile Solutions",
-          "App Maintenance & Support",
+          "App Maintenance & Support",
         ]}
         videoSrc={assets.heroVideo}
       />
+
       <TopRatedCompany
         title="Introduction to App Development"
         description={[
@@ -404,7 +404,7 @@ const AppDevelopment = () => {
         isHidden={true}
         background={assets.patternBg1}
       />
-      {/* <AppTypesSection /> */}
+
       <CardsSection
         heading="Our App Development Services"
         services={cardsSectionData1}
@@ -415,6 +415,7 @@ const AppDevelopment = () => {
         hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
         textColor="text-white"
       />
+
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
@@ -428,6 +429,7 @@ const AppDevelopment = () => {
         buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
       />
+
       <IndustryServices
         heading="Why use Capyngen for Mobile Application Development"
         cardBg="bg-gray-700"
@@ -435,6 +437,7 @@ const AppDevelopment = () => {
         cardDescText="text-white"
         services={servicesData}
       />
+
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
@@ -448,12 +451,15 @@ const AppDevelopment = () => {
         buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
       />
+
       <TechStack
         heading="Transform Your Mobile Development and Consulting with Our Expert Tech Stack"
         subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
         categories={techStack}
       />
+
       <HowWeWork heading="Our App Development Process" steps={steps} />
+
       <CardsSection
         heading="Benefits of Our App Development Services"
         services={cardsSectionData2}
@@ -463,6 +469,7 @@ const AppDevelopment = () => {
         hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
         textColor="text-white"
       />
+
       <GetStarted
         reverse={false}
         backgroundColor="bg-blue-900"
@@ -476,6 +483,7 @@ const AppDevelopment = () => {
         buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
       />
+
       <FAQSection2 items={faqItems} />
     </div>
   );

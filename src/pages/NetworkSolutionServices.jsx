@@ -176,37 +176,37 @@ const NetworkSolutionServices = () => {
   const cardsSectionSliderData1 = [
     {
       title: "Startups & Small Businesses",
-      desc: "We offer affordable website development services for small businesses.",
+      desc: "",
       image: assets.webDev17,
       textColor: "text-white",
     },
     {
       title: "E-commerce & Retail",
-      desc: "We provide complete ecommerce website development services to help you increase your sales.",
+      desc: "",
       image: assets.webDev18,
       textColor: "text-white",
     },
     {
       title: "Healthcare & Education",
-      desc: "User-friendly and reliable websites for healthcare and education institutions.",
+      desc: "",
       image: assets.webDev19,
       textColor: "text-white",
     },
     {
       title: "Real Estate & Travel",
-      desc: "Visually attractive and user-friendly websites.",
+      desc: "",
       image: assets.webDev20,
       textColor: "text-white",
     },
     {
       title: "Corporate Enterprises",
-      desc: "Custom website designs that are scalable for large organizations.",
+      desc: "",
       image: assets.webDev21,
       textColor: "text-white",
     },
     {
       title: "Trading Sites",
-      desc: " Easy to use, fast, and dependable platforms for trading businesses.",
+      desc: "",
       image: assets.webDev22,
       textColor: "text-white",
     },
