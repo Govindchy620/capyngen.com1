@@ -459,7 +459,7 @@ const Education = () => {
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

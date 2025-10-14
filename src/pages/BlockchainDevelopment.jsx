@@ -602,7 +602,6 @@ const BlockchainDevelopment = () => {
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
     </div>
   );
 };

@@ -404,7 +404,7 @@ const CrmManagementSoftware = () => {
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />
-        <ScrollRevealEffect />
+        {/* <ScrollRevealEffect /> */}
       </div>
     </div>
   );

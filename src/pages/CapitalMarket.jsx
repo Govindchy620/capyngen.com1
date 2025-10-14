@@ -308,7 +308,7 @@ const CapitalMarket = () => {
   ];
   const slidesData = [
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.capitalMarketbanner1,
       heading: "Accelerate Trading with Capital Market Innovative Solutions",
       description: (
         <>
@@ -321,7 +321,7 @@ const CapitalMarket = () => {
       price: "",
     },
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.capitalMarketbanner2,
       heading: "Digital Transformation of Capital Markets",
       description: (
         <>
@@ -334,7 +334,7 @@ const CapitalMarket = () => {
       price: "",
     },
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.capitalMarketbanner3,
       heading: "Keep Traders Up-to-Date with Real-Time Data",
       description: (
         <>
@@ -458,7 +458,7 @@ const CapitalMarket = () => {
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

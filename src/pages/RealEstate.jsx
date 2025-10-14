@@ -221,17 +221,27 @@ const RealEstate = () => {
   const slidesData = [
     {
       id: 1,
-      title: "IT Services for Real Estate",
+      title: "Real Estate Powered by Technology",
       subtitle:
-        "Not only real estate companies supported by Capyngen IT Services create excellent leads but also close deals in a very short time. As a result of our professional IT Services for Real Estate, the organizations become able to scale without difficulty and get more buyers in a time-effective way.",
+        "Digital platforms enabled by AI have the power to simplify everything from property management to listings and customer interactions.",
       image: assets.realEstateBanner1,
       ctaText: "Explore Projects",
       ctaLink: "#projects",
     },
     {
       id: 2,
-      title: "Seamless Performance",
-      subtitle: "Mobile-first, future-ready solutions.",
+      title: "Digital Solutions for Modern Real Estate Businesses",
+      subtitle:
+        "Safeguarded, automated, and AI-infused solutions are the shortest and easiest way to get buyers, sellers, and agents connected.",
+      image: assets.realEstateBanner3,
+      ctaText: "Get Started",
+      ctaLink: "#contact",
+    },
+    {
+      id: 3,
+      title: "Transforming Real Estate with Innovation",
+      subtitle:
+        "The use of data analytics and automation in real estate sector has resulted in the increased visibility of properties and profits made on them.",
       image: assets.realEstateBanner2,
       ctaText: "Get Started",
       ctaLink: "#contact",
@@ -385,7 +395,6 @@ const RealEstate = () => {
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
     </div>
   );
 };

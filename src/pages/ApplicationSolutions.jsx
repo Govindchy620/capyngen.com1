@@ -428,7 +428,6 @@ const ApplicationSolutions = () => {
           headColor="text-white"
         />
         <FAQSection2 items={faqItems} />
-        <ScrollRevealEffect />
       </div>
     </div>
   );

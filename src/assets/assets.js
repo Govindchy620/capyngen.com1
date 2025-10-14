@@ -351,20 +351,23 @@ import education8 from "./education8.png";
 import education9 from "./education9.png";
 import education10 from "./education10.png";
 import education11 from "./education11.png";
+import capitalMarketbanner1 from "./capitalMarketbanner1.png";
+import capitalMarketbanner2 from "./capitalMarketbanner2.png";
+import capitalMarketbanner3 from "./capitalMarketbanner3.png";
 import capitalMarket1 from "./capitalMarket1.jpg";
-import capitalMarket2 from "./capitalMarket2.jpg";
-import capitalMarket3 from "./capitalMarket3.jpg";
-import capitalMarket4 from "./capitalMarket4.jpg";
-import capitalMarket5 from "./capitalMarket5.jpg";
-import capitalMarket6 from "./capitalMarket6.jpg";
-import capitalMarket7 from "./capitalMarket7.jpg";
+import capitalMarket2 from "./capitalMarket2.png";
+import capitalMarket3 from "./capitalMarket3.png";
+import capitalMarket4 from "./capitalMarket4.png";
+import capitalMarket5 from "./capitalMarket5.png";
+import capitalMarket6 from "./capitalMarket6.png";
+import capitalMarket7 from "./capitalMarket7.png";
 import capitalMarket8 from "./capitalMarket8.jpg";
-import capitalMarket9 from "./capitalMarket9.jpg";
-import capitalMarket10 from "./capitalMarket10.jpg";
-import capitalMarket11 from "./capitalMarket11.jpg";
-import capitalMarket12 from "./capitalMarket12.jpg";
-import capitalMarket13 from "./capitalMarket13.jpg";
-import capitalMarket14 from "./capitalMarket14.jpg";
+import capitalMarket9 from "./capitalMarket9.png";
+import capitalMarket10 from "./capitalMarket10.png";
+import capitalMarket11 from "./capitalMarket11.png";
+import capitalMarket12 from "./capitalMarket12.png";
+import capitalMarket13 from "./capitalMarket13.png";
+import capitalMarket14 from "./capitalMarket14.png";
 import manufacturingBanner1 from "./manufacturingBanner1.png";
 import manufacturingBanner2 from "./manufacturingBanner2.png";
 import manufacturingBanner3 from "./manufacturingBanner3.png";
@@ -381,6 +384,36 @@ import manufacturingBanner13 from "./manufacturingBanner13.png";
 import manufacturingBanner14 from "./manufacturingBanner14.png";
 import manufacturingBanner15 from "./manufacturingBanner15.png";
 import manufacturingBanner16 from "./manufacturingBanner16.png";
+import gaming1 from "./gaming1.png";
+import gaming2 from "./gaming2.png";
+import gaming3 from "./gaming3.png";
+import gaming4 from "./gaming4.png";
+import gaming5 from "./gaming5.png";
+import gaming6 from "./gaming6.png";
+import gaming7 from "./gaming7.png";
+import gaming8 from "./gaming8.png";
+import gaming9 from "./gaming9.png";
+import gaming10 from "./gaming10.png";
+import gaming11 from "./gaming11.png";
+import gaming12 from "./gaming12.png";
+import gaming13 from "./gaming13.png";
+import gaming14 from "./gaming14.png";
+import gaming15 from "./gaming15.png";
+import gaming16 from "./gaming16.png";
+import gaming17 from "./gaming17.jpg";
+import gaming18 from "./gaming18.png";
+import gaming19 from "./gaming19.png";
+import gaming20 from "./gaming20.png";
+import gaming21 from "./gaming21.png";
+import gaming22 from "./gaming22.png";
+import gaming23 from "./gaming23.png";
+import gaming24 from "./gaming24.png";
+import gaming25 from "./gaming25.png";
+import gaming26 from "./gaming26.png";
+import gaming27 from "./gaming27.png";
+import gaming28 from "./gaming28.png";
+import gaming29 from "./gaming29.png";
+import gaming30 from "./gaming30.jpg";
 import manufacturing1 from "./manufacturing1.png";
 import manufacturing2 from "./manufacturing2.png";
 import manufacturing3 from "./manufacturing3.png";
@@ -401,28 +434,29 @@ import communicationMediaBanner3 from "./communicationMediaBanner3.jpg";
 import communicationMediaBanner4 from "./communicationMediaBanner4.jpg";
 import communicationMediaBanner5 from "./communicationMediaBanner5.jpg";
 import communicationMedia1 from "./communicationMedia1.jpg";
-import communicationMedia2 from "./communicationMedia2.jpg";
-import communicationMedia3 from "./communicationMedia3.jpg";
-import communicationMedia4 from "./communicationMedia4.jpg";
-import communicationMedia5 from "./communicationMedia5.jpg";
-import communicationMedia6 from "./communicationMedia6.jpg";
-import communicationMedia7 from "./communicationMedia7.jpg";
+import communicationMedia2 from "./communicationMedia2.png";
+import communicationMedia3 from "./communicationMedia3.png";
+import communicationMedia4 from "./communicationMedia4.png";
+import communicationMedia5 from "./communicationMedia5.png";
+import communicationMedia6 from "./communicationMedia6.png";
+import communicationMedia7 from "./communicationMedia7.png";
 import realEstateBanner1 from "./realEstateBanner1.jpg";
 import realEstateBanner2 from "./realEstateBanner2.jpg";
+import realEstateBanner3 from "./realEstateBanner3.jpg";
 import realEstate1 from "./realEstate1.jpg";
 import realEstate2 from "./realEstate2.jpg";
-import realEstate3 from "./realEstate3.jpg";
-import realEstate4 from "./realEstate4.jpg";
-import realEstate5 from "./realEstate5.jpg";
-import realEstate6 from "./realEstate6.jpg";
-import realEstate7 from "./realEstate7.jpg";
-import realEstate8 from "./realEstate8.jpg";
-import realEstate9 from "./realEstate9.jpg";
-import realEstate10 from "./realEstate10.jpg";
-import realEstate11 from "./realEstate11.jpg";
+import realEstate3 from "./realEstate3.png";
+import realEstate4 from "./realEstate4.png";
+import realEstate5 from "./realEstate5.png";
+import realEstate6 from "./realEstate6.png";
+import realEstate7 from "./realEstate7.png";
+import realEstate8 from "./realEstate8.png";
+import realEstate9 from "./realEstate9.png";
+import realEstate10 from "./realEstate10.png";
+import realEstate11 from "./realEstate11.png";
 import realEstate12 from "./realEstate12.png";
-import realEstate13 from "./realEstate13.jpg";
-import realEstate14 from "./realEstate14.jpg";
+import realEstate13 from "./realEstate13.png";
+import realEstate14 from "./realEstate14.png";
 import realEstate15 from "./realEstate15.png";
 import realEstate16 from "./realEstate16.png";
 import realEstate17 from "./realEstate17.png";
@@ -878,6 +912,9 @@ export const assets = {
   education9,
   education10,
   education11,
+  capitalMarketbanner1,
+  capitalMarketbanner2,
+  capitalMarketbanner3,
   capitalMarket1,
   capitalMarket2,
   capitalMarket3,
@@ -936,6 +973,7 @@ export const assets = {
   communicationMedia7,
   realEstateBanner1,
   realEstateBanner2,
+  realEstateBanner3,
   realEstate1,
   realEstate2,
   realEstate3,
@@ -1032,6 +1070,36 @@ export const assets = {
   webDesign16,
   webDesign17,
   webDesign18,
+  gaming1,
+  gaming2,
+  gaming3,
+  gaming4,
+  gaming5,
+  gaming6,
+  gaming7,
+  gaming8,
+  gaming9,
+  gaming10,
+  gaming11,
+  gaming12,
+  gaming13,
+  gaming14,
+  gaming15,
+  gaming16,
+  gaming17,
+  gaming18,
+  gaming19,
+  gaming20,
+  gaming21,
+  gaming22,
+  gaming23,
+  gaming24,
+  gaming25,
+  gaming26,
+  gaming27,
+  gaming28,
+  gaming29,
+  gaming30,
 };
 
 export const navItems = [

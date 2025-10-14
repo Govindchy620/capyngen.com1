@@ -109,97 +109,97 @@ const Gaming = () => {
   const heroImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.gaming1,
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.gaming2,
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.gaming3,
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.gaming4,
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      src: assets.gaming5,
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.gaming6,
     },
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.gaming7,
     },
     {
       id: 8,
-      src: "https://plus.unsplash.com/premium_photo-1671436824833-91c0741e89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.gaming8,
     },
     {
       id: 9,
-      src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      src: assets.gaming9,
     },
     {
       id: 10,
-      src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      src: assets.gaming10,
     },
     {
       id: 11,
-      src: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
+      src: assets.gaming11,
     },
     {
       id: 12,
-      src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+      src: assets.gaming12,
     },
     {
       id: 13,
-      src: "https://images.unsplash.com/photo-1560089000-7433a4ebbd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      src: assets.gaming13,
     },
     {
       id: 14,
-      src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
+      src: assets.gaming14,
     },
     {
       id: 15,
-      src: "https://images.unsplash.com/photo-1606244864456-8bee63fce472?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80",
+      src: assets.gaming15,
     },
     {
       id: 16,
-      src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+      src: assets.gaming16,
     },
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.gaming18,
       title: "Custom Game Portals and Game app development",
       desc: "Just a few clicks and you can download, stream and interact with players.",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming19,
       title: "Multiplayer Server Setup and Management",
       desc: "The right servers with scalability make it possible to have smooth online gaming experiences.",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming20,
       title: "API and Payment Gateway Integration",
       desc: "All in-game transactions and purchases that are made will be quite safe and secure.",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming21,
       title: "Cloud gaming",
       desc: "The hosting service is of the highest performance to allow the most number of players to play at the same time.",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming22,
       title: "Gaming Analytics Solutions",
       desc: "To collect data on player behavior, engagement, and monetization.",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming23,
       title: "Maintenance and Support",
       desc: "Make sure the gaming platforms function normally, add security, and provide regular updates.",
     },
@@ -266,27 +266,27 @@ const Gaming = () => {
   ];
   const cardsSectionSliderData1 = [
     {
-      image: assets.bg1,
+      image: assets.gaming24,
       title: "Game app development and Studios",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming25,
       title: "Esports Teams and Platforms",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming26,
       title: "Gaming Communities and Forums",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming27,
       title: "Streaming and Content Creators",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming28,
       title: "Online Gaming Marketplaces",
     },
     {
-      image: assets.bg1,
+      image: assets.gaming29,
       title: "VR and AR Gaming Startups",
     },
   ];
@@ -369,7 +369,7 @@ const Gaming = () => {
           "Particularly the IT infrastructure of the right kind is the indisputable foundation for the smooth running of the Game app development , secure transaction, and scalable performance to support large-scale concurrent users.",
           "Gaming companies by mere digital marketing practices can attract the right crowd, build a faithful customer base, and make a flow of revenue that would be sustainable through the successful implementation of campaigns.",
         ]}
-        image={assets.whyChooseUs}
+        image={assets.gaming17}
         isHidden="hidden"
         imageHeight="aspect-[4/3] md:aspect-[1/1]"
       />
@@ -394,7 +394,7 @@ const Gaming = () => {
         heading="Key Features & Benefits"
         desc=""
         benefits={solutionsData}
-        image={assets.blockchainDevelopment}
+        image={assets.gaming30}
         footerNote=""
       />
       <GetStarted
@@ -455,7 +455,7 @@ const Gaming = () => {
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

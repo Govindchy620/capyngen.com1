@@ -38,7 +38,7 @@ const CompanyOverview = () => {
       <AtAGlance />
       <CustomerCountries />
       <FAQSection2 items={faqItems} />
-      <ScrollRevealEffect />
+      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };
