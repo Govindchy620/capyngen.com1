@@ -56,7 +56,7 @@ export default function Banner8({
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="w-full max-w-lg rounded-lg shadow-lg object-contain"
+              className="w-full max-w-lg rounded-lg object-contain"
               loading="lazy"
               decoding="async"
               role="img"

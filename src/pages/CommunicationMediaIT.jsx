@@ -212,28 +212,28 @@ const CommunicationMediaIT = () => {
   const panels = [
     {
       image: assets.communicationMediaBanner1,
-      title: "IT Solution For Media and Communication by Capyngen",
-      desc: " Lead the market with IT solutions For Media and communication  sectors from Capyngen. Receive custom-made broadcasting software, streaming platforms, telecom, and CMS for your business.",
+      title: "Digital Solutions for the Connected Media World",
+      desc: "Define the demand, and develop the transformation of the communication and media sectors through the usage of up-to-date IT solutions.",
     },
     {
       image: assets.communicationMediaBanner2,
-      title: "Panel 2",
-      desc: "Digital Art • Illustrations",
+      title: "Empowering the Digital Communication Era",
+      desc: "Develop communication platforms based on content, powered by data, and massaged with a customer-centric approach.",
     },
     {
       image: assets.communicationMediaBanner3,
-      title: "Panel 3",
-      desc: "Digital Art • Illustrations",
+      title: "Media Meets Technology",
+      desc: "Offer seamlessly immersive experiences with the use of automation, analytics, and intelligent systems.",
     },
     {
       image: assets.communicationMediaBanner4,
-      title: "SEO Speed Up Website",
-      desc: "Digital Art • Illustrations",
+      title: "Transform Communication & Media with Innovation",
+      desc: "Make the digitally enabled consumer engagement become the fastest way to access content and accelerate sales.",
     },
     {
       image: assets.communicationMediaBanner5,
-      title: "Panel 5",
-      desc: "Digital Art • Illustrations",
+      title: "The Future of Media is Digital",
+      desc: "Through the marriage of latest tech innovations, creativity and connectivity have been brought to your fingertip delight.",
     },
   ];
   const cardsSectionData1 = [

@@ -237,7 +237,7 @@ const Education = () => {
       title: "Reimagine Classrooms with Digital technology",
       subtitle:
         "Implement AI and analytics in education to speed up growth and efficiency.",
-      image: assets.educationBanner2,
+      image: assets.educationBanner3,
       ctaText: "Get Started",
       ctaLink: "#contact",
     },

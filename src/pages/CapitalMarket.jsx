@@ -309,15 +309,12 @@ const CapitalMarket = () => {
   const slidesData = [
     {
       image: assets.creativeAgencyFAQ,
-      heading:
-        "Revolutionizing Capital Markets through State-of-the-art Software Solutions",
+      heading: "Accelerate Trading with Capital Market Innovative Solutions",
       description: (
         <>
           <p>
-            Leading the way with customer-centric, highly reliable, and
-            adaptable software solutions for capital markets that help generate
-            seamless flow of trading, investment, and portfolio management
-            activities.
+            Facilitate the market operations with the help of transparency,
+            speed, and analytics.
           </p>
         </>
       ),
@@ -325,15 +322,12 @@ const CapitalMarket = () => {
     },
     {
       image: assets.creativeAgencyFAQ,
-      heading:
-        "Revolutionizing Capital Markets through State-of-the-art Software Solutions",
+      heading: "Digital Transformation of Capital Markets",
       description: (
         <>
           <p>
-            Leading the way with customer-centric, highly reliable, and
-            adaptable software solutions for capital markets that help generate
-            seamless flow of trading, investment, and portfolio management
-            activities.
+            Revolutionize trading and risk management by implementing AI-driven
+            systems.
           </p>
         </>
       ),
@@ -341,15 +335,12 @@ const CapitalMarket = () => {
     },
     {
       image: assets.creativeAgencyFAQ,
-      heading:
-        "Revolutionizing Capital Markets through State-of-the-art Software Solutions",
+      heading: "Keep Traders Up-to-Date with Real-Time Data",
       description: (
         <>
           <p>
-            Leading the way with customer-centric, highly reliable, and
-            adaptable software solutions for capital markets that help generate
-            seamless flow of trading, investment, and portfolio management
-            activities.
+            Get the most out of capital market platforms from the perspective of
+            reliability, compliance, and high-performance.
           </p>
         </>
       ),

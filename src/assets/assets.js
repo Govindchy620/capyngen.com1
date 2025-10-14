@@ -339,17 +339,18 @@ import banking19 from "./banking19.png";
 import banking20 from "./banking20.png";
 import educationBanner1 from "./educationBanner1.jpg";
 import educationBanner2 from "./educationBanner2.jpg";
+import educationBanner3 from "./educationBanner3.jpg";
 import education1 from "./education1.jpg";
-import education2 from "./education2.jpg";
-import education3 from "./education3.jpg";
-import education4 from "./education4.jpg";
+import education2 from "./education2.png";
+import education3 from "./education3.png";
+import education4 from "./education4.png";
 import education5 from "./education5.jpg";
-import education6 from "./education6.jpg";
-import education7 from "./education7.jpg";
-import education8 from "./education8.jpg";
-import education9 from "./education9.jpg";
-import education10 from "./education10.jpg";
-import education11 from "./education11.jpg";
+import education6 from "./education6.png";
+import education7 from "./education7.png";
+import education8 from "./education8.png";
+import education9 from "./education9.png";
+import education10 from "./education10.png";
+import education11 from "./education11.png";
 import capitalMarket1 from "./capitalMarket1.jpg";
 import capitalMarket2 from "./capitalMarket2.jpg";
 import capitalMarket3 from "./capitalMarket3.jpg";
@@ -865,6 +866,7 @@ export const assets = {
   banking20,
   educationBanner1,
   educationBanner2,
+  educationBanner3,
   education1,
   education2,
   education3,
