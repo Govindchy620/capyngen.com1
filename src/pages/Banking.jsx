@@ -224,28 +224,28 @@ const Banking = () => {
   const panels = [
     {
       image: assets.bankingBanner1,
-      title: "Breakthrough the Banking with Future-type Software Solutions",
-      desc: "A bank of the future that accepts and incorporates technology as much as it innovates customer experience within the banking space.",
+      title: "Empower Banking Through Digital Innovation",
+      desc: "Be the leader of growth and safety with the latest fintech and cloud technologies tailored for banking of the future.",
     },
     {
       image: assets.bankingBanner2,
-      title: "Panel 2",
-      desc: "Digital Art • Illustrations",
+      title: "Redefine the Future of Banking",
+      desc: "Achieve smooth, safe, and client-centered financial activities through our digital bank solutions.",
     },
     {
       image: assets.bankingBanner3,
-      title: "Panel 3",
-      desc: "Digital Art • Illustrations",
+      title: "Banking Transformation Starts Here",
+      desc: "Streamline the work process to increase the morale of your business with automation, analytics, and risk management.",
     },
     {
       image: assets.bankingBanner4,
-      title: "SEO Speed Up Website",
-      desc: "Digital Art • Illustrations",
+      title: "Secure, Scalable & Smart IT Banking Solutions",
+      desc: "Prepare the infrastructure of your bank for easy banking and peace of mind of the customer.",
     },
     {
       image: assets.bankingBanner5,
-      title: "Panel 5",
-      desc: "Digital Art • Illustrations",
+      title: "The Future of Digital Finance",
+      desc: "Realize real-time, mobile-first, and AI-driven banking for a first-mover advantage in the market.",
     },
   ];
   const cardsSectionData1 = [

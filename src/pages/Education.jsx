@@ -216,17 +216,27 @@ const Education = () => {
   const slidesData = [
     {
       id: 1,
-      title: "Creative and Technical IT Solutions for the Educational Sector",
+      title: "Transform Learning with Smart Education Solutions",
       subtitle:
-        "Offering educational organizations digital tools, cloud services and data-driven learning management System that are futuristic and versatile.",
+        "Motivate students and teachers with e-learning resources that open the doors to development and engagement.",
       image: assets.educationBanner1,
       ctaText: "Explore Projects",
       ctaLink: "#projects",
     },
     {
       id: 2,
-      title: "Seamless Performance",
-      subtitle: "Mobile-first, future-ready solutions.",
+      title: "Building the Future of EdTech",
+      subtitle:
+        "The school can be more meaningful with our knowledge software and e-learning platforms.",
+      image: assets.educationBanner2,
+      ctaText: "Get Started",
+      ctaLink: "#contact",
+    },
+    {
+      id: 3,
+      title: "Reimagine Classrooms with Digital technology",
+      subtitle:
+        "Implement AI and analytics in education to speed up growth and efficiency.",
       image: assets.educationBanner2,
       ctaText: "Get Started",
       ctaLink: "#contact",
