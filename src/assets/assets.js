@@ -104,7 +104,6 @@ import paidAdvertising from "./paidAdvertising.png";
 import emailCampaigns from "./emailCampaigns.png";
 import brandingLogoDesign from "./brandingLogoDesign.png";
 import brandingVisualIdentity from "./brandingVisualIdentity.png";
-import brandingBrandGuidelines from "./brandingBrandGuidelines.png";
 import brandingPackagingDesign from "./brandingPackagingDesign.png";
 import digitalMarketing1 from "./digitalMarketing1.jpg";
 import digitalMarketing2 from "./digitalMarketing2.png";
@@ -441,6 +440,46 @@ import homepageGoal from "./homepageGoal.png";
 import homepageAudience from "./homepageAudience.png";
 import homepageReporting from "./homepageReporting.png";
 import homepageDataDriven from "./homepageDataDriven.png";
+import uiUx1 from "./uiUx1.png";
+import uiUx2 from "./uiUx2.png";
+import uiUx3 from "./uiUx3.png";
+import uiUx4 from "./uiUx4.png";
+import uiUx5 from "./uiUx5.png";
+import uiUx6 from "./uiUx6.png";
+import uiUx7 from "./uiUx7.png";
+import uiUx8 from "./uiUx8.png";
+import uiUx9 from "./uiUx9.png";
+import uiUx10 from "./uiUx10.png";
+import uiUx11 from "./uiUx11.png";
+import uiUx12 from "./uiUx12.png";
+import uiUx13 from "./uiUx13.png";
+import uiUx14 from "./uiUx14.png";
+import uiUx15 from "./uiUx15.png";
+import uiUx16 from "./uiUx16.png";
+import uiUx17 from "./uiUx17.png";
+import uiUx18 from "./uiUx18.png";
+import consulting1 from "./consulting1.png";
+import consulting2 from "./consulting2.png";
+import consulting3 from "./consulting3.png";
+import consulting4 from "./consulting4.png";
+import consulting5 from "./consulting5.png";
+import consulting6 from "./consulting6.png";
+import consulting7 from "./consulting7.png";
+import consulting8 from "./consulting8.png";
+import consulting9 from "./consulting9.png";
+import consulting10 from "./consulting10.png";
+import consulting11 from "./consulting11.png";
+import webDesign1 from "./webDesign1.png";
+import brandingDesign1 from "./brandingDesign1.png";
+import brandingDesign3 from "./brandingDesign3.png";
+import brandingDesign4 from "./brandingDesign4.png";
+import brandingDesign6 from "./brandingDesign6.png";
+import brandingDesign7 from "./brandingDesign7.png";
+import brandingDesign8 from "./brandingDesign8.png";
+import brandingDesign10 from "./brandingDesign10.png";
+import brandingDesign11 from "./brandingDesign11.png";
+import brandingDesign14 from "./brandingDesign14.png";
+import brandingDesign15 from "./brandingDesign15.png";
 
 export const assets = {
   homepageGoal,
@@ -553,7 +592,6 @@ export const assets = {
   emailCampaigns,
   brandingLogoDesign,
   brandingVisualIdentity,
-  brandingBrandGuidelines,
   brandingPackagingDesign,
   digitalMarketing1,
   digitalMarketing2,
@@ -886,6 +924,46 @@ export const assets = {
   homepageEnergy,
   homepageHealth,
   homepageIndustries,
+  uiUx1,
+  uiUx2,
+  uiUx3,
+  uiUx4,
+  uiUx5,
+  uiUx6,
+  uiUx7,
+  uiUx8,
+  uiUx9,
+  uiUx10,
+  uiUx11,
+  uiUx12,
+  uiUx13,
+  uiUx14,
+  uiUx15,
+  uiUx16,
+  uiUx17,
+  uiUx18,
+  consulting1,
+  consulting2,
+  consulting3,
+  consulting4,
+  consulting5,
+  consulting6,
+  consulting7,
+  consulting8,
+  consulting9,
+  consulting10,
+  consulting11,
+  webDesign1,
+  brandingDesign1,
+  brandingDesign3,
+  brandingDesign4,
+  brandingDesign6,
+  brandingDesign7,
+  brandingDesign8,
+  brandingDesign10,
+  brandingDesign11,
+  brandingDesign14,
+  brandingDesign15,
 };
 
 export const navItems = [

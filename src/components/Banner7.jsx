@@ -25,7 +25,7 @@ const Banner7 = () => {
         <div className="lg:col-span-4 mt-10 lg:mt-0">
           <img
             className="w-full rounded-xl"
-            src={assets.uiUxDesign}
+            src={assets.uiUx1}
             alt="Hero section illustration"
           />
         </div>

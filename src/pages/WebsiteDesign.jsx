@@ -358,7 +358,7 @@ const WebSiteDesign = () => {
         titlePrefix=""
         titleSuffix="That Works for Your Business"
         description={`The world sees your business through your website. Capyngen has the solution for you - Website Design Services, which combine eye-catching design, clever technology, and a clear strategy. We don’t just build websites that look beautiful, they also function. Are you looking for a corporate website, a visually engaging portfolio, or an e-commerce site that attracts and retains customers? Our team is on a mission to deliver your brand the right amount of visibility in the digital space. `}
-        imageSrc={assets.eCommerceDesign}
+        imageSrc={assets.webDesign1}
         imageAlt="Ecommerce Design Illustration"
         bgColor="bg-gray-900"
         iconColor="bg-blue-700"

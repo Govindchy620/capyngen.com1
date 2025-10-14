@@ -171,7 +171,7 @@ const Consulting = () => {
       title: "IT Strategy & Planning",
       description:
         "The creation of strategic IT roadmaps that integrate technology projects with business objectives and the overall mission of the company.",
-      image: assets.customAiSolution,
+      image: assets.consulting2,
       cardBg: "bg-blue-100",
     },
 
@@ -179,21 +179,21 @@ const Consulting = () => {
       title: "Cloud Consulting",
       description:
         "A cloud uptake plan that charts the best cloud method (public, private, hybrid) for the set of requirements.",
-      image: assets.appDevelopment,
+      image: assets.consulting3,
       cardBg: "bg-green-100",
     },
     {
       title: "Cybersecurity Consulting",
       description:
         "The security risk assessment which uncovers the security gaps, threats, and possible ways of attack in the whole infrastructure.",
-      image: assets.customAiSolution,
+      image: assets.consulting4,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Digital Transformation Consulting",
       description:
         "Business process simplification by identifying the suitable RPA, AI, and workflow tools to use for the process of automation.",
-      image: assets.customAiSolution,
+      image: assets.consulting5,
       cardBg: "bg-blue-100",
     },
 
@@ -201,14 +201,14 @@ const Consulting = () => {
       title: "IT Infrastructure Consulting",
       description:
         "The improvements in network architecture that make network infrastructures high-performance, secure, and scalable for growth.",
-      image: assets.appDevelopment,
+      image: assets.consulting6,
       cardBg: "bg-green-100",
     },
     {
       title: "Business Consulting Solutions",
       description:
         "Development of the growth strategy that is composed of detailed plans for market expansion, new product launches, and partnerships.",
-      image: assets.customAiSolution,
+      image: assets.consulting7,
       cardBg: "bg-yellow-100",
     },
   ];
@@ -236,13 +236,13 @@ const Consulting = () => {
     {
       title: "Healthcare",
       desc: "IT systems that are HIPAA-compliant, platforms for telemedicine, electronic health records, patient management solutions, and healthcare analytics that can be helpful in improving patient care and also the operational efficiency.",
-      image: assets.eCommerceSolution,
+      image: assets.consulting10,
       textColor: "text-white",
     },
     {
       title: "Finance & Banking",
       desc: "Financial systems that are secure, solutions for regulatory compliance, fraud detection, risk management, platforms for digital banking, and fintech innovations that are in line with the strict requirements of the industry.",
-      image: assets.websiteDesign,
+      image: assets.consulting9,
       textColor: "text-white",
     },
     {
@@ -260,13 +260,13 @@ const Consulting = () => {
     {
       title: "Education & EdTech",
       desc: "Systems for learning management, platforms for virtual classrooms, student information systems, educational analytics, and digital transformation initiatives that are helpful in education delivery of the modern kind.",
-      image: assets.customAiSolution,
+      image: assets.consulting8,
       textColor: "text-white",
     },
     {
       title: "Government & Public Sector",
       desc: "The digitization of citizen services, platforms for e-governance, solutions for data security, management of compliance, and technology modernization that is improving public service delivery efficiency.",
-      image: assets.customAiSolution,
+      image: assets.consulting11,
       textColor: "text-white",
     },
   ];
@@ -286,7 +286,7 @@ const Consulting = () => {
             "Digital Consulting Services",
             "Enterprise Consulting Company",
           ]}
-          image={assets.capyngen3d}
+          image={assets.consulting1}
         />
       </div>
       {/* Foreground Content (scrolls over background) */}

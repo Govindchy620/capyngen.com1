@@ -109,14 +109,14 @@ const BrandingIdentityDesign = () => {
       title: "Logo Design",
       description:
         "One-of-a-kind designs that immediately are the names of products and services the brand is recognizable and are also a familiar occurrence in the matter of trust.",
-      image: assets.brandingLogoDesign,
+      image: assets.brandingDesign3,
       cardBg: "bg-blue-100",
     },
     {
       title: "Visual Identity",
       description:
         "Design elements such as the colors, fonts, icons, and images used for all the channels in order to keep the look uniform.",
-      image: assets.brandingVisualIdentity,
+      image: assets.brandingDesign4,
       cardBg: "bg-pink-100",
     },
     {
@@ -130,21 +130,21 @@ const BrandingIdentityDesign = () => {
       title: "Packaging Design",
       description:
         "Beautiful packages for the customers, who at the same time are the mirror of your brand.",
-      image: assets.brandingPackagingDesign,
+      image: assets.brandingDesign6,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Stationery & Collateral Design",
       description:
         "Business cards, brochures, and promotional materials are designed.",
-      image: assets.careersAbout1,
+      image: assets.brandingDesign7,
       cardBg: "bg-purple-100",
     },
     {
       title: "Digital Branding",
       description:
         "The digital avenues like your website, social media, and campaign that make your online presence simple and easy to follow.",
-      image: assets.appDevelopment,
+      image: assets.brandingDesign8,
       cardBg: "bg-red-100",
     },
   ];
@@ -264,14 +264,14 @@ const BrandingIdentityDesign = () => {
       title: "Minimalist Design",
       description:
         "Neat and straightforward visuals effectively deliver the message.",
-      image: assets.customAiSolution,
+      image: assets.brandingDesign10,
       cardBg: "bg-blue-100",
     },
     {
       title: "Bold Typography",
       description:
         "Hard-to-find fonts are a good way to grab people's attention towards your brand.",
-      image: assets.careersAbout1,
+      image: assets.brandingDesign11,
       cardBg: "bg-pink-100",
     },
     {
@@ -291,14 +291,14 @@ const BrandingIdentityDesign = () => {
       title: "Dynamic Logos",
       description:
         "Logos which are flexible for both printed and virtual worlds.",
-      image: assets.careersAbout1,
+      image: assets.brandingDesign14,
       cardBg: "bg-purple-100",
     },
     {
       title: "Interactive Digital Branding",
       description:
         "The use of motion graphics and animations for grabbing the attention of consumers makes the digital branding process easier and more effective.",
-      image: assets.appDevelopment,
+      image: assets.brandingDesign15,
       cardBg: "bg-red-100",
     },
   ];
@@ -318,7 +318,7 @@ const BrandingIdentityDesign = () => {
         description="One of the main reasons consumers choose a certain product over another is the branding. Capyngen's branding design services, a branding expert who is always prepared to think out of the box, come up with ways to simply and globally standardize brand identities. Thus, we are not limited in representing companies of various sizes and in different stages of their development, ranging from the idea stage to that of a multinational corporation, which allows us to produce brand identities that are visually attractive and that can go beyond geographical borders."
         primaryBtnText="Get started"
         primaryBtnLink="#"
-        image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+        image={assets.brandingDesign1}
       />
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">

@@ -99,47 +99,47 @@ const UiUxDesign = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.uiUx9,
       title: "Enhanced User Engagement & Retention",
       desc: "Develop user-focused and interactive experiences that attract users back, thereby increasing loyalty and long-lasting engagement.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx10,
       title: "Improved Conversion Rates",
       desc: "Wisely chosen layouts and workflows motivate visitors to take specific actions, boosting sales, sign-ups, and overall engagement.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx11,
       title: "Intuitive, Responsive, and Accessible Design",
       desc: "Deliver smooth experiences across all devices, ensuring usability for everyone—including users with disabilities.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx12,
       title: "Faster Load Times & Optimized Performance",
       desc: "Quick-loading apps with seamless navigation reduce bounce rates and enhance user satisfaction.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx13,
       title: "Scalable Architecture for Growth",
       desc: "Build platforms that can handle increased traffic, new features, and expansion without compromising performance or stability.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx14,
       title: "Strong Branding & Visual Identity",
       desc: "Design consistent and visually appealing interfaces that clearly communicate your brand values and leave a lasting impression.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx15,
       title: "Seamless Integration with Tools & Services",
       desc: "Connect your app with CRMs, payment gateways, analytics, and other third-party services to create a unified ecosystem.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx16,
       title: "Data-Driven Decision Making",
       desc: "Use analytics and user behavior insights to refine UI/UX, marketing strategies, and product offerings.",
     },
     {
-      image: assets.bg1,
+      image: assets.uiUx17,
       title: "Security & Privacy Compliance",
       desc: "Protect user data and build trust by adhering to industry standards, regulations, and cybersecurity best practices.",
     },
@@ -186,41 +186,41 @@ const UiUxDesign = () => {
     {
       title: "User Research & Analysis",
       description: "Get to know your users, their behaviors, and preferences.",
-      image: assets.customAiSolution,
+      image: assets.uiUx3,
       cardBg: "bg-blue-100",
     },
     {
       title: "Wireframing & Prototyping",
       description:
         "Visualize app and website layouts before the coding process.",
-      image: assets.appDevelopment,
+      image: assets.uiUx4,
       cardBg: "bg-green-100",
     },
     {
       title: "Visual & Interaction Design",
       description:
         "Make the user interface visually attractive and interactive.",
-      image: assets.customAiSolution,
+      image: assets.uiUx5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Mobile & Web UI/UX Design",
       description:
         "Create apps and websites that are compatible with all devices and are user-friendly.",
-      image: assets.careersAbout1,
+      image: assets.uiUx6,
       cardBg: "bg-pink-100",
     },
     {
       title: "UX Audit & Optimization",
       description: "Locate the problem areas and improve usability.",
-      image: assets.careersAbout1,
+      image: assets.uiUx7,
       cardBg: "bg-purple-100",
     },
     {
       title: "Accessibility & Usability Design",
       description:
         "Designing digital products that are accessible and easy to use for the entire user base.",
-      image: assets.appDevelopment,
+      image: assets.uiUx8,
       cardBg: "bg-red-100",
     },
   ];
@@ -228,11 +228,11 @@ const UiUxDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
-      <div className="sticky inset-0">
+      <div className="lg:sticky inset-0">
         <Banner7 />
       </div>
       {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
+      <div className="relative lg:z-10">
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
@@ -249,7 +249,7 @@ const UiUxDesign = () => {
             `UI (User Interface) and UX (User Experience) design refer to the creation of visually attractive, user-friendly, and simple-to-navigate interfaces. The former revolves around the appearance and structure of applications or websites whereas the latter aims at giving a hassle-free and delightful experience.`,
             `One of the reasons why Capyngen is the most sought after company for UI UX design services in India is that their expert team delivers tailor-made solutions that make web and mobile platforms more user-friendly, engaging, and result-oriented.`,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.uiUx2}
           isHidden={true}
           imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
@@ -324,7 +324,7 @@ const UiUxDesign = () => {
               </ul>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.uiUx18}
           isHidden={true}
           background={assets.patternBg1}
         />
