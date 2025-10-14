@@ -38,7 +38,7 @@ const HorizontalProcessSection = () => {
       title: "Execution & Continuous Optimization",
       description:
         "We are very careful about implementing our programs from the step of the takeoff to that of the landing. Our team is constantly working on the smallest parts of the programs, thus ensuring that your IT services and digital marketing will be long-term profitable.",
-      image: assets.workProcess4,
+      image: assets.homepageExecution,
     },
     {
       id: 5,

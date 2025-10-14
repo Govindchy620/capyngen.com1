@@ -210,21 +210,21 @@ import webdevBanner8 from "./webdevBanner8.jpg";
 import webdevBanner9 from "./webdevBanner9.jpg";
 import webdevBanner10 from "./webdevBanner10.jpg";
 import webDev1 from "./webDev1.png";
-import webDev2 from "./webDev2.jpg";
-import webDev3 from "./webDev3.jpg";
-import webDev4 from "./webDev4.jpg";
-import webDev5 from "./webDev5.jpg";
-import webDev6 from "./webDev6.jpg";
-import webDev7 from "./webDev7.jpg";
-import webDev8 from "./webDev8.jpg";
+import webDev2 from "./webDev2.png";
+import webDev3 from "./webDev3.png";
+import webDev4 from "./webDev4.png";
+import webDev5 from "./webDev5.png";
+import webDev6 from "./webDev6.png";
+import webDev7 from "./webDev7.png";
+import webDev8 from "./webDev8.png";
 import webDev9 from "./webDev9.png";
-import webDev10 from "./webDev10.jpg";
-import webDev11 from "./webDev11.jpg";
-import webDev12 from "./webDev12.jpg";
-import webDev13 from "./webDev13.jpg";
-import webDev14 from "./webDev14.jpg";
-import webDev15 from "./webDev15.jpg";
-import webDev16 from "./webDev16.jpg";
+import webDev10 from "./webDev10.png";
+import webDev11 from "./webDev11.png";
+import webDev12 from "./webDev12.png";
+import webDev13 from "./webDev13.png";
+import webDev14 from "./webDev14.png";
+import webDev15 from "./webDev15.png";
+import webDev16 from "./webDev16.png";
 import webDev17 from "./webDev17.jpg";
 import webDev18 from "./webDev18.jpg";
 import webDev19 from "./webDev19.jpg";
@@ -232,36 +232,36 @@ import webDev20 from "./webDev20.jpg";
 import webDev21 from "./webDev21.jpg";
 import webDev22 from "./webDev22.jpg";
 import appDev2 from "./appDev2.jpg";
-import appDev3 from "./appDev3.jpg";
-import appDev4 from "./appDev4.jpg";
-import appDev5 from "./appDev5.jpg";
-import appDev6 from "./appDev6.jpg";
-import appDev7 from "./appDev7.jpg";
-import appDev8 from "./appDev8.jpg";
+import appDev3 from "./appDev3.png";
+import appDev4 from "./appDev4.png";
+import appDev5 from "./appDev5.png";
+import appDev6 from "./appDev6.png";
+import appDev7 from "./appDev7.png";
+import appDev8 from "./appDev8.png";
 import customAi1 from "./customAi1.jpg";
-import customAi2 from "./customAi2.jpg";
-import customAi3 from "./customAi3.jpg";
-import customAi4 from "./customAi4.jpg";
-import customAi5 from "./customAi5.jpg";
-import customAi6 from "./customAi6.jpg";
-import customAi7 from "./customAi7.jpg";
+import customAi2 from "./customAi2.png";
+import customAi3 from "./customAi3.png";
+import customAi4 from "./customAi4.png";
+import customAi5 from "./customAi5.png";
+import customAi6 from "./customAi6.png";
+import customAi7 from "./customAi7.png";
 import eCommSol1 from "./eCommSol1.png";
 import eCommSol2 from "./eCommSol2.jpg";
-import eCommSol3 from "./eCommSol3.jpg";
-import eCommSol4 from "./eCommSol4.jpg";
-import eCommSol5 from "./eCommSol5.jpg";
-import eCommSol6 from "./eCommSol6.jpg";
-import eCommSol7 from "./eCommSol7.jpg";
-import eCommSol8 from "./eCommSol8.jpg";
-import eCommSol9 from "./eCommSol9.jpg";
-import eCommSol10 from "./eCommSol10.jpg";
-import eCommSol11 from "./eCommSol11.jpg";
-import eCommSol12 from "./eCommSol12.jpg";
-import eCommSol13 from "./eCommSol13.jpg";
-import eCommSol14 from "./eCommSol14.jpg";
-import eCommSol15 from "./eCommSol15.jpg";
-import eCommSol16 from "./eCommSol16.jpg";
-import eCommSol17 from "./eCommSol17.jpg";
+import eCommSol3 from "./eCommSol3.png";
+import eCommSol4 from "./eCommSol4.png";
+import eCommSol5 from "./eCommSol5.png";
+import eCommSol6 from "./eCommSol6.png";
+import eCommSol7 from "./eCommSol7.png";
+import eCommSol8 from "./eCommSol8.png";
+import eCommSol9 from "./eCommSol9.png";
+import eCommSol10 from "./eCommSol10.png";
+import eCommSol11 from "./eCommSol11.png";
+import eCommSol12 from "./eCommSol12.png";
+import eCommSol13 from "./eCommSol13.png";
+import eCommSol14 from "./eCommSol14.png";
+import eCommSol15 from "./eCommSol15.png";
+import eCommSol16 from "./eCommSol16.png";
+import eCommSol17 from "./eCommSol17.png";
 import eCommSol18 from "./eCommSol18.jpg";
 import devOps1 from "./devOps1.png";
 import devOps2 from "./devOps2.png";
@@ -440,6 +440,11 @@ import homepageGoal from "./homepageGoal.png";
 import homepageAudience from "./homepageAudience.png";
 import homepageReporting from "./homepageReporting.png";
 import homepageDataDriven from "./homepageDataDriven.png";
+import homepageExecution from "./homepageExecution.png";
+import homepageCapyngenNews from "./homepageCapyngenNews.png";
+import homepageIndustryBlog from "./homepageIndustryBlog.png";
+import homepageWhyChoose from "./homepageWhyChoose.png";
+import homepageTechnologies from "./homepageTechnologies.png";
 import uiUx1 from "./uiUx1.png";
 import uiUx2 from "./uiUx2.png";
 import uiUx3 from "./uiUx3.png";
@@ -470,6 +475,22 @@ import consulting9 from "./consulting9.png";
 import consulting10 from "./consulting10.png";
 import consulting11 from "./consulting11.png";
 import webDesign1 from "./webDesign1.png";
+import webDesign2 from "./webDesign2.png";
+import webDesign3 from "./webDesign3.png";
+import webDesign4 from "./webDesign4.png";
+import webDesign5 from "./webDesign5.png";
+import webDesign6 from "./webDesign6.png";
+import webDesign7 from "./webDesign7.png";
+import webDesign8 from "./webDesign8.png";
+import webDesign10 from "./webDesign10.png";
+import webDesign11 from "./webDesign11.png";
+import webDesign12 from "./webDesign12.png";
+import webDesign13 from "./webDesign13.png";
+import webDesign14 from "./webDesign14.png";
+import webDesign15 from "./webDesign15.png";
+import webDesign16 from "./webDesign16.png";
+import webDesign17 from "./webDesign17.png";
+import webDesign18 from "./webDesign18.png";
 import brandingDesign1 from "./brandingDesign1.png";
 import brandingDesign3 from "./brandingDesign3.png";
 import brandingDesign4 from "./brandingDesign4.png";
@@ -480,8 +501,25 @@ import brandingDesign10 from "./brandingDesign10.png";
 import brandingDesign11 from "./brandingDesign11.png";
 import brandingDesign14 from "./brandingDesign14.png";
 import brandingDesign15 from "./brandingDesign15.png";
+import eCommDesign1 from "./eCommDesign1.png";
+import eCommDesign2 from "./eCommDesign2.png";
+import eCommDesign3 from "./eCommDesign3.png";
+import eCommDesign4 from "./eCommDesign4.png";
+import eCommDesign5 from "./eCommDesign5.png";
+import eCommDesign6 from "./eCommDesign6.png";
+import eCommDesign7 from "./eCommDesign7.png";
+import eCommDesign8 from "./eCommDesign8.png";
+import eCommDesign9 from "./eCommDesign9.png";
+import eCommDesign10 from "./eCommDesign10.png";
+import eCommDesign11 from "./eCommDesign11.png";
+import eCommDesign12 from "./eCommDesign12.png";
 
 export const assets = {
+  homepageCapyngenNews,
+  homepageIndustryBlog,
+  homepageWhyChoose,
+  homepageTechnologies,
+  homepageExecution,
   homepageGoal,
   homepageAudience,
   homepageReporting,
@@ -964,6 +1002,34 @@ export const assets = {
   brandingDesign11,
   brandingDesign14,
   brandingDesign15,
+  eCommDesign1,
+  eCommDesign2,
+  eCommDesign3,
+  eCommDesign4,
+  eCommDesign5,
+  eCommDesign6,
+  eCommDesign7,
+  eCommDesign8,
+  eCommDesign9,
+  eCommDesign10,
+  eCommDesign11,
+  eCommDesign12,
+  webDesign2,
+  webDesign3,
+  webDesign4,
+  webDesign5,
+  webDesign6,
+  webDesign7,
+  webDesign8,
+  webDesign10,
+  webDesign11,
+  webDesign12,
+  webDesign13,
+  webDesign14,
+  webDesign15,
+  webDesign16,
+  webDesign17,
+  webDesign18,
 };
 
 export const navItems = [

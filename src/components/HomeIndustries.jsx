@@ -15,9 +15,9 @@ export default function HomeIndustries() {
           {/* Image */}
           <div className="overflow-hidden object-contain">
             <img
-              src={assets.technologiesImg}
+              src={assets.homepageTechnologies}
               alt="People discussing IT project"
-              className="object-cover w-full md:w-5/6 flex items-end justify-self-end"
+              className="object-cover lg:min-h-[650px] w-full md:w-5/6 flex items-end justify-self-end"
             />
           </div>
           {/* Stat Card - overlays image on large screens, sits below on small screens */}

@@ -196,7 +196,7 @@ const WebSiteDesign = () => {
       title: "Custom Website Design Services",
       description:
         "We make websites that are one-of-a-kind and show off your brand’s identity. Nothing is standard, even the smallest detail is to ensure your business gets noticed online.",
-      image: assets.customAiSolution,
+      image: assets.webDesign3,
       cardBg: "bg-blue-100",
     },
 
@@ -204,35 +204,35 @@ const WebSiteDesign = () => {
       title: "Responsive Website Design Services",
       description:
         "It doesn’t matter whether someone is visiting your site on a desktop computer, tablet, or mobile phone; it will always be perfect for them and hence a quick and trouble-free user experience.",
-      image: assets.appDevelopment,
+      image: assets.webDesign4,
       cardBg: "bg-green-100",
     },
     {
       title: "Creative Website Design Services",
       description:
         "Website designs are modern, eye-catching, and user-friendly that attract new visitors and make them stay on the site for a longer period of time.",
-      image: assets.customAiSolution,
+      image: assets.webDesign5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Corporate Website Design Services",
       description:
         "Websites that are designed professionally and are scalable get you loved by your customers and hence, your business becomes more powerful.",
-      image: assets.careersAbout1,
+      image: assets.webDesign6,
       cardBg: "bg-pink-100",
     },
     {
       title: "E-commerce Website Design Services",
       description:
         "Online stores that are safe, simple to use with easy and quick checkout are designed just to increase your selling.",
-      image: assets.careersAbout1,
+      image: assets.webDesign7,
       cardBg: "bg-purple-100",
     },
     {
       title: "Landing Page Design Services",
       description:
         "Landing pages with high conversion rates are made to be the source of leads, sign-ups, and get the targeted audience to take the desired next step.",
-      image: assets.appDevelopment,
+      image: assets.webDesign8,
       cardBg: "bg-red-100",
     },
   ];
@@ -298,54 +298,53 @@ const WebSiteDesign = () => {
         "bg-gradient-to-tr from-[#0f172a] to-[#4b5563] hover:from-[#1e293b] hover:to-[#6b7280]", // dark slate to gray
     },
   ];
-
   const cardsSectionSliderData1 = [
     {
       title: "E-commerce & Retail",
       desc: "",
-      image: assets.eCommerceSolution,
+      image: assets.webDesign11,
       textColor: "text-white",
     },
     {
       title: "Healthcare & Wellness",
       desc: "",
-      image: assets.websiteDesign,
+      image: assets.webDesign12,
       textColor: "text-white",
     },
     {
       title: "Education & E-learning",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.webDesign13,
       textColor: "text-white",
     },
     {
       title: "Real Estate",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.webDesign14,
       textColor: "text-white",
     },
     {
       title: "IT & Software",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.webDesign15,
       textColor: "text-white",
     },
     {
       title: "Corporate & Enterprise Solutions",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.webDesign16,
       textColor: "text-white",
     },
     {
       title: "Travel & Hospitality",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.webDesign17,
       textColor: "text-white",
     },
     {
       title: "Startups & Entrepreneurs",
       desc: "",
-      image: assets.customAiSolution,
+      image: assets.webDesign18,
       textColor: "text-white",
     },
   ];
@@ -433,7 +432,7 @@ const WebSiteDesign = () => {
               </ul>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.webDesign2}
           background={assets.patternBg1}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[3/4]"
@@ -494,7 +493,7 @@ const WebSiteDesign = () => {
           heading="Key Features of Our Website Design Services"
           desc="At Capyngen, our website design services are specifically made to bring about a positive impact, functionality, and value for the long term. Here are our unique selling points:"
           benefits={benefitsData}
-          image={assets.blockchainApplications}
+          image={assets.webDesign10}
           footerNote=""
         />
         <CardsSectionSlider

@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
                 aria-hidden="true"
               />
               <img
-                src={assets.whyChooseUs}
+                src={assets.homepageWhyChoose}
                 alt="Capyngen professional team collaborating in a modern office"
                 className="relative z-10 w-full h-full object-cover rounded-2xl animate-diagonalBounce"
                 loading="lazy"

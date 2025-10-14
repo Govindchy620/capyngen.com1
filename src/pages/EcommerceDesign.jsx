@@ -177,63 +177,63 @@ const EcommerceDesign = () => {
       title: "E-commerce Website Design",
       description:
         "The visually appealing e-commerce website design services are like fuel for an online business. Experts create responsive, user-friendly, and high-converting websites suitable for both startups and enterprises.",
-      image: assets.customAiSolution,
+      image: assets.eCommDesign4,
       cardBg: "bg-blue-100",
     },
     {
       title: "E-commerce UI Design",
       description:
         "See e-commerce design solutions by Capyngen at work and get a glimpse of potential user engagement. Stunning UI can augment online sales and improve customer retention.",
-      image: assets.appDevelopment,
+      image: assets.eCommDesign5,
       cardBg: "bg-green-100",
     },
     {
       title: "E-commerce App UI Design",
       description:
         "Smart e-commerce mobile app designs for Android and iOS ensure smooth, intuitive shopping experiences that increase engagement and customer loyalty.",
-      image: assets.customAiSolution,
+      image: assets.eCommDesign6,
       cardBg: "bg-yellow-100",
     },
     {
       title: "E-commerce Database Design",
       description:
         "Efficient and secure database design ensures scalability, smooth transactions, and reliable store performance, providing a seamless customer experience.",
-      image: assets.careersAbout1,
+      image: assets.eCommDesign7,
       cardBg: "bg-pink-100",
     },
     {
       title: "Custom E-commerce Solutions",
       description:
         "Tailored e-commerce solutions designed to fit your brand’s exact needs. Flexible, scalable, and optimized for conversions and business growth.",
-      image: assets.careersAbout1,
+      image: assets.eCommDesign8,
       cardBg: "bg-purple-100",
     },
     {
       title: "E-commerce Web Design Services",
       description:
         "A perfect blend of art and science—mobile-responsive, fast-loading, and optimized websites built for exceptional user experience and SEO.",
-      image: assets.appDevelopment,
+      image: assets.eCommDesign9,
       cardBg: "bg-red-100",
     },
     {
       title: "E-commerce Mobile App Design",
       description:
         "Cross-platform mobile app designs with features like push notifications, personalized dashboards, and secure payment gateways for better customer engagement.",
-      image: assets.customAiSolution,
+      image: assets.eCommDesign10,
       cardBg: "bg-blue-100",
     },
     {
       title: "Affordable E-commerce Website Design",
       description:
         "Budget-friendly yet premium solutions for startups and small businesses, delivering high-quality, scalable, and well-administered online stores.",
-      image: assets.appDevelopment,
+      image: assets.eCommDesign11,
       cardBg: "bg-green-100",
     },
     {
       title: "Enterprise E-commerce Solutions",
       description:
         "Comprehensive enterprise-grade e-commerce services, including analytics, performance optimization, and advanced UI/UX strategies for end-to-end digital success.",
-      image: assets.customAiSolution,
+      image: assets.eCommDesign12,
       cardBg: "bg-yellow-100",
     },
   ];
@@ -246,7 +246,7 @@ const EcommerceDesign = () => {
         titlePrefix="Transform Your Digital Store with"
         titleSuffix=""
         description={`We design and develop innovative e-commerce websites and apps for companies all over the world. Our services include user-friendly e-commerce UI design, responsive e-commerce web design, and scalable e-commerce database design. Request a Free Consultation - Contact Capyngen's e-commerce design experts for transforming your online store or mobile app into a visually appealing, top-selling platform.`}
-        imageSrc={assets.eCommerceDesign}
+        imageSrc={assets.eCommDesign1}
         imageAlt="E-commerce Design Illustration"
         bgColor="bg-gray-900"
         iconColor="bg-blue-700"
@@ -269,7 +269,7 @@ const EcommerceDesign = () => {
         description={[
           `A professionally designed store is the best way to let your products and services shine through. Simply put, the combination of e-commerce UI design, e-commerce app UI design and e-commerce database design is nothing short of a saga of putting forth visually stunning as well as high-functional user engagement platforms that convert sales and grow business. One of the best things about your next adventure would have been possibly partnering up with an already established e-commerce website designing company.`,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.eCommDesign2}
         isHidden={true}
         imageHeight="aspect-[1/1]"
         background={assets.patternBg1}
@@ -284,7 +284,7 @@ const EcommerceDesign = () => {
         description={[
           "By using e-commerce design ideas that mirror brand goals accurately, you are able to transform online businesses practically. Working on your mobile app UI with Capyngen will definitely result in great designs; furthermore, they are also going to be involved in everything from concept to finalization along with you.",
         ]}
-        image={assets.getStarted}
+        image={assets.eCommDesign3}
       />
       <CardsSectionImage
         heading="Designing E-commerce Solutions That Drive Sales"

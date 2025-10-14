@@ -51,12 +51,12 @@ export default function HomeBlogs() {
       title: "Fresh SEO & social media tips.",
     },
     {
-      image: assets.news3,
+      image: assets.homepageIndustryBlog,
       name: "Industry Blog",
       title: "Insights from global industries.",
     },
     {
-      image: assets.news4,
+      image: assets.homepageCapyngenNews,
       name: "Capyngen News",
       title: "Our latest updates & events.",
     },
