@@ -182,41 +182,41 @@ const ECommerceIndustry = () => {
     {
       title: "Increased Operating Effectiveness",
       description: "Integration and automation of systems decrease labor work.",
-      image: assets.bg1,
+      image: assets.eCommIndustry4,
       cardBg: "bg-blue-100",
     },
     {
       title: "More Conversions",
       description:
         "With streamlined UI/UX and AI technology, user interaction is enhanced.",
-      image: assets.bg1,
+      image: assets.eCommIndustry5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Scalability",
       description:
         "Cloud and DevOps services allow the business to grow instantly.",
-      image: assets.bg1,
+      image: assets.eCommIndustry6,
       cardBg: "bg-purple-100",
     },
     {
       title: "Data-Driven Insights",
       description:
         "Forecast trends, know customer activity, and make data-driven decisions.",
-      image: assets.bg1,
+      image: assets.eCommIndustry7,
       cardBg: "bg-red-100",
     },
     {
       title: "Global Reach",
       description:
         "Make easy online purchase experiences across geographies and devices.",
-      image: assets.bg1,
+      image: assets.eCommIndustry8,
       cardBg: "bg-gray-100",
     },
     {
       title: "Cost Optimization",
       description: "Minimize overheads by optimal backend system streamlining.",
-      image: assets.bg1,
+      image: assets.eCommIndustry9,
       cardBg: "bg-blue-100",
     },
   ];

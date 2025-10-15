@@ -222,42 +222,6 @@ const BrandingIdentityDesign = () => {
       description:
         "Regular updates and coaching to keep your brand fresh anywhere on the globe, that is Benefits of Professional Branding Design",
     },
-    {
-      step: "Step 07",
-      title: "Enhanced Credibility",
-      description:
-        "A brand that is consistent and designed professionally worldwide will gain the trust of the diverse global community.",
-    },
-    {
-      step: "Step 08",
-      title: "Higher Engagement",
-      description:
-        "Attractive designs entice and involve the audience's attention span.",
-    },
-    {
-      step: "Step 09",
-      title: "Stronger Loyalty",
-      description:
-        "Customers' emotional attachment to the brand that in turn energizes the process of advocacy among them.",
-    },
-    {
-      step: "Step 10",
-      title: "Market Leadership",
-      description:
-        "Become the trendsetter instead of the follower in your area.",
-    },
-    {
-      step: "Step 11",
-      title: "Improved ROI",
-      description:
-        "Branding which is coherent strengthens promotional activities resulting in increased conversion rates.",
-    },
-    {
-      step: "Step 12",
-      title: "Global Brand Presence",
-      description:
-        "With Capyngen, your brand will be able to attract the audience not only here but there also in diverse cultures and geographies.",
-    },
   ];
   const cardsSectionImageData2 = [
     {

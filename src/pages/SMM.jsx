@@ -305,6 +305,12 @@ const SMM = () => {
       title: "Monitoring & Reporting",
       description: "Evaluating results and fine-tuning the campaigns.",
     },
+    {
+      step: "Step 06",
+      title: "Continuous Improvement",
+      description:
+        "Adapt strategies based on analytics for ongoing growth and better ROI.",
+    },
   ];
 
   useSplitTextAnimation("h1");

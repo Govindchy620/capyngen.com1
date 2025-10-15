@@ -311,6 +311,12 @@ const DigitalMarketing = () => {
       title: "Reporting",
       description: "Provide easily comprehensible and transparent reports.",
     },
+    {
+      step: "Step 06",
+      title: "Continuous Improvement",
+      description:
+        "Regularly review marketing outcomes and refine strategies for sustained growth.",
+    },
   ];
   const features = [
     {

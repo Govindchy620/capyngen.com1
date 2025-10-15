@@ -298,6 +298,12 @@ const ArtificialIntelligence = () => {
       description:
         "Make scalable AI systems accessible to users, with indefinite support and updates.",
     },
+    {
+      step: "Step 06",
+      title: "Monitoring & Continuous Improvement",
+      description:
+        "Track performance and retrain or refine AI models as needed for long-term success.",
+    },
   ];
 
   useSplitTextAnimation("h1");

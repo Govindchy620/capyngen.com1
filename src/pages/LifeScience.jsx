@@ -126,36 +126,36 @@ const LifeScience = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.lifeScience12,
       title: "Cloud-enabled platforms aimed at scalability and efficiency",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.lifeScience13,
       title:
         "AI and Machine Learning for forecasting analytics and data insights",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.lifeScience14,
       title:
         "Information safety and regulatory compliance with HIPAA, FDA, and GDPR",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.lifeScience15,
       title:
         "The assimilation of IoT and wearable devices for live data capturing",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.lifeScience16,
       title:
         "The use of flexible software design for on-the-fly development and implementation",
       desc: "",
     },
     {
-      image: assets.bg1,
+      image: assets.lifeScience17,
       title:
         "The use of sophisticated data analysis for medical research and healthcare decision-making",
       desc: "",
@@ -166,42 +166,42 @@ const LifeScience = () => {
       title: "Clinical Trial Management Software (CTMS)",
       description:
         "You can hold the reins of your trials starting from planning to reporting. By this way, compliance will be assured, progress will be tracked, and data will be managed in a time saving manner.",
-      image: assets.customAiSolution,
+      image: assets.lifeScience5,
       cardBg: "bg-blue-100",
     },
     {
       title: "Laboratory Information Management Systems (LIMS)",
       description:
         "Through automation of lab procedures, raising the standard of sample tracking, and executing data accuracy in biotech, and pharma sectors.",
-      image: assets.customAiSolution,
+      image: assets.lifeScience6,
       cardBg: "bg-blue-100",
     },
     {
       title: "Digital Healthcare Solutions",
       description:
         "The patient and telemedicine sectors can be transformed entirely through using perfectly meshed digital platforms that will handle care and management.",
-      image: assets.customAiSolution,
+      image: assets.lifeScience7,
       cardBg: "bg-blue-100",
     },
     {
       title: "Pharma IT Services",
       description:
         "IT assistance that covers the whole spectrum of pharmaceutical companies through processes such as the product line, security, and maintenance.",
-      image: assets.customAiSolution,
+      image: assets.lifeScience8,
       cardBg: "bg-blue-100",
     },
     {
       title: "Medical Research Software",
       description:
         "The software can simplify the process of data collection, data analysis, and reporting for medical research, as well as, biotech research institutions.",
-      image: assets.customAiSolution,
+      image: assets.lifeScience9,
       cardBg: "bg-blue-100",
     },
     {
       title: "Biotech Software Solutions",
       description:
         "Software solutions that are made to the custom specifications of the biotech industry to improve laboratory Practices, manage data, and R&D processes effectively.",
-      image: assets.customAiSolution,
+      image: assets.lifeScience10,
       cardBg: "bg-blue-100",
     },
   ];
@@ -238,19 +238,19 @@ const LifeScience = () => {
   ];
   const slides = [
     {
-      image: assets.blockchainBanner1,
+      image: assets.lifeScience1,
       title: "Digitally Intelligent Life Sciences Innovation",
       subtitle:
         "Rethink life sciences challenges with technology that reinvent research, manufacturing, and patient outcomes.",
     },
     {
-      image: assets.blockchainBanner2,
+      image: assets.lifeScience2,
       title: "Discovery in Life Sciences Made Faster",
       subtitle:
         "Get the most out of your research and development(July) compliance and data-driven insights with smart solutions.",
     },
     {
-      image: assets.blockchainDevelopment,
+      image: assets.lifeScience3,
       title: "Leading the Future of Biotech and Pharma",
       subtitle:
         "Fast track clinical research with the use of AI and the implementation of automation for better outcomes.",
@@ -279,7 +279,7 @@ const LifeScience = () => {
         description={[
           "Capyngen delivers custom life sciences software solutions with the objective to simplify clinical trials, the laboratory information management system, and to open new digital healthcare solutions. We are experts in pharma IT services, biotech, and research and use these skills to help organizations raise their productivity, accuracy, and compliance levels while also inviting innovation.",
         ]}
-        image={assets.whyChooseUs}
+        image={assets.lifeScience4}
         background={assets.patternBg1}
         imageHeight="aspect-[1/1]"
         isHidden="hidden"
@@ -312,7 +312,7 @@ const LifeScience = () => {
         desc=""
         reverse={true}
         benefits={solutionsData}
-        image={assets.blockchainDevelopment}
+        image={assets.lifeScience11}
         footerNote=""
       />
       <IndustryServices

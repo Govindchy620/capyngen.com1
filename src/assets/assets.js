@@ -550,6 +550,29 @@ import eCommDesign9 from "./eCommDesign9.png";
 import eCommDesign10 from "./eCommDesign10.png";
 import eCommDesign11 from "./eCommDesign11.png";
 import eCommDesign12 from "./eCommDesign12.png";
+import lifeScience1 from "./lifeScience1.png";
+import lifeScience2 from "./lifeScience2.png";
+import lifeScience3 from "./lifeScience3.png";
+import lifeScience4 from "./lifeScience4.png";
+import lifeScience5 from "./lifeScience5.png";
+import lifeScience6 from "./lifeScience6.png";
+import lifeScience7 from "./lifeScience7.png";
+import lifeScience8 from "./lifeScience8.png";
+import lifeScience9 from "./lifeScience9.png";
+import lifeScience10 from "./lifeScience10.png";
+import lifeScience11 from "./lifeScience11.png";
+import lifeScience12 from "./lifeScience12.png";
+import lifeScience13 from "./lifeScience13.png";
+import lifeScience14 from "./lifeScience14.png";
+import lifeScience15 from "./lifeScience15.png";
+import lifeScience16 from "./lifeScience16.png";
+import lifeScience17 from "./lifeScience17.png";
+import eCommIndustry4 from "./eCommIndustry4.png";
+import eCommIndustry5 from "./eCommIndustry5.png";
+import eCommIndustry6 from "./eCommIndustry6.png";
+import eCommIndustry7 from "./eCommIndustry7.png";
+import eCommIndustry8 from "./eCommIndustry8.png";
+import eCommIndustry9 from "./eCommIndustry9.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1104,6 +1127,29 @@ export const assets = {
   gaming28,
   gaming29,
   gaming30,
+  lifeScience1,
+  lifeScience2,
+  lifeScience3,
+  lifeScience4,
+  lifeScience5,
+  lifeScience6,
+  lifeScience7,
+  lifeScience8,
+  lifeScience9,
+  lifeScience10,
+  lifeScience11,
+  lifeScience12,
+  lifeScience13,
+  lifeScience14,
+  lifeScience15,
+  lifeScience16,
+  lifeScience17,
+  eCommIndustry4,
+  eCommIndustry5,
+  eCommIndustry6,
+  eCommIndustry7,
+  eCommIndustry8,
+  eCommIndustry9,
 };
 
 export const navItems = [
