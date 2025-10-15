@@ -21,6 +21,7 @@ import {
   FaRocket,
 } from "react-icons/fa";
 import CardsSectionImage from "../components/CardsSectionImage";
+import { Helmet } from "react-helmet-async";
 
 const PPC = () => {
   const faqItems = [
@@ -208,6 +209,17 @@ const PPC = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>Pay-Per-Click Advertising | ROI-Driven Ad Campaigns</title>
+        <meta
+          name="description"
+          content="Get instant results with Capyngen’s PPC advertising services. Our experts create high-converting Google Ads and campaigns that maximize ROI and boost leads."
+        />
+        <meta
+          name="keywords"
+          content="Pay-Per-Click Advertising | ROI-Driven Ad Campaigns"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner8
           titleMain="Pay-Per-Click Advertising Services"

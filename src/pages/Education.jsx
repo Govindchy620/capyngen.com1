@@ -23,6 +23,7 @@ import {
   FaBullhorn,
   FaHeart,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Education = () => {
   const faqItems = [
@@ -309,6 +310,19 @@ const Education = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>
+          Learning Management System | eLearning & Virtual Classroom Solutions
+        </title>
+        <meta
+          name="description"
+          content="Capyngen builds powerful Learning Management Systems for modern education. From eLearning apps to virtual classroom software, we deliver smart digital solutions."
+        />
+        <meta
+          name="keywords"
+          content="Learning Management System | eLearning & Virtual Classroom Solutions"
+        />
+      </Helmet>
       <Banner6
         slides={slidesData}
         autoplay={true}

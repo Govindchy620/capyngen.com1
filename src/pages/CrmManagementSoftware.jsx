@@ -31,6 +31,7 @@ import {
 } from "react-icons/fa";
 import IndustryServices from "../components/IndustryServices";
 import CardsSectionImage from "../components/CardsSectionImage";
+import { Helmet } from "react-helmet-async";
 
 const CrmManagementSoftware = () => {
   const faqItems = [
@@ -266,6 +267,20 @@ const CrmManagementSoftware = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          CRM & Management Solutions | Cloud CRM for Smarter Businesses –
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Streamline your business with Capyngen’s CRM & Management Solutions. From customer relationship management to cloud CRM, we help you grow smarter and faster."
+        />
+        <meta
+          name="keywords"
+          content="CRM & Management Solutions | Cloud CRM for Smarter Businesses – Capyngen"
+        />
+      </Helmet>
       <Banner14
         imageSrc={assets.crm1}
         imageAlt="Blockchain development illustration"

@@ -38,6 +38,7 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import BenefitsSection from "../components/BenefitsSection";
+import { Helmet } from "react-helmet-async";
 
 const CapitalMarket = () => {
   const faqItems = [
@@ -350,6 +351,14 @@ const CapitalMarket = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>Capital Market Software Solutions</title>
+        <meta
+          name="description"
+          content="Capyngen delivers advanced capital market software solutions. From stock trading and wealth management to algorithmic platforms — power your FinTech innovation."
+        />
+        <meta name="keywords" content="Capital Market Software Solutions" />
+      </Helmet>
       <CreativeAgencyFAQ
         slides={slidesData}
         slideDuration={4000}

@@ -23,6 +23,7 @@ import {
   FaMoneyBillWave,
   FaPuzzlePiece,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const BrandingIdentityDesign = () => {
   const faqItems = [
@@ -270,6 +271,17 @@ const BrandingIdentityDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>Branding Design Services | Creative & Corporate Branding</title>
+        <meta
+          name="description"
+          content="Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out."
+        />
+        <meta
+          name="keywords"
+          content="Branding Design Services | Creative & Corporate Branding "
+        />
+      </Helmet>
       <Banner5
         title={
           <>

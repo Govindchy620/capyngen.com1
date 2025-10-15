@@ -23,6 +23,7 @@ import {
   FaCreditCard,
   FaUsers as FaUsersIcon,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const BlockchainDevelopment = () => {
   const faqItems = [
@@ -360,6 +361,19 @@ const BlockchainDevelopment = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Blockchain Development | Blockchain App Development Company – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers secure and scalable blockchain development services. Build powerful blockchain apps and smart solutions for your business today!"
+        />
+        <meta
+          name="keywords"
+          content="Blockchain Development | Blockchain App Development Company – Capyngen"
+        />
+      </Helmet>
       <Banner4 slides={slides} />
       <GetStarted
         reverse={false}

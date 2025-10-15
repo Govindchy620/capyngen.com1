@@ -18,6 +18,7 @@ import { assets } from "../assets/assets";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import FAQSection2 from "../components/FAQSection2";
+import { Helmet } from "react-helmet-async";
 
 const Homepage = () => {
   const containerRef = useRef(null);
@@ -167,6 +168,20 @@ const Homepage = () => {
 
   return (
     <div className="relative overflow-x-hidden" ref={containerRef}>
+      <Helmet>
+        <title>
+          Capyngen | Custom Software Development, Web & App Solutions, Digital
+          Marketing Experts
+        </title>
+        <meta
+          name="description"
+          content="Capyngen is a trusted IT solution company delivering innovative IT services and solutions, like app development, web design, SEO. etc for business growth."
+        />
+        <meta
+          name="keywords"
+          content="IT solution company, IT services and solutions, innovative IT solutions, best IT company, App development, digital IT services, business IT solutions"
+        />
+      </Helmet>
       {/* Particles Background */}
       <Particles
         id="tsparticles"

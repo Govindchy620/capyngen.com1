@@ -36,6 +36,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import WhyChoose from "../components/WhyChoose";
+import { Helmet } from "react-helmet-async";
 
 const CommunicationMediaIT = () => {
   const faqItems = [
@@ -293,6 +294,20 @@ const CommunicationMediaIT = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>
+          IT Solutions for Media & Communication | Digital Transformation –
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers smart IT solutions for the media and communication industry. From content management to digital transformation, we empower brands to innovate."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for Media & Communication | Digital Transformation – Capyngen"
+        />
+      </Helmet>
       <ExpandableGallery panels={panels} />
       <GetStarted
         reverse={false}

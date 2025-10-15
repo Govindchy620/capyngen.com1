@@ -36,6 +36,7 @@ import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
 import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
+import { Helmet } from "react-helmet-async";
 
 const ECommerceSolution = () => {
   const faqItems = [
@@ -437,6 +438,20 @@ const ECommerceSolution = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          E-commerce Solutions | E-commerce Website & App Development by
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Grow your business with Capyngen’s e-commerce solutions. Get custom e-commerce website and app development to boost your sales and build your online brand today!"
+        />
+        <meta
+          name="keywords"
+          content="E-commerce Solutions | E-commerce Website & App Development by Capyngen"
+        />
+      </Helmet>
       <div className="">
         <Banner5
           title={

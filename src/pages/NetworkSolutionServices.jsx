@@ -24,6 +24,7 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const NetworkSolutionServices = () => {
   const faqItems = [
@@ -235,6 +236,19 @@ const NetworkSolutionServices = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Network Solutions | Managed IT & Cloud Network Services – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers reliable network solutions for modern businesses. From IT and managed network services to security and cloud networking — we’ve got you covered."
+        />
+        <meta
+          name="keywords"
+          content="Network Solutions | Managed IT & Cloud Network Services – Capyngen"
+        />
+      </Helmet>
       <Banner14
         imageSrc={assets.network1}
         imageAlt="Blockchain development illustration"

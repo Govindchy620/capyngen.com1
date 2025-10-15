@@ -15,6 +15,7 @@ import Banner14 from "../components/Banner14";
 import GetStarted from "../components/GetStarted";
 import CardsSection from "../components/CardsSection";
 import { FaCode, FaShoppingCart, FaWordpressSimple } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const CMSDesign = () => {
   const faqItems = [
@@ -180,6 +181,19 @@ const CMSDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen offers custom CMS design solutions that combine functionality and style. Get expert CMS web design and UI/UX services to manage content with ease."
+        />
+        <meta
+          name="keywords"
+          content="CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner14
           imageSrc={assets.cms1}

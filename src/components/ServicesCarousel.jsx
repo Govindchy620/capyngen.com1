@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ for navigation
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,11 +32,12 @@ import {
   UserCheck,
 } from "lucide-react";
 
-// ---------------- CARDS DATA ----------------
+// ---------------- CARDS DATA + LINKS ----------------
 const cards = [
   {
     title: "App Development",
     desc: "Apps for mobile devices that are strong, scalable, and simple to use, designed to help organizations meet objectives.",
+    href: "/app-development",
     items: [
       "Multi-device compatibility",
       "Quick and safe growth",
@@ -46,6 +48,7 @@ const cards = [
   {
     title: "Custom AI Solution",
     desc: "Custom AI-powered solutions that make jobs go faster and help businesses do better.",
+    href: "/custom-ai-solutions",
     items: [
       "Predictive analysis",
       "Intelligent automation",
@@ -56,6 +59,7 @@ const cards = [
   {
     title: "Web Development",
     desc: "Websites that are secure and responsive, so that users have a good time and companies may prosper.",
+    href: "/web-development",
     items: [
       "Web solutions that are right for you",
       "Infrastructure that can grow",
@@ -66,6 +70,7 @@ const cards = [
   {
     title: "E-Commerce Solutions",
     desc: "Smart online stores that are created to increase sales, customer happiness, and engagement.",
+    href: "/ecommerce-solutions",
     items: [
       "Secure payment integration",
       "Easy to get around",
@@ -76,6 +81,7 @@ const cards = [
   {
     title: "Blockchain Development",
     desc: "Blockchain solutions that are secure, transparent, and reliable for digital transactions.",
+    href: "/blockchain-development",
     items: [
       "Creating smart contracts",
       "Apps that don't need a central server to work",
@@ -86,6 +92,7 @@ const cards = [
   {
     title: "DevOps Solutions",
     desc: "Streamlined DevOps services that let you produce software more quickly, reliably, and effectively.",
+    href: "/devops-solutions",
     items: [
       "Always integrating",
       "Deployment that occurs on its own",
@@ -96,6 +103,7 @@ const cards = [
   {
     title: "Application Solutions",
     desc: "Full application services for fresh ideas, improved company results, and making things work more smoothly.",
+    href: "/application-solutions",
     items: [
       "Upgrading obsolete systems",
       "Going to the cloud",
@@ -106,6 +114,7 @@ const cards = [
   {
     title: "CRM & Management Software",
     desc: "Custom CRM systems that truly help with sales, relationships, and getting customers involved.",
+    href: "/crm-management-software",
     items: [
       "Lead management",
       "Automating processes",
@@ -116,6 +125,7 @@ const cards = [
   {
     title: "UI/UX Design",
     desc: "User-centered UI/UX design that makes sure that users can easily comprehend and enjoy their interactions.",
+    href: "/ui-ux-design",
     items: [
       "Making wireframes and prototypes",
       "Interactive design",
@@ -126,6 +136,7 @@ const cards = [
   {
     title: "Website Design",
     desc: "Creative, responsive, and impactful websites designed to strengthen digital presence.",
+    href: "/website-design",
     items: [
       "SEO-friendly design",
       "Custom layouts",
@@ -136,6 +147,7 @@ const cards = [
   {
     title: "Branding & Identity Design",
     desc: "Strong branding solutions to define identity and connect with your audience.",
+    href: "/branding-and-identity-design",
     items: [
       "Logo creation",
       "Brand strategy",
@@ -146,6 +158,7 @@ const cards = [
   {
     title: "Ecommerce Design",
     desc: "Modern ecommerce designs that boost sales, trust, and customer shopping experiences.",
+    href: "/ecommerce-design",
     items: [
       "Simple to use interface",
       "Safe checkout",
@@ -156,6 +169,7 @@ const cards = [
   {
     title: "CMS Design",
     desc: "CMS designs that help you manage your content better and make the site perform better.",
+    href: "/cms-design",
     items: [
       "Easy to switch",
       "A framework that can expand",
@@ -166,6 +180,7 @@ const cards = [
   {
     title: "Search Engine Optimization",
     desc: "Effective SEO strategies to improve ranking, visibility, and long-term online growth.",
+    href: "/seo",
     items: [
       "On-page SEO",
       "Off-page SEO",
@@ -176,6 +191,7 @@ const cards = [
   {
     title: "Social Media Marketing (SMM)",
     desc: "Engaging SMM campaigns that build brand presence and connect with audiences.",
+    href: "/smm",
     items: [
       "Ads that are made for a certain platform",
       "Finding an audience",
@@ -185,6 +201,7 @@ const cards = [
   {
     title: "Pay-Per-Click Advertising (PPC)",
     desc: "Result-driven PPC ads that maximize ROI and capture qualified leads quickly.",
+    href: "/ppc",
     items: [
       "Campaigns that target certain individuals",
       "The best keywords",
@@ -195,6 +212,7 @@ const cards = [
   {
     title: "Artificial Intelligence",
     desc: "Cutting-edge AI services for smarter automation, innovation, and business transformation.",
+    href: "/artificial-intelligence",
     items: [
       "AI-powered chatbots",
       "Predictive analysis",
@@ -205,6 +223,7 @@ const cards = [
   {
     title: "Cybersecurity",
     desc: "Robust cybersecurity solutions to safeguard data, systems, and digital infrastructures.",
+    href: "/cybersecurity",
     items: [
       "Finding dangers",
       "Keeping data safe",
@@ -214,6 +233,7 @@ const cards = [
   {
     title: "Network Services and Solutions",
     desc: "Advanced network solutions ensuring reliable, scalable, and secure connectivity infrastructure.",
+    href: "/network-solutions",
     items: [
       "Cloud-based networking",
       "Network safety",
@@ -224,6 +244,7 @@ const cards = [
   {
     title: "Business Solutions",
     desc: "Scalable enterprise solutions built to streamline operations and accelerate digital transformation.",
+    href: "/enterprise-solutions",
     items: [
       "Systems for ERP",
       "Apps created particularly for your company",
@@ -234,6 +255,7 @@ const cards = [
   {
     title: "Data and Analysis",
     desc: "Actionable data analytics services turning raw information into valuable business insights.",
+    href: "/data-analytics",
     items: [
       "Handling a lot of data",
       "Dashboards that change in real time",
@@ -244,6 +266,7 @@ const cards = [
   {
     title: "Consulting",
     desc: "Expert IT consulting services to align technology with your business growth goals.",
+    href: "/consulting",
     items: [
       "Thinking forward",
       "A plan for technology",
@@ -280,13 +303,14 @@ const iconMap = [
 ];
 
 // ---------------- CARD COMPONENT ----------------
-const Card = ({ title, desc, items, index }) => (
+const Card = ({ title, desc, items, index, href, onClick }) => (
   <article
     className="h-92 relative group rounded-2xl p-6 min-h-[380px] flex flex-col shadow-lg
                bg-gradient-to-br from-cyan-600 via-blue-600 to-indigo-700
                backdrop-blur-md overflow-hidden border border-cyan-400/40
                transition-all duration-500 hover:shadow-2xl hover:scale-[1.04] cursor-pointer
                focus:outline-none focus:ring-4 focus:ring-cyan-400"
+    onClick={onClick}
     tabIndex={0}
     aria-label={`${title} service`}
     role="group"
@@ -317,6 +341,7 @@ const Card = ({ title, desc, items, index }) => (
 
 // ---------------- MAIN CAROUSEL ----------------
 const ServicesCarousel = () => {
+  const navigate = useNavigate(); // ✅ navigation
   const sliderRef = useRef(null);
 
   const settings = {
@@ -383,7 +408,11 @@ const ServicesCarousel = () => {
             >
               {cards.map((card, idx) => (
                 <div key={idx} className="px-2 sm:px-3 py-2" role="listitem">
-                  <Card {...card} index={idx} />
+                  <Card
+                    {...card}
+                    index={idx}
+                    onClick={() => navigate(card.href)} // ✅ navigate on card click
+                  />
                 </div>
               ))}
             </Slider>

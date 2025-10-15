@@ -17,6 +17,7 @@ import {
 import GetStarted from "../components/GetStarted";
 import SeoStatsSection from "../components/SeoStatsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
+import { Helmet } from "react-helmet-async";
 
 const SEO = () => {
   const faqItems = [
@@ -219,6 +220,17 @@ const SEO = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>Search Engine Optimization | Best SEO Company – Capyngen</title>
+        <meta
+          name="description"
+          content="Rank higher with Capyngen’s search engine optimization services. We deliver on-page, off-page, and technical SEO to boost your visibility and organic growth."
+        />
+        <meta
+          name="keywords"
+          content="Search Engine Optimization | Best SEO Company – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner5
           title={

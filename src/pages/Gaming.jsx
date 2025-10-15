@@ -27,6 +27,7 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import BenefitsSection from "../components/BenefitsSection";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import HowWeWork from "../components/HowWeWork";
+import { Helmet } from "react-helmet-async";
 
 const Gaming = () => {
   const faqItems = [
@@ -331,6 +332,20 @@ const Gaming = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          IT Solutions for Gaming Industry | Game App Development Services –
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen offers innovative IT solutions for the gaming industry. From Android, iOS, and PC game development to cloud gaming — we bring your ideas to life."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for Gaming Industry | Game App Development Services – Capyngen"
+        />
+      </Helmet>
       <ShuffleHero
         heading={
           <>

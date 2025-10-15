@@ -24,6 +24,7 @@ import {
   FaTools,
 } from "react-icons/fa";
 import CardsSection from "../components/CardsSection";
+import { Helmet } from "react-helmet-async";
 
 const EnterpriseSolutions = () => {
   const faqItems = [
@@ -263,6 +264,19 @@ const EnterpriseSolutions = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Enterprise Solutions | Scalable IT & Cloud Software – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Empower your business with Capyngen’s enterprise solutions. We deliver scalable enterprise software, IT, and cloud solutions designed for growth and efficiency."
+        />
+        <meta
+          name="keywords"
+          content="Enterprise Solutions | Scalable IT & Cloud Software – Capyngen"
+        />
+      </Helmet>
       <Banner8
         titleMain="Enterprise Solutions"
         titlePrefix="Advanced"

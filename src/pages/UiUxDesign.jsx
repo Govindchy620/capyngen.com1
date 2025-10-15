@@ -15,6 +15,7 @@ import Banner7 from "../components/Banner7";
 import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
 import IndustryServices from "../components/IndustryServices";
+import { Helmet } from "react-helmet-async";
 
 const UiUxDesign = () => {
   const faqItems = [
@@ -228,6 +229,19 @@ const UiUxDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          UI/UX Design Services | App & Website Design Experts – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Transform your digital experience with Capyngen’s UI/UX design services. We craft stunning mobile app and website designs that attract, engage, and convert users."
+        />
+        <meta
+          name="keywords"
+          content="UI/UX Design Services | App & Website Design Experts – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner7 />
       </div>

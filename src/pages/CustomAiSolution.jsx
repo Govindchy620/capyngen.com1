@@ -17,6 +17,7 @@ import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import Banner3 from "../components/Banner3";
+import { Helmet } from "react-helmet-async";
 
 const CustomAiSolution = () => {
   const faqItems = [
@@ -296,6 +297,19 @@ const CustomAiSolution = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Custom AI Solutions | AI Software Development Company – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Transform your business with Capyngen’s custom AI solutions. As a top AI software development company, we build intelligent, scalable, and future-ready systems."
+        />
+        <meta
+          name="keywords"
+          content="Custom AI Solutions | AI Software Development Company – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner3
           title="Custom AI Solutions for a Faster Business Growth"
@@ -305,7 +319,6 @@ const CustomAiSolution = () => {
           diagonalShape="polygon(0 0, 100% 0, 100% 40%, 0 100%)"
         />
       </div>
-
       <div className="relative z-10">
         <GetStarted
           reverse={true}

@@ -24,6 +24,7 @@ import {
 } from "react-icons/fa";
 import Banner15 from "../components/Banner15";
 import IndustryServices from "../components/IndustryServices";
+import { Helmet } from "react-helmet-async";
 
 const SMM = () => {
   const faqItems = [
@@ -316,6 +317,19 @@ const SMM = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Social Media Marketing | Grow Your Brand Online – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Boost your brand presence with Capyngen’s social media marketing services. Engage, grow, and convert your audience across all major social platforms today!"
+        />
+        <meta
+          name="keywords"
+          content="Social Media Marketing | Grow Your Brand Online – Capyngen"
+        />
+      </Helmet>
       <Banner15 />
       <div className="pt-10 bg-black"></div>
       <TopRatedCompany

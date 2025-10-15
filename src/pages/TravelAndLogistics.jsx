@@ -1,18 +1,5 @@
-import React from "react";
-import ExpandableGallery from "../components/ExpandableGallery";
-import SeoToolsSection from "../components/SeoToolsSection";
-import SeoStatsSection from "../components/SeoStatsSection";
-import Timeline from "../components/Timeline";
 import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
-import StartupAgency from "../components/StartupAgency";
-import SeoAgency from "../components/SeoAgency";
 import {
-  FaBuilding,
-  FaTasks,
-  FaStore,
-  FaPuzzlePiece,
-  FaMoneyBillWave,
-  FaCogs,
   FaTools,
   FaDollarSign,
   FaUsers,
@@ -20,25 +7,13 @@ import {
   FaBullhorn,
   FaHeart,
 } from "react-icons/fa";
-import {
-  FaUserTie,
-  FaHome,
-  FaGavel,
-  FaUserFriends,
-  FaGlobe,
-} from "react-icons/fa";
-import IndustryServices from "../components/IndustryServices";
-import TypesWeDevelop from "../components/TypesWeDevelop";
 import { assets } from "../assets/assets";
-import Banner6 from "../components/Banner6";
 import GetStarted from "../components/GetStarted";
-import TopRatedCompany from "../components/TopRatedCompany";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
-import BenefitsSection from "../components/BenefitsSection";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const TravelAndLogistics = () => {
   const faqItems = [
@@ -207,63 +182,63 @@ const TravelAndLogistics = () => {
       title: "Travel Booking & Management Platforms",
       description:
         "Build web platforms for tour operators, travel agencies, and transportation providers to handle reservations, ticketing, and payments quickly and securely through a unified system.",
-      image: assets.customAiSolution,
+      image: assets.travel1,
       cardBg: "bg-blue-100",
     },
     {
       title: "Fleet & Transport Management Systems",
       description:
         "Optimize logistics operations through real-time route planning, driver assignment management, and vehicle performance monitoring with smart IT solutions.",
-      image: assets.customAiSolution,
+      image: assets.travel2,
       cardBg: "bg-green-100",
     },
     {
       title: "Warehouse & Inventory Software",
       description:
         "Keep stock levels up to date, automate dispatch processes, and manage multi-location inventories with uninterrupted data synchronization.",
-      image: assets.customAiSolution,
+      image: assets.travel3,
       cardBg: "bg-yellow-100",
     },
     {
       title: "CRM & Customer Experience Platforms",
       description:
         "Enable travel and logistics companies to personalize communication, track interactions, and automate CRM workflows for better customer engagement and satisfaction.",
-      image: assets.customAiSolution,
+      image: assets.travel4,
       cardBg: "bg-purple-100",
     },
     {
       title: "Web & Mobile Development",
       description:
         "Create responsive web and mobile applications that provide seamless booking, tracking, and customer support experiences across the entire travel journey.",
-      image: assets.customAiSolution,
+      image: assets.travel5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Data Analytics & Predictive Intelligence",
       description:
         "Leverage AI-based predictive analytics to enhance logistics operations, forecast travel demand, and make smarter, data-driven decisions in real time.",
-      image: assets.customAiSolution,
+      image: assets.travel6,
       cardBg: "bg-orange-100",
     },
     {
       title: "Cloud & Infrastructure Solutions",
       description:
         "Adopt secure, scalable, and cost-efficient cloud systems that ensure 24/7 uptime and accessibility for travel and logistics operations worldwide.",
-      image: assets.customAiSolution,
+      image: assets.travel7,
       cardBg: "bg-indigo-100",
     },
     {
       title: "AI Chatbots & Automation Systems",
       description:
         "Integrate intelligent chatbots and automation tools for instant customer support, booking management, and query resolution, improving efficiency and engagement.",
-      image: assets.customAiSolution,
+      image: assets.travel8,
       cardBg: "bg-teal-100",
     },
     {
       title: "Blockchain & Smart Contracts for Logistics",
       description:
         "Enhance transparency, traceability, and trust in logistics and supply chain processes using blockchain and smart contract-based automation.",
-      image: assets.customAiSolution,
+      image: assets.travel9,
       cardBg: "bg-red-100",
     },
   ];
@@ -311,6 +286,20 @@ const TravelAndLogistics = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>
+          IT Solutions for Travel & Logistics | Best IT Solutions for Logistics
+          Companies
+        </title>
+        <meta
+          name="description"
+          content="Optimize your operations with Capyngen’s IT solutions for travel and logistics. We provide custom software, web, and digital solutions to enhance business efficiency."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for Travel & Logistics | Best IT Solutions for Logistics Companies"
+        />
+      </Helmet>
       <CreativeAgencyFAQ
         slides={slidesData}
         slideDuration={4000}

@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import CardsSection from "../components/CardsSection";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const WebSiteDesign = () => {
   const faqItems = [
@@ -352,6 +353,19 @@ const WebSiteDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Website Design Services | Creative & Responsive Web Design
+        </title>
+        <meta
+          name="description"
+          content="Boost your brand with Capyngen’s website design services. We deliver creative, custom, and responsive websites that are fast, affordable, and built to impress."
+        />
+        <meta
+          name="keywords"
+          content="Website Design Services | Creative & Responsive Web Design"
+        />
+      </Helmet>
       <Banner8
         titleMain="Website Design"
         titlePrefix=""

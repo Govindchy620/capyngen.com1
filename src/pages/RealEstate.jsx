@@ -43,6 +43,7 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const RealEstate = () => {
   const faqItems = [
@@ -276,6 +277,19 @@ const RealEstate = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>
+          IT Solutions for Real Estate | Web & UI/UX Design Services – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen provides innovative IT solutions for the real estate industry. From web design to UI/UX services, we help real estate brands go digital and grow faster."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for Real Estate | Web & UI/UX Design Services – Capyngen"
+        />
+      </Helmet>
       <Banner6
         slides={slidesData}
         autoplay={true}

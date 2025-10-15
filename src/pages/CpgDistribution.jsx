@@ -8,6 +8,7 @@ import CardsSectionSlider from "../components/CardsSectionSlider";
 import HowWeWork from "../components/HowWeWork";
 import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
+import { Helmet } from "react-helmet-async";
 
 const CpgDistribution = () => {
   const solutionsData = [
@@ -297,6 +298,19 @@ const CpgDistribution = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          IT Solutions for CPG Distribution | Best IT Services for CPG Industry
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers innovative IT solutions for CPG distribution. From software development to digital marketing, we help CPG brands grow and optimize operations."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for CPG Distribution | Best IT Services for CPG Industry "
+        />
+      </Helmet>
       <Banner16 />
       <BenefitsSection
         heading="Reasons why digital transformation is necessary for CPG distributors"

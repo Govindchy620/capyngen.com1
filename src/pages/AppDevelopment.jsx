@@ -22,6 +22,7 @@ import TechStack from "../components/TechStack";
 import Banner13 from "../components/Banner13";
 import TopRatedCompany from "../components/TopRatedCompany";
 import IndustryServices from "../components/IndustryServices";
+import { Helmet } from "react-helmet-async";
 
 const AppDevelopment = () => {
   const faqItems = [
@@ -369,6 +370,19 @@ const AppDevelopment = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Mobile App Development Company | Android & iOS Apps by Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Looking for expert mobile app development? Capyngen creates custom Android and iOS apps that help your business grow. Get your app developed today!"
+        />
+        <meta
+          name="keywords"
+          content="Mobile App Development Company | Android & iOS Apps by Capyngen"
+        />
+      </Helmet>
       <Banner13
         title="Professional"
         highlight="App Development Services"
@@ -449,7 +463,7 @@ const AppDevelopment = () => {
           "Trying to find a trustworthy Android app development company or iOS app development company? Contact Capyngen now to get the apps that are scalable, secure, and high-performing.",
         ]}
         textSize="text-2xl"
-        buttonText="Contact Us"
+        buttonText="Get in Touch"
         backgroundVideo={assets.backgroundVideo}
       />
 
@@ -481,7 +495,7 @@ const AppDevelopment = () => {
           "Looking for custom app development services or enterprise app development solutions? Reach out to Capyngen, a foremost cross-platform app development company, and grow your digital footprint.",
         ]}
         textSize="text-2xl"
-        buttonText="Contact Us"
+        buttonText="Reach Out to Us"
         backgroundVideo={assets.backgroundVideo}
       />
 

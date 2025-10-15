@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
 import { UserRoundSearch, BarChart3, Sparkles, LifeBuoy } from "lucide-react";
 import AnimatedButton from "./AnimatedButton";
 import { assets } from "../assets/assets";
@@ -32,6 +33,8 @@ const features = [
 ];
 
 export default function WhyChooseUs() {
+  const navigate = useNavigate(); // ✅ initialize navigate
+
   return (
     <section
       className="relative w-full overflow-hidden text-white px-4 sm:px-6 md:px-12 lg:px-20"
@@ -88,7 +91,7 @@ export default function WhyChooseUs() {
               <AnimatedButton
                 text="Get in Touch"
                 aria-label="Contact Capyngen team"
-                onClick={() => alert("Button clicked!")}
+                onClick={() => navigate("/contact-us")} // ✅ navigate on click
               />
             </div>
           </div>

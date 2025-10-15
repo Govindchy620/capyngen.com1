@@ -48,6 +48,7 @@ import {
 import AppTypesSection from "../components/AppTypesSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const Consulting = () => {
   const faqItems = [
@@ -286,6 +287,17 @@ const Consulting = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>Consulting Services | IT & Business Consulting Company</title>
+        <meta
+          name="description"
+          content="Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India."
+        />
+        <meta
+          name="keywords"
+          content="Consulting Services | IT & Business Consulting Company"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner10
           title="Expert IT Consulting "

@@ -28,6 +28,7 @@ import {
   FaUniversity,
 } from "react-icons/fa";
 import Banner9 from "../components/Banner9";
+import { Helmet } from "react-helmet-async";
 
 const ArtificialIntelligence = () => {
   const faqItems = [
@@ -310,7 +311,20 @@ const ArtificialIntelligence = () => {
 
   return (
     <div className="relative">
-      <div className="md:sticky inset-0">
+      <Helmet>
+        <title>
+          Artificial Intelligence Solutions | AI-Powered Development
+        </title>
+        <meta
+          name="description"
+          content="Transform your business with Capyngen’s artificial intelligence solutions. We build smart AI-powered applications and development services for every industry."
+        />
+        <meta
+          name="keywords"
+          content="Artificial Intelligence Solutions | AI-Powered Development"
+        />
+      </Helmet>
+      <div className="lg:sticky inset-0">
         <Banner9 />
       </div>
       <div className="relative z-10">

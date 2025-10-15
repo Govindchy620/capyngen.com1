@@ -20,6 +20,7 @@ import {
   FaCreditCard,
   FaLightbulb,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Banking = () => {
   const faqItems = [
@@ -313,6 +314,17 @@ const Banking = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>Banking Software Development Services</title>
+        <meta
+          name="description"
+          content="Capyngen provides secure and scalable banking software development services. From FinTech apps to mobile banking software, we build next-gen digital solutions."
+        />
+        <meta
+          name="keywords"
+          content="Banking Software Development Services "
+        />
+      </Helmet>
       <ExpandableGallery panels={panels} />
       <GetStarted
         backgroundColor="bg-blue-900"

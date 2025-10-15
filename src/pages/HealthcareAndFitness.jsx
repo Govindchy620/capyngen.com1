@@ -122,32 +122,32 @@ const HealthcareAndFitness = () => {
 
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.healthcareFitness6,
       title: "Hospital Management Software",
       desc: "Make patient data digital, simplify billing, and create decision-making dashboards through automation of workflows.",
     },
     {
-      image: assets.bg1,
+      image: assets.healthcareFitness7,
       title: "Telemedicine Platforms",
       desc: "Provide a variety of services such as: remote pre-consultations, video calls, appointment scheduling, and monitoring of patient's health.",
     },
     {
-      image: assets.bg1,
+      image: assets.healthcareFitness8,
       title: "Digital Fitness Solutions",
       desc: "Gym, personal trainer, and wellness brand app development of customized fitness to increase engagement.",
     },
     {
-      image: assets.bg1,
+      image: assets.healthcareFitness9,
       title: "Patient Management Systems",
       desc: "The system securely stores patient history, appointments, treatment plans, and insurance details.",
     },
     {
-      image: assets.bg1,
+      image: assets.healthcareFitness10,
       title: "EHR Software Solutions",
       desc: "Facilitate the storage, sharing, and real-time data access for medical professionals, all in accordance with HIPAA regulations.",
     },
     {
-      image: assets.bg1,
+      image: assets.healthcareFitness11,
       title: "Healthcare Data Analytics",
       desc: "Implement health data analytics software that supports the development of insights, the activity of forecasting, and the improvement of organization.",
     },
@@ -186,27 +186,6 @@ const HealthcareAndFitness = () => {
       title:
         "The company has received excellent client feedback and always delivers on time.",
       desc: "",
-    },
-  ];
-  const slidesData = [
-    {
-      id: 1,
-      title:
-        "Creative and Technical IT Solutions for the HealthcareAndFitnessal Sector",
-      subtitle:
-        "Offering HealthcareAndFitnessal organizations digital tools, cloud services and data-driven learning management System that are futuristic and versatile.",
-      image: assets.applicationSolution,
-      ctaText: "Explore Projects",
-      ctaLink: "#projects",
-    },
-    {
-      id: 2,
-      title: "Seamless Performance",
-      subtitle: "Mobile-first, future-ready solutions.",
-      image:
-        "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920",
-      ctaText: "Get Started",
-      ctaLink: "#contact",
     },
   ];
   const cardsSectionData2 = [
@@ -249,64 +228,64 @@ const HealthcareAndFitness = () => {
       title: "AI & Machine Learning",
       description:
         "The main areas of AI application in healthcare are predictive health analytics and personalization of healthcare services.",
-      image: assets.customAiSolution,
+      image: assets.healthcareFitness12,
       cardBg: "bg-blue-100",
     },
     {
       title: "Cloud Platforms",
       description:
         "Hospitals and fitness centers use cloud platforms for securely storing and managing their data and for offering scalability of their services to customers.",
-      image: assets.customAiSolution,
+      image: assets.healthcareFitness13,
       cardBg: "bg-green-100",
     },
     {
       title: "Mobile & Web Development Frameworks",
       description:
         "These are one of the main technologies that enable the building of high-performance mobile and web applications.",
-      image: assets.customAiSolution,
+      image: assets.healthcareFitness14,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Data Security & HIPAA Compliance Tools",
       description:
         "These are networks of security measures that ensure privacy, and enhance the trust of healthcare professionals and their clients.",
-      image: assets.customAiSolution,
+      image: assets.healthcareFitness15,
       cardBg: "bg-purple-100",
     },
     {
       title: "IoT & Wearables Integration",
       description:
         "A remote patient monitoring system is an example of the Internet of Things (IoT) and wearable devices integration.",
-      image: assets.customAiSolution,
+      image: assets.healthcareFitness16,
       cardBg: "bg-pink-100",
     },
     {
       title: "Analytics & Dashboards",
       description:
         "Continuous, plugged-in, quantitative data is one source for real-time reporting, allowing users to make informed decisions.",
-      image: assets.customAiSolution,
+      image: assets.healthcareFitness17,
       cardBg: "bg-orange-100",
     },
   ];
 
   const marketingCards = [
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-1.jpg",
+      img: assets.healthcareFitness1,
       alt: "Christmas background 3D cartoon",
       text: "Digital Health Connection to Care",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-2.jpg",
+      img: assets.healthcareFitness2,
       alt: "A beautiful glowing flower",
       text: "Making Healthy Decisions Smarter",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-3.jpg",
+      img: assets.healthcareFitness3,
       alt: "A magical leopard",
       text: "When Fitness Meets Technology",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-4.jpg",
+      img: assets.healthcareFitness4,
       alt: "A female 3D cartoon holding a wrapped gift box",
       text: "Digital Transformation of a Healthier Future",
     },
@@ -393,7 +372,7 @@ const HealthcareAndFitness = () => {
             </ul>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.healthcareFitness5}
         background={assets.patternBg1}
         isHidden="hidden"
       />
@@ -432,7 +411,7 @@ const HealthcareAndFitness = () => {
         heading="Why Choose Capyngen?"
         subheading="Your trusted IT partner for the healthcare and fitness sector."
         buttonText="Let's Contact"
-        image="https://via.placeholder.com/300x550.png" // replace with actual phone image
+        image={assets.healthcare}
         types={typesData}
       />
       <CardsSectionImage

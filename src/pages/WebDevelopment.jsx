@@ -24,6 +24,7 @@ import BannerRollingGallery from "../components/BannerRollingGallery";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import TechStack from "../components/TechStack";
+import { Helmet } from "react-helmet-async";
 
 const WebDevelopment = () => {
   const faqItems = [
@@ -508,6 +509,19 @@ const WebDevelopment = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Website Development Company | Build Your Website with Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Looking for website development company? Get a fast, responsive, and SEO-friendly website built by Capyngen. Start your online journey today — contact us now!"
+        />
+        <meta
+          name="keywords"
+          content="Website Development Company | Build Your Website with Capyngen"
+        />
+      </Helmet>
       <BannerRollingGallery autoplay={true} pauseOnHover={true} />
       <div className="relative z-10">
         <TopRatedCompany
@@ -552,7 +566,7 @@ const WebDevelopment = () => {
             "Create the online representation of your ideas, that speaks volumes! Reach out to the top web development company in India, Capyngen, for tailored web development solutions by an expert and quality web development services that increase your business and attract the audience.",
           ]}
           textSize="text-2xl"
-          buttonText="Contact Us"
+          buttonText="Book Expert Consulting Now!"
           backgroundVideo={assets.backgroundVideo}
         />
         <CardsSection
@@ -599,7 +613,7 @@ const WebDevelopment = () => {
             "Do you want a website that will help your business grow? So, for custom website services and professional website development, get in touch with Capyngen, the best website development company in India!",
           ]}
           textSize="text-2xl"
-          buttonText="Contact Us"
+          buttonText="Get in Touch"
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />

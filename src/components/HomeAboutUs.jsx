@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
 import { assets } from "../assets/assets";
 import AnimatedButton from "./AnimatedButton";
 import BestHeading from "./BestHeading";
@@ -6,6 +7,8 @@ import BestHeading from "./BestHeading";
 const demoPeople = [assets.team1, assets.team2, assets.team3, assets.team4];
 
 const HomeAboutUs = () => {
+  const navigate = useNavigate(); // ✅ initialize navigate
+
   return (
     <section
       className="relative w-full overflow-hidden text-white px-4 sm:px-6 md:px-12 lg:px-20"
@@ -61,7 +64,7 @@ const HomeAboutUs = () => {
 
           {/* Description + CTA */}
           <div className="flex flex-col gap-5 md:gap-7 max-w-3xl mx-auto md:mx-0">
-            <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-medium  leading-relaxed drop-shadow-sm">
+            <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-medium leading-relaxed drop-shadow-sm">
               Capyngen is a cut above the rest in the{" "}
               <strong>digital marketing</strong> agency arena, as we are not
               only a digital marketing agency. The team of Capyngen, equipped
@@ -75,7 +78,7 @@ const HomeAboutUs = () => {
             <AnimatedButton
               text="Learn More About Us"
               aria-label="Learn more about Capyngen"
-              onClick={() => alert("Button clicked!")}
+              onClick={() => navigate("/company-overview")} // ✅ navigate on click
             />
           </div>
         </div>

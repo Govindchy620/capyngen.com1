@@ -586,6 +586,23 @@ import highTech3 from "./highTech3.png";
 import highTech4 from "./highTech4.png";
 import highTech5 from "./highTech5.png";
 import highTech6 from "./highTech6.png";
+import highTech7 from "./highTech7.png";
+import highTech8 from "./highTech8.png";
+import highTech9 from "./highTech9.png";
+import highTech10 from "./highTech10.png";
+// import highTech11 from "./highTech11.png";
+import highTech12 from "./highTech12.png";
+import highTech13 from "./highTech13.png";
+import highTech14 from "./highTech14.png";
+import highTech15 from "./highTech15.png";
+import highTech16 from "./highTech16.png";
+import highTech17 from "./highTech17.png";
+import highTech18 from "./highTech18.png";
+import highTech19 from "./highTech19.png";
+import highTech20 from "./highTech20.png";
+import highTech21 from "./highTech21.png";
+import highTech22 from "./highTech22.png";
+import highTech23 from "./highTech23.png";
 import cyberSecurity1 from "./cyberSecurity1.png";
 import cyberSecurity2 from "./cyberSecurity2.png";
 import cyberSecurity3 from "./cyberSecurity3.png";
@@ -601,6 +618,32 @@ import cyberSecurity12 from "./cyberSecurity12.png";
 import cyberSecurity13 from "./cyberSecurity13.png";
 import cyberSecurity14 from "./cyberSecurity14.png";
 import cyberSecurity15 from "./cyberSecurity15.png";
+import travel1 from "./travel1.png";
+import travel2 from "./travel2.png";
+import travel3 from "./travel3.png";
+import travel4 from "./travel4.png";
+import travel5 from "./travel5.png";
+import travel6 from "./travel6.png";
+import travel7 from "./travel7.png";
+import travel8 from "./travel8.png";
+import travel9 from "./travel9.png";
+import healthcareFitness1 from "./healthcareFitness1.png";
+import healthcareFitness2 from "./healthcareFitness2.png";
+import healthcareFitness3 from "./healthcareFitness3.png";
+import healthcareFitness4 from "./healthcareFitness4.png";
+import healthcareFitness5 from "./healthcareFitness5.jpg";
+import healthcareFitness6 from "./healthcareFitness6.png";
+import healthcareFitness7 from "./healthcareFitness7.png";
+import healthcareFitness8 from "./healthcareFitness8.png";
+import healthcareFitness9 from "./healthcareFitness9.png";
+import healthcareFitness10 from "./healthcareFitness10.png";
+import healthcareFitness11 from "./healthcareFitness11.png";
+import healthcareFitness12 from "./healthcareFitness12.png";
+import healthcareFitness13 from "./healthcareFitness13.png";
+import healthcareFitness14 from "./healthcareFitness14.png";
+import healthcareFitness15 from "./healthcareFitness15.png";
+import healthcareFitness16 from "./healthcareFitness16.png";
+import healthcareFitness17 from "./healthcareFitness17.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1191,6 +1234,23 @@ export const assets = {
   highTech4,
   highTech5,
   highTech6,
+  highTech7,
+  highTech8,
+  highTech9,
+  highTech10,
+  // highTech11,
+  highTech12,
+  highTech13,
+  highTech14,
+  highTech15,
+  highTech16,
+  highTech17,
+  highTech18,
+  highTech19,
+  highTech20,
+  highTech21,
+  highTech22,
+  highTech23,
   cyberSecurity1,
   cyberSecurity2,
   cyberSecurity3,
@@ -1206,6 +1266,32 @@ export const assets = {
   cyberSecurity13,
   cyberSecurity14,
   cyberSecurity15,
+  travel1,
+  travel2,
+  travel3,
+  travel4,
+  travel5,
+  travel6,
+  travel7,
+  travel8,
+  travel9,
+  healthcareFitness1,
+  healthcareFitness2,
+  healthcareFitness3,
+  healthcareFitness4,
+  healthcareFitness5,
+  healthcareFitness6,
+  healthcareFitness7,
+  healthcareFitness8,
+  healthcareFitness9,
+  healthcareFitness10,
+  healthcareFitness11,
+  healthcareFitness12,
+  healthcareFitness13,
+  healthcareFitness14,
+  healthcareFitness15,
+  healthcareFitness16,
+  healthcareFitness17,
 };
 
 export const navItems = [

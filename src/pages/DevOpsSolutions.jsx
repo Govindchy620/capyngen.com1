@@ -22,6 +22,7 @@ import GetStarted from "../components/GetStarted";
 import Banner5 from "../components/Banner5";
 import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
+import { Helmet } from "react-helmet-async";
 
 const DevOpsSolutions = () => {
   const faqItems = [
@@ -233,6 +234,19 @@ const DevOpsSolutions = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          DevOps Solutions | DevOps Services & Managed Consulting – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Accelerate your development with Capyngen’s DevOps solutions. We offer expert DevOps services, consulting, and managed support to streamline your workflow."
+        />
+        <meta
+          name="keywords"
+          content="DevOps Solutions | DevOps Services & Managed Consulting – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner5 />
       </div>

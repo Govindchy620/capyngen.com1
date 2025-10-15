@@ -28,6 +28,7 @@ import CardsSection from "../components/CardsSection";
 import HowWeWork from "../components/HowWeWork";
 import TopRatedCompany from "../components/TopRatedCompany";
 import BenefitsSection from "../components/BenefitsSection";
+import { Helmet } from "react-helmet-async";
 
 const Insurance = () => {
   const slides = [
@@ -283,6 +284,19 @@ const Insurance = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          IT Solutions for Insurance Industry | Best Digital & Software Services
+        </title>
+        <meta
+          name="description"
+          content="Capyngen provides innovative IT solutions for the insurance industry. We build custom software and digital platforms to automate, secure, and grow your business."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for Insurance Industry | Best Digital & Software Services"
+        />
+      </Helmet>
       <Banner4 slides={slides} />
       <GetStarted
         reverse={false}

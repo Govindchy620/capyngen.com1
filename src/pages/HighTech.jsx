@@ -44,6 +44,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import Banner11 from "../components/Banner11";
 import TechStack from "../components/TechStack";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const HighTech = () => {
   const faqItems = [
@@ -102,216 +103,61 @@ const HighTech = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.highTech13,
       title: "Operational Agility",
       desc: "Experience rapid execution and increased efficiency through the implementation of advanced digital transformation technologies.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech14,
       title: "Enhanced Security",
       desc: "Protect your company’s valuable resources and data with our enterprise-grade cybersecurity solutions built for high-tech infrastructures.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech15,
       title: "Data-Driven Decision-Making",
       desc: "Leverage analytics and automation to make real-time, informed decisions across R&D, manufacturing, and customer engagement processes.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech16,
       title: "Reduced Costs with Cloud Efficiency",
       desc: "Migrate to our high-value cloud platforms to lower infrastructure costs while improving performance, uptime, and operational reliability.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech17,
       title: "Innovation Through Gen AI",
       desc: "Utilize AI models for data generation, predictive simulation, and prototype testing—empowering teams to innovate faster and smarter.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech18,
       title: "Sustainable Scalability",
       desc: "Deploy adaptive IT systems that scale automatically with your business growth, user base expansion, and future innovations.",
     },
   ];
   const cardsSectionSliderData1 = [
     {
-      image: assets.bg1,
+      image: assets.highTech22,
       title: "Electronics & Semiconductor Manufacturing",
       desc: "Use AI-driven insights to predict defects, optimize yield, and enhance the overall semiconductor manufacturing process.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech23,
       title: "Telecommunication Providers",
       desc: "Adopt cloud-based platforms to boost service delivery speed, scalability, and customer experience for telecom operations.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech19,
       title: "AI & Robotics Firms",
       desc: "Empower AI and robotics innovations with advanced ML frameworks and automation tools for greater accuracy and flexibility.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech20,
       title: "Aerospace & Defense Tech",
       desc: "Build and maintain secure, compliant digital systems adhering to the highest cybersecurity and operational standards.",
     },
     {
-      image: assets.bg1,
+      image: assets.highTech21,
       title: "Consumer Technology Companies",
       desc: "Transform the customer journey—from product design to after-sales support—through seamless digital transformation solutions.",
-    },
-  ];
-  const techStack = [
-    {
-      title: "Frontend",
-      items: [
-        {
-          name: "React",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        },
-        {
-          name: "Angular",
-          icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
-        },
-        {
-          name: "Next.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
-        },
-        {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
-        },
-        {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
-        },
-      ],
-    },
-    {
-      title: "Backend",
-      items: [
-        {
-          name: "Node.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
-        },
-        {
-          name: "Python",
-          icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
-        },
-        {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-        },
-        {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-        },
-      ],
-    },
-    {
-      title: "Platforms",
-      items: [
-        {
-          name: "iOS",
-          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
-        },
-        {
-          name: "Android",
-          icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
-        },
-        {
-          name: "React Native",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-      ],
-    },
-    {
-      title: "Database",
-      items: [
-        {
-          name: "MongoDB",
-          icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
-        },
-        {
-          name: "MySQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
-        },
-        {
-          name: "PostgreSQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
-        },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Oracle",
-          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
-        },
-      ],
-    },
-    {
-      title: "UI/UX",
-      items: [
-        {
-          name: "Adobe XD",
-          icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
-        },
-        {
-          name: "Sketch",
-          icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "InVision",
-          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
-        },
-      ],
     },
   ];
   const cardsSectionImageData1 = [
@@ -360,22 +206,22 @@ const HighTech = () => {
   ];
   const marketingCards = [
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-1.jpg",
+      img: assets.highTech7,
       alt: "Christmas background 3D cartoon",
       text: "Powering the Digital Revolution",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-2.jpg",
+      img: assets.highTech8,
       alt: "A beautiful glowing flower",
       text: "Technology That Transforms Business",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-3.jpg",
+      img: assets.highTech9,
       alt: "A magical leopard",
       text: "Innovate Without Limits",
     },
     {
-      img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-4.jpg",
+      img: assets.highTech10,
       alt: "A female 3D cartoon holding a wrapped gift box",
       text: "Accelerate Growth with Smart Tech Solutions",
     },
@@ -421,6 +267,19 @@ const HighTech = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>
+          IT Solutions for High-Tech Industry | Cloud & AI Services – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Empower innovation with Capyngen’s IT solutions for the high-tech industry. From Gen AI and cloud platforms to cybersecurity and software solutions — we deliver results."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for High-Tech Industry | Cloud & AI Services – Capyngen"
+        />
+      </Helmet>
       <Banner11
         heading=" Driving the High-Tech Industry"
         highlight="Intelligent IT Solutions"
@@ -470,7 +329,7 @@ const HighTech = () => {
             </p>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.highTech12}
         background={assets.patternBg1}
         isHidden="hidden"
       />
@@ -526,11 +385,6 @@ const HighTech = () => {
         height="h-78"
         headColor="text-white"
         services={cardsSectionSliderData1}
-      />
-      <TechStack
-        heading="Modern Tech Stack for High-Tech IT Solutions"
-        subheading=""
-        categories={techStack}
       />
       <GetStarted
         reverse={false}

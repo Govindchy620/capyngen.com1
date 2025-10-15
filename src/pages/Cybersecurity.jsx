@@ -16,6 +16,7 @@ import GetStarted from "../components/GetStarted";
 import IndustryServices from "../components/IndustryServices";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const Cybersecurity = () => {
   const faqItems = [
@@ -209,6 +210,19 @@ const Cybersecurity = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Cybersecurity Solutions | IT & Network Security Services – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets."
+        />
+        <meta
+          name="keywords"
+          content="Cybersecurity Solutions | IT & Network Security Services – Capyngen"
+        />
+      </Helmet>
       <div className="">
         <Banner5
           title={

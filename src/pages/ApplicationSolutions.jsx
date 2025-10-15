@@ -22,6 +22,7 @@ import {
   FaMoneyBillWave,
   FaPuzzlePiece,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const ApplicationSolutions = () => {
   const faqItems = [
@@ -292,6 +293,19 @@ const ApplicationSolutions = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Application Solutions | Business & Custom App Solutions – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers powerful application solutions for businesses. Get custom, scalable, and efficient app development tailored to your enterprise goals."
+        />
+        <meta
+          name="keywords"
+          content="Application Solutions | Business & Custom App Solutions – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <CreativeAgencyFAQ
           slides={slidesData}

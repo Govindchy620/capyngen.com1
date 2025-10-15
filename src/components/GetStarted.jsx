@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const GetStarted = ({
-  title = "Guiding Your App Vision from Concept to Launch with Expert Consulting and Proven Strategies",
+  title = "",
   description = "Our expert consulting team provides end-to-end support, from initial concept through to successful launch, ensuring every aspect of your app development is meticulously handled.",
   buttonText = "Get Started Today",
   buttonColor = "bg-white hover:scale-105",
@@ -34,6 +35,7 @@ const GetStarted = ({
           aria-hidden="true"
         />
       )}
+
       <div
         className={`container max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 lg:gap-20 ${
           reverse ? "md:flex-row-reverse" : ""
@@ -87,14 +89,15 @@ const GetStarted = ({
             viewport={{ once: true }}
             className="md:flex-shrink-0 z-10 flex justify-center md:justify-start"
           >
-            <button
-              className={`${buttonColor} ${buttonTextColor} font-bold px-8 py-3 rounded-lg shadow-lg flex items-center gap-3 transition`}
-              aria-label="Get started today"
+            <Link
+              to="/contact-us"
+              className={`${buttonColor} ${buttonTextColor} font-bold px-8 py-3 rounded-lg shadow-lg flex items-center gap-3 transition cursor-pointer`}
+              aria-label="Go to contact page"
             >
               <FaPhoneAlt className="text-lg" aria-hidden="true" />
               {buttonText}
               <FaArrowRight className="text-lg ml-1" aria-hidden="true" />
-            </button>
+            </Link>
           </motion.div>
         )}
 

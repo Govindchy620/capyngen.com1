@@ -35,6 +35,7 @@ import {
   FaTools,
 } from "react-icons/fa";
 import CardsSectionImage from "../components/CardsSectionImage";
+import { Helmet } from "react-helmet-async";
 
 const EcommerceDesign = () => {
   const faqItems = [
@@ -241,6 +242,19 @@ const EcommerceDesign = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          E-commerce Design | Website, App & UI Design Services – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales."
+        />
+        <meta
+          name="keywords"
+          content="E-commerce Design | Website, App & UI Design Services – Capyngen"
+        />
+      </Helmet>
       <Banner8
         titleMain="Best E-Commerce Design"
         titlePrefix="Transform Your Digital Store with"

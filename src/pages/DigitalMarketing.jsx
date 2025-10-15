@@ -23,6 +23,7 @@ import {
   FaTools,
   FaUsers,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const DigitalMarketing = () => {
   const faqItems = [
@@ -372,6 +373,19 @@ const DigitalMarketing = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Digital Marketing Services | Result-Driven Marketing Agency – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Grow your business online with Capyngen’s digital marketing services. From SEO to social media, our custom strategies deliver traffic, leads, and conversions."
+        />
+        <meta
+          name="keywords"
+          content="Digital Marketing Services | Result-Driven Marketing Agency – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner11
           heading="to Grow Your Business"

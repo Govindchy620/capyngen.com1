@@ -17,6 +17,7 @@ import { FaTachometerAlt, FaUsersCog, FaChartPie } from "react-icons/fa";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
+import { Helmet } from "react-helmet-async";
 
 const DataAnalytics = () => {
   const faqItems = [
@@ -259,6 +260,19 @@ const DataAnalytics = () => {
   useSplitTextAnimation("h1");
   return (
     <div className="relative">
+      <Helmet>
+        <title>
+          Data & Analytics | Best Data Analytics Company in India – Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Turn data into decisions with Capyngen’s data & analytics services. We offer cloud-based analytics solutions to help businesses gain insights and scale faster."
+        />
+        <meta
+          name="keywords"
+          content="Data & Analytics | Best Data Analytics Company in India – Capyngen"
+        />
+      </Helmet>
       <div className="lg:sticky inset-0">
         <Banner5
           title={
