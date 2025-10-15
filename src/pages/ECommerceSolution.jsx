@@ -300,15 +300,37 @@ const ECommerceSolution = () => {
   ];
   const techStack = [
     {
+      title: "No-Code / Low-Code Platforms",
+      items: [
+        {
+          name: "Shopify",
+          icon: "https://cdn.worldvectorlogo.com/logos/shopify.svg",
+        },
+        { name: "Wix", icon: "https://cdn.worldvectorlogo.com/logos/wix.svg" },
+        {
+          name: "Squarespace",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Squarespace_Logo.png?20130318145354",
+        },
+        {
+          name: "Webflow",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Webflow_logo_2023.svg/1600px-Webflow_logo_2023.svg.png?20231006234957",
+        },
+        {
+          name: "Bubble",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Bubble_Logo_no_code.svg/1597px-Bubble_Logo_no_code.svg.png?20210520210606",
+        },
+        {
+          name: "BigCommerce",
+          icon: "https://cdn.worldvectorlogo.com/logos/bigcommerce-1.svg",
+        },
+      ],
+    },
+    {
       title: "Frontend",
       items: [
         {
           name: "React",
           icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        },
-        {
-          name: "Angular",
-          icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
         },
         {
           name: "Next.js",
@@ -317,26 +339,6 @@ const ECommerceSolution = () => {
         {
           name: "Vue.js",
           icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
-        },
-        {
-          name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
         },
       ],
     },
@@ -348,58 +350,17 @@ const ECommerceSolution = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
         },
         {
-          name: "Python",
+          name: "PHP (Laravel)",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+        },
+        {
+          name: "Python (Django)",
           icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
         },
-        {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-        },
-        {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-        },
       ],
     },
     {
-      title: "Platforms",
-      items: [
-        {
-          name: "iOS",
-          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
-        },
-        {
-          name: "Android",
-          icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
-        },
-        {
-          name: "React Native",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-      ],
-    },
-    {
-      title: "Database",
+      title: "Databases",
       items: [
         {
           name: "MongoDB",
@@ -407,29 +368,21 @@ const ECommerceSolution = () => {
         },
         {
           name: "MySQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
         },
         {
           name: "PostgreSQL",
           icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
         },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Oracle",
-          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
-        },
       ],
     },
     {
-      title: "UI/UX",
+      title: "UI/UX & Design",
       items: [
+        {
+          name: "Figma",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+        },
         {
           name: "Adobe XD",
           icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
@@ -438,21 +391,10 @@ const ECommerceSolution = () => {
           name: "Sketch",
           icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
         },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "InVision",
-          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
-        },
       ],
     },
   ];
+
   const steps = [
     {
       step: "Step 01",

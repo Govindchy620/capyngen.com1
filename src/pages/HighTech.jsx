@@ -362,22 +362,22 @@ const HighTech = () => {
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-1.jpg",
       alt: "Christmas background 3D cartoon",
-      text: "SEO & Content",
+      text: "Powering the Digital Revolution",
     },
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-2.jpg",
       alt: "A beautiful glowing flower",
-      text: "Social Media Marketing",
+      text: "Technology That Transforms Business",
     },
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-3.jpg",
       alt: "A magical leopard",
-      text: "Paid Advertising",
+      text: "Innovate Without Limits",
     },
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-4.jpg",
       alt: "A female 3D cartoon holding a wrapped gift box",
-      text: "Email Campaigns",
+      text: "Accelerate Growth with Smart Tech Solutions",
     },
   ];
   const cardsSectionData2 = [

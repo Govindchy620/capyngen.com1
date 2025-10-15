@@ -252,6 +252,48 @@ const BlockchainDevelopment = () => {
 
   const techStack = [
     {
+      title: "Blockchain Platforms",
+      items: [
+        {
+          name: "Ethereum",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Ethereum-icon-purple.svg",
+        },
+        {
+          name: "Solana",
+          icon: "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png",
+        },
+        {
+          name: "Polygon",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Polygon_Icon.svg/504px-Polygon_Icon.svg.png",
+        },
+        {
+          name: "Binance Smart Chain",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg/1024px-BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg.png?20220816165226",
+        },
+        {
+          name: "Polkadot",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Polkadot_Logo.png/1597px-Polkadot_Logo.png?20220602143035",
+        },
+      ],
+    },
+    {
+      title: "Smart Contract Languages",
+      items: [
+        {
+          name: "Solidity",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/98/Solidity_logo.svg",
+        },
+        {
+          name: "Rust",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg",
+        },
+        {
+          name: "Move",
+          icon: "https://avatars.githubusercontent.com/u/105913937?s=200&v=4",
+        },
+      ],
+    },
+    {
       title: "Frontend",
       items: [
         {
@@ -259,24 +301,12 @@ const BlockchainDevelopment = () => {
           icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
         },
         {
-          name: "Angular",
-          icon: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg",
-        },
-        {
           name: "Next.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
         },
         {
           name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-        },
-        {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-        {
-          name: "Kotlin",
-          icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
         },
       ],
     },
@@ -285,90 +315,44 @@ const BlockchainDevelopment = () => {
       items: [
         {
           name: "Node.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
         },
         {
           name: "Python",
-          icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
         },
         {
-          name: "Ruby on Rails",
-          icon: "https://cdn.worldvectorlogo.com/logos/rails-1.svg",
-        },
-        {
-          name: "Java",
-          icon: "https://cdn.worldvectorlogo.com/logos/java-14.svg",
-        },
-        {
-          name: "PHP",
-          icon: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+          name: "Go",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg",
         },
       ],
     },
     {
-      title: "Platforms",
+      title: "Blockchain Tools",
       items: [
         {
-          name: "iOS",
-          icon: "https://cdn.worldvectorlogo.com/logos/ios-1.svg",
+          name: "Hardhat",
+          icon: "https://avatars.githubusercontent.com/u/73118775?s=200&v=4",
         },
         {
-          name: "Android",
-          icon: "https://cdn.worldvectorlogo.com/logos/android-4.svg",
+          name: "Truffle",
+          icon: "https://avatars.githubusercontent.com/u/23352888?s=200&v=4",
         },
         {
-          name: "React Native",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+          name: "Ganache",
+          icon: "https://avatars.githubusercontent.com/u/22558608?s=200&v=4",
         },
         {
-          name: "Flutter",
-          icon: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
-        },
-      ],
-    },
-    {
-      title: "Database",
-      items: [
-        {
-          name: "MongoDB",
-          icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+          name: "MetaMask",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg",
         },
         {
-          name: "MySQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
+          name: "Web3.js",
+          icon: "https://docs.web3js.org/img/web3js.svg",
         },
         {
-          name: "PostgreSQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
-        },
-        {
-          name: "Firebase",
-          icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-        },
-        {
-          name: "Oracle",
-          icon: "https://cdn.worldvectorlogo.com/logos/oracle-6.svg",
-        },
-      ],
-    },
-    {
-      title: "UI/UX",
-      items: [
-        {
-          name: "Adobe XD",
-          icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
-        },
-        {
-          name: "Sketch",
-          icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
-        },
-        {
-          name: "InVision",
-          icon: "https://cdn.worldvectorlogo.com/logos/invision-1.svg",
+          name: "Ethers.js",
+          icon: "https://avatars.githubusercontent.com/u/37898297?s=200&v=4",
         },
       ],
     },

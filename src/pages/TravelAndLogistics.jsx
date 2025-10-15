@@ -270,16 +270,12 @@ const TravelAndLogistics = () => {
   const slidesData = [
     {
       image: assets.creativeAgencyFAQ,
-      heading:
-        "Driving the Future of Travel and Logistics with Clever IT Solutions",
+      heading: "Drive Efficiency with Smart Travel & Logistics Solutions",
       description: (
         <>
           <p>
-            Capyngen provides intelligent, scalable, and Custom software
-            solutions for travel and logistics for the transport and logistics
-            sector, enabling companies to utilize the technology to streamline
-            their processes, improve customer service, and increase their
-            profits in a networked world.
+            Digital innovation enables simple routes, efficient supply chains,
+            and customer experience enhancement.
           </p>
         </>
       ),
@@ -287,15 +283,12 @@ const TravelAndLogistics = () => {
     },
     {
       image: assets.creativeAgencyFAQ,
-      heading:
-        "Revolutionizing Capital Markets through State-of-the-art Software Solutions",
+      heading: "Connecting the World Through Technology",
       description: (
         <>
           <p>
-            Leading the way with customer-centric, highly reliable, and
-            adaptable software solutions for capital markets that help generate
-            seamless flow of trading, investment, and portfolio management
-            activities.
+            Make travel and logistics operations more powerful with the help of
+            automation, AI, and real-time analytics.
           </p>
         </>
       ),
@@ -303,15 +296,12 @@ const TravelAndLogistics = () => {
     },
     {
       image: assets.creativeAgencyFAQ,
-      heading:
-        "Revolutionizing Capital Markets through State-of-the-art Software Solutions",
+      heading: "Smart Logistics for a Fast-Moving World",
       description: (
         <>
           <p>
-            Leading the way with customer-centric, highly reliable, and
-            adaptable software solutions for capital markets that help generate
-            seamless flow of trading, investment, and portfolio management
-            activities.
+            Digitalize operations to bring down your costs, improve your
+            accuracy, and facilitate your movement with no interruptions.
           </p>
         </>
       ),

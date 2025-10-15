@@ -112,7 +112,7 @@ const CustomAiSolution = () => {
     },
     {
       name: "JavaScript",
-      logo: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+      logo: "https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo-1024x640.png",
     },
     {
       name: "Node.js",
@@ -121,10 +121,6 @@ const CustomAiSolution = () => {
     {
       name: "React",
       logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-    },
-    {
-      name: "Flask",
-      logo: "https://flask.palletsprojects.com/en/2.3.x/_images/flask-logo.png",
     },
     {
       name: "FastAPI",
@@ -136,7 +132,7 @@ const CustomAiSolution = () => {
     },
     {
       name: "Kubernetes",
-      logo: "https://cdn.worldvectorlogo.com/logos/kubernetes.svg",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png?20190926210707",
     },
     {
       name: "AWS",
@@ -161,13 +157,16 @@ const CustomAiSolution = () => {
     { name: "Redis", logo: "https://cdn.worldvectorlogo.com/logos/redis.svg" },
     {
       name: "OpenCV",
-      logo: "https://opencv.org/wp-content/uploads/2020/07/openCV_logo_horizontal_RGB-300x103.png",
+      logo: "https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_black-2.png",
     },
     {
       name: "Scikit-learn",
       logo: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png",
     },
-    { name: "Jupyter", logo: "https://jupyter.org/assets/main-logo.svg" },
+    {
+      name: "Jupyter",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1280px-Jupyter_logo.svg.png?20190118024747",
+    },
   ];
 
   const cardsSectionData2 = [

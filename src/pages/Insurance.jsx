@@ -33,23 +33,21 @@ const Insurance = () => {
   const slides = [
     {
       image: assets.blockchainBanner1,
-      title:
-        "Insurance Software Development Services by Custom InsurTech Solutions",
+      title: "InsurTech Solutions for the Digital Age",
       subtitle:
-        "Capyngen's IT solutions for the insurance industry help create a robust and large insurance software. Get InsurTech solutions driven by artificial intelligence, and blockchain like custom policy management software and claims processing systems.",
+        "Redesign the functions of underwriting, claims, and customer service with the help of next-gen insurance software.",
     },
     {
       image: assets.blockchainBanner2,
-      title:
-        "Revolutionize Your Business with Cutting-Edge Blockchain Development",
+      title: "Powering Insurance Transformation",
       subtitle:
-        "Utilize the Capyngen blockchain technology that is reliable, transparent, and scalable to change your processes, gain customer loyalty, and open up new horizons.",
+        "Implement AI, analytics, and automation for simpler processes and higher customer trust.",
     },
     {
       image: assets.blockchainDevelopment,
-      title: "Enterprise Blockchain Solutions",
+      title: "Secure, Smart & Scalable Insurance Platforms",
       subtitle:
-        "Improve security, streamline processes, and open up opportunities for large scale corporate activity.",
+        "Develop measurement systems that use data to offer better insurance coverage and faster services.",
     },
   ];
   const cardsSectionImageData1 = [

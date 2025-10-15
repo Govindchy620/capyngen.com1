@@ -112,17 +112,28 @@ const ECommerceIndustry = () => {
   const slidesData = [
     {
       id: 1,
-      title: "Innovative IT Solutions for the E-Commerce Businesses",
+      title: "Redefine Online Retail with Scalable E-Commerce Solutions",
       subtitle:
-        "In the current fast-paced internet business environment, e-commerce companies must embrace the latest technology in order to be one step ahead in the competition. Capyngen offers e-commerce solutions through IT that allow businesses to automate, increase user experience, and attain lasting growth.From the cutting-edge domain of AI technology that helps online stores work more effectively and improve different facets of their business efficiency.",
+        "Creating digital stores that are fast, safe, and optimized for conversions is what makes you reach worldwide markets.",
       image: assets.applicationSolution,
       ctaText: "Explore Projects",
       ctaLink: "#projects",
     },
     {
       id: 2,
-      title: "Seamless Performance",
-      subtitle: "Mobile-first, future-ready solutions.",
+      title: "Powering the Next-Gen Online Marketplace",
+      subtitle:
+        "Offerings that are personalized, data-focused, and designed mobility-first are what characterize next-generation e-commerce flows.",
+      image:
+        "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920",
+      ctaText: "Get Started",
+      ctaLink: "#contact",
+    },
+    {
+      id: 3,
+      title: "Sell Smarter, Grow Faster",
+      subtitle:
+        "One action that has the potential of completely changing your e-commerce business is automating it and using AI-driven analytics to guide your decisions.",
       image:
         "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920",
       ctaText: "Get Started",
