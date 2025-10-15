@@ -581,6 +581,21 @@ import highTech3 from "./highTech3.png";
 import highTech4 from "./highTech4.png";
 import highTech5 from "./highTech5.png";
 import highTech6 from "./highTech6.png";
+import cyberSecurity1 from "./cyberSecurity1.png";
+import cyberSecurity2 from "./cyberSecurity2.png";
+import cyberSecurity3 from "./cyberSecurity3.png";
+import cyberSecurity4 from "./cyberSecurity4.png";
+import cyberSecurity5 from "./cyberSecurity5.png";
+import cyberSecurity6 from "./cyberSecurity6.png";
+import cyberSecurity7 from "./cyberSecurity7.png";
+import cyberSecurity8 from "./cyberSecurity8.png";
+import cyberSecurity9 from "./cyberSecurity9.png";
+import cyberSecurity10 from "./cyberSecurity10.png";
+import cyberSecurity11 from "./cyberSecurity11.png";
+import cyberSecurity12 from "./cyberSecurity12.png";
+import cyberSecurity13 from "./cyberSecurity13.png";
+import cyberSecurity14 from "./cyberSecurity14.png";
+import cyberSecurity15 from "./cyberSecurity15.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1166,6 +1181,21 @@ export const assets = {
   highTech4,
   highTech5,
   highTech6,
+  cyberSecurity1,
+  cyberSecurity2,
+  cyberSecurity3,
+  cyberSecurity4,
+  cyberSecurity5,
+  cyberSecurity6,
+  cyberSecurity7,
+  cyberSecurity8,
+  cyberSecurity9,
+  cyberSecurity10,
+  cyberSecurity11,
+  cyberSecurity12,
+  cyberSecurity13,
+  cyberSecurity14,
+  cyberSecurity15,
 };
 
 export const navItems = [

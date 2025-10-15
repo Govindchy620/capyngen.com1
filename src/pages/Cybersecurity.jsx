@@ -99,32 +99,32 @@ const Cybersecurity = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.cyberSecurity3,
       title: "Managed Cybersecurity Services",
       desc: "A service that offers continuous monitoring, threat detection, and incident response.",
     },
     {
-      image: assets.bg1,
+      image: assets.cyberSecurity4,
       title: "IT Security Services",
       desc: "The security of the system, server, and endpoint against vulnerabilities.",
     },
     {
-      image: assets.bg1,
+      image: assets.cyberSecurity5,
       title: "Network Security Services",
       desc: "The use of firewalls, VPNs, and intrusion prevention systems for safe networks.",
     },
     {
-      image: assets.bg1,
+      image: assets.cyberSecurity6,
       title: "Data Protection Services",
       desc: "The use of encryption, backup, and secure storage solutions for sensitive data.",
     },
     {
-      image: assets.bg1,
+      image: assets.cyberSecurity7,
       title: "Cloud Security Solutions",
       desc: "The security of cloud applications, storage, and virtual environments.",
     },
     {
-      image: assets.bg1,
+      image: assets.cyberSecurity8,
       title: "Cybersecurity Consulting",
       desc: "The strategic guidance to put in place the robust security frameworks.",
     },
@@ -133,37 +133,37 @@ const Cybersecurity = () => {
     {
       title: "Firewalls & Intrusion Detection Systems (IDS/IPS)",
       description: "",
-      image: assets.customAiSolution,
+      image: assets.cyberSecurity9,
       cardBg: "bg-blue-100",
     },
     {
       title: "Anti-Malware & Anti-Virus Software",
       description: "",
-      image: assets.careersAbout1,
+      image: assets.cyberSecurity10,
       cardBg: "bg-pink-100",
     },
     {
       title: "Security Information & Event Management (SIEM)",
       description: "",
-      image: assets.appDevelopment,
+      image: assets.cyberSecurity11,
       cardBg: "bg-green-100",
     },
     {
       title: "Data Encryption & Backup Solutions",
       description: "",
-      image: assets.customAiSolution,
+      image: assets.cyberSecurity12,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Cloud Security Platforms (AWS, Azure, GCP)",
       description: "",
-      image: assets.careersAbout1,
+      image: assets.cyberSecurity13,
       cardBg: "bg-purple-100",
     },
     {
       title: "VPNs & Secure Remote Access",
       description: "",
-      image: assets.appDevelopment,
+      image: assets.cyberSecurity14,
       cardBg: "bg-red-100",
     },
   ];
@@ -224,7 +224,7 @@ const Cybersecurity = () => {
           description="In order to protect your information, systems, and business processes, we offer security for information technology, security for networks, and the administration of security for the organization through cybersecurity programs. Capyngen is a reliable worldwide supplier of all kinds of business cybersecurity software that offers solutions to problems faced by small, medium, and large enterprises."
           primaryBtnText="Protect Your Business"
           primaryBtnLink="#"
-          image="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+          image={assets.cyberSecurity1}
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -298,7 +298,7 @@ const Cybersecurity = () => {
               </p>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.cyberSecurity2}
           isHidden={true}
           background={assets.patternBg1}
         />
@@ -381,7 +381,7 @@ const Cybersecurity = () => {
               </ul>
             </>,
           ]}
-          image={assets.whyChooseUs}
+          image={assets.cyberSecurity15}
           background={assets.patternBg1}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
