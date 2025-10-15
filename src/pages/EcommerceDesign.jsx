@@ -256,8 +256,6 @@ const EcommerceDesign = () => {
         reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
         title="Get a Free Consultation"
         description={[
           "Talk to Capyngen’s e-commerce design experts to create a visually stunning, high-converting online store or mobile app.",
@@ -278,8 +276,6 @@ const EcommerceDesign = () => {
         reverse={true}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
         title="Choose Capyngen  to Get Best E-commerce Design"
         description={[
           "By using e-commerce design ideas that mirror brand goals accurately, you are able to transform online businesses practically. Working on your mobile app UI with Capyngen will definitely result in great designs; furthermore, they are also going to be involved in everything from concept to finalization along with you.",
@@ -300,8 +296,6 @@ const EcommerceDesign = () => {
         reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
         title="Empowering Growth Through E-commerce Design Partnerships"
         description={[
           "The top e-commerce design experts are the core of a network, which, as a whole, collaborates on, and brings up, your online business. You get the innovative solutions that allow increased sales, lead to improved user experience, and give you the digital marketplace competitive advantage, delivered by the team of experts made up of UI/UX specialists and mobile app designers.",
@@ -333,8 +327,6 @@ const EcommerceDesign = () => {
         reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
         title="Contact Our Designers"
         description={[
           "Connect with our global e-commerce design team to build custom web and mobile platforms that increase conversions and drive growth.",

@@ -33,7 +33,7 @@ const WhyChoose = ({
                 flex flex-col items-center justify-center p-4 sm:p-6
                 bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-lg
                 transform transition duration-300 hover:scale-105 hover:shadow-blue-500/40
-                h-full min-h-[280px]
+                h-full min-h-[380px]
                 flex-1 
                 basis-full
                 sm:basis-[45%]

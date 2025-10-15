@@ -162,29 +162,28 @@ const EnergyResourcesUtilities = () => {
   const panels = [
     {
       image: assets.energyResourcesBanner1,
-      title:
-        "Revolutionize Your Energy Activities By Using The Most Sophisticated Energy Management Software Solutions",
-      desc: "Capyngen provides tech-forward IT solutions for utilities, oil & gas, renewable energy, and smart grids that enable you to save money, improve efficiency, and promote sustainable practices.",
+      title: "Powering Progress with Digital Energy Solutions",
+      desc: "Get the energy you need to run your business in the most efficient and environmentally friendly way by implementing energy management systems that are smart and simple to use.",
     },
     {
       image: assets.energyResourcesBanner2,
-      title: "Panel 2",
-      desc: "Digital Art • Illustrations",
+      title: "The Future of Clean & Connected Energy",
+      desc: "Utilize Internet of Things(IoT), Artificial Intelligence (AI), and advanced analytics to utilities get a facelift and resource ease their operations beyond imagination.",
     },
     {
       image: assets.energyResourcesBanner3,
-      title: "Panel 3",
-      desc: "Digital Art • Illustrations",
+      title: "Smarter Energy for a Smarter Planet",
+      desc: "Become electric utility networked systems to the point of energy saving through transparency and sustainability.",
     },
     {
       image: assets.energyResourcesBanner4,
-      title: "SEO Speed Up Website",
-      desc: "Digital Art • Illustrations",
+      title: "Driving Digital Transformation in Utilities",
+      desc: "Make the transition to automation, predictive insights, and innovation complete with your energy ecosystem.",
     },
     {
       image: assets.energyResourcesBanner5,
-      title: "Panel 5",
-      desc: "Digital Art • Illustrations",
+      title: "Reshape Energy Operations with Technology",
+      desc: "Digital excellence is what will be doing for you; it will turn the waste reduction into a safe operation and reliable through quality improvement.",
     },
   ];
   const cardsSectionData1 = [

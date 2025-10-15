@@ -234,39 +234,51 @@ const Consulting = () => {
   ];
   const cardsSectionSliderData1 = [
     {
-      title: "Healthcare",
-      desc: "IT systems that are HIPAA-compliant, platforms for telemedicine, electronic health records, patient management solutions, and healthcare analytics that can be helpful in improving patient care and also the operational efficiency.",
-      image: assets.consulting10,
+      title: "E-commerce & Retail",
+      desc: "",
+      image: assets.webDesign11,
       textColor: "text-white",
     },
     {
-      title: "Finance & Banking",
-      desc: "Financial systems that are secure, solutions for regulatory compliance, fraud detection, risk management, platforms for digital banking, and fintech innovations that are in line with the strict requirements of the industry.",
-      image: assets.consulting9,
+      title: "Healthcare & Wellness",
+      desc: "",
+      image: assets.webDesign12,
       textColor: "text-white",
     },
     {
-      title: "Manufacturing",
-      desc: "The implementation of ERP, the optimization of the supply chain, the integration of IoT, solutions for the predictive maintenance, quality management systems, and the productive efficiency for the improvement of the competitive advantage.",
-      image: assets.customAiSolution,
+      title: "Education & E-learning",
+      desc: "",
+      image: assets.webDesign13,
       textColor: "text-white",
     },
     {
-      title: "Retail & E-Commerce",
-      desc: "Omnichannel platforms, the management of inventory, analytics of customers, systems for point-of-sale, e-commerce solutions, and engines for personalization that are leading to the increase of the sales and also the satisfaction.",
-      image: assets.customAiSolution,
+      title: "Real Estate",
+      desc: "",
+      image: assets.webDesign14,
       textColor: "text-white",
     },
     {
-      title: "Education & EdTech",
-      desc: "Systems for learning management, platforms for virtual classrooms, student information systems, educational analytics, and digital transformation initiatives that are helpful in education delivery of the modern kind.",
-      image: assets.consulting8,
+      title: "IT & Software",
+      desc: "",
+      image: assets.webDesign15,
       textColor: "text-white",
     },
     {
-      title: "Government & Public Sector",
-      desc: "The digitization of citizen services, platforms for e-governance, solutions for data security, management of compliance, and technology modernization that is improving public service delivery efficiency.",
-      image: assets.consulting11,
+      title: "Corporate & Enterprise Solutions",
+      desc: "",
+      image: assets.webDesign16,
+      textColor: "text-white",
+    },
+    {
+      title: "Travel & Hospitality",
+      desc: "",
+      image: assets.webDesign17,
+      textColor: "text-white",
+    },
+    {
+      title: "Startups & Entrepreneurs",
+      desc: "",
+      image: assets.webDesign18,
       textColor: "text-white",
     },
   ];
@@ -359,6 +371,7 @@ const Consulting = () => {
           description={[
             "Why not make use of our free IT consultation? First, our technology experts get to know your needs, then they create tailored strategies that really move your company forward and give you a return on your investment!",
           ]}
+          textSize="text-2xl"
           backgroundVideo={assets.backgroundVideo}
         />
         <FAQSection2 items={faqItems} />

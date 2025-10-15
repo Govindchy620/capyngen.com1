@@ -239,23 +239,21 @@ const LifeScience = () => {
   const slides = [
     {
       image: assets.blockchainBanner1,
-      title:
-        "Life sciences software solutions suitable for the new healthcare & pharma",
+      title: "Digitally Intelligent Life Sciences Innovation",
       subtitle:
-        "One of the main sources of pharmaceutical, biotech, and healthcare companies' strength is the digital solution that is coming from IT.",
+        "Rethink life sciences challenges with technology that reinvent research, manufacturing, and patient outcomes.",
     },
     {
       image: assets.blockchainBanner2,
-      title:
-        "Revolutionize Your Business with Cutting-Edge Blockchain Development",
+      title: "Discovery in Life Sciences Made Faster",
       subtitle:
-        "Utilize the Capyngen blockchain technology that is reliable, transparent, and scalable to change your processes, gain customer loyalty, and open up new horizons.",
+        "Get the most out of your research and development(July) compliance and data-driven insights with smart solutions.",
     },
     {
       image: assets.blockchainDevelopment,
-      title: "Enterprise Blockchain Solutions",
+      title: "Leading the Future of Biotech and Pharma",
       subtitle:
-        "Improve security, streamline processes, and open up opportunities for large scale corporate activity.",
+        "Fast track clinical research with the use of AI and the implementation of automation for better outcomes.",
     },
   ];
 

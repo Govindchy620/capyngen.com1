@@ -361,8 +361,6 @@ const DataAnalytics = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
           title=""
           textSize="text-2xl"
           buttonText="Get Started"

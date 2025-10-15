@@ -18,10 +18,14 @@ import CardsSection from "../components/CardsSection";
 import {
   FaAppStore,
   FaBuilding,
+  FaHeartbeat,
   FaIndustry,
   FaLaptopCode,
   FaMoneyBillWave,
   FaPuzzlePiece,
+  FaRocket,
+  FaShoppingCart,
+  FaUniversity,
 } from "react-icons/fa";
 import Banner9 from "../components/Banner9";
 
@@ -389,8 +393,6 @@ const ArtificialIntelligence = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-          buttonTextColor="text-white"
           title="Transform Your Business with AI-Powered Solutions"
           buttonText="Book your AI Consultation"
           description={[

@@ -1,32 +1,5 @@
 import React from "react";
 import ExpandableGallery from "../components/ExpandableGallery";
-import SeoToolsSection from "../components/SeoToolsSection";
-import SeoStatsSection from "../components/SeoStatsSection";
-import Timeline from "../components/Timeline";
-import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
-import StartupAgency from "../components/StartupAgency";
-import SeoAgency from "../components/SeoAgency";
-import {
-  FaBuilding,
-  FaTasks,
-  FaStore,
-  FaPuzzlePiece,
-  FaMoneyBillWave,
-  FaCogs,
-  FaTools,
-  FaDollarSign,
-  FaUsers,
-  FaShieldAlt,
-  FaBullhorn,
-  FaHeart,
-} from "react-icons/fa";
-import {
-  FaUserTie,
-  FaHome,
-  FaGavel,
-  FaUserFriends,
-  FaGlobe,
-} from "react-icons/fa";
 import IndustryServices from "../components/IndustryServices";
 import TypesWeDevelop from "../components/TypesWeDevelop";
 import { assets } from "../assets/assets";
@@ -34,9 +7,22 @@ import Banner6 from "../components/Banner6";
 import GetStarted from "../components/GetStarted";
 import TopRatedCompany from "../components/TopRatedCompany";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
+import {
+  FaBuilding,
+  FaUserFriends,
+  FaGavel,
+  FaHome,
+  FaUserTie,
+  FaGlobe,
+  FaTools,
+  FaDollarSign,
+  FaUsers,
+  FaShieldAlt,
+  FaBullhorn,
+  FaHeart,
+} from "react-icons/fa";
 
 const Education = () => {
   const faqItems = [
@@ -117,68 +103,64 @@ const Education = () => {
         "Yes, we allow technical assistance, maintenance, and updates on a daily basis even after the deployment period.",
     },
   ];
+
   const servicesData = [
     {
       image: assets.education2,
       title: "Learning Management System (LMS) Development",
       desc: (
-        <>
-          <ul className="list-disc pl-5">
-            <li>
-              Custom LMS platforms for K-12, and higher education institutions.
-            </li>
-            <li>
-              Grading, assessments, attendance, and virtual classroom features
-              seamlessly integrated.
-            </li>
-            <li>Student and faculty apps with responsive design.</li>
-          </ul>
-        </>
+        <ul className="list-disc pl-5">
+          <li>
+            Custom LMS platforms for K-12, and higher education institutions.
+          </li>
+          <li>
+            Grading, assessments, attendance, and virtual classroom features
+            seamlessly integrated.
+          </li>
+          <li>Student and faculty apps with responsive design.</li>
+        </ul>
       ),
     },
     {
       image: assets.education3,
       title: "Cloud Solutions for Education",
       desc: (
-        <>
-          <ul className="list-disc pl-5">
-            <li>
-              Safe and secure cloud storage for educational records and learning
-              materials.
-            </li>
-            <li>
-              Online education platform development that adjusts to the
-              institution’s size.
-            </li>
-            <li>Simple ERP and third-party tool compatibility.</li>
-          </ul>
-        </>
+        <ul className="list-disc pl-5">
+          <li>
+            Safe and secure cloud storage for educational records and learning
+            materials.
+          </li>
+          <li>
+            Online education platform development that adjusts to the
+            institution’s size.
+          </li>
+          <li>Simple ERP and third-party tool compatibility.</li>
+        </ul>
       ),
     },
     {
       image: assets.education4,
       title: "Data Analytics & Insights",
       desc: (
-        <>
-          <ul className="list-disc pl-5">
-            <li>
-              Visualize student performance and engagement data, updated
-              instantly.
-            </li>
-            <li>
-              Use of advanced statistical models and algorithms to predict
-              learning outcomes.
-            </li>
-            <li>
-              Provision of access and control through the setting up of roles
-              and permissions in dashboards and users of the education field
-              manage them.
-            </li>
-          </ul>
-        </>
+        <ul className="list-disc pl-5">
+          <li>
+            Visualize student performance and engagement data, updated
+            instantly.
+          </li>
+          <li>
+            Use of advanced statistical models and algorithms to predict
+            learning outcomes.
+          </li>
+          <li>
+            Provision of access and control through the setting up of roles and
+            permissions in dashboards and users of the education field manage
+            them.
+          </li>
+        </ul>
       ),
     },
   ];
+
   const typesData = [
     {
       icon: <FaBuilding />,
@@ -213,6 +195,7 @@ const Education = () => {
       desc: "",
     },
   ];
+
   const slidesData = [
     {
       id: 1,
@@ -220,7 +203,7 @@ const Education = () => {
       subtitle:
         "Motivate students and teachers with e-learning resources that open the doors to development and engagement.",
       image: assets.educationBanner1,
-      ctaText: "Explore Projects",
+      ctaText: "Get Started",
       ctaLink: "#projects",
     },
     {
@@ -229,7 +212,7 @@ const Education = () => {
       subtitle:
         "The school can be more meaningful with our knowledge software and e-learning platforms.",
       image: assets.educationBanner2,
-      ctaText: "Get Started",
+      ctaText: "Contact Us",
       ctaLink: "#contact",
     },
     {
@@ -238,10 +221,11 @@ const Education = () => {
       subtitle:
         "Implement AI and analytics in education to speed up growth and efficiency.",
       image: assets.educationBanner3,
-      ctaText: "Get Started",
+      ctaText: "Explore Now",
       ctaLink: "#contact",
     },
   ];
+
   const cardsSectionData2 = [
     {
       title:
@@ -279,6 +263,7 @@ const Education = () => {
       icon: <FaHeart className="text-4xl" />,
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "Deep knowledge of the EdTech area and LMS development",
@@ -371,24 +356,18 @@ const Education = () => {
             <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
               {[
                 {
-                  title: "",
                   text: "Complete digitalization of education system at the school, college and university level",
-                  color: "text-blue-500",
                 },
                 {
-                  title: "",
                   text: "Frictionless adoption and implementation of Learning Management Systems",
-                  color: "text-blue-500",
                 },
                 {
-                  title: "",
                   text: "Seeing students' advancement through learning with numbers and facts driven by data",
-                  color: "text-blue-500",
                 },
-              ].map(({ title, text, color }, idx) => (
+              ].map(({ text }, idx) => (
                 <li
                   key={idx}
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  className="hover:scale-105 transition-transform duration-300 cursor-default relative pl-4"
                 >
                   {text}
                 </li>

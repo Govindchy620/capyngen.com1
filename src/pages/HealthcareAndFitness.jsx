@@ -293,22 +293,22 @@ const HealthcareAndFitness = () => {
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-1.jpg",
       alt: "Christmas background 3D cartoon",
-      text: "SEO & Content",
+      text: "Digital Health Connection to Care",
     },
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-2.jpg",
       alt: "A beautiful glowing flower",
-      text: "Social Media Marketing",
+      text: "Making Healthy Decisions Smarter",
     },
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-3.jpg",
       alt: "A magical leopard",
-      text: "Paid Advertising",
+      text: "When Fitness Meets Technology",
     },
     {
       img: "https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/ai-hero-chat-popover/assets/img-4.jpg",
       alt: "A female 3D cartoon holding a wrapped gift box",
-      text: "Email Campaigns",
+      text: "Digital Transformation of a Healthier Future",
     },
   ];
 

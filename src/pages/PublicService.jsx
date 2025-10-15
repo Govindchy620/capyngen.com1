@@ -27,22 +27,21 @@ const PublicService = () => {
   const slides = [
     {
       image: assets.blockchainBanner1,
-      title: "IT solutions for Public sector Industry",
+      title: "Empowering Governance Through Digital Transformation",
       subtitle:
-        "Capyngen provides secure, scalable IT solutions for Public sector Industry that transform citizen services, simplify administration, and support data-driven governance. Our professional teams design and implement everything from citizen service portals and public finance ERP to AI solutions for public sector initiatives and e-commerce solutions for public sector transactions — all designed to achieve accessibility, privacy, and regulatory needs.",
+        "Efficient, transparent, and citizen-centric are the services offered through the use of technology.",
     },
     {
       image: assets.blockchainBanner2,
-      title:
-        "Revolutionize Your Business with Cutting-Edge Blockchain Development",
+      title: "Building Smart Governments for a Digital Future",
       subtitle:
-        "Utilize the Capyngen blockchain technology that is reliable, transparent, and scalable to change your processes, gain customer loyalty, and open up new horizons.",
+        "The use of data, automation, and cloud solutions will become a pillar for improving the delivery of public service.",
     },
     {
       image: assets.blockchainDevelopment,
-      title: "Enterprise Blockchain Solutions",
+      title: "Transform Public Services with Innovation",
       subtitle:
-        "Improve security, streamline processes, and open up opportunities for large scale corporate activity.",
+        "Governments can automate processes, make services more accessible for citizens, and deliver those services using digital tools.",
     },
   ];
   const cardsSectionImageData1 = [

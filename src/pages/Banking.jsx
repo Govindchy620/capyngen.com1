@@ -1,37 +1,5 @@
 import React from "react";
 import ExpandableGallery from "../components/ExpandableGallery";
-import SeoToolsSection from "../components/SeoToolsSection";
-import SeoStatsSection from "../components/SeoStatsSection";
-import Timeline from "../components/Timeline";
-import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
-import StartupAgency from "../components/StartupAgency";
-import SeoAgency from "../components/SeoAgency";
-import {
-  FaBuilding,
-  FaTasks,
-  FaStore,
-  FaPuzzlePiece,
-  FaMoneyBillWave,
-  FaCogs,
-  FaAndroid,
-  FaApple,
-  FaMobileAlt,
-  FaCode,
-  FaCheckCircle,
-  FaDatabase,
-  FaCreditCard,
-  FaUsers,
-  FaLightbulb,
-  FaShieldAlt,
-  FaChartLine,
-  FaChartPie,
-  FaExpand,
-  FaUserTie,
-  FaHome,
-  FaGavel,
-  FaUserFriends,
-  FaGlobe,
-} from "react-icons/fa";
 import IndustryServices from "../components/IndustryServices";
 import TypesWeDevelop from "../components/TypesWeDevelop";
 import { assets } from "../assets/assets";
@@ -40,87 +8,95 @@ import TopRatedCompany from "../components/TopRatedCompany";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
+import {
+  FaCogs,
+  FaShieldAlt,
+  FaUsers,
+  FaChartLine,
+  FaChartPie,
+  FaExpand,
+  FaDatabase,
+  FaMobileAlt,
+  FaCreditCard,
+  FaLightbulb,
+} from "react-icons/fa";
 
 const Banking = () => {
   const faqItems = [
     {
       question: "What are banking software development services?",
       answer:
-        "Banking software development services involve multiple activities such as creating, constructing, and rolling out software solutions for banks which include core banking systems, mobile applications, payment gateways, customer relationship management, security systems, and digital transformation initiatives customized to banking requirements.",
+        "Banking software development services involve designing, building, and deploying software solutions for banks — including core banking systems, mobile apps, payment gateways, CRM tools, and digital transformation initiatives.",
     },
     {
-      question:
-        "Why is Capyngen the best banking software development company in India?",
+      question: "Why is Capyngen the best banking software company in India?",
       answer:
-        "Capyngen stands out from the crowd by combining deep banking domain expertise, a successful track record with major financial institutions, state-of-the-art technology, a security-first approach, sound regulatory knowledge, and delivering tangible outcomes that make us a bank's trusted partner.",
+        "Capyngen stands out through deep domain expertise, proven success with global banks, a security-first approach, regulatory experience, and measurable results that make us a trusted fintech partner.",
     },
     {
       question: "What are core banking solutions?",
       answer:
-        "Core banking solutions refer to software platforms that cover the whole range of banking operations such as account management, deposits, loans, and transactions. Customer data and banking processes are integrated through a unified system enabling centralized operations across branches.",
+        "Core banking solutions are integrated platforms that manage accounts, deposits, loans, and transactions, consolidating customer and operational data across multiple branches into a central system.",
     },
     {
       question: "How secure are your banking applications?",
       answer:
-        "The secure banking applications we develop go through top-notch security measures such as multi-factor authentication, end-to-end encryption, biometric confirmation, fraud detection, regular security audits, and compliance with PCI DSS and RBI standards to ensure the highest protection.",
+        "We implement multi-factor authentication, end-to-end encryption, biometric verification, fraud detection, and comply with PCI DSS, RBI, and GDPR standards to ensure maximum protection.",
     },
     {
-      question: "Do you develop mobile banking software?",
+      question: "Do you develop mobile banking applications?",
       answer:
-        "We are experts in mobile banking software development for iOS and Android platforms using native and cross-platform technologies with user-friendly interfaces and strong security.",
+        "Yes. We specialize in building native and cross-platform iOS and Android apps with seamless, secure integrations into core banking systems.",
     },
     {
-      question: "What is blockchain in banking, and how do you implement it?",
+      question: "Do you implement blockchain in banking?",
       answer:
-        "Blockchain in banking provides a shared ledger for transactions with enhanced security and cyber-attack resistance. Our team uses platforms like Hyperledger and Ethereum for bank and finance-related blockchain projects.",
+        "Yes. We use blockchain for secure, transparent ledger management, fraud resistance, and transaction verification — using frameworks like Hyperledger and Ethereum.",
     },
     {
       question: "How long does banking software development take?",
       answer:
-        "Timelines vary with project scope: simple mobile apps take 3-4 months, comprehensive core banking systems 8-12 months, with detailed milestones tailored to requirements.",
+        "Timelines vary by complexity; mobile apps may take 3–4 months while full-scale banking systems may take 8–12 months with milestone-based delivery.",
     },
     {
-      question: "What is the cost of banking software development?",
+      question: "What is the cost of developing banking software?",
       answer:
-        "Costs depend on features, complexity, technology, integration, and support. Flexible models including fixed-price, time & material, and dedicated teams are available. Contact us for tailored quotes.",
+        "Costs depend on complexity, features, integration, and support. We offer flexible models including fixed-price, hourly, and dedicated teams with transparent estimation.",
     },
     {
-      question: "Can you integrate with our existing banking systems?",
+      question: "Can you integrate with our existing systems?",
       answer:
-        "Yes, including legacy systems, payment gateways, regulatory platforms, and third-party services via APIs and middleware with minimal disruption.",
+        "Yes. We integrate with legacy software, CRMs, payment gateways, compliance tools, and data platforms through APIs, middleware, and secure integration patterns.",
     },
     {
       question: "Do you provide FinTech app development for startups?",
       answer:
-        "Yes, we create digital wallets, lending platforms, investment apps, payment solutions, and other innovative financial services tailored to startups' needs for quick development and scalability.",
+        "Absolutely. We create digital wallets, P2P lending, investment, and payment solution fintech apps designed for scalability and regulatory compliance.",
     },
     {
-      question: "How do you ensure regulatory compliance?",
+      question: "How do you ensure compliance?",
       answer:
-        "We comply with RBI, PCI DSS, GDPR, AML/KYC and other standards with automatic reporting and audit trails integrated in digital solutions.",
+        "We adhere to RBI, PCI DSS, GDPR, AML/KYC, and ISO 27001 standards. Our products support automatic logging, audit trails, encryption, and detailed reporting.",
     },
     {
-      question: "What technologies do you use for banking software?",
+      question: "What technologies do you use for banking systems?",
       answer:
-        "We use Java, .NET, Python, Oracle, MySQL, MongoDB, AWS, Azure, AI/ML, blockchain, and latest frameworks for modern scalable solutions.",
+        "Our stack includes Java, Python, .NET, Node.js, React, AWS, Azure, MongoDB, PostgreSQL, and blockchain technologies for performance, scalability, and innovation.",
     },
     {
-      question: "Do you provide ongoing support and maintenance?",
+      question: "Do you provide ongoing maintenance?",
       answer:
-        "Yes, including 24/7 monitoring, bug fixing, security updates, performance optimization, and feature enhancement.",
+        "Yes. We provide 24/7 monitoring, patching, feature expansion, and upgrades to ensure peak reliability over time.",
     },
     {
-      question:
-        "Can you help with digital transformation for traditional banks?",
+      question: "Can you help with digital transformation?",
       answer:
-        "Yes, we help modernize traditional banks with cloud, AI, blockchain technologies, and customer experience enhancements.",
+        "Yes. We assist traditional banks with cloud migration, AI implementation, customer experience redesign, and modernization of legacy systems.",
     },
     {
-      question:
-        "What makes your custom banking app development services unique?",
+      question: "What makes your banking services unique?",
       answer:
-        "We combine domain expertise, user-centric design, advanced technology, strong security, regulatory compliance, seamless integration, and proven delivery for outstanding solutions.",
+        "Our expertise combines secure architecture, user-first design, compliance, and innovation to deliver robust fintech transformation for banks of all sizes.",
     },
   ];
 
@@ -128,70 +104,70 @@ const Banking = () => {
     {
       image: assets.banking2,
       title: "Specialized Banking Solutions",
-      desc: "Custom solutions tailored to your firm's unique workflow, customer demands, and strategic goals.",
+      desc: "Custom software tailored to your institution’s goals and workflows, powering modern and efficient customer engagements.",
     },
     {
       image: assets.banking3,
       title: "Security & Compliance First",
-      desc: "Multi-factor authentication, encryption, secure APIs following global security standards including RBI, PCI DSS, and GDPR.",
+      desc: "Multi-layered protections including MFA, encryption, secure APIs, and global compliance frameworks (RBI, PCI, GDPR).",
     },
     {
       image: assets.banking4,
-      title: "Scalability & Performance",
-      desc: "Seamless scalability and consistent performance for thousands to millions of customers.",
+      title: "Scalable & High-Performance Systems",
+      desc: "Engineered for consistency and speed, our banking systems seamlessly scale to millions of users worldwide.",
     },
     {
       image: assets.banking5,
-      title: "Innovative Technology Incorporation",
-      desc: "AI for fraud detection, blockchain, cloud computing, big data, and IoT for next-gen banking.",
+      title: "Next-Gen Banking with AI & Blockchain",
+      desc: "Artificial Intelligence, blockchain, and IoT technology empower smart, secure, customer-focused operations.",
     },
     {
       image: assets.banking6,
-      title: "Seamless Integration Abilities",
-      desc: "Harmonious co-existence with legacy systems, third-party software, payment gateways, and reporting tools.",
+      title: "Smooth Integration with Legacy Systems",
+      desc: "Seamless compatibility with legacy and third-party platforms ensuring uninterrupted core banking operations.",
     },
     {
       image: assets.banking7,
-      title: "Proven Track Record",
-      desc: "Delivered transformative digital solutions to leading financial institutions with measurable growth.",
+      title: "Trusted Global Clientele",
+      desc: "We’ve delivered enterprise-scale digital transformation for major financial institutions worldwide.",
     },
   ];
 
   const cardsSectionData1 = [
     {
-      title: "Core Banking Development Software",
+      title: "Core Banking Software",
       description:
-        "Integrated core banking systems for smooth accounts, deposits, loans, and transactions.",
+        "Unified platforms for account management, deposits, loans, and real-time transactions.",
       icon: <FaDatabase className="text-4xl text-white" />,
     },
     {
-      title: "Cell Phone & Internet Banking Solutions",
+      title: "Mobile & Internet Banking Solutions",
       description:
-        "Native and cross-platform mobile banking apps for intuitive, secure access.",
+        "Cross-platform iOS and Android banking apps offering secure, intuitive user experiences.",
       icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
-      title: "Payment Gateway & Transaction Solutions",
+      title: "Payments & Gateway Solutions",
       description:
-        "Robust systems for timely, secure settlements handling high transaction volumes.",
+        "High-volume, secure, and anti-fraud payment systems with enterprise-grade uptime.",
       icon: <FaCreditCard className="text-4xl text-white" />,
     },
     {
-      title: "Banking CRM & Customer Experience Solutions",
+      title: "CRM & Customer Experience",
       description:
-        "Unified platforms with analytics and personalized dashboards for enhanced satisfaction.",
+        "Centralized platforms for personalized analytics, dashboards, and user engagement.",
       icon: <FaUsers className="text-4xl text-white" />,
     },
     {
-      title: "FinTech & Digital Transformation Advisory",
+      title: "FinTech Transformation Advisory",
       description:
-        "Strategic consulting for modernization, automation, and innovation-driven transformation.",
+        "Strategic consulting for modernization, automation, and high-tech digital banking evolution.",
       icon: <FaLightbulb className="text-4xl text-white" />,
     },
     {
-      title: "Security & Compliance Management",
+      title: "Regulatory & Security Frameworks",
       description:
-        "End-to-end security frameworks ensuring compliance with international standards.",
+        "Built-in data protection frameworks, ensuring ISO, PCI, GDPR, and national compliance.",
       icon: <FaShieldAlt className="text-4xl text-white" />,
     },
   ];
@@ -200,42 +176,42 @@ const Banking = () => {
     {
       title: "Programming Languages",
       description:
-        "Java, .NET, Python, C++, Kotlin – scalable, integrated, AI-capable, high-performance.",
+        "Java, .NET, Python, C++, and Kotlin for modern, scalable, secure, and flexible backend systems.",
       image: assets.banking8,
       cardBg: "bg-blue-100",
     },
     {
       title: "Databases & Storage",
       description:
-        "Oracle, MySQL, MongoDB, PostgreSQL, Redis – flexible, real-time, reliable storage.",
+        "Oracle, MySQL, MongoDB, PostgreSQL, and Redis for secure and high-speed data management.",
       image: assets.banking9,
       cardBg: "bg-green-100",
     },
     {
       title: "Frameworks & Libraries",
       description:
-        "SpringBoot, Angular, React, Node.js, Flutter – modern, scalable architectures and UI.",
+        "Spring Boot, React, Angular, Node.js, and Flutter for powerful, cross-platform architectures.",
       image: assets.banking10,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Cloud Platforms",
       description:
-        "AWS, Azure, Google Cloud, IBM Cloud – enterprise-grade cloud with hybrid support.",
+        "AWS, Azure, Google Cloud, and IBM Cloud for reliable, hybrid-ready hosting solutions.",
       image: assets.banking11,
       cardBg: "bg-pink-100",
     },
     {
       title: "Security Technologies",
       description:
-        "MFA, encryption, biometric verification, blockchain, SSL/TLS, intrusion detection, SIEM.",
+        "MFA, blockchain, encryption, biometrics, SSL/TLS, and intrusion detection ensuring multi-layered security.",
       image: assets.banking12,
       cardBg: "bg-purple-100",
     },
     {
-      title: "Analytics & AI",
+      title: "AI & Analytics",
       description:
-        "ML fraud detection, predictive analytics, NLP chatbots, big data, BI dashboards.",
+        "Machine learning, predictive analytics, NLP chatbots, and real-time fraud detection dashboards.",
       image: assets.banking13,
       cardBg: "bg-red-100",
     },
@@ -244,33 +220,66 @@ const Banking = () => {
   const typesData = [
     {
       icon: <FaCogs />,
-      title: "Operational Efficiency Improved",
-      desc: "Automate processes, streamline workflows, reduce errors; free staff for high-value tasks.",
+      title: "Operational Efficiency",
+      desc: "Automate processes, reduce errors, and free staff for high-value tasks.",
     },
     {
       icon: <FaShieldAlt />,
-      title: "Transactions that are Secure and Compliant",
-      desc: "Enterprise-grade security ensuring data protection and regulatory compliance.",
+      title: "Enhanced Security",
+      desc: "Enterprise-grade protection for all data and transactions.",
     },
     {
       icon: <FaUsers />,
-      title: "Customer Engagement Improved",
-      desc: "Personalized, omnichannel experiences with AI assistance enhance satisfaction and retention.",
+      title: "Customer Experience",
+      desc: "Deliver omnichannel banking through personalized interfaces.",
     },
     {
       icon: <FaChartLine />,
-      title: "Lowered Operational Costs",
-      desc: "Cloud infrastructure and automation reduce expenses while preserving quality.",
+      title: "Cost Efficiency",
+      desc: "Lower operational costs using cloud and resource optimization.",
     },
     {
       icon: <FaChartPie />,
-      title: "Real-Time Analytics and Reporting",
-      desc: "Actionable data insights, fraud detection, regulatory reports, and strategic decisions.",
+      title: "Advanced Reporting",
+      desc: "Gain insights and detect fraud with real-time data analytics.",
     },
     {
       icon: <FaExpand />,
-      title: "Expandability for Future Development",
-      desc: "Scalable systems to grow with your institution without compromising performance.",
+      title: "Scalability",
+      desc: "Systems built to expand seamlessly without performance loss.",
+    },
+  ];
+
+  const servicesData1 = [
+    {
+      image: assets.banking15,
+      title: "Retail Banking",
+      desc: "Streamlined retail banking software managing deposits, loans, cards, and customer inquiries.",
+    },
+    {
+      image: assets.banking16,
+      title: "Corporate Banking",
+      desc: "Comprehensive treasury, trade, and client management solutions for enterprise-scale operations.",
+    },
+    {
+      image: assets.banking17,
+      title: "Investment Banking",
+      desc: "Intuitive trading and risk analytics tools for smarter capital markets operations.",
+    },
+    {
+      image: assets.banking18,
+      title: "Microfinance Institutions",
+      desc: "Mobile-first systems for group lending, repayments, analytics, and field operations.",
+    },
+    {
+      image: assets.banking19,
+      title: "FinTech Startups",
+      desc: "Cutting-edge digital wallets, lending, and crypto systems for innovative fintech models.",
+    },
+    {
+      image: assets.banking20,
+      title: "Payment Providers",
+      desc: "Full payment gateways, merchant platforms, and high-volume transaction systems.",
     },
   ];
 
@@ -278,27 +287,27 @@ const Banking = () => {
     {
       image: assets.bankingBanner1,
       title: "Empower Banking Through Digital Innovation",
-      desc: "Lead growth and safety with fintech and cloud tech tailored for future banking.",
+      desc: "Lead the future of fintech with secure, cloud-based, and customer-focused banking solutions.",
     },
     {
       image: assets.bankingBanner2,
       title: "Redefine the Future of Banking",
-      desc: "Smooth, secure, client-centered financial activities with digital banking solutions.",
+      desc: "Achieve safer and smarter financial operations through technology-driven solutions.",
     },
     {
       image: assets.bankingBanner3,
       title: "Banking Transformation Starts Here",
-      desc: "Streamline workflows and increase morale with automation, analytics, risk management.",
+      desc: "Enhance workflows, improve analytics, and optimize risk management effortlessly.",
     },
     {
       image: assets.bankingBanner4,
-      title: "Secure, Scalable & Smart IT Banking Solutions",
-      desc: "Prepare infrastructure for reliable and easy banking customer peace of mind.",
+      title: "Secure, Scalable & Smart Banking Tech",
+      desc: "Empower your institution with reliable and secure enterprise software.",
     },
     {
       image: assets.bankingBanner5,
-      title: "The Future of Digital Finance",
-      desc: "Real-time, mobile-first, AI-driven banking enabling market first-mover advantage.",
+      title: "The Future of Digital Finance Awaits",
+      desc: "Implement AI and machine learning in real-time for a superior customer experience.",
     },
   ];
 
@@ -306,89 +315,71 @@ const Banking = () => {
     <div className="">
       <ExpandableGallery panels={panels} />
       <GetStarted
-        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
         description={[
-          "Contact me for no charge consultation. Banking Innovations for Secure, Scalable, and Creative Technical Solutions From India's Leading Partner in Banking Software!",
+          "Contact us for a free consultation. Experience next-gen secure, scalable, and innovative banking software with Capyngen — India’s leading fintech partner.",
         ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
+        buttonText="Get Started"
         backgroundVideo={assets.backgroundVideo}
       />
       <TopRatedCompany
-        title="Industry Has Lastly Managed To Go The Tech Road"
+        title="Banking Industry Meets Digital Transformation"
         description={[
-          `The financial sector is fast moving whereby banks and financial institutions should partner tech firms that are not only tech savvy but also well conversant with the industry-specific challenges so as to provide the right solutions. Capyngen is a top bank software development company in India, which is always on the front line, coming up with secure, scalable, and innovative bank software solutions that not only radically transform the way financial institutions work but also are adaptive to customer needs.`,
-          `We have considerable experience in effectively providing banking industry solutions including retail, commercial, corporate, investment banking, microfinance, and fintech startups. Our services include core banking, mobile banking, payment systems, and fintech app development to realize efficiency, satisfaction, and compliance.`,
+          `Capyngen partners with global financial institutions to build secure, scalable, and compliant digital infrastructures. Our banking software solutions redefine customer relationships and operational performance.`,
+          `We have deep experience working across retail, corporate, microfinance, and fintech ecosystems, offering end-to-end solutions in core banking, digital payments, and AI-powered financial intelligence.`,
         ]}
-        imageHeight="md:aspect-[1/1]"
         image={assets.banking1}
-        isHidden={true}
         background={assets.patternBg1}
+        isHidden
       />
       <IndustryServices
-        heading="Why Top Banks Rely on Capyngen"
+        heading="Why Leading Banks Choose Capyngen"
         services={servicesData}
       />
       <CardsSection
-        heading="Banking Software Solutions Development"
+        heading="Banking Software Solutions"
         services={cardsSectionData1}
         headColor="text-white"
         cardBg="bg-gradient-to-br from-gray-900 to-blue-800"
-        textSize="text-md"
         sectionBg="bg-gray-900"
-        hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
         textColor="text-white"
       />
       <CardsSectionImage
-        heading="New-age Tech Stack to Serve Banking Excellence"
+        heading="Modern Tech Stack for Banking Excellence"
         services={cardsSectionImageData1}
         sectionBg="bg-gray-800"
         headColor="text-white"
         hoverBg="hover:bg-gray-200"
-        textSize="text-md"
       />
       <GetStarted
-        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
         description={[
-          "Want to Totally Change Your Banking Experience? Make an Appointment for a Free Demonstration & Find Out How Capyngen’s Banking Software Solutions Can Grow Security, Efficiency, and Customer Satisfaction!",
+          "Want to modernize your banking systems? Schedule a free demo and discover how Capyngen’s solutions make banking smarter, safer, and customer-driven.",
         ]}
-        textSize="text-2xl"
-        buttonText="Contact Us"
+        buttonText="Book a Demo"
         backgroundVideo={assets.backgroundVideo}
       />
       <TypesWeDevelop
         heading="Making Banks Digitally Fit"
-        buttonText="Let's Contact"
         image={assets.banking14}
         types={typesData}
       />
       <IndustryServices
-        heading="Serving All Banking & Financial Sectors"
+        heading="Serving Every Banking & Financial Sector"
         services={servicesData1}
       />
       <GetStarted
-        reverse={false}
         backgroundColor="bg-blue-900"
         textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
         description={[
-          "Why Not Work with Us to Create the Future of Banking – Contact Capyngen Today for Custom Banking Software Development Services & Groundbreaking FinTech Solutions That Help You Get Ahead!",
+          "Work with Capyngen today to build custom fintech and banking software that transforms the way your customers interact and transact.",
         ]}
-        textSize="text-2xl"
-        buttonText="Work With Us"
+        buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
       />
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };
