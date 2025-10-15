@@ -319,42 +319,42 @@ const HighTech = () => {
       title: "AI & Machine Learning Solutions",
       description:
         "Create AI systems that process vast data sets, automate decision-making, and deliver predictive insights using Gen AI technologies tailored for high-tech industries.",
-      image: assets.customAiSolution,
+      image: assets.highTech1,
       cardBg: "bg-blue-100",
     },
     {
       title: "Cloud Engineering & Modernization",
       description:
         "Transform your digital infrastructure with our cloud platforms for high-tech enterprises — ensuring agility, scalability, and effortless deployment.",
-      image: assets.customAiSolution,
+      image: assets.highTech2,
       cardBg: "bg-green-100",
     },
     {
       title: "Cybersecurity & Compliance Systems",
       description:
         "Rely on enterprise-grade cybersecurity built with robust encryption, real-time threat detection, and compliance audits to safeguard R&D and intellectual property data.",
-      image: assets.customAiSolution,
+      image: assets.highTech3,
       cardBg: "bg-purple-100",
     },
     {
       title: "IoT & Edge Computing",
       description:
         "Enhance operational efficiency, predictive maintenance, and innovation by enabling real-time connectivity across devices and systems.",
-      image: assets.customAiSolution,
+      image: assets.highTech4,
       cardBg: "bg-pink-100",
     },
     {
       title: "Software Solutions for High-Tech",
       description:
         "Develop state-of-the-art, custom software that simplifies workflows, boosts development productivity, and reduces time-to-market for your products.",
-      image: assets.customAiSolution,
+      image: assets.highTech5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Data Analytics & Intelligence Platforms",
       description:
         "Turn raw data into strategic insights with AI-powered dashboards, big data mining, and real-time visualization tools for informed decision-making.",
-      image: assets.customAiSolution,
+      image: assets.highTech6,
       cardBg: "bg-orange-100",
     },
   ];

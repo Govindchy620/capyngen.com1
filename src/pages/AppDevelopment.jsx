@@ -389,7 +389,8 @@ const AppDevelopment = () => {
           "Enterprise Mobile Solutions",
           "App Maintenance & Support",
         ]}
-        videoSrc={assets.heroVideo}
+        imageSrc={assets.appDevBanner}
+        // videoSrc={assets.heroVideo}
       />
 
       <TopRatedCompany

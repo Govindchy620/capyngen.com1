@@ -311,7 +311,7 @@ const EnterpriseSolutions = () => {
       <BenefitsSection
         heading="Why Choose Capyngen for Enterprise Solutions"
         desc=""
-        image={assets.eCommerceSolution}
+        image={assets.enterprise9}
         benefits={solutionsData}
         footerNote=""
       />

@@ -14,6 +14,7 @@ export default function Banner13({
     "Enterprise Consulting Company",
   ],
   videoSrc, // Video source URL
+  imageSrc,
 }) {
   return (
     <section
@@ -76,8 +77,8 @@ export default function Banner13({
             {/* Top notch */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
 
-            {/* Video inside phone */}
-            {videoSrc && (
+            {/* Dynamic Media */}
+            {videoSrc ? (
               <video
                 src={videoSrc}
                 autoPlay
@@ -87,6 +88,17 @@ export default function Banner13({
                 className="w-full h-full object-cover"
                 aria-label="Demo video"
               />
+            ) : imageSrc ? (
+              <img
+                src={imageSrc}
+                alt="Demo preview"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-blue-800 via-gray-900 to-black flex items-center justify-center text-gray-400 text-lg">
+                No preview available
+              </div>
             )}
           </div>
         </div>

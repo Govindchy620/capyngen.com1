@@ -68,7 +68,7 @@ const HowWeWork = ({
             {idx !== steps.length - 1 && (
               <ChevronDown
                 size={24}
-                className="text-blue-600"
+                className="text-blue-600 animate-arrow-down"
                 aria-hidden="true"
               />
             )}
@@ -82,7 +82,6 @@ const HowWeWork = ({
         aria-label="Steps desktop view"
       >
         {rows.map((rowSteps, rowIdx) => {
-          // Alternate alignment: even rows center, odd rows right
           const isForward = rowIdx % 2 === 0;
           const stepsInRow = isForward ? rowSteps : [...rowSteps].reverse();
 
@@ -101,19 +100,20 @@ const HowWeWork = ({
                       (isForward ? (
                         <ChevronRight
                           size={180}
-                          className="text-blue-600"
+                          className="text-blue-600 animate-arrow-right"
                           aria-hidden="true"
                         />
                       ) : (
                         <ChevronLeft
                           size={180}
-                          className="text-blue-600"
+                          className="text-blue-600 animate-arrow-left"
                           aria-hidden="true"
                         />
                       ))}
                   </React.Fragment>
                 ))}
               </div>
+
               {/* Down arrow between rows except last */}
               {rowIdx < rows.length - 1 && (
                 <div
@@ -123,7 +123,7 @@ const HowWeWork = ({
                 >
                   <ChevronDown
                     size={44}
-                    className="text-blue-600"
+                    className="text-blue-600 animate-arrow-down"
                     aria-hidden="true"
                   />
                 </div>
@@ -132,6 +132,57 @@ const HowWeWork = ({
           );
         })}
       </div>
+
+      {/* Custom animation styles */}
+      <style jsx>{`
+        @keyframes arrow-right {
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(10px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes arrow-left {
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(-10px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes arrow-down {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(8px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .animate-arrow-right {
+          animation: arrow-right 1.6s ease-in-out infinite;
+        }
+
+        .animate-arrow-left {
+          animation: arrow-left 1.6s ease-in-out infinite;
+        }
+
+        .animate-arrow-down {
+          animation: arrow-down 1.4s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };

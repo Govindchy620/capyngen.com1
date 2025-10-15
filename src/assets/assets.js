@@ -228,6 +228,7 @@ import webDev19 from "./webDev19.jpg";
 import webDev20 from "./webDev20.jpg";
 import webDev21 from "./webDev21.jpg";
 import webDev22 from "./webDev22.jpg";
+import appDevBanner from "./appDevBanner.png";
 import appDev2 from "./appDev2.jpg";
 import appDev3 from "./appDev3.png";
 import appDev4 from "./appDev4.png";
@@ -309,6 +310,7 @@ import enterprise5 from "./enterprise5.png";
 import enterprise6 from "./enterprise6.png";
 import enterprise7 from "./enterprise7.png";
 import enterprise8 from "./enterprise8.png";
+import enterprise9 from "./enterprise9.png";
 import bankingBanner1 from "./bankingBanner1.jpg";
 import bankingBanner2 from "./bankingBanner2.jpg";
 import bankingBanner3 from "./bankingBanner3.jpg";
@@ -573,6 +575,12 @@ import eCommIndustry6 from "./eCommIndustry6.png";
 import eCommIndustry7 from "./eCommIndustry7.png";
 import eCommIndustry8 from "./eCommIndustry8.png";
 import eCommIndustry9 from "./eCommIndustry9.png";
+import highTech1 from "./highTech1.png";
+import highTech2 from "./highTech2.png";
+import highTech3 from "./highTech3.png";
+import highTech4 from "./highTech4.png";
+import highTech5 from "./highTech5.png";
+import highTech6 from "./highTech6.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -814,6 +822,7 @@ export const assets = {
   webDev20,
   webDev21,
   webDev22,
+  appDevBanner,
   appDev2,
   appDev3,
   appDev4,
@@ -895,6 +904,7 @@ export const assets = {
   enterprise6,
   enterprise7,
   enterprise8,
+  enterprise9,
   bankingBanner1,
   bankingBanner2,
   bankingBanner3,
@@ -1150,6 +1160,12 @@ export const assets = {
   eCommIndustry7,
   eCommIndustry8,
   eCommIndustry9,
+  highTech1,
+  highTech2,
+  highTech3,
+  highTech4,
+  highTech5,
+  highTech6,
 };
 
 export const navItems = [
