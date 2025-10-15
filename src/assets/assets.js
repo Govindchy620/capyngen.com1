@@ -653,6 +653,31 @@ import healthcareFitness14 from "./healthcareFitness14.png";
 import healthcareFitness15 from "./healthcareFitness15.png";
 import healthcareFitness16 from "./healthcareFitness16.png";
 import healthcareFitness17 from "./healthcareFitness17.png";
+import publicService1 from "./publicService1.png";
+import publicService2 from "./publicService2.png";
+import publicService3 from "./publicService3.png";
+import publicService4 from "./publicService4.png";
+import publicService5 from "./publicService5.png";
+import publicService6 from "./publicService6.png";
+import publicService7 from "./publicService7.png";
+import publicService8 from "./publicService8.png";
+import publicService9 from "./publicService9.png";
+import publicService10 from "./publicService10.png";
+import publicService11 from "./publicService11.png";
+import publicService12 from "./publicService12.png";
+import publicService13 from "./publicService13.png";
+import publicService14 from "./publicService14.png";
+import publicService15 from "./publicService15.png";
+import publicService16 from "./publicService16.png";
+import publicService17 from "./publicService17.png";
+import publicService18 from "./publicService18.png";
+import publicService19 from "./publicService19.jpg";
+import insurance2 from "./insurance2.png";
+import insurance3 from "./insurance3.png";
+import insurance4 from "./insurance4.png";
+import insurance5 from "./insurance5.png";
+import insurance6 from "./insurance6.png";
+import insurance7 from "./insurance7.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1310,6 +1335,31 @@ export const assets = {
   healthcareFitness15,
   healthcareFitness16,
   healthcareFitness17,
+  publicService1,
+  publicService2,
+  publicService3,
+  publicService4,
+  publicService5,
+  publicService6,
+  publicService7,
+  publicService8,
+  publicService9,
+  publicService10,
+  publicService11,
+  publicService12,
+  publicService13,
+  publicService14,
+  publicService15,
+  publicService16,
+  publicService17,
+  publicService18,
+  publicService19,
+  insurance2,
+  insurance3,
+  insurance4,
+  insurance5,
+  insurance6,
+  insurance7,
 };
 
 export const navItems = [

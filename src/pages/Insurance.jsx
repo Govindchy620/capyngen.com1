@@ -56,42 +56,42 @@ const Insurance = () => {
       title: "Cellular Insurance Apps",
       description:
         "Design insurance mobile apps for iOS and Android that will process basic activities such as policy delivery, claim registration, and fraud detection automatically.",
-      image: assets.customAiSolution,
+      image: assets.insurance2,
       cardBg: "bg-blue-100",
     },
     {
       title: "Policy Management System",
       description:
         "For policy management software, we develop the kind that will fully automate the whole policy lifecycle from creation through renewal while remaining accurate, compliant, and scalable software.",
-      image: assets.appDevelopment,
+      image: assets.insurance3,
       cardBg: "bg-green-100",
     },
     {
       title: "Claims Management System",
       description:
         "The right step is to develop a highly technologically sophisticated claims management system through which all such operations such as submission of claims, checking thereof, identification of frauds/wrong claims, if any, and payment thereof are conducted speedily and conveniently.",
-      image: assets.customAiSolution,
+      image: assets.insurance4,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Insurance CRM Solutions",
       description:
         "The installation of a tailored CRM for the benefit of the insurers is the key to a successful customer relationship management system as it enables the offering of personalized services, customer tracking, and the use of integrated help panels.",
-      image: assets.careersAbout1,
+      image: assets.insurance5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Health & Life Insurance Software",
       description:
         "Capyngen provides life insurance software and health insurance software featuring robust reporting along with analytics powered by artificial intelligence and integration.",
-      image: assets.appDevelopment,
+      image: assets.insurance6,
       cardBg: "bg-purple-100",
     },
     {
       title: "Insurance ERP Development",
       description:
         "Insurance ERP software is the easiest way to consolidate all the activities of the company that involves engaging agents, customers, policyholders, and regulatory compliance.",
-      image: assets.customAiSolution,
+      image: assets.insurance7,
       cardBg: "bg-red-100",
     },
   ];

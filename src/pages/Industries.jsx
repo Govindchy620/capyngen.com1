@@ -40,7 +40,7 @@ const Industries = () => {
       link: "/industries/capital-market",
       front: {
         title: "Capital Market",
-        image: assets.capitalMarket,
+        image: assets.capitalMarket1,
         textColor: "text-white",
       },
       back: {
@@ -55,7 +55,7 @@ const Industries = () => {
       link: "/industries/life-science",
       front: {
         title: "Life Science",
-        image: assets.lifeScience,
+        image: assets.lifeScience1,
         textColor: "text-white",
       },
       back: {
@@ -85,7 +85,7 @@ const Industries = () => {
       link: "/industries/energy-resources-utilities",
       front: {
         title: "Energy, Resources & Utilities",
-        image: assets.energy,
+        image: assets.energyResourcesBanner1,
         textColor: "text-white",
       },
       back: {
@@ -115,7 +115,7 @@ const Industries = () => {
       link: "/industries/public-service",
       front: {
         title: "Public Service",
-        image: assets.publicService,
+        image: assets.publicService1,
         textColor: "text-white",
       },
       back: {
@@ -130,7 +130,7 @@ const Industries = () => {
       link: "/industries/e-commerce",
       front: {
         title: "E-Commerce",
-        image: assets.ecommerce,
+        image: assets.eCommerceSolution,
         textColor: "text-white",
       },
       back: {
@@ -145,7 +145,7 @@ const Industries = () => {
       link: "/industries/high-tech",
       front: {
         title: "High Tech",
-        image: assets.highTech,
+        image: assets.highTech10,
         textColor: "text-white",
       },
       back: {
@@ -160,7 +160,7 @@ const Industries = () => {
       link: "/industries/travel-logistics",
       front: {
         title: "Travel & Logistics",
-        image: assets.travel,
+        image: assets.travel11,
         textColor: "text-white",
       },
       back: {
@@ -205,7 +205,7 @@ const Industries = () => {
       link: "/industries/communication-media-it",
       front: {
         title: "Communication, Media & IT",
-        image: assets.communication,
+        image: assets.communicationMedia,
         textColor: "text-white",
       },
       back: {
@@ -220,7 +220,7 @@ const Industries = () => {
       link: "/industries/real-estate",
       front: {
         title: "Real Estate",
-        image: assets.realEstate,
+        image: assets.realEstate1,
         textColor: "text-white",
       },
       back: {
@@ -235,7 +235,7 @@ const Industries = () => {
       link: "/industries/gaming",
       front: {
         title: "Gaming",
-        image: assets.gaming,
+        image: assets.gaming4,
         textColor: "text-white",
       },
       back: {

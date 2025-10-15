@@ -49,63 +49,63 @@ const PublicService = () => {
       title: "Public Sector ERP Solutions",
       description:
         "Financials, HR, procurement and administrative software that enhance transparency and operational effectiveness.",
-      image: assets.customAiSolution,
+      image: assets.publicService1,
       cardBg: "bg-blue-100",
     },
     {
       title: "Citizen Service Portals",
       description:
         "Self-service payments, permit, registration and record platforms that eliminate queues and enhance satisfaction.",
-      image: assets.appDevelopment,
+      image: assets.publicService2,
       cardBg: "bg-green-100",
     },
     {
       title: "E-Government Solutions",
       description:
         "Automating workflow, case management, and electronic forms to accelerate approvals and enhance accountability.",
-      image: assets.customAiSolution,
+      image: assets.publicService3,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Smart City Platforms",
       description:
         "IoT-based services for energy, waste, lighting and public safety converged into a single dashboard.",
-      image: assets.careersAbout1,
+      image: assets.publicService4,
       cardBg: "bg-pink-100",
     },
     {
       title: "Healthcare IT for Government",
       description:
         "Secure EHR integrations, telemedicine portals, and public health analytics.",
-      image: assets.careersAbout1,
+      image: assets.publicService5,
       cardBg: "bg-purple-100",
     },
     {
       title: "Education & Learning Portals",
       description:
         "Virtual classrooms, student management, and distance learning systems built for scale.",
-      image: assets.appDevelopment,
+      image: assets.publicService6,
       cardBg: "bg-red-100",
     },
     {
       title: "Transport & Mobility IT",
       description:
         "Ticketing automation, fleet management, and traffic monitoring to enhance urban mobility.",
-      image: assets.customAiSolution,
+      image: assets.publicService7,
       cardBg: "bg-indigo-100",
     },
     {
       title: "Utility Management Software",
       description:
         "Metering, billing, complaint tracking and maintenance workflows for water, gas, and electricity utilities.",
-      image: assets.careersAbout1,
+      image: assets.publicService8,
       cardBg: "bg-teal-100",
     },
     {
       title: "Public Safety & Emergency Response Systems",
       description:
         "Real-time monitoring, alerting, and coordination platforms for disaster management, law enforcement, and citizen safety.",
-      image: assets.appDevelopment,
+      image: assets.publicService9,
       cardBg: "bg-orange-100",
     },
   ];
@@ -192,47 +192,47 @@ const PublicService = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.publicService10,
       title: "Citizen Portals",
       desc: "Rapid access to services, status monitoring, and secure payments via integrated e-commerce capabilities for public sector requirements.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService11,
       title: "Smart City Platforms",
       desc: "Unified dashboards melding IoT feeds and analytics and AI solutions for public sector planning.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService12,
       title: "Public Finance ERP",
       desc: "Transparent budgeting, payroll, and reporting to facilitate compliant fiscal management.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService13,
       title: "Healthcare Systems",
       desc: "Telehealth and interoperable patient records to increase access to care.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService14,
       title: "E-Government Apps",
       desc: "Outreach and mobile-first services enhancing citizen engagement.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService15,
       title: "Education IT",
       desc: "Remote and blended learning supported by LMS and admin systems.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService16,
       title: "Transport Systems",
       desc: "Automation of route optimization, ticketing, and real-time commuter information.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService17,
       title: "Data Analytics & AI",
       desc: "Predictive analytics and ML models for efficient resource prioritization and enhanced public outcomes.",
     },
     {
-      image: assets.bg1,
+      image: assets.publicService18,
       title: "Custom Software Solutions for Public Sector",
       desc: "From custom case management applications to enterprise-wide integrations that sunset legacy silos.",
     },
@@ -431,7 +431,7 @@ const PublicService = () => {
         description={[
           "Capyngen is poised to collaborate on initiatives that transform citizen experience and operational effectiveness. We craft and deploy reliable IT solutions for public sector Industry that scale and secure public value.",
         ]}
-        image={assets.blockchainBanner1}
+        image={assets.publicService19}
       />
       <GetStarted
         reverse={false}
