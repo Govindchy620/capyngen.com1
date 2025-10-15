@@ -672,6 +672,9 @@ import publicService16 from "./publicService16.png";
 import publicService17 from "./publicService17.png";
 import publicService18 from "./publicService18.png";
 import publicService19 from "./publicService19.jpg";
+import publicServiceBanner1 from "./publicServiceBanner1.jpg";
+import publicServiceBanner2 from "./publicServiceBanner2.jpg";
+import publicServiceBanner3 from "./publicServiceBanner3.jpg";
 import insurance1 from "./insurance1.jpg";
 import insurance2 from "./insurance2.png";
 import insurance3 from "./insurance3.png";
@@ -1381,6 +1384,9 @@ export const assets = {
   publicService17,
   publicService18,
   publicService19,
+  publicServiceBanner1,
+  publicServiceBanner2,
+  publicServiceBanner3,
   insurance1,
   insurance2,
   insurance3,

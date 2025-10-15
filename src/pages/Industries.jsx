@@ -175,7 +175,7 @@ const Industries = () => {
       link: "/industries/cpg-distribution",
       front: {
         title: "Consumer Packaged Goods & Distribution",
-        image: assets.cpg,
+        image: assets.cpg1,
         textColor: "text-white",
       },
       back: {

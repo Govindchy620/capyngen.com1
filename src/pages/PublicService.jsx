@@ -26,19 +26,19 @@ import HowWeWork from "../components/HowWeWork";
 const PublicService = () => {
   const slides = [
     {
-      image: assets.blockchainBanner1,
+      image: assets.publicServiceBanner1,
       title: "Empowering Governance Through Digital Transformation",
       subtitle:
         "Efficient, transparent, and citizen-centric are the services offered through the use of technology.",
     },
     {
-      image: assets.blockchainBanner2,
+      image: assets.publicServiceBanner2,
       title: "Building Smart Governments for a Digital Future",
       subtitle:
         "The use of data, automation, and cloud solutions will become a pillar for improving the delivery of public service.",
     },
     {
-      image: assets.blockchainDevelopment,
+      image: assets.publicServiceBanner3,
       title: "Transform Public Services with Innovation",
       subtitle:
         "Governments can automate processes, make services more accessible for citizens, and deliver those services using digital tools.",
