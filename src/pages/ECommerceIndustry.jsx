@@ -115,7 +115,7 @@ const ECommerceIndustry = () => {
       title: "Redefine Online Retail with Scalable E-Commerce Solutions",
       subtitle:
         "Creating digital stores that are fast, safe, and optimized for conversions is what makes you reach worldwide markets.",
-      image: assets.applicationSolution,
+      image: assets.eCommIndustry11,
       ctaText: "Explore Projects",
       ctaLink: "#projects",
     },
@@ -124,8 +124,7 @@ const ECommerceIndustry = () => {
       title: "Powering the Next-Gen Online Marketplace",
       subtitle:
         "Offerings that are personalized, data-focused, and designed mobility-first are what characterize next-generation e-commerce flows.",
-      image:
-        "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920",
+      image: assets.eCommIndustry2,
       ctaText: "Get Started",
       ctaLink: "#contact",
     },
@@ -134,8 +133,7 @@ const ECommerceIndustry = () => {
       title: "Sell Smarter, Grow Faster",
       subtitle:
         "One action that has the potential of completely changing your e-commerce business is automating it and using AI-driven analytics to guide your decisions.",
-      image:
-        "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920",
+      image: assets.eCommIndustry3,
       ctaText: "Get Started",
       ctaLink: "#contact",
     },
@@ -425,7 +423,7 @@ const ECommerceIndustry = () => {
         heading="AI solutions for online shopping platforms For Online Retail Sites"
         desc="The way online businesses work and function on a day-to-day basis is being heavily disrupted by Artificial Intelligence. We create new-age AI products that are specially designed for online e-commerce sites that not only redesign and enhance customer experience but also increase overall profitability across multiple areas of their operations."
         benefits={solutionsData}
-        image={assets.blockchainBanner1}
+        image={assets.eCommIndustry10}
         footerNote=""
       />
       <GetStarted
@@ -484,7 +482,7 @@ const ECommerceIndustry = () => {
             </ul>
           </>,
         ]}
-        image={assets.whyChooseUs}
+        image={assets.eCommIndustry1}
         background={assets.patternBg1}
         isHidden="hidden"
       />

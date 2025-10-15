@@ -569,12 +569,17 @@ import lifeScience14 from "./lifeScience14.png";
 import lifeScience15 from "./lifeScience15.png";
 import lifeScience16 from "./lifeScience16.png";
 import lifeScience17 from "./lifeScience17.png";
+import eCommIndustry1 from "./eCommIndustry1.png";
+import eCommIndustry2 from "./eCommIndustry2.png";
+import eCommIndustry3 from "./eCommIndustry3.png";
 import eCommIndustry4 from "./eCommIndustry4.png";
 import eCommIndustry5 from "./eCommIndustry5.png";
 import eCommIndustry6 from "./eCommIndustry6.png";
 import eCommIndustry7 from "./eCommIndustry7.png";
 import eCommIndustry8 from "./eCommIndustry8.png";
 import eCommIndustry9 from "./eCommIndustry9.png";
+import eCommIndustry10 from "./eCommIndustry10.png";
+import eCommIndustry11 from "./eCommIndustry11.jpg";
 import highTech1 from "./highTech1.png";
 import highTech2 from "./highTech2.png";
 import highTech3 from "./highTech3.png";
@@ -1169,12 +1174,17 @@ export const assets = {
   lifeScience15,
   lifeScience16,
   lifeScience17,
+  eCommIndustry1,
+  eCommIndustry2,
+  eCommIndustry3,
   eCommIndustry4,
   eCommIndustry5,
   eCommIndustry6,
   eCommIndustry7,
   eCommIndustry8,
   eCommIndustry9,
+  eCommIndustry10,
+  eCommIndustry11,
   highTech1,
   highTech2,
   highTech3,
