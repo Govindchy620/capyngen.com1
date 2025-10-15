@@ -116,67 +116,67 @@ const CpgDistribution = () => {
       title: "Streamlined Supply Chain Management",
       description:
         "Reduce the complexity of your operations using consumer packaged supply chain software.",
-      image: assets.customAiSolution,
+      image: assets.cpg2,
       cardBg: "bg-blue-100",
     },
     {
       title: "Scalable Platforms for B2B and B2C Operations",
       description:
         "Open up the whole world as your market and you will no longer be confined by any limits.",
-      image: assets.customAiSolution,
+      image: assets.cpg3,
       cardBg: "bg-green-100",
     },
     {
       title: "Lead Generation Strategies for Wholesale Growth",
       description:
         "Produce more leads to retail and buy products by attracting new stores and buyers.",
-      image: assets.customAiSolution,
+      image: assets.cpg4,
       cardBg: "bg-purple-100",
     },
     {
       title: "Stronger Retailer and Distributor Engagement",
       description:
         "Keep up with loyalty and happiness through consistent engagement.",
-      image: assets.customAiSolution,
+      image: assets.cpg5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Secure IT Systems with Real-Time Insights",
       description: "Data you can rely on and which is always actionable.",
-      image: assets.customAiSolution,
+      image: assets.cpg6,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Custom IT Services for CPG Distribution",
       description:
         "ERP, warehouse, and product lifecycle management software for manufacturers — highly customized and tailored to your needs.",
-      image: assets.customAiSolution,
+      image: assets.cpg7,
       cardBg: "bg-orange-100",
     },
   ];
   const cardsSectionSliderData1 = [
     {
-      image: assets.bg1,
+      image: assets.cpg8,
       title: "Food and Beverage Distributors",
     },
     {
-      image: assets.bg1,
+      image: assets.cpg9,
       title: "Personal Care and Home Products",
     },
     {
-      image: assets.bg1,
+      image: assets.cpg10,
       title: "Healthy Lifestyle Products",
     },
     {
-      image: assets.bg1,
+      image: assets.cpg11,
       title: "Clothing and Fashion Distribution",
     },
     {
-      image: assets.bg1,
+      image: assets.cpg12,
       title: "Electronics and Consumer Goods",
     },
     {
-      image: assets.bg1,
+      image: assets.cpg13,
       title: "FMCG Wholesalers and Aggregators",
     },
   ];
@@ -316,7 +316,7 @@ const CpgDistribution = () => {
         heading="Reasons why digital transformation is necessary for CPG distributors"
         desc="The consumer packaged goods (CPG) sector is particularly dependent on the fast movement of stocks, well-functioning supply chains, and brand visibility. Consumers who opt for digital channels demand simple ordering processes, live product availability, and an easy-to-use delivery tracking system. By the fusion of Digital Marketing Solution For CPG industry. Capyngen is allowing distributors around the globe to not only simplify their workflows and boost their revenue but also to establish a closer relationship with retailers and consumers."
         benefits={solutionsData}
-        image={assets.blockchainDevelopment}
+        image={assets.cpg1}
         footerNote=""
       />
       <GetStarted
@@ -355,7 +355,7 @@ const CpgDistribution = () => {
         height="h-78"
         headColor="text-white"
         services={cardsSectionSliderData1}
-      />{" "}
+      />
       <HowWeWork heading="Our Process" desc="" steps={steps} />
       <GetStarted
         reverse={false}
