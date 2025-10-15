@@ -672,12 +672,26 @@ import publicService16 from "./publicService16.png";
 import publicService17 from "./publicService17.png";
 import publicService18 from "./publicService18.png";
 import publicService19 from "./publicService19.jpg";
+import insurance1 from "./insurance1.jpg";
 import insurance2 from "./insurance2.png";
 import insurance3 from "./insurance3.png";
 import insurance4 from "./insurance4.png";
 import insurance5 from "./insurance5.png";
 import insurance6 from "./insurance6.png";
 import insurance7 from "./insurance7.png";
+import insurance8 from "./insurance8.png";
+import insurance9 from "./insurance9.png";
+import insurance10 from "./insurance10.png";
+import insurance11 from "./insurance11.png";
+import insurance12 from "./insurance12.png";
+import insurance13 from "./insurance13.png";
+import insurance14 from "./insurance14.jpg";
+import insurance15 from "./insurance15.jpg";
+import insurance16 from "./insurance16.jpg";
+import insuranceBanner1 from "./insuranceBanner1.jpg";
+import insuranceBanner2 from "./insuranceBanner2.jpg";
+import insuranceBanner3 from "./insuranceBanner3.jpg";
+import industriesBanner from "./industriesBanner.jpg";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1354,12 +1368,26 @@ export const assets = {
   publicService17,
   publicService18,
   publicService19,
+  insurance1,
   insurance2,
   insurance3,
   insurance4,
   insurance5,
   insurance6,
   insurance7,
+  insurance8,
+  insurance9,
+  insurance10,
+  insurance11,
+  insurance12,
+  insurance13,
+  insurance14,
+  insurance15,
+  insurance16,
+  insuranceBanner1,
+  insuranceBanner2,
+  insuranceBanner3,
+  industriesBanner,
 };
 
 export const navItems = [

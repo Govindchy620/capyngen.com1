@@ -33,19 +33,19 @@ import { Helmet } from "react-helmet-async";
 const Insurance = () => {
   const slides = [
     {
-      image: assets.blockchainBanner1,
+      image: assets.insuranceBanner1,
       title: "InsurTech Solutions for the Digital Age",
       subtitle:
         "Redesign the functions of underwriting, claims, and customer service with the help of next-gen insurance software.",
     },
     {
-      image: assets.blockchainBanner2,
+      image: assets.insuranceBanner2,
       title: "Powering Insurance Transformation",
       subtitle:
         "Implement AI, analytics, and automation for simpler processes and higher customer trust.",
     },
     {
-      image: assets.blockchainDevelopment,
+      image: assets.insuranceBanner3,
       title: "Secure, Smart & Scalable Insurance Platforms",
       subtitle:
         "Develop measurement systems that use data to offer better insurance coverage and faster services.",
@@ -175,32 +175,32 @@ const Insurance = () => {
   ];
   const servicesData = [
     {
-      image: assets.bg1,
+      image: assets.insurance8,
       title: "Robotic Process Automation (RPA)",
       desc: "Automate routine insurance processes to significantly reduce manual workloads involved in claims processing, renewals, and compliance tasks.",
     },
     {
-      image: assets.bg1,
+      image: assets.insurance9,
       title: "AI Chatbot Integration",
       desc: "Deploy intelligent assistants to provide 24/7 customer support, instantly resolving policy, claim, and inquiry issues while enhancing user satisfaction.",
     },
     {
-      image: assets.bg1,
+      image: assets.insurance10,
       title: "Blockchain in Insurance",
       desc: "Implement blockchain-based solutions for fraud prevention, secure policy validation, and tamper-proof smart contracts across insurance workflows.",
     },
     {
-      image: assets.bg1,
+      image: assets.insurance11,
       title: "Cloud Integration",
       desc: "Enable secure, scalable, and cost-efficient deployment of insurance software through seamless cloud infrastructure integration and maintenance.",
     },
     {
-      image: assets.bg1,
+      image: assets.insurance12,
       title: "Web3 & InsurTech Solutions",
       desc: "Leverage decentralized technologies to create next-generation, user-owned insurance platforms with transparent operations and digital asset support.",
     },
     {
-      image: assets.bg1,
+      image: assets.insurance13,
       title: "Predictive Analytics for Risk Assessment",
       desc: "Use advanced data analytics and machine learning models to predict customer behavior, assess risk, and optimize underwriting accuracy and pricing.",
     },
@@ -317,7 +317,7 @@ const Insurance = () => {
         description={[
           "Transform your insurance company's fate with IT solutions for the insurance industry, Capyngen's cutting-edge software development services. We create customized policy admin solutions, claim management systems along with InsurTech applications that fundamentally change the process of digital Solution for insurance companies. The digital transformation process that is the latest one consists of safety, automated activities along with effortless interaction with the customer, which align with our insurance app development services.",
         ]}
-        image={assets.whyChooseUs}
+        image={assets.insurance1}
         background={assets.patternBg1}
         isHidden="hidden"
       />
@@ -346,7 +346,7 @@ const Insurance = () => {
         description={[
           "Insurance technology solutions (InsurTech), artificial-intelligence-driven claims processing, and digital policy platforms are the future of the insurance industry. With Capyngen in simple terms, it's incredibly simple and fast to execute the process of completely overhauling the outdated systems, uplifting customer interaction, and merging cloud insurance platforms.",
         ]}
-        image={assets.getStarted}
+        image={assets.insurance14}
       />
       <GetStarted
         reverse={false}
@@ -376,7 +376,7 @@ const Insurance = () => {
       <BenefitsSection
         heading="Insurance Software Solutions Development Services"
         desc="We are open-to-close insurance software development providers to attain precision, creativity, and customer satisfaction in the insurance sector."
-        image={assets.eCommerceSolution}
+        image={assets.insurance15}
         benefits={solutionsData}
         footerNote=""
       />
@@ -386,7 +386,7 @@ const Insurance = () => {
         description={[
           "Take Advantage of the Unique and Exceptional Software development For insurance companiesCapyngen is one of India's foremost providers of insurtech that offers you sustainable, flexible and user-friendly solutions. We specialize in policy management software, claims management systems and developing proprietary insurance apps. That not only enables us to offer you highly scalable solutions but highly secure ones as well. Schedule your free consultation today",
         ]}
-        image={assets.whyChooseUs}
+        image={assets.insurance16}
         background={assets.patternBg1}
         imageHeight="aspect-[4/3]"
         isHidden="hidden"

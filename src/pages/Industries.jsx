@@ -190,7 +190,7 @@ const Industries = () => {
       link: "/industries/insurance",
       front: {
         title: "Insurance",
-        image: assets.insurance,
+        image: assets.insurance14,
         textColor: "text-white",
       },
       back: {
@@ -205,7 +205,7 @@ const Industries = () => {
       link: "/industries/communication-media-it",
       front: {
         title: "Communication, Media & IT",
-        image: assets.communicationMedia,
+        image: assets.communicationMediaBanner2,
         textColor: "text-white",
       },
       back: {
@@ -252,7 +252,7 @@ const Industries = () => {
       <Banner
         title="Industries"
         overlayBg="bg-black/70"
-        backgroundImage={assets.bg1}
+        backgroundImage={assets.industriesBanner}
         description="Unlock the Power of Web Presence with our Professional Website Designing Service! Elevate Your Online Presence with Stunning Website Designs."
       />
       <FlipCards cards={cards} />
