@@ -237,7 +237,7 @@ const Cybersecurity = () => {
           }
           description="In order to protect your information, systems, and business processes, we offer security for information technology, security for networks, and the administration of security for the organization through cybersecurity programs. Capyngen is a reliable worldwide supplier of all kinds of business cybersecurity software that offers solutions to problems faced by small, medium, and large enterprises."
           primaryBtnText="Protect Your Business"
-          primaryBtnLink="#"
+          primaryBtnLink="/contact-us"
           image={assets.cyberSecurity1}
         />
       </div>

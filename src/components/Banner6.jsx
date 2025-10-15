@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 // ----------------------
 // Custom Arrows
@@ -124,9 +125,9 @@ const Banner6 = ({
                   )}
                   {slide.ctaText && (
                     <div className="mt-5">
-                      <a href={slide.ctaLink || "#"} className={ctaStyle}>
+                      <Link to={slide.ctaLink || "#"} className={ctaStyle}>
                         {slide.ctaText}
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>

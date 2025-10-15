@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 export default function Banner3({
@@ -14,9 +15,8 @@ export default function Banner3({
           <img
             className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
             src={backgroundImage}
-            alt=""
+            alt="Capyngen AI Solutions Background"
           />
-          {/* Improved SVG: now with semi-transparent dark fill for blend and clarity */}
           <svg
             className="absolute left-0 top-0 hidden h-full text-black/90 transform -translate-x-1/2 lg:block"
             viewBox="0 0 100 100"
@@ -28,6 +28,7 @@ export default function Banner3({
           </svg>
         </div>
       </div>
+
       {/* Content Section */}
       <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl z-10">
         <div className="mb-16 lg:my-40 lg:max-w-xl lg:pr-5">
@@ -38,12 +39,13 @@ export default function Banner3({
             {subtitle}
           </p>
           <div className="flex items-center">
-            <a
-              href="/"
+            <Link
+              to="/contact-us"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-700 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
+              aria-label="Contact Capyngen"
             >
               Get started
-            </a>
+            </Link>
           </div>
         </div>
       </div>

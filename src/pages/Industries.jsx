@@ -1,22 +1,5 @@
 import React from "react";
 import FlipCards from "../components/FlipCards";
-import {
-  Banknote,
-  GraduationCap,
-  LineChart,
-  FlaskConical,
-  HeartPulse,
-  Factory,
-  Building,
-  ShoppingCart,
-  Cpu,
-  Plane,
-  Package,
-  Shield,
-  Radio,
-  Home,
-  Gamepad2,
-} from "lucide-react"; // picked relevant icons
 import Banner from "../components/Banner";
 import { assets } from "../assets/assets";
 
@@ -27,12 +10,12 @@ const Industries = () => {
       link: "/industries/banking",
       front: {
         title: "Banking",
-        image: assets.banking, // full background image
+        image: assets.banking,
         textColor: "text-white",
       },
       back: {
         title:
-          "Transform traditional banking with digital-first, secure, and customer-focused solutions.",
+          "Digitally transform banking with security, seamless transactions, and personalized customer experiences.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -47,7 +30,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Revolutionize learning with digital classrooms, AI tutoring, and accessible education tech.",
+          "Empower education through AI-driven tutoring, virtual classrooms, and accessible digital learning tools.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -62,7 +45,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Empowering trading platforms with analytics, automation, and secure transactions.",
+          "Enhance capital markets with advanced analytics, automated trading systems, and secure digital platforms.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -77,7 +60,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Innovating research, biotech, and pharma with AI, big data, and IoT solutions.",
+          "Accelerate biotech and pharma innovations leveraging AI, big data, and IoT-driven research.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -92,7 +75,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Smart healthcare systems, telemedicine, and fitness solutions to enhance wellness.",
+          "Deliver smart healthcare and fitness solutions through telemedicine and AI-powered wellness monitoring.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -107,7 +90,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Drive sustainability and efficiency with smart grids, renewable tech, and IoT.",
+          "Boost energy efficiency and sustainability with smart grids, renewable technology, and IoT integration.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -122,7 +105,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Industry 4.0 solutions for automation, robotics, and connected automotive tech.",
+          "Implement Industry 4.0 with automation, robotics, and connected automotive technologies.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -137,7 +120,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Smart governance solutions for efficient, transparent, and citizen-focused services.",
+          "Revolutionize public services with transparent, citizen-centric digital governance solutions.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -152,7 +135,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Seamless online shopping experiences with AI-driven personalization and payments.",
+          "Deliver personalized online shopping experiences powered by AI-driven recommendations and secure payments.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -167,7 +150,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Building future-ready solutions with AI, IoT, blockchain, and cloud innovation.",
+          "Craft innovative AI, IoT, blockchain, and cloud-based solutions for tomorrow’s technologies.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -182,7 +165,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Smart mobility, logistics, and booking solutions for global connectivity.",
+          "Build smart mobility and logistics platforms optimizing global travel and supply chain operations.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -197,7 +180,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Reinventing supply chains with digital distribution and consumer-first strategies.",
+          "Transform distribution channels with digitized supply chains and consumer-first engagement strategies.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -212,7 +195,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Digital insurance solutions powered by AI, predictive analytics, and automation.",
+          "Innovate insurance with AI-driven risk assessment, automation, and predictive analytics.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -227,7 +210,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Innovations in media, telecom, and IT services to keep the world connected.",
+          "Deliver cutting-edge media, telecom, and IT solutions for seamless connectivity worldwide.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -242,7 +225,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Smart property management, real estate platforms, and investment tech.",
+          "Simplify property management, investments, and transactions with smart real estate technology.",
         buttonText: "Learn More",
         textColor: "text-white",
       },
@@ -257,7 +240,7 @@ const Industries = () => {
       },
       back: {
         title:
-          "Next-gen gaming with immersive AR/VR, multiplayer, and cloud-based experiences.",
+          "Create immersive AR/VR and multiplayer gaming experiences powered by cloud technology.",
         buttonText: "Learn More",
         textColor: "text-white",
       },

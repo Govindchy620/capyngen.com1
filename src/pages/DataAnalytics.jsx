@@ -285,7 +285,7 @@ const DataAnalytics = () => {
           }
           description="Drive your enterprise with Capyngen’s data-driven approaches and analytic services that allow you to discover, automate, and lead the business to the growth that lasts."
           primaryBtnText="Get started"
-          primaryBtnLink="#"
+          primaryBtnLink="/contact-us"
           image={assets.dataAndAnalytics}
         />
       </div>

@@ -149,31 +149,31 @@ const TravelAndLogistics = () => {
     {
       title: "Travel Agencies & Tour Operators",
       desc: "Control online bookings, adjust prices automatically, and maintain seamless communication with customers.",
-      image: assets.eCommerceSolution,
+      image: assets.travel14,
       textColor: "text-white",
     },
     {
       title: "Logistics & Transportation Firms",
       desc: "Trace operations in real time and automate route scheduling and tracking efficiently.",
-      image: assets.websiteDesign,
+      image: assets.travel15,
       textColor: "text-white",
     },
     {
       title: "Airlines & Rail Companies",
       desc: "Unified systems allow smooth ticketing, customer service, and scheduling for passenger comfort.",
-      image: assets.customAiSolution,
+      image: assets.travel16,
       textColor: "text-white",
     },
     {
       title: "Freight Forwarders & Warehouses",
       desc: "Integrate ERP and inventory systems to maintain a smooth and transparent supply chain.",
-      image: assets.customAiSolution,
+      image: assets.travel17,
       textColor: "text-white",
     },
     {
       title: "Courier & Delivery Services",
       desc: "Use GPS tracking and automation tools to ensure timely and reliable deliveries.",
-      image: assets.customAiSolution,
+      image: assets.travel18,
       textColor: "text-white",
     },
   ];
@@ -244,7 +244,7 @@ const TravelAndLogistics = () => {
   ];
   const slidesData = [
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.travel10,
       heading: "Drive Efficiency with Smart Travel & Logistics Solutions",
       description: (
         <>
@@ -257,7 +257,7 @@ const TravelAndLogistics = () => {
       price: "",
     },
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.travel11,
       heading: "Connecting the World Through Technology",
       description: (
         <>
@@ -270,7 +270,7 @@ const TravelAndLogistics = () => {
       price: "",
     },
     {
-      image: assets.creativeAgencyFAQ,
+      image: assets.travel12,
       heading: "Smart Logistics for a Fast-Moving World",
       description: (
         <>
@@ -332,7 +332,7 @@ const TravelAndLogistics = () => {
           "The travel and logistics industry has been undergoing a series of rapid changes that mainly come from digital transformation, automation, and a rise in customer expectations. The need for smart systems that can do tasks like dynamic pricing, route optimization, online bookings, and end-to-end supply chain visibility is now a must for companies.",
           "Capyngen gives you the Best IT solutions for logistics companies that link every department of your company — from fleet management to customer engagement.",
         ]}
-        image={assets.getStarted}
+        image={assets.travel13}
       />
 
       <CardsSection

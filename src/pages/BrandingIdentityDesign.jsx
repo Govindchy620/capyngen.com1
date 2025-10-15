@@ -293,7 +293,7 @@ const BrandingIdentityDesign = () => {
         }
         description="One of the main reasons consumers choose a certain product over another is the branding. Capyngen's branding design services, a branding expert who is always prepared to think out of the box, come up with ways to simply and globally standardize brand identities. Thus, we are not limited in representing companies of various sizes and in different stages of their development, ranging from the idea stage to that of a multinational corporation, which allows us to produce brand identities that are visually attractive and that can go beyond geographical borders."
         primaryBtnText="Get started"
-        primaryBtnLink="#"
+        primaryBtnLink="/contact-us"
         image={assets.branding1}
       />
       {/* Foreground Content (scrolls over background) */}

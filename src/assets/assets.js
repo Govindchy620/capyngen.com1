@@ -627,6 +627,15 @@ import travel6 from "./travel6.png";
 import travel7 from "./travel7.png";
 import travel8 from "./travel8.png";
 import travel9 from "./travel9.png";
+import travel10 from "./travel10.png";
+import travel11 from "./travel11.png";
+import travel12 from "./travel12.png";
+import travel13 from "./travel13.png";
+import travel14 from "./travel14.png";
+import travel15 from "./travel15.png";
+import travel16 from "./travel16.png";
+import travel17 from "./travel17.png";
+import travel18 from "./travel18.png";
 import healthcareFitness1 from "./healthcareFitness1.png";
 import healthcareFitness2 from "./healthcareFitness2.png";
 import healthcareFitness3 from "./healthcareFitness3.png";
@@ -1275,6 +1284,15 @@ export const assets = {
   travel7,
   travel8,
   travel9,
+  travel10,
+  travel11,
+  travel12,
+  travel13,
+  travel14,
+  travel15,
+  travel16,
+  travel17,
+  travel18,
   healthcareFitness1,
   healthcareFitness2,
   healthcareFitness3,

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Banner5 = ({
@@ -19,7 +20,7 @@ const Banner5 = ({
     </>
   ),
   primaryBtnText = "Start using the Capyngen DevOps Solutions",
-  primaryBtnLink = "#",
+  primaryBtnLink = "/contact-us",
   image = assets.devOps1,
 }) => {
   return (
@@ -36,8 +37,8 @@ const Banner5 = ({
 
           {/* Buttons */}
           {primaryBtnText && (
-            <a
-              href={primaryBtnLink}
+            <Link
+              to={primaryBtnLink}
               className="inline-flex items-center justify-center px-5 py-3 mr-3 text-sm sm:text-base font-medium text-white text-center rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-900 transition"
               aria-label={primaryBtnText}
             >
@@ -59,7 +60,7 @@ const Banner5 = ({
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           )}
         </div>
 

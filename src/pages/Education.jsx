@@ -205,7 +205,7 @@ const Education = () => {
         "Motivate students and teachers with e-learning resources that open the doors to development and engagement.",
       image: assets.educationBanner1,
       ctaText: "Get Started",
-      ctaLink: "#projects",
+      ctaLink: "/contact-us",
     },
     {
       id: 2,
@@ -214,7 +214,7 @@ const Education = () => {
         "The school can be more meaningful with our knowledge software and e-learning platforms.",
       image: assets.educationBanner2,
       ctaText: "Contact Us",
-      ctaLink: "#contact",
+      ctaLink: "/contact-us",
     },
     {
       id: 3,
@@ -223,7 +223,7 @@ const Education = () => {
         "Implement AI and analytics in education to speed up growth and efficiency.",
       image: assets.educationBanner3,
       ctaText: "Explore Now",
-      ctaLink: "#contact",
+      ctaLink: "/contact-us",
     },
   ];
 
