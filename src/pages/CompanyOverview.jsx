@@ -201,7 +201,7 @@ const CompanyOverview = () => {
             </h3>
             <p className="text-gray-200 text-xl leading-relaxed font-semibold">
               Tactics that not only reach your audience, but also convince them
-              to respond
+              to respond.
             </p>
           </div>
 
