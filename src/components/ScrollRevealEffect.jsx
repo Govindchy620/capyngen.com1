@@ -96,7 +96,7 @@ export default function ScrollRevealEffect() {
       bg: "transparent",
       text: "Form",
       style: {
-        backgroundImage: `url(${assets.bg1})`,
+        backgroundImage: `url(${assets.letsTalk})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       },
@@ -133,33 +133,6 @@ export default function ScrollRevealEffect() {
                 style={{
                   background:
                     "linear-gradient(to top, var(--tw-bg-opacity,1) currentColor, transparent)",
-                }}
-              ></div>
-            </>
-          )}
-
-          {section.style?.backgroundImage && (
-            <>
-              <div
-                className="absolute -top-20 left-0 w-full h-40 pointer-events-none"
-                style={{
-                  backgroundImage: section.style.backgroundImage,
-                  backgroundSize: section.style.backgroundSize,
-                  backgroundPosition: section.style.backgroundPosition,
-                  WebkitMaskImage:
-                    "linear-gradient(to bottom, black, transparent)",
-                  maskImage: "linear-gradient(to bottom, black, transparent)",
-                }}
-              ></div>
-              <div
-                className="absolute -bottom-20 left-0 w-full h-40 pointer-events-none"
-                style={{
-                  backgroundImage: section.style.backgroundImage,
-                  backgroundSize: section.style.backgroundSize,
-                  backgroundPosition: section.style.backgroundPosition,
-                  WebkitMaskImage:
-                    "linear-gradient(to top, black, transparent)",
-                  maskImage: "linear-gradient(to top, black, transparent)",
                 }}
               ></div>
             </>

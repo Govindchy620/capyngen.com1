@@ -338,7 +338,7 @@ import banking19 from "./banking19.png";
 import banking20 from "./banking20.png";
 import educationBanner1 from "./educationBanner1.jpg";
 import educationBanner2 from "./educationBanner2.jpg";
-import educationBanner3 from "./educationBanner3.jpg";
+import educationBanner3 from "./educationBanner3.png";
 import education1 from "./education1.jpg";
 import education2 from "./education2.png";
 import education3 from "./education3.png";
@@ -708,6 +708,8 @@ import cpg10 from "./cpg10.png";
 import cpg11 from "./cpg11.png";
 import cpg12 from "./cpg12.png";
 import cpg13 from "./cpg13.png";
+import letsTalk from "./letsTalk.jpg";
+import companyOverview2 from "./companyOverview2.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1420,6 +1422,8 @@ export const assets = {
   cpg11,
   cpg12,
   cpg13,
+  letsTalk,
+  companyOverview2,
 };
 
 export const navItems = [

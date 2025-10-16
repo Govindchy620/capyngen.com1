@@ -28,10 +28,21 @@ const CompanyOverview = () => {
   return (
     <div>
       <Banner
-        title="Company Overview"
+        title="About Capyngen"
         overlayBg="bg-black/70"
         backgroundImage={assets.companyOverview}
-        description="Unlock the Power of App Presence with our Professional Appsite Designing Service! Elevate Your Online Presence with Stunning Appsite Designs."
+        description={
+          <>
+            <h2 className="pb-10 text-3xl md:text-5xl font-extrabold">
+              Your Success Story Starts Here
+            </h2>
+            <p>
+              At Capyngen, we don't merely sell digital marketing, we create
+              digital experiences that have a practical impact on businesses and
+              attract new clients.
+            </p>
+          </>
+        }
       />
       <AboutSection />
       <OurValues />

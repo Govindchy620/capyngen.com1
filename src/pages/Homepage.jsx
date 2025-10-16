@@ -248,7 +248,7 @@ const Homepage = () => {
         <div className="py-10 bg-gradient-to-b from-[#708090]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
           <FAQSection2 items={faqItems} bgColor="bg-transparent" />
         </div>
-        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+        <div className="pt-10 bg-gradient-to-b from-[#000]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
           <ScrollRevealEffect />
         </div>
       </div>
