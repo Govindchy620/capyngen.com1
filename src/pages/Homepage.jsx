@@ -219,8 +219,7 @@ const Homepage = () => {
       <ParallaxScroll images={images} />; */}
       {/* Foreground Content (scrolls over background) */}
       <div className="relative z-10">
-        <div className="lg:h-10 bg-gradient-to-b from-[#000]/90 to-[#000]/90"></div>
-        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
+        <div className="py-10 pt-20 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
           <HomeAboutUs />
         </div>
         {/* <div className="h-10 bg-gradient-to-b from-[#0010A2]/90 to-[#0010A2]/90"></div> */}
