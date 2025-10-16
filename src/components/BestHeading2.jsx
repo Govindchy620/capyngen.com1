@@ -6,7 +6,7 @@ export default function BestHeading2({ highlight = "Work" }) {
       <div className="md:leading-34 tracking-wider max-w-full pb-4 inline-grid">
         {/* Shadow Layer */}
         <h1
-          className="col-start-1 row-start-1 text-gray-900 font-extrabold 
+          className="col-start-1 row-start-1 text-sky-500 font-extrabold 
           text-[clamp(2.5rem,10vw,7rem)] z-0 translate-x-[3px] translate-y-[3px]
           md:translate-x-[6px] md:translate-y-[6px]"
           style={{ transform: "scaleX(0.9)" }}

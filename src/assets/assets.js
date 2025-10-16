@@ -710,6 +710,9 @@ import cpg12 from "./cpg12.png";
 import cpg13 from "./cpg13.png";
 import letsTalk from "./letsTalk.jpg";
 import companyOverview2 from "./companyOverview2.png";
+import companyOverview3 from "./companyOverview3.png";
+import companyOverview4 from "./companyOverview4.png";
+import news from "./news.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1424,6 +1427,9 @@ export const assets = {
   cpg13,
   letsTalk,
   companyOverview2,
+  companyOverview3,
+  companyOverview4,
+  news,
 };
 
 export const navItems = [

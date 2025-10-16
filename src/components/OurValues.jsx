@@ -54,10 +54,10 @@ const OurValues = () => (
     subheading="Do you want to work with a digital marketing team that really understands you? So, continuing on from the other things that distinguish us from the crowd, here is another one."
     services={cardsSectionData1}
     headColor="text-white"
-    cardBg="bg-gradient-to-r from-gray-900 via-gray-900 to-blue-900"
+    cardBg="bg-gradient-to-br from-gray-900 via-gray-900 to-blue-900"
     textSize="text-md"
     sectionBg="bg-gray-900"
-    hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
+    hoverBg=" hover:scale-105"
     textColor="text-white"
     hoverTextColor=""
   />

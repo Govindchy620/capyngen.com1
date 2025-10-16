@@ -11,22 +11,6 @@ import GetStarted from "../components/GetStarted";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 
 const CompanyOverview = () => {
-  const faqItems = [
-    {
-      question: "How long does it take for funds to show in my wallet?",
-      answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
-    },
-    {
-      question: "What is the minimum deposit requirement?",
-      answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
-    },
-    {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
-    },
-  ];
   const expertise = [
     {
       title: "Search Engine Optimization",
@@ -59,7 +43,6 @@ const CompanyOverview = () => {
       img: assets.branding1,
     },
   ];
-
   const exploreLinks = [
     "Who we are - The team behind your achievements.",
     "Offerings - A range of digital solutions",
@@ -73,7 +56,7 @@ const CompanyOverview = () => {
       <Banner
         title="About Capyngen"
         overlayBg="bg-black/70"
-        backgroundImage={assets.companyOverview}
+        backgroundImage={assets.companyOverview3}
         description={
           <>
             <h2 className="pb-10 text-3xl md:text-5xl font-extrabold">
@@ -90,11 +73,11 @@ const CompanyOverview = () => {
       <AboutSection />
       <section className="relative min-h-[70vh] py-20 flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-blue-950 overflow-hidden">
         {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-purple-600/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-blue-600/10 to-transparent"></div>
 
         {/* Floating glow elements (optional aesthetic accent) */}
         <div className="absolute -top-10 left-10 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
 
         {/* Main content */}
         <div className="relative z-10 text-center px-6 sm:px-10 md:px-16 max-w-7xl">
@@ -122,7 +105,7 @@ const CompanyOverview = () => {
             {/* Optional CTA Button */}
             <div className="mt-10">
               <button
-                className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 
+                className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 
               text-white font-semibold text-lg shadow-lg hover:shadow-blue-500/30 
               transition-all duration-300 hover:scale-105"
               >
@@ -147,7 +130,7 @@ const CompanyOverview = () => {
       />{" "}
       <section className="bg-black text-white relative overflow-hidden">
         {/* gradient bg layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-purple-900/20 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-blue-900/20 to-black"></div>
 
         <div className="relative z-10 max-w-[90vw] mx-auto px-6 sm:px-10 md:px-16 py-20 space-y-16">
           {/* What Sets Us Apart */}
@@ -204,7 +187,7 @@ const CompanyOverview = () => {
             </div>
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src={assets.ai3}
+                src={assets.companyOverview4}
                 alt="Research"
                 className="object-cover w-full h-full"
               />
@@ -212,7 +195,7 @@ const CompanyOverview = () => {
           </div>
 
           {/* Outcome */}
-          <div className="text-center bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-10 rounded-3xl border border-white/20 backdrop-blur-md shadow-lg">
+          <div className="text-center bg-gradient-to-r from-blue-900/30 to-blue-900/30 p-10 rounded-3xl border border-white/20 backdrop-blur-md shadow-lg">
             <h3 className="text-3xl font-bold text-blue-300 mb-4">
               The Outcome
             </h3>
@@ -236,7 +219,7 @@ const CompanyOverview = () => {
 
           {/* Expertise Grid */}
           <div>
-            <h3 className="text-3xl font-bold text-center mb-10 text-white">
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-white">
               Our Expertise
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -260,10 +243,10 @@ const CompanyOverview = () => {
 
           {/* Explore Capyngen */}
           <div>
-            <h3 className="text-3xl font-bold text-center mb-8 text-white">
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">
               Explore Capyngen
             </h3>
-            <ul className="max-w-3xl mx-auto space-y-4 text-center text-gray-300 text-lg">
+            <ul className="max-w-md mx-auto space-y-4 text-left text-gray-300 text-lg">
               {exploreLinks.map((item, i) => (
                 <li
                   key={i}
@@ -284,12 +267,12 @@ const CompanyOverview = () => {
             <p className="flex items-center justify-center gap-2 text-gray-200 text-lg">
               <Mail className="w-5 h-5 text-blue-400" /> sales@capyngen.com
             </p>
-            <p className="text-lg text-gray-200">
+            <p className="text-xl text-gray-200">
               Do you want to take your brand to the next level? We should talk!
               <br />A digital pivot for you starts off with just a single chat.
             </p>
             <button
-              className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 
+              className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 
             text-white font-semibold text-lg shadow-lg hover:shadow-blue-500/30 
             transition-all duration-300 hover:scale-105 flex items-center gap-2 mx-auto"
             >
