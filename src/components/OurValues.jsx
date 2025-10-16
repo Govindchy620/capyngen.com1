@@ -1,49 +1,66 @@
 import React from "react";
+import CardsSection from "./CardsSection";
+import {
+  FaAndroid,
+  FaApple,
+  FaCheckCircle,
+  FaCode,
+  FaCogs,
+  FaMobileAlt,
+} from "react-icons/fa";
 
-const values = [
+const cardsSectionData1 = [
   {
-    title: "Ethics",
+    title: "Expertize, Tested in Battle",
     description:
-      "Our commitment to ethical business practices and transparent communication forms the foundation of all our interactions; we are always doing what's right for our customers, partners, and society.",
+      "Our team is not just highly trained, but they are also digital marketing veterans who have mastered the art of raising the profile of brands. Every piece of strategy implemented by us is connected with actual working experience and verified outcomes.",
+    icon: <FaAndroid className="text-4xl text-white" />,
   },
   {
-    title: "Empathy",
+    title: "Leading the Way Every Time",
     description:
-      "At Experion, we prioritize putting ourselves in our clients' shoes to understand their needs and craft exceptional digital solutions that truly make a difference in their lives.",
+      "We don’t just keep up with the times, we set the pace. The range of our creativity, i.e., the radar is always scanning for the next big thing in digital marketing, allowing your brand to be far ahead of the competition.",
+    icon: <FaApple className="text-4xl text-white" />,
   },
   {
-    title: "Excellence",
+    title: "Your Brand, Your Code",
     description:
-      "Continuously striving for excellence in all that we do, from delivering high-quality solutions to fostering a positive work environment and achieving the highest standards of quality, innovation, and customer satisfaction, is at the heart of Experion's DNA.",
+      "We don’t do cookie-cutter campaigns. We get into the depths of your awesome story, objectives, and problems to produce the perfect solutions for you. That is because the business you have deserves a strategy that is as different as your insight.",
+    icon: <FaMobileAlt className="text-4xl text-white" />,
+  },
+  {
+    title: "Truth is in the Yeast",
+    description:
+      "Our results are what patents we trust. Designed for the purpose of moving the needle, every campaign is executed, optimized, and evaluated in such a way that it is most effective for the lowest one of your bottom lines. We take pleasure in delivering to you your Return on Investments like a report card for your studies in school.",
+    icon: <FaCode className="text-4xl text-white" />,
+  },
+  {
+    title: "We Are Crazy About Your Success",
+    description:
+      "We don't just do the job for your sake – we do it with you and for you. Your triumphs are the reasons for our joys as well, and we will do everything in our power to not only meet your expectations but to exceed them greatly.",
+    icon: <FaCheckCircle className="text-4xl text-white" />,
+  },
+  {
+    title: "Working as One Team Rather Than Just Service",
+    description:
+      "We take on the role of your marketing team beyond your immediate sphere. We treasure your advice, invite your input, and hold that the best outcomes come from genuine cooperation. Every step of the way, your voice is what guides our decisions.",
+    icon: <FaCogs className="text-4xl text-white" />,
   },
 ];
 
 const OurValues = () => (
-  <section className="w-full py-16 sm:py-14 bg-black text-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16">
-      {/* Heading */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 sm:mb-16">
-        Our Values
-      </h2>
-
-      {/* Value Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-        {values.map((value) => (
-          <div
-            key={value.title}
-            className="p-6 sm:p-8 rounded-2xl bg-gray-500 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2"
-          >
-            <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
-              {value.title}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed">
-              {value.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <CardsSection
+    heading="Why choose Capyngen?"
+    subheading="Do you want to work with a digital marketing team that really understands you? So, continuing on from the other things that distinguish us from the crowd, here is another one."
+    services={cardsSectionData1}
+    headColor="text-white"
+    cardBg="bg-gradient-to-br from-gray-900 via-gray-900 to-blue-900"
+    textSize="text-md"
+    sectionBg="bg-gray-900"
+    hoverBg=" hover:scale-105"
+    textColor="text-white"
+    hoverTextColor=""
+  />
 );
 
 export default OurValues;
