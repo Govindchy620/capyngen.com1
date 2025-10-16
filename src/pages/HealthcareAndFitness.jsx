@@ -38,6 +38,7 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import Banner11 from "../components/Banner11";
+import { Helmet } from "react-helmet-async";
 
 const HealthcareAndFitness = () => {
   const faqItems = [
@@ -293,6 +294,17 @@ const HealthcareAndFitness = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>Healthcare & Fitness App Development Company | Capyngen</title>
+        <meta
+          name="description"
+          content="Capyngen develops custom healthcare & fitness apps — from hospital management to telemedicine and gym solutions, enhancing efficiency and patient care."
+        />
+        <meta
+          name="keywords"
+          content="Healthcare & Fitness App Development Company | Capyngen"
+        />
+      </Helmet>
       <Banner11
         heading=" with IT Solutions Beyond Imagination"
         highlight="Transforming Healthcare & Fitness"

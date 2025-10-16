@@ -22,6 +22,7 @@ import GetStarted from "../components/GetStarted";
 import BenefitsSection from "../components/BenefitsSection";
 import TopRatedCompany from "../components/TopRatedCompany";
 import CardsSectionImage from "../components/CardsSectionImage";
+import { Helmet } from "react-helmet-async";
 
 const ECommerceIndustry = () => {
   const faqItems = [
@@ -376,6 +377,20 @@ const ECommerceIndustry = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          IT Solutions for E-Commerce | AI, CRM & DevOps for Online Stores –
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers tailored IT solutions for e-commerce. From AI and CRM to UI/UX design and DevOps, we empower online shopping platforms to scale and perform."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for E-Commerce | AI, CRM & DevOps for Online Stores – Capyngen"
+        />
+      </Helmet>
       <Banner6
         slides={slidesData}
         autoplay={true}

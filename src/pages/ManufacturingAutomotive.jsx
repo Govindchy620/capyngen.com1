@@ -21,6 +21,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import AppTypesSection from "../components/AppTypesSection";
 import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
+import { Helmet } from "react-helmet-async";
 
 const ManufacturingAutomotive = () => {
   const faqItems = [
@@ -362,6 +363,20 @@ const ManufacturingAutomotive = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Manufacturing Software Solutions | Smart Factory & ERP Systems –
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers advanced manufacturing software solutions. From smart factory automation to ERP, IoT, and supply chain software — we drive industrial innovation."
+        />
+        <meta
+          name="keywords"
+          content="Manufacturing Software Solutions | Smart Factory & ERP Systems – Capyngen"
+        />
+      </Helmet>
       <ShuffleHero
         heading={
           <>

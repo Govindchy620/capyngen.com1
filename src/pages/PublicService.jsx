@@ -22,6 +22,7 @@ import {
 } from "react-icons/fa";
 import CardsSection from "../components/CardsSection";
 import HowWeWork from "../components/HowWeWork";
+import { Helmet } from "react-helmet-async";
 
 const PublicService = () => {
   const slides = [
@@ -349,6 +350,20 @@ const PublicService = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          IT Solutions for Public Sector Industry | AI & E-commerce Services –
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen provides innovative IT solutions for the public sector. From AI to e-commerce platforms, we help government and public organizations go digital securely."
+        />
+        <meta
+          name="keywords"
+          content="IT Solutions for Public Sector Industry | AI & E-commerce Services – Capyngen"
+        />
+      </Helmet>
       <Banner4 slides={slides} />
       <CardsSectionImage
         heading="Explore Our Presence: Public Sector Solutions We Offer"

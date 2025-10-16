@@ -39,6 +39,7 @@ import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import BenefitsSection from "../components/BenefitsSection";
 import Banner4 from "../components/Banner4";
+import { Helmet } from "react-helmet-async";
 
 const LifeScience = () => {
   const faqItems = [
@@ -259,6 +260,19 @@ const LifeScience = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>
+          Life Sciences Software Solutions | Digital Healthcare by Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen delivers advanced life sciences software for biotech & healthcare — CTMS, LIMS, and digital healthcare solutions ensuring accuracy & compliance."
+        />
+        <meta
+          name="keywords"
+          content="Life Sciences Software Solutions | Digital Healthcare by Capyngen"
+        />
+      </Helmet>
       <Banner4 slides={slides} />
       <GetStarted
         reverse={false}

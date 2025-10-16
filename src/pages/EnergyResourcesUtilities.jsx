@@ -44,6 +44,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSectionSlider from "../components/CardsSectionSlider";
+import { Helmet } from "react-helmet-async";
 
 const EnergyResourcesUtilities = () => {
   const faqItems = [
@@ -300,6 +301,20 @@ const EnergyResourcesUtilities = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>
+          Energy Management Software Solutions | Smart Grid & ERP Systems –
+          Capyngen
+        </title>
+        <meta
+          name="description"
+          content="Capyngen offers intelligent energy management software solutions. From smart grids to renewable energy, billing, and ERP systems — power your business efficiently."
+        />
+        <meta
+          name="keywords"
+          content="Energy Management Software Solutions | Smart Grid & ERP Systems – Capyngen"
+        />
+      </Helmet>
       <ExpandableGallery panels={panels} />
       <GetStarted
         reverse={false}
