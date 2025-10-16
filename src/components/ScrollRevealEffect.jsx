@@ -184,16 +184,29 @@ export default function ScrollRevealEffect() {
               <div className="flex-1 min-w-[300px] bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg">
                 <form className="space-y-3 w-full">
                   {/* Name */}
-                  <div>
-                    <label className="block mb-2 text-sm font-medium">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Enter your name"
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                      required
-                    />
+                  <div className="flex items-center justify-between gap-10">
+                    <div className="w-1/2">
+                      <label className="block mb-2 text-sm font-medium">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Enter your first name"
+                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        required
+                      />
+                    </div>
+                    <div className="w-1/2">
+                      <label className="block mb-2 text-sm font-medium">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Enter your last name"
+                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        required
+                      />
+                    </div>
                   </div>
 
                   {/* Email */}
