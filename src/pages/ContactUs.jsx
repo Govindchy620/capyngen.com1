@@ -1,8 +1,15 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Input = ({ label, placeholder, type = "text" }) => {
+const Input = ({
+  label,
+  placeholder,
+  type = "text",
+  name,
+  value,
+  onChange,
+}) => {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
@@ -16,19 +23,21 @@ const Input = ({ label, placeholder, type = "text" }) => {
       </span>
       <div className="relative">
         <input
+          name={name}
           type={type}
+          value={value}
           placeholder={placeholder}
+          onChange={onChange}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           className="w-full bg-transparent outline-none border-0 border-b border-white/30 placeholder:text-neutral-500 py-3 text-white relative z-10"
         />
-        {/* Removed bottom gradient line on focus as requested */}
       </div>
     </label>
   );
 };
 
-// Google Map iframe integration fitting the style
+// Google Map iframe
 const Map = () => (
   <div className="mt-12 rounded-3xl border border-white/30 shadow-[inset_0_2px_6px_rgba(255,255,255,0.3),0_10px_20px_rgba(0,0,0,0.4)] overflow-hidden">
     <iframe
@@ -46,12 +55,62 @@ const Map = () => (
 );
 
 export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    subject: "Inquiry",
+    message: "",
+  });
+
   const [isMessageFocused, setIsMessageFocused] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("");
+
+  // Handle submit and send data to backend
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMsg("");
+
+    try {
+      const response = await fetch(
+        "https://capyngen-backendv2-1.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setResponseMsg("✅ Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          subject: "Inquiry",
+          message: "",
+        });
+      } else {
+        setResponseMsg(`❌ Error: ${data.message || "Failed to send message"}`);
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      setResponseMsg("❌ Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="relative min-h-screen w-full pt-10 overflow-hidden bg-[#0c0c0d] text-white">
-      {/* Floating animated gradient blobs background */}
+      {/* Floating gradient blobs */}
       <div
         className="pointer-events-none absolute -left-10 top-40 h-48 w-48 rounded-full bg-[radial-gradient(circle_at_30%_30%,#74a2ff_0%,#6b5bff_45%,#1b1b2a_60%)] animate-float"
         style={{ animationDelay: "0s", animationDuration: "8s" }}
@@ -74,10 +133,7 @@ export default function ContactUs() {
         <h1 className="text-4xl md:text-5xl font-bold animate-fadeInUp bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
           Contact Us
         </h1>
-        <p
-          className="mt-3 text-neutral-300 animate-fadeInUp"
-          style={{ animationDelay: "0.2s" }}
-        >
+        <p className="mt-3 text-neutral-300 animate-fadeInUp">
           Any question or remarks? Just write us a message!
         </p>
       </div>
@@ -93,47 +149,17 @@ export default function ContactUs() {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            {/* Glass shine overlay */}
-            <div className="pointer-events-none absolute inset-0 rounded-3xl overflow-hidden">
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-              <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent" />
-              <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-            </div>
-
-            {/* Floating glow orbs */}
-            <div
-              className="pointer-events-none absolute -left-12 -top-12 h-48 w-48 rounded-full bg-[radial-gradient(circle,#8ab2ff_0%,transparent_65%)] opacity-50 animate-pulse"
-              style={{ animationDuration: "4s" }}
-            />
-            <div
-              className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-[radial-gradient(circle,#9ea0ff_0%,transparent_65%)] opacity-60 animate-pulse"
-              style={{ animationDuration: "5s", animationDelay: "1s" }}
-            />
-            <div
-              className="pointer-events-none absolute -left-12 bottom-16 h-48 w-48 rounded-full bg-[radial-gradient(circle,#8ab2ff_0%,transparent_65%)] opacity-45 animate-pulse"
-              style={{ animationDuration: "6s", animationDelay: "2s" }}
-            />
-            <div
-              className="pointer-events-none absolute right-16 bottom-6 h-36 w-36 rounded-full bg-[radial-gradient(circle,#b0a0ff_0%,transparent_65%)] opacity-55 animate-pulse"
-              style={{ animationDuration: "7s", animationDelay: "3s" }}
-            />
-
+            {/* Contact Info + Form */}
             <div className="grid grid-cols-1 gap-8 p-8 md:grid-cols-[380px_1fr] md:p-12 lg:p-16">
               {/* Contact info panel */}
               <div className="relative rounded-3xl backdrop-blur-2xl p-8 md:p-10 shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_8px_32px_rgba(0,0,0,0.3)] border border-white/30 group transition-all duration-500">
-                <div className="pointer-events-none absolute inset-0 rounded-3xl overflow-hidden">
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
-                  <div className="absolute top-4 left-4 w-16 h-16 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-xl" />
-                </div>
-
                 <h3 className="text-2xl font-semibold text-white mb-4">
                   Contact Information
                 </h3>
 
                 <div className="space-y-10 text-base">
                   <div className="flex items-center gap-4 group/item hover:translate-x-2 transition-transform duration-300">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg group-hover/item:bg-white/30 group-hover/item:scale-110 transition-all duration-300">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
                       <Mail className="h-5 w-5" />
                     </div>
                     <a
@@ -145,7 +171,7 @@ export default function ContactUs() {
                   </div>
 
                   <div className="flex items-center gap-4 group/item hover:translate-x-2 transition-transform duration-300">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg group-hover/item:bg-white/30 group-hover/item:scale-110 transition-all duration-300">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
                       <Phone className="h-5 w-5" />
                     </div>
                     <a
@@ -156,7 +182,7 @@ export default function ContactUs() {
                     </a>
                   </div>
 
-                  <div className="flex items-start gap-4 group/item">
+                  <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
                       <MapPin className="h-5 w-5" />
                     </div>
@@ -170,82 +196,129 @@ export default function ContactUs() {
                   </div>
                 </div>
 
-                {/* Social Media Icons */}
+                {/* Social Icons */}
                 <div className="absolute bottom-8 left-8 flex items-center gap-4 text-white/90">
                   <a
                     href="#"
-                    className="rounded-xl bg-blue-500/20 backdrop-blur-sm p-3 hover:bg-blue-500/30 hover:scale-110 transition-all duration-300 border border-white/30 shadow-lg group"
-                    aria-label="Twitter"
+                    className="rounded-xl bg-blue-500/20 p-3 border border-white/30 hover:scale-110 transition-all duration-300"
                   >
-                    <FaTwitter className="group-hover:rotate-12 transition-transform duration-300" />
+                    <FaTwitter />
                   </a>
                   <a
                     href="#"
-                    className="rounded-xl bg-pink-500/20 backdrop-blur-sm p-3 hover:bg-pink-500/30 hover:scale-110 transition-all duration-300 border border-white/30 shadow-lg group"
-                    aria-label="Instagram"
+                    className="rounded-xl bg-pink-500/20 p-3 border border-white/30 hover:scale-110 transition-all duration-300"
                   >
-                    <FaInstagram className="group-hover:rotate-12 transition-transform duration-300" />
+                    <FaInstagram />
                   </a>
                   <a
                     href="#"
-                    className="rounded-xl bg-blue-600/20 backdrop-blur-sm p-3 hover:bg-blue-600/30 hover:scale-110 transition-all duration-300 border border-white/30 shadow-lg group"
-                    aria-label="LinkedIn"
+                    className="rounded-xl bg-blue-600/20 p-3 border border-white/30 hover:scale-110 transition-all duration-300"
                   >
-                    <FaLinkedinIn className="group-hover:rotate-12 transition-transform duration-300" />
+                    <FaLinkedinIn />
                   </a>
                 </div>
               </div>
 
-              {/* Contact form panel */}
+              {/* Contact form */}
               <div className="relative py-16 px-4">
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                  <Input label="First Name" placeholder="John" />
-                  <Input label="Last Name" placeholder="Doe" />
-                  <Input
-                    label="Email"
-                    type="email"
-                    placeholder="john.doe@example.com"
-                  />
-                  <Input label="Phone Number" placeholder="+1 (555) 555-5555" />
-                </div>
+                <form onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <Input
+                      label="First Name"
+                      name="firstName"
+                      placeholder="John"
+                      value={formData.firstName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, firstName: e.target.value })
+                      }
+                    />
+                    <Input
+                      label="Last Name"
+                      name="lastName"
+                      placeholder="Doe"
+                      value={formData.lastName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, lastName: e.target.value })
+                      }
+                    />
+                    <Input
+                      label="Email"
+                      type="email"
+                      name="email"
+                      placeholder="john.doe@example.com"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                    />
+                    <Input
+                      label="Phone Number"
+                      name="phoneNumber"
+                      placeholder="+1 (555) 555-5555"
+                      value={formData.phoneNumber}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          phoneNumber: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
 
-                {/* Message textarea */}
-                <div className="mt-8">
-                  <label className="flex flex-col gap-2 group">
-                    <span
-                      className={`text-sm transition-colors duration-300 ${
-                        isMessageFocused ? "text-white" : "text-neutral-300"
-                      }`}
+                  {/* Message */}
+                  <div className="mt-8">
+                    <label className="flex flex-col gap-2 group">
+                      <span
+                        className={`text-sm transition-colors duration-300 ${
+                          isMessageFocused ? "text-white" : "text-neutral-300"
+                        }`}
+                      >
+                        Message
+                      </span>
+                      <div className="relative">
+                        <textarea
+                          rows={3}
+                          name="message"
+                          placeholder="Write your message..."
+                          value={formData.message}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              message: e.target.value,
+                            })
+                          }
+                          onFocus={() => setIsMessageFocused(true)}
+                          onBlur={() => setIsMessageFocused(false)}
+                          className="w-full resize-none bg-transparent outline-none border-0 border-b border-white/30 placeholder:text-neutral-500 py-3 text-white relative z-10"
+                        />
+                      </div>
+                    </label>
+                  </div>
+
+                  {/* Send button */}
+                  <div className="mt-12 flex justify-end">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="group relative rounded-xl backdrop-blur-xl px-8 py-3 text-base font-medium text-white shadow-2xl outline-none ring-2 ring-white/40 transition-all duration-300 hover:ring-white/60 hover:scale-105 active:scale-95 border border-white/30 overflow-hidden"
                     >
-                      Message
-                    </span>
-                    <div className="relative">
-                      <textarea
-                        rows={3}
-                        placeholder="Write your message..."
-                        onFocus={() => setIsMessageFocused(true)}
-                        onBlur={() => setIsMessageFocused(false)}
-                        className="w-full resize-none bg-transparent outline-none border-0 border-b border-white/30 placeholder:text-neutral-500 py-3 text-white relative z-10"
-                      />
-                      {/* Removed bottom gradient line on focus */}
-                    </div>
-                  </label>
-                </div>
+                      <span className="relative z-10">
+                        {loading ? "Sending..." : "Send Message"}
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </button>
+                  </div>
 
-                {/* Send button */}
-                <div className="mt-12 flex justify-end">
-                  <button
-                    type="submit"
-                    className="group relative rounded-xl backdrop-blur-xl px-8 py-3 text-base font-medium text-white shadow-2xl outline-none ring-2 ring-white/40 transition-all duration-300 hover:from-blue-500/40 hover:ring-white/60 hover:scale-105 active:scale-95 border border-white/30 overflow-hidden"
-                  >
-                    <span className="relative z-10">Send Message</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </button>
-                </div>
+                  {responseMsg && (
+                    <p className="mt-4 text-center text-sm text-neutral-300">
+                      {responseMsg}
+                    </p>
+                  )}
+                </form>
               </div>
             </div>
 
-            {/* Map below form and info */}
+            {/* Map below form */}
             <Map />
           </div>
         </div>
