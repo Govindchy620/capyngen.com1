@@ -1,58 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets.js";
-
-const articles = [
-  {
-    date: "27/08/2025",
-    title:
-      "ChatGPT-5: Everything You Need to Know About the Next Generation of AI",
-    summary:
-      "From 80% lower error rates and smarter integrations to longer memory and deeper reasoning, ChatGPT-5 sets a new standard in AI performance. Discover its key features, benchmarks, and business impact.",
-    image: assets.news1,
-    category: "Artificial Intelligence",
-  },
-  {
-    date: "22/08/2025",
-    title:
-      "Monolith to Microservices Migration: Turning Architectural Liabilities into Competitive Strengths",
-    summary:
-      "Learn how to successfully transition from monolithic architecture to microservices and transform your system's scalability, maintainability, and team productivity.",
-    image: assets.news2,
-    category: "Software Architecture",
-  },
-  {
-    date: "18/08/2025",
-    title:
-      "The Future of Web Development: Trends and Technologies Shaping 2025",
-    summary:
-      "Explore the latest trends in web development including AI-powered development tools, serverless architecture, and progressive web applications that are defining the industry.",
-    image: assets.news3,
-    category: "Web Development",
-  },
-  {
-    date: "15/08/2025",
-    title: "Cybersecurity Best Practices for Modern Applications",
-    summary:
-      "Essential security measures every development team should implement to protect applications from emerging threats and vulnerabilities in today's digital landscape.",
-    image: assets.news4,
-    category: "Cybersecurity",
-  },
-];
 
 const ArticleCard = ({ article }) => (
   <div className="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 w-full h-full flex flex-col">
-    {/* Card Image Container */}
     <div className="relative overflow-hidden">
       <img
         src={article.image}
         alt={article.title}
         className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
       />
-
-      {/* Gradient Overlay on Image */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-      {/* Category Badge */}
       <div className="absolute top-4 left-4">
         <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-lg backdrop-blur-sm">
           {article.category}
@@ -60,27 +17,19 @@ const ArticleCard = ({ article }) => (
       </div>
     </div>
 
-    {/* Card Content */}
     <div className="p-6 flex-1 flex flex-col">
-      {/* Date */}
       <div className="flex items-center gap-2 mb-3">
         <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"></div>
         <span className="text-gray-500 text-sm font-medium">
           {article.date}
         </span>
       </div>
-
-      {/* Title */}
       <h3 className="font-bold text-xl text-gray-900 mb-3 leading-tight group-hover:text-purple-600 transition-colors duration-300 line-clamp-2">
         {article.title}
       </h3>
-
-      {/* Summary */}
       <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
         {article.summary}
       </p>
-
-      {/* Read More Button */}
       <div className="flex items-center justify-between mt-auto">
         <button className="inline-flex items-center gap-2 text-purple-600 font-semibold text-sm hover:text-purple-700 transition-colors duration-300 group/btn">
           Read More
@@ -101,26 +50,19 @@ const ArticleCard = ({ article }) => (
       </div>
     </div>
 
-    {/* Hover Overlay with Full Details */}
+    {/* Hover overlay */}
     <div className="absolute inset-0 bg-gradient-to-br from-purple-900/95 via-purple-800/95 to-blue-900/95 text-white rounded-2xl flex flex-col justify-center p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out backdrop-blur-sm">
-      {/* Category and Read Time */}
       <div className="flex items-center justify-between mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
         <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold">
           {article.category}
         </span>
       </div>
-
-      {/* Animated Title */}
       <h3 className="font-bold text-2xl mb-4 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-200 leading-tight">
         {article.title}
       </h3>
-
-      {/* Summary */}
       <p className="text-white/90 text-base leading-relaxed mb-6 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-300">
         {article.summary}
       </p>
-
-      {/* Action Button */}
       <button className="self-start bg-white text-purple-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-400 flex items-center gap-2">
         Read Full Article
         <svg
@@ -142,9 +84,105 @@ const ArticleCard = ({ article }) => (
 );
 
 export default function ArticleGrid() {
+  const [articles, setArticles] = useState([
+    {
+      date: "27/08/2025",
+      title:
+        "ChatGPT-5: Everything You Need to Know About the Next Generation of AI",
+      summary:
+        "From 80% lower error rates and smarter integrations to longer memory and deeper reasoning, ChatGPT-5 sets a new standard in AI performance. Discover its key features, benchmarks, and business impact.",
+      image: assets.news1,
+      category: "Artificial Intelligence",
+    },
+    {
+      date: "22/08/2025",
+      title:
+        "Monolith to Microservices Migration: Turning Architectural Liabilities into Competitive Strengths",
+      summary:
+        "Learn how to successfully transition from monolithic architecture to microservices and transform your system's scalability, maintainability, and team productivity.",
+      image: assets.news2,
+      category: "Software Architecture",
+    },
+  ]);
+
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  // Function to fetch blogs from backend API
+  // Paste this inside your ArticleGrid component (replace the old handleLoadMore)
+  const handleLoadMore = async () => {
+    setLoading(true);
+    setErrorMsg("");
+
+    const url = "https://capyngen-backendv2-1.onrender.com/api/blogs";
+    console.log("[LoadMore] Fetching blogs from:", url);
+
+    try {
+      const response = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+
+      console.log("[LoadMore] Status:", response.status);
+
+      // If server response not ok (400/500)
+      if (!response.ok) {
+        setErrorMsg(`Server error: ${response.status}`);
+        console.error("[LoadMore] Error response:", response);
+        setLoading(false);
+        return;
+      }
+
+      // Try parsing JSON
+      const data = await response.json();
+      console.log("[LoadMore] Raw data from API:", data);
+
+      // Handle cases where backend returns { blogs: [...] } or just [...]
+      const blogs = data.blogs || data.data || data;
+      if (!Array.isArray(blogs) || blogs.length === 0) {
+        setErrorMsg("No more articles found.");
+        setLoading(false);
+        return;
+      }
+
+      // Convert backend data to frontend format
+      const newArticles = blogs.map((blog) => ({
+        title: blog.title || "Untitled Blog",
+        summary:
+          blog.description ||
+          (blog.content
+            ? blog.content.slice(0, 120) + "..."
+            : "No description"),
+        image:
+          blog.image ||
+          "https://via.placeholder.com/400x300?text=No+Image+Available",
+        date: blog.createdAt
+          ? new Date(blog.createdAt).toLocaleDateString("en-GB")
+          : "Unknown Date",
+        category: blog.tags?.[0] || "General",
+      }));
+
+      // Merge new blogs with existing ones
+      setArticles((prev) => [...prev, ...newArticles]);
+
+      console.log(
+        "[LoadMore] Successfully added",
+        newArticles.length,
+        "articles."
+      );
+    } catch (error) {
+      console.error("[LoadMore] Fetch error:", error);
+      setErrorMsg(
+        "Something went wrong while loading articles. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-      {/* Header Section */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 px-4 sm:px-6 lg:px-8 relative">
+      {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
           Stay Updated with Our
@@ -175,24 +213,34 @@ export default function ArticleGrid() {
         </div>
       </div>
 
-      {/* Load More Section */}
+      {/* Load More Button */}
       <div className="max-w-7xl mx-auto text-center mt-16">
-        <button className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3 mx-auto">
-          Load More Articles
-          <svg
-            className="w-5 h-5 transform group-hover:rotate-90 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 4v16m8-8H4"
-            />
-          </svg>
+        <button
+          onClick={handleLoadMore}
+          disabled={loading}
+          className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3 mx-auto disabled:opacity-50"
+        >
+          {loading ? "Loading..." : "Load More Articles"}
+          {!loading && (
+            <svg
+              className="w-5 h-5 transform group-hover:rotate-90 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+          )}
         </button>
+
+        {errorMsg && (
+          <p className="mt-4 text-red-600 font-medium">{errorMsg}</p>
+        )}
       </div>
 
       {/* Decorative Elements */}
@@ -201,7 +249,6 @@ export default function ArticleGrid() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
       </div>
 
-      {/* Custom CSS for animations */}
       <style jsx>{`
         @keyframes fadeInUp {
           from {
