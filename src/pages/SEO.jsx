@@ -18,6 +18,7 @@ import GetStarted from "../components/GetStarted";
 import SeoStatsSection from "../components/SeoStatsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const SEO = () => {
   const faqItems = [
@@ -284,8 +285,24 @@ const SEO = () => {
           textSize="text-md"
           height="h-72"
         />
+        <FullSizeImageSection
+          backgroundImage={assets.seoFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <SeoStatsSection />
         <HowWeWork heading="SEO Process" desc="" steps={steps} />
+        <FullSizeImageSection
+          backgroundImage={assets.seoFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <TopRatedCompany
           title="Why Choose Capyngen as Your SEO Partner"
           description={[
@@ -334,7 +351,7 @@ const SEO = () => {
           image={assets.seo7}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
-        />{" "}
+        />
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"

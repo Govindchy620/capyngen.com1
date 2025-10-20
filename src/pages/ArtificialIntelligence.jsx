@@ -29,6 +29,7 @@ import {
 } from "react-icons/fa";
 import Banner9 from "../components/Banner9";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const ArtificialIntelligence = () => {
   const faqItems = [
@@ -353,11 +354,27 @@ const ArtificialIntelligence = () => {
           textSize="text-md"
           height=""
         />
+        <FullSizeImageSection
+          backgroundImage={assets.aiFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <HowWeWork heading="How Our AI Process Works" steps={steps} />
         <TechnologiesCarousel
           title="Artificial Intelligence Technologies We Use"
           description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
           technologies={technologies}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.aiFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <TopRatedCompany
           title="Why Choose Capyngen for AI Services"

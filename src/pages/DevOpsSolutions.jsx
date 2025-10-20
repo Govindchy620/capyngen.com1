@@ -23,6 +23,7 @@ import Banner5 from "../components/Banner5";
 import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const DevOpsSolutions = () => {
   const faqItems = [
@@ -296,6 +297,14 @@ const DevOpsSolutions = () => {
           isHidden={true}
           background={assets.patternBg1}
           imageHeight="aspect-[1/1]"
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.devOpsFullSize}
+          title="Accelerate your delivery pipeline"
+          description="By using our DevOps services, companies will experience seamless business operations and will be able to develop projects at a faster pace."
+          buttonText="Optimize Now"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <TopRatedCompany
           title="Importance of DevOps in Modern Software Development"

@@ -31,9 +31,9 @@ const Banner5 = ({
           <h1 className="mb-4 font-extrabold leading-tight text-white text-3xl sm:text-3xl md:text-5xl">
             {title}
           </h1>
-          <p className="max-w-3xl mx-auto mb-6 font-light text-gray-300 lg:mb-8 text-sm sm:text-base md:text-lg">
+          <div className="max-w-3xl mx-auto mb-6 font-light text-gray-300 lg:mb-8 text-sm sm:text-base md:text-lg">
             {description}
-          </p>
+          </div>
 
           {/* Buttons */}
           {primaryBtnText && (

@@ -32,6 +32,7 @@ import {
 import IndustryServices from "../components/IndustryServices";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const CrmManagementSoftware = () => {
   const faqItems = [
@@ -328,6 +329,14 @@ const CrmManagementSoftware = () => {
           imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
         />
+        <FullSizeImageSection
+          backgroundImage={assets.crmSolFullSize}
+          title="Strengthen relationships, simplify management"
+          description="Our CRM systems are tailored to the needs of your business and designed to enhance connectivity and productivity."
+          buttonText="Try CRM Demo"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <CardsSection
           heading="Advantages of Implementing CRM Management Solutions"
           subheading=""
@@ -358,6 +367,14 @@ const CrmManagementSoftware = () => {
           hoverBg="hover:bg-blue-800 hover:scale-98"
           textColor="text-white"
           hoverTextColor=""
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.crmSolFullSize2}
+          title="Manage smarter, grow faster"
+          description="Use efficient methods to handle business activities easily, and at the same time increase overall performance, with the help of resourceful CRM instruments."
+          buttonText="Start Managing"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <CardsSectionImage
           heading="How to Choose the Best CRM Management Solution for Your Business"

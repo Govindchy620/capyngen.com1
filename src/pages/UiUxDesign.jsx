@@ -16,6 +16,7 @@ import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
 import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const UiUxDesign = () => {
   const faqItems = [
@@ -268,6 +269,14 @@ const UiUxDesign = () => {
           imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
         />
+        <FullSizeImageSection
+          backgroundImage={assets.uiUxFullSize}
+          title="Design experiences that captivate users"
+          description="We build user-friendly interfaces that unite emotion and functionality."
+          buttonText="View Designs"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <CardsSectionImage
           heading="UI/UX Design Services We Offer"
           subheading=""
@@ -293,6 +302,14 @@ const UiUxDesign = () => {
           cardText="text-white"
           cardDescText="text-white"
           services={servicesData}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.uiUxFullSize2}
+          title="Make every interaction meaningful"
+          description="Immerse users in aesthetically pleasing, and easy-to-navigate digital designs that significantly increase their interaction time."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <TopRatedCompany
           title="Why to Choose Capyngen for UI/UX Design"

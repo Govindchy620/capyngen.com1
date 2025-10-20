@@ -713,6 +713,46 @@ import companyOverview2 from "./companyOverview2.png";
 import companyOverview3 from "./companyOverview3.png";
 import companyOverview4 from "./companyOverview4.png";
 import news from "./news.png";
+import webDevFullSize from "./webDevFullSize.png";
+import webDevFullSize2 from "./webDevFullSize2.png";
+import appDevFullSize from "./appDevFullSize.png";
+import appDevFullSize2 from "./appDevFullSize2.png";
+import customAiFullSize from "./customAiFullSize.png";
+import customAiFullSize2 from "./customAiFullSize2.png";
+import eCommSolFullsize from "./eCommSolFullsize.png";
+import blockchainDevFullSize from "./blockchainDevFullSize.png";
+import blockchainDevFullSize2 from "./blockchainDevFullSize2.png";
+import devOpsFullSize from "./devOpsFullSize.png";
+import applicationSolFullSize from "./applicationSolFullSize.png";
+import crmSolFullSize from "./crmSolFullSize.png";
+import crmSolFullSize2 from "./crmSolFullSize2.png";
+import uiUxFullSize from "./uiUxFullSize.png";
+import uiUxFullSize2 from "./uiUxFullSize2.png";
+import webDesignFullSize from "./webDesignFullSize.png";
+import webDesignFullSize2 from "./webDesignFullSize2.png";
+import brandingFullSize from "./brandingFullSize.png";
+import brandingFullSize2 from "./brandingFullSize2.png";
+import eCommDesignFullSize from "./eCommDesignFullSize.png";
+import eCommDesignFullSize2 from "./eCommDesignFullSize2.png";
+import cmsFullSize from "./cmsFullSize.png";
+import digitalMarketingFullSize from "./digitalMarketingFullSize.png";
+import digitalMarketingFullSize2 from "./digitalMarketingFullSize2.png";
+import seoFullSize from "./seoFullSize.png";
+import seoFullSize2 from "./seoFullSize2.png";
+import smmFullSize from "./smmFullSize.png";
+import smmFullSize2 from "./smmFullSize2.png";
+import ppcFullSize from "./ppcFullSize.png";
+import ppcFullSize2 from "./ppcFullSize2.png";
+import aiFullSize from "./aiFullSize.png";
+import aiFullSize2 from "./aiFullSize2.png";
+import cybersecurityFullSize from "./cybersecurityFullSize.png";
+import cybersecurityFullSize2 from "./cybersecurityFullSize2.png";
+import networkSolFullSize from "./networkSolFullSize.png";
+import enterpriseSolFullSize from "./enterpriseSolFullSize.png";
+import dataAnalyticsFullSize from "./dataAnalyticsFullSize.png";
+import dataAnalyticsFullSize2 from "./dataAnalyticsFullSize2.png";
+import consultingFullSize from "./consultingFullSize.png";
+import consultingFullSize2 from "./consultingFullSize2.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1430,6 +1470,46 @@ export const assets = {
   companyOverview3,
   companyOverview4,
   news,
+  webDevFullSize,
+  webDevFullSize2,
+  appDevFullSize,
+  appDevFullSize2,
+  customAiFullSize,
+  customAiFullSize2,
+  eCommSolFullsize,
+  blockchainDevFullSize,
+  blockchainDevFullSize2,
+  devOpsFullSize,
+  applicationSolFullSize,
+  crmSolFullSize,
+  crmSolFullSize2,
+  uiUxFullSize,
+  uiUxFullSize2,
+  webDesignFullSize,
+  webDesignFullSize2,
+  brandingFullSize,
+  brandingFullSize2,
+  eCommDesignFullSize,
+  eCommDesignFullSize2,
+  cmsFullSize,
+  digitalMarketingFullSize,
+  digitalMarketingFullSize2,
+  seoFullSize,
+  seoFullSize2,
+  smmFullSize,
+  smmFullSize2,
+  ppcFullSize,
+  ppcFullSize2,
+  aiFullSize,
+  aiFullSize2,
+  cybersecurityFullSize,
+  cybersecurityFullSize2,
+  networkSolFullSize,
+  enterpriseSolFullSize,
+  dataAnalyticsFullSize,
+  dataAnalyticsFullSize2,
+  consultingFullSize,
+  consultingFullSize2,
 };
 
 export const navItems = [

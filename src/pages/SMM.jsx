@@ -25,6 +25,7 @@ import {
 import Banner15 from "../components/Banner15";
 import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const SMM = () => {
   const faqItems = [
@@ -331,6 +332,14 @@ const SMM = () => {
         />
       </Helmet>
       <Banner15 />
+      <FullSizeImageSection
+        backgroundImage={assets.smmFullSize}
+        title="Build your dream project with Capyngen"
+        description="We help transform your ideas into powerful digital solutions with our expert web development services."
+        buttonText="CONTACT US"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
+      />
       <div className="pt-10 bg-black"></div>
       <TopRatedCompany
         title="Importance of Social Media Marketing"
@@ -454,6 +463,14 @@ const SMM = () => {
         heading="Our Social Media Marketing Process"
         desc="We follow a tried and tested, step-by-step approach to bring about the success of our campaigns:"
         steps={steps}
+      />
+      <FullSizeImageSection
+        backgroundImage={assets.smmFullSize2}
+        title="Build your dream project with Capyngen"
+        description="We help transform your ideas into powerful digital solutions with our expert web development services."
+        buttonText="CONTACT US"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
       />
       <TopRatedCompany
         title=""

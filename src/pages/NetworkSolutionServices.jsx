@@ -25,6 +25,7 @@ import {
 } from "react-icons/fa";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const NetworkSolutionServices = () => {
   const faqItems = [
@@ -328,6 +329,14 @@ const NetworkSolutionServices = () => {
           height="h-78"
           headColor="text-white"
           services={cardsSectionSliderData1}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.networkSolFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <HowWeWork heading="Our Process" desc="" steps={steps} />
         <GetStarted

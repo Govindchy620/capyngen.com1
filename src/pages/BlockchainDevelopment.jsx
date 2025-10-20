@@ -24,6 +24,7 @@ import {
   FaUsers as FaUsersIcon,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const BlockchainDevelopment = () => {
   const faqItems = [
@@ -396,6 +397,14 @@ const BlockchainDevelopment = () => {
         isHidden={true}
         imageHeight="aspect-[1/1]"
       />
+      <FullSizeImageSection
+        backgroundImage={assets.blockchainDevFullSize}
+        title="Secure your future with blockchain innovation"
+        description="By using our services you will gain from an open and decentralized blockchain system that fits your business needs perfectly."
+        buttonText="Start Building"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
+      />
       <TopRatedCompany
         title="Importance of Blockchain in Modern Businesses"
         description={[
@@ -456,6 +465,14 @@ const BlockchainDevelopment = () => {
         desc="Blockchain solutions by Capyngen deliver actionable business impact such as:"
         benefits={benefitsSection1}
         image={assets.blockchainApplications}
+      />
+      <FullSizeImageSection
+        backgroundImage={assets.blockchainDevFullSize2}
+        title="Power your ideas with blockchain technology"
+        description="We facilitate the innovation process from smart contracts to crypto currency platforms."
+        buttonText="CONTACT US"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
       />
       <HowWeWork
         heading="How Blockchain Development Works"

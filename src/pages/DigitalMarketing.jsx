@@ -24,6 +24,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const DigitalMarketing = () => {
   const faqItems = [
@@ -444,6 +445,14 @@ const DigitalMarketing = () => {
           hoverTextColor=""
           height="h-72"
         />
+        <FullSizeImageSection
+          backgroundImage={assets.digitalMarketingFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <BenefitsSection
           heading="Our Digital Marketing Services"
           desc="We are delighted to offer digital solutions that are ideally comprehensive for achieving myriad business objectives online."
@@ -466,6 +475,14 @@ const DigitalMarketing = () => {
           heading="Our Digital Marketing Process"
           desc="We operate on a thought-out and data-driven approach. Our practice guarantees the biggest growth results for each campaign."
           steps={steps}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.digitalMarketingFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <WhyChoose
           heading="What makes us the perfect partner for your digital marketing?"

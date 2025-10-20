@@ -25,6 +25,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const WebDevelopment = () => {
   const faqItems = [
@@ -550,6 +551,14 @@ const WebDevelopment = () => {
           textColor="text-white"
           textSize="text-md"
         />
+        <FullSizeImageSection
+          backgroundImage={assets.webDevFullSize}
+          title="Transform your online presence with Capyngen"
+          description="We are committed to provide top-notch web development services that attract and retain customers."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <CardsSectionImage
           heading="Our Web Development Features"
           services={cardsSectionImageData1}
@@ -601,6 +610,14 @@ const WebDevelopment = () => {
           backgroundVideo={assets.backgroundVideo}
         />
         <HowWeWork heading="Our Development Process" steps={steps} />
+        <FullSizeImageSection
+          backgroundImage={assets.webDevFullSize2}
+          title="Create powerful websites that perform"
+          description="Our main focus is on your business; thus, we make sure your website is responsive, fast, and scalable."
+          buttonText="Get Started"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <TechStack
           heading="Transform Your Web Development and Consulting with Our Expert Tech Stack"
           categories={techStack}

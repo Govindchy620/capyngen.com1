@@ -23,6 +23,7 @@ import {
   FaPuzzlePiece,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const ApplicationSolutions = () => {
   const faqItems = [
@@ -395,6 +396,14 @@ const ApplicationSolutions = () => {
           image={assets.applicationSolution17}
           isHidden={true}
           background={assets.patternBg1}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.applicationSolFullSize}
+          title="Smart applications for modern businesses"
+          description="We are passionate about creating software that is scalable and efficient, and that meets the needs of businesses of the 21st century."
+          buttonText="Discover More"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <HowWeWork
           heading="Our Application Development Process"

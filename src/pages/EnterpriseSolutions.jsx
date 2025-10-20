@@ -25,6 +25,7 @@ import {
 } from "react-icons/fa";
 import CardsSection from "../components/CardsSection";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const EnterpriseSolutions = () => {
   const faqItems = [
@@ -345,6 +346,14 @@ const EnterpriseSolutions = () => {
         heading="Our Enterprise Solutions Process"
         desc=""
         steps={steps}
+      />
+      <FullSizeImageSection
+        backgroundImage={assets.enterpriseSolFullSize}
+        title="Build your dream project with Capyngen"
+        description="We help transform your ideas into powerful digital solutions with our expert web development services."
+        buttonText="CONTACT US"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
       />
       <CardsSection
         heading="Key Features of Our Enterprise Solutions"

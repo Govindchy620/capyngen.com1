@@ -49,6 +49,7 @@ import AppTypesSection from "../components/AppTypesSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const Consulting = () => {
   const faqItems = [
@@ -325,6 +326,14 @@ const Consulting = () => {
           ]}
           backgroundVideo={assets.backgroundVideo}
         />
+        <FullSizeImageSection
+          backgroundImage={assets.consultingFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <CardsSection
           heading="Why should you choose Capyngen Consulting?"
           subheading=""
@@ -374,6 +383,14 @@ const Consulting = () => {
           heading="How We Deliver Results - Our Consulting Approach"
           desc=""
           steps={steps}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.consultingFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <GetStarted
           reverse={false}

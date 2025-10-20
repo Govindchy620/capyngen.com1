@@ -19,6 +19,7 @@ import {
 import CardsSection from "../components/CardsSection";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const WebSiteDesign = () => {
   const faqItems = [
@@ -478,6 +479,14 @@ const WebSiteDesign = () => {
           desc="At Capyngen, we combine creativity, strategy, and technology to deliver websites that really work. Our organized process guarantees every project to be orderly, open, and results-driven:"
           steps={steps}
         />
+        <FullSizeImageSection
+          backgroundImage={assets.webDesignFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <CardsSection
           heading="Why Capyngen is the Best Website Design Company"
           subheading="Capyngen shines out of the pack by creatively combining the art, the science, and the strategy to create websites that merely are not visually striking — but also produce tangible outcomes. This is why we are the first preference of decision-makers in startups, SMEs, and enterprises:"
@@ -509,6 +518,14 @@ const WebSiteDesign = () => {
           benefits={benefitsData}
           image={assets.webDesign10}
           footerNote=""
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.webDesignFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <CardsSectionSlider
           heading="Industries We Serve"

@@ -24,6 +24,7 @@ import {
   FaPuzzlePiece,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const BrandingIdentityDesign = () => {
   const faqItems = [
@@ -387,6 +388,14 @@ const BrandingIdentityDesign = () => {
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[3/4]"
         />
+        <FullSizeImageSection
+          backgroundImage={assets.brandingFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <CardsSection
           heading="What makes professional branding design services stand out?"
           subheading=""
@@ -417,6 +426,14 @@ const BrandingIdentityDesign = () => {
           heading="Our Branding Design Process"
           desc=""
           steps={steps}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.brandingFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <CardsSectionImage
           heading="Branding Design Trends for 2025"

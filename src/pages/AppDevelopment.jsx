@@ -23,6 +23,7 @@ import Banner13 from "../components/Banner13";
 import TopRatedCompany from "../components/TopRatedCompany";
 import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const AppDevelopment = () => {
   const faqItems = [
@@ -419,7 +420,14 @@ const AppDevelopment = () => {
         isHidden={true}
         background={assets.patternBg1}
       />
-
+      <FullSizeImageSection
+        backgroundImage={assets.appDevFullSize}
+        title="Build apps that users love"
+        description="Our highly-skilled team of designers and developers can create intuitive and fast mobile applications for iOS and Android platforms."
+        buttonText="Build My App"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
+      />
       <CardsSection
         heading="Our App Development Services"
         services={cardsSectionData1}
@@ -475,6 +483,14 @@ const AppDevelopment = () => {
 
       <HowWeWork heading="Our App Development Process" steps={steps} />
 
+      <FullSizeImageSection
+        backgroundImage={assets.appDevFullSize2}
+        title="Turn your app idea into reality"
+        description="We are the team that transforms your mobile vision into a success, from the very first mock-up to the final product deployment."
+        buttonText="CONTACT US"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
+      />
       <CardsSection
         heading="Benefits of Our App Development Services"
         services={cardsSectionData2}

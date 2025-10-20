@@ -18,6 +18,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import Banner3 from "../components/Banner3";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const CustomAiSolution = () => {
   const faqItems = [
@@ -368,6 +369,14 @@ const CustomAiSolution = () => {
           textSize="text-md"
           height="h-72"
         />
+        <FullSizeImageSection
+          backgroundImage={assets.customAiFullSize}
+          title="Empower your business with AI"
+          description="Use artificial intelligence as a business tool to simplify, speed up, and revolutionize your company."
+          buttonText="Explore AI Solutions"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <CardsSectionImage
           heading="Our Custom AI Services Tailored for Your Needs"
           services={cardsSectionImageData1}
@@ -389,6 +398,14 @@ const CustomAiSolution = () => {
           backgroundVideo={assets.backgroundVideo}
         />
         <HowWeWork heading="How We Develop Custom AI Solutions" steps={steps} />
+        <FullSizeImageSection
+          backgroundImage={assets.customAiFullSize2}
+          title="Build intelligent solutions for smarter growth"
+          description="Our team builds bespoke AI models that help the client to use less resources and make better decisions."
+          buttonText="Build With Us"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <TechnologiesCarousel
           title="Custom AI Solution Technologies We Use"
           description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."

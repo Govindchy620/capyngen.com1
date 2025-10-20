@@ -37,6 +37,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const ECommerceSolution = () => {
   const faqItems = [
@@ -606,6 +607,14 @@ const ECommerceSolution = () => {
           heading="Technologies Capyngen Uses for Ecommerce Mobile Apps"
           subheading=""
           categories={techStack}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.eCommSolFullsize}
+          title="Build your online store with confidence"
+          description="Our company is the perfect partner for launching a new e-commerce platform which is user-friendly, safe, and scalable."
+          buttonText="Launch My Store"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <HowWeWork
           heading="E-Commerce Solutions Process"

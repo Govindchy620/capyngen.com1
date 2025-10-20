@@ -22,6 +22,7 @@ import {
 } from "react-icons/fa";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const PPC = () => {
   const faqItems = [
@@ -321,6 +322,14 @@ const PPC = () => {
           background={assets.patternBg1}
           isHidden="hidden"
         />
+        <FullSizeImageSection
+          backgroundImage={assets.ppcFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <TopRatedCompany
           title="Why Choose Pay-Per-Click Marketing?"
           reverse={true}
@@ -451,6 +460,14 @@ const PPC = () => {
             </>,
           ]}
           image={assets.ppc5}
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.ppcFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <WhyChoose
           heading="Why Choose  Us"

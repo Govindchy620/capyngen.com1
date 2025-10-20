@@ -36,6 +36,7 @@ import {
 } from "react-icons/fa";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const EcommerceDesign = () => {
   const faqItems = [
@@ -296,6 +297,14 @@ const EcommerceDesign = () => {
         ]}
         image={assets.eCommDesign3}
       />
+      <FullSizeImageSection
+        backgroundImage={assets.eCommDesignFullSize}
+        title="Build your dream project with Capyngen"
+        description="We help transform your ideas into powerful digital solutions with our expert web development services."
+        buttonText="CONTACT US"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
+      />
       <CardsSectionImage
         heading="Designing E-commerce Solutions That Drive Sales"
         subheading="Achieve major success with e-commerce design services that are both accurate and creative. The team is one of the top e-commerce website designing companies, designs, the startups' and enterprise businesses' scalable, and aesthetically pleasing platforms, thereby attracting both engagement, and revenue growth."
@@ -322,7 +331,14 @@ const EcommerceDesign = () => {
         intro="Custom e-commerce website design solutions are accompanied with market validation, user testing, scalable architecture, launch strategy, and customer feedback integration. Make your online store or app available for testing by investors and refine it so as to be a high-performing conversion-driven e-commerce platform."
         features={features}
       />
-
+      <FullSizeImageSection
+        backgroundImage={assets.eCommDesignFullSize2}
+        title="Build your dream project with Capyngen"
+        description="We help transform your ideas into powerful digital solutions with our expert web development services."
+        buttonText="CONTACT US"
+        buttonLink="/contact-us"
+        overlayColor="bg-black/40"
+      />
       <BenefitsSection
         heading="Flexible engagement models"
         desc={[

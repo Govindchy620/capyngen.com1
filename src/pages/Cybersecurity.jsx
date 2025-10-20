@@ -17,6 +17,7 @@ import IndustryServices from "../components/IndustryServices";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
+import FullSizeImageSection from "../components/FullSizeImageSection";
 
 const Cybersecurity = () => {
   const faqItems = [
@@ -316,6 +317,14 @@ const Cybersecurity = () => {
           isHidden={true}
           background={assets.patternBg1}
         />
+        <FullSizeImageSection
+          backgroundImage={assets.cybersecurityFullSize}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
+        />
         <IndustryServices
           heading="Cybersecurity Services We Offer"
           subheading="We provide a range of cybersecurity solutions that serve to keep businesses safe from malicious threats and ensure their safe progression in the market."
@@ -399,6 +408,14 @@ const Cybersecurity = () => {
           background={assets.patternBg1}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
+        />
+        <FullSizeImageSection
+          backgroundImage={assets.cybersecurityFullSize2}
+          title="Build your dream project with Capyngen"
+          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          buttonText="CONTACT US"
+          buttonLink="/contact-us"
+          overlayColor="bg-black/40"
         />
         <CardsSectionSlider
           heading="Industries We Serve"
