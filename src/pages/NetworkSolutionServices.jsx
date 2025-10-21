@@ -332,9 +332,9 @@ const NetworkSolutionServices = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.networkSolFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Connect with confidence"
+          description="Our team is committed to delivering quality networking solutions that are not only fast and reliable but also secure to enterprises."
+          buttonText="Connect With Us"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />

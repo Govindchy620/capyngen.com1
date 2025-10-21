@@ -315,9 +315,9 @@ const DataAnalytics = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.dataAnalyticsFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Turn data into business insights"
+          description="With the support of powerful analytics solutions, we enable the business to make decisions based on data."
+          buttonText="View Insights"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -377,7 +377,7 @@ const DataAnalytics = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.dataAnalyticsFullSize2}
-          title="Build your dream project with Capyngen"
+          title="Discover opportunities hidden in your data"
           description="We help transform your ideas into powerful digital solutions with our expert web development services."
           buttonText="CONTACT US"
           buttonLink="/contact-us"

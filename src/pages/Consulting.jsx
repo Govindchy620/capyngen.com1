@@ -328,9 +328,9 @@ const Consulting = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.consultingFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Strategic guidance for business success"
+          description="We bring in consulting expertise to identify issues, devise solutions, and facilitate your growth."
+          buttonText="Book Consultation"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -386,8 +386,8 @@ const Consulting = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.consultingFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Your vision, our expertise"
+          description="Collaborate with us to achieve digital transformation and strategic initiatives."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"

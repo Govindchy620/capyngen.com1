@@ -349,9 +349,9 @@ const EnterpriseSolutions = () => {
       />
       <FullSizeImageSection
         backgroundImage={assets.enterpriseSolFullSize}
-        title="Build your dream project with Capyngen"
-        description="We help transform your ideas into powerful digital solutions with our expert web development services."
-        buttonText="CONTACT US"
+        title="Empower your enterprise with innovation"
+        description="We are delivering solutions that are not only scalable but are also designed to address complex business problems."
+        buttonText="Explore Solutions"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"
       />

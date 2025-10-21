@@ -319,9 +319,9 @@ const Cybersecurity = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.cybersecurityFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Protect what matters most"
+          description="Through us, your data, systems, and good name will remain safe from any kind of digital threats."
+          buttonText="Secure My Business"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -411,8 +411,8 @@ const Cybersecurity = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.cybersecurityFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Build trust through security"
+          description="Our team of cybersecurity professionals is always ready to protect your business and ensure its safety around the clock."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
