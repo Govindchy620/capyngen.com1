@@ -287,9 +287,9 @@ const SEO = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.seoFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Rank higher, reach further"
+          description="We do everything that search engines like with your website to bring more visibility, visitors, and sales."
+          buttonText="Improve Ranking"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -297,8 +297,8 @@ const SEO = () => {
         <HowWeWork heading="SEO Process" desc="" steps={steps} />
         <FullSizeImageSection
           backgroundImage={assets.seoFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Let your brand be found first"
+          description="Enhance your presence in the search results with effective and tested SEO tactics."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"

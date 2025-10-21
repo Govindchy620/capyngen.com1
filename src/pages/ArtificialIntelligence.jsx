@@ -356,9 +356,9 @@ const ArtificialIntelligence = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.aiFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Bring intelligence to your business"
+          description="Our efforts are focused on creating AI-powered business solutions that bring automation and improvement to your operations."
+          buttonText="Explore AI Tools"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -370,8 +370,8 @@ const ArtificialIntelligence = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.aiFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Smarter decisions powered by AI"
+          description="We offer a wide range of tools such as chatbots, and analytics, that are designed to become more intelligent and able to handle more complex tasks as time goes by."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"

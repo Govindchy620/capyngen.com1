@@ -274,9 +274,9 @@ const CMSDesign = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.cmsFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Simplify content management"
+          description="Our designs for CMS are user-friendly, adaptable, and can be enlarged without any problem."
+          buttonText="Manage Content"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />

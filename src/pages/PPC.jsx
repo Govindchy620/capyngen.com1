@@ -324,9 +324,9 @@ const PPC = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.ppcFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Maximize ROI with smart PPC campaigns"
+          description="By running data-informed ads, we are able to turn the visits of users into the flow of money for the clients."
+          buttonText="Start Campaign"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -463,8 +463,8 @@ const PPC = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.ppcFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Get instant visibility online"
+          description="The objective of the targeted pay-per-click advertising method is to drive traffic and leads that are interested in the product or service being promoted."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"

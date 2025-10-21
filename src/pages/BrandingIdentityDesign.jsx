@@ -390,9 +390,9 @@ const BrandingIdentityDesign = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.brandingFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Build a brand that stands out"
+          description="We develop distinctive brand identities that have the power to make deep and lasting impressions."
+          buttonText="Create My Brand"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -429,8 +429,8 @@ const BrandingIdentityDesign = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.brandingFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Define your visual story"
+          description="Working from logo to design systems, we build your brand’s presence in the digital world."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"

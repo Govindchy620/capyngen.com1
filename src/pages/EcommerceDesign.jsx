@@ -299,9 +299,9 @@ const EcommerceDesign = () => {
       />
       <FullSizeImageSection
         backgroundImage={assets.eCommDesignFullSize}
-        title="Build your dream project with Capyngen"
-        description="We help transform your ideas into powerful digital solutions with our expert web development services."
-        buttonText="CONTACT US"
+        title="Design that converts visitors into customers"
+        description="We design engaging, conversion-focused online shopping experiences that delight customers."
+        buttonText="Design My Store"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"
       />
@@ -333,8 +333,8 @@ const EcommerceDesign = () => {
       />
       <FullSizeImageSection
         backgroundImage={assets.eCommDesignFullSize2}
-        title="Build your dream project with Capyngen"
-        description="We help transform your ideas into powerful digital solutions with our expert web development services."
+        title="Turn your e-commerce vision into reality"
+        description="The designs for stores that are easy to use, responsive, and visually attractive."
         buttonText="CONTACT US"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"

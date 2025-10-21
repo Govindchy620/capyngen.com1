@@ -334,9 +334,9 @@ const SMM = () => {
       <Banner15 />
       <FullSizeImageSection
         backgroundImage={assets.smmFullSize}
-        title="Build your dream project with Capyngen"
-        description="We help transform your ideas into powerful digital solutions with our expert web development services."
-        buttonText="CONTACT US"
+        title="Connect, engage, and grow online"
+        description="We are managing your social media presence to create communities that are fond of your brand."
+        buttonText="Grow My Audience"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"
       />
@@ -466,8 +466,8 @@ const SMM = () => {
       />
       <FullSizeImageSection
         backgroundImage={assets.smmFullSize2}
-        title="Build your dream project with Capyngen"
-        description="We help transform your ideas into powerful digital solutions with our expert web development services."
+        title="Make your brand go viral"
+        description="One of the most effective ways to increase brand awareness is through a creative campaign that attracts new followers and retains the existing ones."
         buttonText="CONTACT US"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"

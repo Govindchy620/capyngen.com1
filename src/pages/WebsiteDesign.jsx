@@ -481,9 +481,9 @@ const WebSiteDesign = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.webDesignFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Bring your brand to life online"
+          description="Creating online environments that attract, engage, and uplift the users."
+          buttonText="Design My Website"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -521,8 +521,8 @@ const WebSiteDesign = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.webDesignFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Beautiful websites that tell your story"
+          description="We create responsive, innovative, and impactful websites for any brand."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"

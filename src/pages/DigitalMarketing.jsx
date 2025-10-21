@@ -447,9 +447,9 @@ const DigitalMarketing = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.digitalMarketingFullSize}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
-          buttonText="CONTACT US"
+          title="Grow your brand in the digital world"
+          description="We partner with you to discover, engage, and convert customers through any channel."
+          buttonText="Boost My Business"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
@@ -478,8 +478,8 @@ const DigitalMarketing = () => {
         />
         <FullSizeImageSection
           backgroundImage={assets.digitalMarketingFullSize2}
-          title="Build your dream project with Capyngen"
-          description="We help transform your ideas into powerful digital solutions with our expert web development services."
+          title="Turn clicks into customers"
+          description="To achieve measurable growth, our marketing experts develop crisp, data-driven, strategies."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
