@@ -1,34 +1,55 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const JobOpeningsTable = () => {
+  const [jobs, setJobs] = useState([]);
   const [expandedRow, setExpandedRow] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const jobData = [
-    {
-      title: "Frontend Developer",
-      department: "Engineering",
-      location: "Remote",
-      jobType: "Full-time",
-      description:
-        "Develop modern web applications using React.js, ensuring high performance and responsiveness. Collaborate with backend developers and designers to create seamless user experiences.",
-      requirements:
-        "2+ years experience in React.js, proficiency in JavaScript (ES6+), strong understanding of REST APIs, Git, and responsive design principles.",
-    },
-    {
-      title: "Backend Developer",
-      department: "Engineering",
-      location: "Bangalore, India",
-      jobType: "Full-time",
-      description:
-        "Build and maintain scalable backend systems with Node.js and Express. Design efficient APIs and ensure robust server-side performance.",
-      requirements:
-        "3+ years experience in Node.js, familiarity with MongoDB, and experience deploying cloud-based applications.",
-    },
-  ];
+  // ✅ Your existing deployed backend URL
+  const API_URL = "https://capyngen-backendv2-1.onrender.com/api/careers";
+
+  // ✅ Fetch jobs from backend
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const res = await fetch(API_URL);
+        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+        const data = await res.json();
+
+        // Your backend returns: { ok: true, careers: [...] }
+        if (data.ok && Array.isArray(data.careers)) {
+          setJobs(data.careers);
+        } else {
+          setError("Unexpected API response format");
+        }
+      } catch (err) {
+        console.error("Error fetching careers:", err);
+        setError("Failed to load job data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
 
   const toggleExpand = (index) => {
     setExpandedRow(expandedRow === index ? null : index);
   };
+
+  // ✅ Loading and error messages
+  if (loading)
+    return (
+      <div className="text-center text-gray-400 py-10 text-lg">
+        Loading job openings...
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="text-center text-red-500 py-10 text-lg">{error}</div>
+    );
 
   return (
     <section className="bg-black py-16 px-4 sm:px-8 lg:px-12 min-h-screen">
@@ -38,7 +59,7 @@ const JobOpeningsTable = () => {
           Current Job Openings
         </h2>
 
-        {/* Table Container */}
+        {/* Table */}
         <div className="overflow-x-auto bg-white rounded-2xl shadow-xl">
           <table className="min-w-full border-collapse">
             <thead className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
@@ -62,9 +83,19 @@ const JobOpeningsTable = () => {
             </thead>
 
             <tbody className="divide-y divide-gray-200 text-gray-800">
-              {jobData.map((job, index) => (
-                <React.Fragment key={index}>
-                  {/* Main Row */}
+              {jobs.length === 0 && (
+                <tr>
+                  <td
+                    colSpan="5"
+                    className="text-center py-8 text-gray-500 text-lg"
+                  >
+                    No job openings available currently.
+                  </td>
+                </tr>
+              )}
+
+              {jobs.map((job, index) => (
+                <React.Fragment key={job._id || index}>
                   <tr className="hover:bg-blue-50 transition-colors duration-200">
                     <td className="py-4 px-4 font-semibold text-center text-gray-900">
                       {job.title}
@@ -84,7 +115,7 @@ const JobOpeningsTable = () => {
                     </td>
                   </tr>
 
-                  {/* Animated Expandable Section */}
+                  {/* Expanded Details */}
                   <tr>
                     <td colSpan="5" className="p-0">
                       <div
@@ -109,6 +140,19 @@ const JobOpeningsTable = () => {
                             <p className="text-gray-700 leading-relaxed">
                               {job.requirements}
                             </p>
+
+                            {job.applyLink && (
+                              <p className="mt-4">
+                                <a
+                                  href={job.applyLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-600 font-semibold hover:underline"
+                                >
+                                  Apply Here
+                                </a>
+                              </p>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -120,7 +164,7 @@ const JobOpeningsTable = () => {
           </table>
         </div>
 
-        {/* Apply Info */}
+        {/* Footer */}
         <div className="mt-10 text-center">
           <p className="text-lg sm:text-xl text-gray-300 font-medium">
             ✉️ For applying, please mail us at{" "}
