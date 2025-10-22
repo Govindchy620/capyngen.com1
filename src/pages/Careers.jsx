@@ -3,6 +3,7 @@ import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import { assets } from "../assets/assets";
 import { Monitor, Sparkles, Sprout } from "lucide-react";
+import JobOpeningsTable from "../components/JobOpeningsTable";
 
 const Careers = () => {
   const faqItems = [
@@ -116,6 +117,7 @@ const Careers = () => {
           </div>
         </div>
       </div>
+      <JobOpeningsTable />
     </section>
   );
 };
