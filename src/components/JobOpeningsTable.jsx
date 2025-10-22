@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const JobOpeningsTable = () => {
   const [jobs, setJobs] = useState([]);
@@ -6,18 +6,19 @@ const JobOpeningsTable = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // ✅ Your existing deployed backend URL
+  // ✅ Live API endpoint
   const API_URL = "https://capyngen-backendv2-1.onrender.com/api/careers";
 
-  // ✅ Fetch jobs from backend
+  // ✅ Fetch careers from backend
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch(API_URL);
-        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-        const data = await res.json();
+        const response = await fetch(API_URL);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
-        // Your backend returns: { ok: true, careers: [...] }
+        const data = await response.json();
         if (data.ok && Array.isArray(data.careers)) {
           setJobs(data.careers);
         } else {
@@ -25,7 +26,7 @@ const JobOpeningsTable = () => {
         }
       } catch (err) {
         console.error("Error fetching careers:", err);
-        setError("Failed to load job data");
+        setError("Failed to load job openings");
       } finally {
         setLoading(false);
       }
@@ -38,7 +39,7 @@ const JobOpeningsTable = () => {
     setExpandedRow(expandedRow === index ? null : index);
   };
 
-  // ✅ Loading and error messages
+  // ✅ Loading state
   if (loading)
     return (
       <div className="text-center text-gray-400 py-10 text-lg">
@@ -46,6 +47,7 @@ const JobOpeningsTable = () => {
       </div>
     );
 
+  // ✅ Error state
   if (error)
     return (
       <div className="text-center text-red-500 py-10 text-lg">{error}</div>
@@ -59,7 +61,7 @@ const JobOpeningsTable = () => {
           Current Job Openings
         </h2>
 
-        {/* Table */}
+        {/* Table Container */}
         <div className="overflow-x-auto bg-white rounded-2xl shadow-xl">
           <table className="min-w-full border-collapse">
             <thead className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
@@ -96,6 +98,7 @@ const JobOpeningsTable = () => {
 
               {jobs.map((job, index) => (
                 <React.Fragment key={job._id || index}>
+                  {/* Main Row */}
                   <tr className="hover:bg-blue-50 transition-colors duration-200">
                     <td className="py-4 px-4 font-semibold text-center text-gray-900">
                       {job.title}
