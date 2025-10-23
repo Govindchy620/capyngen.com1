@@ -118,7 +118,7 @@ const ECommerceIndustry = () => {
         "Creating digital stores that are fast, safe, and optimized for conversions is what makes you reach worldwide markets.",
       image: assets.eCommIndustry11,
       ctaText: "Explore Projects",
-      ctaLink: "#projects",
+      ctaLink: "/contact-us",
     },
     {
       id: 2,
@@ -127,7 +127,7 @@ const ECommerceIndustry = () => {
         "Offerings that are personalized, data-focused, and designed mobility-first are what characterize next-generation e-commerce flows.",
       image: assets.eCommIndustry2,
       ctaText: "Get Started",
-      ctaLink: "#contact",
+      ctaLink: "/contact-us",
     },
     {
       id: 3,
@@ -136,7 +136,7 @@ const ECommerceIndustry = () => {
         "One action that has the potential of completely changing your e-commerce business is automating it and using AI-driven analytics to guide your decisions.",
       image: assets.eCommIndustry3,
       ctaText: "Get Started",
-      ctaLink: "#contact",
+      ctaLink: "/contact-us",
     },
   ];
   const cardsSectionData1 = [

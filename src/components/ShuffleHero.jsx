@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ShuffleHero = ({
   heading = "Let's change it up a bit",
@@ -14,6 +15,7 @@ const ShuffleHero = ({
   themeColor = "indigo",
   bgColor = "bg-black",
 }) => {
+  const navigate = useNavigate();
   return (
     <section className={`w-full min-h-screen pt-10 md:pt-28 ${bgColor}`}>
       <div className="max-w-[90vw] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
@@ -41,7 +43,7 @@ const ShuffleHero = ({
 
           {buttonText && (
             <button
-              onClick={onButtonClick}
+              onClick={() => navigate("/contact-us")}
               className={`${themeColor} text-white font-medium py-4 px-8 text-lg rounded transition-all active:scale-95`}
             >
               {buttonText}

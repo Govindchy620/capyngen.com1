@@ -227,7 +227,7 @@ const RealEstate = () => {
         "Digital platforms enabled by AI have the power to simplify everything from property management to listings and customer interactions.",
       image: assets.realEstateBanner1,
       ctaText: "Explore Projects",
-      ctaLink: "#projects",
+      ctaLink: "/contact-us",
     },
     {
       id: 2,
@@ -236,7 +236,7 @@ const RealEstate = () => {
         "Safeguarded, automated, and AI-infused solutions are the shortest and easiest way to get buyers, sellers, and agents connected.",
       image: assets.realEstateBanner3,
       ctaText: "Get Started",
-      ctaLink: "#contact",
+      ctaLink: "/contact-us",
     },
     {
       id: 3,
@@ -245,7 +245,7 @@ const RealEstate = () => {
         "The use of data analytics and automation in real estate sector has resulted in the increased visibility of properties and profits made on them.",
       image: assets.realEstateBanner2,
       ctaText: "Get Started",
-      ctaLink: "#contact",
+      ctaLink: "/contact-us",
     },
   ];
   const cardsSectionSliderData1 = [

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Banner13({
   title = "CONSULTING",
@@ -16,6 +17,7 @@ export default function Banner13({
   videoSrc, // Video source URL
   imageSrc,
 }) {
+  const navigate = useNavigate();
   return (
     <section
       className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-blue-900 text-white flex items-center justify-center px-4 pt-24"
@@ -34,6 +36,7 @@ export default function Banner13({
             type="button"
             className="inline-flex items-center bg-blue-600 hover:bg-blue-500 shadow-xl hover:shadow-blue-500/40 text-white font-semibold py-3 px-8 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 mb-12 text-lg group"
             aria-label={buttonAria}
+            onClick={() => navigate("/contact-us")}
           >
             {buttonText}
             <span

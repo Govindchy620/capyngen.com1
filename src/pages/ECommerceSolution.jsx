@@ -465,7 +465,7 @@ const ECommerceSolution = () => {
           }
           description="Use the efficient and intuitive e-commerce solution provided by Capyngen to construct, expand and prosper your online store keeping in mind the contemporary business trends."
           primaryBtnText="Start your Store Today"
-          primaryBtnLink="#"
+          primaryBtnLink="/contact-us"
           image={assets.eCommSol1}
         />
       </div>

@@ -9,6 +9,7 @@ import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import GetStarted from "../components/GetStarted";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CompanyOverview = () => {
   const expertise = [
@@ -50,6 +51,7 @@ const CompanyOverview = () => {
     "Vacant Posts - Become a part of our expanding team",
     "Reach out to us - Kick off your change here",
   ];
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -80,7 +82,7 @@ const CompanyOverview = () => {
         <div className="absolute bottom-0 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
 
         {/* Main content */}
-        <div className="relative z-10 text-center px-6 sm:px-10 md:px-16 max-w-7xl">
+        <div className="relative z-10 text-center px-6 sm:px-10 md:px-16">
           <div
             className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl 
           shadow-xl shadow-blue-500/10 p-8 sm:p-12 transition-transform"
@@ -105,6 +107,7 @@ const CompanyOverview = () => {
             {/* Optional CTA Button */}
             <div className="mt-10">
               <button
+                onClick={() => navigate("/contact-us")}
                 className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 
               text-white font-semibold text-lg shadow-lg hover:shadow-blue-500/30 
               transition-all duration-300 hover:scale-105"
@@ -264,14 +267,12 @@ const CompanyOverview = () => {
             <p className="text-lg text-gray-300">
               Tower B3, Spaze I-Tech Park, Sector 49, Gurgaon
             </p>
-            <p className="flex items-center justify-center gap-2 text-gray-200 text-lg">
-              <Mail className="w-5 h-5 text-blue-400" /> sales@capyngen.com
-            </p>
             <p className="text-xl text-gray-200">
               Do you want to take your brand to the next level? We should talk!
               <br />A digital pivot for you starts off with just a single chat.
             </p>
             <button
+              onClick={() => navigate("/contact-us")}
               className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 
             text-white font-semibold text-lg shadow-lg hover:shadow-blue-500/30 
             transition-all duration-300 hover:scale-105 flex items-center gap-2 mx-auto"

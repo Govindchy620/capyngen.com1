@@ -10,18 +10,65 @@ export default function ScrollRevealEffect() {
   const sectionsRef = useRef([]);
   const localTriggers = useRef([]);
 
-  // Form state and handlers
+  // Form state
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phoneNumber: "",
+    topic: "",
     message: "",
   });
 
   const [loading, setLoading] = useState(false);
   const [responseMsg, setResponseMsg] = useState("");
   const [showResponse, setShowResponse] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const dropdownRef = useRef(null);
+
+  const topics = [
+    "Web Development",
+    "App Development",
+    "Custom AI Solution",
+    "E-Commerce Solutions",
+    "Blockchain Development",
+    "DevOps Solutions",
+    "Application Solutions",
+    "CRM & Management Software",
+    "UI/UX Design",
+    "Website Design",
+    "Branding & Identity Design",
+    "Ecommerce Design",
+    "CMS Design",
+    "Digital Marketing",
+    "Search Engine Optimization (SEO)",
+    "Social Media Marketing (SMM)",
+    "Pay-Per-Click Advertising (PPC)",
+    "Artificial Intelligence",
+    "Cybersecurity",
+    "Network Solutions & Services",
+    "Enterprise Solutions",
+    "Data & Analytics",
+    "Consulting",
+    "Others",
+  ];
+
+  const filteredTopics = topics.filter((topic) =>
+    topic.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Hide dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     if (showResponse) {
@@ -35,7 +82,7 @@ export default function ScrollRevealEffect() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (loading) return; // prevent duplicate submits
+    if (loading) return;
     setLoading(true);
     setResponseMsg("");
     setShowResponse(false);
@@ -59,6 +106,7 @@ export default function ScrollRevealEffect() {
           lastName: "",
           email: "",
           phoneNumber: "",
+          topic: "",
           message: "",
         });
       } else {
@@ -77,17 +125,11 @@ export default function ScrollRevealEffect() {
     const setupAnimations = () => {
       const sections = sectionsRef.current;
       const container = containerRef.current;
+      if (!container || !sections.length) return;
 
-      if (!container || !sections.length) {
-        console.warn("Refs not ready");
-        return;
-      }
-
-      // Kill any existing local triggers before re-creating
       localTriggers.current.forEach((trigger) => trigger.kill());
       localTriggers.current = [];
 
-      // Pin container
       const pinTrigger = ScrollTrigger.create({
         trigger: container,
         start: "top top",
@@ -99,10 +141,8 @@ export default function ScrollRevealEffect() {
       });
       localTriggers.current.push(pinTrigger);
 
-      // Animate sections sequentially
       sections.forEach((section, i) => {
         if (i === sections.length - 1) return;
-
         const trigger = gsap.to(section, {
           rotate: 90,
           transformOrigin: "0 0",
@@ -115,38 +155,24 @@ export default function ScrollRevealEffect() {
             invalidateOnRefresh: true,
           },
         }).scrollTrigger;
-
         localTriggers.current.push(trigger);
       });
 
-      // Refresh ScrollTrigger to fix early start/blank space issues
       ScrollTrigger.refresh();
     };
 
-    // Run setup once layout & assets are ready
-    const handleReady = () => {
-      requestAnimationFrame(setupAnimations);
-    };
+    const handleReady = () => requestAnimationFrame(setupAnimations);
+    if (document.readyState === "complete") handleReady();
+    else window.addEventListener("load", handleReady);
 
-    if (document.readyState === "complete") {
-      handleReady();
-    } else {
-      window.addEventListener("load", handleReady);
-    }
-
-    // Refresh on resize for accurate height calculations
     const handleResize = () => ScrollTrigger.refresh();
     window.addEventListener("resize", handleResize);
 
     return () => {
-      // Cleanup all triggers from this component only
       localTriggers.current.forEach((trigger) => trigger.kill());
       localTriggers.current = [];
-
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("load", handleReady);
-
-      // Refresh global ScrollTriggers in case others exist
       ScrollTrigger.refresh();
     };
   }, []);
@@ -181,30 +207,10 @@ export default function ScrollRevealEffect() {
             ...(section.style || {}),
           }}
         >
-          {/* Gradient Overlays */}
-          {section.bg && (
-            <>
-              <div
-                className="absolute -top-20 left-0 w-full h-40 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(to bottom, var(--tw-bg-opacity,1) currentColor, transparent)",
-                }}
-              ></div>
-              <div
-                className="absolute -bottom-20 left-0 w-full h-40 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(to top, var(--tw-bg-opacity,1) currentColor, transparent)",
-                }}
-              ></div>
-            </>
-          )}
-
           {section.text === "Form" ? (
             <div className="flex flex-col md:flex-row items-stretch justify-center gap-10 px-4 sm:px-6 lg:px-10 text-white max-w-7xl mx-auto w-full max-h-[90vh]">
-              {/* Left Side (Intro) */}
-              <div className="hidden flex-1 min-w-[300px] md:flex flex-col justify-center bg-white/5 backdrop-blur-md p-6 sm:p-10 rounded-2xl shadow-lg">
+              {/* Left side */}
+              <div className="hidden flex-1 md:flex flex-col justify-center bg-white/5 backdrop-blur-md p-6 sm:p-10 rounded-2xl shadow-lg">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                   Let’s <span className="text-cyan-400">Talk</span> About Your{" "}
                   <span className="text-cyan-400">Project</span>
@@ -216,24 +222,24 @@ export default function ScrollRevealEffect() {
                 </p>
               </div>
 
-              {/* Right Side (Form) */}
-              <div className="flex-1 min-w-[300px] bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg overflow-auto max-h-[90vh]">
+              {/* Right side (Form) */}
+              <div className="flex-1 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg overflow-auto max-h-[90vh]">
                 <form
-                  className="space-y-4 w-full"
                   onSubmit={handleSubmit}
+                  className="space-y-4 w-full"
                   noValidate
                 >
-                  {/* First and Last Name */}
-                  <div className="flex items-center justify-between gap-6">
+                  {/* Names */}
+                  <div className="flex gap-6">
                     <div className="w-1/2">
                       <label className="block mb-2 text-sm font-medium">
                         First Name
                       </label>
                       <input
                         type="text"
-                        placeholder="Enter your first name"
-                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                         required
+                        placeholder="Enter your first name"
+                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 outline-none"
                         value={formData.firstName}
                         onChange={(e) =>
                           setFormData({
@@ -249,9 +255,9 @@ export default function ScrollRevealEffect() {
                       </label>
                       <input
                         type="text"
-                        placeholder="Enter your last name"
-                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                         required
+                        placeholder="Enter your last name"
+                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 outline-none"
                         value={formData.lastName}
                         onChange={(e) =>
                           setFormData({ ...formData, lastName: e.target.value })
@@ -267,9 +273,9 @@ export default function ScrollRevealEffect() {
                     </label>
                     <input
                       type="email"
-                      placeholder="Enter your email"
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       required
+                      placeholder="Enter your email"
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 outline-none"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
@@ -277,23 +283,79 @@ export default function ScrollRevealEffect() {
                     />
                   </div>
 
-                  {/* Contact Number */}
-                  <div>
-                    <label className="block mb-2 text-sm font-medium">
-                      Contact Number
-                    </label>
-                    <input
-                      type="tel"
-                      placeholder="Enter your phone number"
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                      value={formData.phoneNumber}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          phoneNumber: e.target.value,
-                        })
-                      }
-                    />
+                  {/* Phone + Select Topic */}
+                  <div className="flex gap-6 relative">
+                    {/* Contact */}
+                    <div className="w-1/2">
+                      <label className="block mb-2 text-sm font-medium">
+                        Contact Number
+                      </label>
+                      <input
+                        type="tel"
+                        placeholder="Phone number"
+                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 outline-none"
+                        value={formData.phoneNumber}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            phoneNumber: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+
+                    {/* Custom Searchable Dropdown */}
+                    <div className="w-1/2 relative" ref={dropdownRef}>
+                      <label className="block mb-2 text-sm font-medium">
+                        Select Topic
+                      </label>
+                      <div
+                        onClick={() => setShowDropdown(!showDropdown)}
+                        className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white cursor-pointer focus:ring-2 focus:ring-cyan-400 outline-none flex justify-between items-center"
+                      >
+                        <span className="truncate">
+                          {formData.topic || "Choose a topic"}
+                        </span>
+                        <span
+                          className={`ml-2 transition-transform ${
+                            showDropdown ? "rotate-180" : ""
+                          }`}
+                        >
+                          ▼
+                        </span>
+                      </div>
+
+                      {showDropdown && (
+                        <div className="absolute z-50 mt-2 w-full max-h-48 overflow-y-auto bg-black/80 backdrop-blur-lg border border-white/30 rounded-lg shadow-xl">
+                          <input
+                            type="text"
+                            placeholder="Search..."
+                            className="w-full px-3 py-2 bg-transparent text-white border-b border-white/20 focus:outline-none placeholder-gray-400"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                          />
+                          {filteredTopics.length ? (
+                            filteredTopics.map((topic, idx) => (
+                              <div
+                                key={idx}
+                                className="px-3 py-2 hover:bg-cyan-400/20 text-white text-sm cursor-pointer transition"
+                                onClick={() => {
+                                  setFormData({ ...formData, topic });
+                                  setSearchTerm("");
+                                  setShowDropdown(false);
+                                }}
+                              >
+                                {topic}
+                              </div>
+                            ))
+                          ) : (
+                            <p className="text-center text-gray-400 text-sm py-2">
+                              No matches found
+                            </p>
+                          )}
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   {/* Message */}
@@ -302,10 +364,10 @@ export default function ScrollRevealEffect() {
                       Message
                     </label>
                     <textarea
-                      placeholder="Write your message..."
                       rows="3"
-                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
                       required
+                      placeholder="Write your message..."
+                      className="w-full px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 outline-none resize-none"
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
@@ -313,7 +375,7 @@ export default function ScrollRevealEffect() {
                     ></textarea>
                   </div>
 
-                  {/* Submit Button */}
+                  {/* Submit */}
                   <button
                     type="submit"
                     disabled={loading}
@@ -322,7 +384,6 @@ export default function ScrollRevealEffect() {
                     {loading ? "Sending..." : "Send Message"}
                   </button>
 
-                  {/* Responsive and animated message */}
                   {showResponse && (
                     <p
                       className={`mt-4 rounded-lg py-2 px-4 text-center text-sm font-semibold max-w-md mx-auto transition-transform duration-300 ${
@@ -344,6 +405,7 @@ export default function ScrollRevealEffect() {
           )}
         </div>
       ))}
+
       <style>{`
         @keyframes popIn {
           0% {transform: scale(0.8); opacity: 0;}
