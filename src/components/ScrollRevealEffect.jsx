@@ -223,7 +223,7 @@ export default function ScrollRevealEffect() {
               </div>
 
               {/* Right side (Form) */}
-              <div className="flex-1 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg overflow-auto max-h-[90vh]">
+              <div className="flex-1 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg overflow-hidden max-h-[90vh]">
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-4 w-full"
@@ -326,7 +326,7 @@ export default function ScrollRevealEffect() {
                       </div>
 
                       {showDropdown && (
-                        <div className="absolute z-50 mt-2 w-full max-h-48 overflow-y-auto bg-black/80 backdrop-blur-lg border border-white/30 rounded-lg shadow-xl">
+                        <div className="absolute z-50 mt-2 w-full max-h-48 overflow-y-auto bg-black/80 backdrop-blur-lg border border-white/30 rounded-sm shadow-xl custom-scroll">
                           <input
                             type="text"
                             placeholder="Search..."
@@ -407,14 +407,25 @@ export default function ScrollRevealEffect() {
       ))}
 
       <style>{`
-        @keyframes popIn {
-          0% {transform: scale(0.8); opacity: 0;}
-          100% {transform: scale(1); opacity: 1;}
-        }
-        .animate-popIn {
-          animation: popIn 0.35s ease forwards;
-        }
-      `}</style>
+  @keyframes popIn {
+    0% {transform: scale(0.8); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+  }
+  .animate-popIn {
+    animation: popIn 0.35s ease forwards;
+  }
+  /* Custom Scrollbar Consistency (same as ContactUs) */
+  .custom-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #22d3ee; /* cyan tone to match GSAP theme */
+    border-radius: 8px;
+  }
+  .custom-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+`}</style>
     </div>
   );
 }

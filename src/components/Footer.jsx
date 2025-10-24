@@ -20,30 +20,40 @@ const Footer = () => {
   const [showAllIndustries, setShowAllIndustries] = useState(false);
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=100086626928653",
+      label: "Facebook",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/capyngen-private-limited-5ba173390",
+      label: "LinkedIn",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/capyngen/",
+      label: "Instagram",
+    },
+    { icon: Twitter, href: "https://x.com/CapyngenIndia", label: "Twitter" },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/@Capyngen-pvt-ltd",
+      label: "YouTube",
+    },
   ];
 
   const contactInfo = [
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 234 567 890",
-      href: "tel:+1234567890",
-    },
-    {
       icon: Mail,
       label: "Email",
-      value: "info@capyngen.com",
-      href: "mailto:info@capyngen.com",
+      value: "query@capyngen.com",
+      href: "mailto:query@capyngen.com",
     },
     {
       icon: MapPin,
       label: "Address",
-      value: "123 Business Street, Tech City, TC 12345",
+      value: "Tower B3, Spaze i-Tech Park, Sector 49, Gurugram, Haryana 122018",
     },
   ];
 
