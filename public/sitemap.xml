@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Main Pages -->
+  <url><loc>https://www.capyngen.com/</loc></url>
+  <url><loc>https://www.capyngen.com/company-overview</loc></url>
+  <url><loc>https://www.capyngen.com/careers</loc></url>
+  <url><loc>https://www.capyngen.com/news-and-updates</loc></url>
+  <url><loc>https://www.capyngen.com/contact-us</loc></url>
 
-<url>
-  <loc>https://www.capyngen.com/</loc>
-  <lastmod>2025-10-20T19:16:58+00:00</lastmod>
-</url>
+  <!-- Services -->
+  <url><loc>https://www.capyngen.com/web-development</loc></url>
+  <url><loc>https://www.capyngen.com/app-development</loc></url>
+  <url><loc>https://www.capyngen.com/custom-ai-solutions</loc></url>
+  <url><loc>https://www.capyngen.com/ecommerce-solutions</loc></url>
+  <url><loc>https://www.capyngen.com/blockchain-development</loc></url>
+  <url><loc>https://www.capyngen.com/devops-solutions</loc></url>
+  <url><loc>https://www.capyngen.com/application-solutions</loc></url>
+  <url><loc>https://www.capyngen.com/crm-management-software</loc></url>
 
+  <!-- Design Services -->
+  <url><loc>https://www.capyngen.com/ui-ux-design</loc></url>
+  <url><loc>https://www.capyngen.com/website-design</loc></url>
+  <url><loc>https://www.capyngen.com/branding-and-identity-design</loc></url>
+  <url><loc>https://www.capyngen.com/ecommerce-design</loc></url>
+  <url><loc>https://www.capyngen.com/cms-design</loc></url>
+
+  <!-- Marketing -->
+  <url><loc>https://www.capyngen.com/digital-marketing</loc></url>
+  <url><loc>https://www.capyngen.com/seo</loc></url>
+  <url><loc>https://www.capyngen.com/smm</loc></url>
+  <url><loc>https://www.capyngen.com/ppc</loc></url>
+
+  <!-- Technology -->
+  <url><loc>https://www.capyngen.com/artificial-intelligence</loc></url>
+  <url><loc>https://www.capyngen.com/cybersecurity</loc></url>
+  <url><loc>https://www.capyngen.com/network-solutions</loc></url>
+  <url><loc>https://www.capyngen.com/enterprise-solutions</loc></url>
+  <url><loc>https://www.capyngen.com/data-analytics</loc></url>
+  <url><loc>https://www.capyngen.com/consulting</loc></url>
+
+  <!-- Industries -->
+  <url><loc>https://www.capyngen.com/industries</loc></url>
+  <url><loc>https://www.capyngen.com/industries/banking</loc></url>
+  <url><loc>https://www.capyngen.com/industries/education</loc></url>
+  <url><loc>https://www.capyngen.com/industries/capital-market</loc></url>
+  <url><loc>https://www.capyngen.com/industries/life-science</loc></url>
+  <url><loc>https://www.capyngen.com/industries/healthcare-fitness</loc></url>
+  <url><loc>https://www.capyngen.com/industries/energy-resources-utilities</loc></url>
+  <url><loc>https://www.capyngen.com/industries/manufacturing-and-automotive</loc></url>
+  <url><loc>https://www.capyngen.com/industries/public-service</loc></url>
+  <url><loc>https://www.capyngen.com/industries/e-commerce</loc></url>
+  <url><loc>https://www.capyngen.com/industries/high-tech</loc></url>
+  <url><loc>https://www.capyngen.com/industries/travel-logistics</loc></url>
+  <url><loc>https://www.capyngen.com/industries/cpg-distribution</loc></url>
+  <url><loc>https://www.capyngen.com/industries/insurance</loc></url>
+  <url><loc>https://www.capyngen.com/industries/communication-media-it</loc></url>
+  <url><loc>https://www.capyngen.com/industries/real-estate</loc></url>
+  <url><loc>https://www.capyngen.com/industries/gaming</loc></url>
 
 </urlset>
