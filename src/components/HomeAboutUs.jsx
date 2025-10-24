@@ -27,7 +27,7 @@ const HomeAboutUs = () => {
               className="w-full h-auto object-contain max-w-md md:max-w-none md:h-[420px] lg:h-[480px] xl:h-[520px] animate-smoothBounce drop-shadow-2xl"
               loading="lazy"
               decoding="async"
-              fetchPriority="low"
+              fetchpriority="low"
               sizes="(max-width: 640px) 18rem, (max-width: 768px) 22rem, 33vw"
             />
           </div>
@@ -53,7 +53,7 @@ const HomeAboutUs = () => {
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-md border border-white/20 shadow-md object-cover transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                   decoding="async"
-                  fetchPriority="low"
+                  fetchpriority="low"
                 />
               ))}
             </div>

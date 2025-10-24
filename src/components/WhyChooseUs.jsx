@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
                 className="relative z-10 w-full h-full object-cover rounded-2xl animate-diagonalBounce"
                 loading="lazy"
                 decoding="async"
-                fetchPriority="low"
+                fetchpriority="low"
                 sizes="(max-width: 640px) 20rem, (max-width: 768px) 24rem, 33vw"
               />
             </div>
