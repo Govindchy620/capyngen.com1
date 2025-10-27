@@ -245,7 +245,7 @@ const SEO = () => {
           }
           description="Capyngen is the best SEO company in India delivering cost-effective SEO solutions for startups, small businesses, and enterprises. Be the owner of the steady online success of yours with our skillful SEO services; get the visibility, traffic, and ROI that you desire."
           primaryBtnText="Improve Your Website Rankings"
-          primaryBtnLink="#"
+          primaryBtnLink="/contact-us"
           image={assets.seoHero}
         />
       </div>
