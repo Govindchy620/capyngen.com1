@@ -7,8 +7,15 @@ const ArticleCard = ({ article }) => (
       <img
         src={article.image}
         alt={article.title}
+        crossOrigin="anonymous"
         className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+        onError={(e) => {
+          console.error("🧩 Image failed to load:", article.image);
+          e.currentTarget.src =
+            "https://via.placeholder.com/400x300?text=Image+Not+Found";
+        }}
       />
+
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       <div className="absolute top-4 left-4">
         <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-lg backdrop-blur-sm">
