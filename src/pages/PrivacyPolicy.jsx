@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PrivacyPolicy() {
   return (
-    <main className="min-h-screen pt-24 bg-gray-900 text-gray-100 antialiased p-6 flex items-start justify-center">
+    <main className="min-h-screen pt-24 bg-black text-gray-100 antialiased p-6 flex items-start justify-center">
       <article className="w-full max-w-[90vw] bg-gray-800/60 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-lg p-6 md:p-10">
         <header className="mb-6">
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
