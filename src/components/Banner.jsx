@@ -19,9 +19,9 @@ const Banner = ({
       <div className="relative z-10 w-full px-6 sm:px-10">
         <div className="mx-auto text-center text-white">
           <BestHeading2 title="" highlight={title} />
-          <p className="max-w-5xl mx-auto mt-6 md:mt-10 text-base sm:text-lg md:text-xl leading-relaxed px-2">
+          <div className="max-w-5xl mx-auto mt-6 md:mt-10 text-base sm:text-lg md:text-xl leading-relaxed px-2">
             {description}
-          </p>
+          </div>
         </div>
       </div>
     </div>

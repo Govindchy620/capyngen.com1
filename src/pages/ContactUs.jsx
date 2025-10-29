@@ -7,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Input = ({
   label,

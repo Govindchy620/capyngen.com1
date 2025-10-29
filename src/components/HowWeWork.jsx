@@ -134,7 +134,7 @@ const HowWeWork = ({
       </div>
 
       {/* Custom animation styles */}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes arrow-right {
           0% {
             transform: translateX(0);
