@@ -232,6 +232,19 @@ export default function ContactUs() {
 
   return (
     <div className="relative min-h-screen w-full pt-10 overflow-hidden bg-[#0c0c0d] text-white selection:bg-blue-500 selection:text-white">
+      <Helmet>
+        <title>
+          Capyngen | Contact Us – Let’s Talk About Your Digital Growth
+        </title>
+        <meta
+          name="description"
+          content="Have questions or ready to start your next digital project? Reach out to Capyngen’s expert team—SEO, social media, web & app development. We’re here to listen, plan and deliver. Contact us today!"
+        />
+        <meta
+          name="keywords"
+          content="Have questions or ready to start your next digital project? Reach out to Capyngen’s expert team—SEO, social media, web & app development. We’re here to listen, plan and deliver. Contact us today!"
+        />
+      </Helmet>
       {/* HEADER */}
       <div className="mx-auto max-w-5xl px-6 pt-16 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 via-blue-400 to-pink-400 bg-clip-text text-transparent">
