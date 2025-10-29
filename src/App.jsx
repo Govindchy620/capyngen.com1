@@ -53,6 +53,7 @@ import CommunicationMediaIT from "./pages/CommunicationMediaIT";
 import Insurance from "./pages/Insurance";
 import RealEstate from "./pages/RealEstate";
 import BlogDetail from "./components/BlogDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -160,6 +161,7 @@ const App = () => {
           <Route path="/news-and-updates" element={<NewsAndUpdates />} />
           <Route path="/news-and-updates/:slug" element={<BlogDetail />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>
