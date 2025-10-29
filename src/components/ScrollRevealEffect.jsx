@@ -223,16 +223,16 @@ export default function ScrollRevealEffect() {
               </div>
 
               {/* Right side (Form) */}
-              <div className="flex-1 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg overflow-hidden max-h-[90vh]">
+              <div className="flex-1 bg-white/10 backdrop-blur-md px-6 sm:px-8 py-3 md:py-5 lg:py-8 rounded-2xl shadow-lg overflow-auto max-h-[90vh]">
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-4 w-full"
+                  className="space-y-1 lg:space-y-4 w-full"
                   noValidate
                 >
                   {/* Names */}
                   <div className="flex gap-6">
                     <div className="w-1/2">
-                      <label className="block mb-2 text-sm font-medium">
+                      <label className="block mb-1 lg:mb-2 text-sm font-medium">
                         First Name
                       </label>
                       <input
@@ -250,7 +250,7 @@ export default function ScrollRevealEffect() {
                       />
                     </div>
                     <div className="w-1/2">
-                      <label className="block mb-2 text-sm font-medium">
+                      <label className="block mb-1 lg:mb-2 text-sm font-medium">
                         Last Name
                       </label>
                       <input
@@ -268,7 +268,7 @@ export default function ScrollRevealEffect() {
 
                   {/* Email */}
                   <div>
-                    <label className="block mb-2 text-sm font-medium">
+                    <label className="block mb-1 lg:mb-2 text-sm font-medium">
                       Email
                     </label>
                     <input
@@ -287,7 +287,7 @@ export default function ScrollRevealEffect() {
                   <div className="flex gap-6 relative">
                     {/* Contact */}
                     <div className="w-1/2">
-                      <label className="block mb-2 text-sm font-medium">
+                      <label className="block mb-1 lg:mb-2 text-sm font-medium">
                         Contact Number
                       </label>
                       <input
@@ -306,7 +306,7 @@ export default function ScrollRevealEffect() {
 
                     {/* Custom Searchable Dropdown */}
                     <div className="w-1/2 relative" ref={dropdownRef}>
-                      <label className="block mb-2 text-sm font-medium">
+                      <label className="block mb-1 lg:mb-2 text-sm font-medium">
                         Select Topic
                       </label>
                       <div
@@ -360,7 +360,7 @@ export default function ScrollRevealEffect() {
 
                   {/* Message */}
                   <div>
-                    <label className="block mb-2 text-sm font-medium">
+                    <label className="block mb-1 lg:mb-2 text-sm font-medium">
                       Message
                     </label>
                     <textarea
