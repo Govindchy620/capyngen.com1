@@ -54,6 +54,7 @@ import Insurance from "./pages/Insurance";
 import RealEstate from "./pages/RealEstate";
 import BlogDetail from "./components/BlogDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 // Register ScrollTrigger once for the entire application
 gsap.registerPlugin(ScrollTrigger);
@@ -162,6 +163,10 @@ const App = () => {
           <Route path="/news-and-updates/:slug" element={<BlogDetail />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
         </Routes>
         <Footer />
       </div>

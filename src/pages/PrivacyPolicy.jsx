@@ -9,131 +9,151 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="mt-2 text-md text-gray-300">
-            At Capyngen, accessible from{" "}
+            At Capyngen, which can be reached at{" "}
             <a
               className="text-indigo-300 hover:underline"
               href="https://www.capyngen.com"
             >
               www.capyngen.com
             </a>
-            , your privacy is one of our top priorities. This Privacy Policy
-            explains how we collect, use, and protect your personal information
-            when you visit our website or use our services.
+            , we consider your privacy as one of the most important things. This
+            Privacy Policy details the manner in which we gather, utilize, and
+            protect your personal data when you come to our site or employ our
+            digital services.
+          </p>
+          <p className="mt-2 text-md text-gray-300">
+            Your consent to the terms provided in this policy is presumed when
+            you access or use our site. If you disagree, kindly refrain from
+            using our website.
           </p>
         </header>
 
         <section className="space-y-6 text-gray-200 leading-relaxed">
+          {/* 1. Information We Collect */}
           <div>
             <h2 className="text-xl font-medium mb-2">
               1. Information We Collect
             </h2>
-            <p>We may collect the following types of information from you:</p>
-            <ul className="pl-5 mt-2 list-disc text-gray-300">
+            <p>
+              When you use our website or services, we might gather information
+              about you that falls under the following categories:
+            </p>
+
+            <ul className="pl-5 mt-2 list-disc text-gray-300 space-y-3">
               <li>
-                <strong>Personal Information:</strong> Name, email address,
-                phone number, company name, and other contact details you
-                provide through forms or inquiries.
+                <strong>Personal Information:</strong> Your name, email address,
+                phone number, company name, as well as any other information you
+                provide when filling out a contact form or inquiring about a
+                project.
               </li>
-
-              <li className="mt-3">
-                <strong>Usage Data:</strong> Information about how you interact
-                with our website — such as pages visited, time spent, and
-                browser type.
+              <li>
+                <strong>Usage Data:</strong> IP address, browser type, operating
+                system, referring site URL, pages visited, and time spent on
+                pages.
               </li>
-
-              <li className="mt-3">
-                <strong>Cookies &amp; Tracking Technologies:</strong> To improve
-                user experience and analyze site performance.
+              <li>
+                <strong>Cookies & Tracking Technologies:</strong> Cookies,
+                analytics tools, and similar technologies to enhance user
+                experience and deliver targeted content.
               </li>
             </ul>
           </div>
 
+          {/* 2. How We Use Your Information */}
           <div>
             <h2 className="text-xl font-medium mb-2">
               2. How We Use Your Information
             </h2>
-            <p>We use your information to:</p>
-            <ul className="pl-5 mt-2 list-disc text-gray-300">
-              <li>Provide, operate, and improve our services.</li>
-              <li className="mt-2">
-                Communicate with you regarding inquiries, projects, or updates.
-              </li>
-              <li className="mt-2">
-                Send marketing or promotional materials (only if you have opted
-                in).
-              </li>
-              <li className="mt-2">
-                Enhance user experience and website performance.
-              </li>
-              <li className="mt-2">
-                Comply with legal obligations and protect against fraud or
-                misuse.
+            <p>Capyngen employs your personal and usage information to:</p>
+            <ul className="pl-5 mt-2 list-disc text-gray-300 space-y-2">
+              <li>Provide, operate, and maintain our website and services.</li>
+              <li>Respond to inquiries, project requests, or support needs.</li>
+              <li>Send updates or promotional materials (if you opt-in).</li>
+              <li>Improve user experience, functionality, and security.</li>
+              <li>
+                Comply with legal obligations and protect against fraudulent
+                activities.
               </li>
             </ul>
           </div>
 
+          {/* 3. Security */}
           <div>
             <h2 className="text-xl font-medium mb-2">
               3. How We Protect Your Data
             </h2>
             <p>
-              We use secure servers and industry-standard measures to keep your
-              personal data safe. Access is restricted to authorized personnel
-              only. However, please note that no method of transmission over the
-              internet is 100% secure.
+              We prioritize your data security by using secure servers,
+              encryption technologies, and industry-standard administrative,
+              technical, and physical safeguards.
+            </p>
+            <p className="mt-2">
+              Access is restricted to authorized personnel under strict
+              confidentiality agreements. However, no online system is 100%
+              secure, and we cannot guarantee complete security.
             </p>
           </div>
 
+          {/* 4. Sharing */}
           <div>
             <h2 className="text-xl font-medium mb-2">
               4. Sharing Your Information
             </h2>
             <p>
               We do not sell, rent, or trade your personal data. We may share
-              limited information with trusted partners or third-party tools
-              (e.g., analytics, hosting) who assist in website operations — all
-              bound by confidentiality agreements.
+              limited information only with:
             </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-medium mb-2">5. Cookies Policy</h2>
-            <p>Capyngen uses cookies to:</p>
-            <ul className="pl-5 mt-2 list-disc text-gray-300">
-              <li>Remember user preferences</li>
-              <li className="mt-2">Improve website performance</li>
-              <li className="mt-2">
-                Analyze visitor behavior for better content and services
+            <ul className="pl-5 mt-2 list-disc text-gray-300 space-y-2">
+              <li>
+                Essential partners or service providers (hosting, analytics,
+                etc.).
+              </li>
+              <li>
+                Parties bound by confidentiality and data protection agreements.
               </li>
             </ul>
-            <p className="mt-3">
-              You can disable cookies through your browser settings, but some
-              parts of the site may not function properly.
+            <p className="mt-2">
+              We may also disclose information if legally required or necessary
+              to protect rights, security, or the public.
             </p>
           </div>
 
+          {/* 5. Cookies */}
+          <div>
+            <h2 className="text-xl font-medium mb-2">5. Cookies Policy</h2>
+            <p>We use cookies to:</p>
+            <ul className="pl-5 mt-2 list-disc text-gray-300 space-y-2">
+              <li>Remember user preferences and settings.</li>
+              <li>Analyze site traffic and performance.</li>
+              <li>Deliver relevant content and improve services.</li>
+            </ul>
+            <p className="mt-2">
+              You can disable cookies via your browser settings. Some site
+              features may not work if disabled.
+            </p>
+          </div>
+
+          {/* 6. Third-party Links */}
           <div>
             <h2 className="text-xl font-medium mb-2">6. Third-Party Links</h2>
             <p>
-              Our website may contain links to other websites. We are not
-              responsible for their privacy practices, so please review their
-              policies before sharing personal data.
+              Our website may contain links to external websites not operated by
+              us. We are not responsible for their content or privacy practices.
+              Review their privacy policies before sharing information.
             </p>
           </div>
 
+          {/* 7. Rights */}
           <div>
-            <h2 className="text-xl font-medium mb-2">7. Your Rights</h2>
-            <p>You have the right to:</p>
-            <ul className="pl-5 mt-2 list-disc text-gray-300">
-              <li>Access, update, or delete your personal data.</li>
-              <li className="mt-2">
-                Withdraw consent for marketing communications at any time.
-              </li>
-              <li className="mt-2">
-                Request details of the data we hold about you.
-              </li>
+            <h2 className="text-xl font-medium mb-2">7. Your Privacy Rights</h2>
+            <p>You may have the right to:</p>
+            <ul className="pl-5 mt-2 list-disc text-gray-300 space-y-2">
+              <li>Access, correct, or delete your personal data.</li>
+              <li>Withdraw consent for promotional communications.</li>
+              <li>Request details of the data we store about you.</li>
+              <li>Restrict or object to certain data processing activities.</li>
             </ul>
-            <p className="mt-3">
+            <p className="mt-2">
               To exercise these rights, contact us at{" "}
               <a
                 className="text-indigo-300 hover:underline"
@@ -145,32 +165,33 @@ export default function PrivacyPolicy() {
             </p>
           </div>
 
+          {/* 8. Children */}
           <div>
             <h2 className="text-xl font-medium mb-2">8. Children’s Privacy</h2>
             <p>
-              Our website and services are not directed toward children under
-              the age of 13. We do not knowingly collect personal information
-              from minors.
+              Our services are not intended for children under 13. If you
+              believe a child has submitted data, contact us and we will remove
+              it.
             </p>
           </div>
 
+          {/* 9. Updates */}
           <div>
             <h2 className="text-xl font-medium mb-2">
-              9. Updates to This Policy
+              9. Updates to This Privacy Policy
             </h2>
             <p>
-              We may update this Privacy Policy from time to time. Any changes
-              will be posted on this page with an updated “Last Updated” date.
+              We may update this policy periodically. Changes will be posted on
+              this page with an updated “Last Updated” date. Please review
+              periodically.
             </p>
           </div>
 
+          {/* 10. Contact */}
           <div>
             <h2 className="text-xl font-medium mb-2">10. Contact Us</h2>
-            <p>
-              If you have any questions or concerns about this Privacy Policy,
-              please contact us:
-            </p>
-            <ul className="pl-5 mt-2 list-disc text-gray-300">
+            <p>If you have questions or concerns, contact us:</p>
+            <ul className="pl-5 mt-2 list-disc text-gray-300 space-y-2">
               <li>
                 📧 Email:{" "}
                 <a
@@ -180,7 +201,7 @@ export default function PrivacyPolicy() {
                   info@capyngen.com
                 </a>
               </li>
-              <li className="mt-2">
+              <li>
                 🌐 Website:{" "}
                 <a
                   className="text-indigo-300 hover:underline"
@@ -190,13 +211,13 @@ export default function PrivacyPolicy() {
                 </a>
               </li>
             </ul>
+            <p className="mt-3">
+              Capyngen is committed to maintaining transparency, trust, and
+              integrity in every digital interaction. Your privacy matters — and
+              we’re here to protect it.
+            </p>
           </div>
         </section>
-
-        <footer className="mt-8 text-sm text-gray-400">
-          This document is provided for informational purposes and is not legal
-          advice.
-        </footer>
       </article>
     </main>
   );

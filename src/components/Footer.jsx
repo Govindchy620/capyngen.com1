@@ -288,10 +288,10 @@ const Footer = () => {
               Privacy Policy
             </NavLink>
             <NavLink
-              to="/terms-of-service"
+              to="/terms-and-conditions"
               className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
             >
-              Terms of Service
+              Terms & Conditions
             </NavLink>
             <NavLink
               to="/sitemap"
