@@ -24,6 +24,7 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Education = () => {
   const faqItems = [
@@ -350,9 +351,10 @@ const Education = () => {
         description={[
           <>
             <p>
-              Capyngen is an Education IT solutions company that is one of the
-              main causes of the digital transformation of the educational
-              system all over the globe, which includes schools, colleges, and
+              Capyngen is an Education{" "}
+              <Link to={"/"}>IT solutions company</Link> that is one of the main
+              causes of the digital transformation of the educational system all
+              over the globe, which includes schools, colleges, and
               universities. Through our fantastic work in the construction of
               custom Learning Management Systems (LMS), cloud-based platforms
               for remote learning, and online education platforms that assure
@@ -361,10 +363,10 @@ const Education = () => {
               countries in the world.
             </p>
             <p className="my-5">
-              eLearning app development and a virtual classroom are two of our
-              products that are very helpful in learning innovation, expansion,
-              and modernization, and these are the reasons that brought us this
-              fame.
+              eLearning <Link to={"/app-development"}>app development</Link> and
+              a virtual classroom are two of our products that are very helpful
+              in learning innovation, expansion, and modernization, and these
+              are the reasons that brought us this fame.
             </p>
             <h3 className="text-2xl font-semibold">Highlights:</h3>
             <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
@@ -417,7 +419,12 @@ const Education = () => {
         buttonTextColor="text-black"
         title="Book Your Personalized Demo"
         description={[
-          "Gain first-hand experience of futuristic education IT solutions with Capyngen. Arrange a live LMS demo, and find out how we can revolutionize your learning ecosystem.",
+          <>
+            Gain first-hand experience of futuristic education IT solutions with
+            Capyngen. Arrange a live LMS demo, and find out how we can
+            revolutionize your{" "}
+            <a href="https://www.google.com/">learning ecosystem</a>.
+          </>,
         ]}
         buttonText="Book Now"
         backgroundVideo={assets.backgroundVideo}

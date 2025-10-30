@@ -39,6 +39,7 @@ import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import BenefitsSection from "../components/BenefitsSection";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const CapitalMarket = () => {
   const faqItems = [
@@ -220,7 +221,10 @@ const CapitalMarket = () => {
       description: (
         <>
           <ul className="list-disc pl-5">
-            <li>Advisor and firm specific CRM</li>
+            <li>
+              Advisor and firm specific{" "}
+              <Link to={"/crm-management-software"}>CRM</Link>
+            </li>
             <li>Client portfolio value tracking</li>
             <li>Compliance automation tools</li>
           </ul>
@@ -443,7 +447,12 @@ const CapitalMarket = () => {
       />
       <BenefitsSection
         heading="Benefits of Choosing Capyngen"
-        desc="Why Partner with Capyngen for Capital Market IT Services"
+        desc={
+          <>
+            Why Partner with Capyngen for Capital Market{" "}
+            <Link to={"/"}>IT Services</Link>
+          </>
+        }
         benefits={solutionsData}
         image={assets.capitalMarket8}
         footerNote=""

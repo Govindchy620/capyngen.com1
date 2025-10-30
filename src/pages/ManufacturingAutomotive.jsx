@@ -22,6 +22,7 @@ import AppTypesSection from "../components/AppTypesSection";
 import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const ManufacturingAutomotive = () => {
   const faqItems = [
@@ -420,7 +421,12 @@ const ManufacturingAutomotive = () => {
         buttonTextColor="text-black"
         title="Revolutionize Your Manufacturing Processes"
         description={[
-          "Utilize Capyngen’s manufacturing software solutions which comprise smart factory software, ERP, and industrial automation software to your energy.",
+          <>
+            Utilize Capyngen’s manufacturing{" "}
+            <Link to={"/"}>software solutions</Link> which comprise smart
+            factory software, ERP, and industrial automation software to your
+            energy.
+          </>,
         ]}
         buttonText="Get in touch now!"
         backgroundVideo={assets.backgroundVideo}
@@ -433,7 +439,13 @@ const ManufacturingAutomotive = () => {
         buttonTextColor="text-black"
         title="Top Manufacturing Software Development Company"
         description={[
-          "To stay competitive, manufacturers are going digital with the Internet of Things for manufacturing, Enterprise Resource Planning platforms, and AI-powered analytics.",
+          <>
+            To stay competitive, manufacturers are going digital with the
+            Internet of Things for manufacturing,{" "}
+            <Link to={"/enterprise-solutions"}>Enterprise Resource</Link>{" "}
+            Planning platforms, and{" "}
+            <Link to={"/artificial-intelligence"}>AI-powered</Link> analytics.
+          </>,
           "We provide custom manufacturing software solutions that energize the factories, Original Equipment Manufacturers, and supply chains with a digital solution that is digital, scalable, and future-ready at Capyngen.",
         ]}
         buttonText="Get in touch now!"

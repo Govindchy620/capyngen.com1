@@ -25,6 +25,7 @@ import {
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const BlockchainDevelopment = () => {
   const faqItems = [
@@ -465,6 +466,14 @@ const BlockchainDevelopment = () => {
         desc="Blockchain solutions by Capyngen deliver actionable business impact such as:"
         benefits={benefitsSection1}
         image={assets.blockchainApplications}
+        footerNote={
+          <>
+            One stop for development and maintenance of{" "}
+            <Link to={"/ecommerce-solutions"}>ecommerce websites</Link>,{" "}
+            <Link to={"/app-development"}>mobile apps</Link>, and online
+            platforms to ensure effortless shopping experiences.
+          </>
+        }
       />
       <FullSizeImageSection
         backgroundImage={assets.blockchainDevFullSize2}
