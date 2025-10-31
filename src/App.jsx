@@ -56,7 +56,7 @@ import BlogDetail from "./components/BlogDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
-// Register ScrollTrigger once for the entire application
+// Register ScrollTrigger once for the entire applicatio
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
