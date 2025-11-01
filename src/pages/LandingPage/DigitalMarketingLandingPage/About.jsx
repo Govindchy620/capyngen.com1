@@ -35,7 +35,7 @@ const socialLinks = [
     href: "https://www.instagram.com/capyngen/",
     label: "Instagram",
   },
-  { icon: Twitter, href: "https://x.com/CapyngenIndia", label: "Twitter" },
+  { icon: Twitter, href: "https://x.com/capyngen", label: "Twitter" },
   {
     icon: Youtube,
     href: "https://www.youtube.com/@Capyngen-pvt-ltd",
