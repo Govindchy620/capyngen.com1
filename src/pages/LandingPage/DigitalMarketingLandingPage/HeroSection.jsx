@@ -51,10 +51,15 @@ function LeadForm({
   modalMode = false,
 }) {
   const [showDateTimePicker, setShowDateTimePicker] = useState(false);
+  const [tempDateTime, setTempDateTime] = useState("");
+
+  // Shared input classes with visible indigo borders and transparent background for theme consistency
+  const inputClasses =
+    "w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition";
 
   return (
     <div
-      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/6 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/30 overflow-hidden transition-shadow duration-300 ${
+      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/40 overflow-hidden transition-shadow duration-300 ${
         modalMode ? "p-8 text-white" : ""
       }`}
       style={modalMode ? { color: "white" } : {}}
@@ -90,7 +95,7 @@ function LeadForm({
 
         {/* Progress bar */}
         <div className="px-0 md:px-8 mb-4">
-          <div className="w-full bg-white/6 rounded-full h-2">
+          <div className="w-full bg-white/10 rounded-full h-2">
             <motion.div
               className="h-2 rounded-full bg-indigo-500 shadow-[0_8px_24px_rgba(99,102,241,0.12)]"
               initial={{ width: 0 }}
@@ -117,6 +122,7 @@ function LeadForm({
         {/* Step container */}
         <div className="px-0 md:px-8 pt-0 md:pt-6 pb-6 overflow-auto flex-1 scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-indigo-900">
           <AnimatePresence mode="wait">
+            {/* Step 1 */}
             {step === 1 && (
               <motion.div
                 key="s1"
@@ -134,7 +140,7 @@ function LeadForm({
                   value={formData.fullName}
                   onChange={handleChange}
                   placeholder="Your full name"
-                  className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                  className={inputClasses}
                   whileFocus={{
                     scale: 1.02,
                     boxShadow: "0 0 8px #6366f1",
@@ -153,7 +159,7 @@ function LeadForm({
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className={inputClasses}
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -164,6 +170,8 @@ function LeadForm({
                 </div>
               </motion.div>
             )}
+
+            {/* Step 2 */}
             {step === 2 && (
               <motion.div
                 key="s2"
@@ -184,7 +192,7 @@ function LeadForm({
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 99999 99999"
-                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className={inputClasses}
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -220,7 +228,7 @@ function LeadForm({
                       value={formData.whatsappNumber || ""}
                       onChange={handleChange}
                       placeholder="+91 99999 99999"
-                      className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                      className={inputClasses}
                       whileFocus={{
                         scale: 1.02,
                         boxShadow: "0 0 8px #6366f1",
@@ -231,6 +239,8 @@ function LeadForm({
                 )}
               </motion.div>
             )}
+
+            {/* Step 3 */}
             {step === 3 && (
               <motion.div
                 key="s3"
@@ -250,7 +260,7 @@ function LeadForm({
                     value={formData.city}
                     onChange={handleChange}
                     placeholder="Mumbai, Delhi, etc."
-                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className={inputClasses}
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -268,7 +278,7 @@ function LeadForm({
                     value={formData.brandName}
                     onChange={handleChange}
                     placeholder="Capyngen, The MediClub"
-                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className={inputClasses}
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -286,7 +296,7 @@ function LeadForm({
                     value={formData.website}
                     onChange={handleChange}
                     placeholder='If no website → Write "No Website"'
-                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className={inputClasses}
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -296,6 +306,8 @@ function LeadForm({
                 </div>
               </motion.div>
             )}
+
+            {/* Step 4 */}
             {step === 4 && (
               <motion.div
                 key="s4"
@@ -341,7 +353,7 @@ function LeadForm({
                       value={formData.businessType}
                       onChange={handleChange}
                       placeholder="Enter your business name"
-                      className="w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                      className={inputClasses}
                       whileFocus={{ scale: 1.02, boxShadow: "0 0 8px #6366f1" }}
                       required
                     />
@@ -349,6 +361,8 @@ function LeadForm({
                 )}
               </motion.div>
             )}
+
+            {/* Step 5 */}
             {step === 5 && (
               <motion.div
                 key="s5"
@@ -386,6 +400,8 @@ function LeadForm({
                 </div>
               </motion.div>
             )}
+
+            {/* Step 6 */}
             {step === 6 && (
               <motion.div
                 key="s6"
@@ -420,6 +436,8 @@ function LeadForm({
                 </div>
               </motion.div>
             )}
+
+            {/* Step 7 */}
             {step === 7 && (
               <motion.div
                 key="s7"
@@ -429,51 +447,47 @@ function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-4"
               >
-                <div>
+                <div className="relative">
                   <label className="block mb-1 font-semibold text-indigo-300">
                     Best Time To Call / Talk{" "}
                     <span className="text-rose-400">*</span>
                   </label>
+
                   <input
-                    type="text"
+                    type="datetime-local"
                     name="bestTime"
-                    value={formData.bestTime}
-                    placeholder="Select date and time"
-                    readOnly
-                    onClick={() => setShowDateTimePicker(true)}
-                    className="w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition cursor-pointer"
+                    // Convert formatted text back into datetime-local value for display
+                    value={
+                      formData.bestTime
+                        ? new Date(formData.bestTime).toISOString().slice(0, 16)
+                        : ""
+                    }
+                    onChange={(e) => {
+                      const rawValue = e.target.value;
+
+                      if (!rawValue) {
+                        handleChange({
+                          target: { name: "bestTime", value: "" },
+                        });
+                        return;
+                      }
+
+                      const dt = new Date(rawValue);
+                      const formatted = dt.toLocaleString(undefined, {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        hour12: true,
+                      });
+
+                      handleChange({
+                        target: { name: "bestTime", value: formatted },
+                      });
+                    }}
+                    className={`${inputClasses} cursor-pointer`}
                   />
-                  {showDateTimePicker && (
-                    <div className="mt-2 bg-slate-800 p-4 rounded-xl">
-                      <input
-                        type="datetime-local"
-                        onChange={(e) => {
-                          const dt = new Date(e.target.value);
-                          const formatted = dt.toLocaleString(undefined, {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
-                            hour: "2-digit",
-                            minute: "2-digit",
-                            hour12: true,
-                          });
-                          handleChange({
-                            target: { name: "bestTime", value: formatted },
-                          });
-                          setShowDateTimePicker(false);
-                        }}
-                        className="w-full rounded-xl p-2 text-black"
-                        autoFocus
-                      />
-                      <button
-                        type="button"
-                        className="mt-2 px-4 py-2 bg-red-600 rounded text-white"
-                        onClick={() => setShowDateTimePicker(false)}
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  )}
                 </div>
 
                 <div>
@@ -486,7 +500,7 @@ function LeadForm({
                     onChange={handleChange}
                     rows={4}
                     placeholder="Additional details..."
-                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition resize-none"
+                    className={`${inputClasses} resize-none`}
                   />
                 </div>
               </motion.div>
@@ -495,7 +509,7 @@ function LeadForm({
         </div>
 
         {/* Footer / navigation */}
-        <div className="px-0 md:px-8 py-4 border-t border-white/6 bg-gradient-to-t from-transparent to-white/10">
+        <div className="px-0 md:px-8 py-4 border-t border-white/10 bg-gradient-to-t from-transparent to-white/10">
           <div className="flex items-center justify-between">
             <div>
               {step > 1 && (
@@ -522,8 +536,8 @@ function LeadForm({
                       ? "bg-indigo-500 hover:bg-indigo-600 text-white shadow"
                       : "bg-indigo-300/60 text-white/80 cursor-not-allowed"
                   }`}
-                  whileHover={validateStep() ? { scale: 1.05 } : {}}
-                  whileTap={validateStep() ? { scale: 0.95 } : {}}
+                  whileHover={validateStep() ? { scale: 1.05 } : undefined}
+                  whileTap={validateStep() ? { scale: 0.95 } : undefined}
                 >
                   Next
                 </motion.button>
@@ -583,9 +597,7 @@ export default function HeroSection() {
   const [notification, setNotification] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
-  const isValidEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -680,9 +692,7 @@ export default function HeroSection() {
 
       const res = await fetch("https://api.capyngen.com/api/lead", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
@@ -733,7 +743,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-gradient-to-b from-black via-slate-900 to-slate-800 text-white font-sans pt-24 "
+      className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-gradient-to-b from-black via-slate-900 to-slate-800 text-white font-sans pt-24"
     >
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Left copy */}
@@ -768,7 +778,7 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* Right form - unchanged, unchanged */}
+        {/* Right form */}
         <motion.div
           className="w-full max-w-full flex justify-center"
           initial={{ opacity: 0, x: 20 }}
