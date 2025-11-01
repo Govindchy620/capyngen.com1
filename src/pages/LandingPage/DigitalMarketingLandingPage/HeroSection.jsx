@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const businessTypes = [
   "E-commerce / Online Store",
@@ -533,6 +534,7 @@ export default function HeroSection() {
   const [whatsappSameAsPhone, setWhatsappSameAsPhone] = useState(true);
   const [notification, setNotification] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -653,6 +655,7 @@ export default function HeroSection() {
         setTimeout(() => {
           setNotification("");
           setModalOpen(false); // Close modal on success
+          navigate("/");
         }, 5000);
       } else {
         setNotification(
