@@ -91,7 +91,7 @@ const GetStarted = ({
             className="md:shrink-0 z-10 flex justify-center md:justify-start"
           >
             <a
-              href="https://www.capyngen.com/"
+              href="https://www.capyngen.com/contact-us"
               className={`${buttonColor} ${buttonTextColor} font-bold px-8 py-3 rounded-lg shadow-lg flex items-center gap-3 transition cursor-pointer`}
               aria-label="Go to contact page"
             >

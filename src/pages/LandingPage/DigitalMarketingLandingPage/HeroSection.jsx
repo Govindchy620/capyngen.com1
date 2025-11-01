@@ -9,6 +9,7 @@ const businessTypes = [
   "Real Estate / Builder",
   "Education / Coaching",
   "Finance / Insurance",
+  "IT Services",
   "Other",
 ];
 
@@ -49,6 +50,8 @@ function LeadForm({
   onClose,
   modalMode = false,
 }) {
+  const [showDateTimePicker, setShowDateTimePicker] = useState(false);
+
   return (
     <div
       className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/6 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/30 overflow-hidden transition-shadow duration-300 ${
@@ -327,6 +330,23 @@ function LeadForm({
                     </motion.button>
                   ))}
                 </div>
+                {formData.businessType === "Other" && (
+                  <div className="mt-3">
+                    <label className="block mb-1 font-semibold text-indigo-300">
+                      Please Mention your business
+                    </label>
+                    <motion.input
+                      type="text"
+                      name="businessType"
+                      value={formData.businessType}
+                      onChange={handleChange}
+                      placeholder="Enter your business name"
+                      className="w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                      whileFocus={{ scale: 1.02, boxShadow: "0 0 8px #6366f1" }}
+                      required
+                    />
+                  </div>
+                )}
               </motion.div>
             )}
             {step === 5 && (
@@ -414,18 +434,46 @@ function LeadForm({
                     Best Time To Call / Talk{" "}
                     <span className="text-rose-400">*</span>
                   </label>
-                  <motion.input
+                  <input
+                    type="text"
                     name="bestTime"
                     value={formData.bestTime}
-                    onChange={handleChange}
-                    placeholder="11 AM – 4 PM / After 7 PM"
-                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
-                    whileFocus={{
-                      scale: 1.02,
-                      boxShadow: "0 0 8px #6366f1",
-                    }}
-                    required
+                    placeholder="Select date and time"
+                    readOnly
+                    onClick={() => setShowDateTimePicker(true)}
+                    className="w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition cursor-pointer"
                   />
+                  {showDateTimePicker && (
+                    <div className="mt-2 bg-slate-800 p-4 rounded-xl">
+                      <input
+                        type="datetime-local"
+                        onChange={(e) => {
+                          const dt = new Date(e.target.value);
+                          const formatted = dt.toLocaleString(undefined, {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                            hour: "2-digit",
+                            minute: "2-digit",
+                            hour12: true,
+                          });
+                          handleChange({
+                            target: { name: "bestTime", value: formatted },
+                          });
+                          setShowDateTimePicker(false);
+                        }}
+                        className="w-full rounded-xl p-2 text-black"
+                        autoFocus
+                      />
+                      <button
+                        type="button"
+                        className="mt-2 px-4 py-2 bg-red-600 rounded text-white"
+                        onClick={() => setShowDateTimePicker(false)}
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  )}
                 </div>
 
                 <div>
@@ -535,6 +583,9 @@ export default function HeroSection() {
   const [notification, setNotification] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -554,7 +605,7 @@ export default function HeroSection() {
   const validateStep = (s = step) => {
     switch (s) {
       case 1:
-        return formData.fullName.trim() !== "";
+        return formData.fullName.trim() !== "" && isValidEmail(formData.email);
       case 2:
         return (
           (formData.phone.trim() !== "" && whatsappSameAsPhone) ||
@@ -580,7 +631,14 @@ export default function HeroSection() {
   };
 
   const handleNext = () => {
-    if (validateStep() && step < 8) setStep((s) => s + 1);
+    if (step === 1 && !isValidEmail(formData.email)) {
+      setNotification("Invalid email address");
+      setTimeout(() => setNotification(""), 3000);
+      return; // prevent step increment
+    }
+    if (validateStep()) {
+      setStep((s) => s + 1);
+    }
   };
 
   const handleBack = () => setStep((s) => Math.max(1, s - 1));
