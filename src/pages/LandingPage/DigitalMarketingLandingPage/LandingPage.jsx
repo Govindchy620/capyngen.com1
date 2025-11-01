@@ -11,11 +11,13 @@ import ResultsSection from "./ResultsSection";
 import { ServicesSection } from "./ServicesSection";
 import TermsAndConditions from "./TermsAndConditions";
 import About from "./About";
+import ExitPopup from "./ExitPopup";
 
 const LandingPage = () => {
   return (
     <div className="overflow-hidden scroll-smooth">
       <Navbar />
+      <ExitPopup />
       <HeroSection />
       <GetStarted
         reverse={false}
