@@ -200,14 +200,11 @@ export default function ContactUs() {
     setShowResponse(false);
 
     try {
-      const response = await fetch(
-        "https://capyngen-backendv2-1.onrender.com/api/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://api.capyngen.com/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
       const data = await response.json();
 
       if (response.ok) {
@@ -273,10 +270,10 @@ export default function ContactUs() {
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-blue-200" />
                   <a
-                    href="mailto:info@capyngen.com"
+                    href="mailto:sales@capyngen.com"
                     className="text-blue-300 font-semibold underline hover:text-blue-400"
                   >
-                    info@capyngen.com
+                    sales@capyngen.com
                   </a>
                 </div>
                 <div className="flex items-start gap-4">

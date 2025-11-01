@@ -88,14 +88,11 @@ export default function ScrollRevealEffect() {
     setShowResponse(false);
 
     try {
-      const response = await fetch(
-        "https://capyngen-backendv2-1.onrender.com/api/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("http://api.capyngen.com/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       const data = await response.json();
 

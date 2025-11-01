@@ -678,16 +678,13 @@ export default function HeroSection() {
         notes: formData.notes,
       };
 
-      const res = await fetch(
-        "https://capyngen-backendv1-1.onrender.com/api/lead",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      const res = await fetch("https://api.capyngen.com/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
       const data = await res.json();
 
