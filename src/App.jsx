@@ -6,9 +6,15 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import WebDevelopment from "./pages/WebDevelopment";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
 import ScrollToTop from "./components/ScrollToTop";
+import WebDevelopment from "./pages/WebDevelopment";
 import Industries from "./pages/Industries";
 import ContactUs from "./pages/ContactUs";
 import Banking from "./pages/Banking";
@@ -56,120 +62,126 @@ import BlogDetail from "./components/BlogDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
-// Register ScrollTrigger once for the entire applicatio
+import LandingPage from "./pages/LandingPage/DigitalMarketingLandingPage/LandingPage";
+
 gsap.registerPlugin(ScrollTrigger);
+
+// ✅ Wrapper to handle hiding Navbar/Footer
+const AppContent = () => {
+  const location = useLocation();
+
+  // Routes where global navbar/footer should be hidden
+  const noLayoutRoutes = ["/digital-marketing-landing-page"];
+
+  const hideLayout = noLayoutRoutes.includes(location.pathname);
+
+  return (
+    <>
+      {!hideLayout && <Navbar />}
+
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/web-development" element={<WebDevelopment />} />
+        <Route path="/app-development" element={<AppDevelopment />} />
+        <Route path="/custom-ai-solutions" element={<CustomAiSolution />} />
+        <Route path="/ecommerce-solutions" element={<ECommerceSolution />} />
+        <Route
+          path="/blockchain-development"
+          element={<BlockchainDevelopment />}
+        />
+        <Route path="/devops-solutions" element={<DevOpsSolutions />} />
+        <Route
+          path="/application-solutions"
+          element={<ApplicationSolutions />}
+        />
+        <Route
+          path="/crm-management-software"
+          element={<CrmManagementSoftware />}
+        />
+        <Route path="/ui-ux-design" element={<UiUxDesign />} />
+        <Route path="/website-design" element={<WebsiteDesign />} />
+        <Route
+          path="/branding-and-identity-design"
+          element={<BrandingIdentityDesign />}
+        />
+        <Route path="/ecommerce-design" element={<EcommerceDesign />} />
+        <Route path="/cms-design" element={<CMSDesign />} />
+        <Route path="/digital-marketing" element={<DigitalMarketing />} />
+        <Route path="/seo" element={<SEO />} />
+        <Route path="/smm" element={<SMM />} />
+        <Route path="/ppc" element={<PPC />} />
+        <Route
+          path="/artificial-intelligence"
+          element={<ArtificialIntelligence />}
+        />
+        <Route path="/cybersecurity" element={<Cybersecurity />} />
+        <Route
+          path="/network-solutions"
+          element={<NetworkSolutionServices />}
+        />
+        <Route path="/enterprise-solutions" element={<EnterpriseSolutions />} />
+        <Route path="/data-analytics" element={<DataAnalytics />} />
+        <Route path="/consulting" element={<Consulting />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/industries/banking" element={<Banking />} />
+        <Route path="/industries/education" element={<Education />} />
+        <Route path="/industries/capital-market" element={<CapitalMarket />} />
+        <Route path="/industries/life-science" element={<LifeScience />} />
+        <Route
+          path="/industries/healthcare-fitness"
+          element={<HealthcareAndFitness />}
+        />
+        <Route
+          path="/industries/energy-resources-utilities"
+          element={<EnergyResourcesUtilities />}
+        />
+        <Route
+          path="/industries/manufacturing-and-automotive"
+          element={<ManufacturingAutomotive />}
+        />
+        <Route path="/industries/public-service" element={<PublicService />} />
+        <Route path="/industries/e-commerce" element={<ECommerceIndustry />} />
+        <Route path="/industries/high-tech" element={<HighTech />} />
+        <Route
+          path="/industries/travel-logistics"
+          element={<TravelAndLogistics />}
+        />
+        <Route
+          path="/industries/cpg-distribution"
+          element={<CpgDistribution />}
+        />
+        <Route path="/industries/insurance" element={<Insurance />} />
+        <Route
+          path="/industries/communication-media-it"
+          element={<CommunicationMediaIT />}
+        />
+        <Route path="/industries/real-estate" element={<RealEstate />} />
+        <Route path="/industries/gaming" element={<Gaming />} />
+        <Route path="/company-overview" element={<CompanyOverview />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/news-and-updates" element={<NewsAndUpdates />} />
+        <Route path="/news-and-updates/:slug" element={<BlogDetail />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
+        {/* ✅ Landing Page — no Navbar/Footer */}
+        <Route
+          path="/digital-marketing-landing-page"
+          element={<LandingPage />}
+        />
+      </Routes>
+
+      {!hideLayout && <Footer />}
+    </>
+  );
+};
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/web-development" element={<WebDevelopment />} />
-          <Route path="/app-development" element={<AppDevelopment />} />
-          <Route path="/custom-ai-solutions" element={<CustomAiSolution />} />
-          <Route path="/ecommerce-solutions" element={<ECommerceSolution />} />
-          <Route
-            path="/blockchain-development"
-            element={<BlockchainDevelopment />}
-          />
-          <Route path="/devops-solutions" element={<DevOpsSolutions />} />
-          <Route
-            path="/application-solutions"
-            element={<ApplicationSolutions />}
-          />
-          <Route
-            path="/crm-management-software"
-            element={<CrmManagementSoftware />}
-          />
-          <Route path="/ui-ux-design" element={<UiUxDesign />} />
-          <Route path="/website-design" element={<WebsiteDesign />} />
-          <Route
-            path="/branding-and-identity-design"
-            element={<BrandingIdentityDesign />}
-          />
-          <Route path="/ecommerce-design" element={<EcommerceDesign />} />
-          <Route path="/cms-design" element={<CMSDesign />} />
-          <Route path="/digital-marketing" element={<DigitalMarketing />} />
-          <Route path="/seo" element={<SEO />} />
-          <Route path="/smm" element={<SMM />} />
-          <Route path="/ppc" element={<PPC />} />
-          <Route
-            path="/artificial-intelligence"
-            element={<ArtificialIntelligence />}
-          />
-          <Route path="/cybersecurity" element={<Cybersecurity />} />
-          <Route
-            path="/network-solutions"
-            element={<NetworkSolutionServices />}
-          />
-          <Route
-            path="/enterprise-solutions"
-            element={<EnterpriseSolutions />}
-          />
-          <Route path="/data-analytics" element={<DataAnalytics />} />
-          <Route path="/consulting" element={<Consulting />} />
-
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/industries/banking" element={<Banking />} />
-          <Route path="/industries/education" element={<Education />} />
-          <Route
-            path="/industries/capital-market"
-            element={<CapitalMarket />}
-          />
-          <Route path="/industries/life-science" element={<LifeScience />} />
-          <Route
-            path="/industries/healthcare-fitness"
-            element={<HealthcareAndFitness />}
-          />
-          <Route
-            path="/industries/energy-resources-utilities"
-            element={<EnergyResourcesUtilities />}
-          />
-          <Route
-            path="/industries/manufacturing-and-automotive"
-            element={<ManufacturingAutomotive />}
-          />
-          <Route
-            path="/industries/public-service"
-            element={<PublicService />}
-          />
-          <Route
-            path="/industries/e-commerce"
-            element={<ECommerceIndustry />}
-          />
-          <Route path="/industries/high-tech" element={<HighTech />} />
-          <Route
-            path="/industries/travel-logistics"
-            element={<TravelAndLogistics />}
-          />
-          <Route
-            path="/industries/cpg-distribution"
-            element={<CpgDistribution />}
-          />
-          <Route path="/industries/insurance" element={<Insurance />} />
-          <Route
-            path="/industries/communication-media-it"
-            element={<CommunicationMediaIT />}
-          />
-          <Route path="/industries/real-estate" element={<RealEstate />} />
-          <Route path="/industries/gaming" element={<Gaming />} />
-
-          <Route path="/company-overview" element={<CompanyOverview />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/news-and-updates" element={<NewsAndUpdates />} />
-          <Route path="/news-and-updates/:slug" element={<BlogDetail />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route
-            path="/terms-and-conditions"
-            element={<TermsAndConditions />}
-          />
-        </Routes>
-        <Footer />
-      </div>
+      <ScrollToTop />
+      <AppContent />
     </Router>
   );
 };

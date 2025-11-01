@@ -753,6 +753,16 @@ import dataAnalyticsFullSize from "./dataAnalyticsFullSize.png";
 import dataAnalyticsFullSize2 from "./dataAnalyticsFullSize2.png";
 import consultingFullSize from "./consultingFullSize.png";
 import consultingFullSize2 from "./consultingFullSize2.png";
+import longTermGrowth from "./longTermGrowth.png";
+import personalizedAttention from "./personalizedAttention.png";
+import results from "./results.png";
+import transparent from "./transparent.png";
+
+import webDesign from "./webDesign.png";
+import smm from "./smm.png";
+import branding from "./branding.jpg";
+import googleAds from "./googleAds.png";
+import metaAds from "./metaAds.jpg";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1510,6 +1520,20 @@ export const assets = {
   dataAnalyticsFullSize2,
   consultingFullSize,
   consultingFullSize2,
+  backgroundVideo,
+  longTermGrowth,
+  personalizedAttention,
+  results,
+  transparent,
+  appDevFullSize,
+  webDesign,
+  smm,
+  seo,
+  eComm,
+  branding,
+  googleAds,
+  metaAds,
+  capyngenLogo,
 };
 
 export const navItems = [
