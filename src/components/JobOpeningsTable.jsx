@@ -7,7 +7,7 @@ const JobOpeningsTable = () => {
   const [error, setError] = useState(null);
 
   // ✅ Live API endpoint
-  const API_URL = "http://api.capyngen.com/api/careers";
+  const API_URL = "https://api.capyngen.com/api/careers";
 
   // ✅ Fetch careers from backend
   useEffect(() => {

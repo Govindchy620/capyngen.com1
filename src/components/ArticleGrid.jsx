@@ -111,7 +111,7 @@ export default function ArticleGrid() {
   const [errorMsg, setErrorMsg] = useState("");
   const [visibleCount, setVisibleCount] = useState(2); // initially show 2
 
-  const API_URL = "http://api.capyngen.com/api/blogs";
+  const API_URL = "https://api.capyngen.com/api/blogs";
 
   // Helper: generate slug from title
   const makeSlug = (title = "") =>

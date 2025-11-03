@@ -88,7 +88,7 @@ export default function ScrollRevealEffect() {
     setShowResponse(false);
 
     try {
-      const response = await fetch("http://api.capyngen.com/api/contact", {
+      const response = await fetch("https://api.capyngen.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
