@@ -27,6 +27,188 @@ import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/web-development#webpage",
+  url: "https://www.capyngen.com/web-development",
+  name: "Website Development Company | Build Your Website – Capyngen",
+  description:
+    " Looking for website development company? Get a fast, responsive, and SEO-friendly website built by Capyngen. Start your online journey today — contact us now. {Source page}.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/web-development#service",
+  name: "Web Development Services",
+  serviceType:
+    "Website Design & Development, E-commerce Development, CMS Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Looking for website development company? Get a fast, responsive, and SEO-friendly website built by Capyngen. Start your online journey today — contact us now!. :contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/web-development",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/webdevBanner3-DQe2LW_N.jpg",
+    caption: "Website Development Company | Build Your Website with Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/web-development#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is website development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Website development entails the process of setting up and managing websites, which involves front-end, back-end, and full stack development as well as ensuring functionality, performance, and user experience.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is professional website development important?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Professional website development helps build trust, increase visitors, enhance engagement, and convert visitors into customers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What services are included in website development services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our website development services include custom website design, responsive design, CMS integration, web application development, e-commerce solutions, SEO, and ongoing maintenance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to build a website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The development time depends on website complexity, but standard business websites are usually completed within 3 to 12 weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen handle custom website development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops fully customized websites aligned with your brand identity, content, and business goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide responsive website design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, all our websites are fully responsive, optimized for desktops, tablets, and mobile devices for seamless user experiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What CMS platforms do you work with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We work with WordPress, Shopify, Joomla, Drupal, and other CMS platforms to choose the most suitable one for your business needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you develop e-commerce websites?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide e-commerce website development including secure payment gateways, product catalogs, and smooth checkout systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer web application development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we create interactive, scalable, and business-oriented web applications tailored for modern workflows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure SEO-friendly development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We ensure SEO-friendly development with clean coding, fast-loading pages, optimized images, meta tags, and structured schema markup.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate third-party APIs and tools?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our team can integrate social media, CRMs, analytics, payment gateways, marketing platforms, and other third-party APIs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide website maintenance services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer regular website updates, backups, security monitoring, and continuous technical support.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Capyngen the best website development company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen combines creativity, cutting-edge technology, and strategic expertise to deliver high-quality, scalable, and reliable website development solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you build multilingual websites?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop multilingual websites and internationalized web apps to help businesses expand into global markets.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer landing page development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we design and develop marketing-focused landing pages that attract leads and convert visitors into customers.",
+      },
+    },
+  ],
+};
+
 const WebDevelopment = () => {
   const faqItems = [
     {
@@ -522,6 +704,13 @@ const WebDevelopment = () => {
           name="keywords"
           content="Website Development Company | Build Your Website with Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <BannerRollingGallery autoplay={true} pauseOnHover={true} />
       <div className="relative z-10">

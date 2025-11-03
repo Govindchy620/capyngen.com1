@@ -24,6 +24,169 @@ import CardsSection from "../components/CardsSection";
 import HowWeWork from "../components/HowWeWork";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/public-service#webpage",
+  url: "https://www.capyngen.com/industries/public-service",
+  name: "Capyngen delivers digital transformation and technology-driven solutions for the public service sector, empowering governance and citizen engagement.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/publicServiceBanner3-C8PGX3jz.jpg",
+    width: 1200,
+    height: 800,
+    caption: "Public Service Industry Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Public Service",
+        item: "https://www.capyngen.com/industries/public-service",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/industries/public-service#service",
+  name: "Public Service IT Solutions",
+  serviceType:
+    "eGovernance Solutions, Citizen Service Portals, Smart City Applications, Public Data Management Systems",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen delivers innovative digital transformation solutions for the public service sector, including eGovernance platforms, smart city applications, and citizen engagement systems that enhance transparency and efficiency.",
+  url: "https://www.capyngen.com/industries/public-service",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/publicServiceBanner3-C8PGX3jz.jpg",
+    caption:
+      "Public Service IT Solutions | eGovernance | Smart City | Citizen Engagement",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What Are Public Service Digital Solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "They are technology-driven platforms that help not only governments but also public organizations improve their efficiency, clarity, and citizen engagement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you Provide E-Governance Solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed, we work on the development of e-Governance platforms that are safe and easy for users to access.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you Able to Construct Citizen Service Applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sure, as our team can do mobile apps for public services such as bill payments, complaint tracking, and document requests.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you Provide Smart City Solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Certainly, our company is fully dedicated to the development of IoT-based smart city solutions for traffic, energy, and waste management.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the Healthcare System of the Public Sector Able to be Improved by Your Solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, we build comprehensive digital healthcare systems for hospitals, health monitoring, and vaccination drives.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are You Creating Educational Platforms for Government Use?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely, we do e-learning portals and digital classrooms for public education.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can You Deliver Data Analytics for Public Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We build data visualizations that allow policy makers to grasp critical public data trends.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are You Producing Apps for the Safety of the Public?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We make public safety apps for the areas of emergency response, disaster management, and law enforcement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are You Able to Integrate Your Solutions with Current Government Systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course, our integration into ERP, legacy systems, and third-party APIs goes effortlessly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do You Offer Solutions for the Identification of a Digital Identity?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, we design the identity verification and identity authentication systems in a secured manner.",
+      },
+    },
+  ],
+};
+
 const PublicService = () => {
   const slides = [
     {
@@ -363,6 +526,13 @@ const PublicService = () => {
           name="keywords"
           content="IT Solutions for Public Sector Industry | AI & E-commerce Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner4 slides={slides} />
       <CardsSectionImage

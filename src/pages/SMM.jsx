@@ -27,6 +27,188 @@ import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/smm#webpage",
+  url: "https://www.capyngen.com/smm",
+  name: "Social Media Marketing | Grow Your Brand Online – Capyngen",
+  description:
+    "Boost your brand presence with Capyngen’s social media marketing services. Engage, grow, and convert your audience across all major social platforms today!",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/smm#service",
+  name: "Social Media Marketing (SMM) Services",
+  serviceType:
+    "Social Media Strategy, Social Media Management, Social Media Advertising",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Boost your brand presence with Capyngen’s social media marketing services. Engage, grow, and convert your audience across all major social platforms today!:contentReference[oaicite:1]{index=1}",
+  url: "https://www.capyngen.com/smm",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/smm7-DS4W0H5s.png",
+    caption: "Social Media Marketing | Grow Your Brand Online – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/smm#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is social media marketing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Social media marketing is the process of promoting a company's products, services, or brand via social media platforms like Facebook, Instagram, LinkedIn, and Twitter to increase awareness and user engagement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is social media marketing important for businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Social media marketing helps businesses build brand awareness, reach target audiences, and increase traffic and sales using affordable tools that level the playing field for small and large companies alike.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What services does a social media marketing agency provide?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Social media agencies provide services such as social media management, advertising campaigns, content creation, data analysis, and strategic planning.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can social media marketing help small businesses grow?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Well-planned social media campaigns can help small businesses gain visibility, attract new customers, and generate leads in a cost-effective way.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is social media advertising?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Social media advertising involves paying for promotional posts or media placements to reach a specific target audience and achieve defined marketing goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do social media management services work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Social media management includes the full marketing process from content planning and creation to ad campaign execution, performance tracking, and reporting.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen handle social media promotion for enterprises?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Capyngen works with leading enterprises worldwide to deliver data-driven and high-impact social media campaigns using expert strategy and resources.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which platforms do you cover for social media marketing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen provides marketing services for Facebook, Instagram, LinkedIn, Twitter, YouTube, and other emerging social platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to see results from social media marketing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Results vary by campaign, but most clients see noticeable engagement and traffic increases within 1–3 months, while long-term brand authority develops over time.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can social media marketing increase website traffic and sales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Targeted social media marketing can drive high-quality traffic to your website and boost conversions by promoting offers and engaging audiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide analytics and reporting?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We track and report metrics such as engagement, reach, clicks, and ROI to assess the success of each campaign and inform ongoing strategy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you create effective social media content?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We create engaging social media content using detailed research, trending topics, strong visuals, and data-driven creative strategies to attract and retain audiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can social media marketing integrate with other digital marketing efforts?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Our social media campaigns integrate seamlessly with SEO, email marketing, and paid advertising for a unified digital marketing strategy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are social media marketing services suitable for startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Social media is a cost-effective tool for startups to build brand visibility, grow audiences, and attract new customers quickly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I get started with Capyngen social media marketing services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Simply contact Capyngen to schedule a consultation, and we’ll build a customized social media marketing strategy tailored to your business goals.",
+      },
+    },
+  ],
+};
+
 const SMM = () => {
   const faqItems = [
     {
@@ -330,6 +512,13 @@ const SMM = () => {
           name="keywords"
           content="Social Media Marketing | Grow Your Brand Online – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner15 />
       <FullSizeImageSection

@@ -22,7 +22,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Facebook,
-      href: "https://www.facebook.com/profile.php?id=100086626928653",
+      href: "https://www.facebook.com/capyngen",
       label: "Facebook",
     },
     {

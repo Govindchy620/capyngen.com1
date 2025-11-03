@@ -27,6 +27,188 @@ import CardsSection from "../components/CardsSection";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/enterprise-solutions#webpage",
+  url: "https://www.capyngen.com/enterprise-solutions",
+  name: "Enterprise IT Solutions | Capyngen",
+  description:
+    "Capyngen offers end-to-end Enterprise IT Solutions designed to optimize operations, enhance productivity, and scale your business with robust digital infrastructure and smart automation. {Source page}.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/enterprise1-CY627fNw.jpg",
+    caption: "Enterprise IT Solutions | Digital Transformation | Capyngen",
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/enterprise-solutions#service",
+  name: "Enterprise Solutions",
+  serviceType:
+    "Enterprise Software Development, Cloud Migration Services, Scalable IT Platforms, Enterprise App Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen provides enterprise-grade digital transformation solutions including cloud migration, scalable software platforms and enterprise app development to support growth and optimize operations.",
+  url: "https://www.capyngen.com/enterprise-solutions",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/enterprise1-CY627fNw.jpg",
+    caption:
+      "Enterprise Solutions | Cloud Migration | Scalable Software | Enterprise Apps",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What kinds of enterprise solutions can Capyngen deliver?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen has got it covered with a complete range of enterprise solutions that includes enterprise software solutions, enterprise IT solutions, enterprise cloud solutions, enterprise application solutions, enterprise security solutions, data analytics, and IT consulting capable of adapting to your business needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Capyngen capable of tailoring solutions to meet the requirements of specific sectors?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely! We are the best at creating tailored enterprise solutions for the manufacturing industry, healthcare, finance, retail, logistics, and professional services. Our sector experts understand industry-specific issues, rules, and practices to deliver solutions that fit your business perfectly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your enterprise solutions safe?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Security comes first at Capyngen! Our enterprise security solutions feature advanced threat monitoring, multi-tier firewalls, intrusion detection systems, encryption, access controls, compliance management, and 24/7 SOC monitoring to keep your systems protected.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your enterprise solutions on the cloud?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! We are proud cloud-based enterprise solutions providers for businesses of all sizes, offering cloud migration, hybrid cloud architecture, multi-cloud management, and cloud-native app development on AWS, Azure, and Google Cloud.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Support for enterprise solutions is just for a certain period, right?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen provides 24/7 support for all enterprise IT solutions including application management, cloud services, security monitoring, and infrastructure maintenance — ensuring maximum uptime and reliability.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the timeframe to implement enterprise solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The implementation timeframe depends on the project’s scope and complexity. Simple cloud migrations may take 4–8 weeks, while large-scale digital transformation projects can take 6–12 months. We provide detailed timelines during the planning phase.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much do enterprise solutions from Capyngen cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Costs vary based on solution complexity, scale, technology stack, and support requirements. We offer project-based, subscription-based, and managed service pricing models. Contact us for a personalized estimate that fits your budget.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will you be able to merge the new innovations with our current infrastructure?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely! Our integration experts ensure seamless connection between new and existing systems, third-party applications, and databases — maintaining smooth data flow and unified technology operations across your environment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you deliver enterprise solutions for small and medium businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! While we specialize in enterprise-grade solutions, our scalable options are ideal for growing businesses. Our flexible architecture lets you start small and expand as your operations grow.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the reasons that Capyngen is the best Indian enterprise IT solutions company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen stands out due to deep expertise, industry experience, a comprehensive service portfolio, a strong focus on security, 24/7 support, and a proven record of delivering successful transformations across sectors.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you keep things going in the business during implementation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We ensure business continuity by executing phased rollouts, testing in controlled environments, deploying during off-peak hours, running parallel systems, and offering comprehensive training to minimize disruptions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which technologies do you use in enterprise solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We utilize the latest technologies, including cloud platforms (AWS, Azure, Google Cloud), enterprise software (SAP, Oracle, Microsoft), programming languages (Java, .NET, Python), databases (SQL, NoSQL), and emerging tech like AI, ML, IoT, and blockchain.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer training for our team on the new enterprise system?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! We provide comprehensive training tailored for end-users, admins, and technical teams. Training includes documentation, hands-on sessions, video tutorials, and continuous learning support.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is your approach to dealing with data migration in new enterprise systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our data migration process involves assessment, cleansing, mapping, validation, and testing using reliable tools to ensure accurate, secure, and complete data transfer with minimal downtime and zero data loss.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen be of service in creating a digital transformation strategy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! Our enterprise consulting services include building comprehensive digital transformation strategies — from assessing your current setup and identifying opportunities to creating roadmaps, suggesting technologies, and supporting execution.",
+      },
+    },
+  ],
+};
+
 const EnterpriseSolutions = () => {
   const faqItems = [
     {
@@ -277,6 +459,13 @@ const EnterpriseSolutions = () => {
           name="keywords"
           content="Enterprise Solutions | Scalable IT & Cloud Software – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner8
         titleMain="Enterprise Solutions"

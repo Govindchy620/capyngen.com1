@@ -30,6 +30,183 @@ import TopRatedCompany from "../components/TopRatedCompany";
 import BenefitsSection from "../components/BenefitsSection";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/insurance#webpage",
+  url: "https://www.capyngen.com/industries/insurance",
+  name: "IT Solutions for Insurance Industry | Best Digital & Software Services",
+  description:
+    "Capyngen provides innovative IT solutions for the insurance industry. We build custom software and digital platforms to automate, secure, and grow your business.",
+  inLanguage: "en-US",
+  keywords: [
+    "Insurance software development",
+    "Insurance mobile applications",
+    "Health insurance software",
+  ],
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType:
+    "IT Solutions for Insurance Industry | Best Digital & Software Services",
+  name: "IT Solutions for Insurance Industry | Best Digital & Software Services",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  url: "https://www.capyngen.com/industries/insurance",
+  description:
+    "Capyngen provides innovative IT solutions for the insurance industry. We build custom software and digital platforms to automate, secure, and grow your business.",
+  keywords: [
+    "Insurance software development",
+    "Insurance mobile applications",
+    "Health insurance software",
+  ],
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What type of insurance software solutions do you provide?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our work ranges from custom insurance apps, CRM systems, claims management platforms, and policy management portals to anything else that is necessary for the insurance sector.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you develop a digital platform for policy management?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely. We are crafting such platforms that allow users to purchase, renew, and monitor their policies with no problem.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide insurance mobile app development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course, we create iOS and Android apps for life, health, auto, and general insurance companies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you build AI-powered claim settlement systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our AI-driven solutions handle the automation of the claims process and minimize fraud.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create customer self-service portals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, in fact, we create self-service portals where buyers can purchase policies, get renewals, and register claims.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate chatbots into insurance apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we embed AI chatbots for instant customer support and policy recommendations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide solutions for health insurance companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we design apps and portals for health insurance companies with features like claim tracking and telemedicine integration.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you develop auto insurance apps with telematics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the auto insurance applications that we produce incorporates telematics that allows the use of usage-based insurance models.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer solutions for life insurance companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provision platforms for life insurance that come with premium calculators, reminders, and policy management features.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your software reduce claim processing time?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The automation by AI and digital workflows benefits claim settlements by speeding up the process greatly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide cloud-based insurance solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we set the insurance platforms on the cloud that is scalable, safe, and without any downtimes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your insurance solutions help reduce fraud?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the combination of AI and data analytics unveil the cases of fraudulent claims and identify the risky patterns.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you integrate payment gateways for insurance premiums?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, along with the integration of different payment methods such as cards, UPI, and wallets, we ensure the security of the transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your platforms integrate with third-party systems like hospitals or vehicle databases?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "By building APIs, we enable the connection with external systems to result in faster data verification.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer ongoing support for insurance applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we do full cycle development, maintenance, and support services.",
+      },
+    },
+  ],
+};
+
 const Insurance = () => {
   const slides = [
     {
@@ -296,6 +473,13 @@ const Insurance = () => {
           name="keywords"
           content="IT Solutions for Insurance Industry | Best Digital & Software Services"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner4 slides={slides} />
       <GetStarted

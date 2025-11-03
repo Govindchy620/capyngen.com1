@@ -25,6 +25,172 @@ import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/app-development#webpage",
+  url: "https://www.capyngen.com/app-development",
+  name: "Mobile App Development Company | Build Scalable Apps – Capyngen",
+  description:
+    "Looking for a mobile app development company? Capyngen builds powerful Android, iOS, and cross-platform apps tailored to your business goals. Get fast, scalable, and secure app solutions today. {Source page}.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/app-development#service",
+  name: "Mobile App Development Services",
+  serviceType:
+    "Android App Development, iOS App Development, Cross-Platform App Development, Enterprise App Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Looking for a mobile app development company? Capyngen provides end-to-end Android, iOS, and cross-platform app development services to help your business grow with innovative, scalable, and user-friendly applications. :contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/app-development",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/appDevFullSize-DC2Xspjb.png",
+    caption:
+      "Mobile App Development Company | Build Android & iOS Apps with Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the Capyngen Services related to app Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We provide Android, iOS, cross-platform, custom app development, enterprise app solutions, testing, and app maintenance services that fall under our mobile app development umbrella.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should I select Capyngen to be my app development company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen is made up of expert app developers, has the advantages of a comprehensive skill set, and is known for delivering highly secure, scalable, user-friendly apps that facilitate the achievement of business goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for you to develop custom Android applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Exactly! We offer custom Android app development services for startups, SMEs, and enterprises.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it true that you handle iPhone app development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we are an iOS app development company that is reliable and delivers high-quality apps for iPhone and iPad.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create cross-platform apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, taking a leading position in cross-platform app development, we create apps that are compatible with both Android and iOS.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you have any plans for developing enterprise applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we have the most flexible enterprise app development solutions to face challenges in business processes and workflows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What exactly is mobile application testing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mobile application testing is the process of exhaustively checking mobile apps for bugs, security, usability, and performance issues. Capyngen provides Mobile Application Testing services along with the regular workflow.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you have app maintenance services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Certainly, our app maintenance services include regular updates, bug fixing, feature expansion, and performance monitoring.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much time is required for app development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Development timeline mainly depends on app complexity and for most of the apps, it ranges from 6 to 16 weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for you to link APIs and other third-party resources with my app?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sure enough, we integrate your app with payment gateways, analytics tools, CRMs, and other services.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your apps safe and easily scalable?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course. Security and scalability are always on the table when we discuss our custom app solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create e-commerce apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As one of the best e-commerce app development companies in India, we specialize in e-commerce apps for online stores with easy shopping experiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for Capyngen to offer assistance and take part in formulating the app strategy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, we offer comprehensive consulting, strategy, development, testing, and support services for mobile applications.",
+      },
+    },
+  ],
+};
+
 const AppDevelopment = () => {
   const faqItems = [
     {
@@ -383,6 +549,13 @@ const AppDevelopment = () => {
           name="keywords"
           content="Mobile App Development Company | Android & iOS Apps by Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner13
         title="Professional"

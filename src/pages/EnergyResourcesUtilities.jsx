@@ -46,6 +46,211 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id":
+    "https://www.capyngen.com/industries/energy-resources-utilities#webpage",
+  url: "https://www.capyngen.com/industries/energy-resources-utilities",
+  name: "Capyngen delivers smart Energy, Resources & Utilities IT Solutions that drive sustainability, efficiency, and innovation across industries.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/energyResourcesBanner1-Bdq5_C_1.png",
+    width: 1200,
+    height: 800,
+    caption: "Energy, Resources & Utilities Industry Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Energy, Resources & Utilities",
+        item: "https://www.capyngen.com/industries/energy-resources-utilities",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id":
+    "https://www.capyngen.com/industries/energy-resources-utilities#service",
+  name: "Energy, Resources and Utilities IT Solutions",
+  serviceType:
+    "Energy Management Systems, Utility Billing Software, Renewable Energy Monitoring, Resource Optimization Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen develops advanced digital solutions for the Energy, Resources & Utilities sector, offering smart energy management systems, renewable energy monitoring platforms, and resource optimization software to promote sustainability and operational excellence.",
+  url: "https://www.capyngen.com/industries/energy-resources-utilities",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/energyResourcesBanner1-Bdq5_C_1.png",
+    caption:
+      "Energy, Resources & Utilities IT Solutions | Energy Management | Resource Optimization | Smart Utilities",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are energy management software solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "These are software systems that help utilities, oil & gas, and renewable energy companies monitor, control, and optimize the energy they produce and distribute.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for Capyngen to design smart grid software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course, Capyngen specializes in smart grid software development, enabling efficient energy flow and real-time supervision.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does your company provide utility billing software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our software streamlines invoicing, payment collection, and reporting for the utilities sector.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you able to develop renewable energy software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we build advanced software for solar, wind, and hydro energy generation and management.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which business areas or branches do you cover?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve companies in power, utilities, oil & gas, renewable energy, and smart grid sectors.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is your software scalable?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our energy management software is scalable and adaptable for businesses of all sizes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide integration with IoT?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our solutions integrate with smart meters, sensors, and IoT devices for real-time monitoring.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you develop custom oil & gas management software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer custom ERP and management systems for oil & gas companies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is energy analytics software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Energy analytics software processes energy data to deliver insights that improve efficiency and reduce waste.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you support smart meter data management?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our tools support monitoring, management, and accurate reporting of smart meter data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your solutions compliant with industry regulations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, all our software solutions comply with major energy sector regulations and standards.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Could a small utility firm use your software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our software is suitable for both small utilities and large energy enterprises.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide maintenance and support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide ongoing updates and dedicated support for smooth software operation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your software integrate with existing systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our software easily integrates with legacy infrastructure and ERP systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen for energy management software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We combine expertise, innovation, flexibility, and dedicated support to deliver the best energy management solutions.",
+      },
+    },
+  ],
+};
+
 const EnergyResourcesUtilities = () => {
   const faqItems = [
     {
@@ -314,6 +519,13 @@ const EnergyResourcesUtilities = () => {
           name="keywords"
           content="Energy Management Software Solutions | Smart Grid & ERP Systems – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <ExpandableGallery panels={panels} />
       <GetStarted

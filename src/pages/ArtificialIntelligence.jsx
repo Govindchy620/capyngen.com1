@@ -31,6 +31,189 @@ import Banner9 from "../components/Banner9";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/artificial-intelligence#webpage",
+  url: "https://www.capyngen.com/artificial-intelligence",
+  name: "Artificial Intelligence Solutions | AI-Powered Development",
+  description:
+    "Transform your business with Capyngen’s artificial intelligence solutions. We build smart AI-powered applications and development services for every industry.",
+  inLanguage: "en",
+  keywords: "Artificial Intelligence Solutions | AI-Powered Development",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType:
+    "Artificial Intelligence, Artificial intelligence solutions, AI development services, Artificial intelligence applications, AI-powered solutions, AI software development, Artificial intelligence technology, AI consulting services",
+  name: "Artificial Intelligence Solutions | AI-Powered Development",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Global",
+  },
+  url: "https://www.capyngen.com/artificial-intelligence",
+  description:
+    "Transform your business with Capyngen’s artificial intelligence solutions. We build smart AI-powered applications and development services for every industry.",
+  keywords: "Artificial Intelligence Solutions | AI-Powered Development",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.capyngen.com/contact",
+    price: "0.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+  },
+  category: "Artificial Intelligence Services",
+  serviceOutput:
+    "Transform your business with Capyngen’s artificial intelligence solutions. We build smart AI-powered applications and development services for every industry.",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What Is Artificial Intelligence (AI)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Artificial Intelligence is the technology that allows machines to carry out tasks that usually require human intelligence such as learning, logical thinking, problem-solving, and decision-making.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How Can Artificial Intelligence Help My Business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AI helps businesses automate tasks, gather and analyze data to identify patterns, make accurate decisions, improve customer relationships through personalized services, and calculate expenses efficiently.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What Are Some Artificial Intelligence Solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AI-powered tools such as automation systems, predictive analytics, chatbots, and intelligent applications are designed to solve business challenges effectively.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What Industries Can Benefit The Most From AI Technology?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AI benefits sectors like healthcare, finance, retail, manufacturing, real estate, education, travel, and logistics by enabling automation, personalization, and data-driven decision-making.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What Are The Most Popular Artificial Intelligence Applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Popular AI applications include chatbots, recommendation engines, image recognition, predictive maintenance, fraud detection, voice assistants, and automated data processing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do You Provide AI Development Services For Startups And Enterprises?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides AI development solutions tailored for startups and enterprises to foster innovation and business growth.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "In What Way Can AI Improve The Customer Experience?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AI enhances customer experience through personalized recommendations, 24/7 chatbots, predictive suggestions, and smarter, more engaging communication.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How Machine Learning Is Necessary For AI Solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Machine learning is a key component of AI that enables systems to learn from data, recognize patterns, and make decisions with minimal human intervention.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can AI Be Integrated With The Business Systems That Are Already in Place?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, AI can be seamlessly integrated with existing software, CRM, ERP, or websites to enhance performance without major modifications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is AI Suitable For Small Businesses As Well?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. AI helps small and medium businesses increase efficiency by automating repetitive tasks and offering actionable marketing and data insights.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How Long Does It Take To Develop An AI-Powered Solution?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Development timelines depend on the project’s complexity, available data, and customization, but typically AI solutions are completed within 3 to 6 months.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do You Provide AI Consulting Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen offers full AI consulting services including business requirement analysis, opportunity identification, and AI strategy development.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is AI Secure?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, with proper security protocols, AI systems adhere to strict standards ensuring data protection and regulatory compliance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What Are The Factors That Make Capyngen's AI Unique?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen combines advanced AI technology with business-focused strategies, offering custom development, smooth integration, and ongoing support for sustainable growth.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How To Get Started With AI For My Business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can start by booking a consultation with Capyngen’s AI experts. We’ll define your goals and create a simple, clear AI implementation plan tailored to your business.",
+      },
+    },
+  ],
+};
+
 const ArtificialIntelligence = () => {
   const faqItems = [
     {
@@ -324,6 +507,13 @@ const ArtificialIntelligence = () => {
           name="keywords"
           content="Artificial Intelligence Solutions | AI-Powered Development"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner9 />

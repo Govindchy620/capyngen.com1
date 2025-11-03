@@ -25,6 +25,193 @@ import {
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/application-solutions#webpage",
+  url: "https://www.capyngen.com/application-solutions",
+  name: "Application Development & Integration Solutions | Capyngen",
+  description:
+    "Looking for custom application solutions? Capyngen offers secure and scalable application development, modernization, and integration services tailored to your business needs. Accelerate your digital growth with our innovative app solutions. {Source page}.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/applicationSolution3-DwALVmQ_.png",
+    caption: "Application Solutions | Capyngen",
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/application-solutions#service",
+  name: "Application Development & Integration Solutions",
+  serviceType:
+    "Custom Application Development, Enterprise Application Integration, Cloud Application Solutions, Application Modernization",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen provides innovative application development and integration solutions that empower businesses with secure, scalable, and performance-driven applications. Modernize your enterprise with our cloud-ready app services. :contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/application-solutions",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/applicationSolution3-DwALVmQ_.png",
+    caption: "Application Development & Integration Solutions | Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are application solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Application solutions are systems that utilize software to solve business problems and enhance operations through web, mobile, and cloud-based applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should businesses invest in custom application solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Custom application solutions allow businesses to address specific needs, improve efficiency, and gain a competitive advantage by offering optimized and feature-rich systems tailored to their workflows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Capyngen offer enterprise application solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Capyngen develops scalable, secure, and high-performance enterprise-grade applications that handle complex business processes effectively.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What technologies do you use for app development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We use leading technologies like React, Node.js, Flutter, AWS, and Kubernetes to ensure smooth performance, flexibility, and scalability of our clients’ applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you develop mobile and web applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We design and develop both mobile and web applications tailored to your business goals and user experience needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen build cloud-native apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Capyngen specializes in developing scalable, flexible, and cost-efficient cloud-native applications for modern business environments.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you modernize legacy applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We upgrade outdated software into modern, efficient systems that align with the latest business and technology standards.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which industries do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve multiple industries including healthcare, finance, education, retail, media, software, telecommunications, and more.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your applications secure and scalable?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Every Capyngen application follows strict security protocols and is designed to scale seamlessly as your business grows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer SaaS application development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We build cloud-based SaaS applications that enable businesses to deliver subscription-based services efficiently and securely.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your applications integrate with existing systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Our team develops APIs that seamlessly connect your new applications with existing systems and third-party tools for smooth data exchange.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to build an application?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Project timelines depend on complexity, but most applications are developed within 4 to 10 weeks from concept to deployment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer post-launch support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Capyngen provides complete post-launch maintenance, updates, and performance monitoring to ensure your application remains up-to-date and reliable.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your solutions suitable for startups and enterprises?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We design scalable application solutions suitable for both startups and large enterprises, ensuring efficiency and adaptability at every stage of growth.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I get started with Capyngen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Getting started is simple — schedule a free consultation with our team, and we’ll work with you to develop customized application solutions for your business.",
+      },
+    },
+  ],
+};
+
 const ApplicationSolutions = () => {
   const faqItems = [
     {
@@ -306,6 +493,13 @@ const ApplicationSolutions = () => {
           name="keywords"
           content="Application Solutions | Business & Custom App Solutions – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <CreativeAgencyFAQ

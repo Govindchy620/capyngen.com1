@@ -27,6 +27,188 @@ import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 import { Link } from "react-router-dom";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/blockchain-development#webpage",
+  url: "https://www.capyngen.com/blockchain-development",
+  name: "Blockchain Development | Blockchain App Development Company – Capyngen",
+  description:
+    "Capyngen delivers secure and scalable blockchain development services. Build powerful blockchain apps and smart solutions for your business today!. {Source page URL}.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/blockchain-development#service",
+  name: "Blockchain Development Services",
+  serviceType: "Blockchain Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen delivers secure and scalable blockchain development services. Build powerful blockchain apps and smart solutions for your business today!. ([capyngen.com](https://www.capyngen.com/blockchain-development))",
+  url: "https://www.capyngen.com/blockchain-development",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/blockchainDevelopment-DJDa0DBz.webp",
+    caption:
+      "Blockchain Development | Blockchain App Development Company – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/blockchain-development#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is blockchain development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Blockchain development refers to the process of designing and implementing secure, decentralized systems that store data across distributed ledgers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is blockchain important for businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Blockchain improves trust, transparency, and efficiency in operations, helping businesses reduce costs, eliminate intermediaries, and strengthen customer and partner relationships.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Capyngen offer custom blockchain development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides fully customized blockchain development services tailored to meet your business objectives and network requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you build smart contracts?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our team develops secure and reliable smart contracts for multiple platforms such as Ethereum, Binance Smart Chain, and Solana.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide blockchain app development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop blockchain-based decentralized applications (DApps) that are secure, scalable, and designed with a user-friendly interface.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which industries can use blockchain solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Blockchain technology can be effectively used in industries such as finance, healthcare, insurance, supply chain, education, transportation, and retail.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What blockchain platforms do you work with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We work with various blockchain platforms including Ethereum, Hyperledger, Solana, Binance Smart Chain, Polkadot, and Cardano depending on client needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is blockchain secure for enterprises?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, blockchain offers high security using cryptography and decentralization, making it far less vulnerable to hacks than traditional systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does blockchain development take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The development timeline depends on project complexity. Most blockchain projects typically take between 4 to 12 weeks to complete.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer blockchain consulting services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides end-to-end blockchain consulting — from planning and architecture to implementation and optimization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen integrate blockchain into my existing systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer seamless blockchain integration services that securely connect new blockchain modules with your existing enterprise systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen is known for supporting startups with cost-effective blockchain development services that scale as their business grows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide post-launch support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide continuous maintenance, updates, and technical support for all blockchain solutions after deployment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is blockchain scalable for global operations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, with the right architecture, blockchain can easily scale to support global operations, transactions, and large user bases.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I start my blockchain project with Capyngen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Simply fill out our consultation form. Our blockchain specialists will review your goals and create a tailored blockchain strategy for your business.",
+      },
+    },
+  ],
+};
+
 const BlockchainDevelopment = () => {
   const faqItems = [
     {
@@ -375,6 +557,13 @@ const BlockchainDevelopment = () => {
           name="keywords"
           content="Blockchain Development | Blockchain App Development Company – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner4 slides={slides} />
       <GetStarted

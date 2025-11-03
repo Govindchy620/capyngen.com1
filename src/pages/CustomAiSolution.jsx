@@ -20,6 +20,187 @@ import Banner3 from "../components/Banner3";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/custom-ai-solutions#webpage",
+  url: "https://www.capyngen.com/custom-ai-solutions",
+  name: "Custom AI Solutions | AI Software Development Company – Capyngen",
+  description:
+    "Transform your business with Capyngen’s custom AI solutions. As a top AI software development company, we build intelligent, scalable, and future-ready systems.. ([capyngen.com/custom-ai-solutions](https://www.capyngen.com/custom-ai-solutions))",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/custom-ai-solutions#service",
+  name: "Custom AI Solutions",
+  serviceType: "Custom Artificial Intelligence Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Transform your business with Capyngen’s custom AI solutions. As a top AI software development company, we build intelligent, scalable, and future-ready systems.. ([capyngen.com/custom-ai-solutions](https://www.capyngen.com/custom-ai-solutions))",
+  url: "https://www.capyngen.com/custom-ai-solutions",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/customAi1-bBKVafWq.jpg",
+    caption: "Custom AI Solutions | AI Software Development Company – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/custom-ai-solutions#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the custom AI solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Custom AI solutions are specifically tailored to meet the unique needs of each business. They help integrate and optimize artificial intelligence applications across various business processes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Capyngen provide AI consulting services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides expert AI consulting services, assessing business needs and recommending the most effective AI strategies and solutions for implementation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it in your power to launch enterprise AI solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen delivers enterprise-grade AI solutions for large-scale industrial and technological operations across the globe.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What kind of sectors do you specialize in?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen serves a wide range of sectors including finance, healthcare, retail, logistics, telecommunications, and other large enterprises worldwide.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you involved in AI software development projects?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen is a leader in AI software development, creating intelligent, user-centric systems that enhance business efficiency and innovation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Capyngen capable of developing AI-powered apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops AI-powered mobile and web applications that leverage advanced algorithms to deliver smart, efficient, and adaptive performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide predictive analytics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, predictive analytics is one of our core AI services, enabling businesses to anticipate trends, forecast outcomes, and make data-driven decisions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can AI be utilized to automate my business processes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our AI-driven automation tools streamline repetitive workflows, enhance productivity, and reduce operational costs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you design and develop NLP and chatbot models?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops NLP and chatbot models that understand and process human language, providing intelligent, conversational experiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the cost of custom AI development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The cost of custom AI development depends on project complexity, scalability, and features. For an accurate quote, please contact Capyngen’s AI consulting team.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to develop AI solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The development timeline depends on project scope, but typically ranges from 12 to 24 weeks for enterprise-grade AI solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you available for ongoing AI support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides continuous support, maintenance, and updates for deployed AI systems to ensure long-term success and stability.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen integrate AI with existing systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen offers seamless AI integration services for ERP, CRM, and other enterprise platforms to enhance overall functionality.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you the provider of computer vision solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen offers advanced computer vision and image recognition services designed for intelligent automation and smart analytics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Capyngen a worldwide AI development company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen is a global AI development company offering AI consulting and development services to clients across multiple countries and industries.",
+      },
+    },
+  ],
+};
+
 const CustomAiSolution = () => {
   const faqItems = [
     {
@@ -310,6 +491,13 @@ const CustomAiSolution = () => {
           name="keywords"
           content="Custom AI Solutions | AI Software Development Company – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner3

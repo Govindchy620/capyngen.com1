@@ -29,6 +29,251 @@ import CardsSectionSlider from "../components/CardsSectionSlider";
 import HowWeWork from "../components/HowWeWork";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/gaming#webpage",
+  url: "https://www.capyngen.com/industries/gaming",
+  name: "IT Solutions for Gaming Industry | Game App Development Services – Capyngen",
+  description:
+    "Capyngen offers innovative IT solutions for the gaming industry. From Android, iOS, and PC game development to cloud gaming — we bring your ideas to life.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/gamingBanner1-XYZ.jpg",
+    width: 1200,
+    height: 800,
+    caption: "Gaming Industry IT Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Gaming",
+        item: "https://www.capyngen.com/industries/gaming",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Gaming Industry Digital Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/images/logo.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  url: "https://www.capyngen.com/industries/gaming",
+  description:
+    "Capyngen delivers next-generation digital marketing, web design, and data-driven solutions tailored for the gaming industry — enhancing player engagement and brand visibility.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Gaming Industry Digital Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Gaming Website Development",
+          description:
+            "Custom gaming website design and development optimized for performance and immersive player experience.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Gaming App UI/UX Design",
+          description:
+            "Visually stunning and user-friendly gaming app interfaces that maximize player engagement.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Digital Marketing for Games",
+          description:
+            "Strategic marketing campaigns including PPC, SEO, and influencer collaborations for gaming brands.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Data Analytics for Gaming",
+          description:
+            "In-depth analytics to measure player behavior, retention, and optimize monetization strategies.",
+        },
+      },
+    ],
+  },
+  image: "https://www.capyngen.com/assets/images/industries/gaming-banner.jpg",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are branding design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In order to develop a cohesive brand identity, these services incorporate logo design, visual identity, packaging, stationery, and digital branding.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is branding important for businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Among the benefits of strong branding are increased recognition, customer loyalty, and competition in the market.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Capyngen provide global branding services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen is a professional branding design company that serves clients all over the world. Through their services, businesses can go international.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you design logos for startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course! We do tailor-made branding works both for startups and for existing companies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create brand guidelines?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we assist with brand guidelines in order to achieve correct brand usage across all forums.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you design packaging and collateral?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed, the team is available to accomplish a task of packaging design, or create your business cards, brochures, and stationery for you.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you handle digital branding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, all-inclusive Web design, social media graphics, and getting online campaigns ready for a digital appearance are parts of digital branding.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does branding design take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Just about 4–8 weeks, it really depends on the size of the worldwide launch and the intricacy of the design work.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer rebranding services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! The company Capyngen provides top-notch rebranding solutions for those businesses that want change.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your designs research-backed?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed, each project comes with market and competitor research that facilitates creating a brand strategy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you ensure cross-platform consistency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, no matter what platform you use - digital, print, or social media - we make sure that everything is harmonized.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you handle multilingual branding for international markets?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides branding design services to the widest possible audience regardless of their location and language.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer ongoing brand support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we are always here ready to help through brand updates and offering expert advice to remain at the leading edge.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen help improve marketing ROI through branding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, a well thought out and professionally done brand can increase customer interaction, sales, and overall campaign productivity.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with Capyngen’s branding design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Take a look at the schedule on our website and pick a time that works for you to receive a free consultation to share your ideas and business needs.",
+      },
+    },
+  ],
+};
+
 const Gaming = () => {
   const faqItems = [
     {
@@ -345,6 +590,13 @@ const Gaming = () => {
           name="keywords"
           content="IT Solutions for Gaming Industry | Game App Development Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <ShuffleHero
         heading={

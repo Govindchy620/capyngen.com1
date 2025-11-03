@@ -40,6 +40,200 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import Banner11 from "../components/Banner11";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Healthcare and Fitness App Development | Capyngen",
+  url: "https://www.capyngen.com/industries/healthcare-fitness",
+  description:
+    "Capyngen offers secure, innovative, and HIPAA-compliant healthcare and fitness app development solutions for hospitals, clinics, gyms, and wellness startups.",
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/images/logo.png",
+    },
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.capyngen.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Healthcare & Fitness",
+        item: "https://www.capyngen.com/industries/healthcare-fitness",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/industries/healthcare-fitness",
+  name: "Healthcare and Fitness IT Solutions",
+  serviceType:
+    "Healthcare Management Systems, Fitness App Development, Telemedicine Solutions, Hospital ERP Software",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen provides cutting-edge digital solutions for the healthcare and fitness industry, including hospital management systems, telemedicine platforms, and fitness tracking applications that enhance patient care and wellness experiences.",
+  url: "https://www.capyngen.com/industries/healthcare-fitness",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/healthcareFitness5-C4Cixs5L.jpg",
+    caption:
+      "Healthcare and Fitness IT Solutions | Telemedicine | Fitness Apps | Hospital ERP",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What does a healthcare app development company do?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It makes apps that are secure and conform to HIPAA for hospitals, clinics, and healthcare centers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you build telemedicine platforms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We develop telemedicine platforms that offer video call and patient management facilities besides keeping the data secure.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your solutions HIPAA compliant?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely. All our healthcare applications are within HIPAA guidelines for securing patients’ data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer EHR software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we create custom EHR software that allows smooth management of patient data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can fitness centers benefit from your apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we create personalized fitness apps for gyms, trainers, and wellbeing startups.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer remote patient monitoring systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we design IoT-enabled platforms that allow live health oversight.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can small clinics use your software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Our products are scalable and fit to be used by small and big healthcare providers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you build custom fitness tracking apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we'd be happy to help you with a project that fits your needs exactly for a custom health and fitness app.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is the security of patient data?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We take advantage of encryption, HIPAA-compliant servers, and access control policies implemented for the utmost security.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer data analytics solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide software that collects and analyzes health data and presents insights in an understandable way.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for your solutions to integrate with legacy systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we have the capacity to ensure the smooth integration of your current healthcare infrastructure with our products.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you support wearable device integration?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we produce apps that can be compatible with IoT technologies and wearable devices.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve hospitals, clinics, gyms, fitness brands, and telemedicine providers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer maintenance after launch?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we are always available for support and upgrades long after the product release.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the reason for choosing Capyngen for healthcare software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We come with experience, security, bespoke solutions, and new ideas to produce the best outcome.",
+      },
+    },
+  ],
+};
+
 const HealthcareAndFitness = () => {
   const faqItems = [
     {
@@ -304,6 +498,13 @@ const HealthcareAndFitness = () => {
           name="keywords"
           content="Healthcare & Fitness App Development Company | Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner11
         heading=" with IT Solutions Beyond Imagination"

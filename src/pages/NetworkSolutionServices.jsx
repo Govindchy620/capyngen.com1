@@ -27,6 +27,188 @@ import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/network-solutions#webpage",
+  url: "https://www.capyngen.com/network-solutions",
+  name: "Network Solutions Company | Reliable IT Infrastructure – Capyngen",
+  description:
+    "Capyngen provides advanced network solutions for businesses, including secure connectivity, infrastructure setup, and network optimization. Build a high-performance and reliable network system with Capyngen. {Source page}.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/network1-DC_0-9zV.jpg",
+    caption: "Network Solutions | Secure Connectivity | Capyngen",
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/network-solutions#service",
+  name: "Network Solutions",
+  serviceType:
+    "Network Infrastructure Design, IT Networking, Cloud Networking, Cybersecurity Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen provides secure and scalable network infrastructure solutions for enterprises, including cloud networking, system integration, and cybersecurity to ensure high performance and data safety.",
+  url: "https://www.capyngen.com/network-solutions",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/network1-DC_0-9zV.jpg",
+    caption:
+      "Network Solutions | IT Networking | Cloud Infrastructure | Cybersecurity",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are network solutions and services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Network solutions and services comprise the creation, implementation, administration, and upkeep of IT network infrastructure. Along with hardware, software, and security measures, the services also include cloud integration and the provision of continuous support to ensure an enterprise's optimal connectivity and performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why do businesses need managed network services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Managed network services allow for the work of experts who provide proactive monitoring, maintenance, and optimization of your network infrastructure. Consequently, the network experiences less downtime, security is improved, operational costs are lowered, and the in-house team is allowed to deal with the primary business activities instead of IT troubleshooting.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How Capyngen can improve network security?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen incorporates a multi-layered security approach consisting of an advanced firewall, intrusion detection systems, VPNs, continuous monitoring, vulnerability assessments, and incident response planning. We design the security safeguards to suit your industry's needs and compliance requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What differentiates on-premise from cloud network services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "On-premises networks are physically located within your site and use hardware that you own and manage. Cloud network services operate on remote servers, offering benefits like greater scalability, flexibility, lower infrastructure costs, and global accessibility through the internet.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much do network solutions and services cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The cost varies depending on the size, complexity, and specific needs of your business. Capyngen provides flexible and scalable network service options to suit any budget—from affordable managed services for small businesses to comprehensive enterprise-grade solutions. Contact us for a custom estimate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you a 24/7 support provider?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed, Capyngen provides complete 24/7 network monitoring and support services. Our dedicated team is always ready to resolve issues, respond to queries, and ensure uninterrupted network operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries are served by Capyngen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We cater to diverse industries including healthcare, finance, retail, manufacturing, education, professional services, and hospitality. Each solution is customized to meet specific compliance and operational needs of the sector.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Could you assist in our network migration to the cloud?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most definitely, yes! Cloud migration services are a core expertise of Capyngen. We assess your current setup, design a smooth and secure migration plan, execute it with minimal downtime, and provide continuous cloud management and optimization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to implement network solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The duration of implementation largely depends on the project’s scope and complexity. While basic configurations may take just a few days, full enterprise network overhauls might take several weeks. We provide a detailed project timeline during the planning phase and work efficiently to minimize business disruption.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is network consulting and do I need it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Network consulting involves experts assessing and planning your IT infrastructure strategically. If you're facing performance or security issues, planning expansion, or upgrading systems, consulting helps you make cost-effective and future-ready network decisions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure network uptime and reliability?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We maintain reliability through proactive monitoring, backup systems, routine maintenance, automated alerts, rapid incident response, and continuous optimization. Our goal is to achieve 99.9%+ uptime for clients.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen support remote and hybrid work environments?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We specialize in building secure network infrastructures for remote and hybrid work environments, including VPN configuration, secure remote access, cloud collaboration tools, and endpoint security for distributed teams.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if there is a network emergency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In case of a network emergency, Capyngen’s 24/7 support team responds immediately. We have established protocols for rapid incident resolution, client communication, and system restoration to ensure minimal disruption.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide network solutions for small businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, definitely! Capyngen offers cost-effective and scalable managed network services tailored for small businesses. Our solutions can grow with your business, ensuring you receive enterprise-grade reliability at an affordable price.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with Capyngen's network services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Getting started is simple! Contact us via our website, phone, or email to book a free consultation. We’ll conduct a network assessment, discuss your goals, and recommend customized solutions — no obligations attached.",
+      },
+    },
+  ],
+};
+
 const NetworkSolutionServices = () => {
   const faqItems = [
     {
@@ -249,6 +431,13 @@ const NetworkSolutionServices = () => {
           name="keywords"
           content="Network Solutions | Managed IT & Cloud Network Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner14
         imageSrc={assets.network1}

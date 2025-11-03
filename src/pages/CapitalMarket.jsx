@@ -41,6 +41,187 @@ import BenefitsSection from "../components/BenefitsSection";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/capital-market#webpage",
+  url: "https://www.capyngen.com/industries/capital-market",
+  name: "Capital Market Software Solutions – Capyngen",
+  description:
+    "Capyngen delivers advanced capital market software solutions. From stock trading and wealth management to algorithmic platforms — power your FinTech innovation.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/industries/capital-market#service",
+  name: "Capital Market Software Solutions",
+  serviceType: "Capital Market IT Solutions, Trading Platform Software",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen delivers advanced capital market software solutions. From stock trading and wealth management to algorithmic platforms — power your FinTech innovation. :contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/industries/capital-market",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/capitalMarketbanner3-DwPulF0d.png",
+    caption: "Capital Market Software Solutions – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/industries/capital-market#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are capital market software solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "They are digital tools used for trading, investment, and wealth management that help improve speed, security, and analytics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can stock trading software help?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It provides real-time trading, fast execution, and smarter investment decisions to improve trading efficiency.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you build algorithmic trading platforms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we design AI-driven, user-friendly automated trading platforms tailored to customer needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is your software secure and compliant?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. All Capyngen products comply with global financial standards and implement advanced security protocols.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can it integrate with our existing system?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen software integrates easily with legacy and third-party systems for smooth operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide real-time data and analytics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our dashboards deliver live trading data, portfolio analytics, and market insights in real time.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes your portfolio software special?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our portfolio software enables multi-asset tracking, AI-powered insights, and seamless integration with other systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How secure is the platform?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We use encryption, multi-factor authentication, and periodic security audits to ensure your data remains protected.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does it support multi-asset trading?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the platform supports trading across multiple asset classes including stocks, forex, options, and futures.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which industries benefit from Capyngen solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Venture Capital firms, Brokerage houses, Hedge Funds, Family Offices, and FinTech Startups benefit from our capital market solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer cloud solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides secure, scalable, and user-friendly cloud-based solutions for financial applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How fast can it be deployed?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "White-label solutions are ready in a few weeks, while custom implementations take around 2–4 months depending on features.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can wealth software be customized?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our wealth management software offers customizable dashboards, reporting, and tools designed for financial advisors.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer support after launch?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide 24/7 technical support, maintenance, and regular updates after deployment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen has years of FinTech experience, delivers scalable and secure solutions, and ensures dedicated support to clients at every stage.",
+      },
+    },
+  ],
+};
+
 const CapitalMarket = () => {
   const faqItems = [
     {
@@ -362,6 +543,13 @@ const CapitalMarket = () => {
           content="Capyngen delivers advanced capital market software solutions. From stock trading and wealth management to algorithmic platforms — power your FinTech innovation."
         />
         <meta name="keywords" content="Capital Market Software Solutions" />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <CreativeAgencyFAQ
         slides={slidesData}

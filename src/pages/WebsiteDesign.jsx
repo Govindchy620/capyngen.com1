@@ -21,6 +21,199 @@ import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/website-design#webpage",
+  url: "https://www.capyngen.com/website-design",
+  name: "Website Design Services | Capyngen",
+  description:
+    "Capyngen offers creative and responsive website design services that help businesses build an impactful online presence. From UI/UX to full website development, we create modern, user-friendly designs for all industries.",
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/webDesign--l8DQpZ8.png",
+    width: 1200,
+    height: 630,
+  },
+  inLanguage: "en-US",
+  mainEntity: {
+    "@type": "Service",
+    name: "Website Design Services",
+    serviceType: "Website Design and Development",
+    provider: {
+      "@type": "Organization",
+      name: "Capyngen",
+      url: "https://www.capyngen.com",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "India",
+    },
+    description:
+      "Professional website design services by Capyngen, creating responsive, SEO-optimized, and user-friendly websites tailored to your business needs.",
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/website-design#service",
+  name: "Website Design & Development Services",
+  serviceType:
+    "Responsive Web Design, E-commerce Development, UI/UX Design, Corporate Website Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen delivers modern, responsive, and SEO-optimized website design solutions. From creative UI/UX to full-scale web development, we help businesses establish a strong online presence.",
+  url: "https://www.capyngen.com/website-design",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/webDesign--l8DQpZ8.png",
+    caption: "Website Design & Development Services | Capyngen",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Website Design Services are the services that include the creation of professional, responsive, and user-friendly websites that represent your brand and are in line with your business objectives.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should I hire the best website design company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The company that is right for you is the one that guarantees you top-notch designs, smooth and responsive functionalities that pull customer traffic and engagement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are Custom Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Custom Website Design Services mean the creation of one-of-a-kind and tailor-made websites that represent your brand and are designed to achieve your business objectives.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide Responsive Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we make sure that your website has perfect functionality on desktops, tablets, and smartphones so that every user gets the best experience.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are Creative Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Creative Website Design Services are those that attract users by offering interactive, modern, and visually engaging designs and at the same time help your brand to be unique.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer Corporate Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course, we create professional and scalable corporate websites that generate trust and loyalty for companies and B2B businesses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you build E-commerce websites?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer E-commerce Website Design Services that comprise the set-up of secure and easy-to-use online stores that are optimized for conversions and provide a seamless shopping experience for customers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to design a website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Based on the level of difficulty, timelines can be different; still, the majority of the projects range between 3 and 8 weeks depending on features and customizations are completed.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your website designs SEO-friendly?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Without any doubt! Our website designs comply with SEO standards, which, in turn, make it easier for web pages to be found by increasing their loading speed, and ranking in search engines.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide affordable website design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen is the creative affordable website design service provider that is characterized by high quality, creativity, and performance besides being budget-friendly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you redesign my existing website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we give web redesign services to update your site, make it user-friendly, and increase user interaction.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide ongoing support and maintenance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our services comprise all the necessary continuous updates, and security monitoring, as well as technical support for your website.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We are the perfect fit for the needs of startups, SMEs, corporate enterprises, e-commerce businesses, and organizations across healthcare, education, real estate, and much more.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate third-party tools into my website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course, we can. We bring in different tools like CRMs, analytics tools, payment gateways, and other platforms to better the functionality and performance of your website.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen as the best website design company in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Combining creativity, technology, and business tactics, Capyngen takes the trust of Indian businesses to create tailor-made, responsive, and scalable website design services across the length and breadth of India.",
+      },
+    },
+  ],
+};
+
 const WebSiteDesign = () => {
   const faqItems = [
     {
@@ -366,6 +559,13 @@ const WebSiteDesign = () => {
           name="keywords"
           content="Website Design Services | Creative & Responsive Web Design"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner8
         titleMain="Website Design"

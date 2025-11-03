@@ -38,6 +38,188 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/ecommerce-design#webpage",
+  url: "https://www.capyngen.com/ecommerce-design",
+  name: "E-commerce Design | Website, App & UI Design Services – Capyngen",
+  description:
+    "Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales.. ([capyngen.com/ecommerce-design](https://www.capyngen.com/ecommerce-design))",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/ecommerce-design#service",
+  name: "E-Commerce Design Services",
+  serviceType:
+    "E-commerce Website & App UI/UX Design, Digital Storefront Design, Conversion-Optimised E-commerce Design",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales.. ([capyngen.com/ecommerce-design](https://www.capyngen.com/ecommerce-design))",
+  url: "https://www.capyngen.com/ecommerce-design",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/eCommDesign1-BipcLe85.png",
+    caption: "E-commerce Design | Website, App & UI Design Services – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/ecommerce-design#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is e-commerce design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "E-commerce design is the process of building online stores that are visually attractive, user-friendly, and designed for high conversion rates across web and mobile platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is e-commerce UI design important?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A good UI design is essential as it makes everything clear and easy to use. It enhances the user experience, which in turn increases engagement and sales for an online store.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is an e-commerce app UI design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "E-commerce app UI design focuses on creating user-friendly, engaging, and mobile-optimized interfaces for Android and iOS e-commerce applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does e-commerce database design help my store?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Proper database design helps manage product listings, customer data, and transaction histories securely and efficiently within an e-commerce platform.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide custom e-commerce website design solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides fully customized e-commerce design solutions aligned with your brand identity, business goals, and user expectations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are e-commerce website design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "E-commerce website design services include layout creation, responsive design, UI/UX optimization, and seamless integration with payment gateways and analytics tools.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen handle e-commerce mobile app design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops cross-platform e-commerce apps featuring push notifications, personalized dashboards, and secure, smooth payment systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries can benefit from e-commerce web design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Industries like retail, fashion, electronics, healthcare, and food delivery, along with any business selling online globally, can benefit from Capyngen’s e-commerce design expertise.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer affordable e-commerce website design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide affordable and efficient e-commerce design services without compromising on quality, performance, or scalability for small and medium-sized businesses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure high conversion rates through e-commerce design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We achieve high conversion rates through strategic UI/UX design, user flow optimization, intuitive checkout experiences, and visually engaging layouts.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen integrate third-party tools in e-commerce web design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen integrates third-party services like payment solutions, CRM systems, analytics, and marketing tools for enhanced functionality and performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide maintenance and support for e-commerce platforms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer ongoing support and maintenance, ensuring your e-commerce store runs securely, efficiently, and remains up-to-date.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you design e-commerce websites and apps for startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen works with startups, SMEs, and enterprises to deliver scalable, visually appealing, and conversion-optimized web and mobile e-commerce platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to design a full e-commerce platform?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The design timeline depends on the project's complexity and features, typically taking 4 to 12 weeks for complete web and mobile e-commerce platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen for e-commerce design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen combines global experience, creative talent, and a focus on UI/UX excellence to deliver high-performing, visually engaging e-commerce platforms that turn ideas into successful businesses.",
+      },
+    },
+  ],
+};
+
 const EcommerceDesign = () => {
   const faqItems = [
     {
@@ -255,6 +437,13 @@ const EcommerceDesign = () => {
           name="keywords"
           content="E-commerce Design | Website, App & UI Design Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner8
         titleMain="Best E-Commerce Design"

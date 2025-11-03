@@ -18,6 +18,188 @@ import { FaCode, FaShoppingCart, FaWordpressSimple } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/cms-design#webpage",
+  url: "https://www.capyngen.com/cms-design",
+  name: "CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen",
+  description:
+    "Capyngen offers custom CMS design solutions that combine functionality and style. Get expert CMS web design and UI/UX services to manage content with ease.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      caption: "Capyngen",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/cms-design#service",
+  name: "CMS Design & Development Services",
+  serviceType: "CMS Design, CMS Customization, CMS UI/UX",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen offers custom CMS design solutions that combine functionality and style. Get expert CMS web design and UI/UX services to manage content with ease.",
+  url: "https://www.capyngen.com/cms-design",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/cms1-tulX0Vc_.png",
+    caption: "CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/cms-design#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is CMS design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "CMS design refers to the creation of content management systems that are user-friendly, scalable, and secure for managing websites, apps, and digital platforms efficiently.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why do I need a CMS for my website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A CMS simplifies content creation, editing, and publishing, saving time and improving the overall workflow for teams and website administrators.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer custom CMS designs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides fully customized CMS design solutions tailored to match your business needs, workflows, and branding requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which CMS platforms do you work with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We specialize in CMS platforms such as WordPress, Drupal, Joomla, Magento, and custom-built CMS systems for both startups and enterprises.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is website performance better when CMS is designed properly?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, a well-optimized CMS improves website performance, enhances speed, provides smoother navigation, and ensures easy scalability.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are CMS and mobile applications integrated?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen ensures CMS platforms are mobile-friendly and can integrate seamlessly with mobile apps for easy content management on the go.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is CMS with Capyngen secure?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we implement robust security features like access control, encryption, and compliance with global enterprise security standards.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible to manage multiple websites with one CMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our CMS solutions support multi-site management with centralized control for publishing and content distribution across multiple web properties.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer CMS support and maintenance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides ongoing CMS maintenance, upgrades, and technical support to ensure smooth operation and security.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to build a CMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The typical CMS design and development timeline ranges from 4 to 10 weeks, depending on the project’s complexity and level of customization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Capyngen able to connect 3rd-party applications with a CMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen integrates CRMs, eCommerce systems, analytics, marketing tools, and other third-party applications with your CMS for maximum functionality.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you design CMS that are friendly to SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our CMS solutions are built following SEO best practices to ensure fast indexing, better search rankings, and higher visibility.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for non-technical users to operate the CMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our CMS interfaces are designed to be intuitive and easy-to-use, allowing non-technical users to manage content effortlessly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you have any solutions for enterprise CMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops scalable and robust CMS solutions for large enterprises, ensuring secure and efficient content management.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen for CMS design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen offers global expertise, experienced designers, and a user-first approach to deliver CMS solutions that enhance productivity and simplify content management.",
+      },
+    },
+  ],
+};
+
 const CMSDesign = () => {
   const faqItems = [
     {
@@ -194,6 +376,13 @@ const CMSDesign = () => {
           name="keywords"
           content="CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner14

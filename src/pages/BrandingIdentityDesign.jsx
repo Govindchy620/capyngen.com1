@@ -26,6 +26,189 @@ import {
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/branding-and-identity-design#webpage",
+  url: "https://www.capyngen.com/branding-and-identity-design",
+  name: "Branding Design Services | Creative & Corporate Branding",
+  description:
+    "Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out.",
+  inLanguage: "en",
+  keywords: "Branding Design Services, Creative & Corporate Branding",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType:
+    "Branding Design services, Creative branding design, Corporate branding design, Professional branding design, Custom branding design, Brand identity design, Branding and graphic design",
+  name: "Branding Design Services | Creative & Corporate Branding",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Global",
+  },
+  url: "https://www.capyngen.com/branding-and-identity-design",
+  description:
+    "Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out.",
+  keywords: "Branding Design Services, Creative & Corporate Branding",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.capyngen.com/contact",
+    price: "0.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+  },
+  category: "Branding & Identity Design Services",
+  serviceOutput:
+    "Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out.",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are branding design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In order to develop a cohesive brand identity, these services incorporate logo design, visual identity, packaging, stationery, and digital branding.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is branding important for businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Among the benefits of strong branding are increased recognition, customer loyalty, and competition in the market.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Capyngen provide global branding services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen is a professional branding design company that serves clients all over the world. Through their services, businesses can go international.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you design logos for startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course! We do tailor-made branding works both for startups and for existing companies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create brand guidelines?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we assist with brand guidelines in order to achieve correct brand usage across all forums.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you design packaging and collateral?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed, the team is available to accomplish a task of packaging design, or create your business cards, brochures, and stationery for you.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you handle digital branding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, all-inclusive Web design, social media graphics, and getting online campaigns ready for a digital appearance are parts of digital branding.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does branding design take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Just about 4–8 weeks, it really depends on the size of the worldwide launch and the intricacy of the design work.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer rebranding services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! The company Capyngen provides top-notch rebranding solutions for those businesses that want change.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your designs research-backed?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed, each project comes with market and competitor research that facilitates creating a brand strategy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you ensure cross-platform consistency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, no matter what platform you use - digital, print, or social media - we make sure that everything is harmonized.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you handle multilingual branding for international markets?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides branding design services to the widest possible audience regardless of their location and language.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer ongoing brand support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we are always here ready to help through brand updates and offering expert advice to remain at the leading edge.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen help improve marketing ROI through branding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, a well thought out and professionally done brand can increase customer interaction, sales, and overall campaign productivity.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with Capyngen’s branding design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Take a look at the schedule on our website and pick a time that works for you to receive a free consultation to share your ideas and business needs.",
+      },
+    },
+  ],
+};
+
 const BrandingIdentityDesign = () => {
   const faqItems = [
     {
@@ -282,6 +465,13 @@ const BrandingIdentityDesign = () => {
           name="keywords"
           content="Branding Design Services | Creative & Corporate Branding "
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner5
         title={

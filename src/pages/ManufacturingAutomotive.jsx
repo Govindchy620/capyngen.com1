@@ -24,6 +24,191 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id":
+    "https://www.capyngen.com/industries/manufacturing-and-automotive#webpage",
+  url: "https://www.capyngen.com/industries/manufacturing-and-automotive",
+  name: "Manufacturing Software Solutions | Smart Factory & ERP Systems – Capyngen",
+  description:
+    "Capyngen delivers advanced manufacturing software solutions. From smart factory automation to ERP, IoT, and supply chain software — we drive industrial innovation.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id":
+    "https://www.capyngen.com/industries/manufacturing-and-automotive#service",
+  name: "Manufacturing & Automotive Industry Solutions",
+  serviceType:
+    "Industry 4.0 Automation, Industrial Software, Connected Automotive Technology Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen delivers advanced manufacturing software solutions. From smart factory automation to ERP, IoT, and supply chain software — we drive industrial innovation. :contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/industries/manufacturing-and-automotive",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/manufacturingBanner5-CyEqHCvn.png",
+    caption:
+      "Manufacturing Software Solutions | Smart Factory & ERP Systems – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/industries/manufacturing-and-automotive#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Manufacturing & Automotive digital solutions are what?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "These are software systems and digital platforms that automate production, supply chain, and automotive operations at the factory level.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you make custom ERP for manufacturing companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen builds custom ERP software from scratch for inventory, production, workforce, and distribution management.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible to improve automotive supply chain management by your solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our SCM software optimizes structure, logistics, tracking, and vendor coordination to improve supply chain management.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you have IoT-based manufacturing solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop IoT-enabled smart factory systems that offer real-time machine condition monitoring and predictive maintenance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you utilize AI to automate production lines?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, our AI-powered automation enhances energy efficiency, reduces human error, and improves production accuracy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create MES (Manufacturing Execution Systems)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our MES technologies monitor production, quality, and machine performance to ensure optimal factory efficiency.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will your solutions be able to help automotive plants eliminate downtime?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, by using predictive analytics and IoT alerts, our systems help reduce equipment failures and eliminate downtime.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you the one creating digital twin solutions for automotive?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we create digital twin solutions for vehicle design, testing, and performance optimization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate manufacturing robotics with your solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer robotic process automation (RPA) and robotic assembly line integration for manufacturing systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create automotive dealership apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we build apps that enable automotive dealerships to manage inventory, sales, and customer relationships efficiently.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you develop fleet management systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops GPS-enabled fleet management platforms tailored for logistics and automotive businesses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do your solutions integrate with Industry 4.0?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our systems combine AI, IoT, Big Data, and automation to deliver fully integrated Industry 4.0 solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you able to create AR/VR apps for automotive training?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop AR/VR applications for workforce training, vehicle simulation, and safety demonstrations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How reliable are your manufacturing solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our manufacturing solutions follow industry security standards, use encryption, and role-based access to ensure full reliability.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Factory and automotive clients can receive support from you at any time?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides continuous monitoring, system upgrades, and 24/7 technical support for all manufacturing and automotive clients.",
+      },
+    },
+  ],
+};
+
 const ManufacturingAutomotive = () => {
   const faqItems = [
     {
@@ -377,6 +562,13 @@ const ManufacturingAutomotive = () => {
           name="keywords"
           content="Manufacturing Software Solutions | Smart Factory & ERP Systems – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <ShuffleHero
         heading={

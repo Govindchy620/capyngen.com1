@@ -45,6 +45,169 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  url: "https://www.capyngen.com/industries/real-estate",
+  name: "IT Solutions for Real Estate | Web & UI/UX Design Services – Capyngen",
+  description:
+    "Capyngen provides innovative IT solutions for the real estate industry. From web design to UI/UX services, we help real estate brands go digital and grow faster.",
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+  keywords: "IT Solutions for Real Estate | Web & UI/UX Design Services",
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType:
+    "Real estate software development, Real estate CRM solutions, property management software",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/industries/real-estate",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Global",
+  },
+  description:
+    "Capyngen provides innovative IT solutions for the real estate industry. From web design to UI/UX services, we help real estate brands go digital and grow faster.",
+  keywords: "IT Solutions for Real Estate | Web & UI/UX Design Services",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are real estate software development services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Real estate software development services refer to the creation of property websites, portals, mobile apps, and custom management software that is aimed at easing real estate transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is property management software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Efficient software for managing listings, tenants, payments, maintenance, and overall property operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are real estate CRM solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Real estate CRM solutions bring about lead tracking, relationship management, and quicker deal closure.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is real estate portal development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A process of designing portals or platforms that show a range of properties for sale or rent and which allow users to apply filters or make inquiries.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can a tenant management system help property owners?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The system facilitates tenant onboarding, rent tracking, and the whole communication process making the property management easier.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is construction project management software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Efficient software for planning, scheduling, and managing construction projects, budgets, and teams.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer real estate mobile applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sure, Capyngen is one of the companies that build mobile apps for property searches, lead management, and virtual tours.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you create custom property management software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely, we customize solutions for the specific real estate needs of your business.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Capyngen improve lead generation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen attracts qualified buyers and tenants through diverse marketing channels such as SEO, local SEO, social media campaigns, and targeted ads.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide CRM integration with real estate websites?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we connect the CRM systems with websites to make the process of getting leads, following them up, and closing sales more efficient.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries benefit from your real estate solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Inter alia, real estate agencies, property brokers, developers, listing portals, rental businesses, the luxury real estate market.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is your real estate software scalable?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, solutions are built with scalability from varying sizes of agencies to large property portals in mind.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How secure is the property data?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We implement security measures that are up to industry-standard in order to secure information on clients, tenants, and properties.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to develop a property portal?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Feature dependent, the usually full deployment time will be within 8–16 weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen for real estate software development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The best of both worlds with IT, real estate, and digital marketing at the forefront, we go the whole nine yards to provide you with end-to-end, scalable, and ROI-driven solutions.",
+      },
+    },
+  ],
+};
+
 const RealEstate = () => {
   const faqItems = [
     {
@@ -289,6 +452,13 @@ const RealEstate = () => {
           name="keywords"
           content="IT Solutions for Real Estate | Web & UI/UX Design Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner6
         slides={slidesData}

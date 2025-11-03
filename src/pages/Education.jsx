@@ -75,7 +75,6 @@ const webpageSchema = {
     ],
   },
 };
-
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -102,7 +101,6 @@ const serviceSchema = {
     caption: "Education IT Solutions | LMS | eLearning | Virtual Classrooms",
   },
 };
-
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -528,18 +526,13 @@ const Education = () => {
           name="keywords"
           content="Learning Management System | eLearning & Virtual Classroom Solutions"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner6
         slides={slidesData}
