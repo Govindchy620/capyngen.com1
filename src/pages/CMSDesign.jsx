@@ -17,6 +17,7 @@ import CardsSection from "../components/CardsSection";
 import { FaCode, FaShoppingCart, FaWordpressSimple } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -313,7 +314,11 @@ const CMSDesign = () => {
       icon: <FaCode className="text-4xl text-white" />,
     },
     {
-      title: "CMS UI/UX Design",
+      title: (
+        <span>
+          <Link to={"/ui-ux-design"}>CMS UI/UX Design</Link>
+        </span>
+      ),
       description:
         "Get users hooked with simple browsing, quick loading, and non-disturbing transitions that are some features of our CMS UI/UX design services specifically made for franchise customer satisfaction.",
       icon: <FaWordpressSimple className="text-4xl text-white" />,
@@ -411,8 +416,25 @@ const CMSDesign = () => {
         <TopRatedCompany
           title="Best CMS website Design services"
           description={[
-            `Capyngen provides innovative CMS design services of the highest quality that enable companies to manage, grow, and simplify their online digital presence. Our skilled designers and developers create personalized CMS design solutions that are the perfect match for your distinctive needs — be it websites, apps, or enterprise platforms. Bearing in mind the responsive CMS design, user-friendly UI/UX, and smooth operation, we certify that your content management system will be of great performance and easy to use.`,
-            `Experience the benefits of a great CMS design that will make your work simpler, better use of resources and create exciting digital experiences. In case you require services for CMS web design, CMS UI/UX design, or complete CMS development and design, Capyngen will stand by your side like a true partner.`,
+            <span>
+              <Link to={"/"}>Capyngen</Link> provides innovative CMS design
+              services of the highest quality that enable companies to manage,
+              grow, and simplify their online digital presence. Our skilled
+              designers and developers create personalized CMS design solutions
+              that are the perfect match for your distinctive needs — be it
+              websites, apps, or enterprise platforms. Bearing in mind the
+              responsive CMS design, user-friendly UI/UX, and smooth operation,
+              we certify that your content management system will be of great
+              performance and easy to use.
+            </span>,
+            <span>
+              Experience the benefits of a great CMS design that will make your
+              work simpler, better use of resources and create exciting digital
+              experiences. In case you require services for{" "}
+              <Link to={"/website-design"}>CMS web design</Link>, CMS UI/UX
+              design, or complete CMS development and design, Capyngen will
+              stand by your side like a true partner.
+            </span>,
           ]}
           image={assets.cms2}
           isHidden={true}

@@ -28,6 +28,7 @@ import BenefitsSection from "../components/BenefitsSection";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import HowWeWork from "../components/HowWeWork";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -57,7 +58,7 @@ const webpageSchema = {
   },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    url: "https://www.capyngen.com/assets/gamingBanner1-XYZ.jpg",
+    url: "https://www.capyngen.com/assets/gaming1-B9Bp7YkI.png",
     width: 1200,
     height: 800,
     caption: "Gaming Industry IT Solutions by Capyngen",
@@ -88,11 +89,10 @@ const serviceSchema = {
     "@type": "Organization",
     name: "Capyngen",
     url: "https://www.capyngen.com/",
-    logo: "https://www.capyngen.com/assets/images/logo.png",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
     sameAs: [
       "https://www.facebook.com/capyngen",
       "https://www.instagram.com/capyngen",
-      "https://www.linkedin.com/company/capyngen",
       "https://twitter.com/capyngen",
     ],
   },
@@ -145,7 +145,7 @@ const serviceSchema = {
       },
     ],
   },
-  image: "https://www.capyngen.com/assets/images/industries/gaming-banner.jpg",
+  image: "https://www.capyngen.com/assets/gaming16-BrGk70jw.png",
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -153,122 +153,122 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What are branding design services?",
+      name: "What is a Game app development software company?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "In order to develop a cohesive brand identity, these services incorporate logo design, visual identity, packaging, stationery, and digital branding.",
+        text: "A Game app development software company deals with the creation of custom game engines, mobile, PC, and console games, VR/AR solutions, and multiplayer platforms.",
       },
     },
     {
       "@type": "Question",
-      name: "Why is branding important for businesses?",
+      name: "What is Mobile Game App Development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Among the benefits of strong branding are increased recognition, customer loyalty, and competition in the market.",
+        text: "Mobile Game App Development includes iOS Game App Development, Android Game App Development, and cross-platform solutions focused on high performance and user engagement.",
       },
     },
     {
       "@type": "Question",
-      name: "Does Capyngen provide global branding services?",
+      name: "What is PC Game Development & console game development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Capyngen is a professional branding design company that serves clients all over the world. Through their services, businesses can go international.",
+        text: "PC and console game development involves building high-performance games for platforms such as Windows, Mac, PlayStation, Xbox, and Nintendo.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you design logos for startups?",
+      name: "What is VR game software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Of course! We do tailor-made branding works both for startups and for existing companies.",
+        text: "VR game software uses virtual reality technology to offer players immersive gaming experiences through VR headsets and motion controls.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you create brand guidelines?",
+      name: "What is AR game development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we assist with brand guidelines in order to achieve correct brand usage across all forums.",
+        text: "AR game development creates games that blend digital components with the physical environment, enabling interactive and engaging experiences.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you design packaging and collateral?",
+      name: "What are multiplayer Game app development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Indeed, the team is available to accomplish a task of packaging design, or create your business cards, brochures, and stationery for you.",
+        text: "Multiplayer game app development focuses on creating products and server systems that enable users to play real-time games from different locations.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you handle digital branding?",
+      name: "How does Capyngen help gaming businesses grow?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, all-inclusive Web design, social media graphics, and getting online campaigns ready for a digital appearance are parts of digital branding.",
+        text: "Capyngen helps gaming businesses grow by providing flexible IT solutions, online-offline promotional strategies, and data-driven insights for monetization.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does branding design take?",
+      name: "Do you offer custom Mobile Game App Development services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Just about 4–8 weeks, it really depends on the size of the worldwide launch and the intricacy of the design work.",
+        text: "Yes, Capyngen offers custom Mobile Game App Development services, creating unique games tailored to specific target audiences and business goals.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer rebranding services?",
+      name: "Can you build multiplayer Game app development online games?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely! The company Capyngen provides top-notch rebranding solutions for those businesses that want change.",
+        text: "Yes, Capyngen builds online multiplayer games with stable servers and seamless gameplay experiences for users worldwide.",
       },
     },
     {
       "@type": "Question",
-      name: "Are your designs research-backed?",
+      name: "How do you handle game analytics?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Indeed, each project comes with market and competitor research that facilitates creating a brand strategy.",
+        text: "We use advanced analytics tools to collect and analyze player data, game performance metrics, and behavioral insights to optimize gaming experiences.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you ensure cross-platform consistency?",
+      name: "Do you provide Cloud gaming?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, no matter what platform you use - digital, print, or social media - we make sure that everything is harmonized.",
+        text: "Yes, Capyngen provides efficient Cloud gaming solutions capable of supporting thousands of concurrent players seamlessly.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you handle multilingual branding for international markets?",
+      name: "What is your experience with VR & AR games?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Capyngen provides branding design services to the widest possible audience regardless of their location and language.",
+        text: "We have extensive experience in developing immersive VR and AR gaming solutions for entertainment, simulation, and training applications.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer ongoing brand support?",
+      name: "Can you help with esports and community engagement?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we are always here ready to help through brand updates and offering expert advice to remain at the leading edge.",
+        text: "Yes, Capyngen supports esports and community engagement through player outreach programs, influencer collaborations, and promotional campaigns.",
       },
     },
     {
       "@type": "Question",
-      name: "Can Capyngen help improve marketing ROI through branding?",
+      name: "How long does game development take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Definitely, a well thought out and professionally done brand can increase customer interaction, sales, and overall campaign productivity.",
+        text: "The duration of game development typically ranges from 3 to 12 months, depending on the platform, complexity, and required features.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I get started with Capyngen’s branding design services?",
+      name: "Why choose Capyngen for game development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Take a look at the schedule on our website and pick a time that works for you to receive a free consultation to share your ideas and business needs.",
+        text: "Capyngen combines IT expertise, creative strategies, and gaming industry insights to deliver engaging, flexible, and profit-driven game development solutions.",
       },
     },
   ],
@@ -633,7 +633,13 @@ const Gaming = () => {
         title="How Gaming Business Benefit from Digital Innovation"
         description={[
           "The industry of gaming is one of those sectors that have been recognized as rapidly developing areas of the digital world where the user experience and community engagement become a crucial factor.",
-          "Particularly the IT infrastructure of the right kind is the indisputable foundation for the smooth running of the Game app development , secure transaction, and scalable performance to support large-scale concurrent users.",
+          <span>
+            Particularly the IT infrastructure of the right kind is the
+            indisputable foundation for the smooth running of the Game{" "}
+            <Link to={"/app-development"}>app development</Link>, secure
+            transaction, and scalable performance to support large-scale
+            concurrent users.
+          </span>,
           "Gaming companies by mere digital marketing practices can attract the right crowd, build a faithful customer base, and make a flow of revenue that would be sustainable through the successful implementation of campaigns.",
         ]}
         image={assets.gaming17}

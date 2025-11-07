@@ -30,6 +30,7 @@ import {
 import Banner9 from "../components/Banner9";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -377,7 +378,11 @@ const ArtificialIntelligence = () => {
       cardBg: "bg-blue-100",
     },
     {
-      title: "Custom AI Development",
+      title: (
+        <span>
+          <Link to={"/custom-ai-solutions"}>Custom AI Development</Link>
+        </span>
+      ),
       description:
         "The development of AI applications is tailored to startups, enterprises, and other areas.",
       image: assets.ai3,
@@ -567,7 +572,12 @@ const ArtificialIntelligence = () => {
           overlayColor="bg-black/40"
         />
         <TopRatedCompany
-          title="Why Choose Capyngen for AI Services"
+          title={
+            <span>
+              Why Choose <Link to={"/"}>Capyngen</Link>
+              for AI Services
+            </span>
+          }
           description={[
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">

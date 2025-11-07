@@ -44,6 +44,7 @@ import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -290,7 +291,13 @@ const RealEstate = () => {
     {
       image: assets.realEstate3,
       title: "Real Estate Websites & Apps",
-      desc: "You can make user-friendly property listing websites by implementing UI & UX Design for Real estate Industry along with advanced search, filter and contact features.",
+      desc: (
+        <span>
+          You can make user-friendly property listing websites by implementing
+          <Link to={"/ui-ux-design"}>UI & UX Design</Link> for Real estate
+          Industry along with advanced search, filter and contact features.
+        </span>
+      ),
     },
     {
       image: assets.realEstate4,
@@ -498,7 +505,14 @@ const RealEstate = () => {
         description={[
           "The real estate market has changed big time. However, just before making the final purchase offline, the first thing that buyers and investors now do is to look for options online.",
           "Adding a robust online presence supplemented by IT solutions for property is turning out to be a winning strategy as it creates trust, brings more visibility, and speeds up the process of reaching out to potential customers.",
-          "Capyngen's Web Designing for Real Estate combines both technology and strategy to provide real estate businesses with the tools to showcase the properties effectively, save on marketing expenses, and make more profits through real estate CRM solutions, property management software, and enhanced web design for real estate.",
+          <span>
+            Capyngen's Web Designing for Real Estate combines both technology
+            and strategy to provide real estate businesses with the tools to
+            showcase the properties effectively, save on marketing expenses, and
+            make more profits through real estate{" "}
+            <Link to={"/crm-management-software"}>CRM solutions</Link>, property
+            management software, and enhanced web design for real estate.
+          </span>,
         ]}
         image={assets.realEstate2}
         background={assets.patternBg1}

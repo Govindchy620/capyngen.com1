@@ -26,6 +26,7 @@ import {
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -500,7 +501,13 @@ const NetworkSolutionServices = () => {
           textColor="text-white"
           title=""
           description={[
-            "Want to enhance your network? Get in touch with Capyngen for a professional solution right away!",
+            <>
+              <span>
+                Want to enhance your network? Get in touch with{" "}
+                <Link to={"/"}>Capyngen</Link> for a professional solution right
+                away!
+              </span>
+            </>,
           ]}
           textSize="text-2xl"
           buttonText="Get in Touch"

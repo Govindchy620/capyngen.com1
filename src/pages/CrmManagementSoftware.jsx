@@ -33,6 +33,7 @@ import IndustryServices from "../components/IndustryServices";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -488,7 +489,11 @@ const CrmManagementSoftware = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          title="What Capyngen Does Uniquely"
+          title={
+            <span>
+              What <Link to={"/"}>Capyngen</Link> Does Uniquely
+            </span>
+          }
           description={[
             "Our products are customer relationship management system (CRM)software solutions that are customizable to client needs and are also enterprise-grade systems that produce business growth through customer engagement, process automation, and business optimization.",
           ]}

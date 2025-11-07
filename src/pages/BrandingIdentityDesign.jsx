@@ -25,6 +25,7 @@ import {
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -354,8 +355,13 @@ const BrandingIdentityDesign = () => {
     },
     {
       title: "Cross-Platform Consistency",
-      description:
-        "A brand identity both visually and conceptually standardized across all media such as digital, print, and social media platforms.",
+      description: (
+        <span>
+          A brand identity both visually and conceptually standardized across
+          all media such as digital, print, and{" "}
+          <Link to={"/smm"}>social media</Link> platforms.
+        </span>
+      ),
       icon: <FaMoneyBillWave className="text-4xl text-white" />,
     },
     {
@@ -482,7 +488,20 @@ const BrandingIdentityDesign = () => {
             </span>
           </>
         }
-        description="One of the main reasons consumers choose a certain product over another is the branding. Capyngen's branding design services, a branding expert who is always prepared to think out of the box, come up with ways to simply and globally standardize brand identities. Thus, we are not limited in representing companies of various sizes and in different stages of their development, ranging from the idea stage to that of a multinational corporation, which allows us to produce brand identities that are visually attractive and that can go beyond geographical borders."
+        description={
+          <span>
+            One of the main reasons consumers choose a certain product over
+            another is the branding. Capyngen's branding design services, a
+            branding expert who is always prepared to think out of the box, come
+            up with ways to simply and globally standardize brand identities.
+            Thus, we are not limited in representing{" "}
+            <Link to={"/"}>companies</Link> of various sizes and in different
+            stages of their development, ranging from the idea stage to that of
+            a multinational corporation, which allows us to produce brand
+            identities that are visually attractive and that can go beyond
+            geographical borders.
+          </span>
+        }
         primaryBtnText="Get started"
         primaryBtnLink="/contact-us"
         image={assets.branding1}

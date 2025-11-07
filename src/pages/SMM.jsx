@@ -26,6 +26,7 @@ import Banner15 from "../components/Banner15";
 import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -600,7 +601,12 @@ const SMM = () => {
         textColor="text-white"
         title="Amplify Your Brand on Social Media"
         description={[
-          "Use the social media marketing services to increase your interactions, reach, and your turnover by collaborating with Capyngen, a top social media marketing agency, and utilizing social media marketing services.",
+          <span>
+            Use the social media marketing services to increase your
+            interactions, reach, and your turnover by collaborating with
+            <Link to={"/"}>Capyngen</Link>, a top social media marketing agency,
+            and utilizing social media marketing services.
+          </span>,
         ]}
         backgroundVideo={assets.backgroundVideo}
       />

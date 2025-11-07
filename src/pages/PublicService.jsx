@@ -23,6 +23,7 @@ import {
 import CardsSection from "../components/CardsSection";
 import HowWeWork from "../components/HowWeWork";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -363,7 +364,13 @@ const PublicService = () => {
     {
       image: assets.publicService11,
       title: "Smart City Platforms",
-      desc: "Unified dashboards melding IoT feeds and analytics and AI solutions for public sector planning.",
+      desc: (
+        <span>
+          Unified dashboards melding IoT feeds and analytics and{" "}
+          <Link to={"/custom-ai-solutions"}>AI solutions</Link>
+          for public sector planning.
+        </span>
+      ),
     },
     {
       image: assets.publicService12,
@@ -560,7 +567,12 @@ const PublicService = () => {
       />
       <IndustryServices
         heading="Empowering Governance with Modern Public IT Services"
-        subheading="Capyngen services assist agencies in becoming more efficient and building citizen trust:"
+        subheading={
+          <span>
+            <Link to={"/"}>Capyngen</Link> services assist agencies in becoming
+            more efficient and building citizen trust:
+          </span>
+        }
         services={servicesData}
       />
       <CardsSection

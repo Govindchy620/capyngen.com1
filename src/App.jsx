@@ -11,6 +11,7 @@ import {
   Routes,
   Route,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 
 import ScrollToTop from "./components/ScrollToTop";
@@ -170,6 +171,7 @@ const AppContent = () => {
           path="/digital-marketing-landing-page"
           element={<LandingPage />}
         />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       {!hideLayout && <Footer />}

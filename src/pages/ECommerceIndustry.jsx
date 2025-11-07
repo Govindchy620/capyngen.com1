@@ -23,6 +23,211 @@ import BenefitsSection from "../components/BenefitsSection";
 import TopRatedCompany from "../components/TopRatedCompany";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/e-commerce#webpage",
+  url: "https://www.capyngen.com/industries/e-commerce",
+  name: "IT Solutions for E-Commerce | AI, CRM & DevOps for Online Stores – Capyngen",
+  description:
+    "Capyngen delivers tailored IT solutions for e-commerce. From AI and CRM to UI/UX design and DevOps, we empower online shopping platforms to scale and perform.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/ecommerceBanner1.jpg",
+    width: 1200,
+    height: 800,
+    caption: "E-Commerce Industry Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "E-Commerce",
+        item: "https://www.capyngen.com/industries/e-commerce",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/industries/e-commerce#service",
+  name: "E-Commerce IT Solutions",
+  serviceType:
+    "AI Integration, CRM Development, UI/UX Design, DevOps Services for Online Stores",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen delivers tailored IT solutions for e-commerce. From AI and CRM to UI/UX design and DevOps, we empower online shopping platforms to scale and perform.",
+  url: "https://www.capyngen.com/industries/e-commerce",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/eCommIndustry11-D8Ie3s9Z.jpg",
+    caption: "E-Commerce IT Solutions | AI | CRM | DevOps | UI/UX Design",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are IT solutions for e-commerce?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IT solutions for e-commerce are technology services that help online businesses efficiently develop, manage, and grow their platforms. These include AI, CRM, DevOps, and UI/UX design services.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "In what ways can Internet sites' online shopping experience be enhanced and perfected through artificial intelligence-based solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AI enhances the online shopping experience by personalizing purchases, streamlining customer support, predicting trends, and boosting sales through data-driven decision-making.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the specific duty and contribution that is given by DevOps in the scenario of e-commerce?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "DevOps ensures rapid development, predictable performance, and high scalability for e-commerce platforms and applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is CRM software critical in e-commerce businesses that are operating in today's internet market?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "CRM is essential in e-commerce as it manages customer data, automates marketing, and enhances retention through personalized interactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "In what ways does UI/UX design impact online sales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A user-friendly UI/UX design improves navigation, builds trust, and increases conversions by simplifying the purchase process.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What exactly does digital transformation mean in the context of the e-commerce sector?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Digital transformation in e-commerce involves adopting advanced technologies to automate operations, enhance customer experiences, and encourage innovation across the business.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do these solutions possess the correct features and functionalities implemented in them that can efficiently handle and support international e-commerce operations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our solutions are scalable and designed to support international operations, global compliance, multiple currencies, and multilingual functionality.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your AI products be customized to fit varying businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. We customize every AI model and integration to align precisely with your business goals and operational needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long would it take on average to properly install these different IT solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The timeline depends on the project scope. Smaller setups typically take a few weeks, while large-scale integrations may take several months to complete.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will you provide maintenance and support after the initial introduction phase?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide continuous maintenance, timely updates, and optimization to ensure your e-commerce platform performs at its best.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can the app be mobile-first and cross-platform?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop responsive, mobile-first, and cross-platform e-commerce applications to deliver seamless experiences across all devices.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure excellent UI/UX for e-commerce apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We ensure high engagement through user-centric designs that follow industry standards, focus on usability, and adapt responsively to all screens.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are analytics and reporting features included?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our e-commerce solutions include analytics and reporting tools that track sales, customer behavior, and performance metrics to support data-driven growth.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you migrate my existing online store to a custom e-commerce platform?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we handle seamless migrations from platforms like Shopify, Magento, and WooCommerce to fully customized e-commerce solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do your services cover both B2B and B2C e-commerce solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we specialize in developing tailored B2B and B2C e-commerce applications, marketplace platforms, and online stores for all business types.",
+      },
+    },
+  ],
+};
 
 const ECommerceIndustry = () => {
   const faqItems = [
@@ -390,6 +595,13 @@ const ECommerceIndustry = () => {
           name="keywords"
           content="IT Solutions for E-Commerce | AI, CRM & DevOps for Online Stores – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner6
         slides={slidesData}
@@ -436,7 +648,17 @@ const ECommerceIndustry = () => {
       />
       <BenefitsSection
         heading="AI solutions for online shopping platforms For Online Retail Sites"
-        desc="The way online businesses work and function on a day-to-day basis is being heavily disrupted by Artificial Intelligence. We create new-age AI products that are specially designed for online e-commerce sites that not only redesign and enhance customer experience but also increase overall profitability across multiple areas of their operations."
+        desc={
+          <span>
+            The way online businesses work and function on a day-to-day basis is
+            being heavily disrupted by{" "}
+            <Link to={"/artificial-intelligence"}>Artificial Intelligence</Link>
+            . We create new-age AI products that are specially designed for
+            online e-commerce sites that not only redesign and enhance customer
+            experience but also increase overall profitability across multiple
+            areas of their operations.
+          </span>
+        }
         benefits={solutionsData}
         image={assets.eCommIndustry10}
         footerNote=""

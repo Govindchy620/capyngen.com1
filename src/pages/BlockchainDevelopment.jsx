@@ -638,7 +638,13 @@ const BlockchainDevelopment = () => {
         services={servicesData}
       />
       <TechStack
-        heading="Transform Your Web Development and Consulting with Our Expert Tech Stack"
+        heading={
+          <span>
+            Transform Your <Link to={"/web-development"}>Web Development</Link>{" "}
+            and <Link to={"/consulting"}>Consulting</Link> with Our Expert Tech
+            Stack
+          </span>
+        }
         categories={techStack}
       />
       <GetStarted

@@ -1,50 +1,228 @@
-import React from "react";
-import ExpandableGallery from "../components/ExpandableGallery";
-import SeoToolsSection from "../components/SeoToolsSection";
-import SeoStatsSection from "../components/SeoStatsSection";
-import Timeline from "../components/Timeline";
-import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
-import StartupAgency from "../components/StartupAgency";
-import SeoAgency from "../components/SeoAgency";
 import {
-  FaBuilding,
-  FaTasks,
-  FaStore,
-  FaPuzzlePiece,
-  FaMoneyBillWave,
-  FaCogs,
   FaTools,
-  FaDollarSign,
-  FaUsers,
   FaShieldAlt,
-  FaBullhorn,
-  FaHeart,
   FaCheckCircle,
   FaProjectDiagram,
   FaRobot,
   FaCloud,
 } from "react-icons/fa";
-import {
-  FaUserTie,
-  FaHome,
-  FaGavel,
-  FaUserFriends,
-  FaGlobe,
-} from "react-icons/fa";
 import IndustryServices from "../components/IndustryServices";
-import TypesWeDevelop from "../components/TypesWeDevelop";
 import { assets } from "../assets/assets";
-import Banner6 from "../components/Banner6";
 import GetStarted from "../components/GetStarted";
 import TopRatedCompany from "../components/TopRatedCompany";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import Banner11 from "../components/Banner11";
-import TechStack from "../components/TechStack";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/high-tech#webpage",
+  url: "https://www.capyngen.com/industries/high-tech",
+  name: "IT Solutions for High-Tech Industry | Cloud & AI Services – Capyngen",
+  description:
+    "Empower innovation with Capyngen’s IT solutions for the high-tech industry. From Gen AI and cloud platforms to cybersecurity and software solutions — we deliver results.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/highTech7-BwFiz86O.png",
+    width: 1200,
+    height: 800,
+    caption: "High-Tech Industry IT Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "High-Tech",
+        item: "https://www.capyngen.com/industries/high-tech",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "High-Tech Industry Digital Transformation Services",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/images/logo.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  url: "https://www.capyngen.com/industries/high-tech",
+  description:
+    "Capyngen empowers high-tech companies with cutting-edge digital marketing, data analytics, web design, and automation solutions to accelerate innovation and business growth.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "High-Tech Industry Digital Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "High-Tech Website Development",
+          description:
+            "Custom, responsive, and high-performance websites designed for tech companies to showcase innovation and expertise.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Digital Marketing for Tech Brands",
+          description:
+            "Comprehensive marketing campaigns including PPC, SEO, and content strategies for high-tech businesses.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Data Analytics & AI Solutions",
+          description:
+            "Data-driven insights and AI-powered analytics to optimize decision-making and improve operational performance.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "UI/UX Design for Tech Platforms",
+          description:
+            "Intuitive and modern UI/UX design tailored for SaaS platforms, apps, and enterprise software.",
+        },
+      },
+    ],
+  },
+  image: "https://www.capyngen.com/assets/highTech7-BwFiz86O.png",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/industries/high-tech#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are IT solutions for the high-tech industry?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Such solutions are products and services based on specific needs, consisting of software, AI, cloud, and cybersecurity. These four pillars of technical progress—AI, cloud, cybersecurity, and software—help companies increase productivity, scalability, and innovation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can Gen AI solutions for high-tech improve operations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Gen AI improves operations by automating repetitive tasks, accelerating research through faster data processing, and enhancing design and testing processes via intelligent automation—making operations more efficient and innovative.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the role of cloud platforms for high-tech companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cloud platforms enable scalability, efficiency, and digital transformation. They help teams collaborate seamlessly and deploy digital systems globally while reducing infrastructure costs and complexity.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How important is cybersecurity for high-tech businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cybersecurity is crucial for protecting sensitive intellectual property, proprietary code, and customer data from cyber threats, breaches, and data leaks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What type of software solutions do you develop for high-tech companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen develops enterprise-grade software, IoT systems, data analytics platforms, and AI tools designed to improve productivity and growth for companies in the high-tech sector.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you support digital transformation for established tech enterprises?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Capyngen helps replace legacy systems, migrate operations to the cloud, and empower enterprises with AI and automation tools to accelerate digital transformation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen handle large-scale cloud migrations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Capyngen has extensive experience implementing hybrid and multi-cloud infrastructures for high-tech enterprises, ensuring smooth, scalable migration processes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Capyngen’s cybersecurity approach unique?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our approach is based on a zero-trust architecture that limits user access, combined with an encryption-first model and real-time threat tracking—providing maximum protection against attacks and data leaks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do Gen AI and analytics contribute to R&D in high-tech?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Gen AI and analytics shorten R&D cycles, improve quality, and enable innovation by generating new product ideas based on historical and live data insights.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Capyngen offer support after project completion?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Capyngen provides post-project maintenance, monitoring, and upgrades to ensure your software and cloud systems remain secure, scalable, and optimized.",
+      },
+    },
+  ],
+};
 
 const HighTech = () => {
   const faqItems = [
@@ -177,8 +355,14 @@ const HighTech = () => {
     },
     {
       title: "Cybersecurity & Compliance Systems",
-      description:
-        "Rely on enterprise-grade cybersecurity built with robust encryption, real-time threat detection, and compliance audits to safeguard R&D and intellectual property data.",
+      description: (
+        <span>
+          Rely on enterprise-grade{" "}
+          <Link to={"/cybersecurity"}>cybersecurity</Link> built with robust
+          encryption, real-time threat detection, and compliance audits to
+          safeguard R&D and intellectual property data.
+        </span>
+      ),
       image: assets.highTech3,
       cardBg: "bg-purple-100",
     },
@@ -247,8 +431,14 @@ const HighTech = () => {
     },
     {
       title: "Intelligent Innovation with Gen AI",
-      description:
-        "Gen AI solutions for hi-tech by Capyngen utilize AI for workflow automation, predictive analysis, and accelerated design-to-production cycles — transforming the way tech companies innovate and create products.",
+      description: (
+        <span>
+          Gen AI solutions for hi-tech by <Link to={"/"}>Capyngen</Link> utilize
+          AI for workflow automation, predictive analysis, and accelerated
+          design-to-production cycles — transforming the way tech companies
+          innovate and create products.
+        </span>
+      ),
       icon: <FaRobot className="text-4xl" />,
     },
     {
@@ -279,6 +469,13 @@ const HighTech = () => {
           name="keywords"
           content="IT Solutions for High-Tech Industry | Cloud & AI Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner11
         heading=" Driving the High-Tech Industry"

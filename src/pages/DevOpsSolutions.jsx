@@ -24,6 +24,7 @@ import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -596,7 +597,15 @@ const DevOpsSolutions = () => {
           desc=""
           benefits={solutionsData}
           image={assets.devops}
-          footerNote="Capyngen’s DevOps consulting and implementation services are a powerful lever for businesses to change their IT operations with freedom and velocity."
+          footerNote={
+            <>
+              <span>
+                <Link to={"/"}>Capyngen's</Link> DevOps consulting and
+                implementation services are a powerful lever for businesses to
+                change their IT operations with freedom and velocity.
+              </span>
+            </>
+          }
         />
         <HowWeWork
           heading="DevOps Solution Process at Capyngen"

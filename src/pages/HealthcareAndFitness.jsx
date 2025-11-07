@@ -39,6 +39,7 @@ import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import Banner11 from "../components/Banner11";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -520,7 +521,11 @@ const HealthcareAndFitness = () => {
         buttonTextColor="text-black"
         title="Want to Make a Difference in Your Healthcare or Fitness Business?"
         description={[
-          "Coordinate a meeting with our professionals and perceive how digital solutions can turn round your operations.",
+          <span>
+            Coordinate a meeting with our professionals and perceive how{" "}
+            <Link to={"/digital-marketing"}>digital solutions</Link> can turn
+            round your operations.
+          </span>,
         ]}
         buttonText="Schedule a Free Strategy Session"
         backgroundVideo={assets.backgroundVideo}
@@ -590,7 +595,11 @@ const HealthcareAndFitness = () => {
         isHidden="hidden"
       />
       <IndustryServices
-        heading="Complete Healthcare & Fitness IT Services"
+        heading={
+          <span>
+            Complete Healthcare & Fitness <Link to={"/"}>IT Services</Link>
+          </span>
+        }
         subheading=""
         services={servicesData}
       />

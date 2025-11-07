@@ -18,6 +18,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -367,19 +368,34 @@ const Cybersecurity = () => {
       textColor: "text-white",
     },
     {
-      title: "E-commerce & Retail",
+      title: (
+        <span>
+          <Link to={"/industries/e-commerce"}>E-commerce & Retail</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDev18,
       textColor: "text-white",
     },
     {
-      title: "Healthcare & Education",
+      title: (
+        <span>
+          <Link to={"/industries/healthcare-fitness"}>
+            Healthcare & Education
+          </Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDev19,
       textColor: "text-white",
     },
     {
-      title: "Real Estate & Travel",
+      title: (
+        <span>
+          <Link to={"/industries/real-estate"}>Real Estate</Link> &{" "}
+          <Link to={"/industries/travel-logistics"}>Travel</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDev20,
       textColor: "text-white",

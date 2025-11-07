@@ -9,6 +9,7 @@ import HowWeWork from "../components/HowWeWork";
 import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -225,7 +226,12 @@ const CpgDistribution = () => {
       ),
     },
     {
-      title: "Digital Marketing Solution For CPG industry",
+      title: (
+        <span>
+          <Link to={"/digital-marketing"}>Digital Marketing Solution</Link> For
+          CPG industry
+        </span>
+      ),
       desc: (
         <>
           <ul className="list-disc list-inside space-y-4 text-lg w-full lg:max-w-3xl mx-auto mt-8 text-gray-300">
@@ -311,8 +317,15 @@ const CpgDistribution = () => {
     },
     {
       title: "Custom IT Services for CPG Distribution",
-      description:
-        "ERP, warehouse, and product lifecycle management software for manufacturers — highly customized and tailored to your needs.",
+      description: (
+        <span>
+          ERP, warehouse, and product{" "}
+          <Link to={"/crm-management-software"}>
+            lifecycle management software
+          </Link>{" "}
+          for manufacturers — highly customized and tailored to your needs.
+        </span>
+      ),
       image: assets.cpg7,
       cardBg: "bg-orange-100",
     },
@@ -484,7 +497,19 @@ const CpgDistribution = () => {
       <Banner16 />
       <BenefitsSection
         heading="Reasons why digital transformation is necessary for CPG distributors"
-        desc="The consumer packaged goods (CPG) sector is particularly dependent on the fast movement of stocks, well-functioning supply chains, and brand visibility. Consumers who opt for digital channels demand simple ordering processes, live product availability, and an easy-to-use delivery tracking system. By the fusion of Digital Marketing Solution For CPG industry. Capyngen is allowing distributors around the globe to not only simplify their workflows and boost their revenue but also to establish a closer relationship with retailers and consumers."
+        desc={
+          <span>
+            The consumer packaged goods (CPG) sector is particularly dependent
+            on the fast movement of stocks, well-functioning supply chains, and
+            brand visibility. Consumers who opt for digital channels demand
+            simple ordering processes, live product availability, and an
+            easy-to-use delivery tracking system. By the fusion of Digital
+            Marketing Solution For CPG industry. <Link to={"/"}>Capyngen</Link>{" "}
+            is allowing distributors around the globe to not only simplify their
+            workflows and boost their revenue but also to establish a closer
+            relationship with retailers and consumers.
+          </span>
+        }
         benefits={solutionsData}
         image={assets.cpg1}
         footerNote=""

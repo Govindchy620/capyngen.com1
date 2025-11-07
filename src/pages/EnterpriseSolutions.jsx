@@ -26,6 +26,7 @@ import {
 import CardsSection from "../components/CardsSection";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -303,7 +304,16 @@ const EnterpriseSolutions = () => {
     },
     {
       title: "Industry Expertise",
-      desc: "The company addresses individual enterprise software requirements of the production sector, healthcare, finance, retail, logistics, and professional services.",
+      desc: (
+        <>
+          <p>
+            The company addresses individual enterprise software requirements of
+            the production sector,{" "}
+            <Link to={"/industries/healthcare-fitness"}>healthcare</Link>,
+            finance, retail, logistics, and professional services.
+          </p>
+        </>
+      ),
     },
     {
       title: "Complete Competencies",
@@ -377,8 +387,17 @@ const EnterpriseSolutions = () => {
     {
       step: "Step 02",
       title: "Strategic Planning",
-      description:
-        "Through a detailed roadmap, our specialists plan out the enterprise IT solutions, cloud adoption, security implementation, and application development. We rank and choose the most important initiatives by evaluating their business impact, feasibility, and ROI.",
+      description: (
+        <>
+          <span>
+            Through a detailed roadmap, our specialists plan out the enterprise
+            <Link to={"/"}> IT solutions</Link>, cloud adoption, security
+            implementation, and application development. We rank and choose the
+            most important initiatives by evaluating their business impact,
+            feasibility, and ROI.
+          </span>
+        </>
+      ),
     },
     {
       step: "Step 03",

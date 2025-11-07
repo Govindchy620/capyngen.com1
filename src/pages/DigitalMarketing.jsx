@@ -25,6 +25,274 @@ import {
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/digital-marketing#webpage",
+  url: "https://www.capyngen.com/digital-marketing",
+  name: "Company Overview | Capyngen – Empowering Brands with Digital Excellence",
+  description:
+    "Capyngen is a full-service digital marketing and technology agency driven by creativity, innovation, and results. From SEO and web development to performance marketing and branding — we help businesses grow smarter and faster. Discover our story, values, and vision that power success.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/seoAndContent-DdAby_d6.png",
+    width: 1200,
+    height: 800,
+    caption: "Digital Marketing Services by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Services",
+        item: "https://www.capyngen.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Digital Marketing",
+        item: "https://www.capyngen.com/digital-marketing",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/digital-marketing#service",
+  serviceType: "Digital Marketing Services",
+  name: "Digital Marketing Services",
+  alternateName: "Online Marketing Solutions",
+  url: "https://www.capyngen.com/digital-marketing",
+  description:
+    "Capyngen provides data-driven digital marketing services including SEO, PPC, social media management, content marketing, and analytics to help businesses increase visibility, leads, and ROI.",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  audience: {
+    "@type": "Audience",
+    audienceType: [
+      "Startups",
+      "Small Businesses",
+      "E-commerce Brands",
+      "Enterprises",
+    ],
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://www.capyngen.com/contact",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    price: "0",
+    eligibleRegion: {
+      "@type": "Place",
+      name: "Worldwide",
+    },
+    description:
+      "Get a free consultation for our 360° digital marketing services including SEO, PPC, social media, and content strategy.",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Digital Marketing Services Catalog",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Search Engine Optimization (SEO)",
+          description:
+            "Improve your website visibility and ranking through expert SEO strategies.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Pay-Per-Click Advertising (PPC)",
+          description:
+            "Maximize ROI with targeted Google Ads and paid campaigns.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Social Media Marketing",
+          description:
+            "Boost engagement and brand awareness with creative social campaigns.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Content Marketing",
+          description:
+            "Drive organic growth through valuable, optimized content strategies.",
+        },
+      },
+    ],
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/digital-marketing#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is digital marketing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Digital marketing is promotional activity carried out digitally through online channels such as social media, search engines, e-mail, and websites.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is digital marketing important for businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It allows companies to be more recognizable, attract visitors to their web pages, get potential clients and, therefore, generate more sales, besides establishing the brand better in the digital world through the internet.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What services does a digital marketing agency provide?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The agency offers many services such as search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, content marketing, and email campaigns, along with analytics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can digital marketing help small businesses grow?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed. The online promotional activities are very adjustable, budget-friendly, and well-targeted to get access to potential buyers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between a digital marketing company and an agency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "There is a similarity in that both are providers of marketing services. Whereas agencies are normally equipped to offer more comprehensive solutions, companies are more likely to concentrate on creating custom strategies or delivering consulting services.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to see results from digital marketing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The different results from the various channels and strategies usually take 3–6 months for SEO and content marketing, while paid campaigns can give immediate results.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide custom digital marketing services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Capyngen has the ability to create tailored digital marketing campaigns that fit the unique business goals and industry of your company.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you manage digital marketing for startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, surely. We offer digital marketing services for startups aiming to achieve rapid progress and position themselves in the international market.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer online digital marketing services for international businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The professional global digital marketing company Capyngen is the solution to the challenges of your enterprise and global ventures.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you measure the success of campaigns?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Key changes in performance indicators are the focus of tracking efforts such as the amount of people visiting the website, leads generated, conversions of leads into customers and ROI also how the audience interacts with the brand.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide social media marketing services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed. We are involved in the planning, new content development, execution of advertising, and measuring success across major social media platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can digital marketing increase sales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed. When the proper audience is attracted, and campaigns are optimized, digital marketing can become a gateway for realizing more conversions and higher revenues.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer SEO and PPC services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We are an all-encompassing digital marketing agency, whose expertise includes search engine optimization and advertisement on a paid basis.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does digital marketing cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Prices are based on the level of the service, scale, and campaign duration. Capyngen offers the option of scaling businesses of different sizes and prices.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I get started with Capyngen’s digital marketing services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Start with a no-cost consultation to talk over your ambitions and get a tailor-made digital marketing plan for your company.",
+      },
+    },
+  ],
+};
 
 const DigitalMarketing = () => {
   const faqItems = [
@@ -386,6 +654,13 @@ const DigitalMarketing = () => {
           name="keywords"
           content="Digital Marketing Services | Result-Driven Marketing Agency – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner11
@@ -414,8 +689,12 @@ const DigitalMarketing = () => {
               <p className="mb-3 font-semibold">It includes:</p>
               <ul className="list-disc list-inside space-y-2">
                 <li>Search Engine Optimization (SEO)</li>
-                <li>Social Media Marketing (SMM)</li>
-                <li>Pay-Per-Click Advertising (PPC)</li>
+                <li>
+                  <Link to={"/smm"}>Social Media Marketing (SMM)</Link>
+                </li>
+                <li>
+                  <Link to={"/ppc"}>Pay-Per-Click Advertising (PPC)</Link>
+                </li>
                 <li>Content Marketing</li>
                 <li>Email Marketing</li>
                 <li>Influencer Marketing</li>

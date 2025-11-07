@@ -19,6 +19,7 @@ import TechnologiesCarousel from "../components/TechnologiesCarousel";
 import Banner3 from "../components/Banner3";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -518,7 +519,14 @@ const CustomAiSolution = () => {
           sectionBg="bg-black"
           title="Best Custom AI Solutions for Businesses"
           description={[
-            "Capyngen is a global AI software company that creates AI-powered solutions for businesses that want to automate their workflows, make decisions based on data, and discover new business potentials. We design AI solutions that fit any business, from startups to multinational corporations, to make a quantifiable difference.",
+            <span>
+              <Link to={"/"}>Capyngen</Link> is a global AI software company
+              that creates AI-powered solutions for businesses that want to
+              automate their workflows, make decisions based on data, and
+              discover new business potentials. We design AI solutions that fit
+              any business, from startups to multinational corporations, to make
+              a quantifiable difference.
+            </span>,
           ]}
           image={assets.customAiSolution}
         />

@@ -37,6 +37,7 @@ import {
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -394,13 +395,22 @@ const EcommerceDesign = () => {
     },
     {
       title: "E-commerce Web Design Services",
-      description:
-        "A perfect blend of art and science—mobile-responsive, fast-loading, and optimized websites built for exceptional user experience and SEO.",
+      description: (
+        <span>
+          A perfect blend of art and science—mobile-responsive, fast-loading,
+          and optimized websites built for exceptional user experience and{" "}
+          <Link to={"/seo"}>SEO</Link>.
+        </span>
+      ),
       image: assets.eCommDesign9,
       cardBg: "bg-red-100",
     },
     {
-      title: "E-commerce Mobile App Design",
+      title: (
+        <span>
+          E-commerce <Link to={"/app-development"}>Mobile App Design</Link>
+        </span>
+      ),
       description:
         "Cross-platform mobile app designs with features like push notifications, personalized dashboards, and secure payment gateways for better customer engagement.",
       image: assets.eCommDesign10,
@@ -462,14 +472,29 @@ const EcommerceDesign = () => {
         textColor="text-white"
         title="Get a Free Consultation"
         description={[
-          "Talk to Capyngen’s e-commerce design experts to create a visually stunning, high-converting online store or mobile app.",
+          <span>
+            Talk to <Link to={"/"}>Capyngen’s</Link> e-commerce design experts
+            to create a visually stunning, high-converting online store or
+            mobile app.
+          </span>,
         ]}
         backgroundVideo={assets.backgroundVideo}
       />
       <TopRatedCompany
         title="E-Commerce Design Transforms Your Digital Store"
         description={[
-          `A professionally designed store is the best way to let your products and services shine through. Simply put, the combination of e-commerce UI design, e-commerce app UI design and e-commerce database design is nothing short of a saga of putting forth visually stunning as well as high-functional user engagement platforms that convert sales and grow business. One of the best things about your next adventure would have been possibly partnering up with an already established e-commerce website designing company.`,
+          <span>
+            A professionally designed store is the best way to let your products
+            and services shine through. Simply put, the combination of
+            e-commerce UI design,{" "}
+            <Link to={"/ui-ux-design"}>e-commerce app UI design</Link> and
+            e-commerce database design is nothing short of a saga of putting
+            forth visually stunning as well as high-functional user engagement
+            platforms that convert sales and grow business. One of the best
+            things about your next adventure would have been possibly partnering
+            up with an already established e-commerce{" "}
+            <Link to={"/website-design"}>website designing company</Link>.
+          </span>,
         ]}
         image={assets.eCommDesign2}
         isHidden={true}

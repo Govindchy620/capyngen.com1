@@ -29,6 +29,7 @@ import HowWeWork from "../components/HowWeWork";
 import TopRatedCompany from "../components/TopRatedCompany";
 import BenefitsSection from "../components/BenefitsSection";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -231,8 +232,13 @@ const Insurance = () => {
   const cardsSectionImageData1 = [
     {
       title: "Cellular Insurance Apps",
-      description:
-        "Design insurance mobile apps for iOS and Android that will process basic activities such as policy delivery, claim registration, and fraud detection automatically.",
+      description: (
+        <span>
+          Design <Link to={"/app-development"}>insurance mobile apps</Link> for
+          iOS and Android that will process basic activities such as policy
+          delivery, claim registration, and fraud detection automatically.
+        </span>
+      ),
       image: assets.insurance2,
       cardBg: "bg-blue-100",
     },
@@ -497,7 +503,12 @@ const Insurance = () => {
       />
       <TopRatedCompany
         reverse={false}
-        title="Trusted Insurance Software Development Services for Insurers"
+        title={
+          <span>
+            Trusted Insurance{" "}
+            <Link to={"/"}>Software Development Services</Link> for Insurers
+          </span>
+        }
         description={[
           "Transform your insurance company's fate with IT solutions for the insurance industry, Capyngen's cutting-edge software development services. We create customized policy admin solutions, claim management systems along with InsurTech applications that fundamentally change the process of digital Solution for insurance companies. The digital transformation process that is the latest one consists of safety, automated activities along with effortless interaction with the customer, which align with our insurance app development services.",
         ]}
@@ -507,7 +518,17 @@ const Insurance = () => {
       />
       <CardsSectionImage
         heading="Insurance Software Development Experience"
-        subheading="We are an insurance software development team fully dedicated to building the right, scalable, and secure solutions for all situations, in general, and all types of industries."
+        subheading={
+          <span>
+            We are an{" "}
+            <Link to={"/crm-management-software"}>
+              insurance software development
+            </Link>{" "}
+            team fully dedicated to building the right, scalable, and secure
+            solutions for all situations, in general, and all types of
+            industries.
+          </span>
+        }
         services={cardsSectionImageData1}
         sectionBg="bg-gray-800"
         headColor="text-white"

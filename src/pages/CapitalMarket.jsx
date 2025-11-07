@@ -577,13 +577,13 @@ const CapitalMarket = () => {
         description={[
           <>
             <p>
-              Capyngen offers a complete package of software solutions for the
-              capital market which caters to the needs of the financial
-              institutions, trading companies, and investment firms. Besides
-              stock trading software, we become the source of the wealth
-              management platform for businesses to facilitate their processes,
-              make the right choices, and lead the game in the ever-changing
-              financial landscape.
+              <Link to={"/"}>Capyngen</Link> offers a complete package of
+              software solutions for the capital market which caters to the
+              needs of the financial institutions, trading companies, and
+              investment firms. Besides stock trading software, we become the
+              source of the wealth management platform for businesses to
+              facilitate their processes, make the right choices, and lead the
+              game in the ever-changing financial landscape.
             </p>
             <p>
               Our FinTech for capital markets gives the firms the power to

@@ -473,7 +473,12 @@ const ManufacturingAutomotive = () => {
     {
       image: assets.manufacturing6,
       title: "AR/VR",
-      desc: "Fascinating education and distant supervision facilities.",
+      desc: (
+        <span>
+          Fascinating <Link to={"/industries/education"}>education</Link> and
+          distant supervision facilities.
+        </span>
+      ),
     },
     {
       image: assets.manufacturing7,
@@ -589,11 +594,12 @@ const ManufacturingAutomotive = () => {
               and supply chains.
             </p>
             <p className="pt-5">
-              Capyngen is one of the best companies that provide software
-              solutions for the manufacturing industry. No matter if you are
-              looking for smart factory software, ERP for the manufacturing
-              industry, or industrial automation software, we make it easy to
-              manage operations, cut down on expenses, and optimize output.
+              <Link to={"/"}>Capyngen</Link> is one of the best companies that
+              provide software solutions for the manufacturing industry. No
+              matter if you are looking for smart factory software, ERP for the
+              manufacturing industry, or industrial automation software, we make
+              it easy to manage operations, cut down on expenses, and optimize
+              output.
             </p>
           </>
         }
@@ -638,7 +644,12 @@ const ManufacturingAutomotive = () => {
             Planning platforms, and{" "}
             <Link to={"/artificial-intelligence"}>AI-powered</Link> analytics.
           </>,
-          "We provide custom manufacturing software solutions that energize the factories, Original Equipment Manufacturers, and supply chains with a digital solution that is digital, scalable, and future-ready at Capyngen.",
+          <span>
+            We provide custom manufacturing software solutions that energize the
+            factories, Original Equipment Manufacturers, and supply chains with
+            a <Link to={"/digital-marketing"}>digital solution</Link> that is
+            digital, scalable, and future-ready at Capyngen.
+          </span>,
         ]}
         buttonText="Get in touch now!"
         image={assets.manufacturing1}

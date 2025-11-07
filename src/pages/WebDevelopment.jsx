@@ -26,6 +26,7 @@ import CardsSectionSlider from "../components/CardsSectionSlider";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -613,7 +614,11 @@ const WebDevelopment = () => {
       cardBg: "bg-pink-100",
     },
     {
-      title: "UI/UX Design Services",
+      title: (
+        <span>
+          <Link to={"/ui-ux-design"}>UI/UX Design Services</Link>
+        </span>
+      ),
       description:
         "Making stunning ease of use and confidence building applications will raise user engagement and leave a long-lasting memory.",
       image: assets.webDev12,
@@ -717,7 +722,14 @@ const WebDevelopment = () => {
         <TopRatedCompany
           title="Why Web Development Matters Today?"
           description={[
-            `Capyngen is convinced that a strong online presence is not a mere luxury any more, but rather a must-have for the expansion of a business. The companies that decide to use our services for the development of their professional websites are the ones that become the most trusted by their target audience, attract more visitors, and raise the level of their engagement.`,
+            <span>
+              <Link to={"/"}>Capyngen</Link> is convinced that a strong online
+              presence is not a mere luxury any more, but rather a must-have for
+              the expansion of a business. The companies that decide to use our
+              services for the development of their professional websites are
+              the ones that become the most trusted by their target audience,
+              attract more visitors, and raise the level of their engagement.
+            </span>,
             `It does not matter whether your company is a startup or a large conglomerate, the services offered by us in the field of custom website development work with the sole objective of getting your brand noticed out of the crowd. Capyngen website is your online success is ensured by every component starting from visually attractive layouts to feature-rich functionality, all of which are meticulously designed to give you a smooth and a captivating user experience.`,
             <p key="equation" className="text-2xl font-bold text-cyan-400 mt-6">
               Web Development ={" "}

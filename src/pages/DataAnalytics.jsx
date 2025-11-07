@@ -19,6 +19,254 @@ import GetStarted from "../components/GetStarted";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/data-analytics#webpage",
+  url: "https://www.capyngen.com/data-analytics",
+  name: "Data & Analytics | Best Data Analytics Company in India – Capyngen",
+  description:
+    "Turn data into decisions with Capyngen’s data & analytics services. We offer cloud-based analytics solutions to help businesses gain insights and scale faster.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/dataAndAnalytics-CujmVm5V.png",
+    width: 1200,
+    height: 800,
+    caption: "Data & Analytics Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Data & Analytics",
+        item: "https://www.capyngen.com/data-analytics",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Data Analytics Services",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  url: "https://www.capyngen.com/data-analytics",
+  description:
+    "Capyngen provides advanced data analytics services to help businesses make data-driven decisions, optimize performance, and enhance digital marketing ROI through actionable insights.",
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Data Analytics Solutions",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Marketing Analytics",
+          description:
+            "Analyze campaign performance and customer behavior to optimize digital marketing strategies for better ROI.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Business Intelligence (BI)",
+          description:
+            "Transform raw data into actionable dashboards and visual insights to support strategic decision-making.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Predictive Analytics",
+          description:
+            "Use machine learning and AI models to forecast trends, customer behavior, and business outcomes.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Data Visualization",
+          description:
+            "Create clear, interactive dashboards and reports for real-time business intelligence tracking.",
+        },
+      },
+    ],
+  },
+  image:
+    "https://www.capyngen.com/assets/images/services/data-analytics-banner.jpg",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/data-analytics#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are data analytics services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Data analytics services refer to the collection, processing, analysis, and visualization of business data for the purpose of extracting actionable insights. The range of services may include business intelligence, predictive analytics, data modeling, and strategic consulting.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should businesses invest in data analytics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Data analytics helps uncover customer behavior, streamline operations, identify new opportunities, reduce costs, predict trends, and gain a competitive advantage—making businesses more profitable and efficient.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Capyngen the best data analytics company in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen combines technical expertise, industry experience, and advanced technologies to deliver end-to-end analytics solutions. With a proven record of success, tailored engagements, and dedicated support, we are among the top data analytics service providers in India.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between business intelligence and data analytics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Business intelligence focuses on descriptive analytics through dashboards and reports, while data analytics encompasses all stages of data processing, including predictive modeling and machine learning for deeper insights.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does implementation take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Simple BI dashboards typically take 4–6 weeks, while comprehensive analytics platforms may require 3–6 months. Timelines are refined during the discovery phase based on project scope and requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are cloud data analytics services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cloud data analytics services use cloud platforms such as AWS, Azure, and Google Cloud for scalable, cost-efficient, and accessible data storage, processing, and analysis without the need for heavy infrastructure.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much do data analytics services cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pricing depends on project scope, data volume, complexity, and technologies used. Capyngen offers flexible pricing models including project-based, subscription, and managed service options. Contact us for a custom quote.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can analytics work with existing systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Our data integration solutions work with nearly all systems—legacy databases, cloud applications, ERP, CRM, IoT, or API-based platforms—ensuring seamless compatibility.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure data security?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We implement enterprise-grade security with encryption, strict access controls, audit trails, and compliance with major standards including GDPR, HIPAA, and SOC 2.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries does Capyngen serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen delivers customized data analytics solutions for industries such as banking and finance, healthcare, retail, manufacturing, IT, professional services, education, and hospitality.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide training?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer comprehensive training on tools, dashboards, data analysis, and best practices, tailored to user roles and business needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is predictive analytics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Predictive analytics uses historical data and machine learning to forecast future outcomes like sales demand, customer churn, risks, and trends—empowering proactive decision-making.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can small businesses benefit from analytics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Capyngen provides scalable and cost-effective analytics solutions designed for small and medium-sized businesses to harness the power of data-driven insights.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you measure success?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We define KPIs aligned with business objectives such as ROI, cost savings, revenue growth, productivity improvement, prediction accuracy, and user adoption rates.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's the difference between data analytics and data science?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Data analytics focuses on analyzing existing data to answer business questions, while data science involves advanced modeling, algorithm design, and machine learning. Capyngen provides both analytics and data science services.",
+      },
+    },
+  ],
+};
 
 const DataAnalytics = () => {
   const faqItems = [
@@ -154,7 +402,12 @@ const DataAnalytics = () => {
     },
     {
       title: "Finance & Banking",
-      desc: "Financial risk control, fraud detection, and investment advisory.",
+      desc: (
+        <span>
+          <Link to={"/banking"}>Banking Financial</Link> risk control, fraud
+          detection, and investment advisory.
+        </span>
+      ),
       image: assets.banking,
       textColor: "text-white",
     },
@@ -273,6 +526,13 @@ const DataAnalytics = () => {
           name="keywords"
           content="Data & Analytics | Best Data Analytics Company in India – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner5
@@ -384,7 +644,7 @@ const DataAnalytics = () => {
           overlayColor="bg-black/40"
         />
         <TechnologiesCarousel
-          title="Custom AI Solution Technologies We Use"
+          title="Data Analytics Technologies We Use"
           description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
           technologies={technologies}
         />
@@ -396,7 +656,13 @@ const DataAnalytics = () => {
           textSize="text-2xl"
           buttonText="Get Started"
           description={[
-            "You just need to make a single click and Capyngen experts will be available for a free consultation on data analytics. They are the only people who can locate your requirements, equip you with customized solutions and deliver visible business results.",
+            <span>
+              You just need to make a single click and{" "}
+              <Link to={"/"}>Capyngen</Link> experts will be available for a
+              free consultation on data analytics. They are the only people who
+              can locate your requirements, equip you with customized solutions
+              and deliver visible business results.
+            </span>,
           ]}
           backgroundVideo={assets.backgroundVideo}
         />

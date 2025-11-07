@@ -50,6 +50,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -421,25 +422,43 @@ const Consulting = () => {
   ];
   const cardsSectionSliderData1 = [
     {
-      title: "E-commerce & Retail",
+      title: (
+        <span>
+          <Link to={"/industries/e-commerce"}>E-commerce & Retail</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign11,
       textColor: "text-white",
     },
     {
-      title: "Healthcare & Wellness",
+      title: (
+        <span>
+          <Link to={"/industries/healthcare-fitness"}>
+            Healthcare & Wellness
+          </Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign12,
       textColor: "text-white",
     },
     {
-      title: "Education & E-learning",
+      title: (
+        <span>
+          <Link to={"/industries/education"}>Education & E-learning</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign13,
       textColor: "text-white",
     },
     {
-      title: "Real Estate",
+      title: (
+        <span>
+          <Link to={"/industries/real-estate"}>Real Estate</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign14,
       textColor: "text-white",
@@ -457,7 +476,11 @@ const Consulting = () => {
       textColor: "text-white",
     },
     {
-      title: "Travel & Hospitality",
+      title: (
+        <span>
+          <Link to={"/industries/travel-logistics"}>Travel & Hospitality</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign17,
       textColor: "text-white",
@@ -527,7 +550,11 @@ const Consulting = () => {
           overlayColor="bg-black/40"
         />
         <CardsSection
-          heading="Why should you choose Capyngen Consulting?"
+          heading={
+            <span>
+              Why should you choose <Link to={"/"}>Capyngen</Link> Consulting?
+            </span>
+          }
           subheading=""
           services={cardsSectionData1}
           sectionBg="bg-black"

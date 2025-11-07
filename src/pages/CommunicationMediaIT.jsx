@@ -37,6 +37,7 @@ import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import WhyChoose from "../components/WhyChoose";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -517,7 +518,16 @@ const CommunicationMediaIT = () => {
       <TopRatedCompany
         title="Software solutions For Media and communication"
         description={[
-          `Capyngen delivers future IT solutions For Media and communication  that are designed based on the needs of broadcasting networks, telecom operators, streaming platforms, and Digital Transformation for Media Industry publishers. Their platforms are not only scalable, self-managed but also responsive, so these companies can decide their content, broadcasting, and digital workflows efficiently even without having technical skills of a high level.`,
+          <span>
+            Capyngen delivers future <Link to={"/"}>IT solutions</Link> For
+            Media and communication that are designed based on the needs of
+            broadcasting networks, telecom operators, streaming platforms, and
+            Digital Transformation for Media Industry publishers. Their
+            platforms are not only scalable, self-managed but also responsive,
+            so these companies can decide their content, broadcasting, and
+            digital workflows efficiently even without having technical skills
+            of a high level.
+          </span>,
           `The extensive range of software solutions For Media and communication that we offer encompasses software broadcasting, digital media platform, telecom software solution, streaming platform development, and Content management for Media Industry that stabilize business growth, scalability, and innovation.`,
           `With Capyngen, however, you are not only buying software but also the technology, guidance, and experience that are essential for your success in the media and communication field.`,
         ]}

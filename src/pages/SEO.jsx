@@ -19,6 +19,7 @@ import SeoStatsSection from "../components/SeoStatsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -492,7 +493,11 @@ const SEO = () => {
           overlayColor="bg-black/40"
         />
         <TopRatedCompany
-          title="Why Choose Capyngen as Your SEO Partner"
+          title={
+            <span>
+              Why Choose <Link to={"/"}>Capyngen</Link> as Your SEO Partner
+            </span>
+          }
           description={[
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">

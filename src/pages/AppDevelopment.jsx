@@ -24,6 +24,7 @@ import TopRatedCompany from "../components/TopRatedCompany";
 import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -619,7 +620,14 @@ const AppDevelopment = () => {
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
         description={[
-          "Is it time to get your mobile app off the ground? Contact Capyngen, a top mobile app development services company, and let our expert app developers turn your dream into a living reality.",
+          <>
+            <span>
+              Is it time to get your mobile app off the ground? Contact
+              <Link to={"/"}>Capyngen</Link>, a top mobile app development
+              services company, and let our expert app developers turn your
+              dream into a living reality.
+            </span>
+          </>,
         ]}
         textSize="text-2xl"
         buttonText="Contact Us"

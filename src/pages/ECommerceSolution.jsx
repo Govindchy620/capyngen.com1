@@ -38,6 +38,7 @@ import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -636,7 +637,12 @@ const ECommerceSolution = () => {
         <TopRatedCompany
           title="Why Your Business Needs an E-Commerce Solution"
           description={[
-            `It is no longer enough to have an ecommerce platform that you can rely on - it is now essential. By employing a well-crafted ecommerce web development plan, your enterprise is capable of:`,
+            <span>
+              It is no longer enough to have an ecommerce platform that you can
+              rely on - it is now essential. By employing a well-crafted
+              ecommerce <Link to={"/web-development"}>web development</Link>{" "}
+              plan, your enterprise is capable of:
+            </span>,
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
                 {[
@@ -683,9 +689,10 @@ const ECommerceSolution = () => {
                 ))}
               </ul>
               <p>
-                The web solutions that Capyngen has for the ecommerce are
-                designed to align with your business objectives, whether you are
-                a newcomer to the market or planning to go abroad.
+                The web solutions that <Link to={"/"}>Capyngen</Link> has for
+                the ecommerce are designed to align with your business
+                objectives, whether you are a newcomer to the market or planning
+                to go abroad.
               </p>
             </>,
           ]}

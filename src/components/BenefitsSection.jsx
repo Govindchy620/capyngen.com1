@@ -96,12 +96,12 @@ const BenefitsSection = ({
                 </h3>
 
                 {/* Description */}
-                <p
+                <div
                   id={`benefit-desc-${i}`}
                   className="text-base md:text-lg text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors"
                 >
                   {item.desc}
-                </p>
+                </div>
               </div>
             </article>
           ))}

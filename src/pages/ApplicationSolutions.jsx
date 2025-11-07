@@ -24,6 +24,7 @@ import {
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -527,7 +528,15 @@ const ApplicationSolutions = () => {
           textColor="text-white"
           title="Book Your Free Consultation Today"
           description={[
-            "Have a chat with one of our knowledgeable staff and identify the finest application development solutions tailor-made for your firm. Our next powerful venture is waiting to be built.",
+            <>
+              <span>
+                Have a chat with one of our knowledgeable staff and identify the
+                finest{" "}
+                <Link to={"/app-development"}>application development</Link>{" "}
+                solutions tailor-made for your firm. Our next powerful venture
+                is waiting to be built.
+              </span>
+            </>,
           ]}
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
@@ -535,7 +544,13 @@ const ApplicationSolutions = () => {
         <TopRatedCompany
           title="Benefits of Our Application Solutions"
           description={[
-            `Custom application-building services from Capyngen result in business wins that can be quantitatively measured:`,
+            <>
+              <span>
+                Custom application-building services from{" "}
+                <Link to={"/"}>Capyngen</Link> result in business wins that can
+                be quantitatively measured:
+              </span>
+            </>,
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
                 {[

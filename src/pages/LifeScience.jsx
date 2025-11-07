@@ -40,6 +40,7 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import BenefitsSection from "../components/BenefitsSection";
 import Banner4 from "../components/Banner4";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -411,8 +412,15 @@ const LifeScience = () => {
   ];
   const solutionsData = [
     {
-      title:
-        "Deep knowledge gained through working with pharmaceutical, biotech, and healthcare IT industries",
+      title: (
+        <span>
+          Deep knowledge gained through working with pharmaceutical, biotech,
+          and{" "}
+          <Link to={"/industries/healthcare-fitness"}>
+            healthcare IT industries
+          </Link>
+        </span>
+      ),
       desc: "",
     },
     {
@@ -490,7 +498,11 @@ const LifeScience = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title="Schedule a Demo for Pharma IT Services"
+        title={
+          <span>
+            Schedule a Demo for Pharma <Link to={"/"}>IT Services</Link>
+          </span>
+        }
         description={[
           "Experience secure, scalable pharma IT services and clinical trial management software.",
         ]}

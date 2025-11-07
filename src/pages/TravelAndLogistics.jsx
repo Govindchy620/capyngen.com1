@@ -15,6 +15,212 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/travel-logistics#webpage",
+  url: "https://www.capyngen.com/industries/travel-logistics",
+  name: "IT Solutions for Travel & Logistics | Best IT Solutions for Logistics Companies",
+  description:
+    "Optimize your operations with Capyngen’s IT solutions for travel and logistics. We provide custom software, web, and digital solutions to enhance business efficiency.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/travel10-ZxsQiAke.png",
+    width: 1200,
+    height: 800,
+    caption: "IT Solutions for Travel & Logistics by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Travel & Logistics",
+        item: "https://www.capyngen.com/industries/travel-logistics",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Digital Solutions for Travel and Logistics Industry",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  url: "https://www.capyngen.com/industries/travel-logistics",
+  description:
+    "Capyngen provides travel and logistics businesses with high-performance websites, digital marketing campaigns, and data analytics solutions to optimize operations and customer engagement.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Travel & Logistics Industry Digital Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Travel Website & App Development",
+          description:
+            "Custom-built travel and logistics platforms with real-time booking systems, maps integration, and optimized user experiences.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Digital Marketing for Travel & Logistics",
+          description:
+            "Data-driven PPC, SEO, and content marketing strategies to increase visibility, traffic, and bookings for travel companies.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "UI/UX Design for Travel Platforms",
+          description:
+            "Intuitive and visually appealing UI/UX designs that improve user journeys for travel portals and logistics dashboards.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Data Analytics and Automation",
+          description:
+            "Advanced analytics and automation tools to help logistics companies optimize routes, costs, and performance.",
+        },
+      },
+    ],
+  },
+  image: "https://www.capyngen.com/assets/travel12-CUXFNTZg.png",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/industries/travel-logistics#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are IT solutions for travel and logistics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "They refer to digital systems and software created to automate, optimize, and upgrade the processes of travel and logistics industries—from bookings to delivery tracking.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do Capyngen’s digital solutions help logistics companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen’s IT solutions for logistics companies help automate operations, improve tracking accuracy, and enhance supply chain visibility for greater efficiency.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What kind of web development do you offer for travel and logistics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We build custom websites and mobile apps for online booking, cargo tracking, and customer service, all optimized for performance and user experience.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you build custom software for logistics management?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Our tailor-made software for travel and logistics handles fleet management, inventory, dispatching, and analytics—customized for each client’s needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your systems cloud-based?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! We specialize in cloud-based platforms that provide real-time access, scalability, and robust security for travel and logistics operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do AI and analytics improve logistics performance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AI and analytics help with demand forecasting, predictive maintenance, and route optimization—saving time, reducing costs, and improving efficiency.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you ensure data security and compliance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. We follow strict security and data protection standards such as ISO 27001, GDPR, and PCI DSS to ensure complete compliance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate with our existing ERP or CRM?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our systems are designed for seamless integration with your existing ERP or CRM using secure APIs and middleware.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer post-deployment support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide comprehensive post-deployment support, including maintenance, updates, and performance monitoring to ensure smooth operation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen for IT solutions in travel and logistics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Because we deliver scalable, secure, and intelligent digital solutions that keep your travel and logistics business efficient, connected, and future-ready.",
+      },
+    },
+  ],
+};
+
 const TravelAndLogistics = () => {
   const faqItems = [
     {
@@ -299,6 +505,13 @@ const TravelAndLogistics = () => {
           name="keywords"
           content="IT Solutions for Travel & Logistics | Best IT Solutions for Logistics Companies"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <CreativeAgencyFAQ
         slides={slidesData}
