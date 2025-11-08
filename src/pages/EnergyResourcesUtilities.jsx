@@ -45,6 +45,7 @@ import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -436,8 +437,13 @@ const EnergyResourcesUtilities = () => {
       icon: <FaDatabase className="text-4xl text-white" />,
     },
     {
-      title:
-        "The use of AI and Machine Learning is made for setting up predictive energy analytics.",
+      title: (
+        <span>
+          The use of{" "}
+          <Link to={"/artificial-intelligence"}>AI and Machine Learning</Link>{" "}
+          is made for setting up predictive energy analytics.
+        </span>
+      ),
       description: "",
       icon: <FaMobileAlt className="text-4xl text-white" />,
     },
@@ -544,7 +550,11 @@ const EnergyResourcesUtilities = () => {
       <TopRatedCompany
         title="Industry Has Lastly Managed To Go The Tech RoadLeading Energy Management Software Solutions for Modern Utilities"
         description={[
-          `Capyngen is an energy management software solutions leader that provides the smart grid software, utility billing software, and renewable energy software.`,
+          <span>
+            <Link to={"/"}>Capyngen</Link> is an energy management software
+            solutions leader that provides the smart grid software, utility
+            billing software, and renewable energy software.
+          </span>,
           `Energy analytics software and IoT solutions for energy and utilities that accompany us to the store of news agents are the same as those that allow us to automate operations, optimize energy distribution, and enhance sustainability in our businesses.`,
           <>
             <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
