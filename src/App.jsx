@@ -66,6 +66,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import LandingPage from "./pages/LandingPage/DigitalMarketingLandingPage/LandingPage";
 import WebDevelopmentHiddenPage from "./pages/WebDevelopmentHiddenPage";
 import AppDevelopmentHiddenPage from "./pages/AppDevelopmentHiddenPage";
+import CrmManagementSoftwareHiddenPage from "./pages/CrmManagementSoftwareHiddenPage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -180,6 +181,10 @@ const AppContent = () => {
         <Route
           path="/app-development-hidden-page"
           element={<AppDevelopmentHiddenPage />}
+        />
+        <Route
+          path="/crm-management-software-hidden-page"
+          element={<CrmManagementSoftwareHiddenPage />}
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
