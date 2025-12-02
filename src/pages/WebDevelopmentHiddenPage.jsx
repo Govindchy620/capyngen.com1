@@ -34,7 +34,7 @@ import {
   Minus,
 } from "lucide-react";
 
-const CapyngenFeature = () => {
+const WebDevelopmentHiddenPage = () => {
   const services = [
     {
       title: "CSS, JavaScript, and HTML Development",
@@ -1249,4 +1249,4 @@ const CapyngenFeature = () => {
   );
 };
 
-export default CapyngenFeature;
+export default WebDevelopmentHiddenPage;
