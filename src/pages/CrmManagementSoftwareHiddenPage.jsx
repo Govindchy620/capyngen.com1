@@ -443,11 +443,6 @@ const CrmManagementSoftwareHiddenPage = () => {
           </div>
         </section>
       </main>
-
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 py-8 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} Capyngen CRM | All rights reserved.
-      </footer>
     </div>
   );
 };

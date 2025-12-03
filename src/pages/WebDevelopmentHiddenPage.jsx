@@ -33,6 +33,7 @@ import {
   HelpCircle,
   Minus,
 } from "lucide-react";
+import { assets } from "../assets/assets";
 
 const WebDevelopmentHiddenPage = () => {
   const services = [
@@ -40,43 +41,37 @@ const WebDevelopmentHiddenPage = () => {
       title: "CSS, JavaScript, and HTML Development",
       description:
         "Templates do not exist in our system. Every site that we develop is an individual site that is designed with clean HTML, CSS and JavaScript so as to portray the personality of your brand. The end-result is a fast, sleek and user-friendly site capable of being lightweight, high-performance, and able to provide high-speed and stability. Being a leading web development company in Gurgaon, we make sure that your presence on the web is impeccable on any device.",
-      image:
-        "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop",
+      image: assets.webDevHiddenPage1,
     },
     {
       title: "WordPress Development",
       description:
         "Our WordPress professionals create and create user-friendly websites that are scalable and optimized on search engines. It could be a portfolio, blog or a corporate site, but it is a WordPress web development agency leaving you with total control of the content management and updates. Our concentration is on developing beautiful websites that are attractive, engaging and converting websites.",
-      image:
-        "https://images.unsplash.com/photo-1616469829941-c7200edec809?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage2,
     },
     {
       title: "Shopify and E-commerce platforms",
       description:
         "Online business is made easier by Capyngen with our eCommerce website development services. We create quick, secure and high converting Shopify and bespoke eCommerce websites that provide hassle-free shopping experiences, secure check-outs and online payments, assisting you to increase sales and customer satisfaction.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage3,
     },
     {
       title: "React & Angular Development",
       description:
         "React web application development and Angular web development services provided by Capyngen offer services that are dynamic, interactive and scalable. Our front-end technologies are the most current technologies used to make user interfaces very smooth to work with and yet they perform exceptionally well on all desktops, tablets, and smartphones.",
-      image:
-        "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage4,
     },
     {
       title: "PHP & Laravel Development",
       description:
         "We use powerful frameworks such as PHP and Laravel designed by our backend developers to come up with high-performance, scalable, and secure systems. In our web development services, your site is recession-proof, it can easily scale and grow your business long-term.",
-      image:
-        "https://images.unsplash.com/photo-1599507593499-a3f7d7d97663?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage5,
     },
     {
       title: "CMS & Custom Solutions",
       description:
         "Our specialty is to develop tailor CMS based on WordPress, Joomla, Drupal, and more. The services we are offering on CMS development enable you to develop and control your website easily and freely, enabling you to operate easily and have full control on the content and performance.",
-      image:
-        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop",
+      image: assets.webDevHiddenPage6,
     },
   ];
   const features = [
@@ -84,106 +79,91 @@ const WebDevelopmentHiddenPage = () => {
       title: "Custom Website Development",
       description:
         "We plan and create websites which reflect the actual identity of your brand. Each design aspect, feature, and interaction is designed with a strategic purpose of being in line with your business goals.",
-      image:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage7,
     },
     {
       title: "Mobile-Friendly Design Awareness",
       description:
         "Being a leading web development company in Gurgaon, Capyngen will make sure that your site will offer an equally outstanding experience to all your devices desktop, mobile, or tablet.",
-      image:
-        "https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage8,
     },
     {
       title: "E-commerce Development",
       description:
         "We develop smooth and user-friendly online shops that make the purchasing process less challenging to your customers. We create websites that are easy to use that help increase conversion rates.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage9,
     },
     {
       title: "CMS Development",
       description:
         "WordPress, Joomla and Drupal, we develop effective user-friendly CMS which make it easy to manage the websites for any business.",
-      image:
-        "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage10,
     },
     {
       title: "Web Application Development",
       description:
         "Being a market leader in web application development, we develop high-power, scalable web applications that provide performance, flexibility, and engagement to the user.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage11,
     },
     {
       title: "Progressive Web Apps (PWA)",
       description:
         "Capyngen builds PWAs, which are similar to native mobile apps, fast, responsive, and reliable, without an internet connection.",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage12,
     },
     {
       title: "API Integration Services",
       description:
         "We amalgamate APIs, CRMs, payment gateways and third-party applications to make sure your site functions perfectly and helps your operations to be more efficient.",
-      image:
-        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage13,
     },
     {
       title: "Web site Back-ups and Support",
       description:
         "Our maintenance services will keep your website safe, secure, and performance-optimized, so that your business is not left behind.",
-      image:
-        "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage14,
     },
     {
       title: "Performance Optimization",
       description:
         "We optimize all the features: the images, code, caching, and loading speed to provide high performance and the outstanding user experience.",
-      image:
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage15,
     },
     {
       title: "SEO-Friendly Development",
       description:
         "We will base our process of website development on the best practices of Google in terms of SEO. We create fast, structurally and search engine optimized websites.",
-      image:
-        "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage16,
     },
     {
       title: "UI/UX Design Services",
       description:
         "We are creative and functional to design user interfaces that capture the attention of visitors, have better usability, and increase conversion rates.",
-      image:
-        "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage17,
     },
     {
       title: "Multilingual Support",
       description:
         "Grow your international business through multilingual websites that resonate with the various people you reach.",
-      image:
-        "https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage18,
     },
     {
       title: "Cloud-Based Web Solutions",
       description:
         "Our cloud-based solutions will help us to create secure, scalable, and high-performance websites which will meet your business needs as they grow.",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage19,
     },
     {
       title: "Landing Page Development",
       description:
         "Our landing pages are designed with high conversion to gain leads, make sales and even improve on marketing campaigns.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage20,
     },
     {
       title: "Analytics Integration",
       description:
         "We use such tools as Google Analytics and Hotjar to monitor the user behavior, optimize the performance of the site and also, to advance the marketing understanding.",
-      image:
-        "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage21,
     },
   ];
   const reasons = [
@@ -228,43 +208,37 @@ const WebDevelopmentHiddenPage = () => {
     {
       name: "Healthcare & Education",
       description: "Authoritative, convenient websites of institutions.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage22,
       icon: <Stethoscope className="w-6 h-6 text-white" />,
     },
     {
       name: "Real Estates and Travel",
       description: "Appealing and educative sites.",
-      image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop",
+      image: assets.webDevHiddenPage23,
       icon: <Building2 className="w-6 h-6 text-white" />,
     },
     {
       name: "Startups & Small Businesses",
       description: "Low-cost and scalable digital solutions.",
-      image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage24,
       icon: <Rocket className="w-6 h-6 text-white" />,
     },
     {
       name: "E-commerce & Retail",
       description: "Online stores with high performance to achieve sales.",
-      image:
-        "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage25,
       icon: <ShoppingBag className="w-6 h-6 text-white" />,
     },
     {
       name: "Corporate Enterprises",
       description: "Custom and enterprise level web solutions.",
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+      image: assets.webDevHiddenPage26,
       icon: <Briefcase className="w-6 h-6 text-white" />,
     },
     {
       name: "Trading Sites",
       description: "Rapid, safe and quick web sites in trade business.",
-      image:
-        "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2064&auto=format&fit=crop",
+      image: assets.webDevHiddenPage27,
       icon: <TrendingUp className="w-6 h-6 text-white" />,
     },
   ];

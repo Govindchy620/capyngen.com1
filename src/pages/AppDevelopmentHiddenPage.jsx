@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { assets } from "../assets/assets";
 
 // --- SVGs & Icons ---
 const MenuIcon = () => (
@@ -177,8 +178,8 @@ const AppDevelopmentHiddenPage = () => {
       <section id="introduction" className="py-16 bg-black">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 px-4 sm:px-6 lg:px-8 items-center">
           <img
-            className="rounded-2xl shadow-2xl w-full h-96 object-cover"
-            src="https://picsum.photos/800/800?random=2"
+            className="rounded-md shadow-2xl w-full object-cover"
+            src={assets.appDevHiddenPage2}
             alt=""
           />
           <div>
@@ -266,7 +267,7 @@ const AppDevelopmentHiddenPage = () => {
               companies:
             </p>
             <img
-              src="https://picsum.photos/600/800?random=3"
+              src={assets.appDevHiddenPage3}
               className="hidden lg:block w-full h-96 rounded-xl shadow-lg object-cover"
               alt=""
             />
