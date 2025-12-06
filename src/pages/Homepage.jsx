@@ -214,79 +214,67 @@ const Homepage = () => {
 
   const faqItems = [
     {
-      question: "What services does Capyngen offer?",
+      question: "Which services does Capyngen provide?",
       answer:
-        "We provide Information Technology (IT) services, Customer Relationship Management (CRM) solutions, cybersecurity, application development, user interface/user experience (UI/UX) design, and digital marketing that can contribute to the growth of the businesses.",
+        "Capyngen is a supplier of IT, digital marketing and bespoke software.",
     },
     {
-      question: "Why should I choose Capyngen over others?",
+      question: "Why not Capyngen among others?",
       answer:
-        "Well! Because we combine strategy, technology, and artistry to produce quantifiable, scalable, and dependable solutions that are unique to your objectives.",
+        "Owing to the fact that we provide innovative and reliable results.",
     },
     {
-      question: "Do you work with startups as well as enterprises?",
-      answer:
-        "Indeed, we create startups, Small and Medium-sized Businesses (SMBs), and large enterprises solutions in a manner that is adaptable to any industry.",
+      question: "Do you deal with both startups and enterprises?",
+      answer: "Yes, we favour both startups and large organisations.",
     },
     {
-      question: "Can Capyngen help improve my online presence?",
-      answer:
-        "Of course! We make your brand visible and increase your digital presence through SEO, social media, and performance marketing.",
+      question: "Will Capyngen assist me to enhance my online presence?",
+      answer: "Yes, with the help of SEO, SMM and the digital marketing.",
     },
     {
-      question: "Do you offer custom software development?",
-      answer:
-        "Certainly, we take pride in creating customized web, mobile, and enterprise software applications that address specific business requirements.",
+      question: "Do you provide tailor-made software development?",
+      answer: "Yes, we create software that is custom-built.",
     },
     {
       question: "How experienced is your team?",
-      answer:
-        "Our team is made up of certified experts who have several years of experience in Information Technology (IT), marketing, and business transformation.",
+      answer: "We have a quite experienced team in the industry.",
     },
     {
       question: "What industries do you serve?",
       answer:
-        "We partner with the healthcare, finance, education, e-commerce, travel, IT, etc. industries.",
+        "Our fields of operation include finance, healthcare, retail, etc.",
     },
     {
       question: "Is your approach data-driven?",
-      answer:
-        "Absolutely, all our measures rely on data analytics, performance tracking, and continuous optimization.",
+      answer: "Yes, we trust in analytics and insights.",
     },
     {
-      question: "Can you handle large-scale IT projects?",
-      answer:
-        "Sure, our team is capable to oversee the management of complicated projects at the enterprise-level with the use of end-to-end solutions.",
+      question: "Are you able to deal with massive IT projects?",
+      answer: "Yes, we handle IT projects of enterprise level.",
     },
     {
-      question: "Do you offer CRM solutions for small businesses?",
-      answer:
-        "Yes, we offer CRM tools that are manageable and can adapt to any business regardless of its size.",
+      question: "Are you a provider of CRM solutions to small businesses?",
+      answer: "Yes, we are offering custom CRM.",
     },
     {
-      question: "How do you ensure cybersecurity for clients?",
-      answer:
-        "We incorporate multiple layers of security, real-time surveillance, and regulatory frameworks to guarantee the security of data and networks.",
+      question: "What are your means of providing cybersecurity to clients?",
+      answer: "Via surveillance, risk management, and guarded measures.",
     },
     {
-      question: "Can I track the progress of my projects?",
-      answer:
-        "Yes, we allow the provision of progress updates and other forms of transparent reporting at any point of the project lifecycle.",
+      question: "Am I able to monitor the advances of my projects?",
+      answer: "Yes, you get all the progress reports.",
     },
     {
-      question: "Are your digital marketing strategies customized?",
-      answer:
-        "Definitely — the objectives, the target market, and the industry of your business are the main factors in every campaign that we execute.",
+      question: "Do you customise your digital marketing strategies?",
+      answer: "Yes, the strategies are custommade.",
     },
     {
       question: "Do you provide ongoing support after deployment?",
-      answer:
-        "The answer is yes, we provide support 24 hours a day, 7 days a week, to make sure that everything runs smoothly and in case of a problem, the resolution will be quick.",
+      answer: "Yes, we offer continuous support.",
     },
     {
       question: "How can I get started with Capyngen?",
-      answer:
-        "A free consultation can be arranged at your leisure, you tell us what you need, and then our professionals get down to work creating the exact solution your business requires.",
+      answer: "You can contact us directly to begin.",
     },
   ];
 

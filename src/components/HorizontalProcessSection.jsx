@@ -16,35 +16,35 @@ const HorizontalProcessSection = () => {
       id: 1,
       title: "Goal Setting & Strategy",
       description:
-        "We start by establishing business objectives and identifying key performance indicators (KPIs) that are consistent with your vision. Such a plan will make sure that every digital marketing service will have a measurable positive effect.",
+        "We begin by defining business goals and setting up on key performance indicators (KPIs) that are in line with your vision. This strategy will ensure that all digital marketing services will have quantifiable positive impact of a Top IT Company in World.",
       image: assets.homepageGoal,
     },
     {
       id: 2,
       title: "Audience Research & Insights",
       description:
-        "We dig into the numbers to find the best customers for your company. By discovering their needs and wants, we can develop products that will attract their attention and keep them engaged.",
+        "We drill in the figures to identify the most desirable customers to your company. With the identification of their needs and wants, we are able to create products that will be appealing to them and will keep them occupied by the solutions offered by Capyngen digital marketing agency.",
       image: assets.homepageAudience,
     },
     {
       id: 3,
       title: "Data-Driven Performance",
       description:
-        "Every act we perform is followed up with the latest data that we have. As we spot patterns and opportunities, we adjust our strategy to make sure that your SEO, social media & marketing efforts will give you the greatest possible return on your investment.",
+        "We are provided with the latest data by which each act we do is followed. As we identify trends and opportunities, we will change our approach to ensure that your SEO, social media and marketing will provide the highest returns to your investment.",
       image: assets.homepageDataDriven,
     },
     {
       id: 4,
       title: "Execution & Continuous Optimization",
       description:
-        "We are very careful about implementing our programs from the step of the takeoff to that of the landing. Our team is constantly working on the smallest parts of the programs, thus ensuring that your IT services and digital marketing will be long-term profitable.",
+        "We are so attentive in executing our programs up to the point of the takeoff to the landing. We always ensure that our team is busy with the minor components of the programs, thereby making sure that your IT services and online marketing will be profitable in the long run with the help of the modern devops consulting services.",
       image: assets.homepageExecution,
     },
     {
       id: 5,
       title: "Reporting & Transparent Communication",
       description:
-        "We make accessible reports and keep you posted at each step, thus enabling full understanding of and quantifiable outcomes from your IT consulting services and custom software development initiatives.",
+        "We are also available of reports and keep you informed at every stage thereby allowing a complete realization and measurable results of your IT consulting services and custom software development programs developed by a top IT company in World.",
       image: assets.homepageReporting,
     },
   ];
@@ -173,15 +173,15 @@ const HorizontalProcessSection = () => {
               />
               <div className="mt-16">
                 <p className="text-base text-white md:text-xl leading-relaxed max-w-4xl mx-auto font-medium">
-                  At Capyngen, we make strategy work for you with intelligent,
-                  data-backed steps that increase effectiveness and expansion.
-                  Everything from custom software and application solutions to
-                  cloud platforms and digital strategies is personalized around
-                  your business objectives. Our skilled team takes all the
-                  necessary steps, maintains the performance, and tracks the
-                  outcomes, thus, helping you to keep up with the competition,
-                  improve customer experiences, and open new doors of long-term
-                  success.
+                  We do your strategic work at Capyngen with smart, data driven
+                  steps to make it more effective and grow it. All the
+                  personalization of the software and application solutions, as
+                  well as cloud platforms and digital strategies, are customized
+                  to your business goals. Our professional team makes all the
+                  required measures, supports the performance and observes the
+                  results, and, therefore, will help you to stay in the
+                  competition, win customers and make another new gateway to the
+                  long-term success.
                 </p>
               </div>
             </div>
