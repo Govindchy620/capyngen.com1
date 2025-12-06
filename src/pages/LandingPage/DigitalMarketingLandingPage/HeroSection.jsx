@@ -20,6 +20,7 @@ const serviceTypes = [
   "Website Design",
   "SEO (Google Ranking)",
   "Branding & Graphics",
+  "Email Marketing",
   "Not Sure — Need Guidance",
 ];
 
