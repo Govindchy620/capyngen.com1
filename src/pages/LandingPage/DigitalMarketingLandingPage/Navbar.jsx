@@ -69,13 +69,14 @@ export const Navbar = () => {
           >
             <ul className="flex flex-col py-4 space-y-4 text-center text-white">
               {menuItems.map((item) => (
-                <motion.li
-                  key={item.href}
-                  whileTap={{ scale: 0.97 }}
-                  onClick={() => setOpen(false)}
-                >
+                <motion.li key={item.href} whileTap={{ scale: 0.97 }}>
                   <button
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => {
+                      setOpen(false);
+                      setTimeout(() => {
+                        scrollToSection(item.href);
+                      }, 350);
+                    }}
                     className="text-lg"
                   >
                     {item.label}
