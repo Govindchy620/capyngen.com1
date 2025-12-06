@@ -67,7 +67,7 @@ export function LeadForm({
       {modalMode && (
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-white bg-indigo-700 rounded-md p-2 text-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-20"
+          className="absolute top-1 right-1 sm:top-3 sm:right-3 text-white bg-indigo-700 rounded-md p-2 text-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-20"
           aria-label="Close form"
           type="button"
         >
