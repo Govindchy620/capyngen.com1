@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSection from "./HeroSection";
 import { Navbar } from "./Navbar";
 import { FeaturesSection } from "./FeaturesSection";
@@ -12,10 +12,46 @@ import { ServicesSection } from "./ServicesSection";
 import TermsAndConditions from "./TermsAndConditions";
 import About from "./About";
 import ExitPopup from "./ExitPopup";
+import { Helmet } from "react-helmet-async";
 
 const LandingPage = () => {
+  useEffect(() => {
+    // Load gtag script dynamically
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=AW-11496002695";
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Inline script
+    const scriptInline = document.createElement("script");
+    scriptInline.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-11496002695');
+    `;
+    document.head.appendChild(scriptInline);
+  }, []);
+
   return (
     <div className="overflow-hidden scroll-smooth">
+      <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11496002695"
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-11496002695');
+      `,
+          }}
+        />
+      </Helmet>
       <Navbar />
       <ExitPopup />
       <HeroSection />
