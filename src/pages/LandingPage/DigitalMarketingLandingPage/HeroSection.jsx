@@ -31,7 +31,7 @@ const budgetOptions = [
 ];
 
 // Reusable full LeadForm component with all props needed for state and handlers
-function LeadForm({
+export function LeadForm({
   step,
   setStep,
   whatsappSameAsPhone,
@@ -59,7 +59,7 @@ function LeadForm({
 
   return (
     <div
-      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/40 overflow-hidden transition-shadow duration-300 ${
+      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-md p-2 shadow-2xl border border-indigo-600/40 overflow-y-auto transition-shadow duration-300 ${
         modalMode ? "p-8 text-white" : ""
       }`}
       style={modalMode ? { color: "white" } : {}}
@@ -67,7 +67,7 @@ function LeadForm({
       {modalMode && (
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-white bg-indigo-700 rounded-full p-2 text-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-20"
+          className="absolute top-3 right-3 text-white bg-indigo-700 rounded-md p-2 text-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-20"
           aria-label="Close form"
           type="button"
         >
@@ -447,7 +447,7 @@ function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-4"
               >
-                <div className="relative">
+                <div className="relative max-w-[90vw]">
                   <label className="block mb-1 font-semibold text-indigo-300">
                     Best Time To Call / Talk{" "}
                     <span className="text-rose-400">*</span>
@@ -575,12 +575,12 @@ function LeadForm({
   );
 }
 
-function Modal({ isOpen, onClose, children }) {
+export function Modal({ isOpen, onClose, children }) {
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -613,6 +613,16 @@ export default function HeroSection() {
   const navigate = useNavigate();
   const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
+  React.useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [modalOpen]);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -794,7 +804,7 @@ export default function HeroSection() {
 
         {/* Right form */}
         <motion.div
-          className="w-full max-w-full flex justify-center"
+          className="hidden md:flex w-full max-w-full justify-center"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}

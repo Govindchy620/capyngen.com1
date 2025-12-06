@@ -126,7 +126,7 @@ const About = () => {
               www.capyngen.com
             </a>
             <a
-              href="mailto:info@capyngen.com"
+              href="mailto:sales@capyngen.com"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
             >
               <svg
@@ -143,7 +143,7 @@ const About = () => {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              info@capyngen.com
+              sales@capyngen.com
             </a>
           </div>
 
