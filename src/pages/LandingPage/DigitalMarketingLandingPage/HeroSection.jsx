@@ -723,7 +723,7 @@ const handleSubmit = async (e) => {
 
     const data = await res.json();
 
-    if (res.ok && data.ok) {
+    if (res.ok && data.message) {
       setFormData({
         fullName: "",
         email: "",
