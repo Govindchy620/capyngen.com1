@@ -695,73 +695,64 @@ export default function HeroSection() {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const payload = {
-        fullName: formData.fullName,
-        email: formData.email,
-        phone: formData.phone,
-        whatsappNumber: whatsappSameAsPhone
-          ? formData.phone
-          : formData.whatsappNumber,
-        city: formData.city,
-        brandName: formData.brandName,
-        website: formData.website,
-        businessType: formData.businessType,
-        services: formData.serviceType,
-        budget: formData.budget,
-        bestTime: formData.bestTime,
-        notes: formData.notes,
-      };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const payload = {
+      fullName: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      whatsappNumber: whatsappSameAsPhone
+        ? formData.phone
+        : formData.whatsappNumber,
+      city: formData.city,
+      brandName: formData.brandName,
+      website: formData.website,
+      businessType: formData.businessType,
+      services: formData.serviceType,
+      budget: formData.budget,
+      bestTime: formData.bestTime,
+      notes: formData.notes,
+    };
 
-      const res = await fetch("https://api.capyngen.com/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+    const res = await fetch("https://api.capyngen.com/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+
+    if (res.ok && data.ok) {
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        whatsappNumber: "",
+        city: "",
+        brandName: "",
+        website: "",
+        businessType: "",
+        serviceType: [],
+        budget: "",
+        bestTime: "",
+        notes: "",
       });
-
-      const data = await res.json();
-
-      if (res.ok && data.ok) {
-        setNotification("Request received, we will connect with you shortly.");
-        setFormData({
-          fullName: "",
-          email: "",
-          phone: "",
-          whatsappNumber: "",
-          city: "",
-          brandName: "",
-          website: "",
-          businessType: "",
-          serviceType: [],
-          budget: "",
-          bestTime: "",
-          notes: "",
-        });
-        setStep(1);
-        setWhatsappSameAsPhone(true);
-
-        setTimeout(() => {
-          setNotification("");
-          setModalOpen(false); // Close modal on success
-          navigate("/");
-        }, 5000);
-      } else {
-        setNotification(
-          data.message || "Something went wrong. Please try again later."
-        );
-        setTimeout(() => {
-          setNotification("");
-        }, 5000);
-      }
-    } catch (error) {
-      setNotification("Failed to send request. Please check your connection.");
-      setTimeout(() => {
-        setNotification("");
-      }, 5000);
+      setStep(1);
+      setWhatsappSameAsPhone(true);
+      setModalOpen(false);
+      navigate("/greetings");
+    } else {
+      setNotification(
+        data.message || "Something went wrong. Please try again later."
+      );
+      setTimeout(() => setNotification(""), 5000);
     }
-  };
+  } catch (error) {
+    setNotification("Failed to send request. Please check your connection.");
+    setTimeout(() => setNotification(""), 5000);
+  }
+};
 
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];
 
