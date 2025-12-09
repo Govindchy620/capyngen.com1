@@ -64,6 +64,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
 import LandingPage from "./pages/LandingPage/DigitalMarketingLandingPage/LandingPage";
+import ThankYouPage from "./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage";
 import WebDevelopmentHiddenPage from "./pages/WebDevelopmentHiddenPage";
 import AppDevelopmentHiddenPage from "./pages/AppDevelopmentHiddenPage";
 import CrmManagementSoftwareHiddenPage from "./pages/CrmManagementSoftwareHiddenPage";
@@ -75,7 +76,7 @@ const AppContent = () => {
   const location = useLocation();
 
   // Routes where global navbar/footer should be hidden
-  const noLayoutRoutes = ["/digital-marketing-landing-page"];
+  const noLayoutRoutes = ["/digital-marketing-landing-page", "/greetings"];
 
   const hideLayout = noLayoutRoutes.includes(location.pathname);
 
@@ -173,6 +174,10 @@ const AppContent = () => {
         <Route
           path="/digital-marketing-landing-page"
           element={<LandingPage />}
+        />
+        <Route
+          path="/greetings"
+          element={<ThankYouPage />}
         />
         <Route
           path="/web-development-hidden-page"
