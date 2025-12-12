@@ -102,7 +102,7 @@ export function LeadForm({
             <motion.div
               className="h-2 rounded-full bg-indigo-500 shadow-[0_8px_24px_rgba(99,102,241,0.12)]"
               initial={{ width: 0 }}
-              animate={{ width: `${((step - 1) / 7) * 100}%` }}
+              animate={{ width: `${((step - 1) / 6) * 100}%` }}
               transition={{ duration: 0.3 }}
             />
           </div>
@@ -801,7 +801,7 @@ export default function HeroSection() {
           setNotification("");
           setModalOpen(false); // Close modal on success
           setIsSubmitting(false);
-          navigate("/");
+          navigate("/greetings");
         }, 5000);
       } else {
         setNotification(
