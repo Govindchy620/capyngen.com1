@@ -33,7 +33,7 @@ const webpageSchema = {
   url: "https://www.capyngen.com/devops-solutions",
   name: "DevOps Solutions | Capyngen",
   description:
-    "Capyngen is the company that provides expert DevOps services and solutions to accelerate your software delivery and streamline operations. Capyngen is a global provider of DevOps services and solutions that are used to enhance teamwork, ease the development of software and ensure reliable, scalable, and secure infrastructure. We are not like other companies, but we are a DevOps services company and a trusted DevOps solutions provider, because we offer tailored solutions, full implementation, and 24/7 support to companies across different industries.",
+    "Capyngen delivers powerful DevOps solutions to automate workflows, accelerate software delivery, and enhance collaboration between development and operations teams. Empower your business with continuous integration and deployment strategies.",
   publisher: {
     "@type": "Organization",
     name: "Capyngen",
