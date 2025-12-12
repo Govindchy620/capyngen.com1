@@ -10,6 +10,8 @@ import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import TopRatedCompany from "../components/TopRatedCompany";
+import CardsSection from "../components/CardsSection";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -175,6 +177,23 @@ const faqSchema = {
 };
 
 const CpgDistribution = () => {
+  const whyChooseData = [
+    {
+      title:
+        "International Knowledge in IT solutions for CPG distribution and Digital Marketing - The most appropriate solutions to distributors worldwide were developed, particularly the businesses that seek to grow with CPG distribution services products.",
+      description: "",
+    },
+    {
+      title:
+        "Scalable Systems – Our advanced IT solutions in cpg distribution sector in India ensure that you feel free to expand your businesses in other locations.",
+      description: "",
+    },
+    {
+      title:
+        "Best-tested Strategies to win Retailers and Buyers - We can make you grow with highly targeted campaigns by a well-known CPG software company.",
+      description: "",
+    },
+  ];
   const solutionsData = [
     {
       title: "IT and Web Solutions",
@@ -311,7 +330,8 @@ const CpgDistribution = () => {
     },
     {
       title: "Powerful IT Systems with Real-Time Insights",
-      description: "Information that is reliable and that can be taken into action.",
+      description:
+        "Information that is reliable and that can be taken into action.",
       image: assets.cpg6,
       cardBg: "bg-yellow-100",
     },
@@ -323,7 +343,8 @@ const CpgDistribution = () => {
           <Link to={"/crm-management-software"}>
             lifecycle management software
           </Link>{" "}
-          - very customised and built to your requirements through trusted it services to CPG.
+          - very customised and built to your requirements through trusted it
+          services to CPG.
         </span>
       ),
       image: assets.cpg7,
@@ -331,10 +352,6 @@ const CpgDistribution = () => {
     },
   ];
   const cardsSectionSliderData1 = [
-    {
-      image: assets.cpg8,
-      title: "Food and beverage distributions",
-    },
     {
       image: assets.cpg9,
       title: "Personal care and Home products",
@@ -354,6 +371,10 @@ const CpgDistribution = () => {
     {
       image: assets.cpg13,
       title: "FMCG wholesaler and aggregators",
+    },
+    {
+      image: assets.cpg8,
+      title: "Food and beverage distributions",
     },
   ];
   const steps = [
@@ -400,7 +421,8 @@ const CpgDistribution = () => {
         "They are accompanied with supply chain software, ERP systems and inventory management solutions that enable CPG distributors to handle their operations easily and quickly.",
     },
     {
-      question: "What is the reason to select Capyngen to develop CPG software?",
+      question:
+        "What is the reason to select Capyngen to develop CPG software?",
       answer:
         "Capyngen is a global innovator and the leading Software development of CPG company in India which is the custom supply chain software of CPG company.",
     },
@@ -410,7 +432,8 @@ const CpgDistribution = () => {
         "Yes, we do have the retail distribution management software services that can manage orders, delivery, and relationship with retailers.",
     },
     {
-      question: "Are you able to develop tailored ERP software to CPG companies?",
+      question:
+        "Are you able to develop tailored ERP software to CPG companies?",
       answer:
         "For sure. CPG ERP software is made to suit the requirements of the manufacturers, distributors, and wholesalers.",
     },
@@ -426,8 +449,7 @@ const CpgDistribution = () => {
     },
     {
       question: "Does your software support B2B and B2C?",
-      answer:
-        "Yes, the platforms are expandable to global B2B and B2C deals.",
+      answer: "Yes, the platforms are expandable to global B2B and B2C deals.",
     },
     {
       question: "Do you provide marketplace integration?",
@@ -445,7 +467,8 @@ const CpgDistribution = () => {
         "Capyngen is also offering it to you, which means frequent servicing, support and upgrades.",
     },
     {
-      question: "Is it possible to incorporate APIs with logistics and payment systems?",
+      question:
+        "Is it possible to incorporate APIs with logistics and payment systems?",
       answer:
         "Of course, our API integration is the only key that opens up a smooth flow of all systems.",
     },
@@ -456,7 +479,8 @@ const CpgDistribution = () => {
         "Yes, it covers SEO, social media marketing, paid advertisement, content marketing as well as email campaigns.",
     },
     {
-      question: "Are you able to give insights and analytics towards decision-making?",
+      question:
+        "Are you able to give insights and analytics towards decision-making?",
       answer:
         "Yes, platforms are all provided with real-time insights and reports to present data-driven business solutions.",
     },
@@ -495,11 +519,62 @@ const CpgDistribution = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner16 />
+      <TopRatedCompany
+        title="IT Solutions for CPG Distribution"
+        description={[
+          <>
+            <p>
+              We assist distributors and wholesalers of foreign markets to make
+              their business easier to conduct their business fully, leverage
+              their supply chain and earn more, by means of smart consumer
+              packaged goods software solutions and tailor-made{" "}
+              <Link to={"/digital-marketing"}>Digital Marketing Solution</Link>{" "}
+              for CPG industry campaigns. We are also specialised in the
+              provision of high-quality CPG distribution services with modern
+              technology.
+            </p>
+            <p>
+              Increase efficiency through product life cycle management
+              software, warehouse management software solutions, and end-to-end
+              consumer packaged goods software solutions. Call{" "}
+              <Link to={"/"}>Capyngen</Link> today and get a formidable CPG
+              software solution and IT services for CPG!
+            </p>
+          </>,
+        ]}
+        image={assets.cpg1}
+        background={assets.patternBg1}
+        imageHeight="aspect-[1/1]"
+        isHidden="hidden"
+      />
+      <CardsSection
+        heading="Why Choose Capyngen ?"
+        subheading=""
+        services={whyChooseData}
+        sectionBg="bg-black"
+        cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
+        headColor="text-white"
+        hoverBg=" hover:bg-gray-700"
+        textColor="text-white"
+        hoverTextColor=""
+        textSize="text-md"
+      />
       <BenefitsSection
         heading="Reasons why digital transformation is necessary for CPG distributors"
         desc={
           <span>
-            Fast stock flow, properly operating supply chains, and brand recognition are especially required in the consumer packaged goods (CPG) sector. Consumers who utilise digital channels require easy ordering, availability of products in real time, and the ease of the delivery tracking system. Through the integration of Digital Marketing Solution for the CPG industry and modern CPG software solution, <Link to={"/"}>Capyngen</Link> is enabling the distributors worldwide not only to streamline their operations and increase their revenues but also to make a better connection with the retailers and consumers, using the help of reliable CPG distribution services and the tailor-made IT services for CPG distribution sector in India.
+            Fast stock flow, properly operating supply chains, and brand
+            recognition are especially required in the consumer packaged goods
+            (CPG) sector. Consumers who utilise digital channels require easy
+            ordering, availability of products in real time, and the ease of the
+            delivery tracking system. Through the integration of Digital
+            Marketing Solution for the CPG industry and modern CPG software
+            solution, <Link to={"/"}>Capyngen</Link> is enabling the
+            distributors worldwide not only to streamline their operations and
+            increase their revenues but also to make a better connection with
+            the retailers and consumers, using the help of reliable CPG
+            distribution services and the tailor-made IT services for CPG
+            distribution sector in India.
           </span>
         }
         benefits={solutionsData}
