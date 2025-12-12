@@ -233,7 +233,8 @@ const DevOpsSolutions = () => {
         "DevOps is a mix of software development and IT operations and the primary objective is to deliver applications faster and more reliably. Our best devOps solution service provider model increases the outcomes.",
     },
     {
-      question: "What is the significance of DevOps in present-day software development?",
+      question:
+        "What is the significance of DevOps in present-day software development?",
       answer:
         "The communication has been enhanced, and hence less mistakes occur, they get faster release cycles, and at the same time are stable and scalable, and this makes the applications more reliable.",
     },
@@ -248,7 +249,8 @@ const DevOpsSolutions = () => {
         "Naturally, we assist you in setting up and supporting the automated deployments through the application of the CI/CD pipeline that will be prompt, secure, and dependable.",
     },
     {
-      question: "What are the industries that can take advantage of DevOps solutions?",
+      question:
+        "What are the industries that can take advantage of DevOps solutions?",
       answer:
         "The list of those industries continues, yet overall, the above-stated are some of the most prevalent industries, which include finance, healthcare, e-commerce, information technology, telecommunication, media, education, and travel industries, which enjoy the DevOps services and solutions.",
     },
@@ -482,6 +484,31 @@ const DevOpsSolutions = () => {
           backgroundColor="bg-[#0a1b2e]"
           textColor="text-white"
           highlightColor="text-red-500"
+        />
+        <TopRatedCompany
+          title="DevOps Solutions"
+          description={[
+            <>
+              <p>
+                <Link to={"/"}>Capyngen</Link> is the company that provides
+                expert DevOps services and solutions to accelerate your software
+                delivery and streamline operations.
+              </p>
+              <p>
+                Capyngen is a global provider of DevOps services and solutions
+                that are used to enhance teamwork, ease the development of
+                software and ensure reliable, scalable, and secure
+                infrastructure. We are not like other companies, but we are a
+                DevOps services company and a trusted DevOps solutions provider,
+                because we offer tailored solutions, full implementation, and
+                24/7 support to companies across different industries.
+              </p>
+            </>,
+          ]}
+          image={assets.devOps1}
+          isHidden={true}
+          background={assets.patternBg1}
+          imageHeight="aspect-[1/1]"
         />
         <GetStarted
           reverse={false}
