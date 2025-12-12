@@ -50,6 +50,7 @@ export function LeadForm({
   stepLabels,
   onClose,
   modalMode = false,
+  isSubmitting,
 }) {
   const [showDateTimePicker, setShowDateTimePicker] = useState(false);
   const [tempDateTime, setTempDateTime] = useState("");
@@ -71,6 +72,7 @@ export function LeadForm({
           className="absolute top-1 right-1 sm:top-3 sm:right-3 text-white bg-indigo-700 rounded-md p-2 text-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-20"
           aria-label="Close form"
           type="button"
+          disabled={isSubmitting}
         >
           ×
         </button>
@@ -149,6 +151,7 @@ export function LeadForm({
                   type="text"
                   autoComplete="name"
                   required
+                  disabled={isSubmitting}
                 />
                 <div>
                   <label className="block mb-1 font-semibold text-indigo-300">
@@ -167,6 +170,7 @@ export function LeadForm({
                     }}
                     autoComplete="email"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </motion.div>
@@ -199,6 +203,7 @@ export function LeadForm({
                       boxShadow: "0 0 8px #6366f1",
                     }}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -209,6 +214,7 @@ export function LeadForm({
                     checked={whatsappSameAsPhone}
                     onChange={() => setWhatsappSameAsPhone((v) => !v)}
                     className="accent-indigo-500"
+                    disabled={isSubmitting}
                   />
                   <label
                     htmlFor="whatsappSame"
@@ -235,6 +241,7 @@ export function LeadForm({
                         boxShadow: "0 0 8px #6366f1",
                       }}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                 )}
@@ -267,6 +274,7 @@ export function LeadForm({
                       boxShadow: "0 0 8px #6366f1",
                     }}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -285,6 +293,7 @@ export function LeadForm({
                       boxShadow: "0 0 8px #6366f1",
                     }}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -303,6 +312,7 @@ export function LeadForm({
                       boxShadow: "0 0 8px #6366f1",
                     }}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </motion.div>
@@ -338,6 +348,7 @@ export function LeadForm({
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.95 }}
                       aria-pressed={formData.businessType === type}
+                      disabled={isSubmitting}
                     >
                       {type}
                     </motion.button>
@@ -357,6 +368,7 @@ export function LeadForm({
                       className={inputClasses}
                       whileFocus={{ scale: 1.02, boxShadow: "0 0 8px #6366f1" }}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                 )}
@@ -393,6 +405,7 @@ export function LeadForm({
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.95 }}
                         aria-pressed={selected}
+                        disabled={isSubmitting}
                       >
                         {service}
                       </motion.button>
@@ -430,6 +443,7 @@ export function LeadForm({
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.95 }}
                       aria-pressed={formData.budget === budget}
+                      disabled={isSubmitting}
                     >
                       {budget}
                     </motion.button>
@@ -487,6 +501,7 @@ export function LeadForm({
                         });
                       }}
                       className={`${inputClasses} text-white appearance-none`}
+                      disabled={isSubmitting}
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -516,6 +531,7 @@ export function LeadForm({
                     rows={4}
                     placeholder="Additional details..."
                     className={`${inputClasses} resize-none`}
+                    disabled={isSubmitting}
                   />
                 </div>
               </motion.div>
@@ -534,6 +550,7 @@ export function LeadForm({
                   className="px-4 py-2 rounded-xl bg-white/6 hover:bg-white/8 text-sm font-semibold transition-transform"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  disabled={isSubmitting}
                 >
                   Back
                 </motion.button>
@@ -544,15 +561,15 @@ export function LeadForm({
               {step < 7 && (
                 <motion.button
                   type="button"
-                  disabled={!validateStep()}
+                  disabled={!validateStep() || isSubmitting}
                   onClick={handleNext}
                   className={`px-5 py-2 rounded-xl text-sm font-semibold transition ${
-                    validateStep()
+                    validateStep() && !isSubmitting
                       ? "bg-indigo-500 hover:bg-indigo-600 text-white shadow"
                       : "bg-indigo-300/60 text-white/80 cursor-not-allowed"
                   }`}
-                  whileHover={validateStep() ? { scale: 1.05 } : undefined}
-                  whileTap={validateStep() ? { scale: 0.95 } : undefined}
+                  whileHover={validateStep() && !isSubmitting ? { scale: 1.05 } : undefined}
+                  whileTap={validateStep() && !isSubmitting ? { scale: 0.95 } : undefined}
                 >
                   Next
                 </motion.button>
@@ -561,11 +578,42 @@ export function LeadForm({
               {step === 7 && (
                 <motion.button
                   type="submit"
-                  className="px-6 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-lg transition-transform"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  disabled={isSubmitting}
+                  className={`px-6 py-2 rounded-xl font-bold shadow-lg transition-transform flex items-center gap-2 ${
+                    isSubmitting
+                      ? "bg-emerald-400 cursor-not-allowed"
+                      : "bg-emerald-500 hover:bg-emerald-600 text-white"
+                  }`}
+                  whileHover={!isSubmitting ? { scale: 1.05 } : undefined}
+                  whileTap={!isSubmitting ? { scale: 0.95 } : undefined}
                 >
-                  Finish & Submit
+                  {isSubmitting ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      <span>Submitting...</span>
+                    </>
+                  ) : (
+                    "Finish & Submit"
+                  )}
                 </motion.button>
               )}
             </div>
@@ -611,6 +659,7 @@ export default function HeroSection() {
   const [whatsappSameAsPhone, setWhatsappSameAsPhone] = useState(true);
   const [notification, setNotification] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
   const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -695,64 +744,82 @@ export default function HeroSection() {
     });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const payload = {
-      fullName: formData.fullName,
-      email: formData.email,
-      phone: formData.phone,
-      whatsappNumber: whatsappSameAsPhone
-        ? formData.phone
-        : formData.whatsappNumber,
-      city: formData.city,
-      brandName: formData.brandName,
-      website: formData.website,
-      businessType: formData.businessType,
-      services: formData.serviceType,
-      budget: formData.budget,
-      bestTime: formData.bestTime,
-      notes: formData.notes,
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Prevent multiple submissions
+    if (isSubmitting) return;
+    
+    setIsSubmitting(true);
+    
+    try {
+      const payload = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        whatsappNumber: whatsappSameAsPhone
+          ? formData.phone
+          : formData.whatsappNumber,
+        city: formData.city,
+        brandName: formData.brandName,
+        website: formData.website,
+        businessType: formData.businessType,
+        services: formData.serviceType,
+        budget: formData.budget,
+        bestTime: formData.bestTime,
+        notes: formData.notes,
+      };
 
-    const res = await fetch("https://api.capyngen.com/api/lead", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    const data = await res.json();
-
-    if (res.ok && data.message) {
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        whatsappNumber: "",
-        city: "",
-        brandName: "",
-        website: "",
-        businessType: "",
-        serviceType: [],
-        budget: "",
-        bestTime: "",
-        notes: "",
+      const res = await fetch("https://api.capyngen.com/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
-      setStep(1);
-      setWhatsappSameAsPhone(true);
-      setModalOpen(false);
-      navigate("/greetings");
-    } else {
-      setNotification(
-        data.message || "Something went wrong. Please try again later."
-      );
-      setTimeout(() => setNotification(""), 5000);
+
+      const data = await res.json();
+
+      if (res.ok && data.ok) {
+        setNotification("Request received, we will connect with you shortly.");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          whatsappNumber: "",
+          city: "",
+          brandName: "",
+          website: "",
+          businessType: "",
+          serviceType: [],
+          budget: "",
+          bestTime: "",
+          notes: "",
+        });
+        setStep(1);
+        setWhatsappSameAsPhone(true);
+
+        setTimeout(() => {
+          setNotification("");
+          setModalOpen(false); // Close modal on success
+          setIsSubmitting(false);
+          navigate("/");
+        }, 5000);
+      } else {
+        setNotification(
+          data.message || "Something went wrong. Please try again later."
+        );
+        setIsSubmitting(false);
+        setTimeout(() => {
+          setNotification("");
+        }, 5000);
+      }
+    } catch (error) {
+      setNotification("Failed to send request. Please check your connection.");
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setNotification("");
+      }, 5000);
     }
-  } catch (error) {
-    setNotification("Failed to send request. Please check your connection.");
-    setTimeout(() => setNotification(""), 5000);
-  }
-};
+  };
 
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];
 
@@ -817,6 +884,7 @@ const handleSubmit = async (e) => {
             handleCheckboxChange={handleCheckboxChange}
             handleSubmit={handleSubmit}
             stepLabels={stepLabels}
+            isSubmitting={isSubmitting}
           />
         </motion.div>
       </div>
@@ -841,6 +909,7 @@ const handleSubmit = async (e) => {
           stepLabels={stepLabels}
           onClose={() => setModalOpen(false)}
           modalMode={true}
+          isSubmitting={isSubmitting}
         />
       </Modal>
     </section>
