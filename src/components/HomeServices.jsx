@@ -15,6 +15,7 @@ const Icon = ({ name, ...props }) => {
 };
 
 // ✅ Data
+
 const servicesData = [
   {
     id: "banking",
@@ -23,9 +24,9 @@ const servicesData = [
     card: {
       image: assets.homepageBanking,
       description:
-        "Empowering financial institutions with scalable, secure, and cutting-edge digital solutions.",
+        "Enabling financial institutions to have scalable, secure, and state-of-the-art digital solutions.",
       features: [
-        "Mobile Banking Applications",
+        "Mobile Banking Applications.",
         "Upgraded Core Banking",
         "Secure Payment Systems",
       ],
@@ -38,11 +39,11 @@ const servicesData = [
     card: {
       image: assets.homepageEducation,
       description:
-        "Revolutionizing learning for schools, colleges, and online platforms with advanced digital solutions.",
+        "Digitising learning in schools, colleges and online with a high-level digital solution.",
       features: [
-        "Technology Solutions for Learning",
-        "Learning Management Systems",
-        "Online Classrooms & E-Learning",
+        "Learning Technology Solutions.",
+        "Learning Management Systems.",
+        "Online Classrooms and E-Learning.",
         "Student Information Systems",
       ],
     },
@@ -54,9 +55,9 @@ const servicesData = [
     card: {
       image: assets.capitalMarket1,
       description:
-        "Driving safer and smarter capital market operations with reliable data-driven IT solutions.",
+        "Operating smarter and safer capital market operations based on credible IT solutions.",
       features: [
-        "Trading Platform Development",
+        "The Development of Trading Platform.",
         "Capital Market Software",
         "Market Analytics",
         "Secure Transactions",
@@ -70,10 +71,10 @@ const servicesData = [
     card: {
       image: assets.homepageLifeScience,
       description:
-        "Fostering healthcare, biotech, and pharma innovation with IT-driven solutions.",
+        "Developing IT-based healthcare, biotech and pharma innovation.",
       features: [
         "Clinical Data Management",
-        "Research & Development",
+        "Research &amp; Development",
         "Regulatory Compliance",
         "Patient-Centric Systems",
       ],
@@ -81,31 +82,31 @@ const servicesData = [
   },
   {
     id: "healthcare",
-    title: "Healthcare & Fitness",
+    title: "Healthcare and fitness",
     icon: "HeartPulse",
     card: {
       image: assets.homepageHealth,
       description:
-        "Delivering tailored digital solutions for patients, providers, and wellness businesses.",
+        "Providing customized digital services to patients, providers, and wellness enterprises.",
       features: [
         "Telemedicine Platforms",
-        "Fitness & Wellness Apps",
+        "Fitness &amp; Wellness Apps",
         "Electronic Health Records",
-        "Wearable Device Integration",
+        "Integration of Wearable Devices.",
       ],
     },
   },
   {
     id: "energy",
-    title: "Energy & Utilities",
+    title: "Energy and Utilities",
     icon: "BatteryCharging",
     card: {
       image: assets.homepageEnergy,
       description:
-        "Improving efficiency and sustainability in the energy and utilities sector.",
+        "Creating efficiency and sustainability in the energy and utilities industry.",
       features: [
         "Smart Grid Solutions",
-        "Energy Monitoring & Analytics",
+        "Monitoring and analytics of the energy.",
         "Resource Planning Systems",
         "Utility Management Platforms",
       ],
@@ -118,11 +119,11 @@ const servicesData = [
     card: {
       image: assets.homepageIndustries,
       description:
-        "Powering diverse sectors with scalable IT, cloud, and digital innovations.",
+        "Driving scalable IT, cloud and digital innovations across different sectors.",
       features: [
         "Healthcare Tech Solutions",
-        "Fintech Platforms & Security",
-        "Retail & E-Commerce",
+        "Fintech Platforms &amp; Security",
+        "Retail &amp; E-Commerce",
         "Smart Manufacturing",
       ],
     },

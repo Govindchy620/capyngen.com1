@@ -20,6 +20,253 @@ import CardsSection from "../components/CardsSection";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/website-design#webpage",
+  url: "https://www.capyngen.com/website-design",
+  name: "Website Design Services | Creative & Responsive Web Design",
+  description:
+    "Boost your brand with Capyngen’s website design services. We deliver creative, custom, and responsive websites that are fast, affordable, and built to impress.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/webDesign--l8DQpZ8.png",
+    width: 1200,
+    height: 800,
+    caption: "Website Design Services by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Services",
+        item: "https://www.capyngen.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Website Design",
+        item: "https://www.capyngen.com/website-design",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Website Design and Development Services",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  url: "https://www.capyngen.com/website-design",
+  description:
+    "Capyngen offers professional website design and development services that help businesses create engaging, responsive, and SEO-friendly websites to boost online presence and conversions.",
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Website Design & Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Website Design",
+          description:
+            "Tailor-made website designs focused on brand identity, performance, and user engagement.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Responsive Web Design",
+          description:
+            "Fully responsive designs optimized for desktop, tablet, and mobile devices.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "WordPress & CMS Development",
+          description:
+            "CMS-based website development for easy management, scalability, and flexibility.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Landing Page Design",
+          description:
+            "High-converting landing page design that drives leads and sales for businesses.",
+        },
+      },
+    ],
+  },
+  image: "https://www.capyngen.com/assets/webDesign--l8DQpZ8.png",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/website-design#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Website Design Services are the services that include the creation of professional, responsive, and user-friendly websites that represent your brand and are in line with your business objectives.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should I hire the best website design company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The company that is right for you is the one that guarantees you top-notch designs, smooth and responsive functionalities that pull customer traffic and engagement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are Custom Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Custom Website Design Services mean the creation of one-of-a-kind and tailor-made websites that represent your brand and are designed to achieve your business objectives.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide Responsive Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we make sure that your website has perfect functionality on desktops, tablets, and smartphones so that every user gets the best experience.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are Creative Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Creative Website Design Services are those that attract users by offering interactive, modern, and visually engaging designs and at the same time help your brand to be unique.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer Corporate Website Design Services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course, we create professional and scalable corporate websites that generate trust and loyalty for companies and B2B businesses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you build E-commerce websites?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer E-commerce Website Design Services that comprise the set-up of secure and easy-to-use online stores that are optimized for conversions and provide a seamless shopping experience for customers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to design a website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Based on the level of difficulty, timelines can be different; still, the majority of the projects range between 3 and 8 weeks depending on features and customizations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your website designs SEO-friendly?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Without any doubt! Our website designs comply with SEO standards, which, in turn, make it easier for web pages to be found by increasing their loading speed and ranking in search engines.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide affordable website design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen is the creative affordable website design service provider that is characterized by high quality, creativity, and performance besides being budget-friendly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you redesign my existing website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide website redesign services to update your site, make it user-friendly, and increase user interaction.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide ongoing support and maintenance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our services comprise all the necessary continuous updates, security monitoring, and technical support for your website.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We are the perfect fit for the needs of startups, SMEs, corporate enterprises, e-commerce businesses, and organizations across healthcare, education, real estate, and much more.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate third-party tools into my website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course, we can. We bring in different tools like CRMs, analytics tools, payment gateways, and other platforms to enhance the functionality and performance of your website.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen as the best website design company in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Combining creativity, technology, and business tactics, Capyngen takes the trust of Indian businesses to create tailor-made, responsive, and scalable website design services across India.",
+      },
+    },
+  ],
+};
 
 const WebSiteDesign = () => {
   const faqItems = [
@@ -111,7 +358,13 @@ const WebSiteDesign = () => {
     },
     {
       title: "Creative UI/UX",
-      desc: "Trendy, entertaining, and easy-to-navigate interfaces that visitors find irresistible to leave.",
+      desc: (
+        <span>
+          Trendy, entertaining, and easy-to-navigate{" "}
+          <Link to={"/ui-ux-design"}>UI/UX design</Link> interfaces that
+          visitors find irresistible to leave.
+        </span>
+      ),
     },
     {
       title: "E-commerce Solutions",
@@ -366,12 +619,34 @@ const WebSiteDesign = () => {
           name="keywords"
           content="Website Design Services | Creative & Responsive Web Design"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner8
         titleMain="Website Design"
         titlePrefix=""
         titleSuffix="That Works for Your Business"
-        description={`The world sees your business through your website. Capyngen has the solution for you - Website Design Services, which combine eye-catching design, clever technology, and a clear strategy. We don’t just build websites that look beautiful, they also function. Are you looking for a corporate website, a visually engaging portfolio, or an e-commerce site that attracts and retains customers? Our team is on a mission to deliver your brand the right amount of visibility in the digital space. `}
+        description={
+          <>
+            <span>
+              The world sees your business through your website.{" "}
+              <Link to={"/"}>Capyngen</Link> has the solution for you - Website
+              Design Services, which combine eye-catching design, clever
+              technology, and a clear strategy. We don’t just build websites
+              that look beautiful, they also function. Are you looking for a
+              corporate website, a visually engaging portfolio, or an{" "}
+              <Link to={"/ecommerce-solutions"}>e-commerce</Link>
+              site that attracts and retains customers? Our team is on a mission
+              to deliver your brand the right amount of visibility in the
+              digital space.
+            </span>
+          </>
+        }
         imageSrc={assets.webDesign1}
         imageAlt="Ecommerce Design Illustration"
         bgColor="bg-gray-900"
@@ -424,7 +699,13 @@ const WebSiteDesign = () => {
                     color: "text-blue-500",
                   },
                   {
-                    title: "E-commerce Website Designs",
+                    title: (
+                      <>
+                        <Link to={"/ecommerce-design"}>
+                          E-commerce Website Designs
+                        </Link>
+                      </>
+                    ),
                     text: " that are not only scalable but also redirect to increase your revenue.",
                     color: "text-blue-500",
                   },

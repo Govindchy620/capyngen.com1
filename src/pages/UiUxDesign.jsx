@@ -18,6 +18,252 @@ import IndustryServices from "../components/IndustryServices";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/ui-ux-design#webpage",
+  url: "https://www.capyngen.com/ui-ux-design",
+  name: "UI/UX Design Services | App & Website Design Experts – Capyngen",
+  description:
+    "Transform your digital experience with Capyngen’s UI/UX design services. We craft stunning mobile app and website designs that attract, engage, and convert users.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/uiUx1-W5KEUcae.png",
+    width: 1200,
+    height: 800,
+    caption: "UI/UX Design Services by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Services",
+        item: "https://www.capyngen.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "UI/UX Design",
+        item: "https://www.capyngen.com/ui-ux-design",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "UI/UX Design Services",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  url: "https://www.capyngen.com/ui-ux-design",
+  description:
+    "Capyngen provides creative and user-centered UI/UX design services that improve digital experiences across websites, mobile apps, and enterprise platforms.",
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "UI/UX Design Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Website UI/UX Design",
+          description:
+            "Design visually appealing and conversion-focused website interfaces that enhance user engagement.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Mobile App UI/UX Design",
+          description:
+            "Craft intuitive and high-performance mobile app designs for both Android and iOS platforms.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "User Research & Wireframing",
+          description:
+            "In-depth research and prototyping to ensure the final design aligns with business goals and user needs.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Interaction & Visual Design",
+          description:
+            "Deliver engaging user experiences with modern interaction design, animations, and visuals.",
+        },
+      },
+    ],
+  },
+  image: "https://www.capyngen.com/assets/uiUx1-W5KEUcae.png",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/ui-ux-design#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is UI/UX design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "UI/UX design involves the creation of user interfaces and experiences that are not only visually appealing but also intuitive and easy to navigate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is UI/UX a matter of businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Good UI/UX leads engagement, thus retaining the users and enhancing conversions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you offering mobile app UI/UX design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, we build attractive and responsive interfaces for iOS and Android apps.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for you to design websites that follow UI/UX best practices?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Indeed, our website UI/UX design services guarantee a smooth user journey and better user interaction.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you deliver custom UI/UX design services in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we design personalized UI/UX solutions that are in line with your company requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What sorts of businesses are your clients?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Health care, banking, online shopping, education, travel, hotel business, SaaS, and others.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What instruments do you use for UI/UX design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Figma, Sketch, Adobe XD, InVision, Zeplin, Marvel, and Axure RP.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are UX audits and optimization services offered by you?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sure. We check the interface for usability and engagement and then optimize it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for Capyngen to improve accessibility in designs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely. We strive to make all digital products accessible and compliant with the standards.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you give the user experience constant attention and improvement?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We analyze user habits and tweak the layout to the best solution.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your UI/UX services affordable for startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We provide reasonably priced UI UX design services without slimming off quality.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the time span for a UI/UX design project?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Schedules for projects are different but most will fall between 3–8 weeks of duration based on their complexity.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you connect designs with development teams?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yeah. We arrange for the easy design handoff along with detailed instructions for developers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you make interactive prototypes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most definitely. We design interactive prototypes that allow users to go through the flow before developers do the actual coding.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I get started with Capyngen UI/UX design services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The very first step is to really understand your need by booking a free consultation then custom design plan are delivered to you.",
+      },
+    },
+  ],
+};
+
 const UiUxDesign = () => {
   const faqItems = [
     {
@@ -242,6 +488,13 @@ const UiUxDesign = () => {
           name="keywords"
           content="UI/UX Design Services | App & Website Design Experts – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner7 />

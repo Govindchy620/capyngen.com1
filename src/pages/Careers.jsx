@@ -4,6 +4,7 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import { assets } from "../assets/assets";
 import { Monitor, Sparkles, Sprout } from "lucide-react";
 import JobOpeningsTable from "../components/JobOpeningsTable";
+import { Helmet } from "react-helmet-async";
 
 const Careers = () => {
   const faqItems = [
@@ -25,6 +26,17 @@ const Careers = () => {
 
   return (
     <section className="bg-black text-white pt-20 text-center relative overflow-hidden">
+      <Helmet>
+        <title>Careers at Capyngen – Join Our Team of Digital Innovators</title>
+        <meta
+          name="description"
+          content="Explore exciting career opportunities at Capyngen — a leading digital marketing and technology agency. Join our innovative team of creators, developers, and strategists shaping the future of digital experiences. Build your skills, grow your career, and make an impact with Capyngen today!"
+        />
+        <meta
+          name="keywords"
+          content="Careers at Capyngen – Join Our Team of Digital Innovators"
+        />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Heading */}
         <div className="max-w-6xl text-center mx-auto">

@@ -24,6 +24,210 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/education#webpage",
+  url: "https://www.capyngen.com/industries/education",
+  name: "Capyngen builds powerful Learning Management Systems for modern education. From eLearning apps to virtual classroom software, we deliver smart digital solutions.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/educationBanner1-PDzu7VTt.jpg",
+    width: 1200,
+    height: 800,
+    caption: "Education Industry Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Education",
+        item: "https://www.capyngen.com/industries/education",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/industries/education#service",
+  name: "Education IT Solutions",
+  serviceType:
+    "Learning Management System, eLearning Platform, Virtual Classroom Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen builds powerful Learning Management Systems for modern education. From eLearning apps to virtual classroom software, we deliver smart digital solutions.:contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/industries/education",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/educationBanner1-PDzu7VTt.jpg",
+    caption: "Education IT Solutions | LMS | eLearning | Virtual Classrooms",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/industries/education#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a Learning Management System (LMS)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A Learning Management System is a digital platform that handles the management, delivery, and tracking of educational content, assessments, and learning activities online.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you develop a custom LMS for our institution?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops custom e-learning software solutions tailored to meet the specific needs of your institution.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer mobile apps along with LMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop educational mobile applications that are integrated with the LMS, suitable for students, teachers, and administrators.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your education solutions cloud-based?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer cloud-based services for business intelligence and analytics to enable smooth and reliable remote learning.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is your LMS suitable for universities and large institutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Capyngen specializes in scalable LMS development suitable for institutions of all sizes, from small schools to universities.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate our existing ERP with your LMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our school ERP solutions integrate seamlessly with both new and existing LMS platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer data analytics with the LMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides data analytics services that help track and enhance learning outcomes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the LMS secure and compliant with data privacy regulations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our software complies with GDPR, FERPA, and other educational data privacy regulations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you support virtual classrooms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer virtual classroom software that allows students and teachers to interact in real time.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can teachers upload and manage content easily?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our LMS includes a user-friendly interface for uploading and managing course materials effortlessly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide training for using the LMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides onboarding and training for faculty and administrators to ensure smooth adoption.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is your LMS mobile responsive?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our LMS and virtual classrooms are fully responsive and optimized for desktop, tablet, and mobile devices.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can students access courses offline?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, through our mobile applications, students can access selected course content offline.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to deploy the LMS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Deployment depends on customization, but standard LMS solutions can go live within 4–8 weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer post-deployment support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides ongoing technical support, maintenance, and updates after deployment.",
+      },
+    },
+  ],
+};
 
 const Education = () => {
   const faqItems = [
@@ -326,6 +530,13 @@ const Education = () => {
           name="keywords"
           content="Learning Management System | eLearning & Virtual Classroom Solutions"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner6
         slides={slidesData}
@@ -372,10 +583,10 @@ const Education = () => {
               and offer scalable and secure digital ecosystems.
             </p>
             <p className="my-5">
-              eLearning app development and a virtual classroom are two of our
-              products that are very helpful in learning innovation, expansion,
-              and modernization, and these are the reasons that brought us this
-              fame.
+              eLearning <Link to={"/app-development"}>app development</Link> and
+              a virtual classroom are two of our products that are very helpful
+              in learning innovation, expansion, and modernization, and these
+              are the reasons that brought us this fame.
             </p>
             <h3 className="text-2xl font-semibold">Highlights:</h3>
             <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">

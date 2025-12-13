@@ -36,9 +36,9 @@ const HomeAboutUs = () => {
         {/* Text Content */}
         <div className="w-full md:w-2/3 flex flex-col space-y-8 md:space-y-10 order-2 md:order-1 text-center md:text-left">
           <h2 className="text-[clamp(1.75rem,4vw,2.75rem)] font-extrabold leading-tight drop-shadow-lg">
-            Capyngen – Your Partner Beyond a{" "}
+            Capyngen – Your Partner as a <br className="md:block hidden"></br>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-400">
-              Digital Marketing Agency
+              Top IT Company in World
             </span>
           </h2>
 
@@ -65,14 +65,15 @@ const HomeAboutUs = () => {
           {/* Description + CTA */}
           <div className="flex flex-col gap-5 md:gap-7 max-w-3xl mx-auto md:mx-0">
             <p className="text-[clamp(1rem,1.4vw,1.15rem)] font-medium leading-relaxed drop-shadow-sm">
-              Capyngen is a cut above the rest in the{" "}
-              <strong>digital marketing</strong> agency arena, as we are not
-              only a digital marketing agency. The team of Capyngen, equipped
-              with the most <strong>up-to-date technologies</strong> and with
-              the enthusiasm for innovation, combines artistry with the highest
-              technical standards to produce bespoke strategies. Getting the
-              goals, target audience, and idea of our clients, we assure a{" "}
-              <em>personalized modus Method</em>.
+              Capyngen is superior to others in the digital marketing agency
+              industry since we are not just a digital marketing agency.
+              Capyngen team, which possesses the latest technologies, the
+              interest in innovations, blends creativity with the technical
+              excellence to create customized strategies. Obtaining the
+              objectives and target market, as well as the concept of our
+              clients, we guarantee an individual approach as a reliable Digital
+              Marketing Agency in Gurgaon and a software development company in
+              India.
             </p>
 
             <AnimatedButton

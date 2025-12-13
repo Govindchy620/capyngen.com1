@@ -24,6 +24,189 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
 
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/ppc#webpage",
+  url: "https://www.capyngen.com/ppc",
+  name: "PPC Management Services | Capyngen",
+  description:
+    "Capyngen helps brands grow through innovative digital marketing, website design, e-commerce development, and data-driven strategies tailored for success.",
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://www.instagram.com/capyngen",
+    ],
+  },
+  mainEntity: {
+    "@type": "Service",
+    name: "Pay-Per-Click (PPC) Advertising Services",
+    serviceType: "PPC Campaign Management",
+    provider: {
+      "@type": "Organization",
+      name: "Capyngen",
+      url: "https://www.capyngen.com",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Global",
+    },
+    description:
+      "Capyngen delivers data-driven PPC advertising solutions for Google Ads, Bing, Meta, and YouTube. Our certified experts optimize ad spend and boost lead generation for businesses worldwide.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "PPC Service Packages",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          name: "Google Ads Management",
+          description:
+            "Comprehensive Google Ads setup, optimization, and reporting for better conversions.",
+        },
+        {
+          "@type": "Offer",
+          name: "YouTube Ads Campaigns",
+          description:
+            "Video-based ad strategy and targeting for brand awareness and audience engagement.",
+        },
+        {
+          "@type": "Offer",
+          name: "Bing & Display Ads",
+          description:
+            "Cross-platform ad management to expand your digital reach.",
+        },
+      ],
+    },
+  },
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    url: "https://www.capyngen.com",
+    name: "Capyngen",
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Pay-Per-Click (PPC) Advertising Services",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://www.linkedin.com/company/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  url: "https://www.capyngen.com/ppc",
+  description:
+    "Capyngen offers result-driven PPC services designed to boost your online visibility, generate leads, and increase ROI through targeted Google Ads, YouTube Ads, and social media campaigns.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "PPC Advertising Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Google Ads Management",
+          description:
+            "Comprehensive Google Ads management to optimize search, display, and shopping campaigns for maximum conversions.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "YouTube Video Advertising",
+          description:
+            "Create and manage YouTube ad campaigns to increase brand reach and engagement with targeted video ads.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Social Media PPC Campaigns",
+          description:
+            "Run paid ads across Facebook, Instagram, and LinkedIn to boost engagement and generate high-quality leads.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "PPC Audit and Optimization",
+          description:
+            "Detailed audits and performance tracking to ensure efficient ad spend and improve ROI on all active campaigns.",
+        },
+      },
+    ],
+  },
+  image: "https://www.capyngen.com/assets/ppc1-HKkEwlmX.png",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is PPC advertising?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PPC (Pay-Per-Click) advertising is a model where advertisers pay a fee each time their ad is clicked. It’s a fast and measurable way to drive targeted traffic to your website.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should I invest in PPC services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PPC provides instant visibility on search engines and social platforms, delivering faster results than organic marketing. It’s ideal for lead generation and brand awareness.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which platforms do you manage PPC campaigns on?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen manages PPC campaigns across Google Ads, YouTube, Facebook, Instagram, and LinkedIn — optimized for your industry and audience.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you measure PPC campaign success?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We track key performance indicators like CTR, conversion rate, cost-per-acquisition, and ROI. Our reports give full visibility into campaign performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer a free PPC audit?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen offers a free 30-day PPC trial and initial audit to analyze your current campaigns and identify improvement opportunities.",
+      },
+    },
+  ],
+};
+
 const PPC = () => {
   const faqItems = [
     {
@@ -220,6 +403,13 @@ const PPC = () => {
           name="keywords"
           content="Pay-Per-Click Advertising | ROI-Driven Ad Campaigns"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner8

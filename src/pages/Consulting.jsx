@@ -50,6 +50,192 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/consulting#webpage",
+  url: "https://www.capyngen.com/consulting",
+  name: "Consulting Services | IT & Business Consulting Company",
+  description:
+    "Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India.",
+  inLanguage: "en",
+  keywords:
+    "Consulting services, IT consulting services, Business consulting solutions, Enterprise consulting company, Consulting companies in India, IT consulting, Top consulting company, Digital consulting services",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType:
+    "Consulting services, IT consulting services, Business consulting solutions, Enterprise consulting company, Consulting companies in India, IT consulting, Top consulting company, Digital consulting services",
+  name: "Consulting Services | IT & Business Consulting Company",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "India",
+  },
+  url: "https://www.capyngen.com/consulting",
+  description:
+    "Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India.",
+  keywords:
+    "Consulting services, IT consulting services, Business consulting solutions, Enterprise consulting company, Consulting companies in India, IT consulting, Top consulting company, Digital consulting services",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.capyngen.com/contact",
+    price: "0.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+  },
+  category: "Consulting & Business Services",
+  serviceOutput:
+    "Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India.",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are IT consulting services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IT consulting services refer to the involvement of experts who provide advisory and implementation support for technology strategy, infrastructure, security, cloud adoption, and digital transformation. Consultants evaluate the current systems, suggest changes, and facilitate the implementation of solutions that are in line with business goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should businesses hire IT consultants?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IT consultants bring specialized knowledge, industry experience, and unbiased opinions that internal teams often lack. They help businesses avoid costly mistakes, accelerate technology adoption, optimize investments, and make informed decisions about complex IT challenges.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Capyngen a top consulting company in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen combines years of experience, proven methodologies, and deep industry expertise to deliver measurable results. Our client-centric approach, award-winning performance, and consistent success stories make us one of India's top consulting companies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide business consulting solutions beyond IT?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. In addition to IT consulting, we offer comprehensive business consulting solutions including growth strategy, operational efficiency, financial planning, market research, and organizational development—integrated with technology recommendations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much do consulting services cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Consulting costs vary based on project scope, duration, expertise, and engagement model. We offer flexible pricing—hourly, project-based, and retainer options. Contact us for a personalized quote that suits your budget.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can small businesses afford your consulting services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. We provide scalable and affordable consulting packages tailored for startups and SMBs in India, ensuring high-quality services that fit varying budgets.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries does Capyngen serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen serves clients across multiple industries including healthcare, finance, manufacturing, retail, education, government, technology, hospitality, logistics, and professional services, offering customized IT and business solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does a typical consulting engagement last?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Engagement duration depends on project complexity. Quick assessments typically take 2–4 weeks, while large-scale transformations may last 6–12 months. Timelines are finalized during initial discussions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide implementation support or just recommendations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We support clients from strategy creation to full implementation. Unlike consultants who only recommend, Capyngen ensures hands-on guidance, deployment, and successful adoption of solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is digital transformation consulting?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Digital transformation consulting helps businesses modernize operations through new technologies like AI, cloud computing, automation, and customer experience redesign while managing organizational change effectively.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure consulting recommendations are practical?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our recommendations are based on detailed assessments, best practices, and realistic evaluation of client resources and constraints—ensuring immediate applicability without compromising long-term goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you help with cloud migration?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Our cloud consulting services cover migration strategy, platform selection, data transfer, application assessment, security integration, and post-migration optimization for a smooth transition.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide cybersecurity consulting?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We offer cybersecurity consulting including risk assessments, security architecture design, compliance guidance, incident response planning, awareness training, and continuous monitoring solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's your approach to change management?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our change management strategy focuses on people. It includes stakeholder engagement, communication plans, training, feedback loops, and ongoing support to ensure successful transformation adoption.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with Capyngen consulting services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Simply contact us to schedule a free initial consultation. We'll assess your needs, goals, and challenges, then craft a custom consulting plan with clear timelines, deliverables, and investment details.",
+      },
+    },
+  ],
+};
 
 const Consulting = () => {
   const faqItems = [
@@ -236,25 +422,43 @@ const Consulting = () => {
   ];
   const cardsSectionSliderData1 = [
     {
-      title: "E-commerce & Retail",
+      title: (
+        <span>
+          <Link to={"/industries/e-commerce"}>E-commerce & Retail</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign11,
       textColor: "text-white",
     },
     {
-      title: "Healthcare & Wellness",
+      title: (
+        <span>
+          <Link to={"/industries/healthcare-fitness"}>
+            Healthcare & Wellness
+          </Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign12,
       textColor: "text-white",
     },
     {
-      title: "Education & E-learning",
+      title: (
+        <span>
+          <Link to={"/industries/education"}>Education & E-learning</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign13,
       textColor: "text-white",
     },
     {
-      title: "Real Estate",
+      title: (
+        <span>
+          <Link to={"/industries/real-estate"}>Real Estate</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign14,
       textColor: "text-white",
@@ -272,7 +476,11 @@ const Consulting = () => {
       textColor: "text-white",
     },
     {
-      title: "Travel & Hospitality",
+      title: (
+        <span>
+          <Link to={"/industries/travel-logistics"}>Travel & Hospitality</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDesign17,
       textColor: "text-white",
@@ -298,6 +506,13 @@ const Consulting = () => {
           name="keywords"
           content="Consulting Services | IT & Business Consulting Company"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner10
@@ -335,7 +550,11 @@ const Consulting = () => {
           overlayColor="bg-black/40"
         />
         <CardsSection
-          heading="Why should you choose Capyngen Consulting?"
+          heading={
+            <span>
+              Why should you choose <Link to={"/"}>Capyngen</Link> Consulting?
+            </span>
+          }
           subheading=""
           services={cardsSectionData1}
           sectionBg="bg-black"

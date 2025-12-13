@@ -24,6 +24,206 @@ import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/devops-solutions#webpage",
+  url: "https://www.capyngen.com/devops-solutions",
+  name: "DevOps Solutions | Capyngen",
+  description:
+    "Capyngen delivers powerful DevOps solutions to automate workflows, accelerate software delivery, and enhance collaboration between development and operations teams. Empower your business with continuous integration and deployment strategies.",
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/devOps1-sEg4yvLt.png",
+    width: 1200,
+    height: 630,
+  },
+  inLanguage: "en-US",
+  mainEntity: {
+    "@type": "Service",
+    name: "DevOps Solutions",
+    serviceType: "DevOps Consulting and Automation",
+    provider: {
+      "@type": "Organization",
+      name: "Capyngen",
+      url: "https://www.capyngen.com",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "India",
+    },
+    description:
+      "Professional DevOps solutions from Capyngen help streamline development processes, integrate automation, and improve efficiency through CI/CD pipelines and cloud infrastructure management.",
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/devops-solutions#service",
+  name: "DevOps Solutions and Services",
+  serviceType:
+    "Continuous Integration, Continuous Deployment (CI/CD), Cloud Automation, Infrastructure as Code, DevOps Consulting",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen delivers end-to-end DevOps solutions to accelerate software delivery, enhance collaboration, and automate deployment pipelines. Streamline your development and operations workflow with our expert DevOps services. :contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/devops-solutions",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/devOps1-sEg4yvLt.png",
+    caption: "DevOps Solutions | CI/CD | Cloud Automation | Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is DevOps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "DevOps is the combination of software development and IT operations with the main goal of more rapid and reliable delivery of applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is DevOps important for modern software development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "DevOps improves communication, reduces errors, and enables faster, more stable, and scalable release cycles—resulting in more reliable applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Capyngen provide DevOps consulting?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen has a team of certified specialists offering expert DevOps consulting services to guide businesses in adopting the right tools, workflows, and practices.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you implement automated deployments?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course. We help businesses establish and maintain automated deployments through CI/CD pipelines to ensure fast, secure, and reliable application delivery.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries can benefit from DevOps solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Industries such as finance, healthcare, e-commerce, IT, telecommunications, media, education, and travel can greatly benefit from DevOps solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer managed DevOps services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen offers fully managed DevOps services that include monitoring, optimization, and ongoing maintenance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which cloud platforms do you support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We provide scalable DevOps solutions for Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you help with multi-cloud optimization?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We ensure optimal performance and cost-efficiency by balancing workloads across multiple cloud providers through multi-cloud optimization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide disaster recovery solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Our DevOps solutions include robust disaster recovery and backup strategies to ensure business continuity in case of unforeseen incidents.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you monitor performance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We use advanced monitoring, logging, and alerting tools to maintain high uptime and optimal performance across your DevOps infrastructure.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you integrate DevOps with software development teams?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we seamlessly integrate DevOps practices within development teams to create a smooth, collaborative, and efficient workflow.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your DevOps solutions suitable for enterprises?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our enterprise-grade DevOps solutions deliver scalable, secure, and performance-optimized infrastructure for large organizations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does a DevOps implementation take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The implementation timeline depends on complexity, but most DevOps transformations take between 4 to 12 weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide ongoing support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, all Capyngen DevOps services include continuous monitoring, optimization, and 24/7 technical support.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I get started with Capyngen DevOps Solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Getting started is easy! Schedule a free consultation with our experts, and we’ll design a tailored DevOps strategy based on your specific business requirements.",
+      },
+    },
+  ],
+};
 
 const DevOpsSolutions = () => {
   const faqItems = [
@@ -247,6 +447,13 @@ const DevOpsSolutions = () => {
           name="keywords"
           content="DevOps Solutions | DevOps Services & Managed Consulting – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner5 />
@@ -390,7 +597,15 @@ const DevOpsSolutions = () => {
           desc=""
           benefits={solutionsData}
           image={assets.devops}
-          footerNote="Capyngen’s DevOps consulting and implementation services are a powerful lever for businesses to change their IT operations with freedom and velocity."
+          footerNote={
+            <>
+              <span>
+                <Link to={"/"}>Capyngen's</Link> DevOps consulting and
+                implementation services are a powerful lever for businesses to
+                change their IT operations with freedom and velocity.
+              </span>
+            </>
+          }
         />
         <HowWeWork
           heading="DevOps Solution Process at Capyngen"

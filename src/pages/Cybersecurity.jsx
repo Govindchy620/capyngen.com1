@@ -18,6 +18,197 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/cybersecurity#webpage",
+  url: "https://www.capyngen.com/cybersecurity",
+  name: "Cybersecurity Solutions | IT & Network Security Services – Capyngen",
+  description:
+    "Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets.",
+  inLanguage: "en",
+  keywords: "Cybersecurity Solutions, IT & Network Security Services",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: [
+    "Cybersecurity services",
+    "Cybersecurity solutions",
+    "IT security services",
+    "Network security services",
+    "Data protection services",
+    "Best Cybersecurity services",
+    "Managed cybersecurity services",
+  ],
+  name: "Cybersecurity Solutions | IT & Network Security Services – Capyngen",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Global",
+  },
+  url: "https://www.capyngen.com/cybersecurity",
+  description:
+    "Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets.",
+  keywords: "Cybersecurity Solutions, IT & Network Security Services",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.capyngen.com/contact",
+    price: "0.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+  },
+  category: "Cybersecurity & IT Security Services",
+  serviceOutput:
+    "Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets.",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is cybersecurity?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cybersecurity entails all measures against hackers to protect the networks, systems, and data of an organization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is cybersecurity important to businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The main benefits of cybersecurity are the following: no leak of data, the security of sensitive informational assets, the observance of the law, and maintenance of customer trust.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are managed security services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Such services consist of continuous monitoring, threat detection, incident response, vulnerability management, and disaster recovery.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do security services have a positive impact on startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely. Capyngen delivers on-demand security to startups at a fraction of the usual price to protect their valuable information and keep their business going.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is network security?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Network security is the protection of internal networks against unauthorized entry and cyber-attacks to computers, servers, and other connected hardware devices.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is Capyngen's data protection approach?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We protect confidential data through encryption, safe storage, backup, and by using access controls.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your cybersecurity services help if I have an enterprise?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, of course. Among the offers Capyngen has for corporations, there is staff on call for professional advice and guidance with wide-ranging security solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is penetration testing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Hackers are simulated in penetration testing to show vulnerabilities present in a system that could be exploited by attackers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you providing cloud security solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We offer secure environments for cloud applications and storage using security measures that comply with industry standards.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are there any means to stop ransomware attacks through cybersecurity?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Measures to fight ransomware include threat monitoring, backups, and endpoint security.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you monitor cybersecurity threats?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We use SIEM tools paired with 24/7 monitoring, intrusion detection, and analytics to identify and respond to threats.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the industries that could gain from cybersecurity services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Finance, healthcare, retail, education, IT, travel — basically any data-driven company dealing with sensitive customer information.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much do cybersecurity services cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pricing varies depending on business size, security requirements, and the services needed. Capyngen offers scalable and affordable cybersecurity solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What services are IT security services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "IT security services include endpoint protection, network security, patch management, anti-virus, and employee training.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with Capyngen cybersecurity services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Schedule a free consultation to evaluate your security requirements and receive a custom-made cybersecurity plan for your business.",
+      },
+    },
+  ],
+};
 
 const Cybersecurity = () => {
   const faqItems = [
@@ -177,19 +368,34 @@ const Cybersecurity = () => {
       textColor: "text-white",
     },
     {
-      title: "E-commerce & Retail",
+      title: (
+        <span>
+          <Link to={"/industries/e-commerce"}>E-commerce & Retail</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDev18,
       textColor: "text-white",
     },
     {
-      title: "Healthcare & Education",
+      title: (
+        <span>
+          <Link to={"/industries/healthcare-fitness"}>
+            Healthcare & Education
+          </Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDev19,
       textColor: "text-white",
     },
     {
-      title: "Real Estate & Travel",
+      title: (
+        <span>
+          <Link to={"/industries/real-estate"}>Real Estate</Link> &{" "}
+          <Link to={"/industries/travel-logistics"}>Travel</Link>
+        </span>
+      ),
       desc: "",
       image: assets.webDev20,
       textColor: "text-white",
@@ -223,6 +429,13 @@ const Cybersecurity = () => {
           name="keywords"
           content="Cybersecurity Solutions | IT & Network Security Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="">
         <Banner5

@@ -10,25 +10,25 @@ const features = [
     Icon: UserRoundSearch,
     color: "from-indigo-400 via-indigo-500 to-indigo-600",
     title: "Customer-Centric Solutions",
-    desc: "Capyngen delivers custom software development and IT services that are specially designed to meet the unique needs of your business, thus guaranteeing the long-term growth and success of your enterprise.",
+    desc: "Capyngen is the provider of both software development and IT services, which are uniquely tailored to fit the specific requirements of your business therefore ensuring the long-term expansion and success of your business with the help of Capyngen IT solutions.",
   },
   {
     Icon: BarChart3,
     color: "from-pink-400 via-fuchsia-500 to-pink-600",
-    title: "Strategic Digital Marketing",
-    desc: "We mix innovation and artistry to conceive digital marketing strategies, search engine optimization services, and social media & marketing campaigns which are the tools that will be used to attract and retain customers by you thus putting you way ahead of the competition.",
+    title: "Digital Marketing - Strategic",
+    desc: "To think of digital marketing strategies, search engine optimization services, and social media and marketing campaigns are the tools that will be employed to draw in and keep customers with you hence placing you far afield the competition as the Best Digital Marketing Company in Gurgaon.",
   },
   {
     Icon: Sparkles,
     color: "from-yellow-300 via-amber-400 to-orange-500",
     title: "Expertise You Can Trust",
-    desc: "With the use of industry knowledge and skills that have been proven, Capyngen delivers IT consulting services, web development, and CRM management software solutions that are scalable, secure, and ready for the future.",
+    desc: "Capyngen provides the IT consulting service, web development and CRM management software solutions that are scalable, secure and future ready using industry knowledge and skills that have been proven. Best web development services are incorporated to ensure greater efficiency.",
   },
   {
     Icon: LifeBuoy,
     color: "from-emerald-400 via-green-500 to-teal-500",
     title: "Reliable 24/7 Support",
-    desc: "Our dedicated team makes sure that you get uninterrupted assistance, providing reliable IT services company support so that your business can operate seamlessly without any downtime.",
+    desc: "Our commitment ensures that you receive continuous support and offer good IT services company services such that your business will run smoothly with no lapse time by one of the leading Top Digital Marketing Agency in Gurgaon.",
   },
 ];
 
@@ -78,14 +78,14 @@ export default function WhyChooseUs() {
               </span>
             </h2>
             <p className="text-[clamp(1rem,1.4vw,1.15rem)] my-6 max-w-3xl lg:max-w-full mx-auto lg:mx-0 leading-relaxed drop-shadow-sm">
-              Capyngen is the lifeline for businesses seeking growth,
-              innovation, and impact through tailor-made, state-of-the-art
-              solutions. We specialize in IT services, consulting, custom
-              software development, web platforms, CRM systems, cloud IT,
-              cybersecurity, and mobile app development. From responsive web
-              design to intelligent automation and digital marketing, our
-              enterprise-grade solutions ensure long-term success and
-              sustainable growth.
+              Capyngen is the lifeline of business that wants to grow, innovate
+              and make impact using custom-made solutions of the state of the
+              art. As a leading IT Company In Gurugram, we focus on IT services,
+              consulting, custom software development, web platform, CRM
+              systems, cloud IT, cybersecurity and mobile app development. Our
+              solutions are enterprise-grade, responsive web design, smart
+              automation, and online marketing, which will lead to success in
+              the long term and long-term growth.
             </p>
             <div className="flex justify-center lg:justify-start">
               <AnimatedButton

@@ -28,6 +28,251 @@ import BenefitsSection from "../components/BenefitsSection";
 import CardsSectionSlider from "../components/CardsSectionSlider";
 import HowWeWork from "../components/HowWeWork";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/gaming#webpage",
+  url: "https://www.capyngen.com/industries/gaming",
+  name: "IT Solutions for Gaming Industry | Game App Development Services – Capyngen",
+  description:
+    "Capyngen offers innovative IT solutions for the gaming industry. From Android, iOS, and PC game development to cloud gaming — we bring your ideas to life.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/gaming1-B9Bp7YkI.png",
+    width: 1200,
+    height: 800,
+    caption: "Gaming Industry IT Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Gaming",
+        item: "https://www.capyngen.com/industries/gaming",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Gaming Industry Digital Solutions",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com/",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    sameAs: [
+      "https://www.facebook.com/capyngen",
+      "https://www.instagram.com/capyngen",
+      "https://twitter.com/capyngen",
+    ],
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  url: "https://www.capyngen.com/industries/gaming",
+  description:
+    "Capyngen delivers next-generation digital marketing, web design, and data-driven solutions tailored for the gaming industry — enhancing player engagement and brand visibility.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Gaming Industry Digital Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Gaming Website Development",
+          description:
+            "Custom gaming website design and development optimized for performance and immersive player experience.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Gaming App UI/UX Design",
+          description:
+            "Visually stunning and user-friendly gaming app interfaces that maximize player engagement.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Digital Marketing for Games",
+          description:
+            "Strategic marketing campaigns including PPC, SEO, and influencer collaborations for gaming brands.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Data Analytics for Gaming",
+          description:
+            "In-depth analytics to measure player behavior, retention, and optimize monetization strategies.",
+        },
+      },
+    ],
+  },
+  image: "https://www.capyngen.com/assets/gaming16-BrGk70jw.png",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a Game app development software company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A Game app development software company deals with the creation of custom game engines, mobile, PC, and console games, VR/AR solutions, and multiplayer platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is Mobile Game App Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mobile Game App Development includes iOS Game App Development, Android Game App Development, and cross-platform solutions focused on high performance and user engagement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is PC Game Development & console game development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PC and console game development involves building high-performance games for platforms such as Windows, Mac, PlayStation, Xbox, and Nintendo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is VR game software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "VR game software uses virtual reality technology to offer players immersive gaming experiences through VR headsets and motion controls.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is AR game development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AR game development creates games that blend digital components with the physical environment, enabling interactive and engaging experiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are multiplayer Game app development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Multiplayer game app development focuses on creating products and server systems that enable users to play real-time games from different locations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Capyngen help gaming businesses grow?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen helps gaming businesses grow by providing flexible IT solutions, online-offline promotional strategies, and data-driven insights for monetization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer custom Mobile Game App Development services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen offers custom Mobile Game App Development services, creating unique games tailored to specific target audiences and business goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you build multiplayer Game app development online games?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen builds online multiplayer games with stable servers and seamless gameplay experiences for users worldwide.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you handle game analytics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We use advanced analytics tools to collect and analyze player data, game performance metrics, and behavioral insights to optimize gaming experiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide Cloud gaming?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen provides efficient Cloud gaming solutions capable of supporting thousands of concurrent players seamlessly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is your experience with VR & AR games?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We have extensive experience in developing immersive VR and AR gaming solutions for entertainment, simulation, and training applications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you help with esports and community engagement?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen supports esports and community engagement through player outreach programs, influencer collaborations, and promotional campaigns.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does game development take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The duration of game development typically ranges from 3 to 12 months, depending on the platform, complexity, and required features.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose Capyngen for game development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen combines IT expertise, creative strategies, and gaming industry insights to deliver engaging, flexible, and profit-driven game development solutions.",
+      },
+    },
+  ],
+};
 
 const Gaming = () => {
   const faqItems = [
@@ -345,6 +590,13 @@ const Gaming = () => {
           name="keywords"
           content="IT Solutions for Gaming Industry | Game App Development Services – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <ShuffleHero
         heading={
@@ -381,7 +633,13 @@ const Gaming = () => {
         title="How Gaming Business Benefit from Digital Innovation"
         description={[
           "The industry of gaming is one of those sectors that have been recognized as rapidly developing areas of the digital world where the user experience and community engagement become a crucial factor.",
-          "Particularly the IT infrastructure of the right kind is the indisputable foundation for the smooth running of the Game app development , secure transaction, and scalable performance to support large-scale concurrent users.",
+          <span>
+            Particularly the IT infrastructure of the right kind is the
+            indisputable foundation for the smooth running of the Game{" "}
+            <Link to={"/app-development"}>app development</Link>, secure
+            transaction, and scalable performance to support large-scale
+            concurrent users.
+          </span>,
           "Gaming companies by mere digital marketing practices can attract the right crowd, build a faithful customer base, and make a flow of revenue that would be sustainable through the successful implementation of campaigns.",
         ]}
         image={assets.gaming17}

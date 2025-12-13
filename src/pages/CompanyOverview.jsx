@@ -10,6 +10,7 @@ import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import GetStarted from "../components/GetStarted";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const CompanyOverview = () => {
   const expertise = [
@@ -55,6 +56,20 @@ const CompanyOverview = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Company Overview | Capyngen – Empowering Brands with Digital
+          Excellence
+        </title>
+        <meta
+          name="description"
+          content="Capyngen is a full-service digital marketing and technology agency driven by creativity, innovation, and results. From SEO and web development to performance marketing and branding — we help businesses grow smarter and faster. Discover our story, values, and vision that power success."
+        />
+        <meta
+          name="keywords"
+          content="Company Overview | Capyngen – Empowering Brands with Digital Excellence"
+        />
+      </Helmet>
       <Banner
         title="About Capyngen"
         overlayBg="bg-black/70"

@@ -7,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Input = ({
   label,
@@ -88,7 +89,7 @@ const Dropdown = ({ label, options, value, onChange }) => {
         </button>
 
         {isOpen && (
-          <div className="absolute left-0 w-full mt-1 max-h-52 overflow-y-hidden bg-[#0f0f11] border border-blue-600 rounded-xl shadow-lg z-50 backdrop-blur-xl">
+          <div className="absolute left-0 w-full mt-1 max-h-52 overflow-y-auto bg-[#0f0f11] border border-blue-600 rounded-xl shadow-lg z-50 backdrop-blur-xl">
             <input
               type="text"
               placeholder="Search topic..."
@@ -124,7 +125,7 @@ const Dropdown = ({ label, options, value, onChange }) => {
 };
 
 const Map = () => (
-  <div className="mt-12 rounded-3xl border border-blue-500 shadow-[inset_0_2px_6px_rgba(117,111,255,0.6),0_10px_20px_rgba(30,30,60,0.6)] overflow-hidden">
+  <div className="mt-10 sm:mt-12 rounded-3xl border border-blue-500 shadow-[inset_0_2px_6px_rgba(117,111,255,0.6),0_10px_20px_rgba(30,30,60,0.6)] overflow-hidden max-w-full">
     <iframe
       title="Company Location"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.2159924974653!2d77.0415838754927!3d28.41273877578547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x489ffc51a97b2a05%3A0xce07c65b285ef184!2scapyngen!5e0!3m2!1sen!2sin!4v1761233238159!5m2!1sen!2sin"
@@ -134,7 +135,7 @@ const Map = () => (
       allowFullScreen=""
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
-      className="rounded-3xl"
+      className="rounded-3xl min-w-[240px]"
     />
   </div>
 );
@@ -199,14 +200,11 @@ export default function ContactUs() {
     setShowResponse(false);
 
     try {
-      const response = await fetch(
-        "https://capyngen-backendv2-1.onrender.com/api/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://api.capyngen.com/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
       const data = await response.json();
 
       if (response.ok) {
@@ -232,6 +230,19 @@ export default function ContactUs() {
 
   return (
     <div className="relative min-h-screen w-full pt-10 overflow-hidden bg-[#0c0c0d] text-white selection:bg-blue-500 selection:text-white">
+      <Helmet>
+        <title>
+          Capyngen | Contact Us – Let’s Talk About Your Digital Growth
+        </title>
+        <meta
+          name="description"
+          content="Have questions or ready to start your next digital project? Reach out to Capyngen’s expert team—SEO, social media, web & app development. We’re here to listen, plan and deliver. Contact us today!"
+        />
+        <meta
+          name="keywords"
+          content="Have questions or ready to start your next digital project? Reach out to Capyngen’s expert team—SEO, social media, web & app development. We’re here to listen, plan and deliver. Contact us today!"
+        />
+      </Helmet>
       {/* HEADER */}
       <div className="mx-auto max-w-5xl px-6 pt-16 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 via-blue-400 to-pink-400 bg-clip-text text-transparent">
@@ -242,11 +253,11 @@ export default function ContactUs() {
         </p>
       </div>
 
-      <div className="mx-auto mt-10 max-w-7xl px-6 pb-24">
-        <div className="rounded-3xl bg-white/[0.1] backdrop-blur-3xl border border-blue-600 shadow-[inset_0_2px_8px_rgba(117,111,255,0.4),0_20px_50px_rgba(30,30,60,0.4)] p-8 md:p-12 lg:p-16">
+      <div className="mx-auto max-w-7xl px-3 sm:px-6 pb-16 sm:pb-24">
+        <div className="rounded-3xl bg-white/[0.1] backdrop-blur-3xl border border-blue-600 shadow-[inset_0_2px_8px_rgba(117,111,255,0.4),0_20px_50px_rgba(30,30,60,0.4)] p-4 sm:p-8 md:p-12 lg:p-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[380px_1fr]">
             {/* LEFT PANEL */}
-            <div className="rounded-3xl backdrop-blur-2xl p-8 border border-blue-600 shadow-[inset_0_3px_6px_rgba(117,111,255,0.5),0_10px_40px_rgba(30,30,60,0.4)] flex flex-col space-y-6 relative">
+            <div className="rounded-3xl backdrop-blur-2xl p-6 sm:p-8 border border-blue-600 shadow-[inset_0_3px_6px_rgba(117,111,255,0.5),0_10px_40px_rgba(30,30,60,0.4)] flex flex-col space-y-6 relative">
               <h3 className="text-2xl font-bold text-blue-300 mb-2">
                 Let’s Connect!
               </h3>
@@ -259,10 +270,10 @@ export default function ContactUs() {
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-blue-200" />
                   <a
-                    href="mailto:info@capyngen.com"
+                    href="mailto:sales@capyngen.com"
                     className="text-blue-300 font-semibold underline hover:text-blue-400"
                   >
-                    info@capyngen.com
+                    sales@capyngen.com
                   </a>
                 </div>
                 <div className="flex items-start gap-4">
@@ -277,7 +288,7 @@ export default function ContactUs() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3  mt-4 text-blue-300/90">
+              <div className="flex flex-wrap gap-3 mt-4 text-blue-300/90">
                 <a
                   href="https://www.facebook.com/profile.php?id=100086626928653"
                   className="rounded-xl bg-blue-600/70 p-3 border border-blue-500/70 hover:scale-110 transition-all duration-300"
@@ -312,9 +323,9 @@ export default function ContactUs() {
             </div>
 
             {/* RIGHT FORM */}
-            <div className="relative py-16 px-4">
+            <div className="relative py-16 px-4 sm:px-6 md:px-8 lg:px-12">
               <form onSubmit={handleSubmit} noValidate>
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <Input
                     label="First Name"
                     name="firstName"
@@ -349,10 +360,7 @@ export default function ContactUs() {
                     placeholder="+1 (555) 555-5555"
                     value={formData.phoneNumber}
                     onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        phoneNumber: e.target.value,
-                      })
+                      setFormData({ ...formData, phoneNumber: e.target.value })
                     }
                   />
                 </div>
@@ -385,10 +393,7 @@ export default function ContactUs() {
                       placeholder="Write your message..."
                       value={formData.message}
                       onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          message: e.target.value,
-                        })
+                        setFormData({ ...formData, message: e.target.value })
                       }
                       onFocus={() => setIsMessageFocused(true)}
                       onBlur={() => setIsMessageFocused(false)}
@@ -403,7 +408,7 @@ export default function ContactUs() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="group relative rounded-2xl bg-gradient-to-r from-blue-500 via-blue-500 to-pink-500 px-10 py-3 text-lg font-semibold text-white shadow-lg outline-none ring-2 ring-blue-400 hover:brightness-110 active:brightness-90 disabled:opacity-60 transition-all duration-300"
+                    className="group relative rounded-2xl bg-gradient-to-r from-blue-500 via-blue-500 to-pink-500 px-6 sm:px-10 py-3 text-lg font-semibold text-white shadow-lg outline-none ring-2 ring-blue-400 hover:brightness-110 active:brightness-90 disabled:opacity-60 transition-all duration-300"
                   >
                     {loading ? "Sending..." : "Send Message"}
                   </button>
@@ -423,7 +428,6 @@ export default function ContactUs() {
               </form>
             </div>
           </div>
-
           <Map />
         </div>
       </div>

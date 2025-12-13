@@ -21,6 +21,192 @@ import {
   FaLightbulb,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/banking#webpage",
+  url: "https://www.capyngen.com/industries/banking",
+  name: "Banking Software Development Services",
+  description:
+    "Capyngen provides secure and scalable banking software development services. From FinTech apps to mobile banking software, we build next-gen digital solutions.",
+  inLanguage: "en",
+  keywords:
+    "Banking software development services, Banking software development, FinTech app development, Mobile banking software, Core banking solutions, Banking IT services, Digital banking solutions, Secure banking applications",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType:
+    "Banking software development services, Banking software development, FinTech app development, Mobile banking software, Core banking solutions, Banking IT services, Digital banking solutions, Secure banking applications",
+  name: "Banking Software Development Services",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Global",
+  },
+  url: "https://www.capyngen.com/industries/banking",
+  description:
+    "Capyngen provides secure and scalable banking software development services. From FinTech apps to mobile banking software, we build next-gen digital solutions.",
+  keywords:
+    "Banking software development services, Banking software development, FinTech app development, Mobile banking software, Core banking solutions, Banking IT services, Digital banking solutions, Secure banking applications",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.capyngen.com/contact-us",
+    price: "0.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+  },
+  category: "Banking Software & Digital Solutions",
+  serviceOutput:
+    "Capyngen provides secure and scalable banking software development services. From FinTech apps to mobile banking software, we build next-gen digital solutions.",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are banking software development services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Banking software development services involve creating, constructing, and rolling out software solutions for banks, including core banking systems, mobile applications, payment gateways, customer relationship management, security systems, and digital transformation initiatives customized to banking requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is Capyngen the best banking software development company in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Capyngen combines deep banking domain expertise, a strong track record with major financial institutions, advanced technology, a security-first approach, regulatory knowledge, and the ability to deliver measurable outcomes, making it a trusted partner for banks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are core banking solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Core banking solutions are software platforms that manage account operations, deposits, loans, and transactions. They integrate customer data and banking processes through a unified system, enabling centralized operations across all branches.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How secure are your banking applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our banking applications follow strict security measures such as multi-factor authentication, end-to-end encryption, biometric verification, fraud detection, regular security audits, and compliance with PCI DSS and RBI standards to ensure maximum protection.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you develop mobile banking software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop mobile banking software for both iOS and Android using native and cross-platform technologies. Our apps are secure, user-friendly, feature-rich, and seamlessly integrated with core banking systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is blockchain in banking, and how do you implement it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Blockchain in banking provides a shared, tamper-proof ledger that enhances transaction transparency, data security, and cyberattack resistance. We implement blockchain solutions for banks using platforms like Hyperledger and Ethereum.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does banking software development take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Timelines depend on the project scope. A simple mobile app may take 3 to 4 months, while a full core banking system can take 8 to 12 months. We provide clear milestones during planning based on project complexity and requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the cost of banking software development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Costs depend on features, complexity, technology stack, integrations, and support. We offer flexible engagement models such as fixed-price, time and material, and dedicated teams. A tailored quote is available upon request.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate with our existing banking systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we integrate new banking solutions with legacy systems, third-party platforms, payment gateways, compliance tools, and external services using APIs, middleware, and proven integration methods with minimal disruption.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide FinTech app development for startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we build FinTech apps for startups, including digital wallets, lending platforms, investment apps, payment solutions, and other innovative financial applications tailored for scalability and quick deployment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure regulatory compliance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We follow RBI, PCI DSS, GDPR, AML/KYC, and other international standards. Our solutions include built-in compliance features such as automated reporting and audit trails.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What technologies do you use for banking software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We use Java, .NET, and Python for development; Oracle, MySQL, and MongoDB for databases; AWS and Azure for cloud; AI and ML for intelligence; blockchain for security; and the latest frameworks for modern, scalable solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide ongoing support and maintenance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide 24/7 monitoring, bug fixing, security updates, performance optimization, feature enhancements, and technical support to ensure smooth and secure banking software operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you help with digital transformation for traditional banks?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our digital banking solutions help modernize legacy systems, adopt cloud technologies, implement AI, use blockchain, and improve customer experiences for a digital-first future.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes your custom banking app development services unique?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our custom banking app development combines domain expertise, user-focused design, modern technology, strong security, regulatory compliance, smooth integration capabilities, and proven delivery methods to create high-impact digital solutions.",
+      },
+    },
+  ],
+};
 
 const Banking = () => {
   const faqItems = [
@@ -324,6 +510,13 @@ const Banking = () => {
           name="keywords"
           content="Banking Software Development Services "
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <ExpandableGallery panels={panels} />
       <GetStarted
@@ -338,8 +531,19 @@ const Banking = () => {
       <TopRatedCompany
         title="Banking Industry Meets Digital Transformation"
         description={[
-          `Capyngen partners with global financial institutions to build secure, scalable, and compliant digital infrastructures. Our banking software solutions redefine customer relationships and operational performance.`,
-          `We have deep experience working across retail, corporate, microfinance, and fintech ecosystems, offering end-to-end solutions in core banking, digital payments, and AI-powered financial intelligence.`,
+          <span>
+            <Link to={"/"}>Capyngen</Link> partners with global financial
+            institutions to build secure, scalable, and compliant digital
+            infrastructures. Our banking software solutions redefine customer
+            relationships and operational performance.
+          </span>,
+          <span>
+            We have deep experience working across retail, corporate,
+            microfinance, and fintech ecosystems, offering end-to-end solutions
+            in core banking, digital payments, and{" "}
+            <Link to={"/artificial-intelligence"}>AI-powered</Link> financial
+            intelligence.
+          </span>,
         ]}
         image={assets.banking1}
         background={assets.patternBg1}

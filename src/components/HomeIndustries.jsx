@@ -59,10 +59,10 @@ export default function HomeIndustries() {
               Smart Technologies That Drive Growth
             </h1>
             <p className="text-lg md:pr-20 mt-5 mb-6">
-              At Capyngen, we harness innovation and cutting-edge IT services,
-              custom software development, and digital solutions to create
-              scalable, secure, and future-ready systems tailored to your
-              business.
+              We use innovation, latest IT services, tailored software
+              development, Best web design services and digital solutions to
+              develop scalable, secure, and future-ready systems to meet your
+              business needs at Capyngen.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-semibold mt-8 mb-4">
@@ -72,33 +72,33 @@ export default function HomeIndustries() {
             <ul className="list-disc list-inside space-y-3 text-gray-300">
               <li>
                 <span className="font-semibold text-cyan-400">
-                  Next-Gen Cloud & IT Solutions –
-                </span>{" "}
-                Scalable, secure, and ready for tomorrow.
+                  Next-Gen Cloud &amp; IT Solutions -
+                </span>
+                Future-Proof, Secure, and Scalable.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
-                  Advanced Cybersecurity Services –
-                </span>{" "}
-                Safeguarding businesses against evolving threats.
+                  State of the art Cybersecurity Services -
+                </span>
+                Protecting companies against emerging threats.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
-                  Industry-Focused Innovation –
-                </span>{" "}
-                From finance to healthcare, our tech powers growth.
+                  Industry-Targeted Innovation -
+                </span>
+                Our technology drives the growth of finance to healthcare.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
-                  AI & Data-Driven Insights –
-                </span>{" "}
-                Smarter decisions, faster results.
+                  Artificial Intelligence and Data-driven insights -
+                </span>
+                More intelligent choices, quicker outcomes.
               </li>
               <li>
                 <span className="font-semibold text-cyan-400">
-                  Seamless Digital Transformation –
-                </span>{" "}
-                Modernizing enterprises with responsive solutions.
+                  Digital transformation without interruption -
+                </span>
+                Modernisation of enterprises with responsive solutions.
               </li>
             </ul>
           </div>

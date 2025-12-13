@@ -19,6 +19,188 @@ import SeoStatsSection from "../components/SeoStatsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/seo#webpage",
+  url: "https://www.capyngen.com/seo",
+  name: "Search Engine Optimization (SEO) Services – Capyngen",
+  description:
+    "Rank higher with Capyngen’s search engine optimization services. We deliver on-page, off-page, and technical SEO to boost your visibility and organic growth. :contentReference[oaicite:0]{index=0}",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/seo#service",
+  name: "Search Engine Optimization (SEO) Services",
+  serviceType: "SEO, Search Engine Optimization, Organic Search Optimization",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Rank higher with Capyngen’s search engine optimization services. We deliver on-page, off-page, and technical SEO to boost your visibility and organic growth. ([capyngen.com/seo](https://www.capyngen.com/seo))",
+  url: "https://www.capyngen.com/seo",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/seoHero-B9XLly_w.png",
+    caption: "SEO Services – Capyngen",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/seo#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Search Engine Optimization (SEO) is the process of optimizing your website to make it more attractive to search engines and draw in more high-quality organic traffic.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is SEO important for my business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SEO helps your website appear on the first page of search engines, reach the right audience, increase visitors, and boost leads or sales according to your business goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to see results from SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SEO results typically appear within 3–6 months depending on competition, website quality, and the effectiveness of the SEO strategy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between on-page and off-page SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "On-page SEO focuses on optimizing website content and structure, while off-page SEO includes backlinks, PR, and social signals from external sources.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are keywords in SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Keywords are search phrases that users type into search engines. Using targeted keywords helps your content appear when users search for relevant information.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does content affect SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "High-quality and relevant content improves rankings, keeps users engaged longer, and earns more backlinks, all of which enhance SEO performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is link building in SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Link building is the practice of acquiring backlinks from other websites to improve your website’s authority, trust, and rankings in search results.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are meta tags?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Meta tags provide search engines with information about your page’s title, description, and keywords, helping them understand and rank your content effectively.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does mobile optimization affect SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mobile optimization ensures that your site is mobile-friendly, improving user experience and search rankings since search engines prioritize responsive designs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is local SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Local SEO helps businesses appear in local search results and attract nearby customers through optimized Google Business Profiles and localized strategies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I track SEO performance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Use tools like Google Analytics, Google Search Console, and other SEO platforms to monitor website traffic, keyword rankings, and conversions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can SEO guarantee #1 rankings on Google?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, SEO cannot guarantee #1 rankings, but it significantly increases visibility, organic traffic, and the chances of appearing in top search results.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is technical SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Technical SEO involves optimizing website structure, loading speed, indexability, security (HTTPS), and structured data to help search engines crawl and understand your site.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How often should SEO strategies be updated?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SEO strategies should be reviewed and updated regularly to adapt to changing algorithms, market trends, and new keyword opportunities.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why choose a professional SEO company?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A professional SEO company like Capyngen provides expert consultation, custom strategies, continuous optimization, and measurable results to grow your online presence.",
+      },
+    },
+  ],
+};
 
 const SEO = () => {
   const faqItems = [
@@ -231,6 +413,13 @@ const SEO = () => {
           name="keywords"
           content="Search Engine Optimization | Best SEO Company – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner5
@@ -304,7 +493,11 @@ const SEO = () => {
           overlayColor="bg-black/40"
         />
         <TopRatedCompany
-          title="Why Choose Capyngen as Your SEO Partner"
+          title={
+            <span>
+              Why Choose <Link to={"/"}>Capyngen</Link> as Your SEO Partner
+            </span>
+          }
           description={[
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">

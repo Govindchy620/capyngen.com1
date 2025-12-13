@@ -2,6 +2,10 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "./styles/animations.css";
 
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 button {
   cursor: pointer;
 }

@@ -753,6 +753,44 @@ import dataAnalyticsFullSize from "./dataAnalyticsFullSize.png";
 import dataAnalyticsFullSize2 from "./dataAnalyticsFullSize2.png";
 import consultingFullSize from "./consultingFullSize.png";
 import consultingFullSize2 from "./consultingFullSize2.png";
+import longTermGrowth from "./longTermGrowth.png";
+import personalizedAttention from "./personalizedAttention.png";
+import results from "./results.png";
+import transparent from "./transparent.png";
+import webDesign from "./webDesign.png";
+import smm from "./smm.png";
+import branding from "./branding.jpg";
+import googleAds from "./googleAds.png";
+import metaAds from "./metaAds.jpg";
+import webDevHiddenPage1 from "./webDevHiddenPage1.png";
+import webDevHiddenPage2 from "./webDevHiddenPage2.png";
+import webDevHiddenPage3 from "./webDevHiddenPage3.png";
+import webDevHiddenPage4 from "./webDevHiddenPage4.png";
+import webDevHiddenPage5 from "./webDevHiddenPage5.png";
+import webDevHiddenPage6 from "./webDevHiddenPage6.png";
+import webDevHiddenPage7 from "./webDevHiddenPage7.png";
+import webDevHiddenPage8 from "./webDevHiddenPage8.png";
+import webDevHiddenPage9 from "./webDevHiddenPage9.png";
+import webDevHiddenPage10 from "./webDevHiddenPage10.png";
+import webDevHiddenPage11 from "./webDevHiddenPage11.png";
+import webDevHiddenPage12 from "./webDevHiddenPage12.png";
+import webDevHiddenPage13 from "./webDevHiddenPage13.png";
+import webDevHiddenPage14 from "./webDevHiddenPage14.png";
+import webDevHiddenPage15 from "./webDevHiddenPage15.png";
+import webDevHiddenPage16 from "./webDevHiddenPage16.png";
+import webDevHiddenPage17 from "./webDevHiddenPage17.png";
+import webDevHiddenPage18 from "./webDevHiddenPage18.png";
+import webDevHiddenPage19 from "./webDevHiddenPage19.png";
+import webDevHiddenPage20 from "./webDevHiddenPage20.png";
+import webDevHiddenPage21 from "./webDevHiddenPage21.png";
+import webDevHiddenPage22 from "./webDevHiddenPage22.png";
+import webDevHiddenPage23 from "./webDevHiddenPage23.png";
+import webDevHiddenPage24 from "./webDevHiddenPage24.png";
+import webDevHiddenPage25 from "./webDevHiddenPage25.png";
+import webDevHiddenPage26 from "./webDevHiddenPage26.png";
+import webDevHiddenPage27 from "./webDevHiddenPage27.png";
+import appDevHiddenPage2 from "./appDevHiddenPage2.png";
+import appDevHiddenPage3 from "./appDevHiddenPage3.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1510,6 +1548,49 @@ export const assets = {
   dataAnalyticsFullSize2,
   consultingFullSize,
   consultingFullSize2,
+  backgroundVideo,
+  longTermGrowth,
+  personalizedAttention,
+  results,
+  transparent,
+  appDevFullSize,
+  webDesign,
+  smm,
+  seo,
+  eComm,
+  branding,
+  googleAds,
+  metaAds,
+  capyngenLogo,
+  webDevHiddenPage1,
+  webDevHiddenPage2,
+  webDevHiddenPage3,
+  webDevHiddenPage4,
+  webDevHiddenPage5,
+  webDevHiddenPage6,
+  webDevHiddenPage7,
+  webDevHiddenPage8,
+  webDevHiddenPage9,
+  webDevHiddenPage10,
+  webDevHiddenPage11,
+  webDevHiddenPage12,
+  webDevHiddenPage13,
+  webDevHiddenPage14,
+  webDevHiddenPage15,
+  webDevHiddenPage16,
+  webDevHiddenPage17,
+  webDevHiddenPage18,
+  webDevHiddenPage19,
+  webDevHiddenPage20,
+  webDevHiddenPage21,
+  webDevHiddenPage22,
+  webDevHiddenPage23,
+  webDevHiddenPage24,
+  webDevHiddenPage25,
+  webDevHiddenPage26,
+  webDevHiddenPage27,
+  appDevHiddenPage2,
+  appDevHiddenPage3,
 };
 
 export const navItems = [

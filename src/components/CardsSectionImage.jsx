@@ -50,12 +50,12 @@ const CardsSectionImage = ({
                 >
                   {service.title}
                 </h3>
-                <p
+                <div
                   id={`service-desc-${index}`}
                   className={`${textSize} leading-relaxed`}
                 >
                   {service.description}
-                </p>
+                </div>
               </div>
 
               {/* Image at Bottom */}

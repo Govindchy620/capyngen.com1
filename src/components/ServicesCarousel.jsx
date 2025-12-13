@@ -33,43 +33,33 @@ import {
 } from "lucide-react";
 
 // ---------------- CARDS DATA + LINKS ----------------
+
 const cards = [
   {
-    title: "App Development",
-    desc: "Apps for mobile devices that are strong, scalable, and simple to use, designed to help organizations meet objectives.",
-    href: "/app-development",
-    items: [
-      "Multi-device compatibility",
-      "Quick and safe growth",
-      "Architecture that may change throughout time",
-      "Design that puts the user first",
-    ],
-  },
-  {
     title: "Custom AI Solution",
-    desc: "Custom AI-powered solutions that make jobs go faster and help businesses do better.",
+    desc: "Specially made AI-based solutions that enable jobs to be faster and enable businesses to succeed better.",
     href: "/custom-ai-solutions",
     items: [
       "Predictive analysis",
       "Intelligent automation",
-      "AI models designed particularly for you",
+      "AI models that are specifically created.",
       "Insights in real time",
     ],
   },
   {
     title: "Web Development",
-    desc: "Websites that are secure and responsive, so that users have a good time and companies may prosper.",
+    desc: "The secure, responsive websites where the users can enjoy themselves and the companies can flourish during the use of the services of the Best web design.",
     href: "/web-development",
     items: [
-      "Web solutions that are right for you",
-      "Infrastructure that can grow",
+      "Right solutions to web problems.",
+      "Growing infrastructure.",
       "Better performance",
       "Design for mobile first",
     ],
   },
   {
     title: "E-Commerce Solutions",
-    desc: "Smart online stores that are created to increase sales, customer happiness, and engagement.",
+    desc: "Smarter online shops that are designed to maximize purchases, customer satisfaction, and interaction.",
     href: "/ecommerce-solutions",
     items: [
       "Secure payment integration",
@@ -80,29 +70,29 @@ const cards = [
   },
   {
     title: "Blockchain Development",
-    desc: "Blockchain solutions that are secure, transparent, and reliable for digital transactions.",
+    desc: "Safe, transparent, and trustworthy blockchain solutions to conducting digital transactions.",
     href: "/blockchain-development",
     items: [
       "Creating smart contracts",
-      "Apps that don't need a central server to work",
-      "Transactions that are secure",
+      "Applications which do not require a central server to operate.",
+      "Secure transactions",
       "Blockchain consulting",
     ],
   },
   {
     title: "DevOps Solutions",
-    desc: "Streamlined DevOps services that let you produce software more quickly, reliably, and effectively.",
+    desc: "Easy DevOps solutions that allow you to develop software faster, with greater reliability and efficiency.",
     href: "/devops-solutions",
     items: [
       "Always integrating",
-      "Deployment that occurs on its own",
-      "Pipelines that can become bigger",
+      "Self-deployment.",
+      "Expanding pipelines.",
       "Doing business on the cloud",
     ],
   },
   {
     title: "Application Solutions",
-    desc: "Full application services for fresh ideas, improved company results, and making things work more smoothly.",
+    desc: "Complete utilization of new ideas, better company performance, and simplified smooth work.",
     href: "/application-solutions",
     items: [
       "Upgrading obsolete systems",
@@ -112,8 +102,8 @@ const cards = [
     ],
   },
   {
-    title: "CRM & Management Software",
-    desc: "Custom CRM systems that truly help with sales, relationships, and getting customers involved.",
+    title: "CRM &amp; Management Software",
+    desc: "Tailored customer relationship management systems that actually assist in sales, relationships and customer involvement.",
     href: "/crm-management-software",
     items: [
       "Lead management",
@@ -124,10 +114,10 @@ const cards = [
   },
   {
     title: "UI/UX Design",
-    desc: "User-centered UI/UX design that makes sure that users can easily comprehend and enjoy their interactions.",
+    desc: "UI/UX design that focuses on the user to ensure that interactions are not difficult to understand and use by users.",
     href: "/ui-ux-design",
     items: [
-      "Making wireframes and prototypes",
+      "Development of wireframes and prototypes.",
       "Interactive design",
       "Testing with real people",
       "Improving conversions",
@@ -135,7 +125,7 @@ const cards = [
   },
   {
     title: "Website Design",
-    desc: "Creative, responsive, and impactful websites designed to strengthen digital presence.",
+    desc: "Engaging, receptive and effective websites built to enhance online presence.",
     href: "/website-design",
     items: [
       "SEO-friendly design",
@@ -145,8 +135,8 @@ const cards = [
     ],
   },
   {
-    title: "Branding & Identity Design",
-    desc: "Strong branding solutions to define identity and connect with your audience.",
+    title: "Branding &amp; Identity Design",
+    desc: "Good branding solutions to make an identity and reach your audience.",
     href: "/branding-and-identity-design",
     items: [
       "Logo creation",
@@ -157,7 +147,7 @@ const cards = [
   },
   {
     title: "Ecommerce Design",
-    desc: "Modern ecommerce designs that boost sales, trust, and customer shopping experiences.",
+    desc: "Contemporary ecommerce layouts that enhance purchasing, confidence, and shopping experiences of customers.",
     href: "/ecommerce-design",
     items: [
       "Simple to use interface",
@@ -168,18 +158,18 @@ const cards = [
   },
   {
     title: "CMS Design",
-    desc: "CMS designs that help you manage your content better and make the site perform better.",
+    desc: "CMS templates that assist you in managing your contents to a better extent and enhance the performance of the site.",
     href: "/cms-design",
     items: [
       "Easy to switch",
       "A framework that can expand",
       "SEO optimization",
-      "Backend that is easy to utilize",
+      "Easy to use backend.",
     ],
   },
   {
     title: "Search Engine Optimization",
-    desc: "Effective SEO strategies to improve ranking, visibility, and long-term online growth.",
+    desc: "Proper search engine optimization to enhance the ranking, visibility, and the long-term online expansion.",
     href: "/seo",
     items: [
       "On-page SEO",
@@ -190,28 +180,28 @@ const cards = [
   },
   {
     title: "Social Media Marketing (SMM)",
-    desc: "Engaging SMM campaigns that build brand presence and connect with audiences.",
+    desc: "Participation in SMM campaigns that create brand awareness and reach out to audiences.",
     href: "/smm",
     items: [
-      "Ads that are made for a certain platform",
+      "Advertisements that are platform specific.",
       "Finding an audience",
       "Keeping an eye on engagement",
     ],
   },
   {
     title: "Pay-Per-Click Advertising (PPC)",
-    desc: "Result-driven PPC ads that maximize ROI and capture qualified leads quickly.",
+    desc: "Outcome-based PPC advertisements, which lead to the highest ROI and acquisition of qualified leads in the shortest time possible.",
     href: "/ppc",
     items: [
-      "Campaigns that target certain individuals",
+      "The campaigns targeting specific people.",
       "The best keywords",
       "Tracking in real time",
-      "Ads that emphasize on return on investment",
+      "Advertisements focusing on the returns on investment.",
     ],
   },
   {
     title: "Artificial Intelligence",
-    desc: "Cutting-edge AI services for smarter automation, innovation, and business transformation.",
+    desc: "Innovation, smarter automation, and business transformation through state-of-the-art AI services.",
     href: "/artificial-intelligence",
     items: [
       "AI-powered chatbots",
@@ -222,17 +212,17 @@ const cards = [
   },
   {
     title: "Cybersecurity",
-    desc: "Robust cybersecurity solutions to safeguard data, systems, and digital infrastructures.",
+    desc: "Solid cybersecurity measures to protect information, networks, and computer networks.",
     href: "/cybersecurity",
     items: [
       "Finding dangers",
       "Keeping data safe",
-      "Risk assessment and monitoring 24/7",
+      "Risk monitoring and assessment 24/7.",
     ],
   },
   {
     title: "Network Services and Solutions",
-    desc: "Advanced network solutions ensuring reliable, scalable, and secure connectivity infrastructure.",
+    desc: "Breakthrough Network solutions that provide reliable, scalable and secure network infrastructure.",
     href: "/network-solutions",
     items: [
       "Cloud-based networking",
@@ -243,35 +233,46 @@ const cards = [
   },
   {
     title: "Business Solutions",
-    desc: "Scalable enterprise solutions built to streamline operations and accelerate digital transformation.",
+    desc: "Enterprise solutions designed to be scalable and streamline operations and speed up digital transformation.",
     href: "/enterprise-solutions",
     items: [
       "Systems for ERP",
-      "Apps created particularly for your company",
+      "Applications designed specifically to your company.",
       "Taking care of data",
       "Working with the cloud",
     ],
   },
   {
     title: "Data and Analysis",
-    desc: "Actionable data analytics services turning raw information into valuable business insights.",
+    desc: "Service analytics Actionable information analytics services transforming raw data into business insights.",
     href: "/data-analytics",
     items: [
       "Handling a lot of data",
-      "Dashboards that change in real time",
+      "Real time changing dashboards.",
       "Predictions that can be made",
       "Looking at data",
     ],
   },
   {
     title: "Consulting",
-    desc: "Expert IT consulting services to align technology with your business growth goals.",
+    desc: "IT consulting services to make technology work with your business growth objectives.",
     href: "/consulting",
     items: [
       "Thinking forward",
       "A plan for technology",
       "Making procedures better",
       "Always ready to assist",
+    ],
+  },
+  {
+    title: "App Development",
+    desc: "Mobile device apps that are robust, scalable and easy to use, and are aimed at assisting organisations in achieving their goals.",
+    href: "/app-development",
+    items: [
+      "Multi-device compatibility",
+      "Quick and safe growth",
+      "Architecture that can evolve over time.",
+      "User-centered design.",
     ],
   },
 ];

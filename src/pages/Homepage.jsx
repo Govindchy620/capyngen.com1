@@ -20,6 +20,184 @@ import { loadSlim } from "@tsparticles/slim";
 import FAQSection2 from "../components/FAQSection2";
 import { Helmet } from "react-helmet-async";
 
+const webpageSchema = {
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  name: "Capyngen Private Limited",
+  alternateName: "Capyngen",
+  url: "https://www.capyngen.com/",
+  logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Tower B3, Spaze I-Tech Park, Sector 49",
+    addressLocality: "Gurgaon",
+    addressRegion: "Haryana",
+    postalCode: "122018",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/capyngen",
+    "https://www.instagram.com/capyngen/",
+    "https://twitter.com/Capyngen",
+  ],
+  foundingDate: "2022-01-24",
+  founders: [
+    {
+      "@type": "Person",
+      name: "Vivek Ojha",
+      jobTitle: "CEO & Managing Director",
+    },
+  ],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Capyngen Private Limited",
+  alternateName: "Capyngen",
+  url: "https://www.capyngen.com/",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.capyngen.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen Private Limited",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What services does Capyngen offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We provide Information Technology (IT) services, Customer Relationship Management (CRM) solutions, cybersecurity, application development, user interface/user experience (UI/UX) design, and digital marketing that can contribute to the growth of the businesses. :contentReference[oaicite:1]{index=1}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why should I choose Capyngen over others?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Well! Because we combine strategy, technology, and artistry to produce quantifiable, scalable, and dependable solutions that are unique to your objectives.:contentReference[oaicite:2]{index=2}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with startups as well as enterprises?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — Indeed, we create startups, Small and Medium-sized Businesses (SMBs), and large enterprises solutions in a manner that is adaptable to any industry. :contentReference[oaicite:3]{index=3}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Capyngen help improve my online presence?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Of course! We make your brand visible and increase your digital presence through SEO, social media, and performance marketing.:contentReference[oaicite:4]{index=4}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer custom software development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Certainly, we take pride in creating customized web, mobile, and enterprise software applications that address specific business requirements. :contentReference[oaicite:5]{index=5}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How experienced is your team?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our team is made up of certified experts who have several years of experience in Information Technology (IT), marketing, and business transformation. :contentReference[oaicite:6]{index=6}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We partner with the healthcare, finance, education, e-commerce, travel, IT, etc. industries.:contentReference[oaicite:7]{index=7}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is your approach data-driven?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — Absolutely, all our measures rely on data analytics, performance tracking, and continuous optimization.). :contentReference[oaicite:8]{index=8}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you handle large-scale IT projects?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sure, our team is capable to oversee the management of complicated projects at the enterprise-level with the use of end-to-end solutions. :contentReference[oaicite:9]{index=9}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer CRM solutions for small businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer CRM tools that are manageable and can adapt to any business regardless of its size. :contentReference[oaicite:10]{index=10}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you ensure cybersecurity for clients?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We incorporate multiple layers of security, real-time surveillance, and regulatory frameworks to guarantee the security of data and networks. :contentReference[oaicite:11]{index=11}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I track the progress of my projects?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we allow the provision of progress updates and other forms of transparent reporting at any point of the project lifecycle. :contentReference[oaicite:12]{index=12}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your digital marketing strategies customized?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely — the objectives, the target market, and the industry of your business are the main factors in every campaign that we execute. :contentReference[oaicite:13]{index=13}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide ongoing support after deployment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The answer is yes, we provide support 24 hours a day, 7 days a week, to make sure that everything runs smoothly and in case of a problem, the resolution will be quick.:contentReference[oaicite:14]{index=14}",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I get started with Capyngen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A free consultation can be arranged at your leisure, you tell us what you need, and then our professionals get down to work creating the exact solution your business requires.:contentReference[oaicite:15]{index=15}",
+      },
+    },
+  ],
+};
+
 const Homepage = () => {
   const containerRef = useRef(null);
   const [init, setInit] = useState(false);
@@ -36,79 +214,67 @@ const Homepage = () => {
 
   const faqItems = [
     {
-      question: "What services does Capyngen offer?",
+      question: "Which services does Capyngen provide?",
       answer:
-        "We provide Information Technology (IT) services, Customer Relationship Management (CRM) solutions, cybersecurity, application development, user interface/user experience (UI/UX) design, and digital marketing that can contribute to the growth of the businesses.",
+        "Capyngen is a supplier of IT, digital marketing and bespoke software.",
     },
     {
-      question: "Why should I choose Capyngen over others?",
+      question: "Why not Capyngen among others?",
       answer:
-        "Well! Because we combine strategy, technology, and artistry to produce quantifiable, scalable, and dependable solutions that are unique to your objectives.",
+        "Owing to the fact that we provide innovative and reliable results.",
     },
     {
-      question: "Do you work with startups as well as enterprises?",
-      answer:
-        "Indeed, we create startups, Small and Medium-sized Businesses (SMBs), and large enterprises solutions in a manner that is adaptable to any industry.",
+      question: "Do you deal with both startups and enterprises?",
+      answer: "Yes, we favour both startups and large organisations.",
     },
     {
-      question: "Can Capyngen help improve my online presence?",
-      answer:
-        "Of course! We make your brand visible and increase your digital presence through SEO, social media, and performance marketing.",
+      question: "Will Capyngen assist me to enhance my online presence?",
+      answer: "Yes, with the help of SEO, SMM and the digital marketing.",
     },
     {
-      question: "Do you offer custom software development?",
-      answer:
-        "Certainly, we take pride in creating customized web, mobile, and enterprise software applications that address specific business requirements.",
+      question: "Do you provide tailor-made software development?",
+      answer: "Yes, we create software that is custom-built.",
     },
     {
       question: "How experienced is your team?",
-      answer:
-        "Our team is made up of certified experts who have several years of experience in Information Technology (IT), marketing, and business transformation.",
+      answer: "We have a quite experienced team in the industry.",
     },
     {
       question: "What industries do you serve?",
       answer:
-        "We partner with the healthcare, finance, education, e-commerce, travel, IT, etc. industries.",
+        "Our fields of operation include finance, healthcare, retail, etc.",
     },
     {
       question: "Is your approach data-driven?",
-      answer:
-        "Absolutely, all our measures rely on data analytics, performance tracking, and continuous optimization.",
+      answer: "Yes, we trust in analytics and insights.",
     },
     {
-      question: "Can you handle large-scale IT projects?",
-      answer:
-        "Sure, our team is capable to oversee the management of complicated projects at the enterprise-level with the use of end-to-end solutions.",
+      question: "Are you able to deal with massive IT projects?",
+      answer: "Yes, we handle IT projects of enterprise level.",
     },
     {
-      question: "Do you offer CRM solutions for small businesses?",
-      answer:
-        "Yes, we offer CRM tools that are manageable and can adapt to any business regardless of its size.",
+      question: "Are you a provider of CRM solutions to small businesses?",
+      answer: "Yes, we are offering custom CRM.",
     },
     {
-      question: "How do you ensure cybersecurity for clients?",
-      answer:
-        "We incorporate multiple layers of security, real-time surveillance, and regulatory frameworks to guarantee the security of data and networks.",
+      question: "What are your means of providing cybersecurity to clients?",
+      answer: "Via surveillance, risk management, and guarded measures.",
     },
     {
-      question: "Can I track the progress of my projects?",
-      answer:
-        "Yes, we allow the provision of progress updates and other forms of transparent reporting at any point of the project lifecycle.",
+      question: "Am I able to monitor the advances of my projects?",
+      answer: "Yes, you get all the progress reports.",
     },
     {
-      question: "Are your digital marketing strategies customized?",
-      answer:
-        "Definitely — the objectives, the target market, and the industry of your business are the main factors in every campaign that we execute.",
+      question: "Do you customise your digital marketing strategies?",
+      answer: "Yes, the strategies are custommade.",
     },
     {
       question: "Do you provide ongoing support after deployment?",
-      answer:
-        "The answer is yes, we provide support 24 hours a day, 7 days a week, to make sure that everything runs smoothly and in case of a problem, the resolution will be quick.",
+      answer: "Yes, we offer continuous support.",
     },
     {
       question: "How can I get started with Capyngen?",
-      answer:
-        "A free consultation can be arranged at your leisure, you tell us what you need, and then our professionals get down to work creating the exact solution your business requires.",
+      answer: "You can contact us directly to begin.",
     },
   ];
 
@@ -181,6 +347,13 @@ const Homepage = () => {
           name="keywords"
           content="IT solution company, IT services and solutions, innovative IT solutions, best IT company, App development, digital IT services, business IT solutions"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       {/* Particles Background */}
       <Particles

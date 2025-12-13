@@ -15,7 +15,7 @@ const testimonials = [
     companyName: "Europa",
     rating: 5,
     quote:
-      "Our online visibility went through the roof thanks to Capyngen's digital marketing strategies. We're getting more qualified leads and more consistent brand engagement on all platforms.",
+      "The online marketing efforts of Capyngen boosted our online presence to the ceiling. Our leads are becoming qualified more regularly, and our brand is becoming engaged on all platforms much more regularly.",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const testimonials = [
     companyName: "EasyTax",
     rating: 4,
     quote:
-      "Capyngen built a fitness app for our firm that works on phones and tablets. From creating the UI/UX to making sure everything functioned correctly, the entire process was easy and transparent.",
+      "Capyngen developed a mobile phone and tablet fitness application to our company. The whole process was simple and not complicated, including the development of the UI/UX to ensuring that everything was working as planned.",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const testimonials = [
     companyName: "CreativeFlow",
     rating: 5,
     quote:
-      "The AI-powered insights from Capyngen changed the way we think about how customers act. Their data analytics tools helped us get ahead of the competition.",
+      "The Capyngen insights, which are AI-powered, transformed our thoughts about the behavior of customers. Their data analytics solution assisted us in surpassing the competition.",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const testimonials = [
     companyName: "InnovateCo",
     rating: 5,
     quote:
-      "We felt safe doing business because of Capyngen's cybersecurity solutions. Their risk management and proactive monitoring are just amazing.",
+      "The cybersecurity solutions of Capyngen made us safe to conduct business. Their risk management and active monitoring is simply incredible.",
   },
 ];
 
@@ -139,8 +139,8 @@ export default function TestimonialCarousel() {
                 4.9
               </p>
               <p className="text-xl xl:text-2xl text-white/80">
-                Average rating from 100+ trusted client reviews — you’ll love
-                working with us too.
+                Mean based on 100 or more credible reviews by clients - you will
+                also love us.
               </p>
               <div className="flex items-center justify-between mt-6 text-white">
                 <div className="relative w-full h-12">

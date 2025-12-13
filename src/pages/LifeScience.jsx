@@ -40,6 +40,210 @@ import CardsSectionImage from "../components/CardsSectionImage";
 import BenefitsSection from "../components/BenefitsSection";
 import Banner4 from "../components/Banner4";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/life-science#webpage",
+  url: "https://www.capyngen.com/industries/life-science",
+  name: "Capyngen delivers advanced Life Science IT Solutions for clinical trials, laboratory systems & biotech innovation.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+      width: 250,
+      height: 80,
+    },
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/lifeScience3-8zF7A5Bm.png",
+    width: 1200,
+    height: 800,
+    caption: "Life Science Industry Solutions by Capyngen",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Industries",
+        item: "https://www.capyngen.com/industries",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Life Science",
+        item: "https://www.capyngen.com/industries/life-science",
+      },
+    ],
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/industries/life-science#service",
+  name: "Life Science IT Solutions",
+  serviceType:
+    "Clinical Trial Management Systems, Laboratory Information Management System (LIMS), Biotech Software, Regulatory Compliance Platforms",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Capyngen develops specialized digital solutions for the life science and biotechnology sector—covering clinical trial platforms, lab management software, and regulatory compliance applications to accelerate innovation and ensure data integrity.",
+  url: "https://www.capyngen.com/industries/life-science",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/lifeScience3-8zF7A5Bm.png",
+    caption:
+      "Life Science IT Solutions | Clinical Trials | LIMS | Biotech Software",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are life sciences software solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "They are software systems that save time and money in the pharmaceutical, biotechnology, clinical trials, and medical fields.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you providing clinical trial management software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop secure and compliant Clinical Trial Management Systems (CTMS) for efficient trial management.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the way LIMS can assist Laboratories?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "LIMS ensures error-free process management, improving workflow accuracy and speeding up sample tracking.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your technological solutions compatible with rules and regulations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, all our software solutions comply with HIPAA, FDA, and GDPR standards for data security and privacy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide services for big pharmaceutical companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer scalable pharma IT services tailored to meet the needs of large pharmaceutical companies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you make software specifically for clinical trials?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we specialize in building customized CTMS software for complex clinical trial requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you create digital healthcare solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, including telemedicine platforms, patient portals, and hospital management systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What measures do you take to guarantee that patient data will be kept private?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We use encryption, regulatory compliance standards, and strict user authentication controls to protect patient data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for your software to connect to IoT gadgets?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our software integrates with IoT devices such as wearables, laboratory instruments, and health monitors.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What kind of technologies are you dealing with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We work with technologies such as AI, ML, Cloud, IoT, and secure data analytics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can it be considered a research tool that is scalable from you?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our software solutions are scalable and adaptable to fit the evolving needs of your research institution.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you partner with the medical research industry?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we develop research-focused software for data analysis and scientific reporting.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long is the average development time?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Typically, our projects take around 8–16 weeks, depending on complexity and requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "For what reason should one decide to work with Capyngen for life sciences software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We combine domain expertise, innovation, and strong security to deliver reliable and compliant life sciences software.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can we expect you to keep supporting the software after the release?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our support team provides continuous maintenance, updates, and technical assistance post-launch.",
+      },
+    },
+  ],
+};
 
 const LifeScience = () => {
   const faqItems = [
@@ -208,8 +412,15 @@ const LifeScience = () => {
   ];
   const solutionsData = [
     {
-      title:
-        "Deep knowledge gained through working with pharmaceutical, biotech, and healthcare IT industries",
+      title: (
+        <span>
+          Deep knowledge gained through working with pharmaceutical, biotech,
+          and{" "}
+          <Link to={"/industries/healthcare-fitness"}>
+            healthcare IT industries
+          </Link>
+        </span>
+      ),
       desc: "",
     },
     {
@@ -272,6 +483,13 @@ const LifeScience = () => {
           name="keywords"
           content="Life Sciences Software Solutions | Digital Healthcare by Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner4 slides={slides} />
       <GetStarted
@@ -280,7 +498,11 @@ const LifeScience = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title="Schedule a Demo for Pharma IT Services"
+        title={
+          <span>
+            Schedule a Demo for Pharma <Link to={"/"}>IT Services</Link>
+          </span>
+        }
         description={[
           "Experience secure, scalable pharma IT services and clinical trial management software.",
         ]}

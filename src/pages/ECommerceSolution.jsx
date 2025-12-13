@@ -38,6 +38,150 @@ import IndustryServices from "../components/IndustryServices";
 import TechStack from "../components/TechStack";
 import { Helmet } from "react-helmet-async";
 import FullSizeImageSection from "../components/FullSizeImageSection";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/ecommerce-solutions#webpage",
+  url: "https://www.capyngen.com/ecommerce-solutions",
+  name: "E-commerce Solutions | E-commerce Website & App Development by Capyngen",
+  description:
+    "Grow your business with Capyngen’s e-commerce solutions. Get custom e-commerce website and app development to boost your sales and build your online brand today.",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.capyngen.com/#website",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.capyngen.com/ecommerce-solutions#service",
+  name: "E-Commerce Solutions",
+  serviceType:
+    "E-commerce Website Development, E-commerce Platform Integration",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  description:
+    "Grow your business with Capyngen’s e-commerce solutions. Get custom e-commerce website and app development to boost your sales and build your online brand today! :contentReference[oaicite:0]{index=0}",
+  url: "https://www.capyngen.com/ecommerce-solutions",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/images/ecommerce-solutions-banner.jpg",
+    caption:
+      "E-commerce Solutions | E-commerce Website & App Development by Capyngenn",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
+  },
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/ecommerce-solutions#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is an e-commerce solution?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An e-commerce solution is a complete system that supports companies in selling their products or services online. It includes website design, development, payment integration, marketing, and post-launch support.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why does my business need an e-commerce website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An e-commerce website allows your business to sell products 24/7, reach customers worldwide, lower operational costs, and provide a seamless shopping experience that enhances customer purchasing decisions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer a mobile e-commerce application for both Android and iOS devices?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen develops fast, secure, and reliable mobile e-commerce applications for both Android and iOS using the latest technologies like Flutter, React Native, and native languages.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Could Capyngen build a multi-vendor marketplace similar to Amazon?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! We design and build scalable multi-vendor marketplace platforms where multiple sellers can list, manage, and sell their products efficiently — similar to Amazon or Flipkart.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which payment gateways are available for integration?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We support integration with most major global and local payment gateways, including Stripe, PayPal, Razorpay, and more to ensure secure and fast transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide SEO and digital marketing services for e-commerce?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide end-to-end SEO and digital marketing strategies that help increase visibility, attract organic traffic, and convert visitors into paying customers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much time is needed to build an e-commerce website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The duration depends on the project size and features, but typically it takes between 3 to 8 weeks from planning to launch for a standard e-commerce website.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you assure maintenance of the project after it goes live?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Capyngen offers continuous post-launch support and maintenance services to ensure your e-commerce store remains secure, updated, and performing smoothly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for you to link CRM and ERP systems together?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we integrate leading CRM and ERP systems to streamline business operations, improve productivity, and centralize customer and product data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you have any subscription-based models for e-commerce purposes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we create subscription and membership platforms with recurring billing for products, services, or SaaS businesses to automate revenue generation.",
+      },
+    },
+  ],
+};
 
 const ECommerceSolution = () => {
   const faqItems = [
@@ -452,6 +596,13 @@ const ECommerceSolution = () => {
           name="keywords"
           content="E-commerce Solutions | E-commerce Website & App Development by Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="">
         <Banner5
@@ -486,7 +637,12 @@ const ECommerceSolution = () => {
         <TopRatedCompany
           title="Why Your Business Needs an E-Commerce Solution"
           description={[
-            `It is no longer enough to have an ecommerce platform that you can rely on - it is now essential. By employing a well-crafted ecommerce web development plan, your enterprise is capable of:`,
+            <span>
+              It is no longer enough to have an ecommerce platform that you can
+              rely on - it is now essential. By employing a well-crafted
+              ecommerce <Link to={"/web-development"}>web development</Link>{" "}
+              plan, your enterprise is capable of:
+            </span>,
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
                 {[
@@ -533,9 +689,10 @@ const ECommerceSolution = () => {
                 ))}
               </ul>
               <p>
-                The web solutions that Capyngen has for the ecommerce are
-                designed to align with your business objectives, whether you are
-                a newcomer to the market or planning to go abroad.
+                The web solutions that <Link to={"/"}>Capyngen</Link> has for
+                the ecommerce are designed to align with your business
+                objectives, whether you are a newcomer to the market or planning
+                to go abroad.
               </p>
             </>,
           ]}

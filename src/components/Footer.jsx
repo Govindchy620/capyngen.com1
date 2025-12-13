@@ -22,7 +22,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Facebook,
-      href: "https://www.facebook.com/profile.php?id=100086626928653",
+      href: "https://www.facebook.com/capyngen",
       label: "Facebook",
     },
     {
@@ -35,7 +35,7 @@ const Footer = () => {
       href: "https://www.instagram.com/capyngen/",
       label: "Instagram",
     },
-    { icon: Twitter, href: "https://x.com/CapyngenIndia", label: "Twitter" },
+    { icon: Twitter, href: "https://x.com/capyngen", label: "Twitter" },
     {
       icon: Youtube,
       href: "https://www.youtube.com/@Capyngen-pvt-ltd",
@@ -288,10 +288,10 @@ const Footer = () => {
               Privacy Policy
             </NavLink>
             <NavLink
-              to="/terms-of-service"
+              to="/terms-and-conditions"
               className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
             >
-              Terms of Service
+              Terms & Conditions
             </NavLink>
             <NavLink
               to="/sitemap"

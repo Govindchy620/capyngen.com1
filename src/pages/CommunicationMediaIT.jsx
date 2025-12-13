@@ -37,6 +37,192 @@ import FAQSection2 from "../components/FAQSection2";
 import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import WhyChoose from "../components/WhyChoose";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.capyngen.com/industries/communication-media-it#webpage",
+  url: "https://www.capyngen.com/industries/communication-media-it",
+  name: "IT Solutions for Media & Communication | Digital Transformation – Capyngen",
+  description:
+    "Capyngen delivers smart IT solutions for the media and communication industry. From content management to digital transformation, we empower brands to innovate.",
+  inLanguage: "en",
+  keywords:
+    "Media and communication software solutions, Broadcasting software development",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
+  },
+};
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType:
+    "IT Solutions for Media & Communication | Digital Transformation – Capyngen",
+  name: "IT Solutions for Media & Communication | Digital Transformation – Capyngen",
+  provider: {
+    "@type": "Organization",
+    name: "Capyngen",
+    url: "https://www.capyngen.com",
+    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Global",
+  },
+  url: "https://www.capyngen.com/industries/communication-media-it",
+  description:
+    "Capyngen delivers smart IT solutions for the media and communication industry. From content management to digital transformation, we empower brands to innovate.",
+  keywords:
+    "Media and communication software solutions, Broadcasting software development",
+  offers: {
+    "@type": "Offer",
+    url: "https://www.capyngen.com/contact",
+    price: "0.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+  },
+  category: "Media & Communication IT Solutions",
+  serviceOutput:
+    "Capyngen delivers smart IT solutions for the media and communication industry. From content management to digital transformation, we empower brands to innovate.",
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What kinds of communication solutions do you provide?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our communication solutions include unified communication platforms, VoIP systems, messaging apps, video conferencing solutions, and collaboration tools.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you able to create custom chat applications for the business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Certainly, our work involves setting up a secure and scalable internal and external communication chat app for a business.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you providing any solutions for video conferencing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sure, in creating a top-notch video conferencing app, we also add the features of screen sharing, recording, and collaboration.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible to have messaging and email integrated into one platform by you?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, we create a unified communication platform that brings together chat, email, and notification.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you developing mobile communication apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! We create iOS and Android apps for instant messaging, video call, and VoIP communication.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your solutions be combined with CRM systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely, communication platforms that we have can be linked up with CRM to improve customer engagement and support.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Would you be able to provide VoIP-based calling solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We provide VoIP apps with safe and quality call features for businesses, startups and companies in general.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Would it be possible for you to add real-time collaboration features?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Real-time features, including file sharing, whiteboards, task management, and instant updates, can be added.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide AI-powered chatbots for communication apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we install AI chatbots in instant messaging for support including automatic response and user assistance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your platforms capable of handling large-scale enterprise communication?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, they are designed to be adaptable and scalable, so they can serve as many as thousands of concurrent users without any trouble.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you offering cloud-based communication solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We have communication platforms that are hosted on the cloud and are flexible and safe.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can your products be integrated with social media platforms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sure, we allow users to send messages and receive notifications directly from apps like WhatsApp, Facebook and Slack which are already there.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are privacy and encrypted data transmission among the features of your communication apps?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we follow best industry practices and employ top encryption methods and privacy protocols.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it possible for you to design AI-powered analytics for communication platforms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the analytics activity will track the use, the participation, and the performance which will foster the decision-making process.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you willing to take care of communication solutions that require continuous upkeep and support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer maintenance and continuous support services for all communication solutions we develop.",
+      },
+    },
+  ],
+};
 
 const CommunicationMediaIT = () => {
   const faqItems = [
@@ -307,6 +493,13 @@ const CommunicationMediaIT = () => {
           name="keywords"
           content="IT Solutions for Media & Communication | Digital Transformation – Capyngen"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(webpageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <ExpandableGallery panels={panels} />
       <GetStarted
@@ -325,7 +518,16 @@ const CommunicationMediaIT = () => {
       <TopRatedCompany
         title="Software solutions For Media and communication"
         description={[
-          `Capyngen delivers future IT solutions For Media and communication  that are designed based on the needs of broadcasting networks, telecom operators, streaming platforms, and Digital Transformation for Media Industry publishers. Their platforms are not only scalable, self-managed but also responsive, so these companies can decide their content, broadcasting, and digital workflows efficiently even without having technical skills of a high level.`,
+          <span>
+            Capyngen delivers future <Link to={"/"}>IT solutions</Link> For
+            Media and communication that are designed based on the needs of
+            broadcasting networks, telecom operators, streaming platforms, and
+            Digital Transformation for Media Industry publishers. Their
+            platforms are not only scalable, self-managed but also responsive,
+            so these companies can decide their content, broadcasting, and
+            digital workflows efficiently even without having technical skills
+            of a high level.
+          </span>,
           `The extensive range of software solutions For Media and communication that we offer encompasses software broadcasting, digital media platform, telecom software solution, streaming platform development, and Content management for Media Industry that stabilize business growth, scalability, and innovation.`,
           `With Capyngen, however, you are not only buying software but also the technology, guidance, and experience that are essential for your success in the media and communication field.`,
         ]}

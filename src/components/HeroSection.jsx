@@ -80,7 +80,9 @@ const HeroSection = () => {
           Capyngen is a custom software development company and a digital
           marketing agency providing <strong>Web Development</strong>,{" "}
           <strong>CRM</strong>, <strong>SEO</strong>, <strong>AI</strong>, and{" "}
-          <strong>IT Consulting</strong> services.
+          <strong>IT Consulting</strong> services. We are a major{" "}
+          <strong>IT company</strong> in World and offer the best solutions that
+          are considered all over the world.
         </motion.p>
 
         {/* Features Section */}
@@ -88,7 +90,7 @@ const HeroSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 mt-10"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 mt-1"
           role="list"
           aria-label="Core company features"
         >
@@ -96,17 +98,20 @@ const HeroSection = () => {
             {
               title: "Innovative",
               gradient: "from-blue-400 to-cyan-400",
-              description: "Fresh ideas, future-ready solutions.",
+              description:
+                "New ideas, future-word solutions of a leading IT Company in India.",
             },
             {
               title: "Trusted",
               gradient: "from-green-400 to-emerald-400",
-              description: "A reputation built on reliability.",
+              description:
+                "Reliable reputation and that we are one of best IT company in India.",
             },
             {
               title: "Reliable",
               gradient: "from-purple-400 to-pink-400",
-              description: "Always delivering on our promise.",
+              description:
+                "It will always deliver on our promise as a fast-growing IT company in world.",
             },
           ].map(({ title, gradient, description }) => (
             <motion.li

@@ -25,17 +25,17 @@ const BenefitsSection = ({
           {/* Description */}
           {Array.isArray(desc) ? (
             desc.map((paragraph, idx) => (
-              <p
+              <div
                 key={idx}
                 className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-3 leading-relaxed hover:text-gray-200 transition-colors"
               >
                 {paragraph}
-              </p>
+              </div>
             ))
           ) : (
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto lg:mx-0 leading-relaxed hover:text-gray-200 transition-colors">
+            <div className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto lg:mx-0 leading-relaxed hover:text-gray-200 transition-colors">
               {desc}
-            </p>
+            </div>
           )}
 
           {/* Side Image */}
@@ -96,12 +96,12 @@ const BenefitsSection = ({
                 </h3>
 
                 {/* Description */}
-                <p
+                <div
                   id={`benefit-desc-${i}`}
                   className="text-base md:text-lg text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors"
                 >
                   {item.desc}
-                </p>
+                </div>
               </div>
             </article>
           ))}
