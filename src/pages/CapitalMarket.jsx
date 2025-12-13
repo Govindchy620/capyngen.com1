@@ -80,7 +80,7 @@ const serviceSchema = {
     name: "India",
   },
   description:
-    "Capyngen delivers advanced capital market software solutions. From stock trading and wealth management to algorithmic platforms — power your FinTech innovation. :contentReference[oaicite:0]{index=0}",
+    "Capyngen delivers advanced capital market software solutions. From stock trading and wealth management to algorithmic platforms — power your FinTech innovation.",
   url: "https://www.capyngen.com/industries/capital-market",
   image: {
     "@type": "ImageObject",
@@ -101,58 +101,58 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What are capital market software solutions?",
+      name: "What are the software solutions of capital markets?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "They are digital tools used for trading, investment, and wealth management that help improve speed, security, and analytics.",
+        text: "They are online products applied in the trading, investment, and wealth management that contribute to increasing the speed, security, and analytics.",
       },
     },
     {
       "@type": "Question",
-      name: "How can stock trading software help?",
+      name: "What can be done with the help of stock trading software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It provides real-time trading, fast execution, and smarter investment decisions to improve trading efficiency.",
+        text: "It is offering real-time trading, quick trading and smarter investment decisions.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you build algorithmic trading platforms?",
+      name: "Are you an algorithmic trading platform builder?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we design AI-driven, user-friendly automated trading platforms tailored to customer needs.",
+        text: "Yes, it is a user-friendly automated trading platform, which is AI-driven and designed to serve customers.",
       },
     },
     {
       "@type": "Question",
-      name: "Is your software secure and compliant?",
+      name: "Is your software safe and in-house?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. All Capyngen products comply with global financial standards and implement advanced security protocols.",
+        text: "Definitely. All products are in line with international financial requirements and contain superior security provisions.",
       },
     },
     {
       "@type": "Question",
-      name: "Can it integrate with our existing system?",
+      name: "Will it be compatible with our current system?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Capyngen software integrates easily with legacy and third-party systems for smooth operations.",
+        text: "Admittedly, Capyngen software is compatible with legacy and third-party systems.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide real-time data and analytics?",
+      name: "Do you offer real-time data and analytics?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, our dashboards deliver live trading data, portfolio analytics, and market insights in real time.",
+        text: "Yes, there is live trading, portfolio and market insights through our dashboards.",
       },
     },
     {
       "@type": "Question",
-      name: "What makes your portfolio software special?",
+      name: "What is unique about your portfolio software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our portfolio software enables multi-asset tracking, AI-powered insights, and seamless integration with other systems.",
+        text: "It enables tracking of multiple assets, artificial intelligence, and integrating with other software with ease.",
       },
     },
     {
@@ -160,7 +160,7 @@ const faqSchema = {
       name: "How secure is the platform?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use encryption, multi-factor authentication, and periodic security audits to ensure your data remains protected.",
+        text: "It is encrypted and includes MFA and regular audits to protect your data.",
       },
     },
     {
@@ -168,15 +168,15 @@ const faqSchema = {
       name: "Does it support multi-asset trading?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, the platform supports trading across multiple asset classes including stocks, forex, options, and futures.",
+        text: "Yes, such as stocks, forex, options, as well as futures.",
       },
     },
     {
       "@type": "Question",
-      name: "Which industries benefit from Capyngen solutions?",
+      name: "Which industries benefit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Venture Capital firms, Brokerage houses, Hedge Funds, Family Offices, and FinTech Startups benefit from our capital market solutions.",
+        text: "Done VC, Brokerage, Hedge Funds, Family Office, and FinTech Startup.",
       },
     },
     {
@@ -184,7 +184,7 @@ const faqSchema = {
       name: "Do you offer cloud solutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Capyngen provides secure, scalable, and user-friendly cloud-based solutions for financial applications.",
+        text: "Yes, there are safe, scaled, and user friendly cloud services.",
       },
     },
     {
@@ -192,23 +192,23 @@ const faqSchema = {
       name: "How fast can it be deployed?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "White-label solutions are ready in a few weeks, while custom implementations take around 2–4 months depending on features.",
+        text: "White-label: weeks. Custom: 2-4 months, based on features.",
       },
     },
     {
       "@type": "Question",
-      name: "Can wealth software be customized?",
+      name: "Is it possible to develop wealth software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, our wealth management software offers customizable dashboards, reporting, and tools designed for financial advisors.",
+        text: "Yes, advisors can use dashboards, reporting, and tools that were modified.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer support after launch?",
+      name: "Do you provide after sales service?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we provide 24/7 technical support, maintenance, and regular updates after deployment.",
+        text: "Of course, 24/7 support is offered, updates, and maintenance.",
       },
     },
     {
@@ -216,7 +216,7 @@ const faqSchema = {
       name: "Why choose Capyngen?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Capyngen has years of FinTech experience, delivers scalable and secure solutions, and ensures dedicated support to clients at every stage.",
+        text: "We have been in FinTech years, have scalable and reliable platforms and fully end to end support.",
       },
     },
   ],
@@ -225,145 +225,143 @@ const faqSchema = {
 const CapitalMarket = () => {
   const faqItems = [
     {
-      question: "What are capital market software solutions?",
+      question: "What are the software solutions of capital markets?",
       answer:
-        "They are digital tools used for trading, investment, and wealth management that help improve speed, security, and analytics.",
+        "They are online products applied in the trading, investment, and wealth management that contribute to increasing the speed, security, and analytics.",
     },
     {
-      question: "How can stock trading software help?",
+      question: "What can be done with the help of stock trading software?",
       answer:
-        "It makes available real-time trading, fast execution, and smarter investment decisions.",
+        "It is offering real-time trading, quick trading and smarter investment decisions.",
     },
     {
-      question: "Do you build algorithmic trading platforms?",
+      question: "Are you an algorithmic trading platform builder?",
       answer:
-        "Yes, we design AI-driven, user-friendly automated trading platforms for customers.",
+        "Yes, it is a user-friendly automated trading platform, which is AI-driven and designed to serve customers.",
     },
     {
-      question: "Is your software secure and compliant?",
+      question: "Is your software safe and in-house?",
       answer:
-        "Definitely. All products strictly comply with global financial standards and incorporate the most advanced security measures.",
+        "Definitely. All products are in line with international financial requirements and contain superior security provisions.",
     },
     {
-      question: "Can it integrate with our existing system?",
+      question: "Will it be compatible with our current system?",
       answer:
-        "Sure, Capyngen software fits in easily with your legacy and third-party systems.",
+        "Admittedly, Capyngen software is compatible with legacy and third-party systems.",
     },
     {
-      question: "Do you provide real-time data and analytics?",
+      question: "Do you offer real-time data and analytics?",
       answer:
-        "Yes, live trading, portfolio, and market insights are provided via our dashboards.",
+        "Yes, there is live trading, portfolio and market insights through our dashboards.",
     },
     {
-      question: "What makes your portfolio software special?",
+      question: "What is unique about your portfolio software?",
       answer:
-        "It allows multi-asset tracking, AI insights, and effortless integration with other software.",
+        "It enables tracking of multiple assets, artificial intelligence, and integrating with other software with ease.",
     },
     {
       question: "How secure is the platform?",
       answer:
-        "Encryption, MFA, and regular audits are among the security measures that we implement to ensure that your data is fully protected.",
+        "It is encrypted and includes MFA and regular audits to protect your data.",
     },
     {
       question: "Does it support multi-asset trading?",
-      answer: "Yes, including stocks, forex, options, and futures.",
+      answer: "Yes, such as stocks, forex, options, as well as futures.",
     },
     {
       question: "Which industries benefit?",
       answer:
-        "Venture Capital, Brokerage, Hedge Funds, Family Offices, and FinTech Startups.",
+        "Done VC, Brokerage, Hedge Funds, Family Office, and FinTech Startup.",
     },
     {
       question: "Do you offer cloud solutions?",
       answer:
-        "Yes, you can have a secure, scalable, and user-friendly cloud option without any difficulty.",
+        "Yes, there are safe, scaled, and user friendly cloud services.",
     },
     {
       question: "How fast can it be deployed?",
-      answer:
-        "White-label: weeks. Custom: 2–4 months, subjected to the features.",
+      answer: "White-label: weeks. Custom: 2-4 months, based on features.",
     },
     {
-      question: "Can wealth software be customized?",
+      question: "Is it possible to develop wealth software?",
       answer:
-        "Yes, dashboards, reporting, and tools are made according to the needs of the advisors.",
+        "Yes, advisors can use dashboards, reporting, and tools that were modified.",
     },
     {
-      question: "Do you offer support after launch?",
-      answer:
-        "Sure, support is available 24/7, and so are updates and maintenance.",
+      question: "Do you provide after sales service?",
+      answer: "Of course, 24/7 support is offered, updates, and maintenance.",
     },
     {
       question: "Why choose Capyngen?",
       answer:
-        "We’ve been working in the FinTech area for a long time, are very sure of our software which can be scaled fast and easy, and we are always there for you with our full support.",
+        "We have been in FinTech years, have scalable and reliable platforms and fully end to end support.",
     },
   ];
   const servicesData = [
     {
       image: assets.capitalMarket9,
-      title: "Real-time trading and portfolio analytics",
+      title: "Live trading and investment management",
       desc: "",
     },
     {
       image: assets.capitalMarket10,
-      title: "Predictive analytics powered by AI for smarter investment",
+      title: "AI-based predictive analytics to make investments smarter",
       desc: "",
     },
     {
       image: assets.capitalMarket11,
-      title: "Trading platform interoperability with multi-asset management",
+      title: "Multi-asset trading platform interoperability",
       desc: "",
     },
     {
       image: assets.capitalMarket12,
-      title: "Advanced risk and compliance management",
+      title: "Risk and compliance management at an advanced level",
       desc: "",
     },
     {
       image: assets.capitalMarket13,
-      title: "Financial system API for easy integration",
+      title: "Easy integration financial system API",
       desc: "",
     },
     {
       image: assets.capitalMarket14,
-      title: "Security for FinTech and compliance with regulation",
+      title: "FinTech security and regulation",
       desc: "",
     },
   ];
   const cardsSectionData1 = [
     {
       title:
-        "The use of old trading systems that are underperforming in terms of execution speed",
+        "Old trading systems that are not performing well with regard to the speed of execution",
       description: "",
       icon: <FaTools className="text-4xl" />,
     },
     {
-      title: "Complicated regulatory compliance as well as reporting",
+      title: "Difficult regulatory compliance and reporting",
       description: "",
       icon: <FaDollarSign className="text-4xl" />,
     },
     {
       title:
-        "Data that is uncoordinated and inconsistent across trading, investment, and wealth management platforms",
+        "Lack of coordination and inconsistency of data between trading, investment, and wealth management platforms",
       description: "",
       icon: <FaUsers className="text-4xl" />,
     },
     {
       title:
-        "The shortage of up-to-the-minute portfolio information to facilitate sound decision-making",
+        "The deficit of up-to-the-minute portfolio data to be able to make sound decisions",
       description: "",
       icon: <FaShieldAlt className="text-4xl" />,
     },
     {
       title:
-        "The possibility of security breaches in algorithmic and high-frequency trading operations",
+        "Risk of algorithmic trading and high-frequency trading security breaches",
       description: "",
       icon: <FaBullhorn className="text-4xl" />,
     },
     {
       title:
-        "The integration that is not efficient between the front, middle, and back-office systems",
+        "The lack of efficiency of the integration between the front, middle and back-office systems",
       description: "",
       icon: <FaHeart className="text-4xl" />,
     },
@@ -374,9 +372,12 @@ const CapitalMarket = () => {
       description: (
         <>
           <ul className="list-disc pl-5">
-            <li>Just in time order management and execution</li>
-            <li>Incised charting and analytics</li>
-            <li>Machine learning enabled predictive trading</li>
+            <li>Just-in-time order management and implementation</li>
+            <li>Extradiegetic charting and analytics</li>
+            <li>
+              It was made possible by machine learning, which facilitated
+              predictive trading
+            </li>
           </ul>
         </>
       ),
@@ -389,8 +390,8 @@ const CapitalMarket = () => {
         <>
           <ul className="list-disc pl-5">
             <li>Investor-friendly workflows</li>
-            <li>Performance monitoring interfaces</li>
-            <li>Safe collaboration among multiple users</li>
+            <li>Monitors on performances</li>
+            <li>Secure teamwork between numerous users</li>
           </ul>
         </>
       ),
@@ -403,11 +404,11 @@ const CapitalMarket = () => {
         <>
           <ul className="list-disc pl-5">
             <li>
-              Advisor and firm specific{" "}
-              <Link to={"/crm-management-software"}>CRM</Link>
+              Firm-specific <Link to={"/crm-management-software"}>CRM</Link> and
+              advisor-specific CRM
             </li>
-            <li>Client portfolio value tracking</li>
-            <li>Compliance automation tools</li>
+            <li>Client portfolio value management</li>
+            <li>Automation of compliance</li>
           </ul>
         </>
       ),
@@ -420,11 +421,11 @@ const CapitalMarket = () => {
         <>
           <ul className="list-disc pl-5">
             <li>
-              Ways you can tailor your testing, create new rules, etc., for your
-              strategy
+              How can you make your strategy more testing-specific, make new
+              rules, etc?
             </li>
-            <li>Trade execution that requires no human intervention</li>
-            <li>Super-fast operations to make more money</li>
+            <li>Execution of trade, which does not involve human participation</li>
+            <li>Make more money in the super-fast operations</li>
           </ul>
         </>
       ),
@@ -436,12 +437,12 @@ const CapitalMarket = () => {
       description: (
         <>
           <ul className="list-disc pl-5">
-            <li>Tracking and analyzing assets of different types</li>
+            <li>Monitoring and reporting of assets of various types</li>
             <li>
-              Tools for risk management that are part of your investment
+              Risk management tools that are included in your investment
               strategies
             </li>
-            <li>Easy access to brokerage accounts through integration</li>
+            <li>Integration with easy access to brokerage accounts</li>
           </ul>
         </>
       ),
@@ -454,8 +455,11 @@ const CapitalMarket = () => {
         <>
           <ul className="list-disc pl-5">
             <li>Cloud-native architecture</li>
-            <li>API-based integrations for flexibility</li>
-            <li>Scalable & regulation-compliant fintech ecosystems</li>
+            <li>Flexible API-based integrations</li>
+            <li>
+              Scalable and regulation-compliant fintech environments, such as
+              Capmarket liquidity bridge and secure Capmarket server hosting
+            </li>
           </ul>
         </>
       ),
@@ -465,42 +469,37 @@ const CapitalMarket = () => {
   ];
   const solutionsData = [
     {
-      title:
-        "We have the full knowledge from scratch to the finished product of capital market software specific to your needs.",
+      title: "Faster trading, increased trust and increased security",
       desc: "",
     },
     {
-      title:
-        "Accelerated trading processes, opened up to being more trustworthy, and securitized.",
+      title: "Smart decisions are made by using on-the-fly data analytics",
       desc: "",
     },
     {
-      title: "On-the-fly data analytics for deciding in a wiser manner.",
+      title: "Scalable long-term cloud-based infrastructure",
       desc: "",
     },
     {
-      title:
-        "Your long-term cloud-based infrastructure that is easy to be expanded over",
-    },
-    {
-      title:
-        "Without interruptions, we made the transition from old systems to new ones.",
+      title: "Easy migration of old systems to new advanced systems",
       desc: "",
     },
     {
-      title: "Wrap up the process of deployment with maintenance and support.",
+      title: "Complete deployment, service and after-sales",
       desc: "",
     },
   ];
   const slidesData = [
     {
       image: assets.capitalMarketbanner1,
-      heading: "Accelerate Trading with Capital Market Innovative Solutions",
+      heading:
+        "Digital Transformation of Capital Markets with the Best IT Solutions for Capital Market",
       description: (
         <>
           <p>
-            Facilitate the market operations with the help of transparency,
-            speed, and analytics.
+            Transform trading and risk management by adopting AI-based systems
+            supported by the best IT solutions for the capital market and
+            advanced capital markets technology.
           </p>
         </>
       ),
@@ -508,12 +507,13 @@ const CapitalMarket = () => {
     },
     {
       image: assets.capitalMarketbanner2,
-      heading: "Digital Transformation of Capital Markets",
+      heading: "Keep Traders Up-to-Date with Real-Time Data",
       description: (
         <>
           <p>
-            Revolutionize trading and risk management by implementing AI-driven
-            systems.
+            Exploit the best out of capital market platforms in terms of
+            reliability, compliance and high-performance through our capital
+            market software products and capital markets software solutions.
           </p>
         </>
       ),
@@ -521,12 +521,14 @@ const CapitalMarket = () => {
     },
     {
       image: assets.capitalMarketbanner3,
-      heading: "Keep Traders Up-to-Date with Real-Time Data",
+      heading:
+        "Accelerate Trading with Innovative Capital Market Technology Solutions",
       description: (
         <>
           <p>
-            Get the most out of capital market platforms from the perspective of
-            reliability, compliance, and high-performance.
+            Market operations can be facilitated by utilising capital markets
+            technology solutions in India and advanced fintech tools, making
+            them transparent, fast, and analytical.
           </p>
         </>
       ),
@@ -567,7 +569,7 @@ const CapitalMarket = () => {
         buttonTextColor="text-black"
         title="Transform Your Capital Market Operations Today"
         description={[
-          "Experience the revolution in trading, investment, and portfolio management through Capyngen’s capital market software solutions. Why don’t you take a free demo and scale your business the smart way?",
+          "Capyngen provides capital market software solutions to experience the revolution in trading, investment and managing portfolios. Why not get a free demo and scale your business in an intelligent manner with the help of the best IT solutions for capital market?",
         ]}
         buttonText="Contact Us"
         backgroundVideo={assets.backgroundVideo}
@@ -577,19 +579,22 @@ const CapitalMarket = () => {
         description={[
           <>
             <p>
-              <Link to={"/"}>Capyngen</Link> offers a complete package of
-              software solutions for the capital market which caters to the
-              needs of the financial institutions, trading companies, and
-              investment firms. Besides stock trading software, we become the
-              source of the wealth management platform for businesses to
-              facilitate their processes, make the right choices, and lead the
-              game in the ever-changing financial landscape.
+              <Link to={"/"}>Capyngen</Link> is a provider of the capital
+              market, which provides a full set of software services to
+              financial institutions, trading companies, and investment firms.
+              In addition to our highly developed stock trading software, we
+              also offer a wealth management platform that is developed on
+              capital markets technology and enables businesses to automate
+              their operations, be compliant, and remain competitive in the
+              financial world.
             </p>
             <p>
-              Our FinTech for capital markets gives the firms the power to
-              utilize an algorithmic trading platform and portfolio management
-              software to make their capital work efficiently and achieve a set
-              of results that are sustainable over time.
+              Our capital markets FinTech allows firms the authority to apply an
+              algorithmic trading platform, portfolio management software and
+              Capmarket platform development to make their capital work
+              effectively and generate long-term, regular results. Our own
+              Capmarket white-label services is also supported to be deployed
+              quickly.
             </p>
           </>,
         ]}
@@ -612,7 +617,7 @@ const CapitalMarket = () => {
       />
       <CardsSectionImage
         heading="Advancing Innovation with the Help of Capital Market Software Solutions"
-        subheading="Capyngen offers best-fit solutions that are designed to eventually replace and streamline the trade and investment processes of a firm."
+        subheading="Capyngen will provide the best-fit solutions that are aimed at ultimately substituting and automating trade and investment processes of a firm, which makes it a reliable Capmarket technology provider."
         services={cardsSectionImageData1}
         sectionBg="bg-gray-800"
         headColor="text-white"
@@ -628,7 +633,7 @@ const CapitalMarket = () => {
         buttonTextColor="text-black"
         title="Book Your Capital Market Software Demo"
         description={[
-          "Discover future stock trading software, wealth management platforms, and algorithmic trading solutions designed to make you financially successful. Get a demo today!",
+          "Find tomorrow stock trader software, wealth-management, and algorithmic trading software that will make you financially prosperous with the best IT solutions for capital market. Get a demo today!",
         ]}
         buttonText="Book Now"
         backgroundVideo={assets.backgroundVideo}
@@ -637,8 +642,11 @@ const CapitalMarket = () => {
         heading="Benefits of Choosing Capyngen"
         desc={
           <>
-            Why Partner with Capyngen for Capital Market{" "}
-            <Link to={"/"}>IT Services</Link>
+            Why Capyngen is the Capital Market{" "}
+            <Link to={"/"}>IT Services</Link> Partner. We know everything about
+            the capital market software that you need, starting with a clean
+            sheet of paper to the completed product. Our solutions, which are
+            termed as the best IT solutions in capital market in India provide:
           </>
         }
         benefits={solutionsData}
@@ -646,7 +654,7 @@ const CapitalMarket = () => {
         footerNote=""
       />
       <IndustryServices
-        heading="Our Capital Market Software Solutions "
+        heading="Our Capital Market Software Solutions"
         subheading="Features You Can't Get Along"
         services={servicesData}
       />
@@ -656,9 +664,9 @@ const CapitalMarket = () => {
         textColor="text-white"
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
-        title="Work Together with the Best Capital Market IT Experts"
+        title="Work Together with the Best IT Solutions for Capital Market"
         description={[
-          "Customize your stock trading platform with our development, get investment management software with us and use advanced FinTech for capital markets to increase your business.",
+          "Have your own stock trading platform developed, investment management software, and advanced FinTech in capital markets to grow your business with services to best IT solutions for capital market.",
         ]}
         buttonText="Work With Us"
         backgroundVideo={assets.backgroundVideo}
