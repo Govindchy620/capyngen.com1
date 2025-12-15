@@ -1,128 +1,140 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { slugify } from "../utils/slugify";
 
-const makeSlug = (title = "") =>
-  title
-    .toString()
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+const API_URL = "https://api.capyngen.com/api/blogs";
 
 const BlogDetail = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  const API_BASE = "https://capyngen-backendv2-1.onrender.com/api/blogs";
+  const [related, setRelated] = useState([]);
 
   useEffect(() => {
-    const fetchBySlug = async () => {
-      setLoading(true);
-      setError("");
+    const fetchBlog = async () => {
+      const res = await fetch(API_URL);
+      const data = await res.json();
 
-      try {
-        // ✅ Try direct slug endpoint
-        const trySlugEndpoint = await fetch(`${API_BASE}/slug/${slug}`);
-        if (trySlugEndpoint.ok) {
-          const data = await trySlugEndpoint.json();
-          setBlog(data.blog || data);
-          return;
-        }
+      const blogs = Array.isArray(data.blogs) ? data.blogs : [];
 
-        // ✅ Try ID fallback
-        const tryIdEndpoint = await fetch(`${API_BASE}/${slug}`);
-        if (tryIdEndpoint.ok) {
-          const data = await tryIdEndpoint.json();
-          setBlog(data.blog || data);
-          return;
-        }
+      const found = blogs.find((b) => slugify(b.title) === slug);
 
-        // ✅ Fallback: fetch all and match by generated slug
-        const res = await fetch(API_BASE);
-        if (!res.ok) throw new Error("Failed to fetch blogs");
-        const data = await res.json();
-        const list = data.blogs || data.data || data;
-        const match = list.find((b) => makeSlug(b.title || "") === slug);
+      setBlog(found || null);
 
-        if (!match) throw new Error("Blog not found");
-        setBlog(match);
-      } catch (err) {
-        console.error("BlogDetail error:", err);
-        setError(err.message || "Failed to load blog");
-      } finally {
-        setLoading(false);
+      if (found) {
+        setRelated(
+          blogs
+            .filter((b) => b._id !== found._id)
+            .filter((b) => b.tags?.some((t) => found.tags?.includes(t)))
+            .slice(0, 3)
+        );
       }
     };
 
-    fetchBySlug();
+    fetchBlog();
   }, [slug]);
 
-  if (loading)
-    return <p className="text-center text-gray-500 py-20">Loading...</p>;
-
-  if (error) return <p className="text-center text-red-600 py-20">{error}</p>;
-
-  if (!blog) return null;
+  if (!blog) {
+    return (
+      <div className="text-center py-40 text-slate-400">Blog not found</div>
+    );
+  }
 
   return (
-    <div className="max-w-4xl mx-auto py-16 px-6 text-gray-800">
-      <Link
-        to="/news-and-updates"
-        className="text-sm text-purple-600 hover:text-purple-800 mb-6 inline-block"
-      >
-        ← Back to Articles
-      </Link>
+    <>
+      {/* SEO META */}
+      <Helmet>
+        <title>{blog.title} | Capyngen</title>
+        <meta name="description" content={blog.description} />
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.description} />
+        <meta property="og:image" content={blog.image} />
+        <meta property="og:type" content="article" />
+      </Helmet>
 
-      {/* Blog Image */}
-      {blog.image && (
-        <div className="w-full mb-8">
+      <div className="bg-black py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <button
+            onClick={() => navigate("/news-and-updates")}
+            className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 mb-10"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back to Blogs
+          </button>
+
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
+            {blog.title}
+          </h1>
+
+          <div className="flex gap-6 text-slate-400 text-sm mb-8">
+            <span className="flex items-center gap-2">
+              <User className="w-4 h-4" /> {blog.author}
+            </span>
+            <span className="flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              {new Date(blog.createdAt).toLocaleDateString()}
+            </span>
+          </div>
+
+          {/* IMAGE FIXED */}
           <img
             src={blog.image}
             alt={blog.title}
-            className="w-full h-[400px] object-cover rounded-2xl shadow-md"
+            className="w-full h-[420px] object-cover rounded-xl border border-slate-800 mb-12 block"
           />
+
+          <div
+            className="prose prose-invert max-w-none mb-16"
+            dangerouslySetInnerHTML={{ __html: blog.content }}
+          />
+
+          {/* TAGS */}
+          <div className="flex flex-wrap gap-2 mb-16">
+            {blog.tags?.map((tag) => (
+              <span
+                key={tag}
+                className="px-4 py-2 bg-slate-800 text-slate-300 rounded-md flex items-center gap-2"
+              >
+                <Tag className="w-4 h-4 text-cyan-400" />
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* RELATED */}
+          {related.length > 0 && (
+            <>
+              <h3 className="text-white text-2xl font-bold mb-6">
+                Related Blogs
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {related.map((b) => (
+                  <div
+                    key={b._id}
+                    onClick={() =>
+                      navigate(`/news-and-updates/${slugify(b.title)}`)
+                    }
+                    className="cursor-pointer bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-400 transition"
+                  >
+                    <img
+                      src={b.image}
+                      className="h-32 w-full object-cover block"
+                    />
+                    <div className="p-4">
+                      <h4 className="text-white text-sm font-semibold line-clamp-2">
+                        {b.title}
+                      </h4>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
-      )}
-
-      {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        {blog.title}
-      </h1>
-
-      {/* Author and Date */}
-      <div className="text-gray-500 mb-8 text-sm md:text-base">
-        {blog.createdAt && (
-          <>
-            {" "}
-            •{" "}
-            {new Date(blog.createdAt).toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "long",
-              year: "numeric",
-            })}
-          </>
-        )}
       </div>
-
-      {/* Description */}
-      {blog.description && (
-        <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          {blog.description}
-        </p>
-      )}
-
-      {/* Content */}
-      <div className="prose prose-lg max-w-none text-gray-800 leading-relaxed">
-        {typeof blog.content === "string" &&
-        /<\/?[a-z][\s\S]*>/i.test(blog.content) ? (
-          <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-        ) : (
-          <p>{blog.content || "No detailed content available."}</p>
-        )}
-      </div>
-    </div>
+    </>
   );
 };
 
