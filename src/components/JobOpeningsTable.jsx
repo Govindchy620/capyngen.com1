@@ -1,106 +1,81 @@
 import React, { useState, useEffect } from "react";
+import ApplyJobModal from "./ApplyJobModal";
 
 const JobOpeningsTable = () => {
   const [jobs, setJobs] = useState([]);
   const [expandedRow, setExpandedRow] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedJob, setSelectedJob] = useState(null);
 
-  // ✅ Live API endpoint
   const API_URL = "https://api.capyngen.com/api/careers";
 
-  // ✅ Fetch careers from backend
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch(API_URL);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        if (data.ok && Array.isArray(data.careers)) {
-          setJobs(data.careers);
-        } else {
-          setError("Unexpected API response format");
-        }
-      } catch (err) {
-        console.error("Error fetching careers:", err);
+        const res = await fetch(API_URL);
+        const data = await res.json();
+        if (data.ok) setJobs(data.careers || []);
+        else throw new Error();
+      } catch {
         setError("Failed to load job openings");
       } finally {
         setLoading(false);
       }
     };
-
     fetchJobs();
   }, []);
 
-  const toggleExpand = (index) => {
-    setExpandedRow(expandedRow === index ? null : index);
+  const toggleExpand = (id) => {
+    setExpandedRow(expandedRow === id ? null : id);
   };
 
-  // ✅ Loading state
+  /* ================= STATES ================= */
+
   if (loading)
     return (
-      <div className="text-center text-gray-400 py-10 text-lg">
-        Loading job openings...
+      <div className="text-center text-gray-400 py-20 text-lg">
+        Loading job openings…
       </div>
     );
 
-  // ✅ Error state
   if (error)
     return (
-      <div className="text-center text-red-500 py-10 text-lg">{error}</div>
+      <div className="text-center text-red-500 py-20 text-lg">{error}</div>
     );
 
+  /* ================= UI ================= */
+
   return (
-    <section className="bg-black py-16 px-4 sm:px-8 lg:px-12 min-h-screen">
+    <section className="bg-black py-16 px-4 sm:px-6 lg:px-12 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-10">
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
           Current Job Openings
         </h2>
 
-        {/* Table Container */}
-        <div className="overflow-x-auto bg-white rounded-2xl shadow-xl">
-          <table className="min-w-full border-collapse">
-            <thead className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+        {/* ================= DESKTOP TABLE ================= */}
+        <div className="hidden md:block overflow-x-auto rounded-xl border border-white/10">
+          <table className="min-w-full text-white">
+            <thead className="bg-blue-900">
               <tr>
-                <th className="py-4 px-4 text-center text-sm sm:text-base font-semibold">
-                  Title
-                </th>
-                <th className="py-4 px-4 text-center text-sm sm:text-base font-semibold">
-                  Department
-                </th>
-                <th className="py-4 px-4 text-center text-sm sm:text-base font-semibold">
-                  Location
-                </th>
-                <th className="py-4 px-4 text-center text-sm sm:text-base font-semibold">
-                  Type
-                </th>
-                <th className="py-4 px-4 text-center text-sm sm:text-base font-semibold">
-                  Action
-                </th>
+                {["Title", "Department", "Location", "Type", "Action"].map(
+                  (h) => (
+                    <th
+                      key={h}
+                      className="py-4 px-4 text-sm font-semibold text-center"
+                    >
+                      {h}
+                    </th>
+                  )
+                )}
               </tr>
             </thead>
 
-            <tbody className="divide-y divide-gray-200 text-gray-800">
-              {jobs.length === 0 && (
-                <tr>
-                  <td
-                    colSpan="5"
-                    className="text-center py-8 text-gray-500 text-lg"
-                  >
-                    No job openings available currently.
-                  </td>
-                </tr>
-              )}
-
-              {jobs.map((job, index) => (
-                <React.Fragment key={job._id || index}>
-                  {/* Main Row */}
-                  <tr className="hover:bg-blue-50 transition-colors duration-200">
-                    <td className="py-4 px-4 font-semibold text-center text-gray-900">
+            <tbody className="divide-y divide-white/10">
+              {jobs.map((job) => (
+                <React.Fragment key={job._id}>
+                  <tr className="hover:bg-white/5 transition">
+                    <td className="py-4 px-4 font-semibold text-center">
                       {job.title}
                     </td>
                     <td className="py-4 px-4 text-center">{job.department}</td>
@@ -108,78 +83,104 @@ const JobOpeningsTable = () => {
                     <td className="py-4 px-4 text-center">{job.jobType}</td>
                     <td className="py-4 px-4 text-center">
                       <button
-                        onClick={() => toggleExpand(index)}
-                        className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg shadow-md transition-all"
+                        onClick={() => toggleExpand(job._id)}
+                        className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-semibold"
                       >
-                        {expandedRow === index
+                        {expandedRow === job._id
                           ? "Hide Details"
                           : "View Details"}
                       </button>
                     </td>
                   </tr>
 
-                  {/* Expanded Details */}
-                  <tr>
-                    <td colSpan="5" className="p-0">
-                      <div
-                        className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                          expandedRow === index
-                            ? "max-h-96 opacity-100"
-                            : "max-h-0 opacity-0"
-                        }`}
-                      >
-                        <div className="bg-gray-50 p-6 border-t border-gray-200">
-                          <div className="text-left space-y-4">
-                            <p className="text-gray-900 font-semibold text-lg">
-                              Description:
-                            </p>
-                            <p className="text-gray-700 leading-relaxed">
-                              {job.description}
-                            </p>
-
-                            <p className="text-gray-900 font-semibold text-lg mt-4">
-                              Requirements:
-                            </p>
-                            <p className="text-gray-700 leading-relaxed">
-                              {job.requirements}
-                            </p>
-
-                            {job.applyLink && (
-                              <p className="mt-4">
-                                <a
-                                  href={job.applyLink}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-blue-600 font-semibold hover:underline"
-                                >
-                                  Apply Here
-                                </a>
-                              </p>
-                            )}
-                          </div>
+                  {expandedRow === job._id && (
+                    <tr>
+                      <td colSpan="5" className="bg-black p-6">
+                        <div className="space-y-4">
+                          <div
+                            className="prose prose-invert max-w-none"
+                            dangerouslySetInnerHTML={{
+                              __html: job.description,
+                            }}
+                          />
+                          {job.requirements && (
+                            <p className="text-gray-300">{job.requirements}</p>
+                          )}
+                          <button
+                            onClick={() => setSelectedJob(job)}
+                            className="bg-green-600 hover:bg-green-700 px-5 py-2 rounded-lg font-semibold"
+                          >
+                            Apply Here
+                          </button>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>
+                  )}
                 </React.Fragment>
               ))}
             </tbody>
           </table>
         </div>
 
-        {/* Footer */}
-        <div className="mt-10 text-center">
-          <p className="text-lg sm:text-xl text-gray-300 font-medium">
-            ✉️ For applying, please mail us at{" "}
-            <a
-              href="mailto:careers@example.com"
-              className="text-blue-400 font-semibold hover:underline"
+        {/* ================= MOBILE CARDS ================= */}
+        <div className="md:hidden space-y-6">
+          {jobs.map((job) => (
+            <div
+              key={job._id}
+              className="bg-zinc-900/80 border border-white/10 rounded-xl p-5"
             >
-              careers@example.com
-            </a>
-          </p>
+              <h3 className="text-lg font-bold text-white mb-2">{job.title}</h3>
+
+              <div className="text-sm text-gray-400 space-y-1">
+                <p>
+                  <span className="font-medium text-white">Department:</span>{" "}
+                  {job.department}
+                </p>
+                <p>
+                  <span className="font-medium text-white">Location:</span>{" "}
+                  {job.location}
+                </p>
+                <p>
+                  <span className="font-medium text-white">Type:</span>{" "}
+                  {job.jobType}
+                </p>
+              </div>
+
+              <button
+                onClick={() => toggleExpand(job._id)}
+                className="mt-4 w-full bg-blue-600 py-2 rounded-lg font-semibold"
+              >
+                {expandedRow === job._id ? "Hide Details" : "View Details"}
+              </button>
+
+              {expandedRow === job._id && (
+                <div className="mt-4 space-y-4 text-gray-300">
+                  <div
+                    className="prose prose-invert max-w-none text-sm"
+                    dangerouslySetInnerHTML={{
+                      __html: job.description,
+                    }}
+                  />
+                  {job.requirements && (
+                    <p className="text-sm">{job.requirements}</p>
+                  )}
+                  <button
+                    onClick={() => setSelectedJob(job)}
+                    className="w-full bg-green-600 py-2 rounded-lg font-semibold"
+                  >
+                    Apply Here
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* ================= APPLY MODAL ================= */}
+      {selectedJob && (
+        <ApplyJobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
+      )}
     </section>
   );
 };
