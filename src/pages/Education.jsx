@@ -1,3 +1,4 @@
+//Education Page
 import React from "react";
 import ExpandableGallery from "../components/ExpandableGallery";
 import IndustryServices from "../components/IndustryServices";
