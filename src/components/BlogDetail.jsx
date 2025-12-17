@@ -16,6 +16,7 @@ const BlogDetail = () => {
     const fetchBlog = async () => {
       const res = await fetch(API_URL);
       const data = await res.json();
+      console.log(data);
 
       const blogs = Array.isArray(data.blogs) ? data.blogs : [];
 
@@ -86,7 +87,7 @@ const BlogDetail = () => {
           />
 
           <div
-            className="prose prose-invert max-w-none mb-16"
+            className="prose prose-invert max-w-none mb-16 text-white"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
 

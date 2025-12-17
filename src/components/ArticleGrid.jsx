@@ -111,7 +111,7 @@ const ArticleGrid = () => {
 
   const openBlog = (blog) => {
     const slug = slugify(blog.title, { lower: true, strict: true });
-    navigate(`/blogs/${slug}`);
+    navigate(`/news-and-updates/${slug}`);
     setSelectedBlog(blog);
   };
 
