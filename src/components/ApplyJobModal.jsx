@@ -201,7 +201,7 @@ const ApplyJobModal = ({ job, onClose }) => {
 
             <select
               name="country"
-              className="input md:col-span-2 bg-zinc-900"
+              className="input md:col-span-2 bg-zinc-900 max-w-[80vw]"
               onChange={updateField}
             >
               {loadingCountries ? (

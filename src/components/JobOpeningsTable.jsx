@@ -47,7 +47,7 @@ const JobOpeningsTable = () => {
   /* ================= UI ================= */
 
   return (
-    <section className="bg-black py-16 px-4 sm:px-6 lg:px-12 min-h-screen">
+    <section className="bg-black py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
           Current Job Openings
@@ -62,7 +62,7 @@ const JobOpeningsTable = () => {
                   (h) => (
                     <th
                       key={h}
-                      className="py-4 px-4 text-sm font-semibold text-center"
+                      className="py-4 px-4 text-lg font-semibold text-center"
                     >
                       {h}
                     </th>
@@ -94,7 +94,7 @@ const JobOpeningsTable = () => {
                   </tr>
 
                   {expandedRow === job._id && (
-                    <tr>
+                    <tr className="text-left">
                       <td colSpan="5" className="bg-black p-6">
                         <div className="space-y-4">
                           <div
@@ -104,7 +104,12 @@ const JobOpeningsTable = () => {
                             }}
                           />
                           {job.requirements && (
-                            <p className="text-gray-300">{job.requirements}</p>
+                            <div>
+                              <h2 className="text-2xl font-semibold mt-10 mb-3">
+                                Requirements:
+                              </h2>
+                              <p className="text-lg">{job.requirements}</p>
+                            </div>
                           )}
                           <button
                             onClick={() => setSelectedJob(job)}
@@ -154,15 +159,18 @@ const JobOpeningsTable = () => {
               </button>
 
               {expandedRow === job._id && (
-                <div className="mt-4 space-y-4 text-gray-300">
+                <div className="mt-4 space-y-4 text-gray-300 text-left">
                   <div
-                    className="prose prose-invert max-w-none text-sm"
+                    className="prose prose-invert max-w-none"
                     dangerouslySetInnerHTML={{
                       __html: job.description,
                     }}
                   />
                   {job.requirements && (
-                    <p className="text-sm">{job.requirements}</p>
+                    <div>
+                      <h2 className="text-xl font-semibold">Requirements:</h2>
+                      <p className="">{job.requirements}</p>
+                    </div>
                   )}
                   <button
                     onClick={() => setSelectedJob(job)}
