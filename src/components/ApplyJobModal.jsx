@@ -26,15 +26,15 @@ const ApplyJobModal = ({ job, onClose }) => {
     city: "",
     state: "",
     country: "India",
-    experienceType: "Intern",
+    workExperience: "Fresher",
     experienceYears: "",
-    reason: "",
+    introduction: "",
     resume: null,
   });
 
   /* ---------------- Effects ---------------- */
 
-  // Close on outside click or ESC
+  // Close modal on outside click or ESC
   useEffect(() => {
     const handleClose = (e) => {
       if (e.key === "Escape") onClose();
@@ -50,7 +50,7 @@ const ApplyJobModal = ({ job, onClose }) => {
     };
   }, [onClose]);
 
-  // Load countries
+  // Fetch countries
   useEffect(() => {
     fetchCountries()
       .then((res) => setCountries(res || []))
@@ -60,7 +60,8 @@ const ApplyJobModal = ({ job, onClose }) => {
   /* ---------------- Handlers ---------------- */
 
   const updateField = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
     setError("");
   };
 
@@ -68,8 +69,8 @@ const ApplyJobModal = ({ job, onClose }) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    if (!/pdf/.test(file.name.toLowerCase())) {
-      setError("Only PDF files allowed.");
+    if (!file.name.toLowerCase().endsWith(".pdf")) {
+      setError("Only PDF files are allowed.");
       return;
     }
 
@@ -78,35 +79,58 @@ const ApplyJobModal = ({ job, onClose }) => {
       return;
     }
 
-    setForm({ ...form, resume: file });
+    setForm((prev) => ({ ...prev, resume: file }));
     setError("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (submitting) return;
+
     setError("");
 
-    if (!form.resume) return setError("Resume is required.");
-    if (form.experienceType === "Experienced" && !form.experienceYears)
-      return setError("Please select experience.");
+    if (!job?.title) {
+      setError("Job designation missing.");
+      return;
+    }
+
+    if (!form.resume) {
+      setError("Resume is required.");
+      return;
+    }
+
+    if (form.workExperience === "Experienced" && !form.experienceYears) {
+      setError("Please select experience.");
+      return;
+    }
 
     setSubmitting(true);
 
     const payload = new FormData();
-    Object.entries(form).forEach(([k, v]) => v && payload.append(k, v));
+
+    payload.append("name", form.name.trim());
+    payload.append("mobile", form.mobile.trim());
+    payload.append("email", form.email.trim());
+    payload.append("city", form.city.trim());
+    payload.append("state", form.state.trim());
+    payload.append("country", form.country);
+    payload.append("workExperience", form.workExperience);
+    payload.append("experienceYears", form.experienceYears || "0");
+    payload.append("introduction", form.introduction.trim());
+    payload.append("resume", form.resume);
     payload.append("designation", job.title);
 
     try {
       await submitApplication(payload);
       setSuccess(true);
-    } catch {
+    } catch (err) {
       setError("Submission failed. Please try again.");
     } finally {
       setSubmitting(false);
     }
   };
 
-  /* ---------------- Success ---------------- */
+  /* ---------------- Success Screen ---------------- */
 
   if (success) {
     return (
@@ -208,7 +232,9 @@ const ApplyJobModal = ({ job, onClose }) => {
                 <option>Loading countries…</option>
               ) : (
                 countries.map((c) => (
-                  <option key={c.cca2}>{c.name.common}</option>
+                  <option key={c.cca2} value={c.name.common}>
+                    {c.name.common}
+                  </option>
                 ))
               )}
             </select>
@@ -216,15 +242,15 @@ const ApplyJobModal = ({ job, onClose }) => {
 
           <div className="grid md:grid-cols-2 gap-4">
             <select
-              name="experienceType"
-              className="input  bg-zinc-900"
+              name="workExperience"
+              className="input bg-zinc-900"
               onChange={updateField}
             >
-              <option>Intern</option>
+              <option>Fresher</option>
               <option>Experienced</option>
             </select>
 
-            {form.experienceType === "Experienced" && (
+            {form.workExperience === "Experienced" && (
               <select
                 name="experienceYears"
                 className="input bg-zinc-900"
@@ -242,7 +268,7 @@ const ApplyJobModal = ({ job, onClose }) => {
           </div>
 
           <textarea
-            name="reason"
+            name="introduction"
             rows="4"
             placeholder="Why are you a right fit for this job?"
             className="w-full input md:col-span-2"
@@ -262,12 +288,7 @@ const ApplyJobModal = ({ job, onClose }) => {
                 Upload Resume (PDF, max 5MB)
               </>
             )}
-            <input
-              type="file"
-              hidden
-              accept=".pdf,.doc,.docx"
-              onChange={handleFile}
-            />
+            <input type="file" hidden accept=".pdf" onChange={handleFile} />
           </label>
 
           <button

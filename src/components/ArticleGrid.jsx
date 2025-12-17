@@ -1,30 +1,56 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FileText, Tag } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { slugify } from "../utils/slugify";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import slugify from "slugify";
+import {
+  Calendar,
+  FileText,
+  Tag,
+  ArrowLeft,
+  User,
+  Sparkles,
+} from "lucide-react";
 
-const API_URL = "https://api.capyngen.com/api/blogs";
-const PAGE_SIZE = 6;
+/* ======================
+   FILTER GROUPS
+====================== */
+const FILTER_GROUPS = [
+  {
+    label: "Education",
+    filters: ["Articles", "Library", "Presentation", "Product Guides"],
+  },
+  { label: "News", filters: ["Product Updates", "Corporate", "Industry"] },
+  { label: "Events", filters: ["Webinars", "Expo"] },
+  { label: "Other", filters: ["Videos", "Media"] },
+];
 
 const ArticleGrid = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const { slug } = useParams();
+
+  const [blogs, setBlogs] = useState([]);
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [relatedBlogs, setRelatedBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   /* ======================
-      FETCH BLOGS
-  ======================= */
+     FETCH BLOGS
+  ====================== */
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch(API_URL);
+        const res = await fetch("https://api.capyngen.com/api/blogs");
         const data = await res.json();
-        setBlogs(Array.isArray(data.blogs) ? data.blogs : []);
+
+        const list = Array.isArray(data)
+          ? data
+          : Array.isArray(data.blogs)
+          ? data.blogs
+          : [];
+
+        setBlogs(list);
       } catch (err) {
-        console.error("Failed to fetch blogs", err);
-        setBlogs([]);
+        console.error("Blog fetch failed", err);
       } finally {
         setLoading(false);
       }
@@ -34,132 +60,217 @@ const ArticleGrid = () => {
   }, []);
 
   /* ======================
-      PAGINATION
-  ======================= */
-  const totalPages = Math.ceil(blogs.length / PAGE_SIZE);
-  const paginatedBlogs = blogs.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+     SELECT BLOG BY SLUG
+  ====================== */
+  useEffect(() => {
+    if (!slug || blogs.length === 0) return;
+
+    const found = blogs.find(
+      (b) => slugify(b.title, { lower: true, strict: true }) === slug
+    );
+
+    if (found) {
+      setSelectedBlog(found);
+      document
+        .getElementById("media-hub")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [slug, blogs]);
+
+  /* ======================
+     RELATED BLOGS
+  ====================== */
+  useEffect(() => {
+    if (!selectedBlog) return;
+
+    const related = blogs
+      .filter((post) => {
+        if (post._id === selectedBlog._id) return false;
+
+        const categoryMatch = post.category === selectedBlog.category;
+        const tagMatch =
+          post.tags?.some((t) => selectedBlog.tags?.includes(t)) ?? false;
+
+        return categoryMatch || tagMatch;
+      })
+      .slice(0, 3);
+
+    setRelatedBlogs(related);
+  }, [selectedBlog, blogs]);
+
+  /* ======================
+     FILTER LOGIC
+  ====================== */
+  const filteredData =
+    activeFilter === "All"
+      ? blogs
+      : blogs.filter(
+          (item) =>
+            item.category === activeFilter || item.tags?.includes(activeFilter)
+        );
+
+  const openBlog = (blog) => {
+    const slug = slugify(blog.title, { lower: true, strict: true });
+    navigate(`/blogs/${slug}`);
+    setSelectedBlog(blog);
+  };
+
+  const handleTagClick = (e, tag) => {
+    e.stopPropagation();
+    setActiveFilter(tag);
+    navigate("/blogs");
+    setSelectedBlog(null);
+  };
 
   if (loading) {
     return (
-      <div className="text-center py-40 text-slate-400">Loading blogs...</div>
+      <div className="w-full bg-black py-32 text-center text-slate-400">
+        Loading blogs...
+      </div>
     );
   }
 
   return (
-    <>
-      {/* SEO */}
-      <Helmet>
-        <title>Blogs | Capyngen</title>
-        <meta
-          name="description"
-          content="Latest blogs, insights, and product updates from Capyngen."
-        />
-      </Helmet>
+    <div className="w-full bg-black py-24">
+      <section className="max-w-[90vw] mx-auto w-full" id="media-hub">
+        {/* ========================
+           SINGLE BLOG VIEW
+        ========================= */}
+        {selectedBlog ? (
+          <div>
+            <button
+              onClick={() => {
+                navigate(`/news-and-updates/${slugify(post.title)}`);
+                setSelectedBlog(null);
+              }}
+              className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 mb-8"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Back to Blogs
+            </button>
 
-      <div className="w-full bg-black py-24">
-        <section className="max-w-[90vw] mx-auto w-full">
-          {/* HEADER */}
-          <div className="flex justify-between items-end mb-12">
-            <h1 className="text-white text-5xl font-extrabold">Blogs</h1>
+            <div className="max-w-4xl mx-auto">
+              <div className="flex gap-4 text-slate-400 text-sm mb-4">
+                <span className="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full text-xs">
+                  {selectedBlog.category}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  {selectedBlog.date}
+                </span>
+              </div>
+
+              <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
+                {selectedBlog.title}
+              </h1>
+
+              <div className="flex items-center gap-3 mb-10">
+                <User className="w-5 h-5 text-slate-300" />
+                <span className="text-slate-300">{selectedBlog.author}</span>
+              </div>
+
+              <img
+                src={selectedBlog.image}
+                className="w-full h-[350px] object-cover rounded-md mb-10"
+                alt={selectedBlog.title}
+              />
+
+              <div className="prose prose-invert max-w-none mb-16">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: selectedBlog.content,
+                  }}
+                />
+              </div>
+
+              {/* TAGS */}
+              <div className="flex flex-wrap gap-2 mb-16">
+                {selectedBlog.tags?.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={(e) => handleTagClick(e, tag)}
+                    className="px-4 py-2 bg-slate-800 border border-slate-700 rounded-md text-slate-300"
+                  >
+                    <Tag className="inline w-4 h-4 mr-1" />
+                    {tag}
+                  </button>
+                ))}
+              </div>
+
+              {/* RELATED */}
+              {relatedBlogs.length > 0 && (
+                <>
+                  <div className="flex items-center gap-2 mb-6">
+                    <Sparkles className="text-cyan-400" />
+                    <h3 className="text-white text-2xl font-bold">
+                      Related Insights
+                    </h3>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {relatedBlogs.map((post) => (
+                      <div
+                        key={post._id}
+                        onClick={() => openBlog(post)}
+                        className="cursor-pointer bg-slate-900 border border-slate-800 rounded-lg overflow-hidden"
+                      >
+                        <img
+                          src={post.image}
+                          className="h-32 w-full object-cover"
+                        />
+                        <div className="p-4">
+                          <h4 className="text-white text-sm font-bold">
+                            {post.title}
+                          </h4>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
+        ) : (
+          <>
+            {/* ========================
+               LIST VIEW
+            ========================= */}
+            <h2 className="text-white text-5xl font-extrabold mb-12">Blogs</h2>
 
-          {/* BLOG GRID — SAME AS BLOGS PAGE */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {paginatedBlogs.map((post) => (
-              <article
-                key={post._id}
-                onClick={() =>
-                  navigate(`/news-and-updates/${slugify(post.title)}`)
-                }
-                className="cursor-pointer bg-slate-900 border border-slate-800 rounded-md overflow-hidden hover:border-slate-600 hover:-translate-y-1 transition-all"
-              >
-                {/* IMAGE */}
-                <div className="relative h-52 overflow-hidden">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filteredData.map((post) => (
+                <article
+                  key={post._id}
+                  onClick={() => openBlog(post)}
+                  className="cursor-pointer bg-slate-900 border border-slate-800 rounded-md overflow-hidden"
+                >
                   <img
                     src={post.image}
+                    className="h-52 w-full object-cover"
                     alt={post.title}
-                    className="w-full h-full object-cover"
                   />
-
-                  {/* CATEGORY BADGE */}
-                  {post.category && (
-                    <div className="absolute top-4 left-4 text-xs bg-slate-900/80 border border-slate-700 px-3 py-1 rounded-md text-white uppercase">
-                      {post.category}
-                    </div>
-                  )}
-                </div>
-
-                {/* CONTENT */}
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-white text-xl font-bold mb-3 hover:text-cyan-400">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-slate-400 text-sm mb-6 line-clamp-2">
-                    {post.description}
-                  </p>
-
-                  <div className="flex justify-between items-center border-t border-slate-800 pt-4 mt-auto">
-                    {/* TAGS */}
-                    <div className="flex gap-2">
-                      {post.tags?.slice(0, 2).map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300 flex items-center gap-1"
-                        >
-                          <Tag className="w-3 h-3" />
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* DATE */}
-                    <span className="text-xs text-slate-500">
-                      {new Date(post.createdAt).toLocaleDateString()}
-                    </span>
+                  <div className="p-6">
+                    <h3 className="text-white text-xl font-bold mb-3">
+                      {post.title}
+                    </h3>
+                    <p className="text-slate-400 text-sm line-clamp-2">
+                      {post.description}
+                    </p>
                   </div>
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
 
-          {/* EMPTY STATE */}
-          {blogs.length === 0 && (
-            <div className="text-center py-20 bg-slate-900/50 rounded-xl border border-slate-800 mt-20">
-              <div className="w-16 h-16 mx-auto bg-slate-800 rounded-full flex items-center justify-center mb-4">
-                <FileText className="w-8 h-8 text-slate-600" />
+            {filteredData.length === 0 && (
+              <div className="text-center py-20 text-slate-400">
+                <FileText className="mx-auto mb-4" />
+                No articles found
               </div>
-              <h3 className="text-white text-xl mb-2">No blogs found</h3>
-            </div>
-          )}
-
-          {/* PAGINATION */}
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-6 mt-14">
-              <button
-                disabled={page === 1}
-                onClick={() => setPage((p) => p - 1)}
-                className="px-4 py-2 bg-slate-800 text-white rounded disabled:opacity-40"
-              >
-                Prev
-              </button>
-
-              <span className="text-slate-400">
-                Page {page} of {totalPages}
-              </span>
-
-              <button
-                disabled={page === totalPages}
-                onClick={() => setPage((p) => p + 1)}
-                className="px-4 py-2 bg-slate-800 text-white rounded disabled:opacity-40"
-              >
-                Next
-              </button>
-            </div>
-          )}
-        </section>
-      </div>
-    </>
+            )}
+          </>
+        )}
+      </section>
+    </div>
   );
 };
 
