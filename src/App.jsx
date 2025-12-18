@@ -64,10 +64,10 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
 import LandingPage from "./pages/LandingPage/DigitalMarketingLandingPage/LandingPage";
-import ThankYouPage from "./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage";
 import WebDevelopmentHiddenPage from "./pages/WebDevelopmentHiddenPage";
 import AppDevelopmentHiddenPage from "./pages/AppDevelopmentHiddenPage";
 import CrmManagementSoftwareHiddenPage from "./pages/CrmManagementSoftwareHiddenPage";
+import GreetingsPage from "./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,10 +175,7 @@ const AppContent = () => {
           path="/digital-marketing-landing-page"
           element={<LandingPage />}
         />
-        <Route
-          path="/greetings"
-          element={<ThankYouPage />}
-        />
+        <Route path="/greetings" element={<GreetingsPage />} />
         <Route
           path="/web-development-hidden-page"
           element={<WebDevelopmentHiddenPage />}

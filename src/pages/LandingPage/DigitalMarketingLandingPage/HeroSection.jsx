@@ -568,8 +568,16 @@ export function LeadForm({
                       ? "bg-indigo-500 hover:bg-indigo-600 text-white shadow"
                       : "bg-indigo-300/60 text-white/80 cursor-not-allowed"
                   }`}
-                  whileHover={validateStep() && !isSubmitting ? { scale: 1.05 } : undefined}
-                  whileTap={validateStep() && !isSubmitting ? { scale: 0.95 } : undefined}
+                  whileHover={
+                    validateStep() && !isSubmitting
+                      ? { scale: 1.05 }
+                      : undefined
+                  }
+                  whileTap={
+                    validateStep() && !isSubmitting
+                      ? { scale: 0.95 }
+                      : undefined
+                  }
                 >
                   Next
                 </motion.button>
@@ -746,12 +754,12 @@ export default function HeroSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Prevent multiple submissions
     if (isSubmitting) return;
-    
+
     setIsSubmitting(true);
-    
+
     try {
       const payload = {
         fullName: formData.fullName,
@@ -778,31 +786,9 @@ export default function HeroSection() {
 
       const data = await res.json();
 
-      if (res.ok && data.ok) {
-        setNotification("Request received, we will connect with you shortly.");
-        setFormData({
-          fullName: "",
-          email: "",
-          phone: "",
-          whatsappNumber: "",
-          city: "",
-          brandName: "",
-          website: "",
-          businessType: "",
-          serviceType: [],
-          budget: "",
-          bestTime: "",
-          notes: "",
-        });
-        setStep(1);
-        setWhatsappSameAsPhone(true);
-
-        setTimeout(() => {
-          setNotification("");
-          setModalOpen(false); // Close modal on success
-          setIsSubmitting(false);
-          navigate("/greetings");
-        }, 5000);
+      if (res.ok || data.ok) {
+        console.log(data);
+        navigate("/greetings", { replace: true });
       } else {
         setNotification(
           data.message || "Something went wrong. Please try again later."

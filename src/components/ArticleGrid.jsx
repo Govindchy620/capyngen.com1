@@ -257,7 +257,7 @@ const ArticleGrid = () => {
                   className="cursor-pointer bg-slate-900 border border-slate-800 rounded-md overflow-hidden"
                 >
                   <img
-                    src="https://claveecom.s3.ap-south-1.amazonaws.com/blogs/1765992883452/1765992883452-lh3.pngs"
+                    src={post.image}
                     className="h-52 w-full object-cover"
                     alt={post.title}
                   />

@@ -83,7 +83,7 @@ const BlogDetail = () => {
           <img
             src={blog.image}
             alt={blog.title}
-            className="w-full h-[420px] object-cover rounded-xl border border-slate-800 mb-12 block"
+            className="w-full h-[420px] lg:h-[700px] object-cover rounded-xl border border-slate-800 mb-12 block"
           />
 
           <div
