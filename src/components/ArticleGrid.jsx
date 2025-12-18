@@ -118,7 +118,7 @@ const ArticleGrid = () => {
   const handleTagClick = (e, tag) => {
     e.stopPropagation();
     setActiveFilter(tag);
-    navigate("/blogs");
+    navigate("/news-and-updates");
     setSelectedBlog(null);
   };
 
@@ -236,6 +236,18 @@ const ArticleGrid = () => {
                LIST VIEW
             ========================= */}
             <h2 className="text-white text-5xl font-extrabold mb-12">Blogs</h2>
+            {activeFilter !== "All" && (
+              <button
+                onClick={() => {
+                  setActiveFilter("All");
+                  navigate("/news-and-updates");
+                }}
+                className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-cyan-500/40 text-cyan-400 rounded-md hover:bg-cyan-500/10 transition"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                View All Blogs
+              </button>
+            )}
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {filteredData.map((post) => (
@@ -245,7 +257,7 @@ const ArticleGrid = () => {
                   className="cursor-pointer bg-slate-900 border border-slate-800 rounded-md overflow-hidden"
                 >
                   <img
-                    src={post.image}
+                    src="https://claveecom.s3.ap-south-1.amazonaws.com/blogs/1765992883452/1765992883452-lh3.pngs"
                     className="h-52 w-full object-cover"
                     alt={post.title}
                   />
@@ -253,9 +265,23 @@ const ArticleGrid = () => {
                     <h3 className="text-white text-xl font-bold mb-3">
                       {post.title}
                     </h3>
-                    <p className="text-slate-400 text-sm line-clamp-2">
+
+                    <p className="text-slate-400 text-sm line-clamp-2 mb-4">
                       {post.description}
                     </p>
+
+                    {/* TAGS */}
+                    <div className="flex flex-wrap gap-2">
+                      {post.tags?.map((tag) => (
+                        <button
+                          key={tag}
+                          onClick={(e) => handleTagClick(e, tag)}
+                          className="text-xs px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition"
+                        >
+                          #{tag}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 </article>
               ))}
