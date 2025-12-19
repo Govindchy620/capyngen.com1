@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import AdminNavbar from "./AdminNavbar";
 
 export default function Settings() {
   const [darkMode, setDarkMode] = useState(true);
   const [emailNotify, setEmailNotify] = useState(true);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#020617] to-black text-white p-10">
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#020617] to-black text-white">
+      <AdminNavbar />
+      <motion.div
+        className="max-w-7xl mx-auto mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <h1 className="text-3xl font-bold mb-6">⚙️ Admin Settings</h1>
 
         <div className="grid md:grid-cols-2 gap-6">

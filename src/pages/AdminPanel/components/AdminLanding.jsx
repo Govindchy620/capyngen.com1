@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { BlogService } from "../services/blogService";
 import { CareerService } from "../services/careerService";
 import { logoutAdmin } from "../services/authService";
+import AdminNavbar from "./AdminNavbar";
 
 export default function AdminLanding() {
   const adminName = "Admin";
@@ -36,6 +37,7 @@ export default function AdminLanding() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#020617] to-black text-white">
+      <AdminNavbar />
       {/* ✅ MAIN CONTENT */}
       <div className="max-w-7xl mx-auto px-6 py-10">
         {/* ✅ HERO */}
@@ -119,12 +121,12 @@ export default function AdminLanding() {
               📊 View Reports
             </Link>
 
-            <Link
+            {/* <Link
               to="/admin-settings"
               className="px-5 py-2 rounded-xl border border-white/30 hover:bg-white/10"
             >
               ⚙️ Settings
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -255,14 +255,7 @@ const AppContent = () => {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/admin-settings"
-          element={
-            <ProtectedRoute>
-              <Settings />
-            </ProtectedRoute>
-          }
-        />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 

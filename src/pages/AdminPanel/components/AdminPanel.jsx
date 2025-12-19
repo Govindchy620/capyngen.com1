@@ -7,6 +7,7 @@ import ConfirmModal from "./ConfirmModal";
 import { BlogService } from "../services/blogService";
 import { useToast } from "../hooks/useToast";
 import { getErrorMessage } from "../services/api";
+import AdminNavbar from "./AdminNavbar";
 
 export default function AdminPanel() {
   const { push } = useToast();
@@ -92,6 +93,7 @@ export default function AdminPanel() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#020617] to-black text-white">
+      <AdminNavbar />
       <div className="max-w-7xl mx-auto px-6 py-10">
         {/* ✅ HERO */}
         <motion.div
