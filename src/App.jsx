@@ -68,15 +68,42 @@ import WebDevelopmentHiddenPage from "./pages/WebDevelopmentHiddenPage";
 import AppDevelopmentHiddenPage from "./pages/AppDevelopmentHiddenPage";
 import CrmManagementSoftwareHiddenPage from "./pages/CrmManagementSoftwareHiddenPage";
 import GreetingsPage from "./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage";
+import AdminLogin from "./pages/AdminPanel/components/AdminLogin";
+import { isAdminLoggedIn } from "./pages/AdminPanel/services/authService";
+import AdminLanding from "./pages/AdminPanel/components/AdminLanding";
+import AdminPanel from "./pages/AdminPanel/components/AdminPanel";
+import CareerAdminPanel from "./pages/AdminPanel/components/CareerAdminPanel";
+import ViewReports from "./pages/AdminPanel/components/ViewReports";
+import Settings from "./pages/AdminPanel/components/Settings";
+import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const ProtectedRoute = ({ children }) => {
+  const loggedIn = isAdminLoggedIn();
+
+  if (!loggedIn) {
+    return <Navigate to="/admin-login" replace />;
+  }
+
+  return children;
+};
 
 // ✅ Wrapper to handle hiding Navbar/Footer
 const AppContent = () => {
   const location = useLocation();
 
   // Routes where global navbar/footer should be hidden
-  const noLayoutRoutes = ["/digital-marketing-landing-page", "/greetings"];
+  const noLayoutRoutes = [
+    "/digital-marketing-landing-page",
+    "/greetings",
+    "/admin-login",
+    "/admin-dashboard",
+    "/admin-blogs",
+    "/admin-careers",
+    "/admin-reports",
+    "/admin-settings",
+  ];
 
   const hideLayout = noLayoutRoutes.includes(location.pathname);
 
@@ -187,6 +214,54 @@ const AppContent = () => {
         <Route
           path="/crm-management-software-hidden-page"
           element={<CrmManagementSoftwareHiddenPage />}
+        />
+
+        {/* 🔓 PUBLIC */}
+        <Route path="/admin-login" element={<AdminLogin />} />
+        {/* 🔐 PROTECTED */}
+        <Route
+          path="/admin-dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminLanding />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin-blogs"
+          element={
+            <ProtectedRoute>
+              <ToastProvider>
+                <AdminPanel />
+              </ToastProvider>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin-careers"
+          element={
+            <ProtectedRoute>
+              <ToastProvider>
+                <CareerAdminPanel />
+              </ToastProvider>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin-reports"
+          element={
+            <ProtectedRoute>
+              <ViewReports />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin-settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
