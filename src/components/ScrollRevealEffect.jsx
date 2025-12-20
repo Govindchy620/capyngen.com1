@@ -82,9 +82,7 @@ export default function ScrollRevealEffect() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (window.fbq) {
-      window.fbq("track", "Lead");
-    }
+
     if (loading) return;
     setLoading(true);
     setResponseMsg("");
@@ -98,6 +96,10 @@ export default function ScrollRevealEffect() {
       });
 
       const data = await response.json();
+
+      if (window.fbq) {
+        window.fbq("track", "Lead");
+      }
 
       if (response.ok) {
         setResponseMsg("✅ Message sent successfully!");

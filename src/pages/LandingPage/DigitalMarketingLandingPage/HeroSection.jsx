@@ -755,9 +755,6 @@ export default function HeroSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (window.fbq) {
-      window.fbq("track", "Lead");
-    }
     // Prevent multiple submissions
     if (isSubmitting) return;
 
@@ -788,6 +785,10 @@ export default function HeroSection() {
       });
 
       const data = await res.json();
+
+      if (window.fbq) {
+        window.fbq("track", "Lead");
+      }
 
       if (res.ok || data.ok) {
         console.log(data);

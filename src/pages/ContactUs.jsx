@@ -194,9 +194,7 @@ export default function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (window.fbq) {
-      window.fbq("track", "Lead");
-    }
+
     if (loading) return;
     setLoading(true);
     setResponseMsg("");
@@ -209,6 +207,10 @@ export default function ContactUs() {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
+
+      if (window.fbq) {
+        window.fbq("track", "Lead");
+      }
 
       if (response.ok) {
         setResponseMsg("✅ Message sent successfully!");
