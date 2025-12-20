@@ -82,6 +82,9 @@ export default function ScrollRevealEffect() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (window.fbq) {
+      window.fbq("track", "Lead");
+    }
     if (loading) return;
     setLoading(true);
     setResponseMsg("");

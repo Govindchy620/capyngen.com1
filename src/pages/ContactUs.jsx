@@ -194,6 +194,9 @@ export default function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (window.fbq) {
+      window.fbq("track", "Lead");
+    }
     if (loading) return;
     setLoading(true);
     setResponseMsg("");

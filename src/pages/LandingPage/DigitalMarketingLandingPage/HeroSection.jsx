@@ -755,6 +755,9 @@ export default function HeroSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (window.fbq) {
+      window.fbq("track", "Lead");
+    }
     // Prevent multiple submissions
     if (isSubmitting) return;
 
