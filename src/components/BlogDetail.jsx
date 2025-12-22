@@ -12,15 +12,25 @@ const BlogDetail = () => {
   const [blog, setBlog] = useState(null);
   const [related, setRelated] = useState([]);
 
+  const normalizeSlug = (text = "") =>
+    text
+      .toLowerCase()
+      .replace(/[–—]/g, "-") // normalize unicode dashes
+      .replace(/&/g, "and") // & → and
+      .replace(/[^a-z0-9]+/g, "-") // remove punctuation
+      .replace(/-+/g, "-") // collapse dashes
+      .replace(/^-|-$/g, ""); // trim dashes
+
   useEffect(() => {
     const fetchBlog = async () => {
       const res = await fetch(API_URL);
       const data = await res.json();
-      console.log(data);
 
       const blogs = Array.isArray(data.blogs) ? data.blogs : [];
 
-      const found = blogs.find((b) => slugify(b.title) === slug);
+      const found = blogs.find(
+        (b) => normalizeSlug(b.title) === normalizeSlug(slug)
+      );
 
       setBlog(found || null);
 

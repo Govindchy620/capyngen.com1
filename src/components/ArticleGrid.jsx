@@ -10,6 +10,12 @@ import {
   Sparkles,
 } from "lucide-react";
 
+const normalizeSlug = (text = "") =>
+  slugify(text, { lower: true })
+    .replace(/[–—]/g, "-")
+    .replace(/-+/g, "-")
+    .trim();
+
 /* ======================
    FILTER GROUPS
 ====================== */
@@ -66,7 +72,7 @@ const ArticleGrid = () => {
     if (!slug || blogs.length === 0) return;
 
     const found = blogs.find(
-      (b) => slugify(b.title, { lower: true, strict: true }) === slug
+      (b) => normalizeSlug(b.title) === normalizeSlug(slug)
     );
 
     if (found) {
