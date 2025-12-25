@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { slugify } from "../utils/slugify";
+import { createSlug } from "../utils/slug";
 
 const API_URL = "https://api.capyngen.com/api/blogs";
 
@@ -12,15 +13,6 @@ const BlogDetail = () => {
   const [blog, setBlog] = useState(null);
   const [related, setRelated] = useState([]);
 
-  const normalizeSlug = (text = "") =>
-    text
-      .toLowerCase()
-      .replace(/[–—]/g, "-") // normalize unicode dashes
-      .replace(/&/g, "and") // & → and
-      .replace(/[^a-z0-9]+/g, "-") // remove punctuation
-      .replace(/-+/g, "-") // collapse dashes
-      .replace(/^-|-$/g, ""); // trim dashes
-
   useEffect(() => {
     const fetchBlog = async () => {
       const res = await fetch(API_URL);
@@ -28,9 +20,7 @@ const BlogDetail = () => {
 
       const blogs = Array.isArray(data.blogs) ? data.blogs : [];
 
-      const found = blogs.find(
-        (b) => normalizeSlug(b.title) === normalizeSlug(slug)
-      );
+      const found = blogs.find((b) => createSlug(b.title) === createSlug(slug));
 
       setBlog(found || null);
 
@@ -93,7 +83,7 @@ const BlogDetail = () => {
           <img
             src={blog.image}
             alt={blog.title}
-            className="w-full h-[420px] lg:h-[700px] object-cover rounded-xl border border-slate-800 mb-12 block"
+            className="w-full h-[420px] lg:h-[700px] object-scale-down rounded-xl mb-12 block"
           />
 
           <div
@@ -125,13 +115,13 @@ const BlogDetail = () => {
                   <div
                     key={b._id}
                     onClick={() =>
-                      navigate(`/news-and-updates/${slugify(b.title)}`)
+                      navigate(`/news-and-updates/${createSlug(b.title)}`)
                     }
-                    className="cursor-pointer bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-400 transition"
+                    className="cursor-pointer bg-slate-900 border border-slate-800 rounded-md overflow-hidden hover:border-cyan-400 transition"
                   >
                     <img
                       src={b.image}
-                      className="h-32 w-full object-cover block"
+                      className="h-56 w-full object-cover block"
                     />
                     <div className="p-4">
                       <h4 className="text-white text-sm font-semibold line-clamp-2">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import slugify from "slugify";
+import { createSlug } from "../utils/slug";
 import {
   Calendar,
   FileText,
@@ -9,12 +10,6 @@ import {
   User,
   Sparkles,
 } from "lucide-react";
-
-const normalizeSlug = (text = "") =>
-  slugify(text, { lower: true })
-    .replace(/[–—]/g, "-")
-    .replace(/-+/g, "-")
-    .trim();
 
 /* ======================
    FILTER GROUPS
@@ -71,9 +66,7 @@ const ArticleGrid = () => {
   useEffect(() => {
     if (!slug || blogs.length === 0) return;
 
-    const found = blogs.find(
-      (b) => normalizeSlug(b.title) === normalizeSlug(slug)
-    );
+    const found = blogs.find((b) => createSlug(b.title) === createSlug(slug));
 
     if (found) {
       setSelectedBlog(found);
@@ -116,8 +109,8 @@ const ArticleGrid = () => {
         );
 
   const openBlog = (blog) => {
-    const slug = slugify(blog.title, { lower: true, strict: true });
-    navigate(`/news-and-updates/${slug}`);
+    navigate(`/news-and-updates/${createSlug(blog.title)}`);
+
     setSelectedBlog(blog);
   };
 
@@ -264,10 +257,10 @@ const ArticleGrid = () => {
                 >
                   <img
                     src={post.image}
-                    className="h-52 w-full object-cover"
+                    className="h-64 w-full object-cover"
                     alt={post.title}
                   />
-                  <div className="p-6">
+                  <div className="p-4">
                     <h3 className="text-white text-xl font-bold mb-3">
                       {post.title}
                     </h3>
