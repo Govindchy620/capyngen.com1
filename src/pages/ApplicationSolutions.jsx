@@ -218,77 +218,80 @@ const ApplicationSolutions = () => {
     {
       question: "What are application solutions?",
       answer:
-        "Application solutions are systems that utilize software to solve business problems and increase business through Web, Mobile, and Cloud-based solutions.",
+        "Application solutions refer to systems where the software is used to address business issues and grow the business by Web, Mobile, and Cloud-based custom application solutions.​",
     },
     {
-      question: "Why should businesses invest in custom application solutions?",
+      question:
+        "Why then consider investing in custom application solutions by businesses?",
       answer:
-        "Custom solutions allow the businesses to be more specific, optimized, and offer more functionalities than the general ones, thus giving an enterprise a competitive advantage.",
+        "The general one does not provide as many functionalities, which allows the enterprise to be a competitive advantage through application development services by being more specific and more optimized.​",
     },
     {
-      question: "Does Capyngen offer enterprise application solutions?",
+      question:
+        "Does enterprise application solutions are offered by Capyngen?",
       answer:
-        "Absolutely. We develop applications with the scalability and reliability of enterprise-grade systems for intricate business processes.",
+        "Absolutely. As the application development company, we create application solutions that are scalable with the reliability of enterprise-level systems when it comes to complex business processes.​",
     },
     {
-      question: "What technologies do you use for app development?",
+      question: "Which technologies do you apply to develop apps?",
       answer:
-        "We mainly use technologies such as React, Node.js, Flutter, AWS, and Kubernetes for smooth running and scalability of applications of our clients.",
+        "The primary technologies that we employ to run the application solutions smoothly and scale to our clients are mainly React, Node.js, Flutter, AWS, and Kubernetes.​",
     },
     {
-      question: "Do you develop mobile and web applications?",
+      question: "Do you create mobile as well as web applications?",
       answer:
-        "Certainly. We design and develop applications for mobile devices as well as for the web according to the needs of you.",
+        "Certainly. We create and build applications to both the mobile devices and the web based on your application solutions in Gurgaon requirements.​",
     },
     {
-      question: "Can Capyngen build cloud-native apps?",
+      question: "Is Capyngen able to construct cloud-native applications?",
       answer:
-        "Exactly. We are experts in providing cloud solutions that are scalable, flexible, and cost-effective.",
+        "Exactly. We specialize in offering cloud application solutions which are scalable, flexible and cost effective through global applications solution approach.​",
     },
     {
-      question: "Do you modernize legacy applications?",
+      question: "Do you upgrade old applications?",
       answer:
-        "A definite Yes. We upgrade legacy software to new standards of business and technology application.",
+        "A definite Yes. We modernise old software to suit new levels of business and technology application solutions.​",
     },
     {
-      question: "Which industries do you serve?",
+      question: "What are your served industries?",
       answer:
-        "We work with industries such as medical, financial, commercial, educational, entertainment, software, and telecommunication sectors.",
+        "In the best application solutions for business, we deal with medical, financial, commercial, educational, entertainment, software, and telecommunication sectors.​",
     },
     {
-      question: "Are your applications secure and scalable?",
+      question: "Do you have secure and scalable applications?",
       answer:
-        "Certainly. We adhere to rigorous security standards and build scalable products.",
+        "Certainly. We use strict security requirements and develop scalable products for application solutions.​",
     },
     {
-      question: "Do you offer SaaS application development?",
+      question: "Does it offer SaaS application development?",
       answer:
-        "Yes. We create cloud-hosted SaaS applications that help businesses deliver recurring services.",
+        "Yes. We develop cloud-based solutions of SaaS applications that assist companies in providing recurring services using an app development company in India.​",
     },
     {
-      question: "Can your applications integrate with existing systems?",
+      question: "Is your application able to work with existing systems?",
       answer:
-        "Yes. We design APIs for easy synchronization with other platforms and software.",
+        "Yes. Our APIs are designed to be synchronised with other platforms and software through application management services easily.​",
     },
     {
-      question: "How long does it take to build an application?",
+      question: "What is the duration of the construction of an application?",
       answer:
-        "Timelines depend on project complexity, generally between 4-10 weeks.",
+        "The timelines are dependent on the complexity of the project, ranging from 4 to 10 weeks in application development services.​",
     },
     {
-      question: "Do you offer post-launch support?",
+      question: "Do you provide after-sales services?",
       answer:
-        "Yes. We provide full support for maintenance and updates after deployment.",
+        "Yes. Our services also include full support services in maintenance and upgrades after deploying custom application solutions.​",
     },
     {
-      question: "Are your solutions suitable for startups and enterprises?",
+      question:
+        "Do you have solutions that are appropriate to startups and enterprises?",
       answer:
-        "Indeed. We partner with any size business to deliver efficient application solutions.",
+        "Indeed. We collaborate with small or even large-scale businesses to provide effective application solutions.​",
     },
     {
-      question: "How can I get started with Capyngen?",
+      question: "What should I do in order to start with Capyngen?",
       answer:
-        "Set up a no-cost consultation with us to devise feasible application solutions for your enterprise.",
+        "Establish a free consultation with us to come up with the best application development solutions for your business.​",
     },
   ];
 
@@ -296,62 +299,62 @@ const ApplicationSolutions = () => {
     {
       image: assets.applicationSolution4,
       title: "Web Application Development",
-      desc: "We create slick, secure, and purpose-built web applications tailored to your business goals, helping improve search rankings and user base.",
+      desc: "We develop slick, secure and also purpose built web applications according to your business objectives that will enable enhancing search rankings and user base as global applications solution providers.",
     },
     {
       image: assets.applicationSolution5,
       title: "Mobile Application Development",
-      desc: "We build top-performing native and cross-platform mobile apps with modern styling and great engagement.",
+      desc: "Our services in the custom Android app development and iOS software development company can create high-performing native and cross-platform mobile applications with a modern and stylish look and substantial engagement.​",
     },
     {
       image: assets.applicationSolution6,
       title: "Enterprise Application Solutions",
-      desc: "Stable and extensible business suites to improve communication, productivity, and employee interaction.",
+      desc: "Both Business suites (stable and extendable) to enhance communication, productivity and interaction with employees through application management services.",
     },
     {
       image: assets.applicationSolution7,
       title: "Cloud-Native Applications",
-      desc: "Cloud-based apps offering feature freedom, simple updates, and quick performance enabling scalable growth.",
+      desc: "Cloud-based applications with the ability of freedom of features, easy upgrades, and fast computing, such that application solutions in Gurgaon could grow exponentially.​",
     },
     {
       image: assets.applicationSolution8,
       title: "Custom Software Solutions",
-      desc: "Custom software tailored to complex corporate needs ensuring innovation, security, and customer loyalty.",
+      desc: "India Custom software to meet the complex corporate requirements, guaranteeing innovations, assurance, and client retention as the App development company in India.​",
     },
     {
       image: assets.applicationSolution9,
       title: "E-Commerce Applications",
-      desc: "Fully functional digital shops focused on smooth user journeys and checkout processes.",
+      desc: "Complete online stores dedicated to easy user experiences and checkout.",
     },
     {
       image: assets.applicationSolution10,
       title: "SaaS (Software as a Service) Applications",
-      desc: "Scalable, secure subscription-based cloud apps that are budget-friendly and fast to develop.",
+      desc: "Budget-friendly, fast to develop, scalable, and secure subscription-based cloud applications.",
     },
     {
       image: assets.applicationSolution12,
-      title: "Cross-Platform Application Development",
-      desc: "Software providing consistent user experience across devices without needing multiple apps.",
+      title: "App Development on a cross-platform",
+      desc: "Software offers a uniform experience to users regardless of the devices without multiple apps.",
     },
     {
       image: assets.applicationSolution13,
-      title: "API Development & Integration",
-      desc: "API design enabling easy data exchange and improved business operation connectivity.",
+      title: "Development and integration of API",
+      desc: "Design of an API that allows the exchange of data easily and facilitates access to better business operations.",
     },
     {
       image: assets.applicationSolution14,
-      title: "Legacy Application Modernization",
-      desc: "Upgrading legacy software for speed, safety, and user-friendliness to meet modern standards.",
+      title: "Application modernisation: Legacy applications",
+      desc: "Modifying the old software to achieve modern standards in terms of speed, safety, and ease of use.",
     },
     {
       image: assets.applicationSolution15,
-      title: "CRM & ERP Application Solutions",
-      desc: "Integrated CRM and ERP systems enhancing business intelligence and client connections.",
+      title: "CRM and ERP Solution applications",
+      desc: "CRM and ERP systems that improve business intelligence and relationships with clients.",
     },
     {
       image: assets.applicationSolution16,
       title: "AI-Powered Applications",
-      desc: "Intelligent AI and ML applications helping companies save time and gain predictive insights.",
+      desc: "Smart AI and ML systems that assist companies in spending less time and predicting.",
     },
   ];
 
@@ -360,37 +363,37 @@ const ApplicationSolutions = () => {
       step: "Step 01",
       title: "Requirement Analysis",
       description:
-        "Understand business goals, challenges, and user expectations to set the foundation for scalable solutions.",
+        "Learn business requirements, issues and user expectations in order to establish a platform of scalable custom application solutions.​",
     },
     {
       step: "Step 02",
       title: "UI/UX Design",
       description:
-        "Create engaging, intuitive, and accessible interfaces that enhance user retention and satisfaction.",
+        "Develop attractive, user-friendly, and user retention interfaces.",
     },
     {
       step: "Step 03",
       title: "Development & Integration",
       description:
-        "Develop secure, high-performance applications integrated smoothly with third-party tools and databases.",
+        "As an application development company, we develop secure, high performance applications that integrate readily with third-party tools and databases.",
     },
     {
       step: "Step 04",
       title: "Testing & QA",
       description:
-        "Conduct thorough testing to ensure functionality, security, compatibility, and high performance.",
+        "Carry out comprehensive testing in order to verify functionality, security, compatibility and high performance.",
     },
     {
       step: "Step 05",
       title: "Deployment & Support",
       description:
-        "Deploy applications efficiently and provide ongoing technical support and maintenance.",
+        "Install programs effectively and offer continuous technical maintenance and support through application mangement services.​",
     },
     {
       step: "Step 06",
-      title: "Continuous Optimization",
+      title: "Optimization in Permanence",
       description:
-        "Maintain app excellence with performance analysis, user feedback, and tech updates for competitiveness.",
+        "Ensure the excellence of apps through performance analysis, user feedback, and tech updates to be competitive.",
     },
   ];
 
@@ -401,12 +404,14 @@ const ApplicationSolutions = () => {
       description: (
         <>
           <p>
-            We create scalable applications tailored to your unique business
-            needs on web or mobile.
+            As the best application development company, we develop scalable
+            custom application solutions that meet your business's unique
+            requirements, whether on web or mobile.
           </p>
           <p className="mt-3">
-            Capyngen leads globally in delivering impactful digital products,
-            including enterprise, cloud, and mobile apps.
+            Capyngen is a global leader in providing effective digital products,
+            such as enterprise, cloud and mobile applications, and the best
+            application development solutions.
           </p>
         </>
       ),
@@ -418,8 +423,9 @@ const ApplicationSolutions = () => {
       description: (
         <>
           <p>
-            Build safe, stable, and scalable apps powered by Capyngen to grow
-            your business smarter and faster.
+            Develop secure, reliable, and scalable applications with Capyngen to
+            make your business smarter and faster with our Apps Solutions
+            company knowledge.
           </p>
         </>
       ),
@@ -431,8 +437,9 @@ const ApplicationSolutions = () => {
       description: (
         <>
           <p>
-            We use modern technologies and strategies to deliver safe, scalable,
-            tailor-made software for startups, enterprises, and global brands.
+            Application development services. We deploy the use of modern
+            technologies and strategies to provide safe, scalable, customised
+            application solutions to start-ups, enterprises and global brands.
           </p>
         </>
       ),
@@ -443,36 +450,36 @@ const ApplicationSolutions = () => {
   const cardsSectionData1 = [
     {
       title:
-        "Skills in creating tailored, cloud, mobile, and web app solutions.",
+        "Competencies to develop customised, cloud, mobile and web application solutions.",
       description: "",
       icon: <FaPuzzlePiece className="text-4xl text-white" />,
     },
     {
       title:
-        "Complete development services covering every stage from concept to implementation.",
+        "A total development package, which takes a product through all development phases.",
       description: "",
       icon: <FaLaptopCode className="text-4xl text-white" />,
     },
     {
-      title: "Highly skilled development and design team.",
+      title:
+        "A highly qualified development and design team at Apps Solutions company.",
       description: "",
       icon: <FaAppStore className="text-4xl text-white" />,
     },
     {
       title:
-        "Ability to operate worldwide with security at the level of large enterprises.",
+        "The capability to perform on a global scale and be as secure as big companies.",
       description: "",
       icon: <FaMoneyBillWave className="text-4xl text-white" />,
     },
     {
-      title:
-        "Concentration on invention, expandability, and user-friendliness.",
+      title: "Focus on invention, expandability and user-friendliness.",
       description: "",
       icon: <FaBuilding className="text-4xl text-white" />,
     },
     {
       title:
-        "Used by corporates all over the globe to solve application problems.",
+        "Application software services for solving problems of the corporates worldwide.​",
       description: "",
       icon: <FaIndustry className="text-4xl text-white" />,
     },
@@ -516,7 +523,7 @@ const ApplicationSolutions = () => {
       <div className="relative z-10">
         <IndustryServices
           heading="Application Solutions We Offer"
-          subheading="We offer a comprehensive suite of business application solutions centered around varied industry requirements:"
+          subheading="We offer a complete package of business application solutions with the focus on the diverse industry needs, with application software services:"
           cardBg="bg-gray-700"
           cardText="text-white"
           cardDescText="text-white"
@@ -530,15 +537,14 @@ const ApplicationSolutions = () => {
           description={[
             <>
               <span>
-                Have a chat with one of our knowledgeable staff and identify the
-                finest{" "}
-                <Link to={"/app-development"}>application development</Link>{" "}
-                solutions tailor-made for your firm. Our next powerful venture
-                is waiting to be built.
+                Talk to one of our brilliant employees and define the best
+                application solutions that suit your company as the best
+                application solutions for business. Another mighty project is in
+                the process of construction.
               </span>
             </>,
           ]}
-          buttonText="Contact Us"
+          buttonText="Book Your Consultation Now"
           backgroundVideo={assets.backgroundVideo}
         />
         <TopRatedCompany
@@ -546,42 +552,43 @@ const ApplicationSolutions = () => {
           description={[
             <>
               <span>
-                Custom application-building services from{" "}
-                <Link to={"/"}>Capyngen</Link> result in business wins that can
-                be quantitatively measured:
+                Client-built custom application solution,{" "}
+                <Link to={"/"}>Capyngen</Link> business wins can be
+                quantitatively measured as follows:
               </span>
             </>,
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
                 {[
                   {
-                    title: "Increased Efficiency and Productivity",
-                    text: "Simplified workflow and task automation.",
+                    title: "More Efficiency and Productivity",
+                    text: "Automation of tasks and workflow.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Boost in Customer Engagement",
-                    text: "User-friendly apps improve customer relationships.",
+                    title: "Increase in Customer Interaction",
+                    text: "Easy-to-use apps enhance customer relationships.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Safe, Scalable, and Future-Oriented Apps",
-                    text: "Designed with latest tech for business compatibility.",
+                    title:
+                      "Secure, Scale-able, and Future Orientated Applications",
+                    text: "Built using the latest technology to support businesses.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Shorter Route to Sales",
-                    text: "Rapid business growth ahead of competitors.",
+                    text: "Fast business development before competitors.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Integration Without Any Hassle",
-                    text: "Easily access current systems or third-party tools.",
+                    title: "Integration With No Ado",
+                    text: "Easily access existing systems or third-party applications.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Solutions that are Affordable",
-                    text: "Optimized development saves operational costs.",
+                    title: "Low-priced solutions",
+                    text: "Optimized development uses less on operations.",
                     color: "text-blue-500",
                   },
                 ].map(({ title, text, color }, idx) => (
@@ -590,15 +597,16 @@ const ApplicationSolutions = () => {
                     className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
                   >
                     <strong className={`${color} drop-shadow-md`}>
-                      {title}
+                      {title}:
                     </strong>{" "}
                     {text}
                   </li>
                 ))}
               </ul>
               <p>
-                The business best application solutions of Capyngen are
-                formulated to create a powerful impression that lasts.
+                The Capyngen application solutions, which are best used in the
+                business, are developed in a way that leaves a lasting
+                impression that is lasting.
               </p>
             </>,
           ]}
@@ -609,14 +617,14 @@ const ApplicationSolutions = () => {
         <FullSizeImageSection
           backgroundImage={assets.applicationSolFullSize}
           title="Smart applications for modern businesses"
-          description="We are passionate about creating software that is scalable and efficient, and that meets the needs of businesses of the 21st century."
+          description="We are fervent about developing software that is scalable and efficient, and that fulfils the requirements of the business in the 21 st century by providing end-to-end application development services."
           buttonText="Discover More"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
         <HowWeWork
           heading="Our Application Development Process"
-          desc="We adhere to a transparent and well-organized process from start to finish to guarantee that every application meets the highest standards:"
+          desc="Our process is transparent and well structured from start to end to ensure that all application solutions are of the best standards:"
           steps={steps}
         />
         <GetStarted
@@ -625,7 +633,7 @@ const ApplicationSolutions = () => {
           textColor="text-white"
           title="Start Your Digital Transformation Journey"
           description={[
-            "Capyngen builds tailored app solutions for the corporate world that are fun to use and make the company grow faster, up to the global level.",
+            "Capyngen develops custom application solutions collabors to the business community, which are enjoyable to access and help the company develop more quickly, as high as worldwide, with the best application development solutions.",
           ]}
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
