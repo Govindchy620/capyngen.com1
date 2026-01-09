@@ -18,7 +18,7 @@ const BenefitsSection = ({
           }`}
         >
           {/* Heading with accent */}
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight drop-shadow-lg">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight drop-shadow-lg">
             {heading}
           </h1>
 

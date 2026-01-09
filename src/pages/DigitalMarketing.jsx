@@ -369,7 +369,8 @@ const DigitalMarketing = () => {
         "The prices are set depending on the degree of the service, size and the duration of the campaign. Capyngen has the facility to scale businesses based on their size and price.",
     },
     {
-      question: "Where do I begin with the digital marketing services of Capyngen?",
+      question:
+        "Where do I begin with the digital marketing services of Capyngen?",
       answer:
         "Begin with a free consultation to discuss your goals and receive a company-specific plan of digital marketing.",
     },
@@ -569,7 +570,8 @@ const DigitalMarketing = () => {
     {
       step: "Step 03",
       title: "Execution",
-      description: "Use the SEO, advertisements, content, and social campaigns.",
+      description:
+        "Use the SEO, advertisements, content, and social campaigns.",
     },
     {
       step: "Step 04",
@@ -676,7 +678,7 @@ const DigitalMarketing = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          title="Expand Your Company through the Introduction of the appropriate Marketing Strategies"
+          title="Expand Your Company through the Introduction of the appropriate Marketing Strategies."
           description={[""]}
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
@@ -734,9 +736,9 @@ const DigitalMarketing = () => {
             <>
               This is because we take pleasure in providing internet solutions
               that are best suited and comprehensive in fulfilling numerous
-              business goals over the internet.{" "}
-              <Link to={"/"}>Capyngen</Link> is ranked in the top 10 digital
-              marketing company in the market by many global companies.
+              business goals over the internet. <Link to={"/"}>Capyngen</Link>{" "}
+              is ranked in the top 10 digital marketing company in the market by
+              many global companies.
             </>
           }
           benefits={solutionsData}

@@ -76,6 +76,7 @@ import CareerAdminPanel from "./pages/AdminPanel/components/CareerAdminPanel";
 import ViewReports from "./pages/AdminPanel/components/ViewReports";
 import Settings from "./pages/AdminPanel/components/Settings";
 import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
+import DesignLandingPage from "./pages/LandingPage/DesignLandingPage/DesignLandingPage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,6 +97,7 @@ const AppContent = () => {
   // Routes where global navbar/footer should be hidden
   const noLayoutRoutes = [
     "/digital-marketing-landing-page",
+    "/design-landing-page",
     "/greetings",
     "/admin-login",
     "/admin-dashboard",
@@ -202,6 +204,7 @@ const AppContent = () => {
           path="/digital-marketing-landing-page"
           element={<LandingPage />}
         />
+        <Route path="/design-landing-page" element={<DesignLandingPage />} />
         <Route path="/greetings" element={<GreetingsPage />} />
         <Route
           path="/web-development-hidden-page"

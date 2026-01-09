@@ -23,20 +23,23 @@ export default function Banner15() {
             </span>
           </h1>
           <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-2xl leading-relaxed">
-            We help distributors and wholesalers from international markets to
-            simplify their operations, fully utilize their supply chain and
-            increase their revenue through smart consumer packaged goods
-            software solutions and customized Digital Marketing Solution For CPG
-            industry campaigns.We help distributors and wholesalers from
-            international markets to simplify their operations, fully utilize
-            their supply chain and increase their revenue through smart consumer
-            packaged goods software solutions and customized Digital Marketing
-            Solution For CPG industry campaigns.
+            We assist distributors and wholesalers of foreign markets to make
+            their business easier to conduct their business fully, leverage
+            their supply chain and earn more, by means of smart consumer
+            packaged goods software solutions and tailor-made Digital Marketing
+            Solution for CPG industry campaigns. We assist distributors and
+            wholesalers of foreign markets to make their business easier to
+            conduct their business fully, leverage their supply chain and earn
+            more, by means of smart consumer packaged goods software solutions
+            and tailor-made Digital Marketing Solution for CPG industry
+            campaigns. We are also specialised in the provision of high-quality
+            CPG distribution services with modern technology.
           </p>
           <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-2xl leading-relaxed">
-            Boost efficiency with product lifecycle management software,
-            warehouse management solutions, and end-to-end consumer packaged
-            goods software solutions. Get in touch with Capyngen today!
+            Increase efficiency through product life cycle management software,
+            warehouse management software solutions, and end-to-end consumer
+            packaged goods software solutions. Call Capyngen today and get a
+            formidable CPG software solution and IT services for CPG!
           </p>
         </div>
       </div>
@@ -49,17 +52,20 @@ export default function Banner15() {
           ?
         </h2>
         <p className="mt-6 text-white text-base lg:text-xl max-w-2xl leading-relaxed">
-          Global Expertise in IT solutions for CPG distribution and Digital
-          Marketing – The best solutions for distributors all over the world
-          were designed.
+          International Knowledge in IT solutions for CPG distribution and
+          Digital Marketing - The most appropriate solutions to distributors
+          worldwide were developed, particularly the businesses that seek to
+          grow with CPG distribution services products.
         </p>
         <p className="mt-6 text-white text-base lg:text-xl max-w-2xl leading-relaxed">
-          Scalable Systems – You can continue your business operations in
-          different regions without any restrictions.
+          Scalable Systems – Our advanced IT solutions in cpg distribution
+          sector in India ensure that you feel free to expand your businesses in
+          other locations.
         </p>
         <p className="mt-6 text-white text-base lg:text-xl max-w-2xl leading-relaxed">
-          Proven Strategies to Attract Retailers and Buyers – We help you grow
-          with targeted campaigns.
+          Best-tested Strategies to win Retailers and Buyers - We can make you
+          grow with highly targeted campaigns by a well-known CPG software
+          company.
         </p>
       </aside>
     </section>

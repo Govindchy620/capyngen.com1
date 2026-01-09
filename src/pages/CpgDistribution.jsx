@@ -177,23 +177,6 @@ const faqSchema = {
 };
 
 const CpgDistribution = () => {
-  const whyChooseData = [
-    {
-      title:
-        "International Knowledge in IT solutions for CPG distribution and Digital Marketing - The most appropriate solutions to distributors worldwide were developed, particularly the businesses that seek to grow with CPG distribution services products.",
-      description: "",
-    },
-    {
-      title:
-        "Scalable Systems – Our advanced IT solutions in cpg distribution sector in India ensure that you feel free to expand your businesses in other locations.",
-      description: "",
-    },
-    {
-      title:
-        "Best-tested Strategies to win Retailers and Buyers - We can make you grow with highly targeted campaigns by a well-known CPG software company.",
-      description: "",
-    },
-  ];
   const solutionsData = [
     {
       title: "IT and Web Solutions",
@@ -519,46 +502,6 @@ const CpgDistribution = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner16 />
-      <TopRatedCompany
-        title="IT Solutions for CPG Distribution"
-        description={[
-          <>
-            <p>
-              We assist distributors and wholesalers of foreign markets to make
-              their business easier to conduct their business fully, leverage
-              their supply chain and earn more, by means of smart consumer
-              packaged goods software solutions and tailor-made{" "}
-              <Link to={"/digital-marketing"}>Digital Marketing Solution</Link>{" "}
-              for CPG industry campaigns. We are also specialised in the
-              provision of high-quality CPG distribution services with modern
-              technology.
-            </p>
-            <p>
-              Increase efficiency through product life cycle management
-              software, warehouse management software solutions, and end-to-end
-              consumer packaged goods software solutions. Call{" "}
-              <Link to={"/"}>Capyngen</Link> today and get a formidable CPG
-              software solution and IT services for CPG!
-            </p>
-          </>,
-        ]}
-        image={assets.cpg1}
-        background={assets.patternBg1}
-        imageHeight="aspect-[1/1]"
-        isHidden="hidden"
-      />
-      <CardsSection
-        heading="Why Choose Capyngen ?"
-        subheading=""
-        services={whyChooseData}
-        sectionBg="bg-black"
-        cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
-        headColor="text-white"
-        hoverBg=" hover:bg-gray-700"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-      />
       <BenefitsSection
         heading="Reasons why digital transformation is necessary for CPG distributors"
         desc={

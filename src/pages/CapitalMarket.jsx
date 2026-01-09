@@ -275,8 +275,7 @@ const CapitalMarket = () => {
     },
     {
       question: "Do you offer cloud solutions?",
-      answer:
-        "Yes, there are safe, scaled, and user friendly cloud services.",
+      answer: "Yes, there are safe, scaled, and user friendly cloud services.",
     },
     {
       question: "How fast can it be deployed?",
@@ -424,7 +423,9 @@ const CapitalMarket = () => {
               How can you make your strategy more testing-specific, make new
               rules, etc?
             </li>
-            <li>Execution of trade, which does not involve human participation</li>
+            <li>
+              Execution of trade, which does not involve human participation
+            </li>
             <li>Make more money in the super-fast operations</li>
           </ul>
         </>
@@ -469,24 +470,28 @@ const CapitalMarket = () => {
   ];
   const solutionsData = [
     {
-      title: "Faster trading, increased trust and increased security",
-      desc: "",
+      title: "",
+      desc: "We know everything about the capital market software that you need, starting with a clean sheet of paper to the completed product. Our solutions, which are termed as the best IT solutions in capital market in India provide.",
     },
     {
-      title: "Smart decisions are made by using on-the-fly data analytics",
-      desc: "",
+      title: "",
+      desc: "Faster trading, increased trust and increased security",
     },
     {
-      title: "Scalable long-term cloud-based infrastructure",
-      desc: "",
+      title: "",
+      desc: "Smart decisions are made by using on-the-fly data analytics",
     },
     {
-      title: "Easy migration of old systems to new advanced systems",
-      desc: "",
+      title: "",
+      desc: "Scalable long-term cloud-based infrastructure",
     },
     {
-      title: "Complete deployment, service and after-sales",
-      desc: "",
+      title: "",
+      desc: "Easy migration of old systems to new advanced systems",
+    },
+    {
+      title: "",
+      desc: "Complete deployment, service and after-sales",
     },
   ];
   const slidesData = [
@@ -640,15 +645,7 @@ const CapitalMarket = () => {
       />
       <BenefitsSection
         heading="Benefits of Choosing Capyngen"
-        desc={
-          <>
-            Why Capyngen is the Capital Market{" "}
-            <Link to={"/"}>IT Services</Link> Partner. We know everything about
-            the capital market software that you need, starting with a clean
-            sheet of paper to the completed product. Our solutions, which are
-            termed as the best IT solutions in capital market in India provide:
-          </>
-        }
+        desc={<>Why Capyngen is the Capital Market IT Services Partner.</>}
         benefits={solutionsData}
         image={assets.capitalMarket8}
         footerNote=""
