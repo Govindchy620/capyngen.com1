@@ -6,12 +6,14 @@ import CTASection from "./CTASection";
 import CleanCodeSection from "./CleanCodeSection";
 import TechStackSection from "./TechStackSection";
 import Process from "./Process";
+import DigitalTransformation from "./DigitalTransformation";
 
 const DesignLandingPage = () => {
   return (
-    <div>
+    <div className="bg-black">
       <Navbar />
       <HeroSection />
+      <DigitalTransformation />
       <OurServices />
       <CTASection />
       <CleanCodeSection />

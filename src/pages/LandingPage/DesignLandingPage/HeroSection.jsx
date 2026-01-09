@@ -1,147 +1,65 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const HeroSection = () => {
+const ServicesHero = () => {
   return (
-    <section className="w-full min-h-screen bg-black">
-      {/* MAIN */}
-      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-        {/* LEFT CONTENT */}
-        <div className="text-white">
-          <p className="uppercase tracking-widest text-sm font-semibold opacity-90 mb-4">
-            Web Application
-          </p>
+    <section className="w-full px-4 md:px-8 lg:px-12 py-10 mt-17 text-white">
+      <div>
+        <div className="relative overflow-hidden rounded-3xl min-h-150 flex items-center">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url('https://www.boopin.com/wp-content/uploads/2023/11/service-page-1-scaled.jpg')",
+            }}
+          />
 
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight mb-6">
-            Development Services
-          </h1>
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative z-10 max-w-4xl px-6 md:px-12 w-1/2"
+          >
+            <h1 className="text-white font-bold leading-tight text-4xl">
+              Capyngen – India’s Most Trusted Web, App & CRM Development Company
+            </h1>
+            <br />
 
-          <p className="text-lg opacity-90 max-w-xl mb-10">
-            Build fast, modern and secure web applications with a proven team.
-            From discovery to deployment—clean code, scalable architecture and
-            performance that holds up in production.
-          </p>
+            <h2 className="font-bold text-2xl">
+              Helping Businesses Grow with Secure, Scalable, and Reliable
+              Digital IT Solutions
+            </h2>
+            <br />
 
-          {/* FEATURES */}
-          <ul className="space-y-4 mb-12">
-            <li className="flex items-center gap-3">
-              <span className="text-xl">✔</span>
-              <span className="text-lg">Full-cycle product engineering</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-xl">✔</span>
-              <span className="text-lg">
-                Dedicated teams or fixed-scope delivery
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-xl">✔</span>
-              <span className="text-lg">
-                Security-first, test-driven approach
-              </span>
-            </li>
-          </ul>
+            <p className="text-lg leading-tight">
+              Capyngen helps startups, high-growth companies, and large
+              enterprises to develop custom software, web platforms, mobile
+              apps, and smart systems that are dependable, scalable, and
+              designed to deliver results.
+            </p>
+            <br />
+            <p className="text-lg leading-tight">
+              Code writing is not our only thing; we address actual business
+              issues through technology that not only works now but also expands
+              with your business.
+            </p>
 
-          {/* BADGES */}
-          <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-3 bg-white/10 px-5 py-4 rounded-xl backdrop-blur">
-              <span className="text-yellow-400 text-lg">★</span>
-              <div>
-                <p className="font-semibold">Top Rated</p>
-                <p className="text-sm opacity-80">4.8/5 average</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white/10 px-5 py-4 rounded-xl backdrop-blur">
-              <span className="text-yellow-400 text-lg">🏆</span>
-              <div>
-                <p className="font-semibold">Trusted Vendor</p>
-                <p className="text-sm opacity-80">NDA-ready</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white/10 px-5 py-4 rounded-xl backdrop-blur">
-              <span className="text-yellow-400 text-lg">⚡</span>
-              <div>
-                <p className="font-semibold">Fast Delivery</p>
-                <p className="text-sm opacity-80">Weekly shipping</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT FORM */}
-        <div className="bg-white rounded-xl shadow-2xl p-10">
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  placeholder="+91 9XXXX XXXXX"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  What do you need?
-                </label>
-                <select className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                  <option>Select one</option>
-                  <option>Web App Development</option>
-                  <option>Mobile App Development</option>
-                  <option>UI/UX Design</option>
-                  <option>Dedicated Team</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Project details
-              </label>
-              <textarea
-                rows="4"
-                placeholder="What are you building? Goals, features, timeline..."
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-4 rounded-full text-lg shadow-md"
-            >
-              Submit
-            </button>
-          </form>
+            {/* <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-fuchsia-500 px-7 py-3 text-sm font-semibold text-white hover:bg-fuchsia-500 transition-all duration-300"
+          >
+            LET’S TALK
+          </motion.button> */}
+          </motion.div>
+          <div></div>
         </div>
       </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default ServicesHero;
