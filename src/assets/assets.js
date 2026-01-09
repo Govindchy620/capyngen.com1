@@ -791,6 +791,14 @@ import webDevHiddenPage26 from "./webDevHiddenPage26.png";
 import webDevHiddenPage27 from "./webDevHiddenPage27.png";
 import appDevHiddenPage2 from "./appDevHiddenPage2.png";
 import appDevHiddenPage3 from "./appDevHiddenPage3.png";
+import designLanding2 from "./designLanding2.png";
+import designLanding3 from "./designLanding3.png";
+import designLanding4 from "./designLanding4.png";
+import designLanding5 from "./designLanding5.png";
+import designLanding6 from "./designLanding6.png";
+import designLanding7 from "./designLanding7.png";
+import designLanding8 from "./designLanding8.png";
+import designLanding9 from "./designLanding9.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1591,6 +1599,14 @@ export const assets = {
   webDevHiddenPage27,
   appDevHiddenPage2,
   appDevHiddenPage3,
+  designLanding2,
+  designLanding3,
+  designLanding4,
+  designLanding5,
+  designLanding6,
+  designLanding7,
+  designLanding8,
+  designLanding9,
 };
 
 export const navItems = [

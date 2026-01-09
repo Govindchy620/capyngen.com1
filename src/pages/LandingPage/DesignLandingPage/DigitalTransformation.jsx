@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { assets } from "../../../assets/assets";
 
 const services = [
   {
@@ -24,8 +25,7 @@ const services = [
         when they are using a product or a service.
       </>
     ),
-    image:
-      "https://www.boopin.com/wp-content/uploads/2024/02/Image-1-scaled.jpg",
+    image: assets.designLanding2,
   },
 
   {
@@ -50,7 +50,7 @@ const services = [
         time.
       </>
     ),
-    image: "/mnt/data/0aedb2a9-7f3a-4ecd-98d0-460e3dee4d48.png",
+    image: assets.designLanding3,
   },
 
   {
@@ -78,7 +78,7 @@ const services = [
         are what we are talking about here.
       </>
     ),
-    image: "/mnt/data/0aedb2a9-7f3a-4ecd-98d0-460e3dee4d48.png",
+    image: assets.designLanding4,
   },
 
   {
@@ -107,7 +107,7 @@ const services = [
         that customers trust and enjoy.
       </>
     ),
-    image: "/mnt/data/0aedb2a9-7f3a-4ecd-98d0-460e3dee4d48.png",
+    image: assets.designLanding5,
   },
 
   {
@@ -133,7 +133,7 @@ const services = [
         Blockchain is the best way to do things.
       </>
     ),
-    image: "/mnt/data/0aedb2a9-7f3a-4ecd-98d0-460e3dee4d48.png",
+    image: assets.designLanding6,
   },
 
   {
@@ -158,7 +158,7 @@ const services = [
         systems resilient.
       </>
     ),
-    image: "/mnt/data/0aedb2a9-7f3a-4ecd-98d0-460e3dee4d48.png",
+    image: assets.designLanding7,
   },
 
   {
@@ -187,12 +187,12 @@ const services = [
         the systems that Capyngen builds.
       </>
     ),
-    image: "/mnt/data/0aedb2a9-7f3a-4ecd-98d0-460e3dee4d48.png",
+    image: assets.designLanding8,
   },
 
   {
     number: "8",
-    title: "CRM & \nManagement Software",
+    title: "CRM & Management \nSoftware",
     desc: (
       <>
         This program should have everything you need to know about your leads,
@@ -208,18 +208,18 @@ const services = [
       "Integrated communication tools",
     ],
     note: <>These systems help you convert more leads into loyal customers.</>,
-    image: "/mnt/data/0aedb2a9-7f3a-4ecd-98d0-460e3dee4d48.png",
+    image: assets.designLanding9,
   },
 ];
 
 const DigitalTransformation = () => {
   return (
-    <section className="w-full text-white py-14 md:py-20">
-      <div className="mx-auto max-w-7xl px-5 md:px-10 space-y-20">
+    <section className="w-full text-white py-12 sm:py-14 md:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 space-y-16 sm:space-y-20">
         {services.map((service, sectionIndex) => (
           <div
             key={sectionIndex}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 items-start group"
           >
             {/* Left Content */}
             <motion.div
@@ -230,25 +230,25 @@ const DigitalTransformation = () => {
               className="lg:col-span-7"
             >
               {/* Heading */}
-              <div className="flex items-start gap-7">
-                <div className="text-5xl font-extrabold leading-none">
+              <div className="flex items-start gap-4 sm:gap-7">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-none shrink-0">
                   {service.number}
                 </div>
 
                 <div>
-                  <h2 className="text-5xl uppercase font-extrabold leading-[1.05] whitespace-pre-line">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-extrabold leading-[1.05] whitespace-pre-line">
                     {service.title}
                   </h2>
                 </div>
               </div>
 
               {/* Main Description */}
-              <p className="mt-10 text-base md:text-lg max-w-2xl">
+              <p className="mt-6 sm:mt-8 md:mt-10 text-sm sm:text-base md:text-lg max-w-full sm:max-w-2xl leading-relaxed text-white/90">
                 {service.desc}
               </p>
 
               {/* Bullet List */}
-              <div className="mt-5 space-y-4">
+              <div className="mt-4 sm:mt-5 space-y-3 sm:space-y-4">
                 {service.points.map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -260,9 +260,9 @@ const DigitalTransformation = () => {
                       delay: idx * 0.08,
                       ease: "easeOut",
                     }}
-                    className="flex items-center gap-3"
+                    className="flex items-start gap-3"
                   >
-                    <span className="text-[13px] md:text-sm tracking-widest font-medium">
+                    <span className="text-[12px] sm:text-[13px] md:text-sm tracking-wide sm:tracking-widest font-medium leading-relaxed">
                       {item}
                     </span>
                   </motion.div>
@@ -276,7 +276,7 @@ const DigitalTransformation = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-                  className="mt-7 text-sm md:text-base text-white/80 max-w-2xl leading-relaxed"
+                  className="mt-6 sm:mt-7 text-xs sm:text-sm md:text-base text-white/75 max-w-full sm:max-w-2xl leading-relaxed"
                 >
                   {service.note}
                 </motion.p>
@@ -291,17 +291,17 @@ const DigitalTransformation = () => {
               transition={{ duration: 0.9, ease: "easeOut" }}
               className="lg:col-span-5 flex lg:justify-end"
             >
-              <div className="relative w-full max-w-[440px]">
-                <div className="overflow-hidden rounded-[28px] shadow-lg">
+              <div className="relative w-full max-w-full sm:max-w-[440px]">
+                <div className="overflow-hidden rounded-2xl sm:rounded-[28px] shadow-lg">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="h-[400px] w-full object-cover"
+                    className="w-full object-cover h-[240px] sm:h-[320px] md:h-[400px] grayscale group-hover:grayscale-0 transition-all duration-200"
                   />
                 </div>
 
                 {/* subtle highlight */}
-                <div className="pointer-events-none absolute inset-0 rounded-[28px] ring-1 ring-black/5" />
+                <div className="pointer-events-none absolute inset-0 rounded-2xl sm:rounded-[28px] ring-1 ring-black/5" />
               </div>
             </motion.div>
           </div>
