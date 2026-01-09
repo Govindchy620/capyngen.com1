@@ -7,6 +7,7 @@ import CleanCodeSection from "./CleanCodeSection";
 import TechStackSection from "./TechStackSection";
 import Process from "./Process";
 import DigitalTransformation from "./DigitalTransformation";
+import WhyTrustCapyngen from "./WhyTrustCapyngen";
 
 const DesignLandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const DesignLandingPage = () => {
       <Navbar />
       <HeroSection />
       <DigitalTransformation />
+      <WhyTrustCapyngen />
       <OurServices />
       <CTASection />
       <CleanCodeSection />
