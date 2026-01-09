@@ -212,10 +212,33 @@ const services = [
   },
 ];
 
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5, ease: "easeOut" },
+  }),
+};
+
 const DigitalTransformation = () => {
   return (
     <section className="w-full text-white py-12 sm:py-14 md:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 space-y-16 sm:space-y-20">
+      <motion.h2
+        className="text-4xl md:text-5xl font-extrabold text-white mb-6 text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUpVariants}
+        custom={0}
+      >
+        Trusted Software Development Services
+      </motion.h2>
+      <p className="text-center text-xl pb-20">
+        Below is a snapshot of the core areas where Capyngen excels — all
+        designed to deliver high performance and real business impact:
+      </p>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 space-y-16 sm:space-y-28">
         {services.map((service, sectionIndex) => (
           <div
             key={sectionIndex}
@@ -296,7 +319,7 @@ const DigitalTransformation = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full object-cover h-[240px] sm:h-[320px] md:h-[400px] grayscale group-hover:grayscale-0 transition-all duration-200"
+                    className="w-full object-cover h-[240px] sm:h-[320px] md:h-[400px] lg:grayscale group-hover:grayscale-0 transition-all duration-200"
                   />
                 </div>
 

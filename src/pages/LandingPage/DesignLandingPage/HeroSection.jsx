@@ -61,9 +61,11 @@ export function LeadForm({
 
   return (
     <div
-      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-md p-2 shadow-2xl border border-indigo-600/40 overflow-y-auto transition-shadow duration-300 ${
-        modalMode ? "p-8 text-white" : ""
-      }`}
+      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px]
+  bg-gradient-to-br from-indigo-950/60 via-black/60 to-violet-950/60
+  backdrop-blur-xl rounded-2xl p-2 shadow-[0_20px_60px_rgba(99,102,241,0.25)]
+  border border-indigo-500/30 overflow-y-auto transition-shadow duration-300
+  ${modalMode ? "p-8 text-white" : ""}`}
       style={modalMode ? { color: "white" } : {}}
     >
       {modalMode && (
@@ -540,7 +542,7 @@ export function LeadForm({
         </div>
 
         {/* Footer / navigation */}
-        <div className="px-0 md:px-8 py-4 border-t border-white/10 bg-gradient-to-t from-transparent to-white/10">
+        <div className="px-0 md:px-8 py-4 border-t border-white/10 ">
           <div className="flex items-center justify-between">
             <div>
               {step > 1 && (
@@ -814,7 +816,7 @@ const HeroSection = () => {
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];
 
   return (
-    <section className="w-full px-4 md:px-8 lg:px-12 py-10 mt-16 md:mt-20 text-white">
+    <section className="w-full px-4 md:px-8 lg:px-12 py-10 mt-16 md:mt-14 text-white">
       <div className="relative overflow-hidden rounded-3xl min-h-[520px] md:min-h-[620px] flex items-center">
         {/* Background Image */}
         <div
@@ -860,7 +862,7 @@ const HeroSection = () => {
             transition={{ delay: 0.7, duration: 0.35 }}
           >
             <button
-              className="inline-flex items-center gap-2 rounded-full border-2 border-fuchsia-500 px-7 py-3 text-sm font-semibold text-white hover:bg-fuchsia-500 transition-all duration-300"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-blue-500 px-7 py-3 text-sm font-semibold text-white hover:bg-blue-500 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}

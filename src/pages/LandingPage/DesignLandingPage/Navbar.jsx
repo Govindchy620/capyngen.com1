@@ -13,10 +13,10 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Home", href: "home" },
-    { label: "Why Choose Us", href: "whychoose" },
-    { label: "Best for Digital Marketing", href: "whycapyngenbetter" },
     { label: "Our Services", href: "ourservices" },
-    { label: "About Us", href: "about" },
+    { label: "Why Trust Capyngen", href: "whytrustcapyngen" },
+    { label: "Development Process", href: "developmentprocess" },
+    { label: "Contact Us", href: "contact" },
   ];
 
   return (
@@ -24,16 +24,16 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full backdrop-blur bg-white z-50"
+      className="fixed top-0 left-0 w-full backdrop-blur bg-white backdrop:blur-2xl z-50"
     >
-      <div className="max-w-[90vw] mx-auto flex justify-between items-center py-1 px-6 text-black">
+      <div className="max-w-[90vw] mx-auto flex justify-between items-center py-1 text-black">
         {/* Logo */}
         <motion.div
           className="text-xl font-bold tracking-wide cursor-pointer"
           whileHover={{ scale: 1.03 }}
           onClick={() => scrollToSection("home")}
         >
-          <img src={assets.capyngenLogo} alt="" className="w-32" />
+          <img src={assets.capyngenLogo} alt="" className="w-30" />
         </motion.div>
 
         {/* Desktop Menu */}
