@@ -234,7 +234,7 @@ const DigitalTransformation = () => {
       >
         Trusted Software Development Services
       </motion.h2>
-      <p className="text-center text-xl pb-20">
+      <p className="text-center text-md md:text-xl pb-20">
         Below is a snapshot of the core areas where Capyngen excels — all
         designed to deliver high performance and real business impact:
       </p>

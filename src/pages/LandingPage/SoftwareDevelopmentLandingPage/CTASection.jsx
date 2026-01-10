@@ -21,7 +21,7 @@ export default function ReadyToBuild() {
     { icon: Twitter, href: "https://x.com/capyngen", label: "Twitter" },
     {
       icon: Youtube,
-      href: "https://www.youtube.com/@Capyngen-pvt-ltd",
+      href: "https://www.youtube.com/@Capyngen_official",
       label: "YouTube",
     },
   ];
@@ -75,9 +75,10 @@ export default function ReadyToBuild() {
           systems — get in touch now and turn your vision into powerful digital
           solutions.
         </motion.p>
+
         {/* Contact & Social Links */}
         <motion.div
-          className="mt-10 pt-6 border-t border-slate-700/50 space-y-6 max-w-4xl mx-auto"
+          className="mt-10 pt-6 border-t border-slate-700/50 space-y-6 max-w-4xl mx-auto flex flex-col items-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

@@ -51,7 +51,7 @@ export function WhyTrustCapyngen() {
 
         {/* Intro */}
         <motion.p
-          className="text-lg md:text-xl text-white/85 mb-12 max-w-5xl mx-auto leading-relaxed"
+          className="text-md md:text-xl text-white/85 mb-12 max-w-5xl mx-auto leading-relaxed"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
