@@ -23,16 +23,17 @@ const StatsSection = () => {
       >
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-            Design That Creates{" "}
-            <span className="text-blue-500">Real Business Impact</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
+            Build Software That{" "}
+            <span className="text-blue-500">Drives Real Business Growth</span>
           </h2>
 
           <p className="text-lg text-slate-300 mb-3">
-            We don’t measure success by aesthetics.
+            We don’t just develop software.
           </p>
           <p className="text-lg text-slate-300">
-            We measure it by growth, conversions, and performance.
+            We build scalable, secure, and high-performance solutions that solve
+            real business problems and deliver measurable results.
           </p>
         </div>
 

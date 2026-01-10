@@ -773,6 +773,7 @@ const HeroSection = () => {
         budget: formData.budget,
         bestTime: formData.bestTime,
         notes: formData.notes,
+        leadSourcePage: "Software-Development",
       };
 
       const res = await fetch("https://api.capyngen.com/api/lead", {

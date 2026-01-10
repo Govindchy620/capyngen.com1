@@ -26,7 +26,7 @@ const SoftwareDevelopmentLandingPage = () => {
       <FullSizeImageSection
         backgroundImage={assets.webDevFullSize}
         title="Transform your online presence with Capyngen"
-        description="We are committed to provide top-notch web development services that attract and retain customers."
+        description="We are committed to provide top-notch software development services that attract and retain customers."
         buttonText="CONTACT US"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"
@@ -45,7 +45,7 @@ const SoftwareDevelopmentLandingPage = () => {
         title="Create powerful websites that perform"
         description="Our main focus is on your business; thus, we make sure your website is responsive, fast, and scalable."
         buttonText="Get Started"
-        buttonLink="/contact-us"
+        buttonLink="https://www.capyngen.com/"
         overlayColor="bg-black/40"
       />
       <div className="mt-16"></div>
