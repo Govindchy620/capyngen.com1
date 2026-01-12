@@ -26,10 +26,10 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/custom-ai-solutions#webpage",
   url: "https://www.capyngen.com/custom-ai-solutions",
-  name: "Custom AI Solutions | AI Software Development Company – Capyngen",
+  name: "Best Custom AI Solutions Company in Gurgaon | Capyngen",
   description:
-    "Transform your business with Capyngen’s custom AI solutions. As a top AI software development company, we build intelligent, scalable, and future-ready systems.. ([capyngen.com/custom-ai-solutions](https://www.capyngen.com/custom-ai-solutions))",
-  inLanguage: "en-US",
+    "Capyngen is the best custom AI solutions company in Gurgaon, delivering scalable AI solutions that automate processes, boost efficiency, and drive business growth.",
+  inLanguage: "en-IN",
   isPartOf: {
     "@type": "WebSite",
     "@id": "https://www.capyngen.com/#website",
@@ -37,43 +37,47 @@ const webpageSchema = {
   publisher: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
+    url: "https://www.capyngen.com/",
     logo: {
       "@type": "ImageObject",
       url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
     },
   },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/customAi2--gOEWS8G.png",
+  },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.capyngen.com/custom-ai-solutions#service",
-  name: "Custom AI Solutions",
-  serviceType: "Custom Artificial Intelligence Solutions",
+  name: "Best Custom AI Solutions Company in Gurgaon | Capyngen",
+  description:
+    "Capyngen provides custom AI solutions that help businesses automate processes, enhance efficiency, and drive sustainable growth with scalable artificial intelligence solutions.",
+  url: "https://www.capyngen.com/custom-ai-solutions",
+  serviceType: "Custom AI Solutions",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
+    url: "https://www.capyngen.com/",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
   },
   areaServed: {
     "@type": "Country",
     name: "India",
   },
-  description:
-    "Transform your business with Capyngen’s custom AI solutions. As a top AI software development company, we build intelligent, scalable, and future-ready systems.. ([capyngen.com/custom-ai-solutions](https://www.capyngen.com/custom-ai-solutions))",
-  url: "https://www.capyngen.com/custom-ai-solutions",
   image: {
     "@type": "ImageObject",
-    url: "https://www.capyngen.com/assets/customAi1-bBKVafWq.jpg",
-    caption: "Custom AI Solutions | AI Software Development Company – Capyngen",
-  },
-  offers: {
-    "@type": "Offer",
-    price: "Custom",
-    priceCurrency: "INR",
-    availability: "InStock",
+    url: "https://www.capyngen.com/assets/customAi2--gOEWS8G.png",
+    caption: "Custom AI Solutions by Capyngen",
   },
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -481,16 +485,14 @@ const CustomAiSolution = () => {
   return (
     <div className="relative">
       <Helmet>
-        <title>
-          Custom AI Solutions | AI Software Development Company – Capyngen
-        </title>
+        <title>Best Custom AI Solutions Company in Gurgaon | Capyngen</title>
         <meta
           name="description"
-          content="Transform your business with Capyngen’s custom AI solutions. As a top AI software development company, we build intelligent, scalable, and future-ready systems."
+          content="Capyngen is the best custom AI solutions company in Gurgaon, delivering scalable AI solutions that automate processes, boost efficiency, and drive business growth."
         />
         <meta
           name="keywords"
-          content="Custom AI Solutions | AI Software Development Company – Capyngen"
+          content="Best custom AI solutions Company in Gurgaon, custom AI solutions"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -502,7 +504,7 @@ const CustomAiSolution = () => {
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner3
-          title="Custom AI Solutions for a Faster Business Growth"
+          title="Instant Best custom AI solutions Company in Gurgaon– Get India’s #1 Trusted custom AI solutions"
           subtitle="Tap into better decision-making, streamline your business activities, and foster innovation by using Capyngen’s bespoke AI solutions designed to meet your business requirements globally."
           backgroundImage={assets.customAi1}
           overlayColor="bg-black"

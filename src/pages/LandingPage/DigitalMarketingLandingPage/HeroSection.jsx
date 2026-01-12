@@ -776,7 +776,7 @@ export default function HeroSection() {
         budget: formData.budget,
         bestTime: formData.bestTime,
         notes: formData.notes,
-        leadSourcePage: "Digital-Marketing",
+        leadSourcePage: "digital-marketing",
       };
 
       const res = await fetch("https://api.capyngen.com/api/lead", {
@@ -812,6 +812,15 @@ export default function HeroSection() {
     }
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];
 
   return (
@@ -827,9 +836,15 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-3xl md:text-4xl xl:text-5xl font-extrabold mb-6 leading-tight tracking-tight text-white drop-shadow-lg">
-            Grow Your Brand. Get 100% FREE Social Media Marketing for 1 Month.
-          </h1>
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1] mb-6"
+          >
+            Grow Your Brand. Get 100% Free{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-300 to-white">
+              Marketing for 1 Month.
+            </span>{" "}
+          </motion.h1>
           <p className="text-md md:text-lg xl:text-xl text-indigo-200 max-w-xl leading-relaxed selection:bg-indigo-600 selection:text-white">
             Unlock expert-driven campaigns that help your business shine across
             Facebook, Instagram, Twitter (X), and YouTube — absolutely free.

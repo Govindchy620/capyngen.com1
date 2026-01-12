@@ -33,10 +33,10 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/web-development#webpage",
   url: "https://www.capyngen.com/web-development",
-  name: "Website Development Company | Build Your Website – Capyngen",
+  name: "Web Development Services | Best Website Development Company in India",
   description:
-    " Looking for website development company? Get a fast, responsive, and SEO-friendly website built by Capyngen. Start your online journey today — contact us now. {Source page}.",
-  inLanguage: "en-US",
+    "We offer professional web development services to build fast and scalable websites. Choose the best website development company in India for your business needs.",
+  inLanguage: "en-IN",
   isPartOf: {
     "@type": "WebSite",
     "@id": "https://www.capyngen.com/#website",
@@ -44,63 +44,66 @@ const webpageSchema = {
   publisher: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
+    url: "https://www.capyngen.com/",
     logo: {
       "@type": "ImageObject",
       url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
     },
   },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/webDevFullSize-BP-l_Fzm.png",
+    caption: "Web Development Services by Capyngen",
+  },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.capyngen.com/web-development#service",
-  name: "Web Development Services",
-  serviceType:
-    "Website Design & Development, E-commerce Development, CMS Solutions",
+  name: "Web Development Services | Best Website Development Company in India",
+  description:
+    "We offer professional web development services to build fast and scalable websites. Choose the best website development company in India for your business needs.",
+  url: "https://www.capyngen.com/web-development",
+  serviceType: "Web Development Services",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
+    url: "https://www.capyngen.com/",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
   },
   areaServed: {
     "@type": "Country",
     name: "India",
   },
-  description:
-    "Looking for website development company? Get a fast, responsive, and SEO-friendly website built by Capyngen. Start your online journey today — contact us now!. :contentReference[oaicite:0]{index=0}",
-  url: "https://www.capyngen.com/web-development",
   image: {
     "@type": "ImageObject",
-    url: "https://www.capyngen.com/assets/webdevBanner3-DQe2LW_N.jpg",
-    caption: "Website Development Company | Build Your Website with Capyngen",
-  },
-  offers: {
-    "@type": "Offer",
-    price: "Custom",
-    priceCurrency: "INR",
-    availability: "InStock",
+    url: "https://www.capyngen.com/assets/webDevFullSize-BP-l_Fzm.png",
+    caption: "Web Development Services by Capyngen",
   },
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/web-development#faq",
   mainEntity: [
     {
       "@type": "Question",
       name: "What is website development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Website development entails the process of setting up and managing websites, which involves front-end, back-end, and full stack development as well as ensuring functionality, performance, and user experience.",
+        text: "Website development involves front-end, back-end, and full-stack development to ensure functionality, performance, and user experience of websites.",
       },
     },
     {
       "@type": "Question",
-      name: "Why is professional website development important?",
+      name: "What is the importance of professional website development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Professional website development helps build trust, increase visitors, enhance engagement, and convert visitors into customers.",
+        text: "Professional website development helps build trust, attract visitors, increase engagement, and convert visitors into customers.",
       },
     },
     {
@@ -108,63 +111,63 @@ const faqSchema = {
       name: "What services are included in website development services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our website development services include custom website design, responsive design, CMS integration, web application development, e-commerce solutions, SEO, and ongoing maintenance.",
+        text: "Website development services include custom web development, responsive design, CMS integration, web application development, e-commerce solutions, SEO, and website maintenance.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does it take to build a website?",
+      name: "How long does it take to develop a website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The development time depends on website complexity, but standard business websites are usually completed within 3 to 12 weeks.",
+        text: "Website development timelines typically range from 3 to 12 weeks, depending on project complexity and requirements.",
       },
     },
     {
       "@type": "Question",
-      name: "Can Capyngen handle custom website development?",
+      name: "Does Capyngen offer custom web development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Capyngen develops fully customized websites aligned with your brand identity, content, and business goals.",
+        text: "Yes. Capyngen provides fully customized web development solutions tailored to your brand, business goals, and content requirements.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide responsive website design?",
+      name: "Do you provide responsive web design?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, all our websites are fully responsive, optimized for desktops, tablets, and mobile devices for seamless user experiences.",
+        text: "Yes. All websites we develop are fully responsive and optimized for desktop, tablet, and mobile devices.",
       },
     },
     {
       "@type": "Question",
-      name: "What CMS platforms do you work with?",
+      name: "Which CMS platforms do you work with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work with WordPress, Shopify, Joomla, Drupal, and other CMS platforms to choose the most suitable one for your business needs.",
+        text: "We work with popular CMS platforms including WordPress, Shopify, Joomla, Drupal, and other platforms based on project needs.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you develop e-commerce websites?",
+      name: "Do you develop e-commerce websites?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we provide e-commerce website development including secure payment gateways, product catalogs, and smooth checkout systems.",
+        text: "Yes. We develop feature-rich e-commerce websites with secure payment gateways, product management, and seamless checkout experiences.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer web application development?",
+      name: "Do you provide web application development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we create interactive, scalable, and business-oriented web applications tailored for modern workflows.",
+        text: "Yes. We build interactive and scalable web applications designed to support modern business processes.",
       },
     },
     {
       "@type": "Question",
-      name: "How do you ensure SEO-friendly development?",
+      name: "How do you ensure SEO-friendly website development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We ensure SEO-friendly development with clean coding, fast-loading pages, optimized images, meta tags, and structured schema markup.",
+        text: "We follow SEO best practices such as clean code, fast loading speed, optimized images, meta tags, and schema markup.",
       },
     },
     {
@@ -172,39 +175,39 @@ const faqSchema = {
       name: "Can you integrate third-party APIs and tools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, our team can integrate social media, CRMs, analytics, payment gateways, marketing platforms, and other third-party APIs.",
+        text: "Yes. We integrate third-party tools including CRM systems, analytics platforms, payment gateways, and marketing software.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide website maintenance services?",
+      name: "Do you offer website maintenance services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we offer regular website updates, backups, security monitoring, and continuous technical support.",
+        text: "Yes. Our website maintenance services include regular updates, backups, security monitoring, and ongoing technical support.",
       },
     },
     {
       "@type": "Question",
-      name: "What makes Capyngen the best website development company?",
+      name: "Why is Capyngen considered the best website development company?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Capyngen combines creativity, cutting-edge technology, and strategic expertise to deliver high-quality, scalable, and reliable website development solutions.",
+        text: "Capyngen combines creative design, modern technologies, and business expertise to deliver reliable, scalable, and high-quality website development services.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you build multilingual websites?",
+      name: "Do you develop multilingual websites?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we develop multilingual websites and internationalized web apps to help businesses expand into global markets.",
+        text: "Yes. We develop multilingual and internationalized websites to help businesses reach a global audience.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer landing page development?",
+      name: "Do you offer landing page development services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we design and develop marketing-focused landing pages that attract leads and convert visitors into customers.",
+        text: "Yes. We create conversion-focused landing pages optimized for marketing campaigns and lead generation.",
       },
     },
   ],
@@ -699,15 +702,15 @@ const WebDevelopment = () => {
     <div className="relative">
       <Helmet>
         <title>
-          Website Development Company | Build Your Website with Capyngen
+          Web Development Services | Best Website Development Company in India
         </title>
         <meta
           name="description"
-          content="Looking for website development company? Get a fast, responsive, and SEO-friendly website built by Capyngen. Start your online journey today — contact us now!"
+          content="We offer professional web development services to build fast and scalable websites. Choose the best website development company in India for your business needs."
         />
         <meta
           name="keywords"
-          content="Website Development Company | Build Your Website with Capyngen"
+          content="Web Development, Best website development company in India"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}

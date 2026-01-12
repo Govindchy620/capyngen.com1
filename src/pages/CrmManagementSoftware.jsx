@@ -40,15 +40,13 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/crm-management-software#webpage",
   url: "https://www.capyngen.com/crm-management-software",
-  name: "CRM & Management Solutions | Cloud CRM for Smarter Businesses – Capyngen",
+  name: "CRM Management Services – India’s Best CRM Software Provider",
   description:
-    "Streamline your business with Capyngen’s CRM & Management Solutions. From customer relationship management to cloud CRM, we help you grow smarter and faster.",
-  inLanguage: "en",
-  keywords: "CRM & Management Solutions",
+    "Get powerful CRM & management software designed to streamline sales, marketing, and customer relationships. Choose the best CRM management software for your business growth.",
+  inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
-    name: "Capyngen",
-    url: "https://www.capyngen.com",
+    "@id": "https://www.capyngen.com/#website",
   },
   publisher: {
     "@type": "Organization",
@@ -59,56 +57,60 @@ const webpageSchema = {
       url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
     },
   },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    caption: "CRM Management Services | Best CRM Software Provider in India",
+  },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType:
-    "CRM & Management Solutions, CRM Solutions, Customer Relationship Management Solutions, Business Management Solutions, Cloud CRM Solutions, Enterprise CRM Solutions, Project Management Solutions",
-  name: "CRM & Management Solutions | Cloud CRM for Smarter Businesses – Capyngen",
+  "@id": "https://www.capyngen.com/crm-management-software#service",
+  name: "CRM Management Services – India’s Best CRM Software Provider",
+  description:
+    "Get powerful CRM & management software designed to streamline sales, marketing, and customer relationships. Choose the best CRM management software for your business growth.",
+  url: "https://www.capyngen.com/crm-management-software",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
     url: "https://www.capyngen.com",
-    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
   },
   areaServed: {
-    "@type": "Place",
-    name: "Global",
+    "@type": "Country",
+    name: "India",
   },
-  url: "https://www.capyngen.com/crm-management-software",
-  description:
-    "Streamline your business with Capyngen’s CRM & Management Solutions. From customer relationship management to cloud CRM, we help you grow smarter and faster.",
-  keywords: "CRM & Management Solutions",
-  offers: {
-    "@type": "Offer",
-    url: "https://www.capyngen.com/contact",
-    price: "0.00",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
+  serviceType: "CRM Management Services",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/crm6-BQ4chRUW.png",
+    caption: "CRM Management Services and CRM Software Solutions by Capyngen",
   },
-  category: "CRM & Business Management",
-  serviceOutput:
-    "Streamline your business with Capyngen’s CRM & Management Solutions. From customer relationship management to cloud CRM, we help you grow smarter and faster.",
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is the primary function of CRM?",
+      name: "What is CRM mainly used to do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "CRM systems aim to facilitate the management of customer relationships by organizing customer data, pursuing sales leads, and improving customer loyalty as a way to increase sales and customer retention.",
+        text: "The primary objective of a customer relationship management software solution is to systematise client data, track leads, increase sales, and enhance overall customer experiences.",
       },
     },
     {
       "@type": "Question",
-      name: "Is CRM a good fit for small businesses?",
+      name: "Can small businesses benefit from CRM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sure. Cloud-based and modular solutions make CRM available and manageable for small businesses.",
+        text: "Absolutely. Our CRM software development company offers cloud-based CRM solutions that are cost-effective, scalable, and ideal for small businesses.",
       },
     },
     {
@@ -116,103 +118,103 @@ const faqSchema = {
       name: "How different is ERP from CRM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ERP deals with the internal affairs and necessary resources of a company meanwhile CRM takes care of all the customer relations, sales, and marketing aspects.",
+        text: "ERP focuses on managing internal business processes, while CRM & management software is designed to handle sales activities and customer interactions.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the price of a CRM system?",
+      name: "How much should a CRM system cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depending on the features, number of users, and deployment type (cloud or on-premise) the prices vary. Capyngen has flexible packages available to fit any business size.",
+        text: "Our CRM development company in India offers flexible pricing plans suitable for businesses of all sizes and operational requirements.",
       },
     },
     {
       "@type": "Question",
-      name: "Is it possible for CRM to enhance sales performance?",
+      name: "Does CRM boost sales performance?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Indeed, CRM makes the process of lead management more efficient, makes the opportunities tracking easier, and provides the insights necessary to the sales increase.",
+        text: "Yes, the best CRM software helps sales teams manage leads efficiently and improve conversions, resulting in higher sales performance.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide custom CRM solutions?",
+      name: "Do you provide tailored CRM solutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Capyngen gives CRM software made to fit your business process and operations.",
+        text: "Yes, Capyngen is a custom CRM software development company that builds CRM systems tailored to match your unique business workflows.",
       },
     },
     {
       "@type": "Question",
-      name: "Without an issue, can CRM work with the tools that I am currently using?",
+      name: "Is CRM compatible with current tools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, indeed. We provide services that allow CRM to integrate with ERP, marketing, or project management software.",
+        text: "Yes, we provide professional CRM software development integration and connector services to ensure compatibility with your existing tools.",
       },
     },
     {
       "@type": "Question",
-      name: "Which sectors can benefit from the use of CRM?",
+      name: "Which industries benefit most from CRM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From small businesses to enterprises, e-commerce, healthcare, real estate, finance, etc.",
+        text: "Our CRM platforms are flexible and suitable for multiple industries, including e-commerce, healthcare, finance, and more.",
       },
     },
     {
       "@type": "Question",
-      name: "Does CRM contribute to customer retention?",
+      name: "Does CRM improve customer retention?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. CRM gathers the history of customer interactions, helps in the resolution of problems, and increases loyalty.",
+        text: "Yes, CRM management software helps track customer history and forecast needs, which improves customer loyalty and retention.",
       },
     },
     {
       "@type": "Question",
-      name: "Is there a mobile version of CRM available?",
+      name: "Does CRM have a mobile version?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Mobile CRM applications allow the sales force to have access to customer information and operations anywhere, anytime.",
+        text: "Yes, our CRM software development solutions ensure full mobile compatibility for easy access on the go.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I switch to a different CRM?",
+      name: "What about migrating from an existing CRM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Capyngen offers CRM migration & upgrade alternatives for a safe switch from old systems.",
+        text: "Capyngen offers secure CRM migration and upgrade services to safely transfer data to your new CRM software solution.",
       },
     },
     {
       "@type": "Question",
-      name: "Is a CRM system training provided?",
+      name: "Do you provide CRM training?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We provide training and documentation to ensure teams can fully utilize the system.",
+        text: "Yes, all clients receive onboarding support and comprehensive training materials from our CRM development team.",
       },
     },
     {
       "@type": "Question",
-      name: "Is CRM data used for the company’s decisions?",
+      name: "How does CRM help in decision-making?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Definitely, Analytical CRM leads the organization to make use of marketing, sales, and customer service plans by providing the required insights.",
+        text: "CRM lead management software includes built-in analytics and dashboards that enable accurate reporting and faster decision-making.",
       },
     },
     {
       "@type": "Question",
-      name: "To what extent can the CRM system be considered safe?",
+      name: "How secure are Capyngen CRM systems?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our CRM software includes encryption, access based on user roles, and follows the compliance standards thus securing the data.",
+        text: "Our CRM software is fully encrypted and includes access controls and compliance measures to ensure data security.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I start Capyngen CRM solutions?",
+      name: "How can I get started with Capyngen CRM solutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Contact or book a free consultation to discuss your business requirements and together we will design the most efficient CRM strategy for your business.",
+        text: "Our CRM software development services team offers free consultations to help you plan your CRM solution and implementation roadmap.",
       },
     },
   ],
@@ -454,16 +456,15 @@ const CrmManagementSoftware = () => {
     <div className="relative">
       <Helmet>
         <title>
-          CRM & Management Solutions | Cloud CRM for Smarter Businesses –
-          Capyngen
+          CRM Management Services – India’s Best CRM Software Provider
         </title>
         <meta
           name="description"
-          content="Streamline your business with Capyngen’s CRM & Management Solutions. From customer relationship management to cloud CRM, we help you grow smarter and faster."
+          content="Get powerful CRM & management software designed to streamline sales, marketing, and customer relationships. Choose the best CRM management software for your business growth."
         />
         <meta
           name="keywords"
-          content="CRM & Management Solutions | Cloud CRM for Smarter Businesses – Capyngen"
+          content="CRM management software, best crm management software, crm management services"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -475,10 +476,10 @@ const CrmManagementSoftware = () => {
       </Helmet>
       <Banner14
         imageSrc={assets.crm1}
-        imageAlt="Blockchain development illustration"
-        title="Powerful "
-        highlighted="CRM Management Solutions"
-        subtitle=" to Grow Your Business"
+        imageAlt="CRM management software, best crm management software, crm management services"
+        title="Instant "
+        highlighted="CRM Management Software Provider"
+        subtitle=" – Get India’s #1 Trusted CRM Solution"
         description="Organize client communications, increase revenue, and nurture customer loyalty with Capyngen’s state-of-the-art CRM tools tailored for small, medium, and large businesses."
         reverse={false}
       />

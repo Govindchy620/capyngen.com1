@@ -57,133 +57,132 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/consulting#webpage",
   url: "https://www.capyngen.com/consulting",
-  name: "Consulting Services | IT & Business Consulting Company",
+  name: "Top Consulting Services in India | Business Consulting Services",
   description:
-    "Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India.",
-  inLanguage: "en",
-  keywords:
-    "Consulting services, IT consulting services, Business consulting solutions, Enterprise consulting company, Consulting companies in India, IT consulting, Top consulting company, Digital consulting services",
+    "Get expert guidance from a trusted provider of top consulting services in India. Our consulting services help businesses improve strategy, operations, and growth.",
+  inLanguage: "en-IN",
   isPartOf: {
     "@type": "WebSite",
-    name: "Capyngen",
-    url: "https://www.capyngen.com",
+    "@id": "https://www.capyngen.com/#website",
   },
   publisher: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
+    url: "https://www.capyngen.com/",
     logo: {
       "@type": "ImageObject",
       url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
     },
   },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/webDesign16-C6_hZC7f.png",
+  },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType:
-    "Consulting services, IT consulting services, Business consulting solutions, Enterprise consulting company, Consulting companies in India, IT consulting, Top consulting company, Digital consulting services",
-  name: "Consulting Services | IT & Business Consulting Company",
+  "@id": "https://www.capyngen.com/consulting#service",
+  name: "Top Consulting Services in India | Business Consulting Services",
+  description:
+    "Get expert guidance from a trusted provider of top consulting services in India. Our consulting services help businesses improve strategy, operations, and growth.",
+  url: "https://www.capyngen.com/consulting",
+  serviceType: "Business Consulting Services",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
-    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    url: "https://www.capyngen.com/",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
   },
   areaServed: {
-    "@type": "Place",
+    "@type": "Country",
     name: "India",
   },
-  url: "https://www.capyngen.com/consulting",
-  description:
-    "Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India.",
-  keywords:
-    "Consulting services, IT consulting services, Business consulting solutions, Enterprise consulting company, Consulting companies in India, IT consulting, Top consulting company, Digital consulting services",
-  offers: {
-    "@type": "Offer",
-    url: "https://www.capyngen.com/contact",
-    price: "0.00",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/consulting3-BQjnj5BA.png",
+    caption: "Business Consulting Services by Capyngen",
   },
-  category: "Consulting & Business Services",
-  serviceOutput:
-    "Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India.",
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "What are IT consulting services?",
+      name: "What do you mean by IT consulting services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "IT consulting services refer to the involvement of experts who provide advisory and implementation support for technology strategy, infrastructure, security, cloud adoption, and digital transformation. Consultants evaluate the current systems, suggest changes, and facilitate the implementation of solutions that are in line with business goals.",
+        text: "IT consulting services involve expert guidance and implementation of technology strategy, infrastructure, security, cloud adoption, and digital transformation. Consultants analyze existing systems, recommend improvements, and support solution implementation aligned with business goals.",
       },
     },
     {
       "@type": "Question",
-      name: "Why should businesses hire IT consultants?",
+      name: "Why do businesses hire IT consultants?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "IT consultants bring specialized knowledge, industry experience, and unbiased opinions that internal teams often lack. They help businesses avoid costly mistakes, accelerate technology adoption, optimize investments, and make informed decisions about complex IT challenges.",
+        text: "Businesses hire IT consultants for specialized expertise, industry experience, and objective insights that help avoid costly mistakes, accelerate technology adoption, optimize investments, and make informed technology decisions.",
       },
     },
     {
       "@type": "Question",
-      name: "What makes Capyngen a top consulting company in India?",
+      name: "Why is Capyngen a top consulting company in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Capyngen combines years of experience, proven methodologies, and deep industry expertise to deliver measurable results. Our client-centric approach, award-winning performance, and consistent success stories make us one of India's top consulting companies.",
+        text: "Capyngen combines over a decade of experience, proven methodologies, and industry-specific expertise with a customer-focused approach to deliver measurable outcomes, making it one of the top consulting companies in India.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide business consulting solutions beyond IT?",
+      name: "Do you offer business consulting beyond IT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. In addition to IT consulting, we offer comprehensive business consulting solutions including growth strategy, operational efficiency, financial planning, market research, and organizational development—integrated with technology recommendations.",
+        text: "Yes. Along with IT consulting, Capyngen provides end-to-end business consulting including growth strategy, operational efficiency, financial planning, market research, and organizational development.",
       },
     },
     {
       "@type": "Question",
-      name: "How much do consulting services cost?",
+      name: "What is the cost of consulting services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Consulting costs vary based on project scope, duration, expertise, and engagement model. We offer flexible pricing—hourly, project-based, and retainer options. Contact us for a personalized quote that suits your budget.",
+        text: "Consulting costs vary based on project scope, duration, expertise required, and engagement model. Capyngen offers flexible pricing including hourly, project-based, and retainer models.",
       },
     },
     {
       "@type": "Question",
-      name: "Can small businesses afford your consulting services?",
+      name: "Are your consulting services affordable for small businesses?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. We provide scalable and affordable consulting packages tailored for startups and SMBs in India, ensuring high-quality services that fit varying budgets.",
+        text: "Yes. Capyngen offers scalable and budget-friendly consulting packages tailored for startups and small to mid-sized businesses in India.",
       },
     },
     {
       "@type": "Question",
-      name: "What industries does Capyngen serve?",
+      name: "Which industries does Capyngen serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Capyngen serves clients across multiple industries including healthcare, finance, manufacturing, retail, education, government, technology, hospitality, logistics, and professional services, offering customized IT and business solutions.",
+        text: "Capyngen serves a wide range of industries including healthcare, finance, manufacturing, retail, education, government, technology, hospitality, logistics, and professional services.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does a typical consulting engagement last?",
+      name: "What is the typical duration of a consulting engagement?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Engagement duration depends on project complexity. Quick assessments typically take 2–4 weeks, while large-scale transformations may last 6–12 months. Timelines are finalized during initial discussions.",
+        text: "Engagement duration depends on project complexity. Quick assessments may take 2–4 weeks, while large-scale transformations can span 6–12 months.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide implementation support or just recommendations?",
+      name: "Do you support implementation or only provide recommendations?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We support clients from strategy creation to full implementation. Unlike consultants who only recommend, Capyngen ensures hands-on guidance, deployment, and successful adoption of solutions.",
+        text: "Capyngen supports the entire journey from strategy development to implementation and adoption, ensuring successful execution and measurable results.",
       },
     },
     {
@@ -191,7 +190,7 @@ const faqSchema = {
       name: "What is digital transformation consulting?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Digital transformation consulting helps businesses modernize operations through new technologies like AI, cloud computing, automation, and customer experience redesign while managing organizational change effectively.",
+        text: "Digital transformation consulting helps businesses modernize operations, adopt new technologies, automate processes, improve customer experience, and manage organizational change.",
       },
     },
     {
@@ -199,15 +198,15 @@ const faqSchema = {
       name: "How do you ensure consulting recommendations are practical?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our recommendations are based on detailed assessments, best practices, and realistic evaluation of client resources and constraints—ensuring immediate applicability without compromising long-term goals.",
+        text: "Our recommendations are based on detailed assessments, industry best practices, and your available resources, ensuring solutions are actionable and aligned with long-term strategy.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you help with cloud migration?",
+      name: "Do you assist with cloud migration?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Our cloud consulting services cover migration strategy, platform selection, data transfer, application assessment, security integration, and post-migration optimization for a smooth transition.",
+        text: "Yes. Our cloud consulting services include migration strategy, platform selection, application assessment, data migration, security setup, and post-migration optimization.",
       },
     },
     {
@@ -215,23 +214,23 @@ const faqSchema = {
       name: "Do you provide cybersecurity consulting?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We offer cybersecurity consulting including risk assessments, security architecture design, compliance guidance, incident response planning, awareness training, and continuous monitoring solutions.",
+        text: "Yes. Capyngen offers cybersecurity consulting services including risk assessment, security architecture design, compliance guidance, incident response planning, and continuous monitoring.",
       },
     },
     {
       "@type": "Question",
-      name: "What's your approach to change management?",
+      name: "How do you handle change management?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our change management strategy focuses on people. It includes stakeholder engagement, communication plans, training, feedback loops, and ongoing support to ensure successful transformation adoption.",
+        text: "We implement structured change management strategies involving stakeholder engagement, communication planning, training programs, and feedback mechanisms to ensure smooth adoption.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I get started with Capyngen consulting services?",
+      name: "How can I get started with Capyngen consulting services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Simply contact us to schedule a free initial consultation. We'll assess your needs, goals, and challenges, then craft a custom consulting plan with clear timelines, deliverables, and investment details.",
+        text: "You can get started by booking a free initial consultation. Our team will assess your needs and propose a tailored consulting plan outlining scope, timeline, deliverables, and cost.",
       },
     },
   ],
@@ -497,14 +496,16 @@ const Consulting = () => {
   return (
     <div className="relative">
       <Helmet>
-        <title>Consulting Services | IT & Business Consulting Company</title>
+        <title>
+          Top Consulting Services in India | Business Consulting Services
+        </title>
         <meta
           name="description"
-          content="Capyngen offers expert consulting services to drive business growth. From IT to enterprise consulting, we deliver tailored solutions for companies across India."
+          content="Get expert guidance from a trusted provider of top consulting services in India. Our consulting services help businesses improve strategy, operations, and growth."
         />
         <meta
           name="keywords"
-          content="Consulting Services | IT & Business Consulting Company"
+          content="Top consulting services in India, consulting services "
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -516,8 +517,8 @@ const Consulting = () => {
       </Helmet>
       <div className="lg:sticky inset-0">
         <Banner10
-          title="Expert IT Consulting "
-          highlight="That Helps Your Business Growth"
+          title="Instant consulting services in India"
+          highlight=" – Get India’s #1 Trusted consulting services"
           description="The company in the world of technology and digital is advisory in this same world to different companies, especially Indian ones. We pack our consulting into Angola-customized, and the primary objective of the exercises is to make processes in businesses simpler, increase their productivity and expand their reach through the market."
           buttonAria="Start Your Project"
           services={[

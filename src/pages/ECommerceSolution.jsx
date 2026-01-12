@@ -45,10 +45,10 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/ecommerce-solutions#webpage",
   url: "https://www.capyngen.com/ecommerce-solutions",
-  name: "E-commerce Solutions | E-commerce Website & App Development by Capyngen",
+  name: "Smart E-Commerce Solutions – India’s Leading E-Commerce Solution Provider",
   description:
-    "Grow your business with Capyngen’s e-commerce solutions. Get custom e-commerce website and app development to boost your sales and build your online brand today.",
-  inLanguage: "en-US",
+    "Boost your online business with Smart E-Commerce Solutions – India’s trusted platform for creating, managing, and scaling your e-commerce store effortlessly. Fast, secure, and feature-rich.",
+  inLanguage: "en-IN",
   isPartOf: {
     "@type": "WebSite",
     "@id": "https://www.capyngen.com/#website",
@@ -56,128 +56,171 @@ const webpageSchema = {
   publisher: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
+    url: "https://www.capyngen.com/",
     logo: {
       "@type": "ImageObject",
       url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
     },
   },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.capyngen.com/assets/eCommSol7-DXwIPoOJ.png",
+    caption:
+      "Smart E-Commerce Solutions | Leading E-Commerce Solution Provider in India",
+  },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.capyngen.com/ecommerce-solutions#service",
-  name: "E-Commerce Solutions",
-  serviceType:
-    "E-commerce Website Development, E-commerce Platform Integration",
+  name: "Smart E-Commerce Solutions – India’s Leading E-Commerce Solution Provider",
+  description:
+    "Boost your online business with Smart E-Commerce Solutions – India’s trusted platform for creating, managing, and scaling your e-commerce store effortlessly. Fast, secure, and feature-rich.",
+  url: "https://www.capyngen.com/ecommerce-solutions",
+  serviceType: "E-Commerce Solutions",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com",
+    url: "https://www.capyngen.com/",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
+    },
   },
   areaServed: {
     "@type": "Country",
     name: "India",
   },
-  description:
-    "Grow your business with Capyngen’s e-commerce solutions. Get custom e-commerce website and app development to boost your sales and build your online brand today! :contentReference[oaicite:0]{index=0}",
-  url: "https://www.capyngen.com/ecommerce-solutions",
   image: {
     "@type": "ImageObject",
-    url: "https://www.capyngen.com/assets/images/ecommerce-solutions-banner.jpg",
-    caption:
-      "E-commerce Solutions | E-commerce Website & App Development by Capyngenn",
-  },
-  offers: {
-    "@type": "Offer",
-    price: "Custom",
-    priceCurrency: "INR",
-    availability: "InStock",
+    url: "https://www.capyngen.com/assets/eCommSol7-DXwIPoOJ.png",
+    caption: "Smart E-Commerce Solutions by Capyngen",
   },
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/ecommerce-solutions#faq",
   mainEntity: [
     {
       "@type": "Question",
       name: "What is an e-commerce solution?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "An e-commerce solution is a complete system that supports companies in selling their products or services online. It includes website design, development, payment integration, marketing, and post-launch support.",
+        text: "An e-commerce solution is a complete system that enables businesses to sell products or services online. It includes website design and development, payment integration, marketing tools, and ongoing support.",
       },
     },
     {
       "@type": "Question",
-      name: "Why does my business need an e-commerce website?",
+      name: "Why do I need an e-commerce solutions website for my business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "An e-commerce website allows your business to sell products 24/7, reach customers worldwide, lower operational costs, and provide a seamless shopping experience that enhances customer purchasing decisions.",
+        text: "An e-commerce solutions website allows your business to sell 24/7, reach global customers, reduce operating costs, and provide a seamless shopping experience that increases conversions.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer a mobile e-commerce application for both Android and iOS devices?",
+      name: "Do you provide both Android and iOS mobile e-commerce applications?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Capyngen develops fast, secure, and reliable mobile e-commerce applications for both Android and iOS using the latest technologies like Flutter, React Native, and native languages.",
+        text: "Yes. Capyngen develops secure and high-performance Android and iOS mobile e-commerce applications using Flutter, React Native, and native technologies.",
       },
     },
     {
       "@type": "Question",
-      name: "Could Capyngen build a multi-vendor marketplace similar to Amazon?",
+      name: "Can Capyngen develop a multi-vendor marketplace like Amazon?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely! We design and build scalable multi-vendor marketplace platforms where multiple sellers can list, manage, and sell their products efficiently — similar to Amazon or Flipkart.",
+        text: "Absolutely. We build scalable multi-vendor marketplaces where multiple sellers can list and sell products, similar to platforms like Amazon or Flipkart.",
       },
     },
     {
       "@type": "Question",
-      name: "Which payment gateways are available for integration?",
+      name: "Which payment gateways can be integrated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We support integration with most major global and local payment gateways, including Stripe, PayPal, Razorpay, and more to ensure secure and fast transactions.",
+        text: "We integrate leading global and local payment gateways such as Stripe, PayPal, Razorpay, and others to ensure fast and secure transactions.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide SEO and digital marketing services for e-commerce?",
+      name: "Do you provide SEO and digital marketing services for e-commerce websites?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we provide end-to-end SEO and digital marketing strategies that help increase visibility, attract organic traffic, and convert visitors into paying customers.",
+        text: "Yes. We implement SEO strategies and digital marketing services to improve search rankings, attract traffic, and increase conversions for e-commerce websites.",
       },
     },
     {
       "@type": "Question",
-      name: "How much time is needed to build an e-commerce website?",
+      name: "Can Capyngen help build a globally accessible e-commerce store?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The duration depends on the project size and features, but typically it takes between 3 to 8 weeks from planning to launch for a standard e-commerce website.",
+        text: "Yes. Our e-commerce solutions support global access with multi-currency, multi-language functionality, and international shipping options.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you assure maintenance of the project after it goes live?",
+      name: "How much time is required to develop an e-commerce solutions website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Capyngen offers continuous post-launch support and maintenance services to ensure your e-commerce store remains secure, updated, and performing smoothly.",
+        text: "E-commerce development typically takes between 3 to 8 weeks, depending on customization requirements and project scope.",
       },
     },
     {
       "@type": "Question",
-      name: "Is it possible for you to link CRM and ERP systems together?",
+      name: "Do you provide maintenance after the website goes live?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we integrate leading CRM and ERP systems to streamline business operations, improve productivity, and centralize customer and product data.",
+        text: "Yes. We offer ongoing support and maintenance to ensure your e-commerce platform runs smoothly, securely, and stays up to date.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you have any subscription-based models for e-commerce purposes?",
+      name: "Can you integrate CRM and ERP systems?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we create subscription and membership platforms with recurring billing for products, services, or SaaS businesses to automate revenue generation.",
+        text: "Yes. We integrate CRM and ERP systems to streamline business operations and improve data management within your e-commerce platform.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer subscription-based e-commerce models?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We develop subscription and membership-based e-commerce solutions with recurring billing for products, services, and SaaS businesses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which industries do you serve with e-commerce solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve a wide range of industries including retail, food, healthcare, education, travel, hospitality, and B2B wholesale.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is my e-commerce website optimized for mobile devices?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. All our e-commerce websites are fully responsive and optimized for smartphones, tablets, and desktops.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I use my own domain and hosting?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You can use your own domain and hosting, or we can manage everything for you as part of our e-commerce website development services.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I start an e-commerce project with Capyngen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Simply book a free consultation or contact our team. We will understand your goals and create a customized e-commerce solution tailored to your business.",
       },
     },
   ],
@@ -585,17 +628,14 @@ const ECommerceSolution = () => {
     <div className="relative">
       <Helmet>
         <title>
-          E-commerce Solutions | E-commerce Website & App Development by
-          Capyngen
+          Smart E-Commerce Solutions – India’s Leading E-Commerce Solution
+          Provider
         </title>
         <meta
           name="description"
-          content="Grow your business with Capyngen’s e-commerce solutions. Get custom e-commerce website and app development to boost your sales and build your online brand today!"
+          content="Boost your online business with Smart E-Commerce Solutions – India’s trusted platform for creating, managing, and scaling your e-commerce store effortlessly. Fast, secure, and feature-rich."
         />
-        <meta
-          name="keywords"
-          content="E-commerce Solutions | E-commerce Website & App Development by Capyngen"
-        />
+        <meta name="keywords" content="E commerce solutions in india " />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
         </script>
@@ -609,9 +649,12 @@ const ECommerceSolution = () => {
           title={
             <>
               <span className="text-2xl md:text-4xl">
-                Transform Your Business with{" "}
+                Instant Smart E-Commerce Solutions{" "}
               </span>
-              <span className="text-blue-600">Smart E-Commerce Solutions</span>
+              <span className="text-blue-600">
+                {" "}
+                – Get India’s #1 Trusted E-Commerce Platform
+              </span>
             </>
           }
           description="Use the efficient and intuitive e-commerce solution provided by Capyngen to construct, expand and prosper your online store keeping in mind the contemporary business trends."

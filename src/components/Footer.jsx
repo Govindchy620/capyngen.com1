@@ -38,7 +38,7 @@ const Footer = () => {
     { icon: Twitter, href: "https://x.com/capyngen", label: "Twitter" },
     {
       icon: Youtube,
-      href: "https://www.youtube.com/@Capyngen-pvt-ltd",
+      href: "https://www.youtube.com/@Capyngen_official",
       label: "YouTube",
     },
   ];

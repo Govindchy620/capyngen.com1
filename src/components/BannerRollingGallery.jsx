@@ -110,8 +110,9 @@ const BannerRollingGallery = ({
     <section className="bg-black text-white w-full pt-20">
       {/* Heading + Subheading */}
       <div className="text-center max-w-[90vw] mx-auto px-4">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
-          Build Future-Ready Websites with Capyngen
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          Instant Web Development – Get India’s #1 Trusted Best website
+          development company in India
         </h1>
         <p className="text-base sm:text-lg md:text-xl max-w-6xl mx-auto pt-5 leading-relaxed">
           Convert your concepts to interactive, responsive, and scalable

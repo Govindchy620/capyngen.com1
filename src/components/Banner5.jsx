@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Banner5 = ({
-  title = "DevOps Solutions",
+  title = "Instant devops solutions provider – Get India’s #1 Trusted DevOps solutions",
   description = (
     <>
       <p className="my-4 font-bold text-xl">
