@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import HeroSection from "./HeroSection";
-import Hero from "./Hero";
 import { Navbar } from "./Navbar";
 import { FeaturesSection } from "./FeaturesSection";
 import GetStarted from "./GetStarted";
@@ -55,7 +54,6 @@ const LandingPage = () => {
       </Helmet>
       <Navbar />
       <ExitPopup />
-      <Hero />
       <HeroSection />
       <GetStarted
         reverse={false}
