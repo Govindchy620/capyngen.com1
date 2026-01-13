@@ -14,14 +14,14 @@ const businessTypes = [
 ];
 
 const serviceTypes = [
-  "Social Media Marketing",
-  "Meta (Facebook / Instagram) Ads",
-  "Google Ads",
-  "Website Design",
-  "SEO (Google Ranking)",
-  "Branding & Graphics",
-  "Email Marketing",
-  "Not Sure — Need Guidance",
+  "Web Development",
+  "App Development",
+  "Custom AI Solution",
+  "E-Commerce Solutions",
+  "Blockchain Development",
+  "DevOps Solutions",
+  "Application Solutions",
+  "CRM & Management Software",
 ];
 
 const budgetOptions = [
@@ -426,8 +426,7 @@ export function LeadForm({
                 className="space-y-4"
               >
                 <label className="block mb-1 font-semibold text-indigo-300">
-                  Monthly Marketing Budget{" "}
-                  <span className="text-rose-400">*</span>
+                  Project Budget <span className="text-rose-400">*</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {budgetOptions.map((budget) => (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { assets } from "../../../assets/assets";
 
 const coreServices = [
   {
@@ -51,8 +52,7 @@ const coreServices = [
     id: "ecom",
     title: "E-commerce Design",
     description: "The Stores that Sell automatically.",
-    image:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1600&auto=format&fit=crop",
+    image: assets.designLandingPage4,
     points: [
       "Optimized product pages in terms of AOV.",
       "Checkout process has an abandonment rate of less than 2%.",
@@ -66,8 +66,7 @@ const coreServices = [
     id: "cms",
     title: "CMS Design",
     description: "Self-publishing Content.",
-    image:
-      "https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=1600&auto=format&fit=crop",
+    image: assets.designLandingPage5,
     points: [
       "Marketer templates which are modular.",
       "Drag and drop section builders.",

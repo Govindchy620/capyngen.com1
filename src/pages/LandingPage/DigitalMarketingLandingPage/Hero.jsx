@@ -16,14 +16,14 @@ const businessTypes = [
 ];
 
 const serviceTypes = [
-  "Social Media Marketing",
-  "Meta (Facebook / Instagram) Ads",
-  "Google Ads",
-  "Website Design",
-  "SEO (Google Ranking)",
-  "Branding & Graphics",
-  "Email Marketing",
-  "Not Sure — Need Guidance",
+  "Search Engine Optimization (SEO)",
+  "Pay-Per-Click Advertising (PPC)",
+  "Social Media Marketing (SMM)",
+  "Performance Marketing",
+  "Content Marketing",
+  "Website Design & Optimization",
+  "Email & WhatsApp Marketing",
+  "Not Sure - Need Guidance",
 ];
 
 const budgetOptions = [

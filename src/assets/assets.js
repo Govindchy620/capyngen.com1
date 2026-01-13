@@ -799,6 +799,9 @@ import designLanding6 from "./designLanding6.png";
 import designLanding7 from "./designLanding7.png";
 import designLanding8 from "./designLanding8.png";
 import designLanding9 from "./designLanding9.png";
+import designLandingPage4 from "./designLandingPage4.png";
+import designLandingPage5 from "./designLandingPage5.png";
+import designLandingPage6 from "./designLandingPage6.png";
 
 export const assets = {
   homepageCapyngenNews,
@@ -1607,6 +1610,9 @@ export const assets = {
   designLanding7,
   designLanding8,
   designLanding9,
+  designLandingPage4,
+  designLandingPage5,
+  designLandingPage6,
 };
 
 export const navItems = [

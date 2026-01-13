@@ -6,6 +6,7 @@ import {
   useSpring,
   useMotionValue,
 } from "framer-motion";
+import { assets } from "../../../assets/assets";
 
 /* ============================
    DATA
@@ -136,7 +137,7 @@ export default function WhyCapyngen() {
               className="relative h-[520px] rounded-[2.5rem] overflow-hidden"
             >
               <img
-                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1600"
+                src={assets.designLandingPage6}
                 alt="Strategy Visual"
                 className="absolute inset-0 w-full h-full object-cover"
               />
