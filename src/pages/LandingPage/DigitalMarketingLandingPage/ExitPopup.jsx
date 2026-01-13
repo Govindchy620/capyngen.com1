@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Modal, LeadForm } from "./HeroSection";
+import { Modal, LeadForm } from "./Hero";
 
 export default function ExitPopup() {
   const [showPopup, setShowPopup] = useState(false);

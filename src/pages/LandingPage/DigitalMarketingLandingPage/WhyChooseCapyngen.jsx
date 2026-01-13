@@ -1,116 +1,81 @@
 import React from "react";
-import CountUp from "react-countup";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { Target, BarChart3, Settings, ShieldCheck } from "lucide-react";
+import { FadeIn, Reveal } from "../../../ui/Reveal";
 
-const stats = [
+const features = [
   {
-    end: 1000,
-    label: "Happy Clients Worldwide",
-    desc: "We have been favored by clients of all types. Their happiness is the gauge of our success.",
+    icon: Target,
+    title: "Individualized Plans",
+    description:
+      "No cookie-cutter templates. We build strategies specifically for your business model and market position.",
   },
   {
-    end: 15,
-    label: "Years of Proven Expertise",
-    desc: "Guiding the digital journey successfully for more than 15 years.",
+    icon: BarChart3,
+    title: "ROI-Based Campaigns",
+    description:
+      "Every dollar spent is tracked. We focus on explicit KPIs and open reporting to ensure maximum growth.",
   },
   {
-    end: 99,
-    label: "Quality & Consistency",
-    desc: "Every campaign reflects our dedication to creativity and measurable growth.",
+    icon: Settings,
+    title: "Full-Funnel Optimization",
+    description:
+      "From awareness to retention, we optimize SEO, Social, and PPC to work together seamlessly.",
   },
   {
-    end: 1000,
-    label: "Business Growth Strategies",
-    desc: "Personalized digital plans to help brands reach their goals quickly and efficiently.",
+    icon: ShieldCheck,
+    title: "Transparent Reporting",
+    description:
+      "Growth is optimized by obvious data. Weekly updates, practical insights, and clear communication.",
   },
 ];
 
-const fadeInVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
-export const WhyChooseCapyngen = () => {
-  // Intersection Observer hook to trigger animations only when visible
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
+const WhyChooseCapyngen = () => {
   return (
     <section
-      ref={ref}
-      className="px-4 sm:px-6 lg:px-12 py-20 bg-gradient-to-b from-blue-900 via-black to-gray-900 text-white shadow-lg"
-      aria-label="Why choose Capyngen statistics and reasons"
+      className="py-18 bg-brand-surface relative overflow-hidden bg-gradient-to-b from-blue-950 to-black"
+      id="why-us"
     >
-      <motion.h2
-        className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 sm:mb-20 text-center"
-        initial="hidden"
-        animate={controls}
-        variants={fadeInVariants}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
-        Why Choose <span className="text-blue-400">Capyngen</span>
-      </motion.h2>
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-        initial="hidden"
-        animate={controls}
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.2 } },
-        }}
-      >
-        {stats.map(({ end, label, desc }, idx) => (
-          <motion.div
-            key={idx}
-            className="text-center px-4"
-            variants={fadeInVariants}
-            transition={{ duration: 0.5 }}
-            tabIndex={0}
-            role="region"
-            aria-labelledby={`stat-title-${idx}`}
-          >
-            <div className="flex justify-center items-center text-blue-400 font-extrabold mb-3 space-x-2">
-              <CountUp
-                end={inView ? end : 0}
-                duration={3}
-                className="text-5xl sm:text-6xl font-extrabold"
-              />
-              <span className="text-4xl sm:text-5xl">+</span>
-            </div>
-            <p
-              id={`stat-title-${idx}`}
-              className="uppercase tracking-widest font-semibold mb-3 text-lg sm:text-xl"
-            >
-              {label}
+      {/* Background Mesh */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-accent/20 via-transparent to-transparent" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <Reveal width="100%">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Why Modern Brands Choose Capyngen
+            </h2>
+            <p className="text-white max-w-2xl mx-auto text-lg">
+              Our campaigns are optimized through ongoing changes to ensure
+              maximum growth and improved returns.
             </p>
-            <p className="text-gray-300 max-w-xs mx-auto text-sm sm:text-base leading-relaxed">
-              {desc}
-            </p>
-          </motion.div>
-        ))}
-      </motion.div>
-      <motion.div
-        className="col-span-full mt-10 text-gray-300 max-w-4xl mx-auto text-center text-base sm:text-lg leading-relaxed px-4"
-        initial={{ opacity: 0 }}
-        animate={controls}
-        transition={{ duration: 0.6, delay: 0.5 }}
-      >
-        <p>
-          Our tools simplify digital marketing, amplifying growth through
-          analytics, automation, and audience targeting for effortless success.
-        </p>
-      </motion.div>
+          </Reveal>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {features.map((feature, index) => (
+            <FadeIn key={index} delay={index * 0.1} className="h-full">
+              <div className="h-full p-8 rounded-lg bg-brand-dark/50 backdrop-blur-sm border border-white/50 hover:border-brand-accent/50 transition-all duration-300 group relative overflow-hidden hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-accent/5">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <feature.icon size={100} className="text-white" />
+                </div>
+
+                <div className="w-14 h-14 bg-brand-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors border border-white/50">
+                  <feature.icon className="w-7 h-7 text-brand-accent text-gray-700 group-hover:text-white transition-colors" />
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-white text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

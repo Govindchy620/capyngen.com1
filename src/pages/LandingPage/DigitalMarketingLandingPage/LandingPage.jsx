@@ -1,18 +1,14 @@
 import React, { useEffect } from "react";
-import HeroSection from "./HeroSection";
 import { Navbar } from "./Navbar";
-import { FeaturesSection } from "./FeaturesSection";
-import GetStarted from "./GetStarted";
-import { assets } from "../../../assets/assets";
-import GrowPresenceSection from "./GrowPresenceSection";
 import WhyChooseCapyngen from "./WhyChooseCapyngen";
-import CapyngenComparisonTable from "./CapyngenComparisonTable";
-import ResultsSection from "./ResultsSection";
-import { ServicesSection } from "./ServicesSection";
-import TermsAndConditions from "./TermsAndConditions";
-import About from "./About";
 import ExitPopup from "./ExitPopup";
 import { Helmet } from "react-helmet-async";
+import Hero from "./Hero";
+import Services from "./Services";
+import Strategy from "./Strategy";
+import WhatMakesUsDifferent from "./WhatMakesUsDifferent";
+import Audience from "./Audience";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -54,35 +50,21 @@ const LandingPage = () => {
       </Helmet>
       <Navbar />
       <ExitPopup />
-      <HeroSection />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Trusted by 1000+ Businesses"
-        description={[
-          "Capyngen has collaborated with global brands, startups, and enterprises to help them achieve exceptional digital success.",
-          "We believe every business — big or small — deserves a strong and lasting online presence.",
-        ]}
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-        textSize="text-lg md:text-xl"
-      />
-
-      <FeaturesSection />
+      <div id="home"></div>
+      <Hero />
       <div id="whychoose"></div>
       <WhyChooseCapyngen />
-      <GrowPresenceSection />
-      <div id="whycapyngenbetter"></div>
-      <CapyngenComparisonTable />
-      <ResultsSection />
-      <div id="ourservices"></div>
-      <ServicesSection />
-      <TermsAndConditions />
+      <div id="services"></div>
+      <Services />
+      <div id="strategy"></div>
+      <Strategy />
+      <div id="different"></div>
+      <WhatMakesUsDifferent />
+      <div id="audience"></div>
+      <Audience />
+
       <div id="about"></div>
-      <About />
+      <Footer />
     </div>
   );
 };

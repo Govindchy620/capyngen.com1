@@ -14,8 +14,8 @@ export const Navbar = () => {
   const menuItems = [
     { label: "Home", href: "home" },
     { label: "Why Choose Us", href: "whychoose" },
-    { label: "Best for Digital Marketing", href: "whycapyngenbetter" },
-    { label: "Our Services", href: "ourservices" },
+    { label: "Our Services", href: "services" },
+    { label: "What Makes Us Different", href: "different" },
     { label: "About Us", href: "about" },
   ];
 

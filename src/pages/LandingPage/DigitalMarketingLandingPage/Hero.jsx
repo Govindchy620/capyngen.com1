@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { Reveal } from "../../../ui/Reveal";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -57,11 +59,11 @@ export function LeadForm({
 
   // Shared input classes with visible indigo borders and transparent background for theme consistency
   const inputClasses =
-    "w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition";
+    "w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-blue-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition";
 
   return (
     <div
-      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-md p-2 shadow-2xl border border-indigo-600/40 overflow-y-auto transition-shadow duration-300 ${
+      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-md p-2 shadow-2xl border border-blue-600/40 overflow-y-auto transition-shadow duration-300 ${
         modalMode ? "p-8 text-white" : ""
       }`}
       style={modalMode ? { color: "white" } : {}}
@@ -69,7 +71,7 @@ export function LeadForm({
       {modalMode && (
         <button
           onClick={onClose}
-          className="absolute top-1 right-1 sm:top-3 sm:right-3 text-white bg-indigo-700 rounded-md p-2 text-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-20"
+          className="absolute top-1 right-1 sm:top-3 sm:right-3 text-white bg-blue-700 rounded-md p-2 text-lg shadow-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400 z-20"
           aria-label="Close form"
           type="button"
           disabled={isSubmitting}
@@ -86,12 +88,10 @@ export function LeadForm({
         {/* Header */}
         <div className="px-0 md:px-8 pt-0 md:pt-8 pb-4 flex items-center justify-between">
           <div>
-            <div className="text-sm text-indigo-300 select-none">
-              Let's talk
-            </div>
+            <div className="text-sm text-blue-300 select-none">Let's talk</div>
             <div className="font-semibold text-white">Quick intake form</div>
           </div>
-          <div className="text-sm text-indigo-200 select-none">
+          <div className="text-sm text-blue-200 select-none">
             Step {Math.min(step, 7)}/7
           </div>
         </div>
@@ -100,7 +100,7 @@ export function LeadForm({
         <div className="px-0 md:px-8 mb-4">
           <div className="w-full bg-white/10 rounded-full h-2">
             <motion.div
-              className="h-2 rounded-full bg-indigo-500 shadow-[0_8px_24px_rgba(99,102,241,0.12)]"
+              className="h-2 rounded-full bg-blue-500 shadow-[0_8px_24px_rgba(99,102,241,0.12)]"
               initial={{ width: 0 }}
               animate={{ width: `${((step - 1) / 6) * 100}%` }}
               transition={{ duration: 0.3 }}
@@ -123,7 +123,7 @@ export function LeadForm({
         )}
 
         {/* Step container */}
-        <div className="px-0 md:px-8 pt-0 md:pt-6 pb-6 overflow-auto flex-1 scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-indigo-900">
+        <div className="px-0 md:px-8 pt-0 md:pt-6 pb-6 overflow-auto flex-1 scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-blue-900">
           <AnimatePresence mode="wait">
             {/* Step 1 */}
             {step === 1 && (
@@ -135,7 +135,7 @@ export function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-4"
               >
-                <label className="block mb-1 font-semibold text-indigo-300">
+                <label className="block mb-1 font-semibold text-blue-300">
                   Full Name <span className="text-rose-400">*</span>
                 </label>
                 <motion.input
@@ -154,7 +154,7 @@ export function LeadForm({
                   disabled={isSubmitting}
                 />
                 <div>
-                  <label className="block mb-1 font-semibold text-indigo-300">
+                  <label className="block mb-1 font-semibold text-blue-300">
                     Email <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
@@ -187,7 +187,7 @@ export function LeadForm({
                 className="space-y-4"
               >
                 <div>
-                  <label className="block mb-1 font-semibold text-indigo-300">
+                  <label className="block mb-1 font-semibold text-blue-300">
                     Phone / WhatsApp Number{" "}
                     <span className="text-rose-400">*</span>
                   </label>
@@ -213,12 +213,12 @@ export function LeadForm({
                     type="checkbox"
                     checked={whatsappSameAsPhone}
                     onChange={() => setWhatsappSameAsPhone((v) => !v)}
-                    className="accent-indigo-500"
+                    className="accent-blue-500"
                     disabled={isSubmitting}
                   />
                   <label
                     htmlFor="whatsappSame"
-                    className="text-indigo-300 text-sm select-none cursor-pointer"
+                    className="text-blue-300 text-sm select-none cursor-pointer"
                   >
                     WhatsApp number is same as phone number
                   </label>
@@ -226,7 +226,7 @@ export function LeadForm({
 
                 {!whatsappSameAsPhone && (
                   <div>
-                    <label className="block mb-1 font-semibold text-indigo-300">
+                    <label className="block mb-1 font-semibold text-blue-300">
                       WhatsApp Number <span className="text-rose-400">*</span>
                     </label>
                     <motion.input
@@ -259,7 +259,7 @@ export function LeadForm({
                 className="space-y-4"
               >
                 <div>
-                  <label className="block mb-1 font-semibold text-indigo-300">
+                  <label className="block mb-1 font-semibold text-blue-300">
                     City / Location <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
@@ -278,7 +278,7 @@ export function LeadForm({
                   />
                 </div>
                 <div>
-                  <label className="block mb-1 font-semibold text-indigo-300">
+                  <label className="block mb-1 font-semibold text-blue-300">
                     Business / Brand Name{" "}
                     <span className="text-rose-400">*</span>
                   </label>
@@ -298,7 +298,7 @@ export function LeadForm({
                 </div>
 
                 <div>
-                  <label className="block mb-1 font-semibold text-indigo-300">
+                  <label className="block mb-1 font-semibold text-blue-300">
                     Website Name / URL <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
@@ -342,8 +342,8 @@ export function LeadForm({
                       }
                       className={`py-3 px-5 rounded-xl border transition font-medium text-sm shadow-inner focus:outline-none select-none ${
                         formData.businessType === type
-                          ? "bg-indigo-600 border-indigo-600 text-white shadow-lg"
-                          : "bg-white/10 border-white/20 text-indigo-200 hover:bg-indigo-700 hover:border-indigo-500"
+                          ? "bg-blue-600 border-blue-600 text-white shadow-lg"
+                          : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
                       }`}
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.95 }}
@@ -356,7 +356,7 @@ export function LeadForm({
                 </div>
                 {formData.businessType === "Other" && (
                   <div className="mt-3">
-                    <label className="block mb-1 font-semibold text-indigo-300">
+                    <label className="block mb-1 font-semibold text-blue-300">
                       Please Mention your business
                     </label>
                     <motion.input
@@ -385,7 +385,7 @@ export function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-3"
               >
-                <label className="block mb-2 font-semibold text-indigo-300">
+                <label className="block mb-2 font-semibold text-blue-300">
                   What Service Are You Looking For?{" "}
                   <span className="text-rose-400">*</span>
                 </label>
@@ -399,8 +399,8 @@ export function LeadForm({
                         onClick={() => handleCheckboxChange(service)}
                         className={`py-3 px-4 rounded-xl border font-medium text-sm shadow-inner select-none transition ${
                           selected
-                            ? "bg-indigo-600 border-indigo-600 text-white shadow-lg"
-                            : "bg-white/10 border-white/20 text-indigo-200 hover:bg-indigo-700 hover:border-indigo-500"
+                            ? "bg-blue-600 border-blue-600 text-white shadow-lg"
+                            : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
                         }`}
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.95 }}
@@ -425,7 +425,7 @@ export function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-4"
               >
-                <label className="block mb-1 font-semibold text-indigo-300">
+                <label className="block mb-1 font-semibold text-blue-300">
                   Monthly Marketing Budget{" "}
                   <span className="text-rose-400">*</span>
                 </label>
@@ -437,8 +437,8 @@ export function LeadForm({
                       onClick={() => setFormData((p) => ({ ...p, budget }))}
                       className={`py-3 px-5 rounded-xl border font-medium text-sm shadow-inner select-none transition ${
                         formData.budget === budget
-                          ? "bg-indigo-600 border-indigo-600 text-white shadow-lg"
-                          : "bg-white/10 border-white/20 text-indigo-200 hover:bg-indigo-700 hover:border-indigo-500"
+                          ? "bg-blue-600 border-blue-600 text-white shadow-lg"
+                          : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
                       }`}
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.95 }}
@@ -463,7 +463,7 @@ export function LeadForm({
                 className="space-y-4"
               >
                 <div className="relative max-w-[90vw]">
-                  <label className="block mb-1 font-semibold text-indigo-300">
+                  <label className="block mb-1 font-semibold text-blue-300">
                     Best Time To Call / Talk{" "}
                     <span className="text-rose-400">*</span>
                   </label>
@@ -521,7 +521,7 @@ export function LeadForm({
                 </div>
 
                 <div>
-                  <label className="block mb-1 font-semibold text-indigo-300">
+                  <label className="block mb-1 font-semibold text-blue-300">
                     Additional Requirements / Notes (Optional)
                   </label>
                   <textarea
@@ -565,8 +565,8 @@ export function LeadForm({
                   onClick={handleNext}
                   className={`px-5 py-2 rounded-xl text-sm font-semibold transition ${
                     validateStep() && !isSubmitting
-                      ? "bg-indigo-500 hover:bg-indigo-600 text-white shadow"
-                      : "bg-indigo-300/60 text-white/80 cursor-not-allowed"
+                      ? "bg-blue-500 hover:bg-blue-600 text-white shadow"
+                      : "bg-blue-300/60 text-white/80 cursor-not-allowed"
                   }`}
                   whileHover={
                     validateStep() && !isSubmitting
@@ -662,7 +662,7 @@ export function Modal({ isOpen, onClose, children }) {
   );
 }
 
-export default function HeroSection() {
+const Hero = () => {
   const [step, setStep] = useState(1);
   const [whatsappSameAsPhone, setWhatsappSameAsPhone] = useState(true);
   const [notification, setNotification] = useState("");
@@ -824,77 +824,99 @@ export default function HeroSection() {
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-gradient-to-b from-black via-slate-900 to-slate-800 text-white font-sans pt-24"
-    >
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        {/* Left copy */}
-        <motion.div
-          className="px-4 md:px-0 max-w-xl mx-auto"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1] mb-6"
-          >
-            Grow Your Brand. Get 100% Free{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-300 to-white">
-              Marketing for 1 Month.
-            </span>{" "}
-          </motion.h1>
-          <p className="text-md md:text-lg xl:text-xl text-indigo-200 max-w-xl leading-relaxed selection:bg-indigo-600 selection:text-white">
-            Unlock expert-driven campaigns that help your business shine across
-            Facebook, Instagram, Twitter (X), and YouTube — absolutely free.
-          </p>
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-black">
+      {/* Background Effects */}
+      <div className="absolute inset-0 w-full h-full bg-brand-dark">
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-accent/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob" />
+        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-brand-glow/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000" />
+        <div className="absolute bottom-[-20%] left-[20%] w-[600px] h-[600px] bg-blue-900/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000" />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150" />
 
-          <motion.div
-            className="mt-16 text-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.35 }}
-          >
-            <button
-              className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition transform hover:scale-[1.03] active:scale-95"
-              aria-label="Register now - Limited Offer for First 30 Clients"
-              type="button"
-              onClick={() => setModalOpen(true)}
-            >
-              🚀 Register Now – Limited Offer for First 30 Clients
-            </button>
-          </motion.div>
-        </motion.div>
-
-        {/* Right form */}
-        <motion.div
-          className="hidden md:flex w-full max-w-full justify-center"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <LeadForm
-            step={step}
-            setStep={setStep}
-            whatsappSameAsPhone={whatsappSameAsPhone}
-            setWhatsappSameAsPhone={setWhatsappSameAsPhone}
-            notification={notification}
-            setNotification={setNotification}
-            formData={formData}
-            setFormData={setFormData}
-            validateStep={validateStep}
-            handleNext={handleNext}
-            handleBack={handleBack}
-            handleChange={handleChange}
-            handleCheckboxChange={handleCheckboxChange}
-            handleSubmit={handleSubmit}
-            stepLabels={stepLabels}
-            isSubmitting={isSubmitting}
-          />
-        </motion.div>
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       </div>
 
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex-1 text-center lg:text-left">
+          <Reveal delay={0.1}>
+            <h1 className="text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+              Capyngen –{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-white to-blue-500 animate-gradient">
+                A Result-Driven Digital Marketing Agency for Growth-Focused
+                Brands
+              </span>
+            </h1>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <p className="max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
+              Capyngen assists brands in expanding their use of digital
+              performance marketing. Not clicks and impressions, but{" "}
+              <span className="text-white font-semibold">real customers</span>,{" "}
+              <span className="text-white font-semibold">
+                quantifiable outcomes
+              </span>
+              , and <span className="text-white font-semibold">ROI</span> in the
+              long-term.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center lg:justify-start">
+              <button
+                onClick={() => setModalOpen(true)}
+                className="group relative px-8 py-4 bg-white text-brand-dark font-bold rounded-lg overflow-hidden transition-all hover:scale-105 shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(6,182,212,0.4)]"
+              >
+                <div className="absolute inset-0 w-full h-full bg-brand-glow opacity-0 group-hover:opacity-10 transition-opacity" />
+                <span className="relative flex items-center justify-center gap-2">
+                  Free Strategy Session{" "}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </button>
+
+              <a
+                href="#services"
+                className="px-8 py-4 bg-transparent border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-all hover:border-white/40 flex items-center justify-center gap-2 backdrop-blur-sm"
+              >
+                View Services
+              </a>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Hero Image/Graphic */}
+        <div className="flex-1 w-full max-w-[600px] lg:max-w-none relative hidden md:block">
+          {/* Right form */}
+          <motion.div
+            className="hidden md:flex w-full max-w-full justify-center"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <LeadForm
+              step={step}
+              setStep={setStep}
+              whatsappSameAsPhone={whatsappSameAsPhone}
+              setWhatsappSameAsPhone={setWhatsappSameAsPhone}
+              notification={notification}
+              setNotification={setNotification}
+              formData={formData}
+              setFormData={setFormData}
+              validateStep={validateStep}
+              handleNext={handleNext}
+              handleBack={handleBack}
+              handleChange={handleChange}
+              handleCheckboxChange={handleCheckboxChange}
+              handleSubmit={handleSubmit}
+              stepLabels={stepLabels}
+              isSubmitting={isSubmitting}
+            />
+          </motion.div>
+
+          {/* Background glow for image */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-accent/10 blur-3xl -z-10 rounded-full" />
+        </div>
+      </div>
       {/* Modal with same form inside */}
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
         <LeadForm
@@ -920,4 +942,6 @@ export default function HeroSection() {
       </Modal>
     </section>
   );
-}
+};
+
+export default Hero;

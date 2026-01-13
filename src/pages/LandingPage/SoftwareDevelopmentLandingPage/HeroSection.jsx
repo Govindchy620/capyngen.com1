@@ -14,14 +14,14 @@ const businessTypes = [
 ];
 
 const serviceTypes = [
-  "Web Development",
-  "App Development",
-  "Custom AI Solution",
-  "E-Commerce Solutions",
-  "Blockchain Development",
-  "DevOps Solutions",
-  "Application Solutions",
-  "CRM & Management Software",
+  "Social Media Marketing",
+  "Meta (Facebook / Instagram) Ads",
+  "Google Ads",
+  "Website Design",
+  "SEO (Google Ranking)",
+  "Branding & Graphics",
+  "Email Marketing",
+  "Not Sure — Need Guidance",
 ];
 
 const budgetOptions = [
@@ -55,13 +55,13 @@ export function LeadForm({
   const [showDateTimePicker, setShowDateTimePicker] = useState(false);
   const [tempDateTime, setTempDateTime] = useState("");
 
-  // Shared input classes with visible blue borders and transparent background for theme consistency
+  // Shared input classes with visible indigo borders and transparent background for theme consistency
   const inputClasses =
-    "w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-500 transition";
+    "w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition";
 
   return (
     <div
-      className={`relative xl:min-h-[550px] max-h-[90vh] md:min-w-[500px] w-screen bg-white/10 backdrop-blur-lg rounded-md p-2 shadow-2xl border border-blue-500 overflow-y-auto transition-shadow duration-300 ${
+      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-md p-2 shadow-2xl border border-indigo-600/40 overflow-y-auto transition-shadow duration-300 ${
         modalMode ? "p-8 text-white" : ""
       }`}
       style={modalMode ? { color: "white" } : {}}
@@ -69,7 +69,7 @@ export function LeadForm({
       {modalMode && (
         <button
           onClick={onClose}
-          className="absolute top-1 right-1 sm:top-3 sm:right-3 text-white bg-blue-500 rounded-md p-2 text-lg shadow-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 z-20"
+          className="absolute top-1 right-1 sm:top-3 sm:right-3 text-white bg-indigo-700 rounded-md p-2 text-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 z-20"
           aria-label="Close form"
           type="button"
           disabled={isSubmitting}
@@ -86,10 +86,12 @@ export function LeadForm({
         {/* Header */}
         <div className="px-0 md:px-8 pt-0 md:pt-8 pb-4 flex items-center justify-between">
           <div>
-            <div className="text-sm text-blue-300 select-none">Let's talk</div>
+            <div className="text-sm text-indigo-300 select-none">
+              Let's talk
+            </div>
             <div className="font-semibold text-white">Quick intake form</div>
           </div>
-          <div className="text-sm text-blue-200 select-none">
+          <div className="text-sm text-indigo-200 select-none">
             Step {Math.min(step, 7)}/7
           </div>
         </div>
@@ -98,7 +100,7 @@ export function LeadForm({
         <div className="px-0 md:px-8 mb-4">
           <div className="w-full bg-white/10 rounded-full h-2">
             <motion.div
-              className="h-2 rounded-full bg-blue-500 shadow-[0_8px_24px_rgba(99,102,241,0.12)]"
+              className="h-2 rounded-full bg-indigo-500 shadow-[0_8px_24px_rgba(99,102,241,0.12)]"
               initial={{ width: 0 }}
               animate={{ width: `${((step - 1) / 6) * 100}%` }}
               transition={{ duration: 0.3 }}
@@ -121,7 +123,7 @@ export function LeadForm({
         )}
 
         {/* Step container */}
-        <div className="px-0 md:px-8 pt-0 md:pt-6 pb-6 overflow-auto flex-1 scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-blue-900">
+        <div className="px-0 md:px-8 pt-0 md:pt-6 pb-6 overflow-auto flex-1 scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-indigo-900">
           <AnimatePresence mode="wait">
             {/* Step 1 */}
             {step === 1 && (
@@ -133,7 +135,7 @@ export function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-4"
               >
-                <label className="block mb-1 font-semibold text-blue-300">
+                <label className="block mb-1 font-semibold text-indigo-300">
                   Full Name <span className="text-rose-400">*</span>
                 </label>
                 <motion.input
@@ -152,7 +154,7 @@ export function LeadForm({
                   disabled={isSubmitting}
                 />
                 <div>
-                  <label className="block mb-1 font-semibold text-blue-300">
+                  <label className="block mb-1 font-semibold text-indigo-300">
                     Email <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
@@ -185,7 +187,7 @@ export function LeadForm({
                 className="space-y-4"
               >
                 <div>
-                  <label className="block mb-1 font-semibold text-blue-300">
+                  <label className="block mb-1 font-semibold text-indigo-300">
                     Phone / WhatsApp Number{" "}
                     <span className="text-rose-400">*</span>
                   </label>
@@ -211,12 +213,12 @@ export function LeadForm({
                     type="checkbox"
                     checked={whatsappSameAsPhone}
                     onChange={() => setWhatsappSameAsPhone((v) => !v)}
-                    className="accent-blue-500"
+                    className="accent-indigo-500"
                     disabled={isSubmitting}
                   />
                   <label
                     htmlFor="whatsappSame"
-                    className="text-blue-300 text-sm select-none cursor-pointer"
+                    className="text-indigo-300 text-sm select-none cursor-pointer"
                   >
                     WhatsApp number is same as phone number
                   </label>
@@ -224,7 +226,7 @@ export function LeadForm({
 
                 {!whatsappSameAsPhone && (
                   <div>
-                    <label className="block mb-1 font-semibold text-blue-300">
+                    <label className="block mb-1 font-semibold text-indigo-300">
                       WhatsApp Number <span className="text-rose-400">*</span>
                     </label>
                     <motion.input
@@ -257,7 +259,7 @@ export function LeadForm({
                 className="space-y-4"
               >
                 <div>
-                  <label className="block mb-1 font-semibold text-blue-300">
+                  <label className="block mb-1 font-semibold text-indigo-300">
                     City / Location <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
@@ -276,7 +278,7 @@ export function LeadForm({
                   />
                 </div>
                 <div>
-                  <label className="block mb-1 font-semibold text-blue-300">
+                  <label className="block mb-1 font-semibold text-indigo-300">
                     Business / Brand Name{" "}
                     <span className="text-rose-400">*</span>
                   </label>
@@ -296,7 +298,7 @@ export function LeadForm({
                 </div>
 
                 <div>
-                  <label className="block mb-1 font-semibold text-blue-300">
+                  <label className="block mb-1 font-semibold text-indigo-300">
                     Website Name / URL <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
@@ -326,7 +328,7 @@ export function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-4"
               >
-                <label className="block mb-1 font-semibold text-blue-300">
+                <label className="block mb-1 font-semibold text-indigo-300">
                   What Type of Business Do You Have?{" "}
                   <span className="text-rose-400">*</span>
                 </label>
@@ -340,8 +342,8 @@ export function LeadForm({
                       }
                       className={`py-3 px-5 rounded-xl border transition font-medium text-sm shadow-inner focus:outline-none select-none ${
                         formData.businessType === type
-                          ? "bg-blue-600 border-blue-600 text-white shadow-lg"
-                          : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
+                          ? "bg-indigo-600 border-indigo-600 text-white shadow-lg"
+                          : "bg-white/10 border-white/20 text-indigo-200 hover:bg-indigo-700 hover:border-indigo-500"
                       }`}
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.95 }}
@@ -354,7 +356,7 @@ export function LeadForm({
                 </div>
                 {formData.businessType === "Other" && (
                   <div className="mt-3">
-                    <label className="block mb-1 font-semibold text-blue-300">
+                    <label className="block mb-1 font-semibold text-indigo-300">
                       Please Mention your business
                     </label>
                     <motion.input
@@ -383,7 +385,7 @@ export function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-3"
               >
-                <label className="block mb-2 font-semibold text-blue-300">
+                <label className="block mb-2 font-semibold text-indigo-300">
                   What Service Are You Looking For?{" "}
                   <span className="text-rose-400">*</span>
                 </label>
@@ -397,8 +399,8 @@ export function LeadForm({
                         onClick={() => handleCheckboxChange(service)}
                         className={`py-3 px-4 rounded-xl border font-medium text-sm shadow-inner select-none transition ${
                           selected
-                            ? "bg-blue-600 border-blue-600 text-white shadow-lg"
-                            : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
+                            ? "bg-indigo-600 border-indigo-600 text-white shadow-lg"
+                            : "bg-white/10 border-white/20 text-indigo-200 hover:bg-indigo-700 hover:border-indigo-500"
                         }`}
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.95 }}
@@ -423,8 +425,9 @@ export function LeadForm({
                 transition={{ duration: 0.25 }}
                 className="space-y-4"
               >
-                <label className="block mb-1 font-semibold text-blue-300">
-                  Project Budget <span className="text-rose-400">*</span>
+                <label className="block mb-1 font-semibold text-indigo-300">
+                  Monthly Marketing Budget{" "}
+                  <span className="text-rose-400">*</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {budgetOptions.map((budget) => (
@@ -434,8 +437,8 @@ export function LeadForm({
                       onClick={() => setFormData((p) => ({ ...p, budget }))}
                       className={`py-3 px-5 rounded-xl border font-medium text-sm shadow-inner select-none transition ${
                         formData.budget === budget
-                          ? "bg-blue-600 border-blue-600 text-white shadow-lg"
-                          : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
+                          ? "bg-indigo-600 border-indigo-600 text-white shadow-lg"
+                          : "bg-white/10 border-white/20 text-indigo-200 hover:bg-indigo-700 hover:border-indigo-500"
                       }`}
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.95 }}
@@ -460,7 +463,7 @@ export function LeadForm({
                 className="space-y-4"
               >
                 <div className="relative max-w-[90vw]">
-                  <label className="block mb-1 font-semibold text-blue-300">
+                  <label className="block mb-1 font-semibold text-indigo-300">
                     Best Time To Call / Talk{" "}
                     <span className="text-rose-400">*</span>
                   </label>
@@ -518,7 +521,7 @@ export function LeadForm({
                 </div>
 
                 <div>
-                  <label className="block mb-1 font-semibold text-blue-300">
+                  <label className="block mb-1 font-semibold text-indigo-300">
                     Additional Requirements / Notes (Optional)
                   </label>
                   <textarea
@@ -537,7 +540,7 @@ export function LeadForm({
         </div>
 
         {/* Footer / navigation */}
-        <div className="px-0 md:px-8 py-4 border-t border-white/10 ">
+        <div className="px-0 md:px-8 py-4 border-t border-white/10 bg-gradient-to-t from-transparent to-white/10">
           <div className="flex items-center justify-between">
             <div>
               {step > 1 && (
@@ -562,8 +565,8 @@ export function LeadForm({
                   onClick={handleNext}
                   className={`px-5 py-2 rounded-xl text-sm font-semibold transition ${
                     validateStep() && !isSubmitting
-                      ? "bg-blue-500 hover:bg-blue-600 text-white shadow"
-                      : "bg-blue-300/60 text-white/80 cursor-not-allowed"
+                      ? "bg-indigo-500 hover:bg-indigo-600 text-white shadow"
+                      : "bg-indigo-300/60 text-white/80 cursor-not-allowed"
                   }`}
                   whileHover={
                     validateStep() && !isSubmitting
