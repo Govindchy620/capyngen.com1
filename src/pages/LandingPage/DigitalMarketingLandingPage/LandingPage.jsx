@@ -62,7 +62,6 @@ const LandingPage = () => {
       <WhatMakesUsDifferent />
       <div id="audience"></div>
       <Audience />
-
       <div id="about"></div>
       <Footer />
     </div>

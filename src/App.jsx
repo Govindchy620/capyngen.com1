@@ -77,6 +77,7 @@ import ViewReports from "./pages/AdminPanel/components/ViewReports";
 import Settings from "./pages/AdminPanel/components/Settings";
 import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
 import SoftwareDevelopmentLandingPage from "./pages/LandingPage/SoftwareDevelopmentLandingPage/SoftwareDevelopmentLandingPage";
+import DesignLandingPage from "./pages/LandingPage/DesignLandingPage/DesignLandingPage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -209,6 +210,7 @@ const AppContent = () => {
           path="/software-development-landing-page"
           element={<SoftwareDevelopmentLandingPage />}
         />
+        <Route path="/design-landing-page" element={<DesignLandingPage />} />
         <Route path="/greetings" element={<GreetingsPage />} />
         <Route
           path="/web-development-hidden-page"
