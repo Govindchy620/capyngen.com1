@@ -8,11 +8,13 @@ import DevelopmentProcess from "./DevelopmentProcess";
 import FullSizeImageSection from "../../../components/FullSizeImageSection";
 import { assets } from "../../../assets/assets";
 import StatsSection from "./StatsSection";
+import ExitPopup from "./ExitPopup";
 
 const SoftwareDevelopmentLandingPage = () => {
   return (
     <div className="bg-black max-w-screen overflow-hidden">
       <Navbar />
+      <ExitPopup />
 
       <div id="home" className="scroll-mt-24"></div>
       <HeroSection />

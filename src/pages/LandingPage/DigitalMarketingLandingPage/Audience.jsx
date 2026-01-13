@@ -16,7 +16,7 @@ const audienceData = [
   },
   {
     title: "Established Brands",
-    desc: "Established brands maximizing and expanding their online performance.",
+    desc: "Established brands maximizing and expanding their online performance.    ",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
   },

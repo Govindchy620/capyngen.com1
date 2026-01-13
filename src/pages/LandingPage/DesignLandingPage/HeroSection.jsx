@@ -28,7 +28,7 @@ const budgetOptions = [
   "Above ₹1,00,000",
 ];
 
-// Enhanced LeadForm component with improved UI
+// Reusable full LeadForm component with all props needed for state and handlers
 export function LeadForm({
   step,
   setStep,
@@ -52,191 +52,117 @@ export function LeadForm({
   const [showDateTimePicker, setShowDateTimePicker] = useState(false);
   const [tempDateTime, setTempDateTime] = useState("");
 
-  // Enhanced glassmorphism input styles
+  // Shared input classes with visible indigo borders and transparent background for theme consistency
   const inputClasses =
-    "w-full rounded-2xl px-5 py-4 text-white bg-white/5 backdrop-blur-xl shadow-2xl border-2 border-white/20 focus:border-indigo-400 focus:ring-8 focus:ring-indigo-500/20 transition-all duration-300 hover:border-white/40 hover:shadow-2xl hover:shadow-indigo-500/10";
-
-  // Enhanced button styles for selections
-  const selectionButtonClasses = (isSelected) =>
-    `px-6 py-4 rounded-2xl font-semibold text-sm shadow-xl border-2 transition-all duration-300 backdrop-blur-xl select-none ${
-      isSelected
-        ? "bg-gradient-to-r from-indigo-500 to-purple-600 border-indigo-400 text-white shadow-2xl shadow-indigo-500/25 transform scale-[1.02] ring-4 ring-indigo-500/30"
-        : "bg-white/10 border-white/30 text-indigo-200 hover:bg-white/20 hover:border-indigo-300 hover:text-white hover:shadow-xl hover:shadow-indigo-500/20 hover:scale-[1.02]"
-    }`;
+    "w-full rounded-xl px-4 py-3 text-white bg-transparent shadow-inner border border-blue-600 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition";
 
   return (
     <div
-      className={`relative w-full xl:min-h-[600px] max-h-[90vh] lg:min-w-[550px] bg-gradient-to-br from-slate-900/90 via-indigo-900/20 to-purple-900/30 backdrop-blur-2xl rounded-3xl p-1 shadow-2xl border border-white/10 overflow-hidden transition-all duration-500 ${
-        modalMode
-          ? "p-8 text-white shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)]"
-          : ""
+      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/10 backdrop-blur-lg rounded-md p-2 shadow-2xl border border-blue-600/40 overflow-y-auto transition-shadow duration-300 ${
+        modalMode ? "p-8 text-white" : ""
       }`}
       style={modalMode ? { color: "white" } : {}}
     >
-      {/* Animated background particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-      </div>
-
       {modalMode && (
-        <motion.button
+        <button
           onClick={onClose}
-          className="absolute top-6 right-6 group bg-white/10 hover:bg-white/20 backdrop-blur-xl rounded-2xl p-3 text-white shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 border border-white/20 hover:border-white/40 transition-all duration-300 z-20 hover:scale-110"
+          className="absolute top-1 right-1 sm:top-3 sm:right-3 text-white bg-blue-700 rounded-md p-2 text-lg shadow-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400 z-20"
           aria-label="Close form"
           type="button"
           disabled={isSubmitting}
-          whileHover={{ rotate: 90 }}
-          whileTap={{ scale: 0.95 }}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </motion.button>
+          ×
+        </button>
       )}
 
       <form
         onSubmit={handleSubmit}
-        className="relative z-10 h-full flex flex-col bg-black/20 backdrop-blur-xl rounded-3xl overflow-hidden"
+        className="relative z-10 h-full flex flex-col"
         aria-label="Multi-step lead capture form"
       >
-        {/* Enhanced Header with gradient text */}
-        <div className="px-8 pt-8 pb-6 bg-gradient-to-r from-transparent via-white/5 to-transparent backdrop-blur-xl">
-          <div className="flex items-center justify-between">
-            <div className="space-y-1">
-              <motion.div
-                className="text-xs bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-medium tracking-wider uppercase"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                Let's Build Something Amazing
-              </motion.div>
-              <motion.h2
-                className="text-2xl font-black bg-gradient-to-r from-white via-indigo-100 to-white bg-clip-text text-transparent drop-shadow-lg"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                Project Intake
-              </motion.h2>
-            </div>
-            <motion.div
-              className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-2xl backdrop-blur-xl border border-white/20"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="w-2 h-2 bg-gradient-to-b from-indigo-400 to-purple-400 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-indigo-200">
-                Step {Math.min(step, 7)}/7
-              </span>
-            </motion.div>
+        {/* Header */}
+        <div className="px-0 md:px-8 pt-0 md:pt-8 pb-4 flex items-center justify-between">
+          <div>
+            <div className="text-sm text-blue-300 select-none">Let's talk</div>
+            <div className="font-semibold text-white">Quick intake form</div>
           </div>
-
-          {/* Enhanced Progress bar with glow */}
-          <div className="mt-8">
-            <div className="w-full bg-white/10 rounded-2xl h-3 overflow-hidden backdrop-blur-xl border border-white/20">
-              <motion.div
-                className="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 shadow-[0_0_20px_rgba(99,102,241,0.4)] rounded-2xl relative overflow-hidden"
-                initial={{ width: 0, scaleX: 0.8 }}
-                animate={{ width: `${((step - 1) / 6) * 100}%`, scaleX: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-              </motion.div>
-            </div>
+          <div className="text-sm text-blue-200 select-none">
+            Step {Math.min(step, 7)}/7
           </div>
         </div>
 
-        {/* Enhanced Notification */}
-        <AnimatePresence>
-          {notification && (
+        {/* Progress bar */}
+        <div className="px-0 md:px-8 mb-4">
+          <div className="w-full bg-white/10 rounded-full h-2">
             <motion.div
-              className="mx-8 mb-6 bg-gradient-to-r from-emerald-500/90 to-teal-500/90 text-white rounded-2xl p-5 backdrop-blur-xl shadow-2xl border border-emerald-400/50 shadow-emerald-500/25"
-              initial={{ opacity: 0, y: -20, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.9 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              role="alert"
-            >
-              <div className="flex items-center gap-3">
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="font-semibold text-lg">{notification}</span>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              className="h-2 rounded-full bg-blue-500 shadow-[0_8px_24px_rgba(99,102,241,0.12)]"
+              initial={{ width: 0 }}
+              animate={{ width: `${((step - 1) / 6) * 100}%` }}
+              transition={{ duration: 0.3 }}
+            />
+          </div>
+        </div>
 
-        {/* Enhanced Step container */}
-        <div className="px-8 pb-8 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-indigo-600/50 scrollbar-track-indigo-900/20">
+        {/* Notification */}
+        {notification && (
+          <motion.div
+            className="px-8 py-3 bg-emerald-600 text-white rounded-xl mt-2 mb-4 text-center font-semibold select-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            role="alert"
+          >
+            {notification}
+          </motion.div>
+        )}
+
+        {/* Step container */}
+        <div className="px-0 md:px-8 pt-0 md:pt-6 pb-6 overflow-auto flex-1 scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-blue-900">
           <AnimatePresence mode="wait">
-            {/* Step 1 - Enhanced */}
+            {/* Step 1 */}
             {step === 1 && (
               <motion.div
                 key="s1"
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -30, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="space-y-6"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
+                className="space-y-4"
               >
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                    <span>👤</span> Full Name{" "}
-                    <span className="text-rose-400">*</span>
-                  </label>
-                  <motion.input
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    placeholder="Enter your full name"
-                    className={inputClasses}
-                    whileFocus={{ scale: 1.02, y: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    type="text"
-                    autoComplete="name"
-                    required
-                    disabled={isSubmitting}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                    <span>✉️</span> Email Address{" "}
-                    <span className="text-rose-400">*</span>
+                <label className="block mb-1 font-semibold text-blue-300">
+                  Full Name <span className="text-rose-400">*</span>
+                </label>
+                <motion.input
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="Your full name"
+                  className={inputClasses}
+                  whileFocus={{
+                    scale: 1.02,
+                    boxShadow: "0 0 8px #6366f1",
+                  }}
+                  type="text"
+                  autoComplete="name"
+                  required
+                  disabled={isSubmitting}
+                />
+                <div>
+                  <label className="block mb-1 font-semibold text-blue-300">
+                    Email <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="yourname@company.com"
+                    placeholder="you@example.com"
                     className={inputClasses}
-                    whileFocus={{ scale: 1.02, y: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    whileFocus={{
+                      scale: 1.02,
+                      boxShadow: "0 0 8px #6366f1",
+                    }}
                     autoComplete="email"
                     required
                     disabled={isSubmitting}
@@ -245,19 +171,19 @@ export function LeadForm({
               </motion.div>
             )}
 
-            {/* Step 2 - Enhanced */}
+            {/* Step 2 */}
             {step === 2 && (
               <motion.div
                 key="s2"
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -30, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="space-y-6"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
+                className="space-y-4"
               >
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                    <span>📱</span> Phone Number{" "}
+                <div>
+                  <label className="block mb-1 font-semibold text-blue-300">
+                    Phone / WhatsApp Number{" "}
                     <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
@@ -265,50 +191,49 @@ export function LeadForm({
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 99999 99999"
                     className={inputClasses}
-                    whileFocus={{ scale: 1.02, y: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    whileFocus={{
+                      scale: 1.02,
+                      boxShadow: "0 0 8px #6366f1",
+                    }}
                     required
                     disabled={isSubmitting}
                   />
                 </div>
 
-                <div className="flex items-center gap-3 p-4 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/20 hover:border-indigo-400/50 transition-all duration-300">
-                  <motion.input
+                <div className="flex items-center gap-2">
+                  <input
                     id="whatsappSame"
                     type="checkbox"
                     checked={whatsappSameAsPhone}
                     onChange={() => setWhatsappSameAsPhone((v) => !v)}
-                    className="w-5 h-5 accent-indigo-500 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-110 focus:scale-110"
+                    className="accent-blue-500"
                     disabled={isSubmitting}
                   />
                   <label
                     htmlFor="whatsappSame"
-                    className="text-indigo-200 text-base font-semibold select-none cursor-pointer hover:text-white transition-colors"
+                    className="text-blue-300 text-sm select-none cursor-pointer"
                   >
-                    WhatsApp number is same as phone
+                    WhatsApp number is same as phone number
                   </label>
                 </div>
 
                 {!whatsappSameAsPhone && (
-                  <div className="space-y-2">
-                    <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                      <span>💬</span> WhatsApp Number{" "}
-                      <span className="text-rose-400">*</span>
+                  <div>
+                    <label className="block mb-1 font-semibold text-blue-300">
+                      WhatsApp Number <span className="text-rose-400">*</span>
                     </label>
                     <motion.input
                       type="tel"
                       name="whatsappNumber"
                       value={formData.whatsappNumber || ""}
                       onChange={handleChange}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 99999 99999"
                       className={inputClasses}
-                      whileFocus={{ scale: 1.02, y: -2 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 17,
+                      whileFocus={{
+                        scale: 1.02,
+                        boxShadow: "0 0 8px #6366f1",
                       }}
                       required
                       disabled={isSubmitting}
@@ -318,64 +243,69 @@ export function LeadForm({
               </motion.div>
             )}
 
-            {/* Step 3 - Enhanced */}
+            {/* Step 3 */}
             {step === 3 && (
               <motion.div
                 key="s3"
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -30, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="space-y-6"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
+                className="space-y-4"
               >
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                    <span>📍</span> City/Location{" "}
-                    <span className="text-rose-400">*</span>
+                <div>
+                  <label className="block mb-1 font-semibold text-blue-300">
+                    City / Location <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
                     type="text"
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    placeholder="Mumbai, Delhi, Bangalore..."
+                    placeholder="Mumbai, Delhi, etc."
                     className={inputClasses}
-                    whileFocus={{ scale: 1.02, y: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    whileFocus={{
+                      scale: 1.02,
+                      boxShadow: "0 0 8px #6366f1",
+                    }}
                     required
                     disabled={isSubmitting}
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                    <span>🏢</span> Business Name{" "}
+                <div>
+                  <label className="block mb-1 font-semibold text-blue-300">
+                    Business / Brand Name{" "}
                     <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
                     name="brandName"
                     value={formData.brandName}
                     onChange={handleChange}
-                    placeholder="Your company or brand name"
+                    placeholder="Capyngen, The MediClub"
                     className={inputClasses}
-                    whileFocus={{ scale: 1.02, y: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    whileFocus={{
+                      scale: 1.02,
+                      boxShadow: "0 0 8px #6366f1",
+                    }}
                     required
                     disabled={isSubmitting}
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                    <span>🌐</span> Website URL{" "}
-                    <span className="text-rose-400">*</span>
+
+                <div>
+                  <label className="block mb-1 font-semibold text-blue-300">
+                    Website Name / URL <span className="text-rose-400">*</span>
                   </label>
                   <motion.input
                     name="website"
                     value={formData.website}
                     onChange={handleChange}
-                    placeholder='yourwebsite.com or "No Website"'
+                    placeholder='If no website → Write "No Website"'
                     className={inputClasses}
-                    whileFocus={{ scale: 1.02, y: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    whileFocus={{
+                      scale: 1.02,
+                      boxShadow: "0 0 8px #6366f1",
+                    }}
                     required
                     disabled={isSubmitting}
                   />
@@ -383,21 +313,21 @@ export function LeadForm({
               </motion.div>
             )}
 
-            {/* Step 4 - Enhanced Business Type */}
+            {/* Step 4 */}
             {step === 4 && (
               <motion.div
                 key="s4"
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -30, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="space-y-6"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
+                className="space-y-4"
               >
-                <label className="flex items-center gap-2 text-xl font-black bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                  What type of business?
-                  <span className="text-rose-400 text-lg">*</span>
+                <label className="block mb-1 font-semibold text-indigo-300">
+                  What Type of Business Do You Have?{" "}
+                  <span className="text-rose-400">*</span>
                 </label>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {businessTypes.map((type) => (
                     <motion.button
                       key={type}
@@ -405,56 +335,33 @@ export function LeadForm({
                       onClick={() =>
                         setFormData((p) => ({ ...p, businessType: type }))
                       }
-                      className={selectionButtonClasses(
+                      className={`py-3 px-5 rounded-xl border transition font-medium text-sm shadow-inner focus:outline-none select-none ${
                         formData.businessType === type
-                      )}
-                      whileHover={{ y: -4, rotateX: 5 }}
-                      whileTap={{ scale: 0.98 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 17,
-                      }}
+                          ? "bg-blue-600 border-blue-600 text-white shadow-lg"
+                          : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
+                      }`}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.95 }}
                       aria-pressed={formData.businessType === type}
                       disabled={isSubmitting}
                     >
-                      {formData.businessType === type && (
-                        <svg
-                          className="w-5 h-5 inline-block mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      )}
                       {type}
                     </motion.button>
                   ))}
                 </div>
                 {formData.businessType === "Other" && (
-                  <div className="space-y-2">
-                    <label className="flex items-center gap-2 font-bold text-lg bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                      <span>✏️</span> Please specify
+                  <div className="mt-3">
+                    <label className="block mb-1 font-semibold text-blue-300">
+                      Please Mention your business
                     </label>
                     <motion.input
                       type="text"
                       name="businessType"
                       value={formData.businessType}
                       onChange={handleChange}
-                      placeholder="Describe your business type"
+                      placeholder="Enter your business name"
                       className={inputClasses}
-                      whileFocus={{ scale: 1.02, y: -2 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 17,
-                      }}
+                      whileFocus={{ scale: 1.02, boxShadow: "0 0 8px #6366f1" }}
                       required
                       disabled={isSubmitting}
                     />
@@ -463,21 +370,21 @@ export function LeadForm({
               </motion.div>
             )}
 
-            {/* Step 5 - Enhanced Services */}
+            {/* Step 5 */}
             {step === 5 && (
               <motion.div
                 key="s5"
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -30, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="space-y-6"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
+                className="space-y-3"
               >
-                <label className="flex items-center gap-2 text-xl font-black bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                  What services do you need?
-                  <span className="text-rose-400 text-lg">*</span>
+                <label className="block mb-2 font-semibold text-blue-300">
+                  What Service Are You Looking For?{" "}
+                  <span className="text-rose-400">*</span>
                 </label>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 pr-2">
                   {serviceTypes.map((service) => {
                     const selected = formData.serviceType.includes(service);
                     return (
@@ -485,100 +392,53 @@ export function LeadForm({
                         key={service}
                         type="button"
                         onClick={() => handleCheckboxChange(service)}
-                        className={selectionButtonClasses(selected)}
-                        whileHover={{ y: -4, rotateX: 5 }}
-                        whileTap={{ scale: 0.98 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 400,
-                          damping: 17,
-                        }}
+                        className={`py-3 px-4 rounded-xl border font-medium text-sm shadow-inner select-none transition ${
+                          selected
+                            ? "bg-blue-600 border-blue-600 text-white shadow-lg"
+                            : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
+                        }`}
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.95 }}
                         aria-pressed={selected}
                         disabled={isSubmitting}
                       >
-                        {selected && (
-                          <svg
-                            className="w-5 h-5 inline-block mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        )}
                         {service}
                       </motion.button>
                     );
                   })}
                 </div>
-                {formData.serviceType.length > 0 && (
-                  <div className="flex flex-wrap gap-2 p-4 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/20">
-                    {formData.serviceType.map((service) => (
-                      <span
-                        key={service}
-                        className="px-3 py-1 bg-indigo-500/80 text-white text-xs font-bold rounded-full shadow-lg"
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </motion.div>
             )}
 
-            {/* Step 6 - Enhanced Budget */}
+            {/* Step 6 */}
             {step === 6 && (
               <motion.div
                 key="s6"
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -30, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="space-y-6"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
+                className="space-y-4"
               >
-                <label className="flex items-center gap-2 text-xl font-black bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
-                  💰 Monthly Budget{" "}
-                  <span className="text-rose-400 text-lg">*</span>
+                <label className="block mb-1 font-semibold text-blue-300">
+                  Project Budget <span className="text-rose-400">*</span>
                 </label>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {budgetOptions.map((budget) => (
                     <motion.button
                       key={budget}
                       type="button"
                       onClick={() => setFormData((p) => ({ ...p, budget }))}
-                      className={selectionButtonClasses(
+                      className={`py-3 px-5 rounded-xl border font-medium text-sm shadow-inner select-none transition ${
                         formData.budget === budget
-                      )}
-                      whileHover={{ y: -4, rotateX: 5 }}
-                      whileTap={{ scale: 0.98 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 17,
-                      }}
+                          ? "bg-blue-600 border-blue-600 text-white shadow-lg"
+                          : "bg-white/10 border-white/20 text-blue-200 hover:bg-blue-700 hover:border-blue-500"
+                      }`}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.95 }}
                       aria-pressed={formData.budget === budget}
                       disabled={isSubmitting}
                     >
-                      {formData.budget === budget && (
-                        <svg
-                          className="w-5 h-5 inline-block mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      )}
                       {budget}
                     </motion.button>
                   ))}
@@ -586,7 +446,7 @@ export function LeadForm({
               </motion.div>
             )}
 
-            {/* Step 7 - Enhanced Final Step */}
+            {/* Step 7 */}
             {step === 7 && (
               <motion.div
                 key="s7"
@@ -673,71 +533,47 @@ export function LeadForm({
           </AnimatePresence>
         </div>
 
-        {/* Enhanced Footer */}
-        <div className="px-8 py-8 bg-gradient-to-t from-black/50 via-slate-900/30 to-transparent backdrop-blur-xl border-t border-white/20">
+        {/* Footer / navigation */}
+        <div className="px-0 md:px-8 py-4 border-t border-white/10 bg-gradient-to-t from-transparent to-white/10">
           <div className="flex items-center justify-between">
-            <motion.div>
+            <div>
               {step > 1 && (
                 <motion.button
                   type="button"
                   onClick={handleBack}
-                  className="group flex items-center gap-3 px-6 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 border border-white/20 hover:border-indigo-400 transition-all duration-300 hover:scale-[1.02]"
-                  whileHover={{ x: -4 }}
-                  whileTap={{ scale: 0.98 }}
+                  className="px-4 py-2 rounded-xl bg-white/6 hover:bg-white/8 text-sm font-semibold transition-transform"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   disabled={isSubmitting}
                 >
-                  <svg
-                    className="w-6 h-6 group-hover:-translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
                   Back
                 </motion.button>
               )}
-            </motion.div>
+            </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {step < 7 && (
                 <motion.button
                   type="button"
                   disabled={!validateStep() || isSubmitting}
                   onClick={handleNext}
-                  className={`group flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl transition-all duration-300 ${
+                  className={`px-5 py-2 rounded-xl text-sm font-semibold transition ${
                     validateStep() && !isSubmitting
-                      ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:shadow-2xl hover:shadow-indigo-500/25 hover:scale-[1.02] border border-indigo-400/50"
-                      : "bg-white/10 text-white/50 border border-white/20 cursor-not-allowed"
+                      ? "bg-blue-500 hover:bg-blue-600 text-white shadow"
+                      : "bg-blue-300/60 text-white/80 cursor-not-allowed"
                   }`}
                   whileHover={
-                    validateStep() && !isSubmitting ? { x: 4 } : undefined
+                    validateStep() && !isSubmitting
+                      ? { scale: 1.05 }
+                      : undefined
                   }
                   whileTap={
                     validateStep() && !isSubmitting
-                      ? { scale: 0.98 }
+                      ? { scale: 0.95 }
                       : undefined
                   }
                 >
                   Next
-                  <svg
-                    className="w-6 h-6 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
                 </motion.button>
               )}
 
@@ -745,20 +581,18 @@ export function LeadForm({
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`group flex items-center gap-3 px-10 py-5 rounded-2xl font-black text-xl shadow-2xl transition-all duration-300 ${
+                  className={`px-6 py-2 rounded-xl font-bold shadow-lg transition-transform flex items-center gap-2 ${
                     isSubmitting
-                      ? "bg-gradient-to-r from-emerald-400 to-teal-500 cursor-not-allowed shadow-emerald-500/25"
-                      : "bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 hover:shadow-2xl hover:shadow-emerald-500/30 text-white hover:scale-[1.05] hover:-rotate-[1.5deg]"
+                      ? "bg-emerald-400 cursor-not-allowed"
+                      : "bg-emerald-500 hover:bg-emerald-600 text-white"
                   }`}
-                  whileHover={
-                    !isSubmitting ? { scale: 1.05, rotate: -1.5 } : undefined
-                  }
-                  whileTap={!isSubmitting ? { scale: 0.98 } : undefined}
+                  whileHover={!isSubmitting ? { scale: 1.05 } : undefined}
+                  whileTap={!isSubmitting ? { scale: 0.95 } : undefined}
                 >
                   {isSubmitting ? (
                     <>
                       <svg
-                        className="animate-spin h-7 w-7"
+                        className="animate-spin h-5 w-5 text-white"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -770,17 +604,17 @@ export function LeadForm({
                           r="10"
                           stroke="currentColor"
                           strokeWidth="4"
-                        />
+                        ></circle>
                         <path
                           className="opacity-75"
                           fill="currentColor"
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        />
+                        ></path>
                       </svg>
-                      Processing...
+                      <span>Submitting...</span>
                     </>
                   ) : (
-                    <>🚀 Launch Project</>
+                    "Finish & Submit"
                   )}
                 </motion.button>
               )}
@@ -792,13 +626,12 @@ export function LeadForm({
   );
 }
 
-// Enhanced Modal remains the same structure but with improved backdrop
 export function Modal({ isOpen, onClose, children }) {
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-gradient-to-br from-black/80 via-slate-900/70 to-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto"
+          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -809,11 +642,11 @@ export function Modal({ isOpen, onClose, children }) {
         >
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-2xl"
-            initial={{ scale: 0.8, opacity: 0, y: 50 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.8, opacity: 0, y: 50 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="relative"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            transition={{ duration: 0.25 }}
           >
             {children}
           </motion.div>
@@ -890,7 +723,7 @@ export default function HeroSection() {
     if (step === 1 && !isValidEmail(formData.email)) {
       setNotification("Invalid email address");
       setTimeout(() => setNotification(""), 3000);
-      return;
+      return; // prevent step increment
     }
     if (validateStep()) {
       setStep((s) => s + 1);
@@ -917,6 +750,7 @@ export default function HeroSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Prevent multiple submissions
     if (isSubmitting) return;
 
     setIsSubmitting(true);
@@ -937,7 +771,7 @@ export default function HeroSection() {
         budget: formData.budget,
         bestTime: formData.bestTime,
         notes: formData.notes,
-        leadSourcePage: "Digital-Marketing",
+        leadSourcePage: "digital-marketing",
       };
 
       const res = await fetch("https://api.capyngen.com/api/lead", {
@@ -971,6 +805,15 @@ export default function HeroSection() {
         setNotification("");
       }, 5000);
     }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];

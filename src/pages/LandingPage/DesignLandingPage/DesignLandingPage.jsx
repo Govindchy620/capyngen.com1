@@ -9,11 +9,13 @@ import ServicesSection from "./ServicesSection";
 import WhyCapyngen from "./WhyCapyngen";
 import BusinessImpactStats from "./BusinessImpactStats";
 import WorkProcess from "./WorkProcess";
+import ExitPopup from "./ExitPopup";
 
 function DesignLandingPage() {
   return (
     <>
       <Navbar />
+      <ExitPopup />
 
       <section id="home">
         <HeroSection />
