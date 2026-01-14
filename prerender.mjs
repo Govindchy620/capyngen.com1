@@ -1,22 +1,22 @@
-// import puppeteer from "puppeteer";
 import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { spawn } from "child_process";
+import waitOn from "wait-on";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const distDir = path.resolve(__dirname, "dist");
 const PORT = 4179;
-const BASE_URL = `http://localhost:${PORT}`;
+
+// ✅ Use 127.0.0.1 instead of localhost (more stable on Vercel)
+const BASE_URL = `http://127.0.0.1:${PORT}`;
 
 const routes = [
   "/",
-
-  // Main Services
   "/web-development",
   "/app-development",
   "/custom-ai-solutions",
@@ -40,8 +40,6 @@ const routes = [
   "/enterprise-solutions",
   "/data-analytics",
   "/consulting",
-
-  // Industries Main + Industry Pages
   "/industries",
   "/industries/banking",
   "/industries/education",
@@ -59,22 +57,16 @@ const routes = [
   "/industries/communication-media-it",
   "/industries/real-estate",
   "/industries/gaming",
-
-  // Company Pages
   "/company-overview",
   "/careers",
   "/news-and-updates",
   "/contact-us",
   "/privacy-policy",
   "/terms-and-conditions",
-
-  // Landing Pages
   "/digital-marketing-landing-page",
   "/software-development-landing-page",
   "/design-landing-page",
   "/greetings",
-
-  // Hidden Pages
   "/web-development-hidden-page",
   "/app-development-hidden-page",
   "/crm-management-software-hidden-page",
@@ -85,11 +77,10 @@ const wait = (ms) => new Promise((res) => setTimeout(res, ms));
 function startPreviewServer() {
   console.log("🚀 Starting vite preview server...");
 
-  // ✅ Windows-safe spawn
-  const server = spawn("npx vite preview --port 4179 --strictPort", {
+  const server = spawn(`npx vite preview --port ${PORT} --strictPort`, {
     cwd: __dirname,
     stdio: "inherit",
-    shell: true, // ✅ IMPORTANT
+    shell: true,
   });
 
   return server;
@@ -102,8 +93,11 @@ async function ensureDir(dir) {
 async function run() {
   const server = startPreviewServer();
 
-  // wait server to boot
-  await wait(5000);
+  // ✅ Wait until preview is ACTUALLY reachable
+  await waitOn({
+    resources: [BASE_URL],
+    timeout: 120000, // 2 min max
+  });
 
   const browser = await puppeteer.launch({
     args: chromium.args,
@@ -111,14 +105,47 @@ async function run() {
     executablePath: await chromium.executablePath(),
     headless: chromium.headless,
   });
+
   const page = await browser.newPage();
+
+  await page.setRequestInterception(true);
+  page.on("request", (req) => {
+    const u = req.url();
+    if (
+      u.includes("googletagmanager") ||
+      u.includes("google-analytics") ||
+      u.includes("facebook") ||
+      u.includes("hotjar")
+    ) {
+      return req.abort();
+    }
+    req.continue();
+  });
+
+  // ✅ Global timeouts once
+  page.setDefaultNavigationTimeout(120000);
+  page.setDefaultTimeout(120000);
 
   for (const route of routes) {
     console.log("➡️ Prerendering:", route);
 
-    await page.goto(`${BASE_URL}${route}`, { waitUntil: "networkidle0" });
+    const url = `${BASE_URL}${route}`;
 
-    await wait(1000);
+    await page.goto(url, {
+      waitUntil: "domcontentloaded",
+      timeout: 120000,
+    });
+
+    /**
+     * ✅ Instead of waiting for readyState complete,
+     * wait for the React root to exist (SPA stable)
+     *
+     * If your app root is different, update selector.
+     */
+    await page.waitForSelector("#root", { timeout: 60000 });
+
+    // give hydration a moment
+    await wait(800);
 
     const html = await page.content();
 
@@ -133,7 +160,6 @@ async function run() {
   }
 
   await browser.close();
-
   server.kill();
   console.log("✅ Prerender completed successfully.");
 }
