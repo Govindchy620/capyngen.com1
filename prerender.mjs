@@ -86,6 +86,22 @@ function startPreviewServer() {
   return server;
 }
 
+async function waitForServer(url, timeout = 120000) {
+  const start = Date.now();
+
+  while (Date.now() - start < timeout) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (res.ok) return;
+    } catch (e) {
+      // ignore until server is up
+    }
+    await wait(500);
+  }
+
+  throw new Error(`Preview server not ready after ${timeout}ms: ${url}`);
+}
+
 async function ensureDir(dir) {
   await fs.promises.mkdir(dir, { recursive: true });
 }
@@ -94,10 +110,7 @@ async function run() {
   const server = startPreviewServer();
 
   // ✅ Wait until preview is ACTUALLY reachable
-  await waitOn({
-    resources: [BASE_URL],
-    timeout: 120000, // 2 min max
-  });
+  await waitForServer(BASE_URL, 120000);
 
   const browser = await puppeteer.launch({
     args: chromium.args,
