@@ -237,7 +237,8 @@ const faqSchema = {
 const SMM = () => {
   const faqItems = [
     {
-      question: "What is the time it takes for the money to appear in my wallet?",
+      question:
+        "What is the time it takes for the money to appear in my wallet?",
       answer:
         "The amount of time the funds would take to reach your wallet would be determined by the mode of deposit. The majority of the funding strategies are immediate.",
     },
@@ -278,7 +279,8 @@ const SMM = () => {
         "It is a kind of paying for the promotion of media content to a target audience to attain the objectives of marketing using social media services in India.",
     },
     {
-      question: "What are the operations of the social media management services?",
+      question:
+        "What are the operations of the social media management services?",
       answer:
         "They are in charge of the complete marketing process, content planning, and production, as well as ad campaigns and outcome analysis.",
     },
@@ -293,7 +295,8 @@ const SMM = () => {
         "Our services are available on Facebook, Instagram, LinkedIn, Twitter, YouTube, and social networks that are emerging featuring the best social media marketing services in India.",
     },
     {
-      question: "After social media marketing, what is the time to notice the results?",
+      question:
+        "After social media marketing, what is the time to notice the results?",
       answer:
         "Engagement results and traffic are expected within 1-3 months, whereas brand authority will become developed over time.",
     },
@@ -399,7 +402,9 @@ const SMM = () => {
           </p>
           <p className="py-5 font-semibold">We Handle:</p>
           <ul className="list-disc list-inside space-y-3">
-            <li>Creation of content (posts, stories, reels, graphics, videos)</li>
+            <li>
+              Creation of content (posts, stories, reels, graphics, videos)
+            </li>
             <li>Planning and publishing of content</li>
             <li>Community management (reviews, DMs, inquiries)</li>
             <li>Monitoring of brand reputation</li>
@@ -468,7 +473,10 @@ const SMM = () => {
           </p>
           <p className="py-5 font-semibold">We do this by:</p>
           <ul className="list-disc list-inside space-y-3">
-            <li>Identifying the influencers who will be relevant to the target niche</li>
+            <li>
+              Identifying the influencers who will be relevant to the target
+              niche
+            </li>
             <li>Managing the influencer partnerships</li>
             <li>The Evaluation of How Your Campaign is Working</li>
           </ul>
@@ -497,7 +505,8 @@ const SMM = () => {
     {
       step: "Step 01",
       title: "Research & Audit",
-      description: "Learning your brand in and out, determining your competition.",
+      description:
+        "Learning your brand in and out, determining your competition.",
     },
     {
       step: "Step 02",
@@ -512,7 +521,8 @@ const SMM = () => {
     {
       step: "Step 04",
       title: "Execution",
-      description: "Posting, administration of advertisements, and interaction with the users.",
+      description:
+        "Posting, administration of advertisements, and interaction with the users.",
     },
     {
       step: "Step 05",
@@ -551,11 +561,10 @@ const SMM = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner15 />
-      <TopRatedCompany
-        title=""
+      {/* <TopRatedCompany
+        title="Connect, engage, and grow online"
         description={[
-          `The current world has become digital, and therefore, social media marketing is nearly compulsory. The diverse number of users on Facebook, Instagram, LinkedIn, Twitter (X) and YouTube has made social media the strongest tool that a brand can use to position, engage and build itself. We are a rising brand of providing social media services in India, and we make sure that your business comes out.`,
-          `As a trusted social media marketing firm, we provide business solutions based on analytics-based strategies, creative content, and focused social media advertisements. In growing your brand through the best social media services in India, our services in social media marketing services can be used to fulfil quantifiable objectives provided that you are seeking to promote your brand, attract the right kind of clientele or boost sales.`,
+          `We are operating your social media so as to establish communities that are appreciative of your brand, as well as to provide the best social media marketing services in India that result in engagement.`,
         ]}
         image={assets.smm1}
         isHidden={true}
@@ -563,7 +572,7 @@ const SMM = () => {
       />
       <TopRatedCompany
         reverse={true}
-        title="What is Social Media Marketing?"
+        title="Importance of Social Media Marketing"
         description={[
           `Social Media Marketing (SMM) is a process that is directed at promoting products, services, or brands through social media. It entails creating appealing content, running sponsored campaigns and creating a positive rapport with the target market. Brand is ensured by the community social network structure:`,
           <>
@@ -585,7 +594,7 @@ const SMM = () => {
         imageHeight="aspect-[1/1]"
         isHidden={true}
         background={assets.patternBg1}
-      />
+      /> */}
       <FullSizeImageSection
         backgroundImage={assets.smmFullSize}
         title="Connect, engage, and grow online"
@@ -687,7 +696,10 @@ const SMM = () => {
         title="Why Choose Us as Your Social Media Marketing Partner?"
         description={[
           <>
-            <p>The market does not have a limit on the number of agencies. But the following 5 points are what we boast of:</p>
+            <p>
+              The market does not have a limit on the number of agencies. But
+              the following 5 points are what we boast of:
+            </p>
             <p className="py-4">
               Ready-made strategies are not used here, we design tailor-made
               strategies to fit your business.

@@ -223,186 +223,186 @@ const faqSchema = {
 const CrmManagementSoftware = () => {
   const faqItems = [
     {
-      question: "What is the primary function of CRM?",
+      question: "What is CRM mainly used to do?",
       answer:
-        "CRM systems aim to facilitate the management of customer relationships by organizing customer data, pursuing sales leads, and improving customer loyalty as a way to increase sales and customer retention.",
+        "The primary objective of a customer relationship management software solution is to systematise the data about clients, follow the leads, and make more sales and contribute to enhanced customer experiences.",
     },
     {
-      question: "Is CRM a good fit for small businesses?",
+      question: "Can small businesses benefit from CRM?",
       answer:
-        "Sure. Cloud-based and modular solutions make CRM available and manageable for small businesses.",
+        "Absolutely. Our CRM software development company offers cloud models that are both competitive and scalable in terms of the cost of setup.",
     },
     {
       question: "How different is ERP from CRM?",
       answer:
-        "ERP deals with the internal affairs and necessary resources of a company meanwhile CRM takes care of all the customer relations, sales, and marketing aspects.",
+        "ERP manages internal processes, whereas CRM & management software emphasise sales and customer interactions.",
     },
     {
-      question: "What is the price of a CRM system?",
+      question: "How much should a CRM system cost?",
       answer:
-        "Depending on the features, number of users, and deployment type (cloud or on-premise) the prices vary. Capyngen has flexible packages available to fit any business size.",
+        "Our CRM development company in India has flexible pricing plans that can work with most businesses of any size and operational requirements.",
     },
     {
-      question: "Is it possible for CRM to enhance sales performance?",
+      question: "Does CRM boost sales performance?",
       answer:
-        "Indeed, CRM makes the process of lead management more efficient, makes the opportunities tracking easier, and provides the insights necessary to the sales increase.",
+        "Yes, the Best CRM software in world enables your team to work efficiently with leads, following conversions.",
     },
     {
-      question: "Do you provide custom CRM solutions?",
+      question: "Do you provide tailored CRM solutions?",
       answer:
-        "Yes. Capyngen gives CRM software made to fit your business process and operations.",
+        "Capyngen is a Custom CRM software development company that develops systems that match your business workflow.",
     },
     {
-      question:
-        "Without an issue, can CRM work with the tools that I am currently using?",
+      question: "Is CRM compatible with the current tools?",
       answer:
-        "Yes, indeed. We provide services that allow CRM to integrate with ERP, marketing, or project management software.",
+        "Yes- with professional CRM software development integration and connector services.",
     },
     {
-      question: "Which sectors can benefit from the use of CRM?",
+      question: "What are the most effective industries of CRM?",
       answer:
-        "From small businesses to enterprises, e-commerce, healthcare, real estate, finance, etc.",
+        "We have our CRM software development company platforms that are flexible to any industry, whether it is e-commerce or in healthcare and finance.",
     },
     {
-      question: "Does CRM contribute to customer retention?",
+      question: "Does CRM improve retention?",
       answer:
-        "Yes. CRM gathers the history of customer interactions, helps in the resolution of problems, and increases loyalty.",
+        "In fact, CRM management software will assist in the tracking history and forecasting customer need in order to increase loyalty.",
     },
     {
-      question: "Is there a mobile version of CRM available?",
+      question: "Does it have a mobile version?",
       answer:
-        "Yes. Mobile CRM applications allow the sales force to have access to customer information and operations anywhere, anytime.",
+        "Yes- our CRM software development solutions company in India has guaranteed mobile compatibility to have on-the-go access.",
     },
     {
-      question: "How do I switch to a different CRM?",
+      question: "What about the issue of migrating to my existing CRM?",
       answer:
-        "Capyngen offers CRM migration & upgrade alternatives for a safe switch from old systems.",
+        "Capyngen offers migration and upgrade solutions to move data safely to your new CRM software solutions.",
     },
     {
-      question: "Is a CRM system training provided?",
+      question: "Do you provide CRM training?",
       answer:
-        "Yes. We provide training and documentation to ensure teams can fully utilize the system.",
+        "Yes, all clients of the top CRM development company are provided with onboarding and comprehensive system support materials.",
     },
     {
-      question: "Is CRM data used for the company’s decisions?",
+      question: "What is the benefit of CRM to decision-making?",
       answer:
-        "Definitely, Analytical CRM leads the organization to make use of marketing, sales, and customer service plans by providing the required insights.",
+        "Crm lead management software is created with in-built analytics and dashboards that stimulate precise reporting and quicker decision-making.",
     },
     {
-      question: "To what extent can the CRM system be considered safe?",
+      question: "What is the level of security of Capyngen systems?",
       answer:
-        "Our CRM software includes encryption, access based on user roles, and follows the compliance standards thus securing the data.",
+        "Our best CRM software is fully encrypted and has access control and compliance.",
     },
     {
-      question: "How do I start Capyngen CRM solutions?",
+      question: "What will be my starting point with Capyngen CRM solutions?",
       answer:
-        "Contact or book a free consultation to discuss your business requirements and together we will design the most efficient CRM strategy for your business.",
+        "The team of CRM software development services is offering free consultations to help you plan your dream solution and roadmap.",
     },
   ];
   const cardsSectionData1 = [
     {
-      title: "Improved Customer Relationships",
+      title: "Better Customer Relationships",
       description:
-        "Turn clients into loyal supporters by knowing each detail of your relationship with them and personalizing the way you communicate.",
+        "Connect better with clients with the help of personalisation based on data and the high-level insights provided by our CRM software development services.",
       icon: <FaAndroid className="text-4xl text-white" />,
     },
     {
       title: "Increased Sales & Revenue",
       description:
-        "Sales procedures can be automated and made more efficient and leads can be better managed in such a way that the rate of conversion of sales will increase.",
+        "Automate the sales channels and manage the leads easily. The model of our CRM software development increases transparency and improves conversions - this is one of the main advantages of any CRM development company in India.",
       icon: <FaApple className="text-4xl text-white" />,
     },
     {
-      title: "Improved Productivity & Collaboration",
+      title: "Better Productivity and Co-operation",
       description:
-        "Employees can have access to customer data and can also use project management software to interact with no friction.",
+        "The best CRM management software is designed to work together, and hence the workforce is able to collaborate via the shared visualisation of the dashboards and workflow.",
       icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
       title: "Data-Driven Decision Making",
       description:
-        "Analyze the consumption behavior patterns of customers and use the business as a measuring tool to set criteria for taking appropriate actions.",
+        "Examine and identify the customer behaviour patterns. The CRM software development solutions company in India is Capyngen, which incorporates analytical systems that facilitate strong reporting.",
       icon: <FaCode className="text-4xl text-white" />,
     },
     {
-      title: "Improved Customer Loyalty & Retention",
+      title: "Better Customer Retention and Loyalty",
       description:
-        "Understand customer needs before they even become aware of them and witness the dependency and loyalty grow.",
+        "Anticipate customer intention ahead of trouble - the tools of our CRM software development company foster the growth of long-lasting loyalty.",
       icon: <FaCheckCircle className="text-4xl text-white" />,
     },
     {
-      title: "Marketing Activities Made Easier",
+      title: "Marketing Made Easier",
       description:
-        "Use integrated CRM analytics for the planning and execution of your targeted campaigns.",
+        "Design and deploy the campaign that is supported by the data and has built-in analytics delivered by our CRM software solutions, so that it can reach more people and generate higher ROI.",
       icon: <FaCogs className="text-4xl text-white" />,
     },
   ];
   const cardsSectionImageData2 = [
     {
       image: assets.crm4,
-      title: "Development of CRM Software tailored to your needs",
-      desc: "Solutions of customer relationship management that are ideally suited for your specific business processes and goals.",
+      title: "Customised CRM Software Development",
+      desc: "Our Custom CRM software development company develops systems that perfectly fit your processes and goals.",
     },
     {
       image: assets.crm5,
       title: "CRM Integration Services",
-      desc: "Use a connector to link your CRM to other enterprise software, such as ERP, marketing, and sales tools.",
+      desc: "Our CRM & management software is linked to ERP, finance and marketing databases through seamless API connections.",
     },
     {
       image: assets.crm6,
       title: "CRM Migration & Upgrade Solutions",
-      desc: "Systematic transition from old to new, scalable CRM platforms without any complications.",
+      desc: "Being one of the top CRM development company, we have no trouble with system transitions without losing any data.",
     },
     {
       image: assets.crm7,
       title: "CRM Consulting & Strategy",
-      desc: "Expert guidance in selecting, installing, and making efficient use of the suitable CRM product.",
+      desc: "The CRM software development services are designed by our experts based on quantifiable outcomes, minimisation of downtime and cost of training.",
     },
     {
       image: assets.crm8,
       title: "CRM Support & Maintenance",
-      desc: "The continued effort to solve the problem of the smoothness of the system and its updates.",
+      desc: "The CRM software development is responsive and secure due to continuous update and 24/7 support.",
     },
     {
       image: assets.crm9,
       title: "Mobile CRM Solutions",
-      desc: "Feel free to access CRM tools via handy and user-friendly mobile applications while on the go.",
+      desc: "Anywhere access- Anywhere access Your dashboards via secure mobile applications, which are driven by our CRM software development company.",
     },
   ];
   const cardsSectionData2 = [
     {
       title: "Operational CRM",
       description:
-        "It is a software that is created to handle the automation of the daily customer interactions processes which include sales, marketing, and service.",
+        "Automates daily sales and service operations to make communication fast and more accurate by CRM management software.",
       icon: <FaTools className="text-4xl" />,
     },
     {
       title: "Analytical CRM",
       description:
-        "Gather customer data for generating useful insights and making the decision facilitation process easier.",
+        "Makes big data decisions, relating CRM & management software findings to business strategy.",
       icon: <FaDollarSign className="text-4xl" />,
     },
     {
       title: "Collaborative CRM",
       description:
-        "Is an instrument used for the improvement of communication and the collaboration of departments as well as teams that lie within the same organization.",
+        "Enhances collaboration with centralized access by departments- ideal with the CRM management software scalability.",
       icon: <FaUsers className="text-4xl" />,
     },
     {
       title: "Strategic CRM",
       description:
-        "Focuses mostly on building up the long-term relationships with customers and updating the company growth strategies.",
+        "Concentrates on profitable company-customer relations in terms of preemptive contact and retention.",
       icon: <FaShieldAlt className="text-4xl" />,
     },
     {
-      title: "Management of Campaign CRM",
+      title: "Campaign Management CRM",
       description:
-        "Makes it easier to carry out marketing campaigns using functions such as tracking, segmentation, and reporting.",
+        "Makes marketing campaigns easier to execute in terms of segmentation and tracking of progress through the best CRM software platform.",
       icon: <FaBullhorn className="text-4xl" />,
     },
     {
       title: "Social CRM",
-      description: "Permits the coupling of social media channels.",
+      description:
+        "Under modern CRM software development services, links your social channels.",
       icon: <FaHeart className="text-4xl" />,
     },
   ];
@@ -410,42 +410,42 @@ const CrmManagementSoftware = () => {
     {
       title: "Define Your Business Goals and Needs",
       description:
-        "Prior to defining the specific needs you have, you should simply figure out what goals in sales, marketing, and customer support you want to achieve.",
+        "It is a good idea to clarify your sales, service, and marketing goals before you buy any CRM software solutions.",
       image: assets.crm10,
       cardBg: "bg-blue-100",
     },
     {
-      title: "Put a List of Necessary Features",
+      title: "List Necessary Features",
       description:
-        "Set a priority for features like analytics, automation, reporting, and integration.",
+        "The key requirements to take into consideration during the review of CRM software development services are prioritisation on integrations, automation, and access via mobile devices.",
       image: assets.crm11,
       cardBg: "bg-green-100",
     },
     {
-      title: "Consider the Industry-Specific Requirements",
+      title: "Assess Industry‑Specific Requirements",
       description:
-        "Try a CRM for your business and narrowly focus on the best results that you could have in the business area.",
+        "Niche markets need flexible platforms- our team takes care of the best CRM software capability that fits your industry.",
       image: assets.crm12,
       cardBg: "bg-yellow-100",
     },
     {
-      title: "Evaluate Ease of Use and User Experience",
+      title: "Evaluate Ease of Use and Experience",
       description:
-        "Check if the platform is user-friendly and it is easy for your team to get familiar with it.",
+        "Select an easy-to-use CRM management software that requires minimal time to onboard and maximise efficiency.",
       image: assets.crm13,
       cardBg: "bg-pink-100",
     },
     {
-      title: "Confirm Integration Capabilities with Existing Tools",
+      title: "Check Integration with Existing Tools",
       description:
-        "Ensure that the software is compatible with all the other software you use such as ERP, email marketing, and project management tools.",
+        "Our CRM software development firm provides a smooth integration in the ERP, project management, and CRM lead management software modules.",
       image: assets.crm14,
       cardBg: "bg-purple-100",
     },
     {
-      title: "Check if the Software Vendor Is Trusted",
+      title: "Confirm Trusted Vendor Credentials",
       description:
-        "Are there positive reviews written by their customers? Make sure the vendor has a proven track record of reliability and support.",
+        "The history of a top CRM development company ensures quality support, transparency, and successful adoption by Capyngen.",
       image: assets.crm15,
       cardBg: "bg-red-100",
     },
@@ -480,7 +480,17 @@ const CrmManagementSoftware = () => {
         title="Instant "
         highlighted="CRM Management Software Provider"
         subtitle=" – Get India’s #1 Trusted CRM Solution"
-        description="Organize client communications, increase revenue, and nurture customer loyalty with Capyngen’s state-of-the-art CRM tools tailored for small, medium, and large businesses."
+        description={
+          <>
+            Manage customer interactions, maximise sales, and develop customer
+            loyalty using the state of the art CRM & management software that
+            fits small, medium, and large businesses by Capyngen. As one of the
+            <a href="https://www.capyngen.com/consulting">
+              top consulting services in Gurgaon
+            </a>
+            , Capyngen helps organisations turn CRM into a real growth engine.
+          </>
+        }
         reverse={false}
       />
 
@@ -496,9 +506,9 @@ const CrmManagementSoftware = () => {
             </span>
           }
           description={[
-            "Our products are customer relationship management system (CRM)software solutions that are customizable to client needs and are also enterprise-grade systems that produce business growth through customer engagement, process automation, and business optimization.",
+            "The customer relationship management software offered by Capyngen is more than just any ordinary automation. Our CRM software solutions platforms are open, enterprise-level and highly customised to the customer requirements. Every system is designed to provide quantifiable outcomes with the help of our CRM software development company, as it helps provide engagement to the clients, automate the processes, and optimise the operations.",
           ]}
-          textSize="text-2xl"
+          textSize="text-lg"
           buttonText="Get in Touch"
           image={assets.crm2}
         />
@@ -508,7 +518,7 @@ const CrmManagementSoftware = () => {
           textColor="text-white"
           title=""
           description={[
-            "Upgrade customer relations, simplify business operations, and increase your revenue through the CRM management solutions offered by Capyngen. Reserve your session and experience the power of efficient business relationship management.",
+            "Our best CRM software can help you upgrade relationships, streamline work processes, and maximise growth. Arrange a meeting with Capyngen, a Custom CRM software development company listed among the Top CRM development company innovators in Asia.",
           ]}
           textSize="text-2xl"
           buttonText="Get in Touch"
@@ -517,8 +527,8 @@ const CrmManagementSoftware = () => {
         <TopRatedCompany
           title="What Are CRM Management Solutions?"
           description={[
-            `CRM Management Solutions products are computer programs developed to facilitate customer relationship processes in companies, sales tracking, and making a business work on its own. These systems collect data on a customer's buying trends, enable the exchange of data between the various departments and, most importantly, assist in business process management solutions that boost productivity through organization and time-saving.`,
-            `Capyngen bespoke cloud CRM solutions and CRM software development have the power to simplify business operations, win better customer relations and increase the business of your company.`,
+            `CRM & management software are smart computers that help in tracking sales, managing communications, and automating business in a company. These channels collect information regarding customer behaviour, link departments, and facilitate business process management. The CRM software development services provided by Pyngen are aimed at ensuring that operations are smarter and assisting teams in creating long-term customer relationships.`,
+            `Bespoke cloud CRMs of Capyngen are developed on the basis of the best CRM software development architecture that offers businesses the power to work smarter. Our best CRM management software allows your company to emphasise loyalty, data trends, and revenue generation.`,
           ]}
           image={assets.crm3}
           isHidden={true}
@@ -528,7 +538,7 @@ const CrmManagementSoftware = () => {
         <FullSizeImageSection
           backgroundImage={assets.crmSolFullSize}
           title="Strengthen relationships, simplify management"
-          description="Our CRM systems are tailored to the needs of your business and designed to enhance connectivity and productivity."
+          description="Our CRM software solutions are industry-specific, and productivity is optimised. Capyngen is a custom CRM software development company wherein each of the modules will lead to improved relationships, time management, and increased collaboration using CRM management software."
           buttonText="Try CRM Demo"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -567,7 +577,7 @@ const CrmManagementSoftware = () => {
         <FullSizeImageSection
           backgroundImage={assets.crmSolFullSize2}
           title="Manage smarter, grow faster"
-          description="Use efficient methods to handle business activities easily, and at the same time increase overall performance, with the help of resourceful CRM instruments."
+          description="Enhance performance with CRM & management software tailored to work processes in the contemporary era. Since Capyngen is a Custom CRM software development company, it guarantees excellent efficiency due to integration, automation, and analytics."
           buttonText="Start Managing"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -590,18 +600,19 @@ const CrmManagementSoftware = () => {
           description={[
             <>
               <li>
-                The application of AI and machine learning in CRM – Better
-                anticipation of the customer needs with the customization of the
-                customer journeys.
+                <b>AI and Machine Learning Integration:</b> Intelligent CRM
+                software development will anticipate trends and customise the
+                customer experience.
               </li>
               <li>
-                CRM solutions designed primarily for mobile devices – Get your
-                customer information on the go, at any time, or any place.
+                <b>Mobile CRM Preference:</b> On-the-go Services Cloud-based
+                applications of major CRM software development services enable
+                mobile access.
               </li>
               <li>
-                Customer insights through predictive analytics – To make the
-                right strategic decisions by forecasting the market trends and
-                customer behavior.
+                <b>Predictive Analytics:</b> CRM software development company
+                tools predict customer preference and stimulate customer
+                engagement.
               </li>
             </>,
           ]}
@@ -615,17 +626,24 @@ const CrmManagementSoftware = () => {
           description={[
             <>
               <li>
-                Unique features & benefits – Customised solutions that fit your
-                company specifications.
+                Unique Features & Benefits - The CRM software development
+                services offered by Capyngen will be scalable and well-automated
+                to optimise each customer touch point.
               </li>
               <li>
-                Security & compliance – Keep your customers' data safe using
-                security procedures that are up to par with the industry's
-                standards.
+                Security & Compliance - The CRM software development company
+                that we have introduced applies encryption and GDPR-compliant
+                attributes to protect the information of its users.
               </li>
               <li>
-                Customer success stories – A history that shows increased
-                customer engagement, sales, and retention worldwide.
+                Customer Success Stories - Capyngen is also among the Best CRM
+                software in world in the category of the best results that have
+                been delivered across industries, especially for clients seeking
+                the{" "}
+                <a href="https://www.capyngen.com/devops-solutions">
+                  best DevOps agency in Gurgaon
+                </a>{" "}
+                level of reliability and performance in their CRM stack.
               </li>
             </>,
           ]}

@@ -391,66 +391,60 @@ const HighTech = () => {
   const marketingCards = [
     {
       img: assets.highTech7,
-      alt: "Christmas background 3D cartoon",
-      text: "Powering the Digital Revolution",
+      alt: "Driving the Digital Revolution.",
+      text: "Driving the Digital Revolution.",
     },
     {
       img: assets.highTech8,
-      alt: "A beautiful glowing flower",
-      text: "Technology That Transforms Business",
+      alt: "Business Changing Technology.",
+      text: "Business Changing Technology.",
     },
     {
       img: assets.highTech9,
-      alt: "A magical leopard",
+      alt: "Innovate Without Limits",
       text: "Innovate Without Limits",
     },
     {
       img: assets.highTech10,
-      alt: "A female 3D cartoon holding a wrapped gift box",
-      text: "Accelerate Growth with Smart Tech Solutions",
+      alt: "Growth is meant to be accelerated using smart tech solutions.",
+      text: "Growth is meant to be accelerated using smart tech solutions.",
     },
   ];
   const cardsSectionData2 = [
     {
       title: "Domain-Specific Expert",
       description:
-        "We completely understand the challenges that come with high-tech companies. These, in reality, include rapid innovation cycles, complex data landscapes, and stringent protection demands. Our high-tech software solutions aim to keep pace with the pace and precision of your own operations.",
+        "We fully realize the problems that are associated with high-tech firms. Among them are the accelerated innovation pace, multifaceted data environment, and high security requirements. Our high tech IT solutions ensure they are in line with the pace and accuracy of your operations.",
       icon: <FaTools className="text-4xl" />,
     },
     {
       title: "Security-First Approach",
       description:
-        "The more threats that emerge in the cyber world, the more efficacious becomes our hi-tech cyber security as a protection that maintains systems, data, and our clients' intellectual property in safety from all harm. Our offerings encompass next-gen encryption, zero-trust architecture, and standards of compliance like ISO 27001 and GDPR.",
+        "Our IT solutions for high-tech industry in India deliver the best cybersecurity against systems, data, and intellectual property as cyber threats keep changing. We provide the next-gen encryption, zero-trust architecture, and adherence to such standards as the ISO 27001 and GDPR.",
       icon: <FaShieldAlt className="text-4xl" />,
     },
     {
       title: "Scalable Cloud Platforms",
       description:
-        "By utilizing our cloud platform for high tech businesses, it becomes extremely simple to operate globally in terms of integration, scalability, and real-time collaboration. Whichever it is, whether it is a hybrid or a multi-cloud, we guarantee performance and reliability on all fronts.",
+        "The high-tech businesses implemented with the help of our cloud platforms are guaranteed with integration, scalability, and collaboration in real-time. Hybrid or multi-cloud, Capyngen provides a reliable and performance service hence becoming one of the best IT services for high-tech industry.",
       icon: <FaCloud className="text-4xl" />,
     },
     {
-      title: "Intelligent Innovation with Gen AI",
-      description: (
-        <span>
-          Gen AI solutions for hi-tech by <Link to={"/"}>Capyngen</Link> utilize
-          AI for workflow automation, predictive analysis, and accelerated
-          design-to-production cycles — transforming the way tech companies
-          innovate and create products.
-        </span>
-      ),
+      title: "Smart Innovation using Gen AI",
+      description:
+        "Our Gen AI products allow increasing the automation of workflows, proactive analysis, and design-to-production processes and changing the way technological businesses innovate and develop products.",
       icon: <FaRobot className="text-4xl" />,
     },
     {
       title: "End-to-End Integration",
       description:
-        "We ensure that the transition from your previous systems to new applications and technologies is seamless. Our adaptable architecture strategy offers a unified, future-ready digital ecosystem.",
+        "Capyngen guarantees smooth transition between the old systems and the new applications. Our adaptable architecture approach provides future-proof and unified digital ecosystem.",
       icon: <FaProjectDiagram className="text-4xl" />,
     },
     {
       title: "Proven Track Record",
       description:
-        "With results that matter, Capyngen has consistently delivered scalable solutions that accelerate, secure, and optimize operations for startups and global tech enterprises alike.",
+        "Capyngen has been providing high tech IT solutions, which are faster, secure and efficient to both startups and global technology enterprises.",
       icon: <FaCheckCircle className="text-4xl" />,
     },
   ];
@@ -480,7 +474,7 @@ const HighTech = () => {
       <Banner11
         heading=" Driving the High-Tech Industry"
         highlight="Intelligent IT Solutions"
-        description="By making the technologies, software, and products easy to use, safe, and dynamic to meet changing demands from markets, we not only engineer the future of the high-tech industry but also assist in the evolution and success of our businesses."
+        description="By making technologies, software, and products simple, secure, and adaptable to suit the needs of varying markets, we not only give the future to the high-tech industry but also help our businesses evolve and prosper. Capyngen offers high tech IT solutions that enable organisations to remain digital."
         cards={marketingCards}
       />
       <GetStarted
@@ -491,7 +485,7 @@ const HighTech = () => {
         buttonTextColor="text-black"
         title="Get in touch with us for a no-charge consultation."
         description={[
-          "It is we who, as a High-tech Industry (HTI) based IT solutions provider, create and design the next-gen IT solutions that lead to smart systems, reliable infrastructure, and high-end software, thus, the customer's seamless and cutting-edge experience is attained.",
+          "It is we, as a Top IT services company for tech firms in the high-tech industry to develop and design next-gen IT solutions for high-tech industry that results to smart systems, reliable infrastructure and high-end software, which achieve the seamless and cutting-edge experience of the customer.",
         ]}
         buttonText="Get in Touch"
         backgroundVideo={assets.backgroundVideo}
@@ -502,27 +496,28 @@ const HighTech = () => {
         description={[
           <>
             <p>
-              The development of the high-tech sector is facilitated by
               Automation, cloud computing, Internet of Things (IoT), and
-              Artificial Intelligence, and these are the transformations that
-              paved the way for the industry. Businesses, though, need to not
-              only catch up but also stay a step or two ahead of their
-              competitors with fast, smart, secure, and adaptive digital
+              Artificial Intelligence serve to facilitate the development of the
+              high-tech sector, and these are the changes that preconditioned
+              the existence of the industry. It is not just necessary that
+              businesses should be able to keep up but also keep ahead of the
+              competition with quick, intelligent, secure, and dynamic digital
               ecosystems.
             </p>
             <p className="pt-4">
-              Capyngen is the best partner for the IT solutions in the high-tech
-              industry. The company's data-driven approach to engineering
-              excellence, transforms tech giants into start-ups in the blink of
-              an eye. We have the skills that can fit the customization of
-              software for electronics, semiconductor, telecommunications, AI
-              platforms, and emerging tech verticals just what you have been
-              looking for.
+              The best IT solutions provider for high-tech industry is Capyngen,
+              which provides a data-driven method of engineering excellence. We
+              make technology giants out of start-ups within the blink of an
+              eye. Our capabilities are appropriate to software customisation in
+              electronics, semiconductor, telecommunications, AI platforms, and
+              new tech verticals- supplying exactly what the high-tech companies
+              require.
             </p>
             <p className="pt-4">
-              True high-tech software is software that is digitally engineered
-              in high-tech firms' applications, i.e., Gen AI-driven platforms,
-              cloud-native infrastructure, etc. This is software that we build.
+              Digitally engineered in the application of high-tech companies,
+              i.e. Gen AI-driven platforms, cloud-native infrastructure, etc.,
+              is a true high-tech software. Such is precisely the type of
+              advanced IT solutions to the high-tech industry that we create.
             </p>
           </>,
         ]}
