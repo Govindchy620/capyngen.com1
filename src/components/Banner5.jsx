@@ -7,15 +7,24 @@ const Banner5 = ({
   description = (
     <>
       <p className="my-4 font-bold text-xl">
-        Accelerate your software delivery and streamline operations with
-        Capyngen’s expert DevOps solutions.
+        Capyngen is the company that provides expert DevOps services and
+        solutions to accelerate your software delivery and streamline
+        operations.
       </p>
       <p>
-        Capyngen delivers DevOps solutions worldwide which help to improve
-        teamwork, simplify the delivery of software, and maintain infrastructure
-        that is secure, scalable, and reliable. By delivering customized plans,
-        complete implementation, and round-the-clock assistance for companies of
-        various sectors, we are different.
+        Capyngen is a global provider of DevOps services and solutions that are
+        used to enhance teamwork, ease the development of software and ensure
+        reliable, scalable, and secure infrastructure. We are not like other
+        companies, but we are a DevOps services company and a trusted DevOps
+        solutions provider, because we offer tailored solutions, full
+        implementation, and 24/7 support to companies across different
+        industries—making us a strategic partner for any modern{" "}
+        <a
+          href="https://www.capyngen.com/application-solutions
+"
+        >
+          apps solutions company
+        </a>
       </p>
     </>
   ),

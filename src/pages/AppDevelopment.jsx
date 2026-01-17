@@ -198,73 +198,71 @@ const faqSchema = {
 const AppDevelopment = () => {
   const faqItems = [
     {
-      question: "What are the Capyngen Services related to app Development?",
+      question: "What are Capyngen Services with regards to app Development?",
       answer:
-        "We provide Android, iOS, cross-platform, custom app development, enterprise app solutions, testing, and app maintenance services that fall under our mobile app development umbrella.",
+        "Our best app development services in Gurgaon that are under our mobile app development umbrella include Android, iOS, cross-platform, custom app development services, enterprise app solutions, testing, as well as app maintenance services.",
+    },
+    {
+      question: "Why would I choose Capyngen to be my app development company?",
+      answer:
+        "The Capyngen consists of knowledgeable professional app developers, it has the benefits of a holistic skill base, and it is reputed to develop extremely secure scalable user friendly applications which enable the accomplishment of business objectives, as the Best Mobile App Development Company in India.",
+    },
+    {
+      question: "Can you create tailor made android applications?",
+      answer:
+        "Exactly! As a top Android app development company in India, we provide custom android app development services to startups, SMEs and enterprises.",
+    },
+    {
+      question: "Do you deal with the development of iPhone apps?",
+      answer:
+        "Yes, we are an iOS application development firm that is trustworthy and provides quality apps on such devices as iPhone and iPad.",
+    },
+    {
+      question: "Do you develop cross-platform applications?",
+      answer:
+        "Yes, as a pioneer in cross platform app development we develop apps, which are compatible both in Android and iOS.",
+    },
+    {
+      question: "Have you any enterprise application plans?",
+      answer:
+        "Yes, we do possess the most adaptable enterprise app development solutions to encounter difficulties in business procedures and business operations.",
+    },
+    {
+      question: "What is mobile application testing?",
+      answer:
+        "Testing of mobile applications is the procedure of thoroughly screening mobile applications on bugs, security, usability and performance glitches. Mobile Application Testing services are offered by Capyngen in addition to the normal workflow offered by the Best app development service provider in India.",
+    },
+    {
+      question: "Are you provided with app maintenance services?",
+      answer:
+        "Of course, we will have regular updates, bug fixing, feature addition, and monitoring of the performance, which are part of our services of maintaining the application.",
+    },
+    {
+      question: "What is the time taken to develop the app?",
+      answer:
+        "The time frame of development is largely a factor of the complexity of the app, and in most of the apps, it is between 6 and 16 weeks.",
     },
     {
       question:
-        "Why should I select Capyngen to be my app development company?",
+        "Can you connect APIs and other third-party resources to my application?",
       answer:
-        "Capyngen is made up of expert app developers, has the advantages of a comprehensive skill set, and is known for delivering highly secure, scalable, user-friendly apps that facilitate the achievement of business goals.",
+        "Indeed, we merge your app and payment gateways, analytics, and CRM services.",
     },
     {
-      question:
-        "Is it possible for you to develop custom Android applications?",
+      question: "Are your applications secure and easily scalable?",
       answer:
-        "Exactly! We offer custom android app development services for startups, SMEs, and enterprises.",
-    },
-    {
-      question: "Is it true that you handle iPhone app development?",
-      answer:
-        "Yes, we are an iOS app development company that is reliable and delivers high-quality apps for iPhone and iPad.",
-    },
-    {
-      question: "Do you create cross-platform apps?",
-      answer:
-        "Yes, taking a leading position in cross platform app development we create apps that are compatible with both Android and iOS.",
-    },
-    {
-      question: "Do you have any plans for developing enterprise applications?",
-      answer:
-        "Yes, we have the most flexible enterprise app development solutions to face challenges in business processes and workflows.",
-    },
-    {
-      question: "What exactly is mobile application testing?",
-      answer:
-        "Mobile application testing is the process of exhaustively checking mobile apps for bugs, security, usability, and performance issues. Capyngen provides Mobile Application Testing services along with the regular workflow.",
-    },
-    {
-      question: "Do you have app maintenance services?",
-      answer:
-        "Certainly, our app maintenance services include regular updates, bug fixing, feature expansion, and performance monitoring.",
-    },
-    {
-      question: "How much time is required for app development?",
-      answer:
-        "Development timeline mainly depends on app complexity and for most of the apps, it ranges from 6 to 16 weeks.",
-    },
-    {
-      question:
-        "Is it possible for you to link APIs and other third-party resources with my app?",
-      answer:
-        "Sure enough, we integrate your app with payment gateways, analytics tools, CRMs, and other services.",
-    },
-    {
-      question: "Are your apps safe and easily scalable?",
-      answer:
-        "Of course. Security and scalability are always on the table when we discuss our custom app solutions.",
+        "Of course. The table is always on security and scalability whenever we are talking about our custom app solutions of the Best mobile app development company in Gurgaon.",
     },
     {
       question: "Do you create e-commerce apps?",
       answer:
-        "As one of the best eCommerce app development companies in India, we specialize in eCommerce apps for online stores with easy shopping experiences.",
+        "We are among the largest eCommerce app development firms in India and are focused on eCommerce applications of online stores where one can shop with ease.",
     },
     {
       question:
-        "Is it possible for Capyngen to offer assistance and take part in formulating the app strategy?",
+        "Can Capyngen provide a helping hand and participate in creating the app strategy?",
       answer:
-        "Definitely, we offer comprehensive consulting, strategy, development, testing, and support services for mobile applications.",
+        "Indeed, we present end-to-end consulting, strategy, development, testing, and support on the mobile applications as the Best Mobile App Development Company in India.",
     },
   ];
 
@@ -272,37 +270,37 @@ const AppDevelopment = () => {
     {
       title: "Android App Development",
       description:
-        "We as a top android app development company make responsive and user-friendly apps that are designed for Android devices. Our services involve creating custom android app development solutions that include all the necessary features plus functionality and visuals to meet your business requirements.",
+        "As Top Android app development company in India, we build responsive and user-friendly apps that are Android-specific. Our services entail designing tailor-made solutions of Android app development, which incorporate all the requirements in terms of features, functionality and graphics to fulfil your business needs with the best app development services in Gurgaon.",
       icon: <FaAndroid className="text-4xl text-white" />,
     },
     {
       title: "iOS App Development",
       description:
-        "The whole point is that we stand as the most reliable iOS app development company. We offer apps that work perfectly well and easily along with giving joyful use and strong security measures to iPhone and iPad users.",
+        "The thing is that we are the most trusted company in terms of iOS app development. We provide apps that are easy and work well flawlessly, in addition to providing happy service and a high level of security to iPhone and iPad users.",
       icon: <FaApple className="text-4xl text-white" />,
     },
     {
       title: "Cross-Platform App Development",
       description:
-        "The services of our cross platform app development company let you get your app on various platforms but only with one codebase, thus not only you save time but also money and at the same time you keep a continuous experience.",
+        "Services of our cross platform application development company allows you to publish your app on different platforms only with a single base of codes, so it is not only you who save time but also money and on top of that, you retain a sustained experience.",
       icon: <FaMobileAlt className="text-4xl text-white" />,
     },
     {
       title: "Custom App Development",
       description:
-        "Not only do we do custom app development for services but also for enterprise app development solutions, making apps that are a perfect match for your business processes, workflows, and unique requirements.",
+        "As the Best app development service provider in India, we not only do custom app development of services but also of enterprise app development solutions, which match your business processes, workflow and unique requirements perfectly.",
       icon: <FaCode className="text-4xl text-white" />,
     },
     {
       title: "Mobile Application Testing",
       description:
-        "Our mobile application testing services include everything that users would expect from a testing team who ensures that apps are bug-free, secure, and also that they perform flawlessly across devices.",
+        "All this is contained in our mobile application testing services; we provide all that users would require of a testing team that will ensure that the apps are bug-free, secure, and furthermore that it works perfectly across devices.",
       icon: <FaCheckCircle className="text-4xl text-white" />,
     },
     {
       title: "App Maintenance Services",
       description:
-        "We offer the best app maintenance services which basically keep your apps up to date, safe, and run smoothly just the way any user would want, this also includes giving off some of the apps features for a longer time and the removal of bugs.",
+        "Our services include the best app maintenance services, which essentially ensure that your apps are updated, are safe and run as smoothly as any other user would like. This also comes with the provision of some features of the apps to be used longer, and with the elimination of bugs.",
       icon: <FaCogs className="text-4xl text-white" />,
     },
   ];
@@ -311,36 +309,35 @@ const AppDevelopment = () => {
     {
       title: "Scalable Solutions",
       description:
-        "Your application will be developed to be capable of accommodating the growth and expansion of your business.",
+        "We will design your application in such a way that it is able to support the growth and expansion of your business.",
       icon: <FaExpandArrowsAlt className="text-4xl" />,
     },
     {
       title: "Enhanced Security",
       description:
-        "Make sure the data of your users privacy and compliance are met.",
+        "Ensure the privacy and compliance of your data of users are achieved.",
       icon: <FaShieldAlt className="text-4xl" />,
     },
     {
       title: "User-Friendly Design",
-      description: "Provide your customers with easy and engaging interfaces.",
+      description: "Give your customers convenient and interactive interfaces.",
       icon: <FaUserFriends className="text-4xl" />,
     },
     {
       title: "Cost-Effective Development",
       description:
-        "Lower your development time and make the most of your return on investment.",
+        "Reduce your development time and maximize on your investment.",
       icon: <FaClock className="text-4xl" />,
     },
     {
       title: "Cross-Platform Reach",
-      description:
-        "Applications that are compatible with both Android and iOS.",
+      description: "Both Android and iOS-compatible applications.",
       icon: <FaMobileAlt className="text-4xl" />,
     },
     {
       title: "Improved Engagement & Retention",
       description:
-        "Let your customers benefit from a smooth and easy to use service and thus increase their loyalty towards you.",
+        "Give your customers easy to use and smooth service and hence gain loyalty towards you and thereby Best Mobile App Development Company in India.",
       icon: <FaSmile className="text-4xl" />,
     },
   ];
@@ -470,37 +467,36 @@ const AppDevelopment = () => {
       step: "Step 01",
       title: "Requirement Analysis",
       description:
-        "Know your goals, the people for whom the app is intended, and the app's functionality.",
+        "Be aware of your objectives, your targeted audience of the app and the functionality of the app.",
     },
     {
       step: "Step 02",
       title: "UI/UX Design",
-      description:
-        "Designing aesthetically pleasing and easy-to-use interfaces.",
+      description: "Creating attractive user interfaces.",
     },
     {
       step: "Step 03",
       title: "Frontend & Backend Development",
       description:
-        "Create apps that are scalable, secure, and responsive to client needs.",
+        "Develop scalable, secure and responsive applications to client needs.",
     },
     {
       step: "Step 04",
       title: "Testing",
       description:
-        "End-to-end mobile application testing for ensuring the quality of the app.",
+        "Testing of the quality of the app by using end-to-end mobile application.",
     },
     {
       step: "Step 05",
       title: "Deployment",
       description:
-        "Start the software on Google Play Store, Apple App Store, or distribute it on enterprise platforms.",
+        "Launch the software in Google Play Store, Apple App Store, or deploy it on the enterprise platforms.",
     },
     {
       step: "Step 06",
       title: "Maintenance & Support",
       description:
-        "Ongoing updates and app maintenance services for the app to stay reliable in the long run.",
+        "The application of continuous updates and maintenance of the application to remain stable over time.",
     },
   ];
 
@@ -513,27 +509,27 @@ const AppDevelopment = () => {
     {
       image: assets.appDev4,
       title: "A team of professional app developers",
-      desc: "An experienced team that can provide you with the dependable and scalable apps you need.",
+      desc: "A team that is also experienced in delivering what you require, which includes the reliable and scalable apps at an affordable price as the Top Mobile App Development Company in India.",
     },
     {
       image: assets.appDev5,
       title: "Custom and enterprise solutions",
-      desc: "The applications that match your company objectives.",
+      desc: "Applications that suit the company objectives.",
     },
     {
       image: assets.appDev6,
       title: "Testing of Mobile Applications",
-      desc: "Ensure perfect functionality, safety, and quickness.",
+      desc: "Make it absolutely functional, safe and fast.",
     },
     {
       image: assets.appDev7,
       title: "Service of App Maintenance",
-      desc: "Periodic update, feature improvement, and continuous support.",
+      desc: "Periodic update, feature enhancement and constant upkeep.",
     },
     {
       image: assets.appDev8,
       title: "Affordable and Return On Investment (ROI) focussed",
-      desc: "Make the biggest influence without exceeding your budget.",
+      desc: "Get the largest impact without overthrowing your investment in the best app development services in Gurgaon.",
     },
   ];
 
@@ -567,17 +563,22 @@ const AppDevelopment = () => {
         title2=" – Get India’s #1 Trusted Mobile App Service"
         description={
           <>
-            <strong>Scalable</strong>, <strong>secure</strong>, and{" "}
-            <strong>user-friendly</strong> mobile applications for{" "}
-            <span className="font-bold text-blue-500">Android</span>,{" "}
-            <span className="font-bold text-blue-500">iOS</span>, and{" "}
-            <span className="font-bold text-blue-500">cross-platform</span>{" "}
-            solutions.
+            Android, iOS and cross-platform solutions Android, iOS and
+            cross-platform mobile apps of the Best Mobile App Development
+            Company in India are scalable, secure and easy to use. As one of the
+            <a
+              href="https://www.capyngen.com/application-solutions
+"
+            >
+              Best application solutions in Gurgaon
+            </a>
+            , Capyngen delivers future-ready products that align with your
+            business goals.
           </>
         }
         services={[
           "Native App Development",
-          "Cross-Platform App Development",
+          "Multi-Platform Application Development",
           "Enterprise Mobile Solutions",
           "App Maintenance & Support",
         ]}
@@ -588,9 +589,9 @@ const AppDevelopment = () => {
       <TopRatedCompany
         title="Introduction to App Development"
         description={[
-          `In the modern digital world, mobile applications have become a vital tool for businesses to attract customers, increase revenues, and simplify the business processes. The range is wide: it is from start-ups to large companies. Having an app with thoughtful design keeps you in the race.`,
-          `Capyngen is an app development company india that you can count on for the on-demand consulting app development services, enterprise app development solutions, and cross-platform mobile apps that deliver security, scalability, and easy-to-use features.`,
-          `By employing the services of our team of professional app developers, you get excellent mobile app development services that lead to better user experience, higher engagement, and greater return on investment.`,
+          `Mobile applications in the contemporary digital world have become an essential tool to the business to attract customers, maximise revenues and streamline business processes. Its scope is vast: it is between start-ups and big organisations. Being a well-thought-out app keeps you afloat.`,
+          `Capyngen is the best Mobile App Development Company in India that you can rely on in the provision of the on-demand consulting app development service, enterprise app development services and cross-platform mobile apps that are secure, scalable, and easy to use.`,
+          `When you use the services of our team of professional app developers, you receive high-quality mobile app development services that result in an improved user experience, greater engagement, and increased ROI of the Top Mobile App Development Company in India.`,
         ]}
         imageHeight="md:aspect-[1/1]"
         image={assets.appDev2}
@@ -600,7 +601,7 @@ const AppDevelopment = () => {
       <FullSizeImageSection
         backgroundImage={assets.appDevFullSize}
         title="Build apps that users love"
-        description="Our highly-skilled team of designers and developers can create intuitive and fast mobile applications for iOS and Android platforms."
+        description="The Best Mobile App Development Company in India, our team, comprised of highly-skilled designers and developers, will be able to develop intuitive and fast mobile applications in both iOS and Android platforms."
         buttonText="Build My App"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"
@@ -625,10 +626,11 @@ const AppDevelopment = () => {
         description={[
           <>
             <span>
-              Is it time to get your mobile app off the ground? Contact
-              <Link to={"/"}>Capyngen</Link>, a top mobile app development
-              services company, and let our expert app developers turn your
-              dream into a living reality.
+              Is it high time to launch your mobile app? In touch with Cayngen,
+              the Best Mobile App Development Company in India and Best mobile
+              app development company in Gurgaon, and make your dream a
+              breathable reality with the help of our professional app
+              developers.
             </span>
           </>,
         ]}
@@ -652,7 +654,7 @@ const AppDevelopment = () => {
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
         description={[
-          "Trying to find a trustworthy Android app development company or iOS app development company? Contact Capyngen now to get the apps that are scalable, secure, and high-performing.",
+          "Attempting to locate a reliable Android app development firm or iOs app development firm? Contact Capyngen and start using the scalable, secure and high-performing apps as the Best Mobile App Development Company in India.",
         ]}
         textSize="text-2xl"
         buttonText="Get in Touch"
@@ -661,16 +663,20 @@ const AppDevelopment = () => {
 
       <TechStack
         heading="Transform Your Mobile Development and Consulting with Our Expert Tech Stack"
-        subheading="With our diverse and cutting-edge tech stack, we build innovative solutions that meet the highest standards of quality and functionality."
+        subheading="We have an excellent array of innovative solutions that deliver the best quality and functionality as a Best app development service provider in India with our advanced and diverse tech stack.."
         categories={techStack}
       />
 
-      <HowWeWork heading="Our App Development Process" steps={steps} />
+      <HowWeWork
+        heading="Our App Development Process"
+        desc="Our methodology of development is strict and high standard to produce a strong, error-free, and high-performance mobile application. Every step is carefully implemented by our team to have optimum efficiency and business influence out of the Best mobile app development company in Gurgaon."
+        steps={steps}
+      />
 
       <FullSizeImageSection
         backgroundImage={assets.appDevFullSize2}
         title="Turn your app idea into reality"
-        description="We are the team that transforms your mobile vision into a success, from the very first mock-up to the final product deployment."
+        description="And we are the team that will make your mobile vision come true, starting with the very first mock-up all the way to the very last product deployment as the top Android app development company in India.."
         buttonText="CONTACT US"
         buttonLink="/contact-us"
         overlayColor="bg-black/40"
@@ -692,7 +698,16 @@ const AppDevelopment = () => {
         buttonColor="bg-white hover:scale-105"
         buttonTextColor="text-black"
         description={[
-          "Looking for custom app development services or enterprise app development solutions? Reach out to Capyngen, a foremost cross-platform app development company, and grow your digital footprint.",
+          <>
+            In need of enterprise application development or custom application
+            development? Contact Capyngen, one of the leading cross-platform
+            application development firms and expand your internet presence with
+            a trusted{" "}
+            <a href="https://www.capyngen.com/web-development">
+              Website development company Gurgaon
+            </a>{" "}
+            and top Mobile App Development Company in India.
+          </>,
         ]}
         textSize="text-2xl"
         buttonText="Reach Out to Us"

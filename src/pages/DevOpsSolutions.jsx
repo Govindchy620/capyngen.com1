@@ -360,7 +360,16 @@ const DevOpsSolutions = () => {
     {
       image: assets.devOps12,
       title: "Custom Cloud Solutions",
-      desc: "Select the right cloud architectures and plans that are compatible with your business needs and objectives.",
+      desc: (
+        <>
+          Select the right cloud architectures and plans that are compatible
+          with your business needs and objectives often enhanced with{" "}
+          <a href="https://www.capyngen.com/custom-ai-solutions">
+            custom AI development services
+          </a>{" "}
+          for smarter automation and observability.
+        </>
+      ),
     },
   ];
   const steps = [
@@ -468,31 +477,6 @@ const DevOpsSolutions = () => {
           textColor="text-white"
           highlightColor="text-red-500"
         />
-        <TopRatedCompany
-          title="DevOps Solutions"
-          description={[
-            <>
-              <p>
-                <Link to={"/"}>Capyngen</Link> is the company that provides
-                expert DevOps services and solutions to accelerate your software
-                delivery and streamline operations.
-              </p>
-              <p>
-                Capyngen is a global provider of DevOps services and solutions
-                that are used to enhance teamwork, ease the development of
-                software and ensure reliable, scalable, and secure
-                infrastructure. We are not like other companies, but we are a
-                DevOps services company and a trusted DevOps solutions provider,
-                because we offer tailored solutions, full implementation, and
-                24/7 support to companies across different industries.
-              </p>
-            </>,
-          ]}
-          image={assets.devOps1}
-          isHidden={true}
-          background={assets.patternBg1}
-          imageHeight="aspect-[1/1]"
-        />
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
@@ -518,12 +502,11 @@ const DevOpsSolutions = () => {
                 to realise fast and reliable software launch.
               </p>
               <p>
-                As a DevOps consultant of <Link to={"/"}>Capyngen</Link>, who
-                works with DevOps companies, helps companies to deploy the
-                DevOps strategies efficiently and effectively, and, therefore,
-                attain improved productivity and ensure positive change with the
-                help of DevOps consulting services and DevOps development
-                services.
+                As a DevOps consultant of Capyngen, who works with DevOps
+                companies, helps companies to deploy the DevOps strategies
+                efficiently and effectively, and, therefore, attain improved
+                productivity and ensure positive change with the help of DevOps
+                consulting services and DevOps development services.
               </p>
             </>,
           ]}

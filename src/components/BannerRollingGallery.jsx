@@ -48,7 +48,7 @@ const BannerRollingGallery = ({
 
   const transform = useTransform(
     rotation,
-    (val) => `rotate3d(0,1,0,${val}deg)`
+    (val) => `rotate3d(0,1,0,${val}deg)`,
   );
 
   const startInfiniteSpin = (startAngle) => {
@@ -115,10 +115,17 @@ const BannerRollingGallery = ({
           development company in India
         </h1>
         <p className="text-base sm:text-lg md:text-xl max-w-6xl mx-auto pt-5 leading-relaxed">
-          Convert your concepts to interactive, responsive, and scalable
-          websites. Attract customers, increase your brand value, and maintain
-          your advantage in the digital world by availing our professional
-          website development services.
+          Turn your ideas into interactive, responsive and scalable websites.
+          Make customers attracted, your brand more valuable, and retain your
+          competitive edge in the digital world by offering our best web
+          development services provided by the{" "}
+          <a
+            href="https://www.capyngen.com/consulting
+"
+          >
+            best consulting company in India
+          </a>
+          and the best web development company in India.
         </p>
       </div>
 

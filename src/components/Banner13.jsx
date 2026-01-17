@@ -29,7 +29,7 @@ export default function Banner13({
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-xl max-w-4xl mx-auto lg:mx-0">
             {title} <span className="text-blue-500">{highlight}</span> {title2}
           </h1>
-          <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-[87.5%] mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-gray-300 text-lg mb-10 max-w-[87.5%] mx-auto lg:mx-0 leading-relaxed">
             {description}
           </p>
           <button

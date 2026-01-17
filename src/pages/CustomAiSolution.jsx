@@ -211,77 +211,80 @@ const CustomAiSolution = () => {
     {
       question: "What are the custom AI solutions?",
       answer:
-        "Custom AI solutions are tailored to the specific needs of your business and are designed to facilitate and optimize the application of AI in the company.",
+        "Custom AI solutions are specific to the business requirements and are aimed at aiding and streamlining the use of AI within the organization.",
     },
     {
-      question: "Does Capyngen provide AI consulting services?",
+      question: "Is Capyngen an AI consulting services company?",
       answer:
-        "Under no circumstances, without any doubt, yes we do. A part of our service is to do a comprehensive assessment of your business needs and suggest the best AI solutions.",
+        "In no case, without any doubt, yes, we do. One of the services that we offer is the thorough evaluation of your business requirements and recommending the best custom AI solutions in India.",
     },
     {
-      question: "Is it in your power to launch enterprise AI solutions?",
+      question: "Do you have the ability to deploy enterprise AI solutions?",
       answer:
-        "Definitely, Capyngen is the supplier of enterprise AI solutions for heavy-duty electronic machinery and industrial units across the globe.",
+        "Indeed, Capyngen is the AI solutions provider of enterprise AI solutions to heavy-duty electronic machines and industrial units worldwide.",
     },
     {
-      question: "What kind of sectors do you specialize in?",
+      question: "Which types of industries are you specialized in?",
       answer:
-        "We take care of the needs of such industries as finance, healthcare, retail, logistics, telecommunications, and many more big companies globally.",
+        "We cater to the needs of other industries, including finance, health care, retail, logistics, telecommunication and numerous other large companies in the world.",
     },
     {
-      question: "Are you involved in AI software development projects?",
+      question: "Do you work on AI software development services projects?",
       answer:
-        "Of course, we are the front-runners in AI software development and we create the whole AI system with the user in mind.",
+        "Naturally, we are the leaders in AI software development services, and we build the entire AI system taking into consideration the user.",
     },
     {
-      question: "Is Capyngen capable of developing AI-powered apps?",
+      question:
+        "Does Capyngen have the capabilities of creating AI-based applications?",
       answer:
-        "Indubitably, our AI app development solutions can generate and maintain various AI-driven mobile and web applications.",
+        "Undoubtedly, our AI app development solutions would be able to develop and support different AI-driven mobile and web applications.",
     },
     {
-      question: "Do you provide predictive analytics?",
+      question: "Do you offer predictive analytics?",
       answer:
-        "Indeed, predictive analytics is one of the core custom AI solutions that enable the business to foresee the market trend and minimize the risks.",
+        "In fact, the ability of the business to predict the market trend and mitigate the risks is one of the essential custom AI solutions, which is called predictive analytics.",
     },
     {
-      question: "Can AI be utilized to automate my business processes?",
+      question: "Is it possible to use AI to automate my business processes?",
       answer:
-        "Yes, that is exactly what our AI-driven automation tools do, namely, the simplification of routine workflows and the raising of productivity levels.",
+        "It is precisely what our AI automation solutions are capable of, that is, the streamlining of regular workflows and an increase in the level of productivity.",
     },
     {
-      question: "Do you design and develop NLP and chatbot models?",
+      question: "Do you create and develop NLP and chatbot models?",
       answer:
-        "Indeed, the technology behind NLP is the root of all intelligent chatbots, it also finds the tone of voice in texts, and processes text.",
+        "All intelligent chatbots are indeed the child of the technology behind NLP, which determines the tone of voice in the texts and processes the text.",
     },
     {
-      question: "What is the cost of custom AI development?",
+      question:
+        "How much does it cost to custom AI development company services?",
       answer:
-        "Costs are variable including but not limited to complexity, scalability. To get the cost of custom AI development, you will have to get in touch with us to request a quote.",
+        "Variable costs consist of complexity, scalability, and other costs. You will need to contact us to request a quote to obtain the price of a custom AI development company.",
     },
     {
-      question: "How long does it take to develop AI solutions?",
+      question: "What is the time to come up with AI solutions?",
       answer:
-        "The timeline for any given project is highly dependent on the size of that project; usually, it is between 12 and 24 weeks for a solution to be considered enterprise-grade.",
+        "The timeframe of any particular project is very reliant on the size of the project; traditionally, there are 12 to 24 weeks before a solution can be regarded as enterprise-grade.",
     },
     {
-      question: "Are you available for the ongoing AI support?",
+      question: "Do you have time in terms of the current AI support?",
       answer:
-        "Definitely, we do. We provide enterprise AI solutions along with the deployment, monitoring, and continuous upgrading of such solutions to our clients.",
+        "Definitely, we do. Our business is to offer enterprises AI solutions as well as their implementation, monitoring, and ongoing upgrades.",
     },
     {
-      question: "Can Capyngen integrate AI with existing systems?",
+      question:
+        "Does Capyngen have the option of integrating AI into the already existing systems?",
       answer:
-        "Yes, the ERP, CRM, and other platform integration is just another facet of our AI services.",
+        "The integration of the ERP, CRM, and other platforms is, of course, another aspect of our AI solution development.",
     },
     {
-      question: "Are you the provider of computer vision solutions?",
+      question: "Do you provide solutions for computer vision?",
       answer:
-        "Yes, computer vision and image recognition are among the services to be requested for smart analytics and automation.",
+        "Yes, one of the services that are going to be ordered in smart analytics and automation is computer vision and image recognition services.",
     },
     {
-      question: "Is Capyngen a worldwide AI development company?",
+      question: "Does Capyngen operate globally as an AI development company?",
       answer:
-        "Sure thing! We are a custom AI solutions company that offers consulting services as well as solutions to clients all over the world.",
+        "Sure thing! We are a custom AI solutions company that provides services to clients around the globe, both in consulting and solutions.",
     },
   ];
 
@@ -359,39 +362,39 @@ const CustomAiSolution = () => {
 
   const cardsSectionData2 = [
     {
-      title: "Making Decisions Based on Data",
+      title: "Usage of Data to make decisions",
       description:
-        "With AI, even raw data can be turned into valuable insights for decision-making.",
+        "Even raw data may be transformed into significant information to make a decision with the help of AI.",
       icon: <FaLightbulb className="text-4xl" />,
     },
     {
       title: "Automation & Productivity",
       description:
-        "The use of AI-powered automation can help simplify the execution of repetitive works within various departments of organizations.",
+        "The applications of AI automation solutions can facilitate the process of simplifying the implementation of repetitive work in other departments of organizations.",
       icon: <FaChartLine className="text-4xl" />,
     },
     {
-      title: "Customer Experience Improvement",
+      title: "Customer Experience Enhancement",
       description:
-        "By tailoring a client's needs and using your customer base's behavior to forecast future needs greatly the loyalty will be enhanced.",
+        "The loyalty will be significantly increased by adapting to the needs of a client, and the behavior of your customer base will help to build a prediction of the needs that a client may have.",
       icon: <FaCogs className="text-4xl" />,
     },
     {
       title: "Cost Optimization",
       description:
-        "Drive the use of AI-based systems to increase the utilization rate of your resources and decrease your operation costs.",
+        "Encourage the adoption of AI-based systems technologies in order to maximize the use of your assets and reduce the number of operations.",
       icon: <FaLaptopCode className="text-4xl" />,
     },
     {
       title: "Risk Management",
       description:
-        "AI can provide a forecast of potential threats and trends, which will allow a proactive administration of the situation.",
+        "The forecast of possible threats and trends can be given with the help of AI that will enable an active management of the situation.",
       icon: <FaProjectDiagram className="text-4xl" />,
     },
     {
-      title: "Enterprise AI Solutions That Are Scalable",
+      title: "Scalable AI Solutions within the Enterprise",
       description:
-        "Solutions by far have been able to extend the reach as far as your business needs all over the world.",
+        "Solutions that are offered by AI solutions provider have to this day been able to reach farther as far as your business requires it to all across the globe.",
       icon: <FaTasks className="text-4xl" />,
     },
   ];
@@ -400,42 +403,42 @@ const CustomAiSolution = () => {
     {
       title: "Machine Learning Solutions",
       description:
-        "You can easily use machine learning technology to collect data, recognize patterns and make true predictions in order to improve your company's performance.",
+        "With machine learning technology, you can conveniently gather information, identify trends and make real-life forecasts as a way of enhancing the performance of your company. custom machine learning solutions offered by custom AI development company.",
       image: assets.customAi2,
       cardBg: "bg-blue-100",
     },
     {
       title: "Natural Language Processing (NLP)",
       description:
-        "You can implement an AI-powered chatbot to make communication between the customer and your company easier and quicker. Besides this, there is sentiment analysis and intelligent text processing.",
+        "One of the things you can do is to install an AI-powered chatbot that will simplify and speed up the communication between the customer and your company. In addition to this, there is the intelligent text processing and sentiment analysis.",
       image: assets.customAi3,
       cardBg: "bg-pink-100",
     },
     {
       title: "Predictive Analytics",
       description:
-        "Take the lead by turning your data into insightful forecasts, risk management plans, and making strategic decisions.",
+        "Those who lead the pack should transform their data into insightful forecasts, risk management plans and make strategic decisions.",
       image: assets.customAi4,
       cardBg: "bg-green-100",
     },
     {
       title: "AI-Powered Automation",
       description:
-        "The workflow that is normally done in a slow and complicated way can be automated by the help of AI, and this will allow you to have efficiency increased, productivity boosted and in general a good working environment.",
+        "The processes that are usually performed in a slow and complex manner can be automated with the assistance of custom AI automation and this will enable you to have efficiency increase, productivity increase and generally a good working environment.",
       image: assets.customAi5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Computer Vision & Image Recognition",
       description:
-        "Smart technologies behind the scenes can simply take photos of us, find our faces, and even help us analyze what’s in the picture.",
+        "The technologies that work behind the scenes can merely capture photos of us, identify our faces and even assist us to analyze what is in the picture.",
       image: assets.customAi6,
       cardBg: "bg-purple-100",
     },
     {
-      title: "Recommendation & Personalization Engines",
+      title: "Recommendation/Personalization Engines",
       description:
-        "Help the companies to keep the customers coming back by providing them with the offer which is specifically suitable for them and their likes thus making the engagement strong and fruitful.",
+        "Get the companies to retain the customers by offering them the offer that is particularly fitting to them and their preferences hence making the interaction effective and successful.",
       image: assets.customAi7,
       cardBg: "bg-red-100",
     },
@@ -446,37 +449,37 @@ const CustomAiSolution = () => {
       step: "Step 01",
       title: "Requirement Analysis & Consultation",
       description:
-        "Get to know your business goals, difficulties and AI necessities.",
+        "Be familiar with business objectives, challenges and AI requirements.",
     },
     {
       step: "Step 02",
       title: "Strategy & Solution Design",
       description:
-        "Develop an AI plan properly structured for your company's goals and objectives.",
+        "Design an AI strategy that is adequately aligned with the goals and objectives of your firm.",
     },
     {
       step: "Step 03",
       title: "Data Collection & Preparation",
       description:
-        "Start collecting, cleaning, and preparing the datasets that you want to use in order to train your AI models.",
+        "Begin gathering, washing, and processing the data sets that you desire to use to train your machine learning models.",
     },
     {
       step: "Step 04",
       title: "AI Model Development",
       description:
-        "Create, train, and cast off machine learning or AI algorithms for greater exactness.",
+        "Design, educate, and discard the machine learning or AI algorithms to achieve a higher level of precision.",
     },
     {
       step: "Step 05",
       title: "Integration & Testing",
       description:
-        "Effortlessly insert AI solutions into old systems and carry out various tests.",
+        "Easily add AI solutions to the existing systems and run several tests. Combine with a custom Android app development or iOS software development company.",
     },
     {
       step: "Step 06",
       title: "Deployment, Support & Continuous Improvement",
       description:
-        "Introduce, watch over, and upgrade AI models without stopping for a long time.",
+        "Train, monitor, and continuously enhance AI models, not least in the short term.",
     },
   ];
 
@@ -505,7 +508,7 @@ const CustomAiSolution = () => {
       <div className="lg:sticky inset-0">
         <Banner3
           title="Instant Best custom AI solutions Company in Gurgaon– Get India’s #1 Trusted custom AI solutions"
-          subtitle="Tap into better decision-making, streamline your business activities, and foster innovation by using Capyngen’s bespoke AI solutions designed to meet your business requirements globally."
+          subtitle="Enhance your decision-making process, simplify your business operations, and be innovative using custom AI solutions tailored to the needs of your business across the world, by Capyngen."
           backgroundImage={assets.customAi1}
           overlayColor="bg-black"
           diagonalShape="polygon(0 0, 100% 0, 100% 40%, 0 100%)"
@@ -521,14 +524,7 @@ const CustomAiSolution = () => {
           sectionBg="bg-black"
           title="Best Custom AI Solutions for Businesses"
           description={[
-            <span>
-              <Link to={"/"}>Capyngen</Link> is a global AI software company
-              that creates AI-powered solutions for businesses that want to
-              automate their workflows, make decisions based on data, and
-              discover new business potentials. We design AI solutions that fit
-              any business, from startups to multinational corporations, to make
-              a quantifiable difference.
-            </span>,
+            "Capyngen is a worldwide AI development company that develops AI-powered solutions for businesses wishing to automate their operations, make decisions based on facts and identify unexplored business opportunities. We create custom AI solutions for business that are applicable to all sizes of business, whether a startup or a multinational company, to make a measurable change.",
           ]}
           image={assets.customAiSolution}
         />
@@ -538,7 +534,7 @@ const CustomAiSolution = () => {
           textColor="text-white"
           title=""
           description={[
-            "Get in touch with the best AI development company for a free consultation and discover the possible applications of enterprise AI, machine learning, and custom AI services in your business.",
+            "Contact the best custom AI solutions Company in Gurgaon and receive a free consultation and find out how your enterprise AI solutions, machine learning, and custom AI services can be applied in the business.",
           ]}
           textSize="text-2xl"
           buttonText="Get in Touch"
@@ -549,9 +545,10 @@ const CustomAiSolution = () => {
           subheading={
             <>
               <p>
-                By investing in bespoke AI solutions, your company will be able
-                to outrun the competition by getting and maintaining operational
-                efficiency as well as providing one-to-one customer experiences.
+                Investing in custom AI solutions will help your company to
+                surpass the competition, as it will not only achieve operational
+                efficiency and customer experiences on a one-on-one level, but
+                will also be able to retain them.
               </p>
               <h3 className="text-5xl font-semibold mt-8 my-4">
                 Advantages of AI Adoption in Business:
@@ -570,7 +567,7 @@ const CustomAiSolution = () => {
         <FullSizeImageSection
           backgroundImage={assets.customAiFullSize}
           title="Empower your business with AI"
-          description="Use artificial intelligence as a business tool to simplify, speed up, and revolutionize your company."
+          description="Artificial intelligence is used as a business tool to streamline, accelerate, and transform the company."
           buttonText="Explore AI Solutions"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -589,33 +586,58 @@ const CustomAiSolution = () => {
           textColor="text-white"
           title="Obtain a personalized AI solution from Capyngen"
           description={[
-            "Turn on the power of intelligent decisions, simplifying the execution of your operations and accelerating business expansion with the use of custom-made AI services. ",
+            "Activate the strength of intuitive choices, which will make it easier to conduct your business and speed up the growth of the business using custom-made AI services.",
           ]}
           textSize="text-xl"
           buttonText="Get in Touch"
           backgroundVideo={assets.backgroundVideo}
         />
-        <HowWeWork heading="How We Develop Custom AI Solutions" steps={steps} />
+        <HowWeWork
+          heading="How We Develop Custom AI Solutions"
+          desc={
+            <>
+              Our powerful and quality development procedure produces powerful,
+              mistake-free and performance AI software solutions. Every phase in
+              our team is carefully implemented to achieve the highest degree of
+              efficiency and business influence. AI solution development by the
+              experts of AI software development follows modern best practices
+              similar to those used by the{" "}
+              <a href="https://www.capyngen.com/devops-solutions">
+                Best devops solutions provider
+              </a>
+              , ensuring reliability, observability, and continuous delivery.
+            </>
+          }
+          steps={steps}
+        />
         <FullSizeImageSection
           backgroundImage={assets.customAiFullSize2}
           title="Build intelligent solutions for smarter growth"
-          description="Our team builds bespoke AI models that help the client to use less resources and make better decisions."
+          description="Our team develops custom AI models that assist the client in utilising fewer resources and make more suitable decisions."
           buttonText="Build With Us"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
         <TechnologiesCarousel
           title="Custom AI Solution Technologies We Use"
-          description="We create impactful digital experiences that help businesses grow. Our team blends creativity, strategy, and technology to craft innovative and user-friendly solutions."
+          description="We produce effective online experiences to make businesses rise. We are a group that is creative, strategic, and technology-minded to develop innovative and usable solutions."
           technologies={technologies}
         />
         <GetStarted
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
-          title="Make your business the beneficiary of Capyngen’s custom AI solutions "
+          title="Make your business the beneficiary of Capyngen’s custom AI solutions"
           description={[
-            "increase effectiveness, deepen your understanding, and carry out AI-powered automation that matches your requirements.",
+            <>
+              Grow your productivity, expand your knowledge and implement
+              AI-powered automation that suits your needs. As a{" "}
+              <a href="https://www.capyngen.com/crm-management-software">
+                Top crm development company
+              </a>{" "}
+              would do for customer data, robust AI layers on top of existing
+              platforms unlock deeper insights and smarter workflows.
+            </>,
           ]}
           textSize="text-xl"
           buttonText="Get in Touch"

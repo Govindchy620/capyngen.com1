@@ -37,7 +37,7 @@ const BusinessValueStats = ({
           </h2>
           <p className={`text-lg mb-6 ${textColor}`}>{subtitle}</p>
           <a
-            href="#"
+            href="/contact-us"
             className={`font-semibold text-lg underline decoration-2 underline-offset-4 hover:no-underline ${highlightColor}`}
           >
             {ctaText}

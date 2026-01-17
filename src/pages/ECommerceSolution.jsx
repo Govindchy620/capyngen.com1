@@ -229,123 +229,125 @@ const faqSchema = {
 const ECommerceSolution = () => {
   const faqItems = [
     {
-      question: "What is an e-commerce solution?",
+      question: "What is an e-commerce solutions?",
       answer:
-        "An e-commerce solution is a complete system that supports companies in selling their products or services over the internet. It includes website design, development, payment integration, marketing, and support.",
+        "E-commerce solutions is a full system that helps firms to sell their services or goods online. It has professional e-commerce solutions that cover web design and development, payment solutions, marketing as well as support.",
     },
     {
-      question: "Why does my business need an e-commerce website?",
+      question: "Why do I need an e-commerce solutions website on my business?",
       answer:
-        "An e-commerce website enables your company to make sales 24/7, reach global customers, reduce operating costs, and offer a pleasant shopping experience that boosts purchasing power.",
-    },
-    {
-      question:
-        "Do you offer a mobile e-commerce application for both Android and iOS devices?",
-      answer:
-        "Yes! Capyngen builds fast and reliable mobile e-commerce apps for Android and iOS using technologies like Flutter, React Native, and native languages.",
+        "The e-commerce solutions site will allow your company to sell 24/7, connect with customers all over the world, cut down on operating expenses and provide a customer with a nice shopping experience which increases their purchasing power due to ecommerce development company experience.",
     },
     {
       question:
-        "Could a platform like Capyngen be able to create a multi-vendor marketplace similar to Amazon?",
+        "Are you providing both Android and iOS mobile e-commerce solutions application?",
       answer:
-        "Absolutely. We develop scalable multi-vendor marketplaces where multiple sellers can list and sell products, similar to Amazon or Flipkart.",
-    },
-    {
-      question: "Which payment gateways are available for integration?",
-      answer:
-        "We support major global and local payment gateways including Stripe, PayPal, Razorpay, and many others for fast and reliable transactions.",
+        "Yes! Capyngen develops rapid and trustworthy Android and iOS mobile e-commerce solutions applications based on technologies such as Flutter, React Native, and native languages as E commerce solutions in India.",
     },
     {
       question:
-        "Do you provide SEO and digital marketing services for e-commerce?",
+        "Would such a platform as Capyngen be in a position to develop a multi-vendor marketplace such as Amazon?",
       answer:
-        "Yes. We implement SEO and digital marketing strategies to improve site ranking, attract visitors, and convert them into customers effectively.",
+        "Absolutely. We build multi-vendor markets that are scalable, where several sellers may list and sell their products just like Amazon or Flipkart, through ecommerce website design.",
+    },
+    {
+      question: "What will be the payment gateways to be integrated?",
+      answer:
+        "We are the official partners of such big and local payment gateways as Stripe, PayPal, Razorpay, and others to provide quick and secure transactions in our e-commerce software solutions.",
     },
     {
       question:
-        "Do you think Capyngen can help me develop my e-store to be accessible worldwide?",
+        "Are you an e-commerce solution, SEO and digital marketing services?",
       answer:
-        "Indeed. Our solutions support global accessibility with features like multi-currency, multi-language, and international shipping options.",
-    },
-    {
-      question: "How much time is needed to build an e-commerce website?",
-      answer:
-        "Depending on the project scope, it typically takes between 3 to 8 weeks from planning to launch.",
-    },
-    {
-      question: "Do you assure maintenance of the project after it goes live?",
-      answer:
-        "Definitely. We provide ongoing support and maintenance to ensure smooth operation, security, and updates for your e-commerce store.",
-    },
-    {
-      question: "Is it possible for you to link CRM and ERP systems together?",
-      answer:
-        "Yes! We integrate leading CRM and ERP platforms to streamline and enhance your business operations.",
+        "Yes. To develop the e-commerce websites, we apply the strategy of SEO and the use of digital marketing services to enhance the ranking of the site, the level of visitor attraction and conversion into a customer.",
     },
     {
       question:
-        "Do you have any subscription-based models for e-commerce purposes?",
+        "Do you believe Capyngen would assist me in building my e-store that would be accessible to the rest of the world?",
       answer:
-        "Yes. We build subscription and membership platforms with recurring billing for products, services, or SaaS businesses.",
+        "Indeed. Our e-commerce solutions for businesses are accessible globally as it includes functions such as multi-currency, multi-language and international shipping.",
     },
     {
-      question: "What types of businesses are you willing to help?",
+      question:
+        "The amount required to develop an e-commerce solutions website?",
       answer:
-        "We work with a wide range of industries including retail, food, medical, education, travel, hospitality, and B2B wholesale.",
+        "Our eCommerce development services normally require 3 to 8 weeks to go through customisation to launch, depending on the scope of the project.",
     },
     {
-      question: "Will my e-commerce website be optimized for smartphones?",
+      question:
+        "Do you warrant the maintenance of the project once it becomes live?",
       answer:
-        "Yes. All our e-commerce websites are fully responsive and mobile-friendly for seamless shopping on any device.",
+        "Definitely. Our best ecommerce platform in India is in continuous support and maintenance to operate smoothly, securely and with updates.",
     },
     {
-      question: "Is it possible to have my custom domain and hosting?",
+      question: "Can you connect CRM and ERP systems?",
       answer:
-        "Yes. You can use your own domain and hosting, or we can manage it for you.",
+        "Yes! We combine the best CRM and ERP solutions to optimise and improve your business activities with the help of E commerce solutions services.",
     },
     {
-      question: "How to start a project with Capyngen?",
+      question:
+        "Are there any subscription models of E-commerce solutions that you use?",
       answer:
-        "Simply book a free consultation or message our team. We'll understand your goals and craft a tailored e-commerce solution for you.",
+        "Yes. As e-commerce solutions company, we develop subscription and membership programs with recurring billings of products, services or SaaS businesses.",
+    },
+    {
+      question: "Which kind of businesses do you want to assist in?",
+      answer:
+        "Our industries of operation encompass a broad spectrum of retail, food, medical, education, travel, hospitality and B2B wholesale, deploying the solutions of ecommerce development company.",
+    },
+    {
+      question: "Is my e-commerce solutions site optimised for smartphones?",
+      answer:
+        "Yes. Our e-commerce solutions websites are all fully responsive and mobile-ready to allow shopping with any device.",
+    },
+    {
+      question: "Can I possess my own domain and hosting?",
+      answer:
+        "Yes. You are allowed to use your own domain and hosting, or we can do it all with our ecommerce website development solutions for creating websites.",
+    },
+    {
+      question: "What is the project initiation with Capyngen?",
+      answer:
+        "Just make a free appointment or contact our staff. We will know your objectives, and we will design a customised e-commerce solutions to you.",
     },
   ];
   const servicesData = [
     {
       image: assets.eCommSol12,
       title: "Search Engine Optimization (SEO)",
-      desc: "Make your website be ranked at the top of Google.",
+      desc: "Get your website on the first page of Google.",
     },
     {
       image: assets.eCommSol13,
       title: "Social Media Integration",
-      desc: "Get more customers and advertising your products directly on Instagram, Facebook, and LinkedIn.",
+      desc: "Get additional customers and promote your products directly to Instagram, Facebook, and LinkedIn.",
     },
     {
       image: assets.eCommSol14,
       title: "Email & SMS Campaigns",
-      desc: "Revive relationships with customers and stimulate repeat purchases.",
+      desc: "Rejuvenate customer relations and promise repeat sales.",
     },
     {
       image: assets.eCommSol15,
       title: "Content Marketing",
-      desc: "Gain the trust of visitors and attract the traffic with helpful content.",
+      desc: "Win the goodwill of visitors and draw traffic through useful material.",
     },
     {
       image: assets.eCommSol16,
       title: "Paid Advertising (PPC)",
-      desc: "Get targeted traffic to your online shop right away.",
+      desc: "Attract specific attention to your online store immediately.",
     },
     {
       image: assets.eCommSol17,
       title: "Analytics & Conversion Tracking",
-      desc: "Evaluate the results and evolve effectively.",
+      desc: "Assess the outcomes and develop successfully.",
     },
   ];
   const cardsSectionImageData1 = [
     {
       title: "Enhanced User Engagement & Retention",
       description:
-        "Start building user-centered and interactive offerings which attract users to come back thus increasing loyalty and long-term engagement. User-engagement platforms keep users discovering more about your platform and coming back regularly.",
+        "Begin to create user-centric and interactive products that will make users revisit them, thereby raising loyalty and long-term interactions. User-engagement sites ensure that the users continue to learn more about your platform and visit regularly.",
       image: assets.eCommSol3,
       cardBg: "bg-blue-100",
     },
@@ -353,56 +355,56 @@ const ECommerceSolution = () => {
     {
       title: "Improved Conversion Rates",
       description:
-        "Selecting layouts and workflows that engage visitors is the main factor in motivating visitors to take the desired action, thus increasing sales, sign-ups, and leads. Strategically placed call-to-actions and persuasive design elements take conversions a step further.",
+        "The primary determinant of encouraging visitors to follow the desired action is the ability to select layouts and workflows that are efficient in engaging the visitors and, hence, increasing sales, sign-ups, and leads. Call-to-actions and convincing design elements are strategically placed, which brings the conversions to the next level.",
       image: assets.eCommSol4,
       cardBg: "bg-green-100",
     },
     {
       title: "Intuitive, Responsive, and Accessible Design",
       description:
-        "Make sure that the user experience is equally good on all devices, including those for users with disabilities. Accessibility-focused design widens your audience base and strengthens your brand image.",
+        "Ensure that the user experience is also good on other devices, such as those of a disabled user. Focusing on creating accessibility expands your audience and reinforces your brand image with the help of ecommerce website design.",
       image: assets.eCommSol5,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Faster Load Times & Optimized Performance",
       description:
-        "Fast-loading pages, easy navigation, and efficient apps decrease visits that leave immediately. Optimized performance improves user delight and promotes longer sessions.",
+        "Quick loading of pages, easy navigation and effective apps reduce referred visits that exit instantly. Enhanced performance optimality leads to enhanced user delight and longer sessions.",
       image: assets.eCommSol6,
       cardBg: "bg-pink-100",
     },
     {
       title: "Scalable Architecture for Growth",
       description:
-        "Develop changes that would be able to absorb more traffic, new features, and bigger geographic features without losing quality. Scalable systems give room for businesses to grow with stability and without needing to redesign the platform.",
+        "Design changes that could accommodate additional traffic, new functionality and larger geographical aspects without quality reduction. Scalable systems provide the opportunity of business to expand in a stable manner and without having to redesign the platform.",
       image: assets.eCommSol7,
       cardBg: "bg-purple-100",
     },
     {
       title: "Strong Branding & Visual Identity",
       description:
-        "Appealing, regular, designs bring across the company’s ideals to its customers in a clear and somewhat memorable manner. One visual identity at the core of recognition and trust with users.",
+        "Attractive, customary designs convey the ideals of the company to its consumers in a clean and rather memorable way. A single visual identity is central to recognition and trust by users.",
       image: assets.eCommSol8,
       cardBg: "bg-red-100",
     },
     {
       title: "Seamless Integration with Tools & Services",
       description:
-        "Connect CRMs, payment gateways, analytics, or any other third-party services to form a complete ecosystem. Integration guarantees operational efficiency as well as a better user experience.",
+        "Integrate any third-party services to create a fully fledged ecosystem, including: connect CRMs, payment gateways, analytics or any other third-party services. Integration ensures there is efficiency in operations and improved user experience.",
       image: assets.eCommSol9,
       cardBg: "bg-blue-100",
     },
     {
       title: "Data-Driven Decision Making",
       description:
-        "With the help of analytics and understanding of user behavior, you can improve UI/UX, marketing strategies, and product offerings. Optimization on a daily basis engages users further, their loyalty increases, which in turn leads to a higher overall ROI.",
+        "You can make UX and UI better, enhance the marketing approach, and enhance the products with the help of analytics and knowledge of how people behave. The daily optimisation will involve the users even more, and their loyalty will rise, which will result in the overall enhancement of the ROI.",
       image: assets.eCommSol10,
       cardBg: "bg-green-100",
     },
     {
       title: "Security & Privacy Compliance",
       description:
-        "Employ all the security measures that are in line with the industry provisions and the best cybersecurity practices to secure users' data. Adhering to compliance and gaining users' trust will make your platform reliable as well as safe for all users.",
+        "Install all security controls that comply with the industry requirements and the optimal cybersecurity standards to protect the data of the users. Compliance and earning the confidence of the users will ensure that your platform is not only credible but also secure for everyone who will use it.",
       image: assets.eCommSol11,
       cardBg: "bg-yellow-100",
     },
@@ -411,19 +413,26 @@ const ECommerceSolution = () => {
     {
       title: "CRM & ERP Systems",
       description:
-        "Make the flow of your business data more efficient for easier management.",
+        "Enhance the efficiency of business data flowing to improve its management.",
       icon: <FaReact className="text-4xl text-white" />,
     },
     {
       title: "AI-Powered Product Suggestions",
-      description:
-        "Get more sales through intelligent suggestions of products.",
+      description: (
+        <>
+          Make more sales with smart product recommendations using{" "}
+          <a href="https://www.capyngen.com/custom-ai-solutions">
+            Top AI software solutions in Gurgaon
+          </a>
+          .
+        </>
+      ),
       icon: <FaLaravel className="text-4xl text-white" />,
     },
     {
       title: "Chatbots for Support",
       description:
-        "Let chatbots give instant help and raise customer happiness level.",
+        "Allow chatbots to provide immediate assistance and increase the level of customer satisfaction.",
       icon: <FaCubes className="text-4xl text-white" />,
     },
   ];
@@ -431,60 +440,60 @@ const ECommerceSolution = () => {
     {
       title: "B2C (Business to Consumer) Stores",
       description:
-        "These are direct online retail stores created to sell products to end customers.",
+        "They are online retail stores that are direct and are designed to sell products to the end consumers.",
       icon: <FaTools className="text-4xl" />,
     },
     {
       title: "B2B (Business to Business) Platforms",
       description:
-        "These are scalable ecommerce services that are developed to meet the needs of wholesale and enterprise.",
+        "These are scalable e-commerce services that are created to fulfil the requirements of wholesale and enterprise.",
       icon: <FaDollarSign className="text-4xl" />,
     },
     {
       title: "Multi-Vendor Marketplaces",
       description:
-        "Multiple vendors can list their products and sell them through your platform.",
+        "Several sellers are allowed to post their products on your platform and sell them.",
       icon: <FaUsers className="text-4xl" />,
     },
     {
       title: "Subscription-Based Ecommerce",
       description:
-        "This is a perfect billing model for recurring transactions such as subscription boxes and memberships.",
+        "It is an ideal billing model when it comes to recurring transactions like sub boxes and membership transactions.",
       icon: <FaShieldAlt className="text-4xl" />,
     },
     {
       title: "Dropshipping Stores",
       description:
-        "You can start an ecommerce business with a small amount of money and no stock.",
+        "One can begin an e-commerce business by using a little money and having no inventory.",
       icon: <FaBullhorn className="text-4xl" />,
     },
     {
       title: "Social Commerce Solutions",
       description:
-        "With the help of integrated shopping features, you can sell directly on social media platforms.",
+        "Selling on social media is possible with the assistance of built-in shopping capabilities.",
       icon: <FaHeart className="text-4xl" />,
     },
   ];
   const solutionsData = [
     {
-      title: "Fast & Secure Checkout Process",
-      desc: "Eliminate cart abandonment to a great extent with an effortless payment flow.",
+      title: "Quick and Easy Checkout System",
+      desc: "Get rid of cart abandonment to a large extent, and the flow of payment with ease.",
     },
     {
       title: "Scalable & Flexible for Business Growth",
-      desc: "Our ecommerce website design will be with you whether you are a small town business or take it to the international market.",
+      desc: "Our e-commerce solutions in India will be by your side, whether it is for a small town business or to the global marketplace.",
     },
     {
       title: "Increased Sales & Brand Reach",
-      desc: "Make your brand visible to the targeted audience by utilizing the robust ecommerce business solutions.",
+      desc: "Bring your brand to be seen by the targeted customers using the powerful professional e-commerce solutions.",
     },
     {
       title: "Advanced Integrations & Automation",
-      desc: "Cut down on time and errors considerably with the implementation of smart systems.",
+      desc: "Reduce wastes of both time and error by having smart systems in place.",
     },
     {
       title: "Dedicated Support & Maintenance",
-      desc: "Always get the assistance of a professional, no matter where you are in the world.",
+      desc: "The use of a professional will always help you, regardless of the part of the world you are.",
     },
   ];
   const techStack = [
@@ -589,37 +598,37 @@ const ECommerceSolution = () => {
       step: "Step 01",
       title: "Requirement Analysis",
       description:
-        "Get a detailed insight into the business goals, target audience, and, in general, the needs of the application. Such an approach guarantees that the tailored e-commerce design and development solutions will be built on a solid foundation.",
+        "Obtain a closer understanding of the business objectives, the target audience and, overall, the requirements of the application. This would ensure that the design and development solutions of tailored e-commerce solutions would be anchored on a strong platform.",
     },
     {
       step: "Step 02",
       title: "Planning & Strategy",
       description:
-        "Construct a detailed roadmap, pick the suitable technologies, and establish your milestones. With a good plan, the work keeps the project on track in terms of time and business goals.",
+        "Create an extended roadmap, select the appropriate technologies, and set your milestones. The work keeps the project on schedule with regard to time and business objectives with a good plan.",
     },
     {
       step: "Step 03",
       title: "UI/UX Design",
       description:
-        "Come up with eye-catching and user-friendly interfaces which allow users to enjoy their experience. Successful e-commerce UI/UX design is the main driver of customer engagement and conversions growing.",
+        "Develop attractive and user-friendly interfaces that would enable users to have fun. Customer engagement and conversion growth are largely achieved by successful e-commerce UI/UX design.",
     },
     {
       step: "Step 04",
       title: "Development",
       description:
-        "Develop e-commerce websites or mobile apps that are sturdy, scalable, and high-performing. Our development process is centered on security, future scalability, and clean coding.",
+        "Create mobile apps or e-commerce websites that are durable, expansive, and efficient. Security, future scalability, clean coding are the central focus of our development process.",
     },
     {
       step: "Step 05",
       title: "Integration & Testing",
       description:
-        "Connect APIs, payment gateways, databases, and third-party tools without any trouble. Hardcore testing is the time when they iron out any bugs which therefore should result in the flawless function, quickness, and security on all devices.",
+        "Integrate APIs, payment gateways, databases and third-party tools with ease. This is during hardcore testing during which they fix any bugs that hence should lead to the perfect functionality, speed, and safety of all machines.",
     },
     {
       step: "Step 06",
       title: "Deployment & Maintenance",
       description:
-        "The platform is going to be easily launched and will receive updates and technical assistance continually. Systematic maintenance is taking care of your e-commerce solutions to run smoothly, be fast and fully optimized.",
+        "The platform will be successfully launched and will be updated and provided with technical support regularly. Systematic maintenance ensures that your e-commerce solutions are maintained in a good way to operate smoothly, to be fast and optimised to the full.",
     },
   ];
 
@@ -657,7 +666,7 @@ const ECommerceSolution = () => {
               </span>
             </>
           }
-          description="Use the efficient and intuitive e-commerce solution provided by Capyngen to construct, expand and prosper your online store keeping in mind the contemporary business trends."
+          description="Bring together, build, and flourish your online store using the effective and user-friendly e-commerce solutions offered by Capyngen, bearing in mind the modern business dynamics as a major e-commerce business solutions company."
           primaryBtnText="Start your Store Today"
           primaryBtnLink="/contact-us"
           image={assets.eCommSol1}
@@ -671,7 +680,7 @@ const ECommerceSolution = () => {
           textColor="text-white"
           title=""
           description={[
-            "Get your ecommerce business up and running with Capyngen’s intuitive ecommerce solutions. We don’t only design, develop and market; we also take you and your store to the other side of the world to make you thrive.",
+            "Jump-start your e-commerce business using Capyngen easy to use e-commerce solutions. We not just design, develop and market, but we also transport you and your store to the other side of the world to enable you prosper as the best ecommerce platform in India to grow scalable.",
           ]}
           textSize="text-2xl"
           buttonText="Contact Us"
@@ -681,42 +690,42 @@ const ECommerceSolution = () => {
           title="Why Your Business Needs an E-Commerce Solution"
           description={[
             <span>
-              It is no longer enough to have an ecommerce platform that you can
-              rely on - it is now essential. By employing a well-crafted
-              ecommerce <Link to={"/web-development"}>web development</Link>{" "}
-              plan, your enterprise is capable of:
+              No longer is it sufficient to possess an ecommerce platform, that
+              one can depend on, but now it is necessary as a professional
+              e-commerce solutions. Through an effective business plan of a
+              ecommerce website development solutions, your business can:
             </span>,
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
                 {[
                   {
                     title: "",
-                    text: "Getting in touch with a worldwide audience and selling products at any time of a day or night.",
+                    text: "Reaching out to a global market and making sales any day of the week, and at any time of the day or night.",
                     color: "text-blue-500",
                   },
                   {
                     title: "",
-                    text: "Lowering your business expenses compared to traditional stores.",
+                    text: "Reducing your business costs as opposed to the normal shops.",
                     color: "text-blue-500",
                   },
                   {
                     title: "",
-                    text: "Establishing customer confidence through payment systems that are safe.",
+                    text: "Creating customer trust via secure payments.x",
                     color: "text-blue-500",
                   },
                   {
                     title: "",
-                    text: "Effectively controlling stocks and orders.",
+                    text: "Proper management of stocks and orders.",
                     color: "text-blue-500",
                   },
                   {
                     title: "",
-                    text: "Giving customers the opportunity to have a quick and easy shopping experience.",
+                    text: "Providing the customers with a chance to enjoy a fast and convenient shopping experience.",
                     color: "text-blue-500",
                   },
                   {
                     title: "",
-                    text: "Going up or down in your ecommerce business without any hustle when you gain.",
+                    text: "Climbing or descending your ecommerce business without hustling when you make.",
                     color: "text-blue-500",
                   },
                 ].map(({ title, text, color }, idx) => (
@@ -732,10 +741,11 @@ const ECommerceSolution = () => {
                 ))}
               </ul>
               <p>
-                The web solutions that <Link to={"/"}>Capyngen</Link> has for
-                the ecommerce are designed to align with your business
-                objectives, whether you are a newcomer to the market or planning
-                to go abroad.
+                The e-commerce solutions that are available to Capyngen for the
+                e-commerce will be matched with your company goals towards the
+                e-commerce solutions for businesses, whether you are a new
+                entrant in the market or intend to expand to other international
+                markets.
               </p>
             </>,
           ]}
@@ -745,7 +755,7 @@ const ECommerceSolution = () => {
         />
         <CardsSectionImage
           heading="E-Commerce Solutions Services We Offer"
-          subheading="We create a comprehensive set of online store solutions that are industry-specific and depend on the size of the business, ranging from:"
+          subheading="We develop an all-inclusive array of E commerce solutions services, which are business-specific and are based on the size of the business, including:"
           services={cardsSectionImageData1}
           sectionBg="bg-gray-800"
           headColor="text-white"
@@ -755,7 +765,7 @@ const ECommerceSolution = () => {
         />
         <CardsSection
           heading="Types of E-Commerce Solutions"
-          subheading="Capyngen provides adaptable ecommerce software that fits any business model:"
+          subheading="Capyngen offers flexible e-commerce software solutions packages that suit any business model, using our ecommerce development company experience:"
           services={cardsSectionData2}
           headColor="text-white"
           cardBg="bg-gray-700"
@@ -770,14 +780,14 @@ const ECommerceSolution = () => {
           textColor="text-white"
           title="Book a Free Consultation"
           description={[
-            "Schedule a call with our online business experts to learn about our ecommerce development services that can revamp your enterprise. Sharing your online victory with us is made easy.",
+            "Arrange an appointment with our online business specialists to know more about our eCommerce development services that will transform your business. You can easily share with us your online victory.",
           ]}
-          buttonText="Contact Us"
+          buttonText="Book Now"
           backgroundVideo={assets.backgroundVideo}
         />
         <CardsSection
           heading="Smart Integrations That Power Your Store"
-          subheading="Capyngen links your ecommerce web solutions with high-impact resources to increase your site’s performance:"
+          subheading="This is what Capyngen will connect your ecommerce website development with highly impactful resources to enhance the performance of your site:"
           services={cardsSectionData1}
           sectionBg="bg-black"
           cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
@@ -790,7 +800,17 @@ const ECommerceSolution = () => {
         />
         <IndustryServices
           heading="E-Commerce Marketing Made Simple"
-          subheading="Capyngen data-driven marketing helps your ecommerce platform solutions to reach the right audience:"
+          subheading={
+            <>
+              Capyngen information based marketing is the way your E commerce
+              solutions services can make contact with the appropriate audience
+              with the use of{" "}
+              <a href="https://www.capyngen.com/digital-marketing">
+                digital marketing services
+              </a>
+              :
+            </>
+          }
           cardBg="bg-gray-700"
           cardText="text-white"
           cardDescText="text-white"
@@ -798,7 +818,7 @@ const ECommerceSolution = () => {
         />
         <BenefitsSection
           heading="Benefits of Choosing Capyngen’s E-Commerce Solutions"
-          desc="User-Friendly Experience for Customers – Rapid, intuitive, and simple-to-use stores that increase interaction with users."
+          desc="Customer Friendliness experience to the customers, quick, user-friendly, and easy-to-use shops that enhance contact with the customers."
           benefits={solutionsData}
           footerNote=""
           image={assets.eCommSol18}
@@ -811,7 +831,7 @@ const ECommerceSolution = () => {
         <FullSizeImageSection
           backgroundImage={assets.eCommSolFullsize}
           title="Build your online store with confidence"
-          description="Our company is the perfect partner for launching a new e-commerce platform which is user-friendly, safe, and scalable."
+          description="Our company is the ideal firm that can launch a new best ecommerce platfrom that is easy to use, secure and expandable."
           buttonText="Launch My Store"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -827,7 +847,7 @@ const ECommerceSolution = () => {
           textColor="text-white"
           title="Why Capyngen is the Right Partner for E-Commerce Growth"
           description={[
-            "Capyngen is a worldwide e-commerce solutions provider who is relied on by startups, small and medium-sized businesses, and large corporate companies. Our profound knowledge in e-commerce website development and e-commerce app development allows us to provide solutions that are not only scalable and secure but also future-ready. So, if you are starting your very first online store or aiming to reach out to foreign e-commerce markets, Capyngen will still be the right pick for your speedy growth.",
+            "Capyngen is a global enterprise E commerce solutions company that start-ups, small and medium-sized businesses, as well as large corporate organisations rely on. We are highly experienced and skilled in e-commerce website development solutions and e-commerce applications development, hence we can work out e-commerce solutions that are not only scalable and well-protected but also future-proof. Therefore, when it comes to opening your very first online store or even trying to connect with the foreign markets in e-commerce, Capyngen will continue to remain the optimal choice in the context of your rapid expansion.",
           ]}
           buttonText="Contact Us"
           image={assets.getStarted}
@@ -838,7 +858,7 @@ const ECommerceSolution = () => {
           textColor="text-white"
           title="Scale Your Ecommerce Business"
           description={[
-            "With Capyngen’s ecommerce web solutions, you can have everything at your fingertips to grow your business — fast websites, secure checkouts, marketing tools, and expert support.",
+            "You can put your every finger on your mouth when using Capyngen e-commerce solutions to build your business- Fast websites, secure check out, marketing tools and support.",
           ]}
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}

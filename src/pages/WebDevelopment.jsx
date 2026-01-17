@@ -218,77 +218,78 @@ const WebDevelopment = () => {
     {
       question: "What is website development?",
       answer:
-        "Website development is a process of creating and maintaining websites which include front-end, back-end, and full-stack development along with ensuring functionality, performance, and user experience.",
+        "Website development is a website development process that entails front-end, back-end, and full-stack development as well as functionality, performance, and user experience of websites by the best website development company in India.",
     },
     {
-      question: "Why is professional website development important?",
+      question: "What is the significance of professional website development?",
       answer:
-        "A professionally developed website is a tool that can enhance trust, attract potential visitors, improve the level of engagement, and increase the number of customers among the visitors.",
+        "An expertly created site is an apparatus that can boost trust, lure possible visitors, raise the extent of involvement and raise the tally of customers among the visitors via the best website development services.",
     },
     {
-      question: "What services are included in website development services?",
+      question: "Which services do website development services entail?",
       answer:
-        "Services covered are: custom website design, responsive design, CMS integration, web application development, e-commerce solutions, SEO, and ongoing maintenance.",
+        "The services to be included are: custom web development company in India, responsive design, CMS integration, web application development, e-commerce solutions, SEO, and maintenance.",
     },
     {
-      question: "How long does it take to build a website?",
+      question: "What is the time taken to create a site?",
       answer:
-        "The development period depends on the complexity but the general duration of standard business websites usually falls between 3–12 weeks.",
+        "The timeline of its development varies depending on the level of difficulty but the average time of developing a typical business website is between 3-12 weeks with the company of website development in Gurgaon.",
     },
     {
-      question: "Can Capyngen handle custom website development?",
+      question: "Is Capyngen able to deal with custom web development?",
       answer:
-        "Of course! We create websites that are totally your brand and business that meets your persona and content.",
+        "Of course! We develop websites that are entirely your brand and business, which fit your persona and content, being the best website development company in Gurgaon.",
     },
     {
-      question: "Do you provide responsive website design?",
+      question: "Do you offer responsive web design?",
       answer:
-        "Definitely. All websites are designed to be compatible with desktops, tablets, and mobile devices so that users can have a trouble-free experience.",
+        "Definitely. Every single site is tailored to the desktop, tablet, and mobile devices to ensure that the users have a hassle-free experience.",
     },
     {
-      question: "What CMS platforms do you work with?",
+      question: "Which CMS platforms do you interact with?",
       answer:
-        "We use WordPress, Shopify, Joomla, Drupal, and various other platforms and only choose the one that meets your needs the best.",
+        "We work with WordPress, Shopify, Joomla, and Drupal, and other platforms, and select only the one where your needs will be the most satisfied.",
     },
     {
-      question: "Can you develop e-commerce websites?",
+      question: "Are you able to come up with e-commerce websites?",
       answer:
-        "Yes, we provide ecommerce web developer services with the main features such as convenient payment methods, catalog of products, and easy checkout process.",
+        "Yes, we are offering ecommerce web developer best website development services and the key aspects of it are easy payment options, product list, and ease of checkout.",
     },
     {
-      question: "Do you offer web application development?",
+      question: "Do you provide web application development?",
       answer:
-        "Yes, we make business web applications that are interactive and scalable for today’s business processes.",
+        "Yes, we produce business web applications that are interactive and scaled to meet business processes today.",
     },
     {
-      question: "How do you ensure SEO-friendly development?",
+      question:
+        "What is your strategy to make sure to develop SEO-friendly content?",
       answer:
-        "Our developers utilize clean coding, fast loading speeds, optimized images, meta tags, and schema markup in their projects.",
+        "Clean code, fast loading, optimised images, meta tags, and schema markup are some of the elements that are used by our developers in their projects.",
     },
     {
-      question: "Can you integrate third-party APIs and tools?",
+      question: "Is it able to integrate third-party APIs and tools?",
       answer:
-        "Yes, we integrate CRMs, analytics tools, payment gateways, marketing platforms, and other third-party services.",
+        "Yes, we incorporate CRMs, analytics, payment gateways, marketing platforms, and other third-party sales.",
     },
     {
-      question: "Do you provide website maintenance services?",
+      question: "Are you offering Web maintenance services?",
       answer:
-        "Yes, we provide regular updates, backups, security monitoring, and ongoing technical support.",
+        "Yes, we do regular updates, backups, security monitoring, and continual technical support.",
     },
     {
-      question: "What makes Capyngen the best website development company?",
+      question: "Why is Capyngen the best website development company?",
       answer:
-        "We combine creative inspiration, the latest technology, and business acumen to deliver high-quality, dependable, and scalable website development services.",
+        "We offer creative inspiration, the newest technology, and business skills to provide high-quality, reliable, and scalable best website development services as the best website development company in India.",
     },
     {
-      question: "Can you build multilingual websites?",
+      question: "Do you have the ability to create multilingual websites?",
       answer:
-        "Yes, we offer support for multilingual and internationalization apps to assist firms in expanding their customer base all over the world.",
+        "Yes, we support multilingual and internationalisation apps to help companies increase the number of customers around the globe.",
     },
     {
-      question: "Do you offer landing page development?",
+      question: "Is landing page development available?",
       answer:
-        "Of course, we create marketing-driven, optimized-for-campaign landing pages that attract leads and convert visitors into customers.",
+        "Naturally, we make marketing-oriented, campaign-optimised landing pages that are appealing to leads and transform visitors into buyers.",
     },
   ];
 
@@ -432,37 +433,37 @@ const WebDevelopment = () => {
     {
       title: "Expertise in the latest technologies",
       description:
-        "We implement solutions using the newest frameworks and tools for a solid website.",
+        "Our solutions are based on the latest frameworks and tools of a good web site.",
       icon: <FaTools className="text-4xl" />,
     },
     {
       title: "Cost-effective, dependable, and scalable solutions",
       description:
-        "Web development services of excellent quality for startups, SMEs, and enterprises.",
+        "High-quality web development services of the best quality to startups, SMEs, and enterprises.",
       icon: <FaDollarSign className="text-4xl" />,
     },
     {
       title: "Experienced Team That Creates User-Friendly Designs",
       description:
-        "Our team guarantees the creation of intuitive, mobile-friendly, and interactive websites.",
+        "Our team will ensure that it develops user-friendly, mobile sites, and interactive websites.",
       icon: <FaUsers className="text-4xl" />,
     },
     {
       title: "Focus on Safety, Quickness and SEO-Optimized Websites",
       description:
-        "Your brand will be more visible on the Internet as your website will be fast, safe, and optimized for search engines.",
+        "The Internet will make your brand more visible as your site will be quick, secure, and search engine optimized.",
       icon: <FaShieldAlt className="text-4xl" />,
     },
     {
       title: "Greater Brand Awareness and Trustworthiness",
       description:
-        "Professional websites that mirror your brand will help you gain the trust of your audience.",
+        "Professional websites that reflect your brand will contribute to winning the trust of your audience.",
       icon: <FaBullhorn className="text-4xl" />,
     },
     {
       title: "Higher Customer Interaction and Loyalty",
       description:
-        "Websites are created to enhance conversions and user satisfaction.",
+        "Sites are designed to improve web traffic and customer satisfaction.",
       icon: <FaHeart className="text-4xl" />,
     },
   ];
@@ -472,37 +473,37 @@ const WebDevelopment = () => {
       step: "Step 01",
       title: "Requirement Analysis & Planning",
       description:
-        "Deep diving into your business objectives, target market, and project requirements.",
+        "Exploring your business goals, market niche, and project needs.",
     },
     {
       step: "Step 02",
       title: "Design & Prototyping",
       description:
-        "Developing wireframes and visual mockups for customer validation.",
+        "Creating wireframes and visual mockups of customer validation.",
     },
     {
       step: "Step 03",
       title: "Front-End & Back-End Development",
       description:
-        "Crafting websites that are responsive, scalable, and functional.",
+        "Designing websites capable of responsiveness, scaling and functionality.",
     },
     {
       step: "Step 04",
       title: "Quality Assurance & Testing",
       description:
-        "Checking for smooth running of the websites across browsers and devices with no errors.",
+        "Ensuring that the websites run smoothly in cross-browers and devices without any errors.",
     },
     {
       step: "Step 05",
       title: "Launch & Deployment",
       description:
-        "Putting your website on the internet with complete functionality and safety.",
+        "Placing your web site online in full functionality and security.",
     },
     {
       step: "Step 06",
       title: "Maintenance & Support",
       description:
-        "Periodic updates, backups, and continuous technical support.",
+        "Regular updates, backups, and uninterrupted technical support.",
     },
   ];
 
@@ -510,37 +511,37 @@ const WebDevelopment = () => {
     {
       title: "HTML/CSS & JavaScript Development",
       description:
-        "At Capyngen, we don't build websites with templates; instead, every website is tailor-made to match the unique needs of your brand. We start from scratch and complete a lightweight, lightning-fast website without compromising maximum performance and a seamless user experience.",
+        "At Capyngen, the Best website development company in Gurgaon, we do not create templates and make your websites, but make a custom-built site that suits the individual needs of your brand. We begin afresh and make a lightweight, blistering-fast site without affecting maximum performance and smooth user experience.",
       icon: <FaCode className="text-4xl text-white" />,
     },
     {
       title: "WordPress Development",
       description:
-        "The squad of developers here can, with no trouble, create highly flexible, user-friendly websites for every kind of business - whether it be a blog, portfolio, or corporate site. Capyngen works to give you a website that is both easy to handle and designed to attract and convert your visitors.",
+        "The team of web designers in this case can easily design extremely versatile and user-friendly websites of any type of business to be either a blog, portfolio or corporate site. Capyngen is a webite development company in Gurgaon and strives to present you with a website that is not only easy to manage but also one that is appealing and converts your visitors.",
       icon: <FaWordpressSimple className="text-4xl text-white" />,
     },
     {
       title: "Shopify & E-commerce Platforms",
       description:
-        "We make it easy for you by delivering trusted, sales-oriented online stores with smooth browsing, safe payment methods, and quick checkout processes. The e-commerce websites of Capyngen are built to increase revenues and customer happiness.",
+        "We have simplified it by giving you quality, sales-driven online stores where one can browse smoothly, use secure online payment options and make check-outs within a short period of time. The e-commerce sites of Capyngen, the Best website development company in India, are designed to generate more revenues and customer satisfaction.",
       icon: <FaShoppingCart className="text-4xl text-white" />,
     },
     {
       title: "React & Angular Development",
       description:
-        "Capyngen constructs vibrant, interactive web applications that reflect the core of your business idea. We guarantee with our React and Angular technologies the delivery of enticing, up-to-date web experiences for the users of your brand, no matter their device, computer, tablet, or smartphone.",
+        "Capyngen builds interactive, lively web-based applications that capture the essence of your business idea. Our React and Angular technologies are a promise that we will deliver the attractive and modern online experiences to the representatives of your brand, regardless of their device, computer, tablet, or smartphone.",
       icon: <FaReact className="text-4xl text-white" />,
     },
     {
       title: "PHP & Laravel Development",
       description:
-        "The team at Capyngen is hard at work designing strong and scalable back-end systems that will suit your company’s needs for years to come. Thus, your website will not only be stable, but it will also be able to easily accommodate any upgrades.",
+        "Capyngen, the Custom web development company in India is busy in designing powerful and scalable back-end systems that will be in your company during the next several years. In this way, it will not only be a stable site but your site will also be capable of easily supporting any upgrading.",
       icon: <FaLaravel className="text-4xl text-white" />,
     },
     {
       title: "CMS & Custom Solutions",
       description:
-        "The use of platforms such as Joomla, Drupal, as well as other similar ones, is what we do in order to deliver fully personalized CMS solutions that fit your needs perfectly. The customized nature of Capyngen makes sure that you get full access, adaptability, and convenience in running your business.",
+        "What we do is the use of platforms like Joomla, Drupal along with other similar platforms so as to provide to you fully customized CMSs solutions that best suit your requirements. The tailor-made aspect of the Capyngen, the best website development company in Gurgaon, ensures that you have complete access, flexibility, and convenience of operating your business.",
       icon: <FaCubes className="text-4xl text-white" />,
     },
   ];
@@ -549,109 +550,105 @@ const WebDevelopment = () => {
     {
       title: "Custom Website Development",
       description:
-        "Naturally your site would have been built around you without a doubt. We will thus help you project your business objectives and dreams by creating a spectacular.",
+        "Of course you would have been central to the building of your site. We will therefore assist you with projecting your business goals and dreams by making a spectacle.",
       image: assets.webDev2,
       cardBg: "bg-blue-100",
     },
     {
-      title: "Responsive & Mobile-Friendly Design",
+      title: "Mobile-Friendliness & Responsive Design",
       description:
-        "The company Capyngen is wonderful in delivering an experience that is the same as great as the one on a desktop or a mobile device.",
+        "The Capyngen the Best website development company in India which is as great as that of a desktop or a mobile device.",
       image: assets.webDev3,
       cardBg: "bg-green-100",
     },
     {
       title: "E-commerce Development",
       description:
-        "The easiest shopping browsers are the ones you create just like the walkthrough which customers love to use to explore your products and installations running CSE fuels to grow sales.",
+        "The most comfortable shopping browsers are the ones you make like the walkthrough that the customers love to shop to see what you have on sale with CSE fuels and installations in operation to expand its sales.",
       image: assets.webDev4,
       cardBg: "bg-yellow-100",
     },
     {
       title: "CMS Development",
       description:
-        "WordPress, Drupal, Joomla, and other platforms are the content management systems developers use to create user-friendly and effective website management solutions.",
+        "WordPress, Drupal, Joomla among others are the content management systems that developers employ in developing user friendly and effective web management solutions.",
       image: assets.webDev5,
       cardBg: "bg-pink-100",
     },
     {
       title: "Web Application Development",
       description:
-        "As a premier Indian web application development company, we provide the creation of interactive and escalable conversation projects.",
+        "Being one of the leading Website development company in Gurgaon, we offer the development of interactive and scalable conversation projects.",
       image: assets.webDev6,
       cardBg: "bg-purple-100",
     },
     {
       title: "Progressive Web Apps (PWA)",
       description:
-        "Offer the websites that even without having the internet connection are as fast in performance as the native mobile apps are.",
+        "Provide the sites which even when disconnected to the internet are as quick in operations as the native mobile applications.",
       image: assets.webDev7,
       cardBg: "bg-red-100",
     },
     {
       title: "API Integration Services",
       description:
-        "API integrations are ways which make not only the website CRMs but also externals i.e. payment gateways plus other software working together with your business to run at peak level.",
+        "Integrations API are methods that not only the website CRMs but also outsiders i.e. payment gateway as well as other software that collaborate with your business to perform with optimal efficiency.",
       image: assets.webDev8,
       cardBg: "bg-blue-100",
     },
     {
       title: "Website Maintenance & Support",
       description:
-        "Support and maintenance services of Capyngen will not only make your site be safe but also will keep it up to date with the fastest Kit with exclusive warranties, upgrades faster than those experienced in regular services.",
+        "Capyngen, Custom web development company in India is specializing in Support and maintenance services and this is going to ensure that not only will your site be safe, but it will also be updated to the latest and fastest Kit with unique warranties and will upgrade more quickly than what one would have with regular services.",
       image: assets.webDev9,
       cardBg: "bg-green-100",
     },
     {
       title: "Performance Optimization",
       description:
-        "Remove all your unnecessary disk images, JavaScript, and caching will serve to make your website load at lightning speed and thus to provide excellent user experience.",
+        "Get rid of all your superfluous disk images, JavaScript, and caching will help to make your site load at hyperspeed and, therefore, offer great user experience.",
       image: assets.webDev10,
       cardBg: "bg-yellow-100",
     },
     {
       title: "SEO-Friendly Development",
       description:
-        "Create websites that on the SEO-friendly development are starting and completing the sequence by following the best practice that is Google will put it on a higher position of its organic match results and thus will be able to draw more visitors.",
+        "Design websites that under the SEO friendly development are initiating and finishing the series by adhering to the most viable practice that Google will place it on a better ranking on its natural match result and therefore will be in a position to attract more visitors.",
       image: assets.webDev11,
       cardBg: "bg-pink-100",
     },
     {
-      title: (
-        <span>
-          <Link to={"/ui-ux-design"}>UI/UX Design Services</Link>
-        </span>
-      ),
+      title: "UI/UX Design Services",
       description:
-        "Making stunning ease of use and confidence building applications will raise user engagement and leave a long-lasting memory.",
+        "Creation of beautiful convenient use and trust-building applications will increase the participation of the users and create a lasting impression.",
       image: assets.webDev12,
       cardBg: "bg-purple-100",
     },
     {
       title: "Multilingual & Internationalization Support",
       description:
-        "Websites in multi-languages let companies put out their messages close to the world and still have someone there to receive them in the right language.",
+        "Multi-language websites enable the companies to post their messages near the globe and still have someone present there to accept their message in the appropriate language.",
       image: assets.webDev13,
       cardBg: "bg-red-100",
     },
     {
       title: "Cloud-Based Web Solutions",
       description:
-        "Using secure and scalable cloud platforms allow for better performance, reliability, and flexibility.",
+        "Secure and scalable cloud platforms can be used to provide better performance, reliability and flexibility.",
       image: assets.webDev14,
       cardBg: "bg-pink-100",
     },
     {
       title: "Landing Page Development",
       description:
-        "Develop the promotion’s high-conversion landing pages that start gathering leads, demand, and efficiently generate sales.",
+        "Create the high conversion landing pages of the promotion, which will initiate the lead, demand and effectively make sales.",
       image: assets.webDev15,
       cardBg: "bg-purple-100",
     },
     {
-      title: "Integration with Analytics & Marketing Tools",
+      title: "Analytics and Marketing Tools",
       description:
-        "Monitoring your site’s performance through the implementation of various tools such as Google Analytics, Hotjar, alongside CRM integrations which make strategizing a whole lot easier.",
+        "Keeping track of your performance with the use of the numerous tools like Google Analytics, Hotjar and integrating CRM that will make the process of strategy planning much easier.",
       image: assets.webDev16,
       cardBg: "bg-red-100",
     },
@@ -660,37 +657,37 @@ const WebDevelopment = () => {
   const cardsSectionSliderData1 = [
     {
       title: "Startups & Small Businesses",
-      desc: "We offer affordable website development services for small businesses.",
+      desc: "Affordable website development company in Gurgaon: We provide affordable web developing company services to small businesses.",
       image: assets.webDev17,
       textColor: "text-white",
     },
     {
       title: "E-commerce & Retail",
-      desc: "We provide complete ecommerce website development services to help you increase your sales.",
+      desc: "We offer a full e-commerce best website development service to ensure that you make more sales.",
       image: assets.webDev18,
       textColor: "text-white",
     },
     {
       title: "Healthcare & Education",
-      desc: "User-friendly and reliable websites for healthcare and education institutions.",
+      desc: "Websites that are easy to use and trustworthy in Healthcare and education institutions.",
       image: assets.webDev19,
       textColor: "text-white",
     },
     {
       title: "Real Estate & Travel",
-      desc: "Visually attractive and user-friendly websites.",
+      desc: "Websites that are pleasing to the eye and easy to use.",
       image: assets.webDev20,
       textColor: "text-white",
     },
     {
       title: "Corporate Enterprises",
-      desc: "Custom website designs that are scalable for large organizations.",
+      desc: "Professional web solutions that are scalable to large organisations.",
       image: assets.webDev21,
       textColor: "text-white",
     },
     {
       title: "Trading Sites",
-      desc: " Easy to use, fast, and dependable platforms for trading businesses.",
+      desc: "Simple, quick and reliable business trading platforms.",
       image: assets.webDev22,
       textColor: "text-white",
     },
@@ -723,17 +720,10 @@ const WebDevelopment = () => {
       <BannerRollingGallery autoplay={true} pauseOnHover={true} />
       <div className="relative z-10">
         <TopRatedCompany
-          title="Why Web Development Matters Today?"
+          title="Why Does Web Development Matter Today?"
           description={[
-            <span>
-              <Link to={"/"}>Capyngen</Link> is convinced that a strong online
-              presence is not a mere luxury any more, but rather a must-have for
-              the expansion of a business. The companies that decide to use our
-              services for the development of their professional websites are
-              the ones that become the most trusted by their target audience,
-              attract more visitors, and raise the level of their engagement.
-            </span>,
-            `It does not matter whether your company is a startup or a large conglomerate, the services offered by us in the field of custom website development work with the sole objective of getting your brand noticed out of the crowd. Capyngen website is your online success is ensured by every component starting from visually attractive layouts to feature-rich functionality, all of which are meticulously designed to give you a smooth and a captivating user experience.`,
+            "Capyngen believes that the online presence is not a luxury anymore, but a necessity that allows a business to grow. It is the companies that choose to employ our services in the creation of their professional websites, which become the most trusted among their target audience and draw more visitors and increase the level of their interaction, which makes Capyngen the Best website development company in India.",
+            `The fact that your business is a startup or a big conglomerate does not matter; the services provided by us Custom web development company in India operate with the sole purpose of making your brand recognisable among others. Capyngen site is your online success with all the elements, including appealing layouts, feature-rich functionality, and all of them are carefully-designed to provide you with an easy and alluring user experience by a Custom web development company in India.`,
             <p key="equation" className="text-2xl font-bold text-cyan-400 mt-6">
               Web Development ={" "}
               <span className="text-purple-400">Technology</span> +{" "}
@@ -758,7 +748,7 @@ const WebDevelopment = () => {
         <FullSizeImageSection
           backgroundImage={assets.webDevFullSize}
           title="Transform your online presence with Capyngen"
-          description="We are committed to provide top-notch web development services that attract and retain customers."
+          description="Our company is determined to offer the best website development services that are of high quality and maintain clients."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -776,9 +766,20 @@ const WebDevelopment = () => {
           backgroundColor="bg-blue-900"
           textColor="text-white"
           description={[
-            "Create the online representation of your ideas, that speaks volumes! Reach out to the top web development company in India, Capyngen, for tailored web development solutions by an expert and quality web development services that increase your business and attract the audience.",
+            <>
+              Build the Online Presence of Your Ideas using the Best Website
+              Development Services! Contact Capyngen which is the best website
+              development company in India to provide you with customized
+              solutions to web development through an expert and quality best
+              website development solutions ensuring that your business grows
+              and your audience is attracted. Our{" "}
+              <a href="https://www.capyngen.com/application-solutions">
+                application solutions in Gurgaon
+              </a>{" "}
+              complement perfect website development for comprehensive digital
+              transformation.
+            </>,
           ]}
-          textSize="text-2xl"
           buttonText="Book Expert Consulting Now!"
           backgroundVideo={assets.backgroundVideo}
         />
@@ -806,18 +807,24 @@ const WebDevelopment = () => {
           reverse={false}
           backgroundColor="bg-blue-900"
           textColor="text-white"
+          title="Ready to Stand Out Online? Contact Capyngen Now!"
           description={[
-            "Have you prepared to be noticed on the Internet? Contact Capyngen in order to receive a website development service that suits your small business which includes e-commerce and a mobile-friendly website that matches your brand.",
+            "To get a resource of a website development company in Gurgaon that would fit your small business, including e-commerce and a mobile-friendly site that will be in line with your brand, contact Capyngen the best website development company in India.",
           ]}
-          textSize="text-2xl"
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
         />
-        <HowWeWork heading="Our Development Process" steps={steps} />
+        <HowWeWork
+          heading="Our Development Process"
+          desc="We have a strict and quality development process, which helps us to provide strong, error-free, and high-performance mobile applications. Every stage will be carefully carried out by our team to make it the most efficient and business-impacting one."
+          steps={steps}
+        />
         <FullSizeImageSection
           backgroundImage={assets.webDevFullSize2}
           title="Create powerful websites that perform"
-          description="Our main focus is on your business; thus, we make sure your website is responsive, fast, and scalable."
+          description="Design Effective Websites that Work with Best Website Development Company.
+We would primarily focus on your business; therefore, we ensure that your site is responsive, fast, and scalable.
+"
           buttonText="Get Started"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -831,7 +838,7 @@ const WebDevelopment = () => {
           backgroundColor="bg-blue-900"
           textColor="text-white"
           description={[
-            "Do you want a website that will help your business grow? So, for custom website services and professional website development, get in touch with Capyngen, the best website development company in India!",
+            "Would you like to have a site that would make your business grow? Therefore, in the case of custom website development company in India or professional best website development services, contact Capyngen, the best website development company in India!",
           ]}
           textSize="text-2xl"
           buttonText="Get in Touch"

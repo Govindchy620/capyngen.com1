@@ -29,7 +29,7 @@ const BlogDetail = () => {
           blogs
             .filter((b) => b._id !== found._id)
             .filter((b) => b.tags?.some((t) => found.tags?.includes(t)))
-            .slice(0, 3)
+            .slice(0, 3),
         );
       }
     };

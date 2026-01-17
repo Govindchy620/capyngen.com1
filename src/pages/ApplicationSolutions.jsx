@@ -302,7 +302,7 @@ const ApplicationSolutions = () => {
     {
       image: assets.applicationSolution5,
       title: "Mobile Application Development",
-      desc: "Our services in the custom Android app development and iOS software development company can create high-performing native and cross-platform mobile applications with a modern and stylish look and substantial engagement.​",
+      desc: "Our services in the custom Android app development and iOS software development company can create high-performing native and cross-platform mobile applications with a modern and stylish look and substantial engagement.​​",
     },
     {
       image: assets.applicationSolution6,
@@ -405,12 +405,12 @@ const ApplicationSolutions = () => {
           <p>
             As the best application development company, we develop scalable
             custom application solutions that meet your business's unique
-            requirements, whether on web or mobile.
+            requirements, whether on web or mobile.​{" "}
           </p>
           <p className="mt-3">
             Capyngen is a global leader in providing effective digital products,
             such as enterprise, cloud and mobile applications, and the best
-            application development solutions.
+            application development solutions.​
           </p>
         </>
       ),
@@ -424,7 +424,7 @@ const ApplicationSolutions = () => {
           <p>
             Develop secure, reliable, and scalable applications with Capyngen to
             make your business smarter and faster with our Apps Solutions
-            company knowledge.
+            company knowledge.​
           </p>
         </>
       ),
@@ -439,6 +439,14 @@ const ApplicationSolutions = () => {
             Application development services. We deploy the use of modern
             technologies and strategies to provide safe, scalable, customised
             application solutions to start-ups, enterprises and global brands.
+            Capyngen also partners with you as a strategic{" "}
+            <a
+              href="https://www.capyngen.com/consulting
+"
+            >
+              consulting services provider
+            </a>
+            , helping you align technology with long-term business goals.
           </p>
         </>
       ),
@@ -477,8 +485,16 @@ const ApplicationSolutions = () => {
       icon: <FaBuilding className="text-4xl text-white" />,
     },
     {
-      title:
-        "Application software services for solving problems of the corporates worldwide.​",
+      title: (
+        <>
+          Application software services for solving problems of the corporates
+          worldwide, and digital growth support that rivals even the{" "}
+          <a href="https://www.capyngen.com/digital-marketing">
+            Best digital marketing services Provider
+          </a>{" "}
+          in impact on revenue.
+        </>
+      ),
       description: "",
       icon: <FaIndustry className="text-4xl text-white" />,
     },
@@ -523,7 +539,7 @@ const ApplicationSolutions = () => {
       <div className="relative z-10">
         <IndustryServices
           heading="Application Solutions We Offer"
-          subheading="We offer a complete package of business application solutions with the focus on the diverse industry needs, with application software services:"
+          subheading="We complete a package of business application solutions with the focus on the diverse industry needs, with application software services:"
           cardBg="bg-gray-700"
           cardText="text-white"
           cardDescText="text-white"
@@ -550,13 +566,7 @@ const ApplicationSolutions = () => {
         <TopRatedCompany
           title="Benefits of Our Application Solutions"
           description={[
-            <>
-              <span>
-                Client-built custom application solution,{" "}
-                <Link to={"/"}>Capyngen</Link> business wins can be
-                quantitatively measured as follows:
-              </span>
-            </>,
+            "Client-built custom application solution, Capyngen business wins can be quantitatively measured as follows:  ",
             <>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
                 {[
@@ -617,7 +627,7 @@ const ApplicationSolutions = () => {
         <FullSizeImageSection
           backgroundImage={assets.applicationSolFullSize}
           title="Smart applications for modern businesses"
-          description="We are fervent about developing software that is scalable and efficient, and that fulfils the requirements of the business in the 21 st century by providing end-to-end application development services."
+          description="We are fervent about developing software that is scalable and efficient, and that fulfils the requirements of the business in the 21st century by providing end-to-end application development services."
           buttonText="Discover More"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
