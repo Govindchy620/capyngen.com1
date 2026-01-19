@@ -98,7 +98,6 @@ const ProtectedRoute = ({ children }) => {
 const AppContent = () => {
   const location = useLocation();
 
-  // Routes where global navbar/footer should be hidden
   const noLayoutRoutes = [
     "/digital-marketing-landing-page",
     "/design-landing-page",
@@ -118,7 +117,6 @@ const AppContent = () => {
     <>
       {!hideLayout && <Navbar />}
 
-      {/* Wrapper ensures footer doesn't jump */}
       <div style={{ minHeight: "100vh", width: "100%" }}>
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -221,7 +219,6 @@ const AppContent = () => {
             element={<TermsAndConditions />}
           />
 
-          {/* Landing Pages */}
           <Route
             path="/digital-marketing-landing-page"
             element={<LandingPage />}
@@ -245,7 +242,6 @@ const AppContent = () => {
             element={<CrmManagementSoftwareHiddenPage />}
           />
 
-          {/* Admin Routes */}
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route
             path="/admin-dashboard"
@@ -294,27 +290,19 @@ const AppContent = () => {
 };
 
 const App = () => {
-  // ✅ original states (unchanged)
   const [isLoading, setIsLoading] = useState(true);
   const [fadeProp, setFadeProp] = useState({ opacity: 1, zIndex: 9999 });
 
-  // ✅ progress loader state
   const [loadingState, setLoadingState] = useState({
     progress: 0,
     message: "Initializing...",
     isComplete: false,
   });
 
-  /**
-   * ✅ requestAnimationFrame based progress (smooth + no glitches)
-   * - stays at <=90% until actual window load
-   * - then completes 90 -> 100%
-   * - only then triggers fade
-   */
+  // ✅ FAST + FULL FILL Loader
   useEffect(() => {
     if (!isLoading) return;
 
-    // ✅ Milestone based messages
     const milestoneMessage = (p) => {
       if (p >= 100) return "Ready";
       if (p >= 75) return "Finalizing assets...";
@@ -325,17 +313,15 @@ const App = () => {
 
     let rafId = null;
     let start = performance.now();
-
     let progress = 0;
     let domLoaded = false;
 
-    // ✅ Slightly faster but still premium smooth
-    const DURATION = 2000;
-
-    // ✅ premium easing (easeOutQuint)
     const easeOutQuint = (t) => 1 - Math.pow(1 - t, 5);
 
-    // ✅ ensure starts from 0 (no negative)
+    // ✅ Faster durations
+    const DURATION_BEFORE_LOAD = 900; // 0 -> 90
+    const DURATION_AFTER_LOAD = 450; // 90 -> 100
+
     setLoadingState({
       progress: 0,
       message: milestoneMessage(0),
@@ -343,37 +329,29 @@ const App = () => {
     });
 
     const tick = (now) => {
-      // ✅ clamp elapsed to prevent negatives
       const elapsed = Math.max(0, now - start);
+      const duration = domLoaded ? DURATION_AFTER_LOAD : DURATION_BEFORE_LOAD;
 
-      const t = Math.min(elapsed / DURATION, 1);
+      const t = Math.min(elapsed / duration, 1);
       const eased = easeOutQuint(t);
 
-      // ✅ progress logic
+      // ✅ progress fill
       if (!domLoaded) {
         progress = eased * 90;
       } else {
         progress = 90 + eased * 10;
       }
 
-      // ✅ clamp to 0..100 always
       progress = Math.max(0, Math.min(100, progress));
-
       const stable = Number(progress.toFixed(2));
 
       setLoadingState({
         progress: stable,
         message: milestoneMessage(stable),
-        isComplete: false,
+        isComplete: stable >= 100,
       });
 
-      // ✅ complete only when stable hits 100
       if (domLoaded && stable >= 100) {
-        setLoadingState({
-          progress: 100,
-          message: "Ready",
-          isComplete: true,
-        });
         cancelAnimationFrame(rafId);
         return;
       }
@@ -383,10 +361,10 @@ const App = () => {
 
     rafId = requestAnimationFrame(tick);
 
-    // ✅ window load handler
     const handleLoad = () => {
       domLoaded = true;
-      start = performance.now(); // restart timer for final 90 -> 100
+      progress = Math.max(progress, 90);
+      start = performance.now();
     };
 
     if (document.readyState === "complete") {
@@ -395,8 +373,8 @@ const App = () => {
       window.addEventListener("load", handleLoad);
     }
 
-    // fallback safety
-    const fallback = setTimeout(() => handleLoad(), 4000);
+    // ✅ faster fallback
+    const fallback = setTimeout(() => handleLoad(), 1800);
 
     return () => {
       cancelAnimationFrame(rafId);
@@ -405,12 +383,8 @@ const App = () => {
     };
   }, [isLoading]);
 
-  /**
-   * ✅ Fade out ONLY when progress completed (100)
-   * (matches your original timings)
-   */
+  // ✅ Fade out ONLY after hitting 100
   useEffect(() => {
-    // ✅ Open site only when progress reaches 100
     if ((loadingState?.progress || 0) < 100) return;
 
     const t1 = setTimeout(() => {
@@ -419,13 +393,11 @@ const App = () => {
       const t2 = setTimeout(() => {
         setIsLoading(false);
         setFadeProp({ opacity: 0, zIndex: -1 });
-
-        // ✅ keep your GSAP refresh
         ScrollTrigger.refresh();
       }, 800);
 
       return () => clearTimeout(t2);
-    }, 250);
+    }, 200);
 
     return () => clearTimeout(t1);
   }, [loadingState?.progress]);
@@ -434,7 +406,6 @@ const App = () => {
     <Router>
       <ScrollToTop />
 
-      {/* ✅ PRELOADER OVERLAY (kept identical behavior) */}
       <div
         className="preloader-overlay"
         style={{
@@ -448,14 +419,13 @@ const App = () => {
           justifyContent: "center",
           alignItems: "center",
           transition: "opacity 0.8s ease-in-out",
+          pointerEvents: isLoading ? "auto" : "none",
           ...fadeProp,
         }}
       >
-        {/* ✅ NEW GPU-smooth loader */}
         <Preloader state={loadingState} />
       </div>
 
-      {/* ✅ APP CONTENT stays mounted behind loader (NO CHANGE) */}
       <AppContent />
     </Router>
   );
