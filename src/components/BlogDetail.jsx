@@ -58,9 +58,9 @@ const BlogDetail = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: blogData.title,
-            image: blogData.image_url,
-            author: blogData.author_name,
+            headline: blog.title,
+            image: blog.image_url,
+            author: blog.author_name,
           })}
         </script>
       </Helmet>
