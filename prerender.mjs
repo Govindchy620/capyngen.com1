@@ -75,6 +75,18 @@ const staticRoutes = [
   "/crm-management-software-hidden-page",
 ];
 
+// Helper: Replicates your 'createSlug' logic to ensure URLs match
+const createSlug = (text) => {
+  if (!text) return "";
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "") // Remove non-word chars
+    .replace(/[\s_-]+/g, "-") // Replace spaces/underscores with -
+    .replace(/^-+|-+$/g, ""); // Trim dashes
+};
+
 const wait = (ms) => new Promise((res) => setTimeout(res, ms));
 
 function startPreviewServer() {
@@ -109,7 +121,7 @@ async function ensureDir(dir) {
   await fs.promises.mkdir(dir, { recursive: true });
 }
 
-// 2. NEW HELPER FUNCTION TO FETCH BLOGS
+// 2. UPDATED HELPER FUNCTION TO FETCH BLOGS
 async function fetchBlogRoutes() {
   const blogRoutes = [];
   try {
@@ -118,11 +130,28 @@ async function fetchBlogRoutes() {
 
     if (!response.ok) throw new Error(`API returned status ${response.status}`);
 
-    const blogs = await response.json();
+    const data = await response.json();
 
-    // Assuming your API returns objects with a 'slug' property
-    // Adjust 'blog.slug' if your API uses 'id' or a different field
-    blogs.forEach((blog) => blogRoutes.push(`/blog/${blog.slug}`));
+    // ✅ FIX 1: Access the correct property { blogs: [...] }
+    const blogsArray = data.blogs || [];
+
+    if (!Array.isArray(blogsArray)) {
+      console.warn(
+        "⚠️ API 'blogs' property is not an array. keys:",
+        Object.keys(data),
+      );
+      return [];
+    }
+
+    blogsArray.forEach((blog) => {
+      // ✅ FIX 2: Generate slug from Title if 'slug' field is missing
+      const slug = blog.slug || createSlug(blog.title);
+
+      if (slug) {
+        // ✅ FIX 3: Use the correct URL prefix "/news-and-updates/"
+        blogRoutes.push(`/news-and-updates/${slug}`);
+      }
+    });
 
     console.log(
       `✅ Successfully loaded ${blogRoutes.length} dynamic blog routes.`,
@@ -142,7 +171,7 @@ async function run() {
   // ✅ Wait until preview is ACTUALLY reachable
   await waitForServer(BASE_URL, 120000);
 
-  // 3. MERGE STATIC AND DYNAMIC ROUTES BEFORE LAUNCHING BROWSER
+  // 3. MERGE STATIC AND DYNAMIC ROUTES
   const dynamicRoutes = await fetchBlogRoutes();
   const allRoutes = [...staticRoutes, ...dynamicRoutes];
 
@@ -173,7 +202,7 @@ async function run() {
   page.setDefaultNavigationTimeout(120000);
   page.setDefaultTimeout(120000);
 
-  // 4. LOOP THROUGH THE COMBINED ROUTES
+  // 4. LOOP THROUGH ROUTES
   for (const route of allRoutes) {
     console.log("➡️ Prerendering:", route);
 
@@ -185,16 +214,17 @@ async function run() {
         timeout: 120000,
       });
 
-      /**
-       * ✅ Instead of waiting for readyState complete,
-       * wait for the React root to exist (SPA stable)
-       *
-       * If your app root is different, update selector.
-       */
-      await page.waitForSelector("#root", { timeout: 60000 });
+      // ✅ FIX 4: Wait for the H1 tag to ensure content (title) is loaded
+      // This ensures we don't save the "Loading..." state
+      try {
+        await page.waitForSelector("h1", { timeout: 10000 });
+      } catch (e) {
+        // If h1 is not found, just continue (might be a redirect or error page)
+        // console.log("Note: No h1 found on this page.");
+      }
 
-      // give hydration a moment
-      await wait(800);
+      // Give hydration a small extra buffer for images/meta
+      await wait(1000);
 
       const html = await page.content();
 
@@ -212,7 +242,6 @@ async function run() {
       console.log("✅ Written:", path.join(outDir, "index.html"));
     } catch (err) {
       console.error(`❌ Failed to render route: ${route}`, err);
-      // Continue to next route even if one fails
     }
   }
 
