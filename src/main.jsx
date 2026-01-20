@@ -11,7 +11,3 @@ createRoot(document.getElementById("root")).render(
     </HelmetProvider>
   </StrictMode>,
 );
-
-setTimeout(() => {
-  document.dispatchEvent(new Event("custom-render-trigger"));
-}, 5000);

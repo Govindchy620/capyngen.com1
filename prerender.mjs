@@ -14,7 +14,11 @@ const PORT = 4179;
 // ✅ Use 127.0.0.1 instead of localhost (more stable on Vercel)
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 
-const routes = [
+// 1. ADD YOUR API URL HERE
+const API_BASE_URL = "https://api.capyngen.com";
+
+// Your existing static routes
+const staticRoutes = [
   "/",
   "/web-development",
   "/app-development",
@@ -105,11 +109,42 @@ async function ensureDir(dir) {
   await fs.promises.mkdir(dir, { recursive: true });
 }
 
+// 2. NEW HELPER FUNCTION TO FETCH BLOGS
+async function fetchBlogRoutes() {
+  const blogRoutes = [];
+  try {
+    console.log(`🌐 Fetching dynamic blogs from ${API_BASE_URL}...`);
+    const response = await fetch(`${API_BASE_URL}/api/blogs`);
+
+    if (!response.ok) throw new Error(`API returned status ${response.status}`);
+
+    const blogs = await response.json();
+
+    // Assuming your API returns objects with a 'slug' property
+    // Adjust 'blog.slug' if your API uses 'id' or a different field
+    blogs.forEach((blog) => blogRoutes.push(`/blog/${blog.slug}`));
+
+    console.log(
+      `✅ Successfully loaded ${blogRoutes.length} dynamic blog routes.`,
+    );
+  } catch (error) {
+    console.error(
+      "⚠️ Failed to fetch dynamic blogs. Proceeding with static routes only.",
+      error.message,
+    );
+  }
+  return blogRoutes;
+}
+
 async function run() {
   const server = startPreviewServer();
 
   // ✅ Wait until preview is ACTUALLY reachable
   await waitForServer(BASE_URL, 120000);
+
+  // 3. MERGE STATIC AND DYNAMIC ROUTES BEFORE LAUNCHING BROWSER
+  const dynamicRoutes = await fetchBlogRoutes();
+  const allRoutes = [...staticRoutes, ...dynamicRoutes];
 
   const browser = await puppeteer.launch({
     args: chromium.args,
@@ -138,37 +173,47 @@ async function run() {
   page.setDefaultNavigationTimeout(120000);
   page.setDefaultTimeout(120000);
 
-  for (const route of routes) {
+  // 4. LOOP THROUGH THE COMBINED ROUTES
+  for (const route of allRoutes) {
     console.log("➡️ Prerendering:", route);
 
     const url = `${BASE_URL}${route}`;
 
-    await page.goto(url, {
-      waitUntil: "domcontentloaded",
-      timeout: 120000,
-    });
+    try {
+      await page.goto(url, {
+        waitUntil: "domcontentloaded",
+        timeout: 120000,
+      });
 
-    /**
-     * ✅ Instead of waiting for readyState complete,
-     * wait for the React root to exist (SPA stable)
-     *
-     * If your app root is different, update selector.
-     */
-    await page.waitForSelector("#root", { timeout: 60000 });
+      /**
+       * ✅ Instead of waiting for readyState complete,
+       * wait for the React root to exist (SPA stable)
+       *
+       * If your app root is different, update selector.
+       */
+      await page.waitForSelector("#root", { timeout: 60000 });
 
-    // give hydration a moment
-    await wait(800);
+      // give hydration a moment
+      await wait(800);
 
-    const html = await page.content();
+      const html = await page.content();
 
-    const outDir =
-      route === "/" ? distDir : path.join(distDir, route.replace(/^\//, ""));
+      const outDir =
+        route === "/" ? distDir : path.join(distDir, route.replace(/^\//, ""));
 
-    await ensureDir(outDir);
+      await ensureDir(outDir);
 
-    await fs.promises.writeFile(path.join(outDir, "index.html"), html, "utf-8");
+      await fs.promises.writeFile(
+        path.join(outDir, "index.html"),
+        html,
+        "utf-8",
+      );
 
-    console.log("✅ Written:", path.join(outDir, "index.html"));
+      console.log("✅ Written:", path.join(outDir, "index.html"));
+    } catch (err) {
+      console.error(`❌ Failed to render route: ${route}`, err);
+      // Continue to next route even if one fails
+    }
   }
 
   await browser.close();
