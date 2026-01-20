@@ -18,27 +18,6 @@ const HeroSection = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  const features = [
-    {
-      title: "Innovative",
-      gradient: "from-sky-400 via-blue-500 to-cyan-400",
-      description: "Fresh ideas, future-ready solutions.",
-      Icon: Sparkles,
-    },
-    {
-      title: "Trusted",
-      gradient: "from-green-400 via-emerald-500 to-teal-400",
-      description: "A reputation built on reliability.",
-      Icon: ShieldCheck,
-    },
-    {
-      title: "Reliable",
-      gradient: "from-purple-400 via-fuchsia-500 to-pink-400",
-      description: "Always delivering on our promise.",
-      Icon: CheckCircle2,
-    },
-  ];
-
   return (
     <section
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0d0d0d] via-[#0a0a0a] to-black px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden"
@@ -118,7 +97,7 @@ const HeroSection = () => {
               key={title}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-indigo-500 rounded-lg p-2 cursor-pointer select-text"
+              className="flex flex-col items-center select-text"
               tabIndex={0}
               aria-describedby={`${title.toLowerCase()}-desc`}
               role="listitem"

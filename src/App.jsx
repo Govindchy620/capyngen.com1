@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Homepage from "./pages/Homepage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -79,22 +79,16 @@ import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
 import SoftwareDevelopmentLandingPage from "./pages/LandingPage/SoftwareDevelopmentLandingPage/SoftwareDevelopmentLandingPage";
 import DesignLandingPage from "./pages/LandingPage/DesignLandingPage/DesignLandingPage";
 
-// ✅ Preloader
 import Preloader from "./components/Preloader";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProtectedRoute = ({ children }) => {
   const loggedIn = isAdminLoggedIn();
-
-  if (!loggedIn) {
-    return <Navigate to="/admin-login" replace />;
-  }
-
+  if (!loggedIn) return <Navigate to="/admin-login" replace />;
   return children;
 };
 
-// ✅ Wrapper to handle hiding Navbar/Footer
 const AppContent = () => {
   const location = useLocation();
 
@@ -295,11 +289,10 @@ const App = () => {
 
   const [loadingState, setLoadingState] = useState({
     progress: 0,
-    message: "Initializing...",
+    message: "Configuring core modules...",
     isComplete: false,
   });
 
-  // ✅ FAST + FULL FILL Loader
   useEffect(() => {
     if (!isLoading) return;
 
@@ -318,38 +311,34 @@ const App = () => {
 
     const easeOutQuint = (t) => 1 - Math.pow(1 - t, 5);
 
-    // ✅ Faster durations
-    const DURATION_BEFORE_LOAD = 900; // 0 -> 90
-    const DURATION_AFTER_LOAD = 450; // 90 -> 100
+    // ✅ update only every 66ms (15 FPS) -> NO jitter
+    let lastUIUpdate = 0;
 
-    setLoadingState({
-      progress: 0,
-      message: milestoneMessage(0),
-      isComplete: false,
-    });
+    const DURATION_BEFORE_LOAD = 900;
+    const DURATION_AFTER_LOAD = 450;
 
     const tick = (now) => {
-      const elapsed = Math.max(0, now - start);
       const duration = domLoaded ? DURATION_AFTER_LOAD : DURATION_BEFORE_LOAD;
-
+      const elapsed = Math.max(0, now - start);
       const t = Math.min(elapsed / duration, 1);
       const eased = easeOutQuint(t);
 
-      // ✅ progress fill
-      if (!domLoaded) {
-        progress = eased * 90;
-      } else {
-        progress = 90 + eased * 10;
-      }
+      if (!domLoaded) progress = eased * 90;
+      else progress = 90 + eased * 10;
 
       progress = Math.max(0, Math.min(100, progress));
       const stable = Number(progress.toFixed(2));
 
-      setLoadingState({
-        progress: stable,
-        message: milestoneMessage(stable),
-        isComplete: stable >= 100,
-      });
+      // ✅ throttle setState
+      if (now - lastUIUpdate > 66 || stable >= 100) {
+        lastUIUpdate = now;
+
+        setLoadingState({
+          progress: stable,
+          message: milestoneMessage(stable),
+          isComplete: stable >= 100,
+        });
+      }
 
       if (domLoaded && stable >= 100) {
         cancelAnimationFrame(rafId);
@@ -367,13 +356,9 @@ const App = () => {
       start = performance.now();
     };
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
+    if (document.readyState === "complete") handleLoad();
+    else window.addEventListener("load", handleLoad);
 
-    // ✅ faster fallback
     const fallback = setTimeout(() => handleLoad(), 1800);
 
     return () => {
@@ -383,7 +368,6 @@ const App = () => {
     };
   }, [isLoading]);
 
-  // ✅ Fade out ONLY after hitting 100
   useEffect(() => {
     if ((loadingState?.progress || 0) < 100) return;
 

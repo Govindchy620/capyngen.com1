@@ -1,53 +1,65 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { assets } from "../assets/assets";
 
+const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+
 const Preloader = ({ state }) => {
   const [isVisible, setIsVisible] = useState(true);
 
-  // ✅ Smooth progress displayed
-  const [displayProgress, setDisplayProgress] = useState(0);
+  // ✅ UI text progress (numbers/messages)
+  const progress = clamp(Number(state?.progress || 0), 0, 100);
 
-  const rafRef = useRef(null);
+  // ✅ GPU bar refs
+  const barRef = useRef(null);
+  const targetRef = useRef(0);
   const currentRef = useRef(0);
+  const rafRef = useRef(null);
 
-  // ✅ message strictly synced with displayProgress
+  // ✅ message strictly synced with progress milestones
   const syncedMessage = useMemo(() => {
-    const p = displayProgress;
-
-    if (p >= 100) return "Ready";
-    if (p >= 75) return "Finalizing assets...";
-    if (p >= 50) return "Securing quantum link...";
-    if (p >= 25) return "Optimizing rendering engine...";
+    if (progress >= 100) return "Ready";
+    if (progress >= 75) return "Finalizing assets...";
+    if (progress >= 50) return "Securing quantum link...";
+    if (progress >= 25) return "Optimizing rendering engine...";
     return "Configuring core modules...";
-  }, [displayProgress]);
+  }, [progress]);
 
-  // ✅ Smoothly animate display progress to match state.progress
+  /**
+   * ✅ Continuous bar fill animation (NO STOPS, NO JITTER)
+   * - bar moves every frame (GPU transform)
+   * - progress updates from App only set a target
+   */
   useEffect(() => {
-    const target = Number(state?.progress || 0);
-
-    cancelAnimationFrame(rafRef.current);
+    targetRef.current = progress / 100;
 
     const animate = () => {
       const current = currentRef.current;
+      const target = targetRef.current;
+
+      // ✅ smooth follow (critically damped feel)
       const diff = target - current;
 
-      if (Math.abs(diff) < 0.05) {
+      // if almost equal, snap
+      if (Math.abs(diff) < 0.0005) {
         currentRef.current = target;
-        setDisplayProgress(target);
-        return;
+      } else {
+        // ✅ smooth, constant movement (no pauses)
+        currentRef.current = current + diff * 0.12;
       }
 
-      // ✅ premium smoothing
-      currentRef.current = current + diff * 0.08;
-      setDisplayProgress(currentRef.current);
+      // ✅ GPU transform
+      if (barRef.current) {
+        barRef.current.style.transform = `scaleX(${currentRef.current})`;
+      }
 
       rafRef.current = requestAnimationFrame(animate);
     };
 
+    cancelAnimationFrame(rafRef.current);
     rafRef.current = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(rafRef.current);
-  }, [state?.progress]);
+  }, [progress]);
 
   // ✅ Keep overlay mounted until exit animation is done
   useEffect(() => {
@@ -71,7 +83,7 @@ const Preloader = ({ state }) => {
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-cyan-500/10 blur-[130px] rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[320px] h-[320px] bg-blue-600/5 blur-[110px] rounded-full" />
+      <div className="absolute bottom-0 left-1/3 w-[320px] h-[320px] bg-blue-600/5 blur-[110px] rounded-full" />
 
       {/* Grid Background Effect */}
       <div
@@ -82,7 +94,7 @@ const Preloader = ({ state }) => {
         }}
       />
 
-      {/* Logo Section */}
+      {/* Logo */}
       <div className="relative mb-10">
         <img
           src={assets.capyngen3d}
@@ -90,28 +102,33 @@ const Preloader = ({ state }) => {
           className="w-48 h-48 sm:w-64 sm:h-64 object-contain drop-shadow-[0_0_28px_rgba(34,211,238,0.22)] animate-[popIn_0.8s_cubic-bezier(0.22,1,0.36,1)]"
         />
 
+        {/* scan line */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent blur-sm animate-[scan_2.1s_ease-in-out_infinite]" />
       </div>
 
-      {/* Loading Progress Info */}
+      {/* Progress */}
       <div className="flex flex-col items-center w-full max-w-sm px-6">
         <div className="flex justify-between w-full mb-3 text-[10px] tracking-[0.35em] font-medium text-gray-400 uppercase">
-          {/* ✅ synced text */}
           <span className="opacity-90">{syncedMessage}</span>
 
-          {/* <span className="tabular-nums text-gray-300">
-            {Math.floor(displayProgress)}%
-          </span> */}
+          {/* ✅ OPTIONAL number: uncomment if needed */}
+          {/* <span className="tabular-nums text-gray-300">{Math.floor(progress)}%</span> */}
         </div>
 
+        {/* ✅ GPU smooth progress bar */}
         <div className="relative h-[4px] w-full bg-white/5 overflow-hidden rounded-full">
           <div
-            className="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 shadow-[0_0_16px_rgba(34,211,238,0.35)]"
-            style={{ width: `${displayProgress}%` }}
+            ref={barRef}
+            className="absolute inset-y-0 left-0 w-full origin-left rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 shadow-[0_0_16px_rgba(34,211,238,0.35)]"
+            style={{
+              transform: "scaleX(0)", // will be animated continuously
+              willChange: "transform",
+            }}
           />
 
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="h-full w-[40%] bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shine_1.6s_ease-in-out_infinite]" />
+          {/* shine sweep */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="h-full w-[40%] bg-gradient-to-r from-transparent via-white/18 to-transparent animate-[shine_1.6s_ease-in-out_infinite]" />
           </div>
         </div>
 
