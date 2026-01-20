@@ -484,7 +484,7 @@ const CrmManagementSoftware = () => {
           <>
             Manage customer interactions, maximise sales, and develop customer
             loyalty using the state of the art CRM & management software that
-            fits small, medium, and large businesses by Capyngen. As one of the
+            fits small, medium, and large businesses by Capyngen. As one of the{" "}
             <a href="https://www.capyngen.com/consulting">
               top consulting services in Gurgaon
             </a>
