@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
+import PublishButton from "./PublishButton";
 
 export default function BlogModal({ open, onClose, onSave, initial }) {
   const [form, setForm] = useState({
@@ -72,7 +73,7 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
         {
           method: "POST",
           body: formData,
-        }
+        },
       );
 
       const data = await res.json();
@@ -141,12 +142,7 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
           >
             Cancel
           </button>
-          <button
-            onClick={handleSubmit}
-            className="px-4 py-2 rounded-xl bg-neutral-900 text-white hover:bg-black"
-          >
-            {initial ? "Save Changes" : "Save Blog"}
-          </button>
+          <PublishButton />
         </>
       }
     >

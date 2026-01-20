@@ -9,5 +9,9 @@ createRoot(document.getElementById("root")).render(
     <HelmetProvider>
       <App />
     </HelmetProvider>
-  </StrictMode>
+  </StrictMode>,
 );
+
+setTimeout(() => {
+  document.dispatchEvent(new Event("custom-render-trigger"));
+}, 5000);

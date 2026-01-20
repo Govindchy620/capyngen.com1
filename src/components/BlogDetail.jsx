@@ -53,6 +53,16 @@ const BlogDetail = () => {
         <meta property="og:description" content={blog.description} />
         <meta property="og:image" content={blog.image} />
         <meta property="og:type" content="article" />
+        {/* Schema Markup for Google */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: blogData.title,
+            image: blogData.image_url,
+            author: blogData.author_name,
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black py-24">
