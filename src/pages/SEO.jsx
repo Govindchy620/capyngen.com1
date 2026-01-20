@@ -205,115 +205,123 @@ const faqSchema = {
 const SEO = () => {
   const faqItems = [
     {
-      question: "What is SEO?",
+      question: "What is Search Engine Optimization (SEO)?",
       answer:
-        "Search Engine Optimization (SEO) is the process where you make your website more eye-catching to search engines to draw in more organic traffic of fair quality.",
+        "The process of making your webpage more attractive to search engine to attract more organic traffic of acceptable quality is known as Search Engine Optimization (SEO).",
     },
     {
-      question: "Why is SEO important for my business?",
+      question:
+        "What is the importance of Search Engine Optimization (SEO) to my business?",
       answer:
-        "SEO makes your website rank on the first page of various search engines, targeting the right audience, increasing the visitors, and thus sales or leads, providing better results according to your business model.",
+        "By the best seo agency, SEO services India will ensure that your site is on the first page of different search engines, with the right people to see your site, with increased visitors and consequently sales or leads and all this in accordance with your business model by best seo agency.",
     },
     {
-      question: "How long does it take to see results from SEO?",
+      question:
+        "What is the duration of seeing the results of Search Engine Optimization (SEO)?",
       answer:
-        "Generally, the outcomes of SEO are seen within 3-6 months if the competition is moderate, the website is in good standing, and the strategy is sufficient.",
+        "As a rule, the results of SEO services can be observed in 3-6 months in case of the mediocre competition, good health of the website, and adequacy of the strategy provided by seo company in Gurgaon.",
     },
     {
-      question: "What is the difference between on-page and off-page SEO?",
+      question:
+        "So what is the difference between online and offline SEO services?",
       answer:
-        "The main on-page SEO activities consist of content optimization and website structure, whereas off-page SEO generally refers to backlinks, social media, PR, and other external factors.",
+        "Content optimization and web structure are the primary on-page SEO services activities, but the activities of off-page SEO typically imply backlinks, social media, PR, and other external circumstances by seo services in Gurgaon.",
     },
     {
-      question: "What are keywords in SEO?",
+      question: "What are the keywords in search engine optimization (SEO)?",
       answer:
-        "Keywords are the phrases searchers use. If you use the right keywords targeting, people looking for the information you provide will come across your website.",
+        "The phrases that searchers utilise are known as keywords. The right keyword targeting will mean that people who have to find the information that you give will find your site through the best SEO services.",
     },
     {
-      question: "How does content affect SEO?",
+      question:
+        "What roles do contents play in Search Engine Optimization (SEO)?",
       answer:
-        "High-quality, relevant content to the user's request tends to rank better, keeps users around longer, and eventually gets more links.",
+        "Content that is of high quality and is relevant to what the user is requesting will perform better in ranking, as well as make the user stay longer and ultimately get more links with seo company in India.",
     },
     {
-      question: "What is link building in SEO?",
+      question: "What is link building in Search Engine Optimization (SEO)?",
       answer:
-        "Link building refers to the activity of connecting other websites' backlinks to your website with the objectives of authority, trust, and positioning in the search results are improved.",
+        "Link building is the process of connecting other websites to your website to gain power, trust, and ranking among the search results are enhanced by an SEO service provider in India.",
     },
     {
       question: "What are meta tags?",
       answer:
-        "Meta tags give clues to the search engine about the topic of a web page, the font used, and the title, description, and keywords.",
+        "Meta tags also provide hints to the search engine on the subject of a web page, fonts used and the title, description, and keywords that are optimized by the best SEO company in India.",
     },
     {
-      question: "How does mobile optimization affect SEO?",
+      question:
+        "What is the impact of mobile optimization on Search Engine Optimization (SEO)?",
       answer:
-        "Creating mobile-friendly websites is part of ensuring that users have a positive experience and rankings on the desktop and mobile are consequently higher as the search engines, give priority to the mobile-responsive sites.",
+        "Designing websites to be user-friendly through mobile devices is also under the design of ensuring that the user experiences are positive, and the desktop and mobile rankings are thus higher since the search engines prioritise the mobile-friendly sites through the seo agency India.",
     },
     {
-      question: "What is local SEO?",
+      question: "What is local SEO services?",
       answer:
-        "Local SEO assists businesses to be found effectively through local searches and then attracts the locality customers into the business.",
+        "The local SEO services helps businesses to be located in an efficient way in local searches and it then brings local customers to the business brought about by the seo services India.",
     },
     {
-      question: "How do I track SEO performance?",
+      question: "What is Search Engine Optimization (SEO) performance?",
       answer:
-        "Install Google Analytics, Google Search Console, and make use of other SEO software to check the traffic, ranking, and conversion completion.",
+        "Install Google Analytics, Google Search and utilise other SEO services software to monitor the traffic, ranking and conversion completion of the Top Digital marketing company.",
     },
     {
-      question: "Can SEO guarantee #1 rankings on Google?",
-      answer: `SEO does not guarantee top rankings quite simply, however, it visibly increases traffic and the chances of the website showing up in the top results of competitors in the search engine.`,
-    },
-    {
-      question: "What is technical SEO?",
+      question:
+        "Does Search engine optimization (SEO) ensure the number one ranking in Google?",
       answer:
-        "Technical SEO means websites that load really fast, show the correct information to search engines by accessibility, can be easily indexed, are safely encrypted, and even allow search engines to deal with structured data.",
+        "SEO services do not assure top rankings quite easily, but it visually raises the traffic and the likelihood of the site appearing in the highest results of competitors in the search engine by using ppc services provider.",
     },
     {
-      question: "How often should SEO strategies be updated?",
+      question: "What is techno SEO services?",
       answer:
-        "SEO is a very dynamic area where strategies, methods, and goals should be adapted to trends and changing algorithms which means in practice that a strategy always be updated periodically.",
+        "Technical SEO services imply that the websites are incredibly fast in their loading, present the appropriate information to the search engine due to accessibility, can be easily indexed, securely encrypted, and even permit the search engines to work with structured data provided by the seo company in Gurgaon.",
     },
     {
-      question: "Why choose a professional SEO company?",
+      question:
+        "What should the frequency of Search engine optimization (SEO) be?",
       answer:
-        "One like Capyngen has an SEO consultant and a team of professionals who deliver tailor-made solutions, ongoing SEO, and quantifying proofs that work for your business online growth and expansion.",
+        "SEO is a highly dynamic field as the strategy, techniques, and objectives are to be adjusted according to trends and altering algorithms that implies in the real world that a strategy is regularly revised by the best seo agency.",
+    },
+    {
+      question: "Why should it be a professional SEO company in India?",
+      answer:
+        "One similar to Capyngen possesses an SEO consultant and a team of experts that provide custom-made SEO services, continuous Search Engine Optimization (SEO), and measurable evidences that can work in your business development and growth online.",
     },
   ];
   const cardsSectionData1 = [
     {
       title: "Increase Visibility",
       description:
-        "Make presence known by getting on top of search results by utilizing SEO services in India and other Google rankings.",
+        "Become visible by appearing on top of search results through the use of SEO services in India and other Google rankings of the top digital marketing company.",
       icon: <FaSearch className="text-4xl" />,
     },
     {
       title: "Affordable Solutions",
       description:
-        "If you are a startup, this is just the solution that you need. Our cost-effective SEO package is designed to help you grow within a budget.",
+        "This is the right solution that you need in case you are a startup. Our affordable SEO services package would enable you to expand at a manageable cost.",
       icon: <FaFileAlt className="text-4xl" />,
     },
     {
       title: "Drive Traffic & Leads",
       description:
-        "By implementing the right SEO marketing strategies, the desired high-quality traffic and leads will be available for you.",
+        "Through proper SEO marketing strategies, you will have the intended quality traffic and leads through ppc services provider.",
       icon: <FaLink className="text-4xl" />,
     },
     {
       title: "Custom SEO Strategies",
       description:
-        "By understanding your business and its strengths we craft a bespoke solution just for you.",
+        "Knowing your business and business strength, we develop a unique solution that fits only you as seo company in Gurgaon.",
       icon: <FaWrench className="text-4xl" />,
     },
     {
       title: "Trusted Agency",
       description:
-        "A best SEO company in India with a history of accomplishing results is the one you should choose as your partner.",
+        "A seo agency India company partner should be a firm that has a track record of achieving its objectives in the field of seo.",
       icon: <FaMapMarkerAlt className="text-4xl" />,
     },
     {
       title: "Boost ROI",
       description:
-        "Make the most of your returns by benefiting from our full range of services offered by our SEO agency in India.",
+        "Optimise your returns and enjoy all the services that our SEO agency in India has to offer.",
       icon: <FaMicrophone className="text-4xl" />,
     },
   ];
@@ -321,44 +329,45 @@ const SEO = () => {
     {
       step: "Step 01",
       title: "Discovery & Goal Setting",
-      description: "get to know your business, target market, and competitors",
+      description:
+        "understand your business, target audience and your competitors.",
     },
     {
       step: "Step 02",
       title: "Audit & Keyword Research",
       description:
-        "Uncover areas to improve & concentrate on SEO keywords such as long-tail like custom search engine optimization strategies.",
+        "Identify areas to be developed and focus on SEO keywords, such as custom Search Engine Optimization (SEO) strategies that the best seo agency uses.",
     },
     {
       step: "Step 03",
       title: "Strategy Development",
       description:
-        "Technical corrections, publication of content, link building, local SEO.",
+        "Technical adjustments, content publication, link building, and local SEO by seo service provider in India.",
     },
     {
       step: "Step 04",
       title: "Implementation",
       description:
-        "Carry out the SEO services that include on-page SEO, off-page SEO, and content optimization.",
+        "Provide the SEO services comprising the on-page SEO, the off-page SEO, and the content optimization by seo services in Gurgaon.",
     },
     {
       step: "Step 05",
       title: "Monitoring & Optimization",
       description:
-        "Regular upgrades, position tracking, and performance tuning.",
+        "Frequent updates, location tracking, and performance optimization.",
     },
     {
       step: "Step 06",
       title: "Reporting & Feedback",
       description:
-        "Clear monthly reports; check out the share of profit and put new steps in motions.",
+        "Clearly written monthly reports; verify the percentage of profit and place new measures in the motions with best SEO services.",
     },
   ];
   const cardsSectionImageData1 = [
     {
       title: "SEO Audit & Strategy",
       description:
-        "Thorough audits & tailored search engine optimization strategies that unearth the potential for expansion.",
+        "Detailed auditing and customised Search Engine Optimization (SEO) solutions that unlock the prospects of growth with the help of seo agency India knowledge.",
       image: assets.seo1,
       cardBg: "bg-blue-100",
     },
@@ -366,35 +375,35 @@ const SEO = () => {
     {
       title: "On-Page SEO",
       description:
-        "Along with keyword optimization, meta tags, structured data & internal linking is done for improved search visibility.",
+        "Meta tags, structured data and internal linking are also performed along with optimization of keywords so that the seo company in Gurgaon is well portrayed in search results.",
       image: assets.seo2,
       cardBg: "bg-green-100",
     },
     {
       title: "Off-Page SEO & Link Building",
       description:
-        "Safety backlink purchase options that provide power and ranking are the features of services offered by us.",
+        "The features of services that we offer as the best seo agency are safe backlink purchase options, which offer power and ranking.",
       image: assets.seo3,
       cardBg: "bg-yellow-100",
     },
     {
       title: "Technical SEO",
       description:
-        "Combined efforts of site speed, crawlability, mobile-friendliness, and indexation bring the technical upgrades to your website.",
+        "The technical upgrades of your site include combined efforts in terms of site speed, crawlability, mobile-friendliness, and indexation through seo services in Gurgaon.",
       image: assets.seo4,
       cardBg: "bg-pink-100",
     },
     {
       title: "Local SEO",
       description:
-        "City/region-specific optimization solutions are available for you as the SEO service provider in India.",
+        "As the SEO service provider in India, you can have solutions based on city/region optimization.",
       image: assets.seo5,
       cardBg: "bg-purple-100",
     },
     {
       title: "Content Strategy & Creation",
       description:
-        "Blogs, articles, landing pages focusing on the best search engine optimization services for businesses.",
+        "Blogs, articles, and landing pages with the best SEO services to businesses of seo company in India.",
       image: assets.seo6,
       cardBg: "bg-red-100",
     },
@@ -432,7 +441,24 @@ const SEO = () => {
               <span className="text-blue-600">SEO Services</span>
             </>
           }
-          description="Capyngen is the best SEO company in India delivering cost-effective SEO solutions for startups, small businesses, and enterprises. Be the owner of the steady online success of yours with our skillful SEO services; get the visibility, traffic, and ROI that you desire."
+          description={
+            <>
+              Capyngen is the best SEO company in India that provides affordable
+              search engine optimization services to startups, small businesses,
+              and enterprises. Make the online success of your steadfast with
+              our expertise Search Engine Optimization (SEO) services; acquire
+              the visibility, traffic and ROI of the kind that you seek with the
+              services of seo services india and best SEO services.​ Complement
+              your strategy with{" "}
+              <a
+                href="/social-media-marketing"
+                className="text-blue-500 font-semibold"
+              >
+                Social Media Marketing (SMM)
+              </a>{" "}
+              for maximum reach.
+            </>
+          }
           primaryBtnText="Improve Your Website Rankings"
           primaryBtnLink="/contact-us"
           image={assets.seoHero}
@@ -456,7 +482,7 @@ const SEO = () => {
           textColor="text-white"
           title="Schedule a SEO Consultation"
           description={[
-            "Learn the power of our SEO services in India which can bring you more visitors, enhance the sales, and offer you a return on investment that you can track.",
+            "Discover the strength of our online SEO services in India that can make you receive more visitors, increase sales, and provide you with the favorable payback on the investment that you can follow with the help of the best SEO company in India.",
           ]}
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
@@ -477,7 +503,7 @@ const SEO = () => {
         <FullSizeImageSection
           backgroundImage={assets.seoFullSize}
           title="Rank higher, reach further"
-          description="We do everything that search engines like with your website to bring more visibility, visitors, and sales."
+          description="Through Search Engine Optimization (SEO) best practices, we do all that the search engines do with your site to increase the exposure level, traffic and purchases."
           buttonText="Improve Ranking"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -487,7 +513,7 @@ const SEO = () => {
         <FullSizeImageSection
           backgroundImage={assets.seoFullSize2}
           title="Let your brand be found first"
-          description="Enhance your presence in the search results with effective and tested SEO tactics."
+          description="And improve your ranking in the search list using proven and best search engine optimization (SEO) in seo company in India."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -503,28 +529,39 @@ const SEO = () => {
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
                 {[
                   {
-                    title: "Proven Track Record",
-                    text: "Delivering best SEO services for small businesses in India & enterprises.",
+                    title: "Established History",
+                    text: "The company has a history of providing best SEO services to small companies in India and companies.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Custom Strategies",
-                    text: "Tailored custom search engine optimization strategies.",
+                    text: "Custom Tailored Search Engine Optimization (SEO) strategies.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Affordable Packages",
-                    text: "Affordable SEO solutions for startups.",
+                    text: (
+                      <>
+                        Affordable SEO solutions for start-ups by the Top
+                        <a
+                          href="https://www.capyngen.com/digital-marketing"
+                          className="text-blue-500 font-semibold"
+                        >
+                          Digital marketing company
+                        </a>
+                        .
+                      </>
+                    ),
                     color: "text-blue-500",
                   },
                   {
-                    title: "Transparent Reporting",
-                    text: "Clear insights on progress & ROI.",
+                    title: "Open Reporting",
+                    text: "Understand the progress and ROI.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Dedicated Support",
-                    text: "Real-time assistance from our SEO agency in India experts.",
+                    text: "Real-time support of our SEO agency in India professionals through ppc services provider.",
                     color: "text-blue-500",
                   },
                 ].map(({ title, text, color }, idx) => (
@@ -551,7 +588,7 @@ const SEO = () => {
           textColor="text-white"
           title="Take Your Business to the Top of Search Results"
           description={[
-            "Partner with Capyngen, the best SEO company in India, for measurable traffic, leads, and revenue growth.",
+            "Get the best SEO company in India, Capyngen, to partner with so as to achieve measurable growth in traffic, leads, and revenue by use of seo services India.",
           ]}
           buttonText="Book Your Free SEO Consultation Today"
           backgroundVideo={assets.backgroundVideo}

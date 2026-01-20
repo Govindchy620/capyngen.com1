@@ -485,7 +485,10 @@ const CrmManagementSoftware = () => {
             Manage customer interactions, maximise sales, and develop customer
             loyalty using the state of the art CRM & management software that
             fits small, medium, and large businesses by Capyngen. As one of the{" "}
-            <a href="https://www.capyngen.com/consulting">
+            <a
+              href="https://www.capyngen.com/consulting"
+              className="text-blue-500 font-semibold"
+            >
               top consulting services in Gurgaon
             </a>
             , Capyngen helps organisations turn CRM into a real growth engine.
@@ -640,7 +643,10 @@ const CrmManagementSoftware = () => {
                 software in world in the category of the best results that have
                 been delivered across industries, especially for clients seeking
                 the{" "}
-                <a href="https://www.capyngen.com/devops-solutions">
+                <a
+                  href="https://www.capyngen.com/devops-solutions"
+                  className="text-blue-500 font-semibold"
+                >
                   best DevOps agency in Gurgaon
                 </a>{" "}
                 level of reliability and performance in their CRM stack.

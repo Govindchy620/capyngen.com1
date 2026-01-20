@@ -602,7 +602,10 @@ const CustomAiSolution = () => {
               efficiency and business influence. AI solution development by the
               experts of AI software development follows modern best practices
               similar to those used by the{" "}
-              <a href="https://www.capyngen.com/devops-solutions">
+              <a
+                href="https://www.capyngen.com/devops-solutions"
+                className="text-blue-500 font-semibold"
+              >
                 Best devops solutions provider
               </a>
               , ensuring reliability, observability, and continuous delivery.
@@ -632,8 +635,11 @@ const CustomAiSolution = () => {
             <>
               Grow your productivity, expand your knowledge and implement
               AI-powered automation that suits your needs. As a{" "}
-              <a href="https://www.capyngen.com/crm-management-software">
-                Top crm development company
+              <a
+                href="https://www.capyngen.com/crm-management-software"
+                className="text-blue-500 font-semibold"
+              >
+                top crm development company
               </a>{" "}
               would do for customer data, robust AI layers on top of existing
               platforms unlock deeper insights and smarter workflows.

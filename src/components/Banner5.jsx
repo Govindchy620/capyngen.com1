@@ -20,11 +20,12 @@ const Banner5 = ({
         implementation, and 24/7 support to companies across different
         industries—making us a strategic partner for any modern{" "}
         <a
-          href="https://www.capyngen.com/application-solutions
-"
+          href="https://www.capyngen.com/application-solutions"
+          className="text-blue-500 font-semibold"
         >
           apps solutions company
         </a>
+        .
       </p>
     </>
   ),

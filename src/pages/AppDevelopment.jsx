@@ -565,10 +565,10 @@ const AppDevelopment = () => {
           <>
             Android, iOS and cross-platform solutions Android, iOS and
             cross-platform mobile apps of the Best Mobile App Development
-            Company in India are scalable, secure and easy to use. As one of the
+            Company in India are scalable, secure and easy to use. As one of the{" "}
             <a
-              href="https://www.capyngen.com/application-solutions
-"
+              href="https://www.capyngen.com/application-solutions"
+              className="text-blue-500 font-semibold"
             >
               Best application solutions in Gurgaon
             </a>
@@ -703,7 +703,10 @@ const AppDevelopment = () => {
             development? Contact Capyngen, one of the leading cross-platform
             application development firms and expand your internet presence with
             a trusted{" "}
-            <a href="https://www.capyngen.com/web-development">
+            <a
+              href="https://www.capyngen.com/web-development"
+              className="text-blue-500 font-semibold"
+            >
               Website development company Gurgaon
             </a>{" "}
             and top Mobile App Development Company in India.

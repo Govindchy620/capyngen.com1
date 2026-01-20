@@ -441,8 +441,8 @@ const ApplicationSolutions = () => {
             application solutions to start-ups, enterprises and global brands.
             Capyngen also partners with you as a strategic{" "}
             <a
-              href="https://www.capyngen.com/consulting
-"
+              href="https://www.capyngen.com/consulting"
+              className="text-blue-500 font-semibold"
             >
               consulting services provider
             </a>
@@ -489,7 +489,10 @@ const ApplicationSolutions = () => {
         <>
           Application software services for solving problems of the corporates
           worldwide, and digital growth support that rivals even the{" "}
-          <a href="https://www.capyngen.com/digital-marketing">
+          <a
+            href="https://www.capyngen.com/digital-marketing"
+            className="text-blue-500 font-semibold"
+          >
             Best digital marketing services Provider
           </a>{" "}
           in impact on revenue.

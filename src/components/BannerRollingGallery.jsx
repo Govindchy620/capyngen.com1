@@ -120,11 +120,11 @@ const BannerRollingGallery = ({
           competitive edge in the digital world by offering our best web
           development services provided by the{" "}
           <a
-            href="https://www.capyngen.com/consulting
-"
+            href="https://www.capyngen.com/consulting"
+            className="text-blue-500 font-semibold"
           >
             best consulting company in India
-          </a>
+          </a>{" "}
           and the best web development company in India.
         </p>
       </div>

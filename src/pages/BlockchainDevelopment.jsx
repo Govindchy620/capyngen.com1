@@ -443,7 +443,10 @@ const BlockchainDevelopment = () => {
         <>
           The smooth integration of the current applications and blockchain
           technology solutions, such as the{" "}
-          <a href="https://www.capyngen.com/website-design">
+          <a
+            href="https://www.capyngen.com/website-design"
+            className="text-blue-500 font-semibold"
+          >
             ecommerce website design
           </a>
           .
@@ -685,7 +688,10 @@ const BlockchainDevelopment = () => {
         footerNote={
           <>
             A destination of development and maintenance of the{" "}
-            <a href="https://www.capyngen.com/ecommerce-solutions">
+            <a
+              href="https://www.capyngen.com/ecommerce-solutions"
+              className="text-blue-500 font-semibold"
+            >
               best e-commerce software solutions
             </a>{" "}
             to guarantee hassle-free shopping experiences.

@@ -773,7 +773,10 @@ const WebDevelopment = () => {
               solutions to web development through an expert and quality best
               website development solutions ensuring that your business grows
               and your audience is attracted. Our{" "}
-              <a href="https://www.capyngen.com/application-solutions">
+              <a
+                href="https://www.capyngen.com/application-solutions"
+                className="text-blue-500 font-semibold"
+              >
                 application solutions in Gurgaon
               </a>{" "}
               complement perfect website development for comprehensive digital

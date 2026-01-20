@@ -668,7 +668,7 @@ const DigitalMarketing = () => {
         <Banner11
           heading="to Grow Your Business"
           highlight="Digital Marketing Services"
-          description="Increase exposure, interactions and purchases through personalised digital marketing services based on your brand."
+          description="Increase exposure, interactions and purchases through personalised digital marketing services based on your brand. Expand your company through appropriate marketing strategies, enhanced by cybersecurity measures for safe online operations and e commerce services integration."
           cards={marketingCards}
         />
       </div>
@@ -690,9 +690,17 @@ const DigitalMarketing = () => {
             <>
               <p className="mb-3 font-semibold">It includes:</p>
               <ul className="list-disc list-inside space-y-2">
-                <li>Search Engine Optimisation (SEO)</li>
+                <li>
+                  <a href="https://www.capyngen.com/seo">
+                    Search Engine Optimisation (SEO)
+                  </a>
+                </li>
                 <li>Social Media Marketing (SMM)</li>
-                <li>Pay-Per-Click Advertising (PPC)</li>
+                <li>
+                  <a href="https://www.capyngen.com/ppc">
+                    Pay-Per-Click Advertising (PPC)
+                  </a>
+                </li>
                 <li>Content Marketing</li>
                 <li>Email Marketing</li>
                 <li>Influencer Marketing</li>

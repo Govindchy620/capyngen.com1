@@ -421,7 +421,10 @@ const ECommerceSolution = () => {
       description: (
         <>
           Make more sales with smart product recommendations using{" "}
-          <a href="https://www.capyngen.com/custom-ai-solutions">
+          <a
+            href="https://www.capyngen.com/custom-ai-solutions"
+            className="text-blue-500 font-semibold"
+          >
             Top AI software solutions in Gurgaon
           </a>
           .
@@ -805,7 +808,10 @@ const ECommerceSolution = () => {
               Capyngen information based marketing is the way your E commerce
               solutions services can make contact with the appropriate audience
               with the use of{" "}
-              <a href="https://www.capyngen.com/digital-marketing">
+              <a
+                href="https://www.capyngen.com/digital-marketing"
+                className="text-blue-500 font-semibold"
+              >
                 digital marketing services
               </a>
               :

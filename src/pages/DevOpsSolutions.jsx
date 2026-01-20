@@ -364,7 +364,10 @@ const DevOpsSolutions = () => {
         <>
           Select the right cloud architectures and plans that are compatible
           with your business needs and objectives often enhanced with{" "}
-          <a href="https://www.capyngen.com/custom-ai-solutions">
+          <a
+            href="https://www.capyngen.com/custom-ai-solutions"
+            className="text-blue-500 font-semibold"
+          >
             custom AI development services
           </a>{" "}
           for smarter automation and observability.
