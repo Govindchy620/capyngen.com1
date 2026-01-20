@@ -65,7 +65,7 @@ const BlogDetail = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black py-24">
+      <div id="blog-detail-content" className="bg-black py-24">
         <div className="max-w-7xl mx-auto px-4">
           <button
             onClick={() => navigate("/news-and-updates")}

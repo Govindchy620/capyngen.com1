@@ -205,34 +205,37 @@ async function run() {
   // 4. LOOP THROUGH ROUTES
   for (const route of allRoutes) {
     console.log("➡️ Prerendering:", route);
-
     const url = `${BASE_URL}${route}`;
 
     try {
-      await page.goto(url, {
-        waitUntil: "domcontentloaded",
-        timeout: 120000,
-      });
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
 
-      // ✅ FIX 4: Wait for the H1 tag to ensure content (title) is loaded
-      // This ensures we don't save the "Loading..." state
-      try {
-        await page.waitForSelector("h1", { timeout: 10000 });
-      } catch (e) {
-        // If h1 is not found, just continue (might be a redirect or error page)
-        // console.log("Note: No h1 found on this page.");
+      // ✅ CRITICAL FIX: Smart Waiting Logic
+      if (route.includes("/news-and-updates/")) {
+        // If it's a blog, wait for the SPECIFIC blog content ID we added in Step 1
+        // This ensures the API fetch has finished and React has rendered the blog.
+        try {
+          await page.waitForSelector("#blog-detail-content", {
+            timeout: 20000,
+          });
+        } catch (e) {
+          console.warn(
+            `⚠️ Warning: Blog content selector not found for ${route}. Saving whatever is there.`,
+          );
+        }
+      } else {
+        // For static pages, waiting for #root is usually enough
+        await page.waitForSelector("#root", { timeout: 10000 });
       }
 
-      // Give hydration a small extra buffer for images/meta
-      await wait(1000);
+      // Small buffer for hydration/Helmet to update head tags
+      await wait(500);
 
       const html = await page.content();
-
       const outDir =
         route === "/" ? distDir : path.join(distDir, route.replace(/^\//, ""));
 
       await ensureDir(outDir);
-
       await fs.promises.writeFile(
         path.join(outDir, "index.html"),
         html,
