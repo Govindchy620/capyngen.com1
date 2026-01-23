@@ -456,11 +456,11 @@ const CrmManagementSoftware = () => {
     <div className="relative">
       <Helmet>
         <title>
-          CRM Management Services – India’s Best CRM Software Provider
+          CRM Management Services – India’s Best CRM Software Solution Provider
         </title>
         <meta
           name="description"
-          content="Get powerful CRM & management software designed to streamline sales, marketing, and customer relationships. Choose the best CRM management software for your business growth."
+          content="Get powerful CRM & management software designed to streamline sales, marketing, and customer relationships. Choose the best CRM management software solution for your business growth."
         />
         <meta
           name="keywords"
@@ -476,7 +476,7 @@ const CrmManagementSoftware = () => {
       </Helmet>
       <Banner14
         imageSrc={assets.crm1}
-        imageAlt="CRM management software, best crm management software, crm management services"
+        imageAlt="CRM Management Services – India’s Best CRM Software Solution Provider"
         title="Instant "
         highlighted="CRM Management Software Provider"
         subtitle=" – Get India’s #1 Trusted CRM Solution"
@@ -514,6 +514,7 @@ const CrmManagementSoftware = () => {
           textSize="text-lg"
           buttonText="Get in Touch"
           image={assets.crm2}
+          alt="CRM Management Services – India’s Best CRM Software Solution Provider"
         />
         <GetStarted
           reverse={false}
@@ -534,6 +535,7 @@ const CrmManagementSoftware = () => {
             `Bespoke cloud CRMs of Capyngen are developed on the basis of the best CRM software development architecture that offers businesses the power to work smarter. Our best CRM management software allows your company to emphasise loyalty, data trends, and revenue generation.`,
           ]}
           image={assets.crm3}
+          alt="CRM Management Services – India’s Best CRM Software Solution Provider"
           isHidden={true}
           imageHeight="aspect-[1/1]"
           background={assets.patternBg1}
@@ -620,6 +622,7 @@ const CrmManagementSoftware = () => {
             </>,
           ]}
           image={assets.crm16}
+          alt="CRM Management Services – India’s Best CRM Software Solution Provider"
         />
         <GetStarted
           reverse={false}

@@ -12,6 +12,7 @@ export default function TopRatedCompany({
     automation, responsive web platforms, and scalable IT strategies.
     These things help businesses grow and succeed in the long term.`,
   image = assets.whyChooseUs,
+  alt = "CRM Management Services – India’s Best CRM Software Solution Provider",
   bgColor = "bg-black",
   background = "",
   reverse = false,
@@ -62,7 +63,7 @@ export default function TopRatedCompany({
               {/* Image */}
               <img
                 src={image}
-                alt="Business people collaborating"
+                alt={alt}
                 className="relative z-10 w-full h-full object-contain rounded-xl shadow-xl"
                 loading="lazy"
                 decoding="async"

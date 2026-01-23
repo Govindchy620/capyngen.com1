@@ -13,6 +13,7 @@ const GetStarted = ({
   backgroundVideo,
   textColor = "text-white",
   image,
+  alt = "CRM Management Services – India’s Best CRM Software Solution Provider",
   reverse = false,
   listItems = [],
   textSize = "text-base sm:text-lg",
@@ -113,7 +114,7 @@ const GetStarted = ({
           >
             <img
               src={image}
-              alt="App Consulting Illustration"
+              alt={alt}
               className="w-full max-w-md rounded-xl"
               loading="lazy"
             />
