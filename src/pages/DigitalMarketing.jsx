@@ -698,13 +698,19 @@ const DigitalMarketing = () => {
               <p className="mb-3 font-semibold">It includes:</p>
               <ul className="list-disc list-inside space-y-2">
                 <li>
-                  <a href="https://www.capyngen.com/seo">
+                  <a
+                    href="https://www.capyngen.com/seo"
+                    className="text-blue-500 font-bold"
+                  >
                     Search Engine Optimisation (SEO)
                   </a>
                 </li>
                 <li>Social Media Marketing (SMM)</li>
                 <li>
-                  <a href="https://www.capyngen.com/ppc">
+                  <a
+                    href="https://www.capyngen.com/ppc"
+                    className="text-blue-500 font-bold"
+                  >
                     Pay-Per-Click Advertising (PPC)
                   </a>
                 </li>

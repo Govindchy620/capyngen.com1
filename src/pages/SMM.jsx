@@ -322,9 +322,15 @@ const SMM = () => {
         "Is it possible to have social media marketing to integrate with the other online marketing activities?",
       answer: (
         <>
-          Yes. <a href="https://www.capyngen.com/seo">SEO</a>, email marketing
-          and paid advertising may be incorporated into our campaigns to have a
-          unified digital strategy.
+          Yes.{" "}
+          <a
+            href="https://www.capyngen.com/seo"
+            className="text-blue-500 font-bold"
+          >
+            SEO
+          </a>
+          , email marketing and paid advertising may be incorporated into our
+          campaigns to have a unified digital strategy.
         </>
       ),
     },
@@ -670,7 +676,10 @@ const SMM = () => {
             Being one of the top Best marketing agency in Gurgaon, we offer
             all-in-one solutions to your business requirements with the help of
             potent social media marketing services, complemented by our{" "}
-            <a href="https://www.capyngen.com/digital-marketing">
+            <a
+              href="https://www.capyngen.com/digital-marketing"
+              className="text-blue-500 font-bold"
+            >
               Digital Marketing Services
             </a>{" "}
             and SEO Services.

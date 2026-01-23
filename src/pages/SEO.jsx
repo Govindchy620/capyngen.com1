@@ -452,7 +452,7 @@ const SEO = () => {
               your strategy with{" "}
               <a
                 href="https://www.capyngen.com/smm"
-                className="text-blue-500 font-semibold"
+                className="text-blue-500 font-bold"
               >
                 Social Media Marketing (SMM)
               </a>{" "}
@@ -546,7 +546,7 @@ const SEO = () => {
                         Affordable SEO solutions for start-ups by the Top
                         <a
                           href="https://www.capyngen.com/digital-marketing"
-                          className="text-blue-500 font-semibold"
+                          className="text-blue-500 font-bold"
                         >
                           Digital marketing company
                         </a>
