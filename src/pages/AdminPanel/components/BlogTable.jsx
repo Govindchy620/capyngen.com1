@@ -14,6 +14,12 @@ export default function BlogTable({ blogs, onEdit, onDelete }) {
             <th className="px-4 py-3 text-left">Date</th>
             <th className="px-4 py-3 text-left">Tags</th>
             <th className="px-4 py-3 text-left">Description</th>
+
+            {/* ✅ NEW SEO FIELDS */}
+            <th className="px-4 py-3 text-left">Meta Title</th>
+            <th className="px-4 py-3 text-left">Meta Description</th>
+            <th className="px-4 py-3 text-left">Schema</th>
+
             <th className="px-4 py-3 text-right">Actions</th>
           </tr>
         </thead>
@@ -41,6 +47,11 @@ export default function BlogTable({ blogs, onEdit, onDelete }) {
                   : "NA"}
               </td>
 
+              {/* ✅ NEW SEO DATA */}
+              <td className="px-4 py-3">{b.metaTitle || "NA"}</td>
+              <td className="px-4 py-3">{b.metaDescription || "NA"}</td>
+              <td className="px-4 py-3">{b.schema ? "Added" : "NA"}</td>
+
               <td className="px-4 py-3 text-right space-x-2">
                 <button
                   onClick={() => onEdit(b)}
@@ -60,7 +71,7 @@ export default function BlogTable({ blogs, onEdit, onDelete }) {
 
           {blogs.length === 0 && (
             <tr>
-              <td colSpan={8} className="text-center py-6 text-neutral-400">
+              <td colSpan={11} className="text-center py-6 text-neutral-400">
                 No blogs yet.
               </td>
             </tr>

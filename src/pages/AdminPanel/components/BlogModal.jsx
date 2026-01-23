@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
-import PublishButton from "./PublishButton";
 
 export default function BlogModal({ open, onClose, onSave, initial }) {
   const [form, setForm] = useState({
@@ -13,10 +12,14 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
     category: "",
     group: "",
     date: "",
+
+    // ✅ NEW SEO FIELDS
+    metaTitle: "",
+    metaDescription: "",
+    schema: "",
   });
 
   const [preview, setPreview] = useState("");
-
   const [uploading, setUploading] = useState(false);
 
   // Populate form if editing
@@ -32,6 +35,11 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
         category: initial.category || "",
         group: initial.group || "",
         date: initial.date || "",
+
+        // ✅ SEO
+        metaTitle: initial.metaTitle || "",
+        metaDescription: initial.metaDescription || "",
+        schema: initial.schema ? JSON.stringify(initial.schema) : "",
       });
       setPreview(initial.image || "");
     } else {
@@ -45,6 +53,9 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
         category: "",
         group: "",
         date: "",
+        metaTitle: "",
+        metaDescription: "",
+        schema: "",
       });
       setPreview("");
     }
@@ -115,7 +126,7 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
       author: form.author.trim(),
       description: form.description.trim(),
       content: form.content.trim(),
-      image: form.image, // ✅ NOW GUARANTEED
+      image: form.image,
       category: form.category.trim(),
       group: form.group.trim(),
       date: form.date,
@@ -123,6 +134,11 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
         .split(",")
         .map((t) => t.trim())
         .filter(Boolean),
+
+      // ✅ SEO
+      metaTitle: form.metaTitle.trim(),
+      metaDescription: form.metaDescription.trim(),
+      schema: form.schema ? JSON.parse(form.schema) : undefined,
     };
 
     onSave(payload);
@@ -142,7 +158,12 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
           >
             Cancel
           </button>
-          <PublishButton />
+          <button
+            onClick={handleSubmit}
+            className="px-4 py-2 rounded-xl bg-neutral-900 text-white hover:bg-black"
+          >
+            {initial ? "Save Changes" : "Save Blog"}
+          </button>
         </>
       }
     >
@@ -226,6 +247,42 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
             onChange={handleChange}
             rows={6}
             className="w-full rounded-xl border border-neutral-300 px-3 py-2"
+          />
+        </div>
+
+        {/* ✅ META TITLE */}
+        <div className="space-y-1">
+          <label className="text-sm text-neutral-600">Meta Title</label>
+          <input
+            name="metaTitle"
+            value={form.metaTitle}
+            onChange={handleChange}
+            className="w-full rounded-xl border border-neutral-300 px-3 py-2"
+          />
+        </div>
+
+        {/* ✅ META DESCRIPTION */}
+        <div className="space-y-1">
+          <label className="text-sm text-neutral-600">Meta Description</label>
+          <textarea
+            name="metaDescription"
+            value={form.metaDescription}
+            onChange={handleChange}
+            rows={2}
+            className="w-full rounded-xl border border-neutral-300 px-3 py-2"
+          />
+        </div>
+
+        {/* ✅ SCHEMA */}
+        <div className="md:col-span-2 space-y-1">
+          <label className="text-sm text-neutral-600">Schema (JSON)</label>
+          <textarea
+            name="schema"
+            value={form.schema}
+            onChange={handleChange}
+            rows={4}
+            placeholder='{"@context":"https://schema.org","@type":"BlogPosting"}'
+            className="w-full rounded-xl border border-neutral-300 px-3 py-2 font-mono text-sm"
           />
         </div>
 
