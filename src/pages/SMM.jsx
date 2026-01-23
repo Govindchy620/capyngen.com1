@@ -320,8 +320,13 @@ const SMM = () => {
     {
       question:
         "Is it possible to have social media marketing to integrate with the other online marketing activities?",
-      answer:
-        "Yes. SEO, email marketing and paid advertising may be incorporated into our campaigns to have a unified digital strategy.",
+      answer: (
+        <>
+          Yes. <a href="https://www.capyngen.com/seo">SEO</a>, email marketing
+          and paid advertising may be incorporated into our campaigns to have a
+          unified digital strategy.
+        </>
+      ),
     },
     {
       question: "Is social media marketing services appropriate in startups?",
@@ -542,11 +547,11 @@ const SMM = () => {
     <div className="relative">
       <Helmet>
         <title>
-          Social Media Marketing | Grow Your Brand Online – Capyngen
+          Social Media Marketing Agency in India | Growth-Driven SMM Services
         </title>
         <meta
           name="description"
-          content="Boost your brand presence with Capyngen's social media marketing services. Engage, grow, and convert your audience across all major social platforms today!"
+          content="Capyngen is a trusted social media marketing agency in India offering professional social media marketing services, management, and ads to grow your brand."
         />
         <meta
           name="keywords"
@@ -654,14 +659,26 @@ const SMM = () => {
           </>,
         ]}
         image={assets.smm1}
+        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
         background={assets.patternBg1}
         isHidden="hidden"
       />
       <BenefitsSection
         heading="Our Social Media Marketing Services"
-        desc="Being one of the top Best marketing agency in Gurgaon, we offer all-in-one solutions to your business requirements with the help of potent social media marketing services."
+        desc={
+          <>
+            Being one of the top Best marketing agency in Gurgaon, we offer
+            all-in-one solutions to your business requirements with the help of
+            potent social media marketing services, complemented by our{" "}
+            <a href="https://www.capyngen.com/digital-marketing">
+              Digital Marketing Services
+            </a>{" "}
+            and SEO Services.
+          </>
+        }
         benefits={solutionsData}
         image={assets.smm2}
+        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
         footerNote=""
       />
       <GetStarted
@@ -720,6 +737,7 @@ const SMM = () => {
           </>,
         ]}
         image={assets.smm9}
+        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
       />
       <HowWeWork
         heading="Our Social Media Marketing Process"
@@ -747,6 +765,7 @@ const SMM = () => {
           </>,
         ]}
         image={assets.smm10}
+        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
         isHidden={true}
         background={assets.patternBg1}
       />

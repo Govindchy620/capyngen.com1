@@ -10,7 +10,7 @@ export default function Banner15() {
         {image && (
           <img
             src={image}
-            alt="Ecommerce app background"
+            alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
             className="absolute inset-0 w-full h-full object-cover brightness-75 z-0"
             loading="lazy"
             decoding="async"
@@ -28,10 +28,22 @@ export default function Banner15() {
             </span>
           </h1>
           <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-2xl leading-relaxed">
-            The current world has become digital, and therefore, social media marketing is nearly compulsory. The diverse number of users on Facebook, Instagram, LinkedIn, Twitter (X) and YouTube has made social media the strongest tool that a brand can use to position, engage and build itself. We are a rising brand of providing social media services in India, and we make sure that your business comes out.
+            The current world has become digital, and therefore, social media
+            marketing is nearly compulsory. The diverse number of users on
+            Facebook, Instagram, LinkedIn, Twitter (X) and YouTube has made
+            social media the strongest tool that a brand can use to position,
+            engage and build itself. We are a rising brand of providing social
+            media services in India, and we make sure that your business comes
+            out.
           </p>
           <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-2xl leading-relaxed">
-            As a trusted social media marketing firm, we provide business solutions based on analytics-based strategies, creative content, and focused social media advertisements. In growing your brand through the best social media services in India, our services in social media marketing services can be used to fulfil quantifiable objectives provided that you are seeking to promote your brand, attract the right kind of clientele or boost sales.
+            As a trusted social media marketing firm, we provide business
+            solutions based on analytics-based strategies, creative content, and
+            focused social media advertisements. In growing your brand through
+            the best social media services in India, our services in social
+            media marketing services can be used to fulfil quantifiable
+            objectives provided that you are seeking to promote your brand,
+            attract the right kind of clientele or boost sales.
           </p>
         </div>
       </div>
@@ -46,7 +58,11 @@ export default function Banner15() {
           ?
         </h2>
         <p className="mt-6 text-white text-base lg:text-lg max-w-2xl leading-relaxed">
-          Social Media Marketing (SMM) is a process that is directed at promoting products, services, or brands through social media. It entails creating appealing content, running sponsored campaigns and creating a positive rapport with the target market. Brand is ensured by the community social network structure:
+          Social Media Marketing (SMM) is a process that is directed at
+          promoting products, services, or brands through social media. It
+          entails creating appealing content, running sponsored campaigns and
+          creating a positive rapport with the target market. Brand is ensured
+          by the community social network structure:
         </p>
         <ul className="mt-6 space-y-4">
           <OfferCheckItem text="Targets the right audience." />
@@ -55,7 +71,9 @@ export default function Banner15() {
           <OfferCheckItem text="Pulls the sales and right leads." />
         </ul>
         <p className="mt-6 text-white text-base lg:text-lg max-w-2xl leading-relaxed">
-          More precisely, the social media services in India are the new means of reaching your consumers via your brand, backed by the social media campaigns that facilitate the growth.
+          More precisely, the social media services in India are the new means
+          of reaching your consumers via your brand, backed by the social media
+          campaigns that facilitate the growth.
         </p>
       </aside>
     </section>

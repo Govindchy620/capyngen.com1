@@ -32,6 +32,7 @@ const Banner5 = ({
   primaryBtnText = "Start using the Capyngen DevOps Solutions",
   primaryBtnLink = "/contact-us",
   image = assets.devOps1,
+  alt = "Best SEO Company in India | Professional AI SEO Services",
 }) => {
   return (
     <section className="bg-gray-900 pt-20" aria-label="DevOps Solutions Banner">
@@ -79,7 +80,7 @@ const Banner5 = ({
           <div className="flex lg:col-span-5 lg:justify-center justify-center mt-20 lg:mt-0">
             <img
               src={image}
-              alt="DevOps solutions mockup"
+              alt={alt}
               className="max-w-full h-auto rounded-md object-cover"
               loading="lazy"
               decoding="async"

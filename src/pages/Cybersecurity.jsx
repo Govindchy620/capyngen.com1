@@ -215,81 +215,82 @@ const Cybersecurity = () => {
     {
       question: "What is cybersecurity?",
       answer:
-        "Cybersecurity entails all measures against hackers to protect the networks, systems, and data of an organization.",
+        "Cybersecurity refers to all the strategies against hackers to secure the networks, systems, and data of an organisation with full-scale cybersecurity managed services.",
     },
     {
-      question: "Why is cybersecurity important to businesses?",
+      question: "What is the significance of cybersecurity to businesses?",
       answer:
-        "The main benefits of cybersecurity are the following: no leak of data, the security of sensitive informational assets, the observance of the law, and maintenance of customer trust.",
+        "The key advantages of cybersecurity services are the following: no data leakage, safety of informational assets of sensitive information, law observance, and preservation of customer trust.",
     },
     {
       question: "What are managed security services?",
       answer:
-        "Such services consist of continuous monitoring, threat detection, incident response, vulnerability management, and disaster recovery.",
+        "Some of the managed cybersecurity services include ongoing monitoring, threat detection, incident response, vulnerability management, and recovery from a disaster due to a cybersecurity service provider.",
     },
     {
-      question: "Do security services have a positive impact on startups?",
+      question: "Do security services positively influence startups?",
       answer:
-        "Definitely. Capyngen delivers on-demand security to startups at a fraction of the usual price to protect their valuable information and keep their business going.",
+        "Definitely. Capyngen provides on-demand cyber security services to startups at a fraction of the regular cost to secure valuable information and continue doing business.",
     },
     {
       question: "What is network security?",
       answer:
-        "Network structure is the protection of internal networks against unauthorized entry and cyber-attacks to computers, servers, and other connected hardware devices.",
+        "Network protection against unauthorised access and cyber-attacks to computers, servers and other connected devices of the hardware via cybersecurity solutions.",
     },
     {
-      question: "What is Capyngen's data protection approach?",
+      question: "Which data protection strategy does Capyngen have?",
       answer:
-        "We protect confidential data through encryption, other means of safe storage, backup, and by using access controls.",
+        "As part of our cybersecurity consulting services, we ensure confidential data is encrypted, securely stored in another way, backed up, and access controls are in place.",
     },
     {
-      question: "Can your cybersecurity services help if I have an enterprise?",
+      question:
+        "Are your cybersecurity services applicable in case I have an enterprise?",
       answer:
-        "Yes, of course. Among the offers Capyngen has for corporations, there is working staff on call for professional advice and guidance well-structured and wide-ranged security.",
+        "Yes, of course. Working staff on demand and high-quality and broad-based cybersecurity services are among the propositions Capyngen has to offer corporations.",
     },
     {
       question: "What is penetration testing?",
       answer:
-        "Hackers are simulated in penetration testing, in order to show the vulnerabilities present in a system, and which greatly, in a very short time, they can be found and used by the attackers.",
+        "Penetration testing simulates hackers to demonstrate the vulnerabilities existing in a system, and in a very short period, they can discover and exploit them.",
     },
     {
-      question: "Are you providing cloud security solutions?",
+      question: "Do you offer cloud security services?",
       answer:
-        "The answer is yes. We offer secure environments for the cloud, as well as for applications and storage using security measures that comply with industry standards.",
+        "Yes. The cloud, applications and storage environments that we provide are secure with industry standards in security measures that are provided through experience as a cyber security solutions provider.",
+    },
+    {
+      question: "How can ransomware attacks be prevented using cybersecurity?",
+      answer:
+        "Yes. The cybersecurity company offers endpoint security, threat monitoring, and backups, which are some of the measures used to combat ransomware.",
+    },
+    {
+      question: "What do you do to track cybersecurity threats?",
+      answer:
+        "SIEM tools are combined with 24/7 monitoring, intrusion detection and analytics to identify and respond to threats using cybersecurity managed services.",
     },
     {
       question:
-        "Are there any means to stop ransomware attacks through cybersecurity?",
+        "Which industries are vulnerable to the cyber security services?",
       answer:
-        "Yes. Some of the measures that are used to fight ransomware against include threat monitoring, backups, and endpoint security.",
+        "Finance, healthcare, retail, education, IT, travel, and in general, any data-driven company that involves sensitive customer information gains the benefits of cybersecurity services.",
     },
     {
-      question: "How do you monitor cybersecurity threats?",
+      question: "What are the fees for cybersecurity services?",
       answer:
-        "We use SIEM tools paired with 24/7 monitoring, intrusion detection, and analytics to spot and react to threats.",
+        "Prices vary across the board based on the size of business, security needs and services. Capyngen provides affordable and scalable cybersecurity solutions.",
     },
     {
-      question:
-        "What are the industries that could gain from cyber security services?",
+      question: "What are IT security services?",
       answer:
-        "Finance, healthcare, retail, education, IT, travel — basically any data-driven company dealing with sensitive customer information.",
+        "Capyngen provides basic cyber security services, which include endpoint protection, network security, patch management, anti-virus and employee training.",
     },
     {
-      question: "How much do cybersecurity services cost?",
+      question: "What is the entry mode of Capyngen cybersecurity services?",
       answer:
-        "There is a variety of prices depending on the size of the business, security requirements, and the services needed. Capyngen offers scalable and affordable cybersecurity solutions.",
-    },
-    {
-      question: "What services are IT security services?",
-      answer:
-        "Endpoint protection, network security, patch management, anti-virus, and employee training.",
-    },
-    {
-      question: "How do I get started with Capyngen cybersecurity services?",
-      answer:
-        "Schedule a free consultation to evaluate your security requirements and receive a custom-made cybersecurity plan for your business.",
+        "Book a free consultation on how to assess your security needs and have this reliable managed cybersecurity services provider create a business-specific cybersecurity plan.",
     },
   ];
+
   const servicesData = [
     {
       image: assets.cyberSecurity3,
@@ -322,27 +323,28 @@ const Cybersecurity = () => {
       desc: "The strategic guidance to put in place the robust security frameworks.",
     },
   ];
+
   const cardsSectionImageData1 = [
     {
-      title: "Firewalls & Intrusion Detection Systems (IDS/IPS)",
+      title: "Fire Walls and Intrusion Detection Systems (IDS/IPS)",
       description: "",
       image: assets.cyberSecurity9,
       cardBg: "bg-blue-100",
     },
     {
-      title: "Anti-Malware & Anti-Virus Software",
+      title: "Anti-Virus Software & Anti-Malware Software",
       description: "",
       image: assets.cyberSecurity10,
       cardBg: "bg-pink-100",
     },
     {
-      title: "Security Information & Event Management (SIEM)",
+      title: "Security Information and Event Management (SIEM)",
       description: "",
       image: assets.cyberSecurity11,
       cardBg: "bg-green-100",
     },
     {
-      title: "Data Encryption & Backup Solutions",
+      title: "Data Backup Solutions and Data Encryption",
       description: "",
       image: assets.cyberSecurity12,
       cardBg: "bg-yellow-100",
@@ -360,6 +362,7 @@ const Cybersecurity = () => {
       cardBg: "bg-red-100",
     },
   ];
+
   const cardsSectionSliderData1 = [
     {
       title: "Startups & Small Businesses",
@@ -419,11 +422,11 @@ const Cybersecurity = () => {
     <div className="relative">
       <Helmet>
         <title>
-          Cybersecurity Solutions | IT & Network Security Services – Capyngen
+          Managed Cybersecurity Services Provider in India | Capyngen
         </title>
         <meta
           name="description"
-          content="Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets."
+          content="Capyngen is a trusted managed cybersecurity services provider offering advanced cyber security solutions and Indian cybersecurity solutions to protect businesses and financial services."
         />
         <meta
           name="keywords"
@@ -449,10 +452,28 @@ const Cybersecurity = () => {
               </span>
             </>
           }
-          description="In order to protect your information, systems, and business processes, we offer security for information technology, security for networks, and the administration of security for the organization through cybersecurity programs. Capyngen is a reliable worldwide supplier of all kinds of business cybersecurity software that offers solutions to problems faced by small, medium, and large enterprises."
+          description={
+            <>
+              We provide information technology security, network security, and
+              security administration of the organisation through cybersecurity
+              programs to secure your information, systems, and business
+              processes. Capyngen is an effective global provider of business
+              cybersecurity solutions, offering tailored solutions to address
+              the challenges faced by small, medium, and large businesses as a
+              top cybersecurity service provider. Our{" "}
+              <a
+                href="https://www.capyngen.com/ppc"
+                className="text-blue-500 font-bold"
+              >
+                Pay-Per-Click Advertising (PPC)
+              </a>{" "}
+              campaigns also help promote these essential services effectively.
+            </>
+          }
           primaryBtnText="Protect Your Business"
           primaryBtnLink="/contact-us"
           image={assets.cyberSecurity1}
+          alt="Managed Cybersecurity Services Provider in India | Capyngen"
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -463,7 +484,20 @@ const Cybersecurity = () => {
           textColor="text-white"
           title="Keep Your Business Safe from Cyber Threats"
           description={[
-            "Protect your systems, networks, and data with our managed cybersecurity services at Capyngen and enjoy round-the-clock security.",
+            <>
+              With our managed cybersecurity services, you can secure your
+              systems, networks, and data, and enjoy round-the-clock protection
+              for your data and networks through a top-notch cyber security
+              services company.{" "}
+              <a
+                href="https://www.capyngen.com/seo"
+                className="text-blue-500 font-bold"
+              >
+                Search Engine Optimisation
+              </a>{" "}
+              ensures businesses discover our protection when searching for
+              reliable defence solutions.
+            </>,
           ]}
           buttonText="Contact Us"
           backgroundVideo={assets.backgroundVideo}
@@ -471,41 +505,41 @@ const Cybersecurity = () => {
         <TopRatedCompany
           title="What is Cybersecurity?"
           description={[
-            `Cybersecurity revolves around the protection of the systems, networks, and data from any form of digital attacks, stealing, or destruction. The corporate world, today, is being targeted constantly by different types of hackers, malware infections, and data leaks. Capyngen provides the well-qualified cybersecurity consulting services catered for corporates, startups, and small and medium enterprises which help to eradicate the cyber risks, protect the less expensive data and maintain the uninterruptible business flow.`,
+            ` Cybersecurity is concerned with the safety of systems, networks, and data against digital attacks, theft, and destruction. The business world has been the target of various forms of hackers, malware infections, and information leakage on a constant basis. Capyngen offers qualified cybersecurity consulting services to corporations, startups, and small and medium enterprises that assist in eliminating the cyber threat, securing less expensive data and ensuring unbroken business continuity.​`,
             <>
               <p className="mb-3 font-semibold">
-                Importance of Cybersecurity in Modern Businesses
+                Significance of Cybersecurity in Modern Businesses.
               </p>
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
                 {[
                   {
                     title: "Protect Sensitive Data",
-                    text: "Protect and secure data of customers, employees, and finance.",
+                    text: "Protect and secure customer data, employee and finance.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Prevent Financial Loss",
-                    text: "Extent the breach-related costs are reduced significantly alongside the costs of downtime and data theft.",
+                    title: "Avert Financial Loss",
+                    text: "The costs associated with the breach are minimized and the cost of downtime and data theft is minimised.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Ensure Regulatory Compliance",
-                    text: "Attain compliance with standards from all over the world such as GDPR, HIPAA, and ISO.",
+                    title: "Assure Regulatory Compliance",
+                    text: "Achieve conformity to international standards like GDPR, HIPAA and ISO.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Maintain Customer Trust",
-                    text: "Demonstrate to clients that their data is in safe hands when it comes to your company.",
+                    title: "Sustenance of Customer Confidence",
+                    text: "Show clients that their information remains safe with your firm.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Enhance Operational Security",
-                    text: "Obtain security for your networks, endpoints as well as for the cloud infrastructure.",
+                    title: "Increase Operational Security",
+                    text: "Get security on your networks and the endpoints, as well as on the cloud infrastructure.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Support Business Continuity",
-                    text: "Be the last one to be impacted by cyber incidents.",
+                    text: "Be not among the first hit by cyber attacks.",
                     color: "text-blue-500",
                   },
                 ].map(({ title, text, color }, idx) => (
@@ -521,26 +555,28 @@ const Cybersecurity = () => {
                 ))}
               </ul>
               <p>
-                By using Capyngen’s leading cybersecurity solutions, your
-                business will remain unstoppable and non-vulnerable.
+                With the top cybersecurity services offered by Capyngen, your
+                business will not be compromised and vulnerable since it is a
+                reputable cybersecurity company.
               </p>
             </>,
           ]}
           image={assets.cyberSecurity2}
+          alt="Managed Cybersecurity Services Provider in India | Capyngen"
           isHidden={true}
           background={assets.patternBg1}
         />
         <FullSizeImageSection
           backgroundImage={assets.cybersecurityFullSize}
           title="Protect what matters most"
-          description="Through us, your data, systems, and good name will remain safe from any kind of digital threats."
+          description="Under our protection, your information, infrastructure, and reputations will be secure against any form of digital attacks with end-to-end capabilities of cyber security solutions provider."
           buttonText="Secure My Business"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
         />
         <IndustryServices
           heading="Cybersecurity Services We Offer"
-          subheading="We provide a range of cybersecurity solutions that serve to keep businesses safe from malicious threats and ensure their safe progression in the market."
+          subheading="As a leading managed cybersecurity services provider, we offer an array of cybersecurity solutions, which are used to support businesses against malicious threats and safely advance their operations within the market.​"
           cardBg="bg-gray-700"
           cardText="text-white"
           cardDescText="text-white"
@@ -552,7 +588,7 @@ const Cybersecurity = () => {
           textColor="text-white"
           title="Get a consultation on Cybersecurity"
           description={[
-            "Reach out to our specialists and find out the most effective cybersecurity solutions for your company which will help you avoid breaches and loss of data.",
+            "Contact our experts and discover the best cybersecurity services to your company that will prevent breaches and confidential information lost to this cyber security services provider.",
           ]}
           buttonText="Get a Consultation"
           backgroundVideo={assets.backgroundVideo}
@@ -574,33 +610,33 @@ const Cybersecurity = () => {
               <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
                 {[
                   {
-                    title: "24/7 Protection & Monitoring",
-                    text: "Enjoy security all day and night.",
+                    title: "24/7 Protection and Monitoring",
+                    text: "Enjoy 24 Hour cybersecurity.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Reduced Risk of Data Breaches",
-                    text: "Keep your business and customer data safe.",
+                    title: "Lower Risk of Data Alterations",
+                    text: "Secure your business and customer data.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Compliance with Global Standards",
-                    text: "Achieve GDPR, ISO, HIPAA, and other regulatory requirements.",
+                    title: "Global Standards Compliance",
+                    text: "Achieve GDPR, ISO, HIPAA and other standards.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Cost-Effective Security Solutions",
-                    text: "Cybersecurity solutions at a price that startups and SMBs can afford.",
+                    text: "Cybersecurity solutions that the startups and SMBs can afford.",
                     color: "text-blue-500",
                   },
                   {
-                    title: "Expert Guidance & Support",
-                    text: "Cybersecurity consulting service by a professional for enterprises.",
+                    title: "Professional Advice and Assistance",
+                    text: "Enterprise cybersecurity consulting services by an expert.",
                     color: "text-blue-500",
                   },
                   {
                     title: "Relax with Confidence",
-                    text: "Concentrating on business development is yours while we safeguard it.",
+                    text: "You just focus on the business development, and we secure it.",
                     color: "text-blue-500",
                   },
                 ].map(({ title, text, color }, idx) => (
@@ -618,6 +654,7 @@ const Cybersecurity = () => {
             </>,
           ]}
           image={assets.cyberSecurity15}
+          alt="Managed Cybersecurity Services Provider in India | Capyngen"
           background={assets.patternBg1}
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
@@ -625,7 +662,7 @@ const Cybersecurity = () => {
         <FullSizeImageSection
           backgroundImage={assets.cybersecurityFullSize2}
           title="Build trust through security"
-          description="Our team of cybersecurity professionals is always ready to protect your business and ensure its safety around the clock."
+          description="As a committed cybersecurity company, our team of cybersecurity experts is at your disposal at all times to defend your business and provide it with safety."
           buttonText="CONTACT US"
           buttonLink="/contact-us"
           overlayColor="bg-black/40"
@@ -649,7 +686,7 @@ const Cybersecurity = () => {
           textColor="text-white"
           title="Get a Free Cybersecurity Consultation"
           description={[
-            "Talk to our experts and discover the best cybersecurity services for businesses to prevent breaches and data loss.",
+            "Meet our specialists and find out the most suitable cybersecurity services for businesses to avoid breaches and information loss by using our expert option of the cyber security solutions provider method.",
           ]}
           buttonText="Get a Consultation"
           backgroundVideo={assets.backgroundVideo}

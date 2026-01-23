@@ -413,10 +413,10 @@ const SEO = () => {
   return (
     <div className="relative">
       <Helmet>
-        <title>Search Engine Optimization | Best SEO Company – Capyngen</title>
+        <title>Best SEO Company in India | Professional AI SEO Services</title>
         <meta
           name="description"
-          content="Rank higher with Capyngen’s search engine optimization services. We deliver on-page, off-page, and technical SEO to boost your visibility and organic growth."
+          content="Capyngen is the best SEO company in India providing professional SEO services like technical SEO, on-page SEO, off-page SEO, local SEO near you."
         />
         <meta
           name="keywords"
@@ -451,7 +451,7 @@ const SEO = () => {
               services of seo services india and best SEO services.​ Complement
               your strategy with{" "}
               <a
-                href="/social-media-marketing"
+                href="https://www.capyngen.com/smm"
                 className="text-blue-500 font-semibold"
               >
                 Social Media Marketing (SMM)
@@ -462,6 +462,7 @@ const SEO = () => {
           primaryBtnText="Improve Your Website Rankings"
           primaryBtnLink="/contact-us"
           image={assets.seoHero}
+          alt="Best SEO Company in India | Professional AI SEO Services"
         />
       </div>
       {/* Foreground Content (scrolls over background) */}
@@ -579,6 +580,7 @@ const SEO = () => {
             </>,
           ]}
           image={assets.seo7}
+          alt="Best SEO Company in India | Professional AI SEO Services"
           isHidden="hidden"
           imageHeight="aspect-[4/3] md:aspect-[1/1]"
         />

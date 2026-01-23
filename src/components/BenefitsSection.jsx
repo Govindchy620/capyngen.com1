@@ -6,6 +6,7 @@ const BenefitsSection = ({
   benefits = [],
   reverse = false,
   image = null,
+  alt = "Best Digital Marketing Services | End-to-End Marketing Solutions",
   footerNote = "One stop for development and maintenance of ecommerce websites, mobile apps, and online platforms to ensure effortless shopping experiences.",
 }) => {
   return (
@@ -43,7 +44,7 @@ const BenefitsSection = ({
             <div className="mt-6 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
               <img
                 src={image}
-                alt="Benefits Illustration"
+                alt={alt}
                 className="w-full h-auto object-cover hover:scale-[1.03] transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

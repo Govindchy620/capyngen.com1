@@ -192,7 +192,14 @@ const faqSchema = {
       name: "What services are offered by a digital marketing agency?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Some of the services offered by the agency include search engine optimisation (SEO), pay-per-click (PPC) advertising, social media marketing, and content marketing, as well as email campaigns, among others, and analytics.",
+        text: (
+          <>
+            Some of the services offered by the agency include search engine
+            optimisation (SEO), pay-per-click (PPC) advertising, social media
+            marketing, and content marketing, as well as email campaigns, among
+            others, and analytics.
+          </>
+        ),
       },
     },
     {
@@ -646,11 +653,11 @@ const DigitalMarketing = () => {
     <div className="relative">
       <Helmet>
         <title>
-          Digital Marketing Services | Result-Driven Marketing Agency – Capyngen
+          Best Digital Marketing Services | End-to-End Marketing Solutions
         </title>
         <meta
           name="description"
-          content="Grow your business online with Capyngen's digital marketing services. From SEO to social media, our custom strategies deliver traffic, leads, and conversions."
+          content="Looking for the best digital marketing services in India? Capyngen offers end-to-end digital marketing services to increase traffic, leads, and sales for your business."
         />
         <meta
           name="keywords"
@@ -715,6 +722,7 @@ const DigitalMarketing = () => {
             </>,
           ]}
           image={assets.digitalMarketing1}
+          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
           isHidden={true}
           background={assets.patternBg1}
         />
@@ -751,6 +759,7 @@ const DigitalMarketing = () => {
           }
           benefits={solutionsData}
           image={assets.digitalMarketing2}
+          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
           footerNote=""
         />
         <GetStarted
@@ -806,6 +815,7 @@ const DigitalMarketing = () => {
             </>,
           ]}
           image={assets.digitalMarketing3}
+          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
           imageHeight="aspect-[1/1]"
           isHidden={true}
           background={assets.patternBg1}
@@ -822,6 +832,7 @@ const DigitalMarketing = () => {
           ]}
           buttonText="Contact Us"
           image={assets.digitalMarketing4}
+          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
         />
         <GetStarted
           reverse={false}
