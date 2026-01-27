@@ -107,7 +107,7 @@ const BannerRollingGallery = ({
   const containerHeight = windowWidth <= 640 ? 400 : 600;
 
   return (
-    <section className="bg-black text-white w-full pt-20">
+    <section className="bg-black text-white w-full pt-30">
       {/* Heading + Subheading */}
       <div className="text-center max-w-[90vw] mx-auto px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
