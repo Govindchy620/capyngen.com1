@@ -65,7 +65,10 @@ const BlogDetail = () => {
   if (!blog) return <div className="min-h-screen bg-black" />;
 
   return (
-    <div className="bg-[#050505] min-h-screen text-slate-300 font-sans selection:bg-cyan-500/30">
+    <div
+      id="blog-detail-content"
+      className="bg-[#050505] min-h-screen text-slate-300 font-sans selection:bg-cyan-500/30"
+    >
       <Helmet>
         <title>{blog.metaTitle || blog.title} | Capyngen</title>
         <meta name="description" content={blog.metaDescription} />
