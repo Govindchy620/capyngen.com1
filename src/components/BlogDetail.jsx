@@ -47,9 +47,13 @@ const BlogDetail = () => {
         const res = await fetch(API_URL);
         const data = await res.json();
         const blogs = Array.isArray(data.blogs) ? data.blogs : [];
-        const found = blogs.find(
-          (b) => createSlug(b.title) === createSlug(slug),
-        );
+        const decodedSlug = decodeURIComponent(slug);
+
+        const found = blogs.find((b) => {
+          const blogSlug = b.slug || createSlug(b.title);
+          return blogSlug === decodedSlug;
+        });
+
         setBlog(found || null);
         if (found) {
           setRelated(blogs.filter((b) => b._id !== found._id).slice(0, 4));
@@ -116,6 +120,7 @@ const BlogDetail = () => {
             </div>
 
             <article
+              data-blog-detail-content
               className="prose prose-invert prose-lg max-w-none 
               prose-headings:text-white prose-headings:font-bold
               prose-p:text-slate-400 prose-p:leading-relaxed
@@ -190,7 +195,9 @@ const BlogDetail = () => {
                     <div
                       key={post._id}
                       onClick={() =>
-                        navigate(`/news-and-updates/${createSlug(post.title)}`)
+                        navigate(
+                          `/news-and-updates/${post.slug || createSlug(post.title)}`,
+                        )
                       }
                       className="group cursor-pointer flex gap-4 items-center"
                     >

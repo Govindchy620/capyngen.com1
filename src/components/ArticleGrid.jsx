@@ -46,8 +46,8 @@ const ArticleGrid = () => {
         const list = Array.isArray(data)
           ? data
           : Array.isArray(data.blogs)
-          ? data.blogs
-          : [];
+            ? data.blogs
+            : [];
 
         setBlogs(list);
       } catch (err) {
@@ -105,7 +105,7 @@ const ArticleGrid = () => {
       ? blogs
       : blogs.filter(
           (item) =>
-            item.category === activeFilter || item.tags?.includes(activeFilter)
+            item.category === activeFilter || item.tags?.includes(activeFilter),
         );
 
   const openBlog = (blog) => {
@@ -234,7 +234,6 @@ const ArticleGrid = () => {
             {/* ========================
                LIST VIEW
             ========================= */}
-            <h2 className="text-white text-5xl font-extrabold mb-12">Blogs</h2>
             {activeFilter !== "All" && (
               <button
                 onClick={() => {
