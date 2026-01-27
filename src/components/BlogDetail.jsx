@@ -103,22 +103,6 @@ const BlogDetail = () => {
     }
   };
 
-  // 2. Reading Progress Bar Logic
-  useEffect(() => {
-    const updateProgress = () => {
-      const currentScroll = window.scrollY;
-      const scrollHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollHeight) {
-        setReadingProgress(
-          Number((currentScroll / scrollHeight).toFixed(2)) * 100,
-        );
-      }
-    };
-    window.addEventListener("scroll", updateProgress);
-    return () => window.removeEventListener("scroll", updateProgress);
-  }, []);
-
   // 3. Share Functionality
   const handleShare = async () => {
     const shareData = {
@@ -182,10 +166,7 @@ const BlogDetail = () => {
 
   // MOVED ID TO OUTER DIV AND HANDLED LOADING STATE INTERNALLY
   return (
-    <div
-      id="blog-detail-content"
-      className="bg-[#050505] min-h-screen text-slate-300 font-sans selection:bg-cyan-500/30 relative"
-    >
+    <div className="bg-[#050505] min-h-screen text-slate-300 font-sans selection:bg-cyan-500/30 relative">
       {/* SEO META - Safe Access */}
       <Helmet>
         <title>
@@ -300,6 +281,7 @@ const BlogDetail = () => {
                 </div>
 
                 <article
+                  id="blog-detail-content"
                   data-blog-detail-content
                   className="prose prose-invert prose-lg max-w-none 
                     prose-headings:text-white prose-headings:font-bold prose-headings:leading-tight
