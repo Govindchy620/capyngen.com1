@@ -216,7 +216,7 @@ async function run() {
         // This ensures the API fetch has finished and React has rendered the blog.
         try {
           await page.waitForSelector("#blog-detail-content", {
-            timeout: 20000,
+            timeout: 120000,
           });
         } catch (e) {
           console.warn(
