@@ -124,7 +124,7 @@ const BlogDetail = () => {
     }
   };
 
-  // 4. Fetch & Smart Relevance Logic
+  // 4. Fetch & Robust Search Logic
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -133,9 +133,32 @@ const BlogDetail = () => {
         const blogs = Array.isArray(data.blogs) ? data.blogs : [];
         const decodedSlug = decodeURIComponent(slug);
 
+        // Helper: Strip all special chars to ensure loose matching
+        // "UI/UX Design" -> "uiuxdesign"
+        const normalize = (text) =>
+          text
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, "-") // Replace spaces with -
+            .replace(/[^\w\-]+/g, "") // Remove all non-word chars (like /)
+            .replace(/\-\-+/g, "-") // Replace multiple - with single -
+            .replace(/^-+/, "") // Trim - from start
+            .replace(/-+$/, ""); // Trim - from end
+
         const found = blogs.find((b) => {
-          const blogSlug = b.slug || createSlug(b.title);
-          return blogSlug === decodedSlug;
+          // 1. Try exact match if slug field exists
+          if (b.slug === decodedSlug) return true;
+
+          // 2. Try standard creation
+          const standardSlug = createSlug(b.title);
+          if (standardSlug === decodedSlug) return true;
+
+          // 3. Try "aggressive" normalization (Fixes UI/UX issue)
+          // This compares "custom-uiux-design..." with "custom-uiux-design..."
+          const normalizedTitle = normalize(b.title);
+          const normalizedSlug = normalize(decodedSlug);
+
+          return normalizedTitle === normalizedSlug;
         });
 
         setBlog(found || null);
