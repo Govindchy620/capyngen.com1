@@ -235,7 +235,7 @@ const BlogDetail = () => {
           />
 
           {/* --- HERO HEADER --- */}
-          <header className="relative pt-32 pb-20 border-b border-white/5 overflow-hidden bg-[#050505]">
+          <header className="relative pt-24 md:pt-28 pb-14 sm:pb-16 lg:pb-20 border-b border-white/5 overflow-hidden bg-[#050505]">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-cyan-500/10 blur-[120px] pointer-events-none" />
 
@@ -251,38 +251,55 @@ const BlogDetail = () => {
               </button>
 
               <div className="text-center">
-                <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-slate-400 leading-[1.1] tracking-tight mb-10 drop-shadow-sm">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl py-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-slate-400 leading-[1.1] tracking-tight mb-10 drop-shadow-sm">
                   {blog.title}
                 </h1>
 
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-6 sm:gap-8 pt-8 border-t border-white/10 text-slate-400">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-4 sm:gap-8 pt-6 sm:pt-8 border-t border-white/10 text-slate-400 text-sm sm:text-base">
+                  {/* Author */}
                   <div className="flex items-center gap-3 justify-center sm:justify-start">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-900 to-slate-900 border border-white/10 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-cyan-900 to-slate-900 border border-white/10 flex items-center justify-center text-white font-bold text-xs sm:text-sm">
                       {blog.author ? blog.author[0] : "C"}
                     </div>
-                    <div className="flex flex-col leading-none text-left">
-                      <span className="text-md font-semibold text-white mb-1">
+                    <div className="flex flex-col leading-tight text-center sm:text-left">
+                      <span className="font-semibold text-white">
                         {blog.author || "Capyngen Team"}
                       </span>
                       <span className="text-xs text-slate-500">Editor</span>
                     </div>
                   </div>
 
+                  {/* Divider – desktop only */}
                   <div className="hidden sm:block w-px h-8 bg-white/10"></div>
 
-                  <div className="flex items-center justify-center sm:justify-start gap-6 text-md font-medium">
-                    <div className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                  {/* Meta info */}
+                  <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-6 font-medium">
+                    <div className="flex items-center gap-2 hover:text-cyan-400 transition-colors whitespace-nowrap">
                       <Calendar className="w-4 h-4 text-cyan-500" />
-                      {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                      <span>
+                        {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </span>
                     </div>
+
                     <div className="hidden sm:block w-px h-8 bg-white/10"></div>
-                    <div className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+
+                    <div className="flex items-center gap-2 hover:text-cyan-400 transition-colors whitespace-nowrap">
                       <Clock className="w-4 h-4 text-cyan-500" />
-                      {Math.ceil(blog.content?.length / 3000) || 5} min read
+                      <span>
+                        {(() => {
+                          const days = Math.floor(
+                            (new Date() - new Date(blog.createdAt)) /
+                              (1000 * 60 * 60 * 24),
+                          );
+                          return days > 0
+                            ? `Posted ${days} day${days === 1 ? "" : "s"} ago`
+                            : "Posted Today";
+                        })()}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -291,14 +308,14 @@ const BlogDetail = () => {
           </header>
 
           <main className="max-w-7xl mx-auto px-6 py-16">
-            <div className="flex flex-col lg:flex-row gap-16">
+            <div className="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-16">
               {/* --- LEFT COLUMN: MAIN CONTENT --- */}
-              <div className="lg:w-2/3">
+              <div className="w-full lg:w-2/3">
                 <div className="relative group mb-16">
                   <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                   <img
                     src={blog.image}
-                    className="relative w-full aspect-[16/9] object-cover rounded-xl border border-white/10 shadow-2xl"
+                    className="relative w-full aspect-[4/3] sm:aspect-[16/9] object-cover rounded-xl border border-white/10 shadow-2xl"
                     alt={blog.title}
                   />
                 </div>
@@ -306,7 +323,7 @@ const BlogDetail = () => {
                 <article
                   id="blog-detail-content"
                   data-blog-detail-content
-                  className="prose prose-invert prose-lg max-w-none 
+                  className="prose prose-invert prose-base sm:prose-lg max-w-none 
                     prose-headings:text-white prose-headings:font-bold prose-headings:leading-tight
                     prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 
                     prose-h3:text-xl prose-h3:text-cyan-100
@@ -320,8 +337,8 @@ const BlogDetail = () => {
                 />
 
                 <div className="mt-20 pt-10 border-t border-white/10">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                       {blog.tags?.map((t) => (
                         <span
                           key={t}
@@ -354,7 +371,7 @@ const BlogDetail = () => {
               </div>
 
               {/* --- RIGHT COLUMN: SIDEBAR --- */}
-              <aside className="lg:w-1/3 space-y-10">
+              <aside className="w-full lg:w-1/3 space-y-8 sm:space-y-10">
                 {/* 1. API Connected Contact Form */}
                 <div className="p-8 rounded-2xl bg-[#0A0A0A] border border-white/10 shadow-2xl relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 rounded-full blur-[60px] -mr-10 -mt-10 group-hover:bg-cyan-500/20 transition-colors duration-700"></div>
@@ -457,7 +474,7 @@ const BlogDetail = () => {
                 </div>
 
                 {/* 2. Related Insights */}
-                <div className="sticky top-16 z-10">
+                <div className="lg:sticky lg:top-16 z-10">
                   <div className="mt-10 pt-10 border-t border-dashed border-white/10">
                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                       Related to {blog.group}
@@ -472,7 +489,7 @@ const BlogDetail = () => {
                                 `/news-and-updates/${post.slug || createSlug(post.title)}`,
                               )
                             }
-                            className="group cursor-pointer flex gap-4 items-start p-3 -mx-3 rounded-xl hover:bg-white/5 transition-colors"
+                            className="group cursor-pointer flex gap-4 items-start p-3 sm:p-4 -mx-2 sm:-mx-3 rounded-xl hover:bg-white/5 transition-colors"
                           >
                             <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border border-white/10 relative">
                               <img
@@ -544,7 +561,7 @@ const BlogDetail = () => {
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 gap-y-8 sm:gap-y-10 lg:gap-y-12">
                   {bottomRelated.map((post) => (
                     <div
                       key={post._id}
@@ -555,14 +572,14 @@ const BlogDetail = () => {
                       }
                       className="group cursor-pointer flex flex-col h-full"
                     >
-                      <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-white/10 relative mb-5">
+                      <div className="aspect-[16/9] overflow-hidden rounded-md border border-white/10 relative mb-5">
                         <img
                           src={post.image}
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-                        <div className="absolute top-4 left-4 px-2.5 py-1 bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-[10px] font-bold text-white uppercase tracking-wider">
+                        <div className="w-full md:w-fit max-w-2/3 absolute top-0 left-0 px-2.5 py-1 bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-bold text-white uppercase tracking-wider">
                           {post.group || "Article"}
                         </div>
                       </div>

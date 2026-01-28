@@ -256,7 +256,7 @@ const ArticleGrid = () => {
                 >
                   <img
                     src={post.image}
-                    className="h-64 w-full object-cover"
+                    className="lg:h-64 w-full object-cover"
                     alt={post.title}
                   />
                   <div className="p-4">
