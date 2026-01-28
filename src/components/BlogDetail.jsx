@@ -203,7 +203,7 @@ const BlogDetail = () => {
             <meta property="og:image" content={blog.image} />
             <meta property="og:type" content="article" />
             <script type="application/ld+json">
-              {blog.schema ||
+              {JSON.stringify(blog.schema) ||
                 JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "BlogPosting",
