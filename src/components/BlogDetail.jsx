@@ -187,6 +187,24 @@ const BlogDetail = () => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  const jsonLdSchema = blog
+    ? JSON.stringify(
+        blog.schema && typeof blog.schema === "object"
+          ? blog.schema
+          : {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: blog.title,
+              image: blog.image,
+              author: {
+                "@type": "Organization",
+                name: blog.author || "Capyngen Team",
+              },
+              datePublished: blog.createdAt,
+            },
+      )
+    : "";
+
   // MOVED ID TO OUTER DIV AND HANDLED LOADING STATE INTERNALLY
   return (
     <div className="bg-[#050505] min-h-screen text-slate-300 font-sans selection:bg-cyan-500/30 relative">
@@ -202,16 +220,7 @@ const BlogDetail = () => {
             <meta property="og:description" content={blog.metaDescription} />
             <meta property="og:image" content={blog.image} />
             <meta property="og:type" content="article" />
-            <script type="application/ld+json">
-              {JSON.stringify(blog.schema) ||
-                JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "BlogPosting",
-                  headline: blog.title,
-                  image: blog.image_url,
-                  author: blog.author_name,
-                })}
-            </script>
+            {blog && <script type="application/ld+json">{jsonLdSchema}</script>}
           </>
         )}
       </Helmet>
