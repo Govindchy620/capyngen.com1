@@ -726,7 +726,7 @@ const PPC = () => {
               </a>
               -protected platforms ensure safe transactions while our{" "}
               <a
-                href="https://www.capyngen.com/ecommerce-design"
+                href="https://www.capyngen.com/ecommerce-website-design"
                 className="text-blue-500 font-bold"
               >
                 E commerce Services

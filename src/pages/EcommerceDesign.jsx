@@ -42,11 +42,11 @@ import { Link } from "react-router-dom";
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.capyngen.com/ecommerce-design#webpage",
-  url: "https://www.capyngen.com/ecommerce-design",
+  "@id": "https://www.capyngen.com/ecommerce-website-design#webpage",
+  url: "https://www.capyngen.com/ecommerce-website-design",
   name: "E-commerce Design | Website, App & UI Design Services – Capyngen",
   description:
-    "Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales.. ([capyngen.com/ecommerce-design](https://www.capyngen.com/ecommerce-design))",
+    "Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales.. ([capyngen.com/ecommerce-website-design](https://www.capyngen.com/ecommerce-website-design))",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
@@ -65,7 +65,7 @@ const webpageSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://www.capyngen.com/ecommerce-design#service",
+  "@id": "https://www.capyngen.com/ecommerce-website-design#service",
   name: "E-Commerce Design Services",
   serviceType:
     "E-commerce Website & App UI/UX Design, Digital Storefront Design, Conversion-Optimised E-commerce Design",
@@ -79,8 +79,8 @@ const serviceSchema = {
     name: "India",
   },
   description:
-    "Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales.. ([capyngen.com/ecommerce-design](https://www.capyngen.com/ecommerce-design))",
-  url: "https://www.capyngen.com/ecommerce-design",
+    "Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales.. ([capyngen.com/ecommerce-website-design](https://www.capyngen.com/ecommerce-website-design))",
+  url: "https://www.capyngen.com/ecommerce-website-design",
   image: {
     "@type": "ImageObject",
     url: "https://www.capyngen.com/assets/eCommDesign1-BipcLe85.png",
@@ -96,7 +96,7 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/ecommerce-design#faq",
+  "@id": "https://www.capyngen.com/ecommerce-website-design#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -437,15 +437,16 @@ const EcommerceDesign = () => {
     <div className="relative">
       <Helmet>
         <title>
-          E-commerce Design | Website, App & UI Design Services – Capyngen
+          Ecommerce Website Design Services – Best Ecommerce Design Company in
+          India
         </title>
         <meta
           name="description"
-          content="Enhance your online store with Capyngen’s e-commerce design expertise. We offer custom website, app UI, and database design solutions to boost your sales."
+          content="Professional ecommerce website design services in India. We create responsive, user-friendly, and high-converting online stores for your business."
         />
         <meta
           name="keywords"
-          content="E-commerce Design | Website, App & UI Design Services – Capyngen"
+          content="ecommerce website design, best ecommerce Website Designing Company in Gurgaon, best ecommerce design agency, online store design India, ecommerce website design india, responsive ecommerce design, custom ecommerce website design"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -456,9 +457,9 @@ const EcommerceDesign = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Banner8
-        titleMain="Best E-Commerce Design"
-        titlePrefix="Transform Your Digital Store with"
-        titleSuffix=""
+        titleMain="Best Ecommerce Website Design "
+        titlePrefix=""
+        titleSuffix="Services in India Delivering Responsive, User-Friendly, and High-Converting Online Stores"
         description={`We design and develop innovative e-commerce websites and apps for companies all over the world. Our services include user-friendly e-commerce UI design, responsive e-commerce web design, and scalable e-commerce database design. Request a Free Consultation - Contact Capyngen's e-commerce design experts for transforming your online store or mobile app into a visually appealing, top-selling platform.`}
         imageSrc={assets.eCommDesign1}
         imageAlt="E-commerce Design Illustration"
@@ -487,13 +488,16 @@ const EcommerceDesign = () => {
             A professionally designed store is the best way to let your products
             and services shine through. Simply put, the combination of
             e-commerce UI design,{" "}
-            <Link to={"/ui-ux-design"}>e-commerce app UI design</Link> and
-            e-commerce database design is nothing short of a saga of putting
+            <Link to={"/ui-ux-design-services"}>e-commerce app UI design</Link>{" "}
+            and e-commerce database design is nothing short of a saga of putting
             forth visually stunning as well as high-functional user engagement
             platforms that convert sales and grow business. One of the best
             things about your next adventure would have been possibly partnering
             up with an already established e-commerce{" "}
-            <Link to={"/website-design"}>website designing company</Link>.
+            <Link to={"/website-design-company-india"}>
+              website designing company
+            </Link>
+            .
           </span>,
         ]}
         image={assets.eCommDesign2}

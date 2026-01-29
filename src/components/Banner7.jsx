@@ -9,8 +9,8 @@ const Banner7 = () => {
         {/* Left Content */}
         <div className="lg:col-span-3">
           <h1 className="block text-3xl font-bold sm:text-4xl md:text-5xl ">
-            Transforming Ideas into Stunning Digital Experiences with UI/UX
-            Design
+            Best UI/UX Design Services in India Delivering Creative, Responsive,
+            and User-Friendly Digital Experiences for Businesse
           </h1>
           <p className="mt-3 text-lg ">
             Capyngen designs interfaces that intuitively meet the needs of your

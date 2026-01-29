@@ -131,20 +131,26 @@ const AppContent = () => {
             path="/crm-management-software"
             element={<CrmManagementSoftware />}
           />
-          <Route path="/ui-ux-design" element={<UiUxDesign />} />
-          <Route path="/website-design" element={<WebsiteDesign />} />
+          <Route path="/ui-ux-design-services" element={<UiUxDesign />} />
           <Route
-            path="/branding-and-identity-design"
+            path="/website-design-company-india"
+            element={<WebsiteDesign />}
+          />
+          <Route
+            path="/branding-identity-design"
             element={<BrandingIdentityDesign />}
           />
-          <Route path="/ecommerce-design" element={<EcommerceDesign />} />
-          <Route path="/cms-design" element={<CMSDesign />} />
+          <Route
+            path="/ecommerce-website-design"
+            element={<EcommerceDesign />}
+          />
+          <Route path="/cms-website-design" element={<CMSDesign />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/seo" element={<SEO />} />
           <Route path="/smm" element={<SMM />} />
           <Route path="/ppc" element={<PPC />} />
           <Route
-            path="/artificial-intelligence"
+            path="/artificial-intelligence-services"
             element={<ArtificialIntelligence />}
           />
           <Route path="/cybersecurity" element={<Cybersecurity />} />
@@ -156,7 +162,7 @@ const AppContent = () => {
             path="/enterprise-solutions"
             element={<EnterpriseSolutions />}
           />
-          <Route path="/data-analytics" element={<DataAnalytics />} />
+          <Route path="/data-analytics-services" element={<DataAnalytics />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/industries/banking" element={<Banking />} />

@@ -642,7 +642,8 @@ const ManufacturingAutomotive = () => {
             Internet of Things for manufacturing,{" "}
             <Link to={"/enterprise-solutions"}>Enterprise Resource</Link>{" "}
             Planning platforms, and{" "}
-            <Link to={"/artificial-intelligence"}>AI-powered</Link> analytics.
+            <Link to={"/artificial-intelligence-services"}>AI-powered</Link>{" "}
+            analytics.
           </>,
           <span>
             We provide custom manufacturing software solutions that energize the

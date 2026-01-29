@@ -24,8 +24,8 @@ import { Link } from "react-router-dom";
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.capyngen.com/data-analytics#webpage",
-  url: "https://www.capyngen.com/data-analytics",
+  "@id": "https://www.capyngen.com/data-analytics-services#webpage",
+  url: "https://www.capyngen.com/data-analytics-services",
   name: "Data & Analytics | Best Data Analytics Company in India – Capyngen",
   description:
     "Turn data into decisions with Capyngen’s data & analytics services. We offer cloud-based analytics solutions to help businesses gain insights and scale faster.",
@@ -67,7 +67,7 @@ const webpageSchema = {
         "@type": "ListItem",
         position: 2,
         name: "Data & Analytics",
-        item: "https://www.capyngen.com/data-analytics",
+        item: "https://www.capyngen.com/data-analytics-services",
       },
     ],
   },
@@ -88,7 +88,7 @@ const serviceSchema = {
       "https://twitter.com/capyngen",
     ],
   },
-  url: "https://www.capyngen.com/data-analytics",
+  url: "https://www.capyngen.com/data-analytics-services",
   description:
     "Capyngen provides advanced data analytics services to help businesses make data-driven decisions, optimize performance, and enhance digital marketing ROI through actionable insights.",
   areaServed: {
@@ -138,12 +138,12 @@ const serviceSchema = {
     ],
   },
   image:
-    "https://www.capyngen.com/assets/images/services/data-analytics-banner.jpg",
+    "https://www.capyngen.com/assets/images/services/data-analytics-services-banner.jpg",
 };
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/data-analytics#faq",
+  "@id": "https://www.capyngen.com/data-analytics-services#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -516,15 +516,15 @@ const DataAnalytics = () => {
     <div className="relative">
       <Helmet>
         <title>
-          Data & Analytics | Best Data Analytics Company in India – Capyngen
+          Data Analytics Services – Best Data Analytics Company in India
         </title>
         <meta
           name="description"
-          content="Turn data into decisions with Capyngen’s data & analytics services. We offer cloud-based analytics solutions to help businesses gain insights and scale faster."
+          content="Professional data analytics services in India. We provide actionable insights, dashboards, and reporting to help businesses make data-driven decisions."
         />
         <meta
           name="keywords"
-          content="Data & Analytics | Best Data Analytics Company in India – Capyngen"
+          content="data analytics services, data analytics company India, business data analytics, data reporting services, best data analytics company, data analytics services gurgaon"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -539,9 +539,12 @@ const DataAnalytics = () => {
           title={
             <>
               <span className="text-3xl md:text-4xl ">
-                Transform Your Business with Advanced{" "}
+                Best Data Analytics Services in India{" "}
               </span>
-              <span className="text-cyan-400">Data & Analytics Solutions</span>
+              <span className="text-cyan-400">
+                Delivering Actionable Insights, Dashboards, and Reporting for
+                Businesses
+              </span>
             </>
           }
           description="Drive your enterprise with Capyngen’s data-driven approaches and analytic services that allow you to discover, automate, and lead the business to the growth that lasts."

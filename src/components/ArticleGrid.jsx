@@ -256,11 +256,11 @@ const ArticleGrid = () => {
                 >
                   <img
                     src={post.image}
-                    className="lg:h-64 w-full object-cover"
+                    className="xl:h-64 w-full object-contain xl:object-cover"
                     alt={post.title}
                   />
                   <div className="p-4">
-                    <h3 className="text-white text-xl font-bold mb-3">
+                    <h3 className="text-white text-lg xl:text-xl font-bold mb-3">
                       {post.title}
                     </h3>
 
@@ -274,7 +274,7 @@ const ArticleGrid = () => {
                         <button
                           key={tag}
                           onClick={(e) => handleTagClick(e, tag)}
-                          className="text-xs px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition"
+                          className="text-xs px-2 py-1 bg-slate-800 border border-slate-700 rounded-md text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition"
                         >
                           #{tag}
                         </button>

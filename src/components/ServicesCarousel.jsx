@@ -115,7 +115,7 @@ const cards = [
   {
     title: "UI/UX Design",
     desc: "UI/UX design that focuses on the user to ensure that interactions are not difficult to understand and use by users.",
-    href: "/ui-ux-design",
+    href: "/ui-ux-design-services",
     items: [
       "Development of wireframes and prototypes.",
       "Interactive design",
@@ -126,7 +126,7 @@ const cards = [
   {
     title: "Website Design",
     desc: "Engaging, receptive and effective websites built to enhance online presence.",
-    href: "/website-design",
+    href: "/website-design-company-india",
     items: [
       "SEO-friendly design",
       "Custom layouts",
@@ -137,7 +137,7 @@ const cards = [
   {
     title: "Branding &amp; Identity Design",
     desc: "Good branding solutions to make an identity and reach your audience.",
-    href: "/branding-and-identity-design",
+    href: "/branding-identity-design",
     items: [
       "Logo creation",
       "Brand strategy",
@@ -148,7 +148,7 @@ const cards = [
   {
     title: "Ecommerce Design",
     desc: "Contemporary ecommerce layouts that enhance purchasing, confidence, and shopping experiences of customers.",
-    href: "/ecommerce-design",
+    href: "/ecommerce-website-design",
     items: [
       "Simple to use interface",
       "Safe checkout",
@@ -159,7 +159,7 @@ const cards = [
   {
     title: "CMS Design",
     desc: "CMS templates that assist you in managing your contents to a better extent and enhance the performance of the site.",
-    href: "/cms-design",
+    href: "/cms-website-design",
     items: [
       "Easy to switch",
       "A framework that can expand",
@@ -202,7 +202,7 @@ const cards = [
   {
     title: "Artificial Intelligence",
     desc: "Innovation, smarter automation, and business transformation through state-of-the-art AI services.",
-    href: "/artificial-intelligence",
+    href: "/artificial-intelligence-services",
     items: [
       "AI-powered chatbots",
       "Predictive analysis",
@@ -245,7 +245,7 @@ const cards = [
   {
     title: "Data and Analysis",
     desc: "Service analytics Actionable information analytics services transforming raw data into business insights.",
-    href: "/data-analytics",
+    href: "/data-analytics-services",
     items: [
       "Handling a lot of data",
       "Real time changing dashboards.",

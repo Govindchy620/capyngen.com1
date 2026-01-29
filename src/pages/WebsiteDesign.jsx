@@ -25,8 +25,8 @@ import { Link } from "react-router-dom";
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.capyngen.com/website-design#webpage",
-  url: "https://www.capyngen.com/website-design",
+  "@id": "https://www.capyngen.com/website-design-company-india#webpage",
+  url: "https://www.capyngen.com/website-design-company-india",
   name: "Website Design Services | Creative & Responsive Web Design",
   description:
     "Boost your brand with Capyngen’s website design services. We deliver creative, custom, and responsive websites that are fast, affordable, and built to impress.",
@@ -68,7 +68,7 @@ const webpageSchema = {
         "@type": "ListItem",
         position: 2,
         name: "Website Design",
-        item: "https://www.capyngen.com/website-design",
+        item: "https://www.capyngen.com/website-design-company-india",
       },
     ],
   },
@@ -89,7 +89,7 @@ const serviceSchema = {
       "https://twitter.com/capyngen",
     ],
   },
-  url: "https://www.capyngen.com/website-design",
+  url: "https://www.capyngen.com/website-design-company-india",
   description:
     "Capyngen offers professional website design and development services that help businesses create engaging, responsive, and SEO-friendly websites to boost online presence and conversions.",
   areaServed: {
@@ -143,7 +143,7 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/website-design#faq",
+  "@id": "https://www.capyngen.com/website-design-company-india#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -361,8 +361,8 @@ const WebSiteDesign = () => {
       desc: (
         <span>
           Trendy, entertaining, and easy-to-navigate{" "}
-          <Link to={"/ui-ux-design"}>UI/UX design</Link> interfaces that
-          visitors find irresistible to leave.
+          <Link to={"/ui-ux-design-services"}>UI/UX design</Link> interfaces
+          that visitors find irresistible to leave.
         </span>
       ),
     },
@@ -609,15 +609,15 @@ const WebSiteDesign = () => {
     <div className="relative">
       <Helmet>
         <title>
-          Website Design Services | Creative & Responsive Web Design
+          Website Design Company – Best Website Design Company in India
         </title>
         <meta
           name="description"
-          content="Boost your brand with Capyngen’s website design services. We deliver creative, custom, and responsive websites that are fast, affordable, and built to impress."
+          content="Best website design company in India providing responsive, fast and SEO-friendly websites to help businesses grow online."
         />
         <meta
           name="keywords"
-          content="Website Design Services | Creative & Responsive Web Design"
+          content="website design company, website design company gurgaon, responsive website design, best website design agency, custom website design, best website design company in india, top website design company"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -701,7 +701,7 @@ const WebSiteDesign = () => {
                   {
                     title: (
                       <>
-                        <Link to={"/ecommerce-design"}>
+                        <Link to={"/ecommerce-website-design"}>
                           E-commerce Website Designs
                         </Link>
                       </>

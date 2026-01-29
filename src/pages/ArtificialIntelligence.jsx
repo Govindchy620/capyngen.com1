@@ -35,8 +35,8 @@ import { Link } from "react-router-dom";
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.capyngen.com/artificial-intelligence#webpage",
-  url: "https://www.capyngen.com/artificial-intelligence",
+  "@id": "https://www.capyngen.com/artificial-intelligence-services#webpage",
+  url: "https://www.capyngen.com/artificial-intelligence-services",
   name: "Artificial Intelligence Solutions | AI-Powered Development",
   description:
     "Transform your business with Capyngen’s artificial intelligence solutions. We build smart AI-powered applications and development services for every industry.",
@@ -73,7 +73,7 @@ const serviceSchema = {
     "@type": "Place",
     name: "Global",
   },
-  url: "https://www.capyngen.com/artificial-intelligence",
+  url: "https://www.capyngen.com/artificial-intelligence-services",
   description:
     "Transform your business with Capyngen’s artificial intelligence solutions. We build smart AI-powered applications and development services for every industry.",
   keywords: "Artificial Intelligence Solutions | AI-Powered Development",
@@ -502,15 +502,15 @@ const ArtificialIntelligence = () => {
     <div className="relative">
       <Helmet>
         <title>
-          Artificial Intelligence Solutions | AI-Powered Development
+          Artificial Intelligence Services – Best AI Solutions Company in India
         </title>
         <meta
           name="description"
-          content="Transform your business with Capyngen’s artificial intelligence solutions. We build smart AI-powered applications and development services for every industry."
+          content="Professional Artificial Intelligence services in India. We provide AI solutions, machine learning models, and automation to transform your business."
         />
         <meta
           name="keywords"
-          content="Artificial Intelligence Solutions | AI-Powered Development"
+          content="artificial intelligence services, top artificial intelligence company in gurgaon, AI solutions company India, machine learning services, AI automation, professional AI solutions, artificial intelligence company in India"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}

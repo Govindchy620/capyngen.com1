@@ -21,8 +21,8 @@ import FullSizeImageSection from "../components/FullSizeImageSection";
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.capyngen.com/ui-ux-design#webpage",
-  url: "https://www.capyngen.com/ui-ux-design",
+  "@id": "https://www.capyngen.com/ui-ux-design-services#webpage",
+  url: "https://www.capyngen.com/ui-ux-design-services",
   name: "UI/UX Design Services | App & Website Design Experts – Capyngen",
   description:
     "Transform your digital experience with Capyngen’s UI/UX design services. We craft stunning mobile app and website designs that attract, engage, and convert users.",
@@ -64,7 +64,7 @@ const webpageSchema = {
         "@type": "ListItem",
         position: 2,
         name: "UI/UX Design",
-        item: "https://www.capyngen.com/ui-ux-design",
+        item: "https://www.capyngen.com/ui-ux-design-services",
       },
     ],
   },
@@ -85,7 +85,7 @@ const serviceSchema = {
       "https://twitter.com/capyngen",
     ],
   },
-  url: "https://www.capyngen.com/ui-ux-design",
+  url: "https://www.capyngen.com/ui-ux-design-services",
   description:
     "Capyngen provides creative and user-centered UI/UX design services that improve digital experiences across websites, mobile apps, and enterprise platforms.",
   areaServed: {
@@ -139,7 +139,7 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/ui-ux-design#faq",
+  "@id": "https://www.capyngen.com/ui-ux-design-services#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -478,15 +478,15 @@ const UiUxDesign = () => {
     <div className="relative">
       <Helmet>
         <title>
-          UI/UX Design Services | App & Website Design Experts – Capyngen
+          UI/UX Design Services – Best UI/UX Design Company in India
         </title>
         <meta
           name="description"
-          content="Transform your digital experience with Capyngen’s UI/UX design services. We craft stunning mobile app and website designs that attract, engage, and convert users."
+          content="Professional UI/UX design services in India. We create creative, responsive, and user-friendly interfaces to enhance your digital experience"
         />
         <meta
           name="keywords"
-          content="UI/UX Design Services | App & Website Design Experts – Capyngen"
+          content="UI UX design, UI UX design services, ui ux design services in gurgaon, UX design company India, UI design company, best UI/UX design agency, professional UI UX services"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}

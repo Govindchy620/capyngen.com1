@@ -652,7 +652,9 @@ const ECommerceIndustry = () => {
           <span>
             The way online businesses work and function on a day-to-day basis is
             being heavily disrupted by{" "}
-            <Link to={"/artificial-intelligence"}>Artificial Intelligence</Link>
+            <Link to={"/artificial-intelligence-services"}>
+              Artificial Intelligence
+            </Link>
             . We create new-age AI products that are specially designed for
             online e-commerce sites that not only redesign and enhance customer
             experience but also increase overall profitability across multiple

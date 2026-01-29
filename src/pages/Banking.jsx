@@ -541,8 +541,8 @@ const Banking = () => {
             We have deep experience working across retail, corporate,
             microfinance, and fintech ecosystems, offering end-to-end solutions
             in core banking, digital payments, and{" "}
-            <Link to={"/artificial-intelligence"}>AI-powered</Link> financial
-            intelligence.
+            <Link to={"/artificial-intelligence-services"}>AI-powered</Link>{" "}
+            financial intelligence.
           </span>,
         ]}
         image={assets.banking1}

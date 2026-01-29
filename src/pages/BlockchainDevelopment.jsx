@@ -444,7 +444,7 @@ const BlockchainDevelopment = () => {
           The smooth integration of the current applications and blockchain
           technology solutions, such as the{" "}
           <a
-            href="https://www.capyngen.com/website-design"
+            href="https://www.capyngen.com/website-design-company-india"
             className="text-blue-500 font-semibold"
           >
             ecommerce website design

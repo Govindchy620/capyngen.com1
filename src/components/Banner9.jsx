@@ -17,14 +17,16 @@ export default function Banner9() {
           />
         )}
         <div className="relative z-10 text-center lg:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-400 leading-tight md:pt-16">
-            <span className="text-blue-500">Artificial Intelligence</span>{" "}
-            Solutions
+          <h1 className="text-4xl font-bold text-blue-400 leading-tight md:pt-16">
+            <span className="text-blue-500">
+              Best Artificial Intelligence Services in India
+            </span>{" "}
             <br />
             <span className="inline-block mt-1 border-b-4 border-blue-600 rounded-full w-[60%]" />
             <br />
             <span className="mt-2 inline-block text-gray-300">
-              for Business
+              Delivering AI Solutions, Machine Learning Models, and Business
+              Automation
             </span>
           </h1>
           <p className="mt-6 text-gray-300 text-base lg:text-lg max-w-2xl leading-relaxed">

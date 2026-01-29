@@ -440,7 +440,9 @@ const EnergyResourcesUtilities = () => {
       title: (
         <span>
           The use of{" "}
-          <Link to={"/artificial-intelligence"}>AI and Machine Learning</Link>{" "}
+          <Link to={"/artificial-intelligence-services"}>
+            AI and Machine Learning
+          </Link>{" "}
           is made for setting up predictive energy analytics.
         </span>
       ),

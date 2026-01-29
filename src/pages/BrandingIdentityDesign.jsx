@@ -30,8 +30,8 @@ import { Link } from "react-router-dom";
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.capyngen.com/branding-and-identity-design#webpage",
-  url: "https://www.capyngen.com/branding-and-identity-design",
+  "@id": "https://www.capyngen.com/branding-identity-design#webpage",
+  url: "https://www.capyngen.com/branding-identity-design",
   name: "Branding Design Services | Creative & Corporate Branding",
   description:
     "Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out.",
@@ -68,7 +68,7 @@ const serviceSchema = {
     "@type": "Place",
     name: "Global",
   },
-  url: "https://www.capyngen.com/branding-and-identity-design",
+  url: "https://www.capyngen.com/branding-identity-design",
   description:
     "Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out.",
   keywords: "Branding Design Services, Creative & Corporate Branding",
@@ -462,14 +462,16 @@ const BrandingIdentityDesign = () => {
   return (
     <div className="relative">
       <Helmet>
-        <title>Branding Design Services | Creative & Corporate Branding</title>
+        <title>
+          Branding and Identity Design Services – Best Branding Company in India
+        </title>
         <meta
           name="description"
-          content="Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out."
+          content="Professional branding and identity design services in India. We create unique logos, brand strategies, and visual identities that make your business stand out."
         />
         <meta
           name="keywords"
-          content="Branding Design Services | Creative & Corporate Branding "
+          content="branding and identity design, best marketing company in gurgaon, brand identity services, logo design India, professional branding services, branding agency in gurgaon, brand identity design company, brand strategy services"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -482,9 +484,9 @@ const BrandingIdentityDesign = () => {
       <Banner5
         title={
           <>
-            Branding Design Services :
+            Best Branding and Identity Design Services in India{" "}
             <span className="text-cyan-400">
-              Revamp Your Identity, Revive Your Followers
+              Delivering Unique Logos, Visual Identities, and Brand Strategies
             </span>
           </>
         }

@@ -22,8 +22,8 @@ import { Link } from "react-router-dom";
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.capyngen.com/cms-design#webpage",
-  url: "https://www.capyngen.com/cms-design",
+  "@id": "https://www.capyngen.com/cms-website-design#webpage",
+  url: "https://www.capyngen.com/cms-website-design",
   name: "CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen",
   description:
     "Capyngen offers custom CMS design solutions that combine functionality and style. Get expert CMS web design and UI/UX services to manage content with ease.",
@@ -46,7 +46,7 @@ const webpageSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://www.capyngen.com/cms-design#service",
+  "@id": "https://www.capyngen.com/cms-website-design#service",
   name: "CMS Design & Development Services",
   serviceType: "CMS Design, CMS Customization, CMS UI/UX",
   provider: {
@@ -60,7 +60,7 @@ const serviceSchema = {
   },
   description:
     "Capyngen offers custom CMS design solutions that combine functionality and style. Get expert CMS web design and UI/UX services to manage content with ease.",
-  url: "https://www.capyngen.com/cms-design",
+  url: "https://www.capyngen.com/cms-website-design",
   image: {
     "@type": "ImageObject",
     url: "https://www.capyngen.com/assets/cms1-tulX0Vc_.png",
@@ -76,7 +76,7 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/cms-design#faq",
+  "@id": "https://www.capyngen.com/cms-website-design#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -316,7 +316,7 @@ const CMSDesign = () => {
     {
       title: (
         <span>
-          <Link to={"/ui-ux-design"}>CMS UI/UX Design</Link>
+          <Link to={"/ui-ux-design-services"}>CMS UI/UX Design</Link>
         </span>
       ),
       description:
@@ -371,15 +371,15 @@ const CMSDesign = () => {
     <div className="relative">
       <Helmet>
         <title>
-          CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen
+          CMS Website Design Services – Best CMS Design Company in India
         </title>
         <meta
           name="description"
-          content="Capyngen offers custom CMS design solutions that combine functionality and style. Get expert CMS web design and UI/UX services to manage content with ease."
+          content="Professional CMS website design services in India. We create custom, responsive, and user-friendly CMS websites to manage your business efficiently"
         />
         <meta
           name="keywords"
-          content="CMS Design | Custom CMS Web Design & UI/UX Services – Capyngen"
+          content="CMS website design, cms website development company in gurgaon,  CMS design services, CMS website development India, custom CMS websites, responsive CMS design, Custom CMS Development Services, professional CMS services"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -392,9 +392,9 @@ const CMSDesign = () => {
       <div className="lg:sticky inset-0">
         <Banner14
           imageSrc={assets.cms1}
-          imageAlt="Blockchain development illustration"
-          title="Simplify Your Content Using a"
-          highlighted="Professional CMS Design"
+          imageAlt="CMS Website Design"
+          title="Best CMS Website Design Services in India "
+          highlighted="Delivering Custom, Responsive, and User-Friendly Websites for Businesses"
           subtitle=""
           description="Get the most out of your company using content management systems that are secure, intelligent, and scalable for the web, mobile, and enterprise applications."
           reverse={false}
@@ -431,9 +431,9 @@ const CMSDesign = () => {
               Experience the benefits of a great CMS design that will make your
               work simpler, better use of resources and create exciting digital
               experiences. In case you require services for{" "}
-              <Link to={"/website-design"}>CMS web design</Link>, CMS UI/UX
-              design, or complete CMS development and design, Capyngen will
-              stand by your side like a true partner.
+              <Link to={"/website-design-company-india"}>CMS web design</Link>,
+              CMS UI/UX design, or complete CMS development and design, Capyngen
+              will stand by your side like a true partner.
             </span>,
           ]}
           image={assets.cms2}

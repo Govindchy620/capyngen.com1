@@ -294,8 +294,9 @@ const RealEstate = () => {
       desc: (
         <span>
           You can make user-friendly property listing websites by implementing
-          <Link to={"/ui-ux-design"}>UI & UX Design</Link> for Real estate
-          Industry along with advanced search, filter and contact features.
+          <Link to={"/ui-ux-design-services"}>UI & UX Design</Link> for Real
+          estate Industry along with advanced search, filter and contact
+          features.
         </span>
       ),
     },

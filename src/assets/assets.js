@@ -1647,14 +1647,14 @@ export const navItems = [
       {
         title: "Design",
         links: [
-          { label: "UI/UX Design", href: "/ui-ux-design" },
-          { label: "Website Design", href: "/website-design" },
+          { label: "UI/UX Design", href: "/ui-ux-design-services" },
+          { label: "Website Design", href: "/website-design-company-india" },
           {
             label: "Branding & Identity Design",
-            href: "/branding-and-identity-design",
+            href: "/branding-identity-design",
           },
-          { label: "Ecommerce Design", href: "/ecommerce-design" },
-          { label: "CMS Design", href: "/cms-design" },
+          { label: "Ecommerce Design", href: "/ecommerce-website-design" },
+          { label: "CMS Design", href: "/cms-website-design" },
         ],
       },
       {
@@ -1673,7 +1673,7 @@ export const navItems = [
         links: [
           {
             label: "Artificial Intelligence",
-            href: "/artificial-intelligence",
+            href: "/artificial-intelligence-services",
           },
           { label: "Cybersecurity", href: "/cybersecurity" },
           {
@@ -1684,7 +1684,7 @@ export const navItems = [
             label: "Enterprise Solutions",
             href: "/enterprise-solutions",
           },
-          { label: "Data & Analytics", href: "/data-analytics" },
+          { label: "Data & Analytics", href: "/data-analytics-services" },
         ],
       },
       {
