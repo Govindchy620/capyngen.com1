@@ -117,9 +117,9 @@ export default function BlogModal({ open, onClose, onSave, initial }) {
       return onSave(null, "Please fill all required fields");
     }
 
-    // if (!form.image) {
-    //   return alert("Please upload image first");
-    // }
+    if (!form.image) {
+      return alert("Please upload image first");
+    }
 
     const payload = {
       title: form.title.trim(),
