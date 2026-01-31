@@ -210,21 +210,61 @@ const faqSchema = {
 const PPC = () => {
   const faqItems = [
     {
-      question: "How long does it take for funds to show in my wallet?",
+      question:
+        "Which PPC management services offer the best ROI for small businesses?",
       answer:
-        "The time it takes for funds to appear in your wallet depends on the deposit method. Most funding methods are instantaneous. ",
+        "Capyngen provides the highest ROI based on Google Ad optimisation with pay-per-click and meta ad optimisation and bid adjusting daily. The 4-8X returns in the 60 days are typical of small businesses using our PPC management services.",
     },
     {
-      question: "What is the minimum deposit requirement?",
+      question: "What are the fundamentals of pay-per-click advertising?",
       answer:
-        "PrimeForex Markets requires no minimum deposit, however, a minimum amount may be required by your preferred funding method. ",
+        "Pay-per-click advertising will not involve any charge until users click your ads on Google Ads, Microsoft Ads, Meta Ads and social sites. Capyngen specialises in keyword research, ad copy test, landing page optimization and conversion tracking to achieve maximum results.​",
     },
     {
-      question: "Are there any fees associated with depositing funds?",
-      answer: "No, PrimeForex Markets charges no fees for depositing funds.",
+      question:
+        "What are the best platforms for managing PPC campaigns in India?",
+      answer:
+        "India is dominated by Google Ads (Search/Display), Meta Ads (Facebook/Instagram), Microsoft Ads and LinkedIn Sponsored Content. Capyngen deploys all platforms and e-commerce advertisements on Amazon/Flipkart to cover all customer bases.",
+    },
+    {
+      question:
+        "Is PPC advertising suitable for startups and local businesses?",
+      answer:
+        "Absolutely. PPC advertising will provide instant exposure, Gurugram targeting, and good control of the budget, which is economical for startups. Capyngen ranks local businesses instantly, scaling nationwide unlike SEO.",
+    },
+    {
+      question: "How long does it take to see ROI from PPC campaigns?",
+      answer:
+        "Capyngen clients realise a positive ROI within 14–30 days. Optimised campaigns typically generate 3X returns by Day 60 and 5–8X by Day 90, as a result of constant A/B testing and negative keyword management.",
+    },
+    {
+      question:
+        "What are the key benefits of pay-per-click advertising for businesses?",
+      answer:
+        "Real-time traffic, accurate targeting, complete budget control, quantifiable ROI and scalability. Capyngen achieves 28% lower CPCs and 3X more conversions compared to the industry when it comes to small businesses.",
+    },
+    {
+      question:
+        "What are the prices of professional PPC management services in India?",
+      answer:
+        "Capyngen plans start with very affordable pricing (10% of the ad spend), including strategy, daily optimisation, and reporting. Larger budgets are supported by custom enterprise plans to ensure improved ROAS.​",
+    },
+    {
+      question: "Is it possible to use PPC to compete with big brands?",
+      answer:
+        "Yes! PPC levels the playing field with hyper-local and long-tail keyword targeting. Capyngen has helped Gurugram salons outperform big chains, such as boosting Sector 14 hair spa conversions to 47%.",
+    },
+    {
+      question: "Why is Capyngen different from other PPC agencies in India?",
+      answer:
+        "Capyngen offers 24/7 monitoring, combines Google Ads, Meta Ads, Microsoft Advertising and e-commerce platforms, and uses a proprietary bid algorithm. With a 92% client retention rate, we deliver the best PPC services in India.​",
+    },
+    {
+      question: "What is Capyngen doing to ensure PPC advertising success?",
+      answer:
+        "Capyngen provides performance guarantees: Week 1 setup, Week 2 optimisation, Month 1 break-even ROAS, and Month 2 4X target. Strategy meetings and a transparent Looker Studio dashboard ensure complete accountability.",
     },
   ];
-
   const solutionsData = [
     {
       title: "Google Ads Management",
@@ -312,7 +352,6 @@ const PPC = () => {
       ),
     },
   ];
-
   const steps = [
     {
       step: "Step 01",
@@ -347,7 +386,6 @@ const PPC = () => {
         "Revision of the bids, targeting and creatives based on the performance attained as Top ppc ad expert in India.",
     },
   ];
-
   const features = [
     {
       icon: <FaCheckCircle className="w-10 h-10 text-blue-500" />,
@@ -373,7 +411,6 @@ const PPC = () => {
         "Observe regular reports in easy-to-understand charts and tables on ROI.",
     },
   ];
-
   const cardsSectionImageData1 = [
     {
       title: "SEO",
@@ -737,7 +774,7 @@ const PPC = () => {
           ]}
           backgroundVideo={assets.backgroundVideo}
         />
-        {/* <FAQSection2 items={faqItems} /> */}
+        <FAQSection2 items={faqItems} />
         {/* <ScrollRevealEffect /> */}
       </div>
     </div>

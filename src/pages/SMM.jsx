@@ -33,9 +33,9 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/smm#webpage",
   url: "https://www.capyngen.com/smm",
-  name: "Social Media Marketing | Grow Your Brand Online – Capyngen",
+  name: "Social Media Marketing Agency in India | Growth-Driven SMM Services",
   description:
-    "Boost your brand presence with Capyngen's social media marketing services. Engage, grow, and convert your audience across all major social platforms today!",
+    "Capyngen is a trusted social media marketing agency in India offering professional social media marketing services, management, and ads to grow your brand.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
@@ -55,9 +55,9 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.capyngen.com/smm#service",
-  name: "Social Media Marketing (SMM) Services",
+  name: "Social Media Marketing Services",
   serviceType:
-    "Social Media Strategy, Social Media Management, Social Media Advertising",
+    "Social Media Marketing, SMM, Social Media Advertising, Community Management, Content Creation, SMM Agency, Facebook Marketing, YouTube Marketing",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
@@ -68,13 +68,8 @@ const serviceSchema = {
     name: "India",
   },
   description:
-    "Boost your brand presence with Capyngen's social media marketing services. Engage, grow, and convert your audience across all major social platforms today!:contentReference[oaicite:1]{index=1}",
+    "Capyngen is a trusted social media marketing agency in India offering professional social media marketing services, management, and ads to grow your brand.",
   url: "https://www.capyngen.com/smm",
-  image: {
-    "@type": "ImageObject",
-    url: "https://www.capyngen.com/assets/smm7-DS4W0H5s.png",
-    caption: "Social Media Marketing | Grow Your Brand Online – Capyngen",
-  },
   offers: {
     "@type": "Offer",
     price: "Custom",
@@ -85,32 +80,7 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/smm#faq",
   mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the time it takes for the money to appear in my wallet?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The amount of time the funds would take to reach your wallet would be determined by the mode of deposit. The majority of the funding strategies are immediate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What much the minimum deposit needed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "PrimeForex Markets does not have a minimum deposit, but you might need at least some minimum amount depending on the way you fund the account.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does it have any charges on the deposit?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No, PrimeForex Markets does not charge any fee on deposits.",
-      },
-    },
     {
       "@type": "Question",
       name: "What is social media marketing?",
@@ -236,21 +206,6 @@ const faqSchema = {
 
 const SMM = () => {
   const faqItems = [
-    {
-      question:
-        "What is the time it takes for the money to appear in my wallet?",
-      answer:
-        "The amount of time the funds would take to reach your wallet would be determined by the mode of deposit. The majority of the funding strategies are immediate.",
-    },
-    {
-      question: "What much the minimum deposit needed?",
-      answer:
-        "PrimeForex Markets does not have a minimum deposit, but you might need at least some minimum amount depending on the way you fund the account.",
-    },
-    {
-      question: "Does it have any charges on the deposit?",
-      answer: "No, PrimeForex Markets does not charge any fee on deposits.",
-    },
     {
       question: "What is social media marketing?",
       answer:

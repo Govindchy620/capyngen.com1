@@ -25,15 +25,13 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/cybersecurity#webpage",
   url: "https://www.capyngen.com/cybersecurity",
-  name: "Cybersecurity Solutions | IT & Network Security Services – Capyngen",
+  name: "Managed Cybersecurity Services Provider in India | Capyngen",
   description:
-    "Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets.",
-  inLanguage: "en",
-  keywords: "Cybersecurity Solutions, IT & Network Security Services",
+    "Capyngen is a trusted managed cybersecurity services provider offering advanced cyber security solutions and Indian cybersecurity solutions to protect businesses and financial services.",
+  inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
-    name: "Capyngen",
-    url: "https://www.capyngen.com",
+    "@id": "https://www.capyngen.com/#website",
   },
   publisher: {
     "@type": "Organization",
@@ -48,40 +46,28 @@ const webpageSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: [
-    "Cybersecurity services",
-    "Cybersecurity solutions",
-    "IT security services",
-    "Network security services",
-    "Data protection services",
-    "Best Cybersecurity services",
-    "Managed cybersecurity services",
-  ],
-  name: "Cybersecurity Solutions | IT & Network Security Services – Capyngen",
+  "@id": "https://www.capyngen.com/cybersecurity#service",
+  name: "Cybersecurity Services",
+  serviceType:
+    "Managed cybersecurity, IT security, Network security, Data protection, Cloud security, Cybersecurity consulting",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
     url: "https://www.capyngen.com",
-    logo: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
   },
   areaServed: {
-    "@type": "Place",
-    name: "Global",
+    "@type": "Country",
+    name: "India",
   },
-  url: "https://www.capyngen.com/cybersecurity",
   description:
-    "Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets.",
-  keywords: "Cybersecurity Solutions, IT & Network Security Services",
+    "Capyngen is a trusted managed cybersecurity services provider offering advanced cyber security solutions and Indian cybersecurity solutions to protect businesses and financial services.",
+  url: "https://www.capyngen.com/cybersecurity",
   offers: {
     "@type": "Offer",
-    url: "https://www.capyngen.com/contact",
-    price: "0.00",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
   },
-  category: "Cybersecurity & IT Security Services",
-  serviceOutput:
-    "Protect your business with Capyngen’s cybersecurity services. We provide advanced IT and network security solutions to safeguard your data and digital assets.",
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -92,15 +78,15 @@ const faqSchema = {
       name: "What is cybersecurity?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Cybersecurity entails all measures against hackers to protect the networks, systems, and data of an organization.",
+        text: "Cybersecurity refers to all the strategies against hackers to secure the networks, systems, and data of an organisation with full-scale cybersecurity managed services.",
       },
     },
     {
       "@type": "Question",
-      name: "Why is cybersecurity important to businesses?",
+      name: "What is the significance of cybersecurity to businesses?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The main benefits of cybersecurity are the following: no leak of data, the security of sensitive informational assets, the observance of the law, and maintenance of customer trust.",
+        text: "The key advantages of cybersecurity services are the following: no data leakage, safety of informational assets of sensitive information, law observance, and preservation of customer trust.",
       },
     },
     {
@@ -108,15 +94,15 @@ const faqSchema = {
       name: "What are managed security services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Such services consist of continuous monitoring, threat detection, incident response, vulnerability management, and disaster recovery.",
+        text: "Some of the managed cybersecurity services include ongoing monitoring, threat detection, incident response, vulnerability management, and recovery from a disaster due to a cybersecurity service provider.",
       },
     },
     {
       "@type": "Question",
-      name: "Do security services have a positive impact on startups?",
+      name: "Do security services positively influence startups?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Definitely. Capyngen delivers on-demand security to startups at a fraction of the usual price to protect their valuable information and keep their business going.",
+        text: "Definitely. Capyngen provides on-demand cyber security services to startups at a fraction of the regular cost to secure valuable information and continue doing business.",
       },
     },
     {
@@ -124,23 +110,23 @@ const faqSchema = {
       name: "What is network security?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Network security is the protection of internal networks against unauthorized entry and cyber-attacks to computers, servers, and other connected hardware devices.",
+        text: "Network protection against unauthorised access and cyber-attacks to computers, servers and other connected devices of the hardware via cybersecurity solutions.",
       },
     },
     {
       "@type": "Question",
-      name: "What is Capyngen's data protection approach?",
+      name: "Which data protection strategy does Capyngen have?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We protect confidential data through encryption, safe storage, backup, and by using access controls.",
+        text: "As part of our cybersecurity consulting services, we ensure confidential data is encrypted, securely stored in another way, backed up, and access controls are in place.",
       },
     },
     {
       "@type": "Question",
-      name: "Can your cybersecurity services help if I have an enterprise?",
+      name: "Are your cybersecurity services applicable in case I have an enterprise?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, of course. Among the offers Capyngen has for corporations, there is staff on call for professional advice and guidance with wide-ranging security solutions.",
+        text: "Yes, of course. Working staff on demand and high-quality and broad-based cybersecurity services are among the propositions Capyngen has to offer corporations.",
       },
     },
     {
@@ -148,68 +134,67 @@ const faqSchema = {
       name: "What is penetration testing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Hackers are simulated in penetration testing to show vulnerabilities present in a system that could be exploited by attackers.",
+        text: "Penetration testing simulates hackers to demonstrate the vulnerabilities existing in a system, and in a very short period, they can discover and exploit them.",
       },
     },
     {
       "@type": "Question",
-      name: "Are you providing cloud security solutions?",
+      name: "Do you offer cloud security services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We offer secure environments for cloud applications and storage using security measures that comply with industry standards.",
+        text: "Yes. The cloud, applications and storage environments that we provide are secure with industry standards in security measures that are provided through experience as a cyber security solutions provider.",
       },
     },
     {
       "@type": "Question",
-      name: "Are there any means to stop ransomware attacks through cybersecurity?",
+      name: "How can ransomware attacks be prevented using cybersecurity?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Measures to fight ransomware include threat monitoring, backups, and endpoint security.",
+        text: "Yes. The cybersecurity company offers endpoint security, threat monitoring, and backups, which are some of the measures used to combat ransomware.",
       },
     },
     {
       "@type": "Question",
-      name: "How do you monitor cybersecurity threats?",
+      name: "What do you do to track cybersecurity threats?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use SIEM tools paired with 24/7 monitoring, intrusion detection, and analytics to identify and respond to threats.",
+        text: "SIEM tools are combined with 24/7 monitoring, intrusion detection and analytics to identify and respond to threats using cybersecurity managed services.",
       },
     },
     {
       "@type": "Question",
-      name: "What are the industries that could gain from cybersecurity services?",
+      name: "Which industries are vulnerable to the cyber security services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Finance, healthcare, retail, education, IT, travel — basically any data-driven company dealing with sensitive customer information.",
+        text: "Finance, healthcare, retail, education, IT, travel, and in general, any data-driven company that involves sensitive customer information gains the benefits of cybersecurity services.",
       },
     },
     {
       "@type": "Question",
-      name: "How much do cybersecurity services cost?",
+      name: "What are the fees for cybersecurity services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pricing varies depending on business size, security requirements, and the services needed. Capyngen offers scalable and affordable cybersecurity solutions.",
+        text: "Prices vary across the board based on the size of business, security needs and services. Capyngen provides affordable and scalable cybersecurity solutions.",
       },
     },
     {
       "@type": "Question",
-      name: "What services are IT security services?",
+      name: "What are IT security services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "IT security services include endpoint protection, network security, patch management, anti-virus, and employee training.",
+        text: "Capyngen provides basic cyber security services, which include endpoint protection, network security, patch management, anti-virus and employee training.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I get started with Capyngen cybersecurity services?",
+      name: "What is the entry mode of Capyngen cybersecurity services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Schedule a free consultation to evaluate your security requirements and receive a custom-made cybersecurity plan for your business.",
+        text: "Book a free consultation on how to assess your security needs and have this reliable managed cybersecurity services provider create a business-specific cybersecurity plan.",
       },
     },
   ],
 };
-
 const Cybersecurity = () => {
   const faqItems = [
     {

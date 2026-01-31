@@ -32,15 +32,13 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://www.capyngen.com/digital-marketing#webpage",
   url: "https://www.capyngen.com/digital-marketing",
-  name: "Company Overview | Capyngen – Empowering Brands with Digital Excellence",
+  name: "Best Digital Marketing Services | End-to-End Marketing Solutions",
   description:
-    "Capyngen is a full-service digital marketing and technology agency driven by creativity, innovation, and results. From SEO and web development to performance marketing and branding — we help businesses grow smarter and faster. Discover our story, values, and vision that power success.",
+    "Looking for the best digital marketing services in India? Capyngen offers end-to-end digital marketing services to increase traffic, leads, and sales for your business.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
     "@id": "https://www.capyngen.com/#website",
-    name: "Capyngen",
-    url: "https://www.capyngen.com",
   },
   publisher: {
     "@type": "Organization",
@@ -49,127 +47,38 @@ const webpageSchema = {
     logo: {
       "@type": "ImageObject",
       url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
-      width: 250,
-      height: 80,
     },
-  },
-  primaryImageOfPage: {
-    "@type": "ImageObject",
-    url: "https://www.capyngen.com/assets/seoAndContent-DdAby_d6.png",
-    width: 1200,
-    height: 800,
-    caption: "Digital Marketing Services by Capyngen",
-  },
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Services",
-        item: "https://www.capyngen.com/services",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Digital Marketing",
-        item: "https://www.capyngen.com/digital-marketing",
-      },
-    ],
   },
 };
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.capyngen.com/digital-marketing#service",
-  serviceType: "Digital Marketing Services",
-  name: "Digital Marketing Services",
-  alternateName: "Online Marketing Solutions",
-  url: "https://www.capyngen.com/digital-marketing",
-  description:
-    "Capyngen provides data-driven digital marketing services including SEO, PPC, social media management, content marketing, and analytics to help businesses increase visibility, leads, and ROI.",
+  name: "Top Digital Marketing Services in India",
+  serviceType:
+    "Digital Marketing, SEO, PPC Advertising, Social Media Marketing, Content Marketing, Email Marketing, Conversion Rate Optimization",
   provider: {
     "@type": "Organization",
     name: "Capyngen",
-    url: "https://www.capyngen.com/",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://www.capyngen.com/assets/capyngenLogo-C_7gSXiJ.png",
-    },
+    url: "https://www.capyngen.com",
   },
   areaServed: {
-    "@type": "Place",
-    name: "Worldwide",
+    "@type": "Country",
+    name: "India",
   },
-  audience: {
-    "@type": "Audience",
-    audienceType: [
-      "Startups",
-      "Small Businesses",
-      "E-commerce Brands",
-      "Enterprises",
-    ],
-  },
+  description:
+    "Looking for the best digital marketing services in India? Capyngen offers end-to-end digital marketing services to increase traffic, leads, and sales for your business.",
+  url: "https://www.capyngen.com/digital-marketing",
   offers: {
     "@type": "Offer",
-    url: "https://www.capyngen.com/contact",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    price: "0",
-    eligibleRegion: {
-      "@type": "Place",
-      name: "Worldwide",
-    },
-    description:
-      "Get a free consultation for our 360° digital marketing services including SEO, PPC, social media, and content strategy.",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Digital Marketing Services Catalog",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Search Engine Optimization (SEO)",
-          description:
-            "Improve your website visibility and ranking through expert SEO strategies.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Pay-Per-Click Advertising (PPC)",
-          description:
-            "Maximize ROI with targeted Google Ads and paid campaigns.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Social Media Marketing",
-          description:
-            "Boost engagement and brand awareness with creative social campaigns.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Content Marketing",
-          description:
-            "Drive organic growth through valuable, optimized content strategies.",
-        },
-      },
-    ],
+    price: "Custom",
+    priceCurrency: "INR",
+    availability: "InStock",
   },
 };
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.capyngen.com/digital-marketing#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -192,14 +101,7 @@ const faqSchema = {
       name: "What services are offered by a digital marketing agency?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: (
-          <>
-            Some of the services offered by the agency include search engine
-            optimisation (SEO), pay-per-click (PPC) advertising, social media
-            marketing, and content marketing, as well as email campaigns, among
-            others, and analytics.
-          </>
-        ),
+        text: "Some of the services offered by the agency include search engine optimisation (SEO), pay-per-click (PPC) advertising, social media marketing, and content marketing, as well as email campaigns, among others, and analytics.",
       },
     },
     {
