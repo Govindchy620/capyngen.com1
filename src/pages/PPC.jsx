@@ -213,56 +213,57 @@ const PPC = () => {
       question:
         "Which PPC management services offer the best ROI for small businesses?",
       answer:
-        "Capyngen provides the highest ROI based on Google Ad optimisation with pay-per-click and meta ad optimisation and bid adjusting daily. The 4-8X returns in the 60 days are typical of small businesses using our PPC management services.",
+        "Capyngen provides the highest ROI based on Google Ad optimisation with pay-per-click and Meta Ad optimisation and daily bid adjustments. The 4–8X returns in 60 days are typical of small businesses using our PPC management services.",
     },
     {
       question: "What are the fundamentals of pay-per-click advertising?",
       answer:
-        "Pay-per-click advertising will not involve any charge until users click your ads on Google Ads, Microsoft Ads, Meta Ads and social sites. Capyngen specialises in keyword research, ad copy test, landing page optimization and conversion tracking to achieve maximum results.​",
+        "Pay-per-click advertising will not involve any charge until users click your ads on Google Ads, Microsoft Ads, Meta Ads, and social sites. Capyngen specialises in keyword research, ad copy testing, landing page optimization and conversion tracking to achieve maximum results.​",
     },
     {
       question:
         "What are the best platforms for managing PPC campaigns in India?",
       answer:
-        "India is dominated by Google Ads (Search/Display), Meta Ads (Facebook/Instagram), Microsoft Ads and LinkedIn Sponsored Content. Capyngen deploys all platforms and e-commerce advertisements on Amazon/Flipkart to cover all customer bases.",
+        "India is dominated by Google Ads (Search/Display), Meta Ads (Facebook/Instagram), Microsoft Ads, and LinkedIn Sponsored Content. Capyngen deploys all platforms along with e-commerce advertising on Amazon and Flipkart to cover all customer bases.",
     },
     {
       question:
         "Is PPC advertising suitable for startups and local businesses?",
       answer:
-        "Absolutely. PPC advertising will provide instant exposure, Gurugram targeting, and good control of the budget, which is economical for startups. Capyngen ranks local businesses instantly, scaling nationwide unlike SEO.",
+        "Absolutely. PPC advertising provides instant exposure, Gurugram targeting, and good budget control, making it economical for startups. Capyngen ranks local businesses instantly and scales them nationwide—unlike SEO.",
     },
     {
       question: "How long does it take to see ROI from PPC campaigns?",
       answer:
-        "Capyngen clients realise a positive ROI within 14–30 days. Optimised campaigns typically generate 3X returns by Day 60 and 5–8X by Day 90, as a result of constant A/B testing and negative keyword management.",
+        "Capyngen clients realise a positive ROI within 14–30 days. Optimised campaigns typically generate 3X returns by Day 60 and 5–8X by Day 90 due to constant A/B testing and negative keyword management.",
     },
     {
       question:
         "What are the key benefits of pay-per-click advertising for businesses?",
       answer:
-        "Real-time traffic, accurate targeting, complete budget control, quantifiable ROI and scalability. Capyngen achieves 28% lower CPCs and 3X more conversions compared to the industry when it comes to small businesses.",
+        "Real-time traffic, accurate targeting, complete budget control, quantifiable ROI, and scalability. Capyngen achieves 28% lower CPCs and 3X more conversions compared to the industry for small businesses.",
     },
     {
       question:
         "What are the prices of professional PPC management services in India?",
       answer:
-        "Capyngen plans start with very affordable pricing (10% of the ad spend), including strategy, daily optimisation, and reporting. Larger budgets are supported by custom enterprise plans to ensure improved ROAS.​",
+        "Capyngen plans start at very affordable pricing (10% of ad spend), including strategy, daily optimisation, and reporting. Larger budgets are supported with custom enterprise plans to ensure improved ROAS.​",
     },
     {
       question: "Is it possible to use PPC to compete with big brands?",
       answer:
-        "Yes! PPC levels the playing field with hyper-local and long-tail keyword targeting. Capyngen has helped Gurugram salons outperform big chains, such as boosting Sector 14 hair spa conversions to 47%.",
+        "Yes! PPC levels the playing field with hyper-local and long-tail keyword targeting. Capyngen has helped Gurugram salons outperform big chains, including boosting Sector 14 hair spa conversions to 47%.",
     },
     {
-      question: "Why is Capyngen different from other PPC agencies in India?",
+      question:
+        "Why is Capyngen different from the other PPC agencies in India?",
       answer:
-        "Capyngen offers 24/7 monitoring, combines Google Ads, Meta Ads, Microsoft Advertising and e-commerce platforms, and uses a proprietary bid algorithm. With a 92% client retention rate, we deliver the best PPC services in India.​",
+        "Capyngen offers 24/7 monitoring, combines Google Ads, Meta Ads, Microsoft Advertising, and e-commerce platforms, and uses a proprietary bid algorithm. A 92% client retention rate reflects our position as a top PPC service provider in India.​",
     },
     {
       question: "What is Capyngen doing to ensure PPC advertising success?",
       answer:
-        "Capyngen provides performance guarantees: Week 1 setup, Week 2 optimisation, Month 1 break-even ROAS, and Month 2 4X target. Strategy meetings and a transparent Looker Studio dashboard ensure complete accountability.",
+        "Capyngen provides performance guarantees: Week 1 setup, Week 2 optimisation, Month 1 break-even ROAS, and Month 2 at 4X target. Strategy meetings and a transparent Looker Studio dashboard ensure full accountability.",
     },
   ];
   const solutionsData = [
