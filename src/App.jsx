@@ -1,11 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Homepage from "./pages/Homepage";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,73 +6,144 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// ============================================================================
+// 1. STATIC IMPORTS (Critical Core Assets Only)
+// ============================================================================
+// We keep these static so the "shell" of the app loads instantly.
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import WebDevelopment from "./pages/WebDevelopment";
-import Industries from "./pages/Industries";
-import ContactUs from "./pages/ContactUs";
-import Banking from "./pages/Banking";
-import AppDevelopment from "./pages/AppDevelopment";
-import CustomAiSolution from "./pages/CustomAiSolution";
-import ECommerceSolution from "./pages/ECommerceSolution";
-import BlockchainDevelopment from "./pages/BlockchainDevelopment";
-import DevOpsSolutions from "./pages/DevOpsSolutions";
-import ApplicationSolutions from "./pages/ApplicationSolutions";
-import CrmManagementSoftware from "./pages/CrmManagementSoftware";
-import Careers from "./pages/Careers";
-import CompanyOverview from "./pages/CompanyOverview";
-import NewsAndUpdates from "./pages/NewsAndUpdates";
-import UiUxDesign from "./pages/UiUxDesign";
-import WebsiteDesign from "./pages/WebsiteDesign";
-import BrandingIdentityDesign from "./pages/BrandingIdentityDesign";
-import EcommerceDesign from "./pages/EcommerceDesign";
-import CMSDesign from "./pages/CMSDesign";
-import DigitalMarketing from "./pages/DigitalMarketing";
-import SEO from "./pages/SEO";
-import SMM from "./pages/SMM";
-import PPC from "./pages/PPC";
-import ArtificialIntelligence from "./pages/ArtificialIntelligence";
-import Cybersecurity from "./pages/Cybersecurity";
-import NetworkSolutionServices from "./pages/NetworkSolutionServices";
-import EnterpriseSolutions from "./pages/EnterpriseSolutions";
-import DataAnalytics from "./pages/DataAnalytics";
-import Consulting from "./pages/Consulting";
-import Education from "./pages/Education";
-import CapitalMarket from "./pages/CapitalMarket";
-import LifeScience from "./pages/LifeScience";
-import HealthcareAndFitness from "./pages/HealthcareAndFitness";
-import EnergyResourcesUtilities from "./pages/EnergyResourcesUtilities";
-import ManufacturingAutomotive from "./pages/ManufacturingAutomotive";
-import PublicService from "./pages/PublicService";
-import ECommerceIndustry from "./pages/ECommerceIndustry";
-import HighTech from "./pages/HighTech";
-import TravelAndLogistics from "./pages/TravelAndLogistics";
-import CpgDistribution from "./pages/CpgDistribution";
-import Gaming from "./pages/Gaming";
-import CommunicationMediaIT from "./pages/CommunicationMediaIT";
-import Insurance from "./pages/Insurance";
-import RealEstate from "./pages/RealEstate";
-import BlogDetail from "./components/BlogDetail";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsAndConditions from "./pages/TermsAndConditions";
-
-import LandingPage from "./pages/LandingPage/DigitalMarketingLandingPage/LandingPage";
-import WebDevelopmentHiddenPage from "./pages/WebDevelopmentHiddenPage";
-import AppDevelopmentHiddenPage from "./pages/AppDevelopmentHiddenPage";
-import CrmManagementSoftwareHiddenPage from "./pages/CrmManagementSoftwareHiddenPage";
-import GreetingsPage from "./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage";
-import AdminLogin from "./pages/AdminPanel/components/AdminLogin";
-import { isAdminLoggedIn } from "./pages/AdminPanel/services/authService";
-import AdminLanding from "./pages/AdminPanel/components/AdminLanding";
-import AdminPanel from "./pages/AdminPanel/components/AdminPanel";
-import CareerAdminPanel from "./pages/AdminPanel/components/CareerAdminPanel";
-import ViewReports from "./pages/AdminPanel/components/ViewReports";
-import Settings from "./pages/AdminPanel/components/Settings";
-import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
-import SoftwareDevelopmentLandingPage from "./pages/LandingPage/SoftwareDevelopmentLandingPage/SoftwareDevelopmentLandingPage";
-import DesignLandingPage from "./pages/LandingPage/DesignLandingPage/DesignLandingPage";
-
 import Preloader from "./components/Preloader";
+
+// Admin Services (Lightweight functions)
+import { isAdminLoggedIn } from "./pages/AdminPanel/services/authService";
+import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
+
+// ============================================================================
+// 2. LAZY IMPORTS (Code Splitting)
+// ============================================================================
+// Each of these will now be a separate small JS file, loaded only on demand.
+
+// Main Pages
+const Homepage = lazy(() => import("./pages/Homepage"));
+const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
+const AppDevelopment = lazy(() => import("./pages/AppDevelopment"));
+const CustomAiSolution = lazy(() => import("./pages/CustomAiSolution"));
+const ECommerceSolution = lazy(() => import("./pages/ECommerceSolution"));
+const BlockchainDevelopment = lazy(
+  () => import("./pages/BlockchainDevelopment"),
+);
+const DevOpsSolutions = lazy(() => import("./pages/DevOpsSolutions"));
+const ApplicationSolutions = lazy(() => import("./pages/ApplicationSolutions"));
+const CrmManagementSoftware = lazy(
+  () => import("./pages/CrmManagementSoftware"),
+);
+
+// Design Services
+const UiUxDesign = lazy(() => import("./pages/UiUxDesign"));
+const WebsiteDesign = lazy(() => import("./pages/WebsiteDesign"));
+const BrandingIdentityDesign = lazy(
+  () => import("./pages/BrandingIdentityDesign"),
+);
+const EcommerceDesign = lazy(() => import("./pages/EcommerceDesign"));
+const CMSDesign = lazy(() => import("./pages/CMSDesign"));
+
+// Marketing Services
+const DigitalMarketing = lazy(() => import("./pages/DigitalMarketing"));
+const SEO = lazy(() => import("./pages/SEO"));
+const SMM = lazy(() => import("./pages/SMM"));
+const PPC = lazy(() => import("./pages/PPC"));
+
+// Tech Services
+const ArtificialIntelligence = lazy(
+  () => import("./pages/ArtificialIntelligence"),
+);
+const Cybersecurity = lazy(() => import("./pages/Cybersecurity"));
+const NetworkSolutionServices = lazy(
+  () => import("./pages/NetworkSolutionServices"),
+);
+const EnterpriseSolutions = lazy(() => import("./pages/EnterpriseSolutions"));
+const DataAnalytics = lazy(() => import("./pages/DataAnalytics"));
+const Consulting = lazy(() => import("./pages/Consulting"));
+
+// Industries
+const Industries = lazy(() => import("./pages/Industries"));
+const Banking = lazy(() => import("./pages/Banking"));
+const Education = lazy(() => import("./pages/Education"));
+const CapitalMarket = lazy(() => import("./pages/CapitalMarket"));
+const LifeScience = lazy(() => import("./pages/LifeScience"));
+const HealthcareAndFitness = lazy(() => import("./pages/HealthcareAndFitness"));
+const EnergyResourcesUtilities = lazy(
+  () => import("./pages/EnergyResourcesUtilities"),
+);
+const ManufacturingAutomotive = lazy(
+  () => import("./pages/ManufacturingAutomotive"),
+);
+const PublicService = lazy(() => import("./pages/PublicService"));
+const ECommerceIndustry = lazy(() => import("./pages/ECommerceIndustry"));
+const HighTech = lazy(() => import("./pages/HighTech"));
+const TravelAndLogistics = lazy(() => import("./pages/TravelAndLogistics"));
+const CpgDistribution = lazy(() => import("./pages/CpgDistribution"));
+const Insurance = lazy(() => import("./pages/Insurance"));
+const CommunicationMediaIT = lazy(() => import("./pages/CommunicationMediaIT"));
+const RealEstate = lazy(() => import("./pages/RealEstate"));
+const Gaming = lazy(() => import("./pages/Gaming"));
+
+// Company & Misc
+const CompanyOverview = lazy(() => import("./pages/CompanyOverview"));
+const Careers = lazy(() => import("./pages/Careers"));
+const NewsAndUpdates = lazy(() => import("./pages/NewsAndUpdates"));
+const BlogDetail = lazy(() => import("./components/BlogDetail"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+
+// Landing Pages & Hidden Pages
+const LandingPage = lazy(
+  () => import("./pages/LandingPage/DigitalMarketingLandingPage/LandingPage"),
+);
+const SoftwareDevelopmentLandingPage = lazy(
+  () =>
+    import("./pages/LandingPage/SoftwareDevelopmentLandingPage/SoftwareDevelopmentLandingPage"),
+);
+const DesignLandingPage = lazy(
+  () => import("./pages/LandingPage/DesignLandingPage/DesignLandingPage"),
+);
+const GreetingsPage = lazy(
+  () => import("./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage"),
+);
+const WebDevelopmentHiddenPage = lazy(
+  () => import("./pages/WebDevelopmentHiddenPage"),
+);
+const AppDevelopmentHiddenPage = lazy(
+  () => import("./pages/AppDevelopmentHiddenPage"),
+);
+const CrmManagementSoftwareHiddenPage = lazy(
+  () => import("./pages/CrmManagementSoftwareHiddenPage"),
+);
+
+// Admin Panel
+const AdminLogin = lazy(
+  () => import("./pages/AdminPanel/components/AdminLogin"),
+);
+const AdminLanding = lazy(
+  () => import("./pages/AdminPanel/components/AdminLanding"),
+);
+const AdminPanel = lazy(
+  () => import("./pages/AdminPanel/components/AdminPanel"),
+);
+const CareerAdminPanel = lazy(
+  () => import("./pages/AdminPanel/components/CareerAdminPanel"),
+);
+const ViewReports = lazy(
+  () => import("./pages/AdminPanel/components/ViewReports"),
+);
+const Settings = lazy(() => import("./pages/AdminPanel/components/Settings")); // Note: Settings was imported in your original code but not used in a route. I'll include it in imports.
 
 gsap.registerPlugin(ScrollTrigger);
 
