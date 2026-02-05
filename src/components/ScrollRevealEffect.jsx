@@ -56,7 +56,7 @@ export default function ScrollRevealEffect() {
   ];
 
   const filteredTopics = topics.filter((topic) =>
-    topic.toLowerCase().includes(searchTerm.toLowerCase())
+    topic.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   // Hide dropdown on outside click
