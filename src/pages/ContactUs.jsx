@@ -48,7 +48,7 @@ const Dropdown = ({ label, options, value, onChange }) => {
   const dropdownRef = useRef(null);
 
   const filteredOptions = options.filter((opt) =>
-    opt.toLowerCase().includes(search.toLowerCase())
+    opt.toLowerCase().includes(search.toLowerCase()),
   );
 
   useEffect(() => {
