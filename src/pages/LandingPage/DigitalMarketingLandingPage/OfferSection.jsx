@@ -54,7 +54,7 @@ const OfferSection = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8">
 
                         {/* Left Column: Urgency & Scarcity */}
-                        <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 relative overflow-hidden">
+                        <div className="p-8 md:p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 relative overflow-hidden">
 
                             {/* Subtle background glow for left side */}
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-rose-500/5 to-transparent pointer-events-none" />
@@ -69,7 +69,7 @@ const OfferSection = () => {
 
 
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight">
-                                    This Offer Is Valid For a <br />
+                                    This Offer Is Valid For a {" "}
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-orange-300 to-rose-400">
                                         Few Days Only.
                                     </span>

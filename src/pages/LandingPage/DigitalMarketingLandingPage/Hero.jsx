@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ArrowRight, Check, ChevronDown, AlertCircle, Globe } from "lucide-react";
+import { ArrowRight, Check, ChevronDown, AlertCircle, Globe, X } from "lucide-react";
 import { Reveal } from "../../../ui/Reveal"; // Adjust path if needed
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -44,7 +44,7 @@ const Dropdown = ({ label, options, value, onChange, placeholder, isObject = fal
 
   return (
     <div className="flex flex-col gap-1.5 relative w-full" ref={dropdownRef}>
-      <label className="text-[13px] font-medium text-slate-300">
+      <label className="text-xs sm:text-[13px] font-medium text-slate-300">
         {label} <span className="text-rose-400">*</span>
       </label>
       <div className="relative">
@@ -138,8 +138,7 @@ export function LeadForm({ onClose, modalMode = false }) {
   ];
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     city: "",
     state: "",
     country: "",
@@ -160,7 +159,7 @@ export function LeadForm({ onClose, modalMode = false }) {
     return `${base} border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 focus:bg-white/[0.05]`;
   };
 
-  const labelClasses = "block text-[13px] font-medium text-slate-300 mb-1.5";
+  const labelClasses = "block text-xs sm:text-[13px] font-medium text-slate-300 mb-1.5";
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -201,7 +200,7 @@ export function LeadForm({ onClose, modalMode = false }) {
       country: countryObj.name,
       countryCodeIso: countryObj.code,
       dialCode: countryObj.dialCode,
-      phone: "", // Reset phone to prevent mismatch with new country rules
+      phone: "",
     }));
     setErrors(prev => ({ ...prev, country: "", phone: "" }));
   };
@@ -220,8 +219,7 @@ export function LeadForm({ onClose, modalMode = false }) {
     e.preventDefault();
     const newErrors = {};
 
-    if (!validateName(formData.firstName)) newErrors.firstName = "Enter a valid first name.";
-    if (!validateName(formData.lastName)) newErrors.lastName = "Enter a valid last name.";
+    if (!validateName(formData.fullName)) newErrors.fullName = "Enter a valid full name.";
     if (!formData.city.trim()) newErrors.city = "City is required.";
     if (!formData.state.trim()) newErrors.state = "State is required.";
     if (!formData.countryCodeIso) newErrors.country = "Select a country.";
@@ -248,15 +246,18 @@ export function LeadForm({ onClose, modalMode = false }) {
     setNotification("");
 
     try {
-      // PROPER PAYLOAD MAPPING FOR BACKEND
+      const nameParts = formData.fullName.trim().split(" ");
+      const parsedFirstName = nameParts[0];
+      const parsedLastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : ".";
+
       const payload = {
-        firstName: formData.firstName.trim(),
-        lastName: formData.lastName.trim(),
+        firstName: parsedFirstName,
+        lastName: parsedLastName,
         city: formData.city.trim(),
         state: formData.state.trim(),
         country: formData.country,
-        phoneCode: formData.dialCode,         // Correctly mapped to dialCode
-        phoneNumber: formData.phone.trim(),   // Correctly mapped to raw phone value
+        phoneCode: formData.dialCode,
+        phoneNumber: formData.phone.trim(),
         email: formData.email.trim(),
         service: formData.service,
         hasWebsite: formData.hasWebsite ? "Yes" : "No",
@@ -288,43 +289,39 @@ export function LeadForm({ onClose, modalMode = false }) {
   };
 
   return (
-    <div className={`relative w-full max-w-xl mx-auto bg-[#0a0f1c]/80 backdrop-blur-2xl rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.6)] border border-indigo-500/10 transition-all ${modalMode ? "p-6 md:p-8" : "p-6 sm:p-8"}`}>
+    <div className={`relative w-full max-w-xl mx-auto bg-[#0a0f1c]/90 backdrop-blur-2xl rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.6)] border border-indigo-500/10 transition-all ${modalMode ? "p-5 pt-12 sm:p-8 sm:pt-12" : "p-6 sm:p-8"
+      }`}>
       {modalMode && (
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-full p-1.5 transition-colors z-20"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-full p-2 transition-colors z-20"
           type="button"
           disabled={isSubmitting}
         >
-          ✕
+          <X className="w-5 h-5" />
         </button>
       )}
 
-      <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-5">
+      <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-3">
 
         {notification && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-3 bg-rose-500/10 border border-rose-500/30 text-rose-300 rounded-lg text-xs flex items-center gap-2"
+            className="p-2 bg-rose-500/10 border border-rose-500/30 text-rose-300 rounded-lg text-xs flex items-center gap-2"
           >
             <AlertCircle className="w-4 h-4 shrink-0" /> {notification}
           </motion.div>
         )}
 
         {/* --- FORM GRID --- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
 
-          {/* Row 1: Name */}
-          <div>
-            <label className={labelClasses}>First Name <span className="text-rose-400">*</span></label>
-            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="John" className={getDynamicClasses("firstName")} disabled={isSubmitting} />
-            {errors.firstName && <span className="text-rose-400 text-[11px] mt-0.5 block">{errors.firstName}</span>}
-          </div>
-          <div>
-            <label className={labelClasses}>Last Name <span className="text-rose-400">*</span></label>
-            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Doe" className={getDynamicClasses("lastName")} disabled={isSubmitting} />
-            {errors.lastName && <span className="text-rose-400 text-[11px] mt-0.5 block">{errors.lastName}</span>}
+          {/* Row 1: Full Name */}
+          <div className="sm:col-span-2">
+            <label className={labelClasses}>Full Name <span className="text-rose-400">*</span></label>
+            <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="John Doe" className={getDynamicClasses("fullName")} disabled={isSubmitting} />
+            {errors.fullName && <span className="text-rose-400 text-[11px] mt-0.5 block">{errors.fullName}</span>}
           </div>
 
           {/* Row 2: Location */}
@@ -393,7 +390,7 @@ export function LeadForm({ onClose, modalMode = false }) {
         {/* Row 5: Website Toggle */}
         <div className={`flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg bg-white/[0.02] border transition-colors mt-1 ${errors.hasWebsite ? 'border-rose-500/70' : 'border-white/5'}`}>
           <div className="mb-2 sm:mb-0">
-            <span className="text-[13px] font-medium text-slate-300">Do you have a business website? <span className="text-rose-400">*</span></span>
+            <span className="text-xs sm:text-[13px] font-medium text-slate-300">Do you have a business website? <span className="text-rose-400">*</span></span>
             {errors.hasWebsite && <span className="text-rose-400 text-[11px] block mt-0.5">{errors.hasWebsite}</span>}
           </div>
           <div className="flex gap-1 bg-black/40 p-1 rounded-md border border-white/5 shrink-0">
@@ -403,8 +400,7 @@ export function LeadForm({ onClose, modalMode = false }) {
                 setFormData(prev => ({ ...prev, hasWebsite: true }));
                 if (errors.hasWebsite) setErrors(prev => ({ ...prev, hasWebsite: "" }));
               }}
-              className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${formData.hasWebsite === true ? "bg-indigo-500 text-white shadow-md" : "text-slate-400 hover:text-white hover:bg-white/5"
-                }`}
+              className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${formData.hasWebsite === true ? "bg-indigo-500 text-white shadow-md" : "text-slate-400 hover:text-white hover:bg-white/5"}`}
             >
               Yes
             </button>
@@ -415,8 +411,7 @@ export function LeadForm({ onClose, modalMode = false }) {
                 if (errors.hasWebsite) setErrors(prev => ({ ...prev, hasWebsite: "" }));
                 if (errors.websiteUrl) setErrors(prev => ({ ...prev, websiteUrl: "" }));
               }}
-              className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${formData.hasWebsite === false ? "bg-slate-700 text-white shadow-md" : "text-slate-400 hover:text-white hover:bg-white/5"
-                }`}
+              className={`px-4 py-1.5 text-xs font-semibold rounded transition-all ${formData.hasWebsite === false ? "bg-slate-700 text-white shadow-md" : "text-slate-400 hover:text-white hover:bg-white/5"}`}
             >
               No
             </button>
@@ -476,28 +471,31 @@ export function LeadForm({ onClose, modalMode = false }) {
   );
 }
 
-// --- Modal Wrapper ---
+// --- Fully Responsive Modal Wrapper ---
 export function Modal({ isOpen, onClose, children }) {
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center overflow-y-auto p-4 sm:p-6 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
-          <motion.div
-            onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-xl"
-            initial={{ scale: 0.95, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.95, opacity: 0, y: 20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          >
-            {children}
-          </motion.div>
+          {/* A flex wrapper with min-h-full allows the content to center on large screens, but forces standard document scrolling on small screens without cutting off top/bottom */}
+          <div className="flex min-h-full items-center justify-center p-4 py-8 sm:p-6 w-full">
+            <motion.div
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-xl my-auto"
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+              {children}
+            </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
@@ -531,22 +529,35 @@ const Hero = () => {
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left pt-10 lg:pt-0">
           <Reveal delay={0.1}>
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left mb-6">
+              {/* 1. Urgency Badge */}
+              <div className="inline-flex items-center gap-2.5 px-5 py-2 border border-rose-500/30 bg-rose-500/10 text-rose-300 text-xs sm:text-sm font-bold tracking-widest uppercase mb-6 shadow-[0_0_20px_rgba(244,63,94,0.15)]">
+                Limited-Time Offer
+              </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
-              Get ₹1,00,000 Worth of Digital Marketing Services for <br className="hidden lg:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-400 animate-gradient">
-                Just ₹9,999!
-              </span>
-            </h1>
+              {/* 2. Main Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.15]">
+                Get  <span className="relative line-through decoration-rose-500/80 decoration-[3px] sm:decoration-[4px]">
+                  ₹1,00,000
+                </span>{" "}Worth of Complete Digital Marketing Services
+                <span className="inline-block relative whitespace-nowrap">
+                  <span className="absolute -inset-1 bg-rose-500/10 -skew-y-2 rounded-sm"></span>
+                </span>
+                <br className="hidden lg:block mt-2" />
+                <span className="block mt-4 sm:mt-5 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-400">
+                  For Just{" "}
+                  <span className="inline-block text-5xl sm:text-6xl lg:text-[72px] text-white drop-shadow-[0_0_35px_rgba(59,130,246,0.6)] font-black pb-2">
+                    ₹9,999!
+                  </span>
+                </span>
+              </h1>
+            </div>
           </Reveal>
 
           <Reveal delay={0.2}>
             <div className="space-y-4 max-w-2xl mx-auto lg:mx-0">
               <p className="text-base sm:text-lg text-indigo-100/90 font-medium leading-relaxed">
                 Do you want to grow your business online without spending a fortune? Here’s a special digital marketing offer you shouldn’t miss.
-              </p>
-              <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
-                We bring you a comprehensive Digital Marketing Offer, normally priced at <span className="line-through decoration-rose-500/70 font-semibold text-slate-300">₹1,00,000</span>, now available for just <span className="text-white font-bold bg-white/10 px-2 py-0.5 rounded">₹9,999</span> — only for a short period.
               </p>
             </div>
           </Reveal>
