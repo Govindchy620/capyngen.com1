@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Modal, LeadForm } from "./Hero";
+import { Gift, Sparkles, X, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function ExitPopup() {
   const [showPopup, setShowPopup] = useState(false);
@@ -153,6 +154,7 @@ export default function ExitPopup() {
 
   useEffect(() => {
     const handleMouseLeave = (e) => {
+      // Trigger only once per session typically, but leaving your logic intact
       if (e.clientY <= 0) {
         setShowPopup(true);
       }
@@ -166,65 +168,100 @@ export default function ExitPopup() {
       <AnimatePresence>
         {showPopup && !modalOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[100] px-4 py-6 overflow-y-auto"
           >
-            <div className="bg-white rounded-xl p-8 max-w-lg w-full shadow-xl border border-gray-200/50">
-              {/* Heading */}
-              <motion.h2
-                className="text-3xl font-bold text-gray-800 mb-2 text-center"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              className="relative w-full max-w-lg bg-[#0f172a]/90 backdrop-blur-xl border border-white/10 rounded-3xl p-8 sm:p-10 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden text-center group"
+            >
+              {/* --- BACKGROUND EFFECTS --- */}
+              {/* Dot Pattern Overlay */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
+
+              {/* Ambient Glows */}
+              <div className="absolute top-[-20%] left-[-10%] w-[300px] h-[300px] bg-indigo-500/20 blur-[80px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute bottom-[-20%] right-[-10%] w-[250px] h-[250px] bg-blue-500/20 blur-[80px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-110" />
+
+              {/* Close Button */}
+              <button
+                onClick={() => setShowPopup(false)}
+                className="absolute top-5 right-5 text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/10 rounded-full p-2 transition-all z-20"
               >
-                Wait! Don't Miss Out 🚀
-              </motion.h2>
-              {/* Subtitle */}
-              <motion.p
-                className="text-gray-600 mb-6 text-center"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
-              >
-                Get a{" "}
-                <strong className="text-indigo-600">special discount</strong> /{" "}
-                <strong className="text-indigo-600">free consultation</strong>{" "}
-                before you go!
-              </motion.p>
-              {/* Buttons */}
-              <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
-                {/* Leave Offer Button */}
-                <motion.button
-                  onClick={() => setShowPopup(false)}
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  className="px-6 py-3 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded-xl font-semibold shadow-md transition-transform transition-shadow"
-                >
-                  Leave Offer
-                </motion.button>
-                {/* Grab Offer Button */}
-                <motion.button
-                  onClick={() => {
-                    setModalOpen(true);
-                    setShowPopup(false);
-                  }}
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-md transition-transform transition-shadow"
-                >
-                  Grab Offer 🎁
-                </motion.button>
+                <X size={18} />
+              </button>
+
+              {/* --- CONTENT --- */}
+              <div className="relative z-10 flex flex-col items-center">
+
+                {/* 1. Pill Badge */}
+                <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-6">
+                  <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                  Wait! Before you leave
+                </div>
+
+                {/* 2. Headline */}
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+                  Don't leave without your <br className="hidden sm:block" />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 drop-shadow-sm">
+                    Exclusive Package
+                  </span>
+                </h2>
+
+                {/* 3. Subtitle */}
+                <p className="text-slate-300 mb-8 text-sm sm:text-base leading-relaxed max-w-md">
+                  We want to help your business scale. Grab a free expert consultation or lock in your special discount right now.
+                </p>
+
+                {/* 4. Mini Benefit Checklist (Builds desire) */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mb-10 text-xs sm:text-sm font-medium text-slate-300">
+                  <span className="flex items-center justify-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Free Audit
+                  </span>
+                  <span className="flex items-center justify-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Custom Strategy
+                  </span>
+                  <span className="flex items-center justify-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Zero Obligation
+                  </span>
+                </div>
+
+                {/* 5. CTA Buttons */}
+                <div className="w-full flex flex-col gap-4">
+                  {/* Primary Glowing Button */}
+                  <div className="relative w-full group/btn">
+                    {/* Animated Glow behind button */}
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl blur opacity-40 group-hover/btn:opacity-70 transition duration-500"></div>
+
+                    <button
+                      onClick={() => {
+                        setModalOpen(true);
+                        setShowPopup(false);
+                      }}
+                      className="relative w-full flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-500 hover:to-blue-400 text-white font-bold py-4 rounded-xl shadow-lg transition-all duration-300 transform group-hover/btn:-translate-y-0.5"
+                    >
+                      <Gift className="w-5 h-5" />
+                      Claim My Offer Now
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+
+                  {/* Secondary/Ghost Button */}
+                  <button
+                    onClick={() => setShowPopup(false)}
+                    className="text-slate-500 hover:text-slate-300 text-sm py-2 font-medium transition-colors hover:underline underline-offset-4"
+                  >
+                    No thanks, I'll pay full price later
+                  </button>
+                </div>
+
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
