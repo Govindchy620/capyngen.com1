@@ -27,7 +27,7 @@ const GameChanger = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                     {/* Main Hero Card: Affordable Investment */}
-                    <div className="md:col-span-4 p-8 md:p-12 3rem] bg-gradient-to-br from-indigo-900/40 to-slate-900/40 border border-indigo-500/30 backdrop-blur-xl relative overflow-hidden group hover:border-indigo-500/60 transition-all duration-500 shadow-2xl">
+                    <div className="md:col-span-4 p-4 bg-gradient-to-br from-indigo-900/40 to-slate-900/40 border border-indigo-500/30 backdrop-blur-xl relative overflow-hidden group hover:border-indigo-500/60 transition-all duration-500 shadow-2xl">
                         <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-indigo-600/20  blur-3xl group-hover:bg-indigo-600/30 transition-colors"></div>
 
                         <div className="relative z-10">
@@ -42,7 +42,7 @@ const GameChanger = () => {
                                         Get services worth ₹1,00,000 for just <span className="text-white font-bold bg-indigo-600/30 px-3 py-1  border border-indigo-500/30">₹9,999</span> — maximum value with minimal risk.
                                     </p>
                                     <div className="flex gap-4">
-                                        <button className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold  transition-all shadow-lg shadow-indigo-600/20 active:scale-95">
+                                        <button className="px-4 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold  transition-all shadow-lg shadow-indigo-600/20 active:scale-95">
                                             Secure This Offer
                                         </button>
                                         <div className="flex -space-x-3 items-center">

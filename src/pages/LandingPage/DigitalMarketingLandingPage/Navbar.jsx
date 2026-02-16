@@ -15,7 +15,7 @@ export const Navbar = () => {
     { label: "Home", href: "home" },
     { label: "Offers", href: "offer" },
     { label: "Our Services", href: "services" },
-    { label: "Growth Pipeline", href: "process" },
+    { label: "Process", href: "process" },
     { label: "Why Choose", href: "whychoose" },
   ];
 
