@@ -259,9 +259,9 @@ export function LeadForm({ onClose, modalMode = false }) {
         phoneNumber: formData.phone.trim(),   // Correctly mapped to raw phone value
         email: formData.email.trim(),
         service: formData.service,
-        hasWebsite: formData.hasWebsite,
+        hasWebsite: formData.hasWebsite ? "Yes" : "No",
         websiteUrl: formData.hasWebsite ? formData.websiteUrl.trim() : "",
-        leadSourcePage: "digital-marketing-offer",
+        leadSourcePage: "digital-marketing",
       };
 
       const res = await fetch("https://api.capyngen.com/api/lead", {
