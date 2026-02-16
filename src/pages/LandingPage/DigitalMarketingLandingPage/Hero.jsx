@@ -6,16 +6,32 @@ import { useNavigate } from "react-router-dom";
 import { getExampleNumber, isValidPhoneNumber } from "libphonenumber-js";
 import examples from "libphonenumber-js/examples.mobile.json";
 
-// --- Validation Helpers ---
+// --- Enhanced Validation Helpers ---
 const validateName = (name) => {
-  if (!name.trim()) return false;
-  const hasValidChars = /^[a-zA-Z\s\-']+$/.test(name);
-  const hasNoConsecutive = !/([\s\-'])\1/.test(name);
+  const trimmed = name.trim();
+  if (trimmed.length < 2) return false;
+  // Allows letters, spaces, hyphens, and apostrophes. No numbers.
+  const hasValidChars = /^[a-zA-Z\s\-']+$/.test(trimmed);
+  const hasNoConsecutive = !/([\s\-'])\1/.test(trimmed);
   return hasValidChars && hasNoConsecutive;
 };
 
+const validateLocation = (text) => {
+  const trimmed = text.trim();
+  if (trimmed.length < 2) return false;
+  // Allows only letters, spaces, and hyphens for City/State
+  return /^[a-zA-Z\s\-]+$/.test(trimmed);
+};
+
 const validateEmail = (email) => {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  // Robust standard email regex
+  return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email.trim());
+};
+
+const validateUrl = (url) => {
+  const trimmed = url.trim();
+  // Accepts 'example.com', 'www.example.com', 'http://...', 'https://...'
+  return /^(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/i.test(trimmed);
 };
 
 // --- Enhanced Dropdown Component ---
@@ -52,8 +68,8 @@ const Dropdown = ({ label, options, value, onChange, placeholder, isObject = fal
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
           className={`w-full text-left bg-white/[0.03] border rounded-lg px-3.5 py-2.5 text-sm outline-none transition-all flex justify-between items-center ${error
-            ? "border-rose-500/70 bg-rose-500/5 ring-1 ring-rose-500/30" :
-            isOpen
+            ? "border-rose-500/70 bg-rose-500/5 ring-1 ring-rose-500/30"
+            : isOpen
               ? "border-indigo-500 ring-1 ring-indigo-500/50 bg-white/[0.05]"
               : "border-white/10 hover:border-white/20 text-white"
             }`}
@@ -219,21 +235,38 @@ export function LeadForm({ onClose, modalMode = false }) {
     e.preventDefault();
     const newErrors = {};
 
-    if (!validateName(formData.fullName)) newErrors.fullName = "Enter a valid full name.";
-    if (!formData.city.trim()) newErrors.city = "City is required.";
-    if (!formData.state.trim()) newErrors.state = "State is required.";
-    if (!formData.countryCodeIso) newErrors.country = "Select a country.";
+    // Apply strict validations
+    if (!validateName(formData.fullName)) {
+      newErrors.fullName = "Please enter a valid full name (letters only).";
+    }
+    if (!validateLocation(formData.city)) {
+      newErrors.city = "Please enter a valid city (letters only).";
+    }
+    if (!validateLocation(formData.state)) {
+      newErrors.state = "Please enter a valid state (letters only).";
+    }
+    if (!formData.countryCodeIso) {
+      newErrors.country = "Please select a country.";
+    }
 
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required.";
     } else if (formData.countryCodeIso && !isValidPhoneNumber(formData.phone, formData.countryCodeIso)) {
-      newErrors.phone = "Invalid phone number format.";
+      newErrors.phone = "Invalid phone number format for the selected country.";
     }
 
-    if (!validateEmail(formData.email)) newErrors.email = "Enter a valid email address.";
-    if (!formData.service) newErrors.service = "Select a service.";
-    if (formData.hasWebsite === null) newErrors.hasWebsite = "Please select Yes or No.";
-    if (formData.hasWebsite && !formData.websiteUrl.trim()) newErrors.websiteUrl = "Website URL is required.";
+    if (!validateEmail(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    if (!formData.service) {
+      newErrors.service = "Please select a service.";
+    }
+    if (formData.hasWebsite === null) {
+      newErrors.hasWebsite = "Please select Yes or No.";
+    }
+    if (formData.hasWebsite && !validateUrl(formData.websiteUrl)) {
+      newErrors.websiteUrl = "Please enter a valid website URL (e.g., example.com).";
+    }
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -289,8 +322,7 @@ export function LeadForm({ onClose, modalMode = false }) {
   };
 
   return (
-    <div className={`relative w-full max-w-xl mx-auto bg-[#0a0f1c]/90 backdrop-blur-2xl rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.6)] border border-indigo-500/10 transition-all ${modalMode ? "p-5 pt-12 sm:p-8 sm:pt-12" : "p-6 sm:p-8"
-      }`}>
+    <div className={`relative w-full max-w-xl mx-auto bg-[#0a0f1c]/90 backdrop-blur-2xl rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.6)] border border-indigo-500/10 transition-all ${modalMode ? "p-5 pt-12 sm:p-8 sm:pt-12" : "p-6 sm:p-8"}`}>
       {modalMode && (
         <button
           onClick={onClose}
@@ -431,11 +463,11 @@ export function LeadForm({ onClose, modalMode = false }) {
               <div className="relative">
                 <Globe className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${errors.websiteUrl ? 'text-rose-400' : 'text-slate-500'}`} />
                 <input
-                  type="url"
+                  type="text"
                   name="websiteUrl"
                   value={formData.websiteUrl}
                   onChange={handleChange}
-                  placeholder="https://www.yourdomain.com"
+                  placeholder="e.g., www.yourdomain.com"
                   className={`${getDynamicClasses("websiteUrl")} pl-9`}
                   disabled={isSubmitting}
                 />
@@ -483,7 +515,6 @@ export function Modal({ isOpen, onClose, children }) {
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
-          {/* A flex wrapper with min-h-full allows the content to center on large screens, but forces standard document scrolling on small screens without cutting off top/bottom */}
           <div className="flex min-h-full items-center justify-center p-4 py-8 sm:p-6 w-full">
             <motion.div
               onClick={(e) => e.stopPropagation()}
@@ -513,7 +544,7 @@ const Hero = () => {
   }, [modalOpen]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-20 lg:py-24 overflow-hidden bg-[#030712]">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-4 lg:py-24 overflow-hidden bg-[#030712]">
       {/* Background Effects */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-indigo-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob" />
@@ -530,16 +561,14 @@ const Hero = () => {
         <div className="flex-1 text-center lg:text-left pt-10 lg:pt-0">
           <Reveal delay={0.1}>
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left mb-6">
-              {/* 1. Urgency Badge */}
               <div className="inline-flex items-center gap-2.5 px-5 py-2 border border-rose-500/30 bg-rose-500/10 text-rose-300 text-xs sm:text-sm font-bold tracking-widest uppercase mb-6 shadow-[0_0_20px_rgba(244,63,94,0.15)]">
                 Limited-Time Offer
               </div>
 
-              {/* 2. Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.15]">
-                Get  <span className="relative line-through decoration-rose-500/80 decoration-[3px] sm:decoration-[4px]">
+                Get  <span className="relative line-through bg-rose-500/10 decoration-rose-500 decoration-[3px] sm:decoration-[5px]">
                   ₹1,00,000
-                </span>{" "}Worth of Complete Digital Marketing Services
+                </span> Worth of Complete Digital Marketing Services
                 <span className="inline-block relative whitespace-nowrap">
                   <span className="absolute -inset-1 bg-rose-500/10 -skew-y-2 rounded-sm"></span>
                 </span>
