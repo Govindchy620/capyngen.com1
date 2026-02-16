@@ -77,7 +77,7 @@ const Services = () => {
       id="services"
     >
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-indigo-600/10 rounded-full filter blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-indigo-600/10  filter blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -98,7 +98,7 @@ const Services = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
           {services.map((service, index) => (
             <FadeIn key={index} delay={index * 0.1}>
-              <div className="group relative h-full bg-[#0a0f1c]/80 backdrop-blur-xl overflow-hidden rounded-2xl border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(79,70,229,0.4)] hover:border-indigo-500/30 flex flex-col">
+              <div className="group relative h-full bg-[#0a0f1c]/80 backdrop-blur-xl overflow-hidden  border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(79,70,229,0.4)] hover:border-indigo-500/30 flex flex-col">
 
                 {/* Image Header (More compact for an 8-item grid) */}
                 <div className="h-44 relative overflow-hidden shrink-0">
@@ -115,7 +115,7 @@ const Services = () => {
 
                   {/* Floating Overlapping Icon */}
                   <div className="absolute -top-6 left-6 z-20">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg border border-white/20 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
+                    <div className={`w-12 h-12  bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg border border-white/20 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
                       <service.icon className="text-white w-5 h-5" />
                     </div>
                   </div>

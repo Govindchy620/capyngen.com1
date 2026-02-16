@@ -34,7 +34,7 @@ const benefits = [
 
 const OfferSection = () => {
     return (
-        <section className="relative py-12 md:py-24 bg-[#030712] overflow-hidden">
+        <section className="relative py-8 md:py-24 bg-[#030712] overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[20%] right-[-5%] w-[400px] h-[400px] bg-rose-500/10  mix-blend-screen filter blur-[120px] animate-pulse" />

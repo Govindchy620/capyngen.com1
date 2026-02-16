@@ -544,7 +544,7 @@ const Hero = () => {
   }, [modalOpen]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-4 lg:py-24 overflow-hidden bg-[#030712]">
+    <section className="relative min-h-screen flex items-center justify-center pt-6 pb-1 lg:py-24 overflow-hidden bg-[#030712]">
       {/* Background Effects */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-indigo-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob" />
