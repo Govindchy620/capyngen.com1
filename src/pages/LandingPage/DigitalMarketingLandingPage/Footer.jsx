@@ -42,12 +42,13 @@ const Footer = () => {
       className="bg-brand-dark pt-24 pb-12 border-t border-white/5 relative overflow-hidden bg-black"
       id="contact"
     >
-      {/* Background glow for footer */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-glow/5 rounded-full blur-[100px]" />
+      {/* 1. Added pointer-events-none here to stop it from stealing clicks */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-glow/5 rounded-full blur-[100px] pointer-events-none" />
 
 
+      {/* 2. Added relative and z-10 here to bring content to the front */}
       <motion.div
-        className="mt-2 pt-6 border-t border-slate-700/50 space-y-6 max-w-6xl mx-auto flex flex-col justify-center items-center"
+        className="relative z-10 mt-2 pt-6 border-t border-slate-700/50 space-y-6 max-w-6xl mx-auto flex flex-col justify-center items-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

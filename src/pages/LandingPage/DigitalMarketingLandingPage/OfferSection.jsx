@@ -76,7 +76,7 @@ const OfferSection = () => {
                                 </h2>
 
                                 <p className="text-lg text-slate-400 leading-relaxed mb-8">
-                                    Once the countdown ends, the price will instantly return to its original value of <span className="text-white font-semibold line-through decoration-rose-500/70">₹1,00,000</span>. Don't let your competitors grab this advantage before you do.
+                                    Once the countdown ends, the price will instantly return to its original value of ₹1,00,000. Don't let your competitors grab this advantage before you do.
                                 </p>
 
                                 {/* Animated Call to Action Anchor */}
@@ -103,7 +103,7 @@ const OfferSection = () => {
                                     Is this right for you?
                                 </h3>
                                 <p className="text-slate-400 mb-8 text-base">
-                                    This exclusive package is specially engineered for <span className="text-indigo-300 font-medium">small and medium businesses</span> that are hungry for:
+                                    This exclusive package is specially engineered for <span className="text-indigo-300 font-medium">all type of businesses</span> that are hungry for:
                                 </p>
 
                                 <div className="space-y-4">
