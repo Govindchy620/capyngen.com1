@@ -4,11 +4,14 @@ import WhyChooseCapyngen from "./WhyChooseCapyngen";
 import ExitPopup from "./ExitPopup";
 import { Helmet } from "react-helmet-async";
 import Hero from "./Hero";
+import OfferSection from "./OfferSection";
 import Services from "./Services";
-import Strategy from "./Strategy";
-import WhatMakesUsDifferent from "./WhatMakesUsDifferent";
-import Audience from "./Audience";
+import WhoCanBenefit from "./WhoCanBenefit";
+import NextSteps from "./NextSteps";
 import Footer from "./Footer";
+import ExplosiveGrowth from "./ExplosiveGrowth";
+import GameChanger from "./GameChanger";
+import GrowthPipeline from "./GrowthPipeline";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -52,17 +55,22 @@ const LandingPage = () => {
       <ExitPopup />
       <div id="home"></div>
       <Hero />
-      <div id="whychoose"></div>
-      <WhyChooseCapyngen />
+      <div id="offer"></div>
+      <OfferSection />
       <div id="services"></div>
       <Services />
-      <div id="strategy"></div>
-      <Strategy />
-      <div id="different"></div>
-      <WhatMakesUsDifferent />
-      <div id="audience"></div>
-      <Audience />
-      <div id="about"></div>
+      <div id="gamechanger"></div>
+      <GameChanger />
+      <div id="process"></div>
+      <GrowthPipeline />
+      <div id="whychoose"></div>
+      <WhyChooseCapyngen />
+      <div id="who"></div>
+      <WhoCanBenefit />
+      <div id="growth"></div>
+      <ExplosiveGrowth />
+      <div id="nextsteps"></div>
+      <NextSteps />
       <Footer />
     </div>
   );

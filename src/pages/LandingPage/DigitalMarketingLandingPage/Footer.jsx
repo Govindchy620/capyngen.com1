@@ -45,26 +45,7 @@ const Footer = () => {
       {/* Background glow for footer */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-glow/5 rounded-full blur-[100px]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-brand-accent to-indigo-600 rounded-3xl p-8 md:p-16 text-center mb-24 shadow-2xl transform -translate-y-12 border border-white/10">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Ready to Grow with Capyngen?
-          </h2>
-          <p className="text-blue-100 max-w-2xl mx-auto text-lg mb-10">
-            When it comes to SEO, PPC, Social Media, and full-funnel digital
-            marketing strategy-based partners, Capyngen is the best option to
-            consider. Stop experimentation and begin systematic, quantifiable
-            development.
-          </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-brand-accent font-bold px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors shadow-lg">
-              Get Your Free Strategy Session
-            </button>
-          </div>
-        </div>
-      </div>
       <motion.div
         className="mt-2 pt-6 border-t border-slate-700/50 space-y-6 max-w-6xl mx-auto flex flex-col justify-center items-center"
         initial="hidden"

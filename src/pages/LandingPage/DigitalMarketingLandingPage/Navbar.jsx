@@ -13,9 +13,9 @@ export const Navbar = () => {
 
   const menuItems = [
     { label: "Home", href: "home" },
-    { label: "Why Choose Us", href: "whychoose" },
+    { label: "Offers", href: "offer" },
     { label: "Our Services", href: "services" },
-    { label: "What Makes Us Different", href: "different" },
+    { label: "Why Choose", href: "whychoose" },
     { label: "About Us", href: "about" },
   ];
 
