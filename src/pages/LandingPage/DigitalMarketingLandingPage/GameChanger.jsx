@@ -39,7 +39,7 @@ const GameChanger = () => {
                             <div className="flex flex-col lg:flex-row lg:items-center gap-8">
                                 <div className="flex-1">
                                     <p className="text-slate-300 text-xl leading-relaxed mb-8">
-                                        Get services worth ₹1,0,000 for just <span className="text-white font-bold bg-indigo-600/30 px-3 py-1  border border-indigo-500/30">₹9,999</span> — maximum value with minimal risk.
+                                        Get services worth ₹1,00,000 for just <span className="text-white font-bold bg-indigo-600/30 px-3 py-1  border border-indigo-500/30">₹9,999</span> — maximum value with minimal risk.
                                     </p>
                                     <div className="flex gap-4">
                                         <button className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold  transition-all shadow-lg shadow-indigo-600/20 active:scale-95">
