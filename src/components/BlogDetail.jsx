@@ -58,11 +58,11 @@ const BlogDetail = () => {
     // Split "Full Name" into First/Last for the API
     const nameParts = formData.name.trim().split(" ");
     const firstName = nameParts[0];
-    const lastName = nameParts.slice(1).join(" ") || "";
+    const lastName = nameParts.slice(1).join(" ") || "NA";
 
     const payload = {
       firstName,
-      lastName,
+      lastName: "NA", // API requires lastName, so defaulting to "NA" if not provided
       email: formData.email,
       phoneNumber: "N/A", // Defaulting to N/A to pass validation if strictly required
       topic: blog?.group || "Blog Sidebar Inquiry",
