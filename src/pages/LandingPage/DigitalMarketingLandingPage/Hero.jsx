@@ -565,7 +565,7 @@ const Hero = () => {
                 Limited-Time Offer
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.15]">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.15]">
                 Get  <span className="relative line-through bg-rose-500/10 decoration-rose-500 decoration-[3px] sm:decoration-[5px]">
                   ₹1,00,000
                 </span> Worth of Complete Digital Marketing Services
@@ -591,8 +591,8 @@ const Hero = () => {
             </div>
           </Reveal>
 
-          <Reveal delay={0.3}>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full justify-center lg:justify-start">
+          <div className="mt-10 flex w-full justify-center lg:justify-start">
+            <Reveal delay={0.3}>
               <button
                 onClick={() => setModalOpen(true)}
                 className="group relative px-8 py-4 bg-white text-slate-900 font-bold rounded-xl overflow-hidden transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)]"
@@ -602,8 +602,8 @@ const Hero = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
 
         {/* Right Form (Visible on Desktop) */}
