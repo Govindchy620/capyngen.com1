@@ -107,6 +107,10 @@ const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
 const LandingPage = lazy(
   () => import("./pages/LandingPage/DigitalMarketingLandingPage/LandingPage"),
 );
+const LandingPageForeign = lazy(
+  () => import("./pages/LandingPage/DigitalMarketingLandingPageForeign/LandingPageForeign"),
+);
+
 const SoftwareDevelopmentLandingPage = lazy(
   () =>
     import("./pages/LandingPage/SoftwareDevelopmentLandingPage/SoftwareDevelopmentLandingPage"),
@@ -162,6 +166,7 @@ const AppContent = () => {
 
   const noLayoutRoutes = [
     "/digital-marketing-landing-page",
+    "/digital-marketing-offer-page",
     "/design-landing-page",
     "/software-development-landing-page",
     "/greetings",
@@ -297,6 +302,10 @@ const AppContent = () => {
             <Route
               path="/digital-marketing-landing-page"
               element={<LandingPage />}
+            />
+            <Route
+              path="/digital-marketing-offer-page"
+              element={<LandingPageForeign />}  
             />
             <Route
               path="/software-development-landing-page"
