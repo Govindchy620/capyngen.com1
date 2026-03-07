@@ -23,6 +23,8 @@ import Preloader from "./components/Preloader";
 // Admin Services (Lightweight functions)
 import { isAdminLoggedIn } from "./pages/AdminPanel/services/authService";
 import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
+import usePageTracking from "./hooks/usePageTracking";
+import PageTracking from "./components/PageTracking";
 
 // ============================================================================
 // 2. LAZY IMPORTS (Code Splitting)
@@ -166,6 +168,7 @@ const PageLoader = () => (
 
 const AppContent = () => {
   const location = useLocation();
+  usePageTracking();
 
   const noLayoutRoutes = [
     "/digital-marketing-landing-page",
@@ -382,6 +385,7 @@ const AppContent = () => {
 };
 
 const App = () => {
+
   const [isLoading, setIsLoading] = useState(true);
   const [fadeProp, setFadeProp] = useState({ opacity: 1, zIndex: 9999 });
 
@@ -487,6 +491,7 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
+      <PageTracking />
 
       <div
         className="preloader-overlay"
