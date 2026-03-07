@@ -115,7 +115,7 @@ const GreetingsPage = () => {
         {/* Action Buttons */}
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <button
-            onClick={() => navigate("/digital-marketing-landing-page")}
+            onClick={() => navigate("/digital-marketing-offer-page")}
             className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#030712] font-bold rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
           >
             <ArrowLeft className="w-5 h-5" />

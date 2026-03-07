@@ -121,6 +121,9 @@ const DesignLandingPage = lazy(
 const GreetingsPage = lazy(
   () => import("./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage"),
 );
+const GreetingsPageForeign = lazy(
+  () => import("./pages/LandingPage/DigitalMarketingLandingPageForeign/GreetingsPageForeign"),
+);
 const WebDevelopmentHiddenPage = lazy(
   () => import("./pages/WebDevelopmentHiddenPage"),
 );
@@ -316,6 +319,7 @@ const AppContent = () => {
               element={<DesignLandingPage />}
             />
             <Route path="/greetings" element={<GreetingsPage />} />
+            <Route path="/greetings-offer" element={<GreetingsPageForeign />} />
             <Route
               path="/web-development-hidden-page"
               element={<WebDevelopmentHiddenPage />}

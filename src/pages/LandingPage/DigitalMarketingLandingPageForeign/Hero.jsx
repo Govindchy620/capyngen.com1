@@ -309,7 +309,7 @@ export function LeadForm({ onClose, modalMode = false }) {
       if (window.fbq) window.fbq("track", "Lead");
 
       if (res.ok || data.ok) {
-        navigate("/greetings", { replace: true });
+        navigate("/greetings-offer", { replace: true });
       } else {
         setNotification(data.message || "Something went wrong. Please try again later.");
       }
