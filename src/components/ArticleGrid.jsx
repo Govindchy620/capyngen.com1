@@ -34,31 +34,43 @@ const ArticleGrid = () => {
   const [relatedBlogs, setRelatedBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [page, setPage] = useState(1);
+const [limit] = useState(10);
+const [totalPages, setTotalPages] = useState(1);
+
+
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, [page]);
+
   /* ======================
      FETCH BLOGS
   ====================== */
   useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const res = await fetch("https://api.capyngen.com/api/blogs");
-        const data = await res.json();
+  const fetchBlogs = async () => {
+    try {
+      setLoading(true);
 
-        const list = Array.isArray(data)
-          ? data
-          : Array.isArray(data.blogs)
-            ? data.blogs
-            : [];
+      const res = await fetch(
+        `https://api.capyngen.com/api/blogs?page=${page}&limit=${limit}`
+      );
 
-        setBlogs(list);
-      } catch (err) {
-        console.error("Blog fetch failed", err);
-      } finally {
-        setLoading(false);
-      }
-    };
+      const data = await res.json();
 
-    fetchBlogs();
-  }, []);
+      const list = Array.isArray(data.blogs) ? data.blogs : [];
+
+      setBlogs(list);
+      setTotalPages(data.pagination?.totalPages || 1);
+
+    } catch (err) {
+      console.error("Blog fetch failed", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchBlogs();
+}, [page, limit]);
 
   /* ======================
      SELECT BLOG BY SLUG
@@ -117,6 +129,7 @@ const ArticleGrid = () => {
   const handleTagClick = (e, tag) => {
     e.stopPropagation();
     setActiveFilter(tag);
+    setPage(1);
     navigate("/news-and-updates");
     setSelectedBlog(null);
   };
@@ -238,6 +251,7 @@ const ArticleGrid = () => {
               <button
                 onClick={() => {
                   setActiveFilter("All");
+                  setPage(1);
                   navigate("/news-and-updates");
                 }}
                 className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-cyan-500/40 text-cyan-400 rounded-md hover:bg-cyan-500/10 transition"
@@ -256,7 +270,7 @@ const ArticleGrid = () => {
                 >
                   <img
                     src={post.image}
-                    className="xl:h-64 w-full object-contain xl:object-cover"
+                    className="w-full object-contain xl:object-cover"
                     alt={post.title}
                   />
                   <div className="p-4">
@@ -294,6 +308,47 @@ const ArticleGrid = () => {
           </>
         )}
       </section>
+      <div className="flex justify-center items-center gap-2 mt-12 flex-wrap">
+
+  {/* Previous */}
+  <button
+    disabled={page === 1}
+    onClick={() => setPage((p) => p - 1)}
+    className="px-4 py-2 border border-slate-700 text-slate-300 rounded-md disabled:opacity-40"
+  >
+    Prev
+  </button>
+
+  {/* Page Numbers */}
+  {Array.from({ length: totalPages }).map((_, i) => {
+    const pageNumber = i + 1;
+
+    return (
+      <button
+        key={pageNumber}
+        onClick={() => setPage(pageNumber)}
+        className={`px-4 py-2 rounded-md border
+        ${
+          page === pageNumber
+            ? "bg-cyan-500 text-black border-cyan-500"
+            : "border-slate-700 text-slate-300"
+        }`}
+      >
+        {pageNumber}
+      </button>
+    );
+  })}
+
+  {/* Next */}
+  <button
+    disabled={page === totalPages}
+    onClick={() => setPage((p) => p + 1)}
+    className="px-4 py-2 border border-slate-700 text-slate-300 rounded-md disabled:opacity-40"
+  >
+    Next
+  </button>
+
+</div>
     </div>
   );
 };

@@ -2,7 +2,7 @@
 
 export async function loginAdmin({ email, password }) {
   // ✅ TEMP credentials
-  const ADMIN_EMAIL = "admin@capyngen.com";
+  const ADMIN_EMAIL = "admin@aynzenix.com";
   const ADMIN_PASSWORD = "Admin@123";
 
   return new Promise((resolve, reject) => {

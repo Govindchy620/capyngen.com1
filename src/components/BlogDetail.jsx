@@ -324,7 +324,7 @@ const BlogDetail = () => {
                   <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                   <img
                     src={blog.image}
-                    className="relative w-full aspect-[4/3] sm:aspect-[16/9] object-cover rounded-xl border border-white/10 shadow-2xl"
+                    className="relative w-full object-cover rounded-xl border border-white/10 shadow-2xl"
                     alt={blog.title}
                   />
                 </div>
