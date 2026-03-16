@@ -128,7 +128,7 @@ const BlogDetail = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await fetch(API_URL);
+        const res = await fetch(`${API_URL}?limit=1000`);
         const data = await res.json();
         const blogs = Array.isArray(data.blogs) ? data.blogs : [];
         const decodedSlug = decodeURIComponent(slug);
