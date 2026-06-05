@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { assets, navItems } from "../assets/assets";
+import { brandAssets, navItems } from "../assets/navData";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -74,7 +74,7 @@ const Navbar = () => {
               className="flex-shrink-0 z-50 transition-transform hover:scale-105"
             >
               <img
-                src={assets.capyngenLogo}
+                src={brandAssets.capyngenLogo}
                 className="w-26 md:w-36"
                 alt="logo"
               />

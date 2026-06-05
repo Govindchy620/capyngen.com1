@@ -171,7 +171,7 @@ const ExplosiveGrowth = () => {
                                 All For Just
                             </div>
                             <div className="text-5xl md:text-6xl font-black text-white mb-4">
-                                ₹9,999
+                                ₹29,999
                             </div>
                             <motion.button
                                 onClick={() => {

@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { assets } from "../assets/assets";
 
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
@@ -64,7 +63,7 @@ const Preloader = ({ state }) => {
   // ✅ Keep overlay mounted until exit animation is done
   useEffect(() => {
     if (state?.isComplete) {
-      const timer = setTimeout(() => setIsVisible(false), 1200);
+      const timer = setTimeout(() => setIsVisible(false), 650);
       return () => clearTimeout(timer);
     }
   }, [state?.isComplete]);
@@ -73,7 +72,7 @@ const Preloader = ({ state }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] transition-all duration-1000 ease-in-out
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] transition-all duration-500 ease-in-out
         ${
           state?.isComplete
             ? "translate-y-[-100%] opacity-0"
@@ -94,10 +93,10 @@ const Preloader = ({ state }) => {
         }}
       />
 
-      {/* Logo */}
+        {/* Logo */}
       <div className="relative mb-10">
         <img
-          src={assets.capyngen3d}
+          src="/capyngen3d.png"
           alt="Capyngen"
           className="w-48 h-48 sm:w-64 sm:h-64 object-contain drop-shadow-[0_0_28px_rgba(34,211,238,0.22)] animate-[popIn_0.8s_cubic-bezier(0.22,1,0.36,1)]"
         />

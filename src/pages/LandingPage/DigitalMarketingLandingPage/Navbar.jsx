@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { assets } from "../../../assets/assets";
+import { brandAssets } from "../../../assets/navData";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -33,7 +33,7 @@ export const Navbar = () => {
           whileHover={{ scale: 1.03 }}
           onClick={() => scrollToSection("home")}
         >
-          <img src={assets.capyngenLogo} alt="" className="w-32" />
+          <img src={brandAssets.capyngenLogo} alt="" className="w-32" />
         </motion.div>
 
         {/* Desktop Menu */}

@@ -2,7 +2,9 @@
 
 import { useRef, useState } from "react";
 import Slider from "react-slick";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { assets } from "../assets/assets";
 import BestHeading from "./BestHeading";
 
@@ -190,7 +192,7 @@ export default function TestimonialCarousel() {
                       "{testimonial.quote}"
                     </p>
                     <div className="flex justify-end">
-                      <i className="fa-solid fa-quote-right text-7xl text-white/20"></i>
+                      <Quote className="h-20 w-20 text-white/20" />
                     </div>
                   </div>
                 </div>

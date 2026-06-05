@@ -17,13 +17,13 @@ const Footer = () => {
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/capyngen/",
+      href: "https://www.instagram.com/capyngen_official/",
       label: "Instagram",
     },
     { icon: Twitter, href: "https://x.com/capyngen", label: "Twitter" },
     {
       icon: Youtube,
-      href: "https://www.youtube.com/@Capyngen-pvt-ltd",
+      href: "https://www.youtube.com/@Capyngen_official",
       label: "YouTube",
     },
   ];

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { assets, navItems } from "../assets/assets";
+import { brandAssets, navItems } from "../assets/navData";
 import {
   Facebook,
   Linkedin,
@@ -88,7 +88,7 @@ const Footer = () => {
             <div className="mb-6">
               <NavLink to="/">
                 <img
-                  src={assets.capyngenLogo || assets.capyngenFavIcon}
+                  src={brandAssets.capyngenLogo || brandAssets.capyngenFavIcon}
                   alt="Capyngen Logo"
                   className="w-full mb-4 max-w-[200px]"
                 />

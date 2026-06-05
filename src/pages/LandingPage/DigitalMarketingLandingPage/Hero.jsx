@@ -493,7 +493,7 @@ export function LeadForm({ onClose, modalMode = false }) {
             </>
           ) : (
             <>
-              Claim My ₹9,999 Digital Marketing Package
+              Claim My ₹29,999 Digital Marketing Package
               <ArrowRight className="w-4 h-4" />
             </>
           )}
@@ -576,7 +576,7 @@ const Hero = () => {
                 <span className="block mt-4 sm:mt-5 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-400">
                   For Just{" "}
                   <span className="inline-block text-5xl sm:text-6xl lg:text-[72px] text-white drop-shadow-[0_0_35px_rgba(59,130,246,0.6)] font-black pb-2">
-                    ₹9,999!
+                    ₹29,999!
                   </span>
                 </span>
               </h1>
@@ -598,7 +598,7 @@ const Hero = () => {
                 className="group relative px-8 py-4 bg-white text-slate-900 font-bold rounded-xl overflow-hidden transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)]"
               >
                 <span className="relative flex items-center justify-center gap-2">
-                  Claim My ₹9,999 Package
+                  Claim My ₹29,999 Package
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>

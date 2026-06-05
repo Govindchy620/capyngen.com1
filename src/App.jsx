@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,17 +6,7 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// ============================================================================
-// 1. STATIC IMPORTS (Critical Core Assets Only)
-// ============================================================================
-// We keep these static so the "shell" of the app loads instantly.
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Preloader from "./components/Preloader";
 
@@ -24,7 +14,6 @@ import Preloader from "./components/Preloader";
 import { isAdminLoggedIn } from "./pages/AdminPanel/services/authService";
 import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
 import usePageTracking from "./hooks/usePageTracking";
-import PageTracking from "./components/PageTracking";
 
 // ============================================================================
 // 2. LAZY IMPORTS (Code Splitting)
@@ -32,6 +21,8 @@ import PageTracking from "./components/PageTracking";
 // Each of these will now be a separate small JS file, loaded only on demand.
 
 // Main Pages
+const Navbar = lazy(() => import("./components/Navbar"));
+const Footer = lazy(() => import("./components/Footer"));
 const Homepage = lazy(() => import("./pages/Homepage"));
 const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
 const AppDevelopment = lazy(() => import("./pages/AppDevelopment"));
@@ -154,8 +145,6 @@ const ViewReports = lazy(
 );
 const Settings = lazy(() => import("./pages/AdminPanel/components/Settings"));
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ProtectedRoute = ({ children }) => {
   const loggedIn = isAdminLoggedIn();
   if (!loggedIn) return <Navigate to="/admin-login" replace />;
@@ -165,6 +154,89 @@ const ProtectedRoute = ({ children }) => {
 const PageLoader = () => (
   <div style={{ height: "100vh", backgroundColor: "#050505" }}></div>
 );
+
+const injectScript = (src, { id, async = true, defer = false } = {}) => {
+  if (id && document.getElementById(id)) return;
+  if (!id && document.querySelector(`script[src="${src}"]`)) return;
+
+  const script = document.createElement("script");
+  script.src = src;
+  script.async = async;
+  script.defer = defer;
+  if (id) script.id = id;
+  document.head.appendChild(script);
+};
+
+const runAfterInitialPaint = (callback) => {
+  let cleanupIdle = () => {};
+  const frameId = window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      if ("requestIdleCallback" in window) {
+        const idleId = window.requestIdleCallback(callback, { timeout: 2500 });
+        cleanupIdle = () => window.cancelIdleCallback?.(idleId);
+        return;
+      }
+
+      const timeoutId = window.setTimeout(callback, 1200);
+      cleanupIdle = () => window.clearTimeout(timeoutId);
+    });
+  });
+
+  return () => {
+    window.cancelAnimationFrame(frameId);
+    cleanupIdle();
+  };
+};
+
+const loadMarketingScripts = () => {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag =
+    window.gtag ||
+    function gtag() {
+      window.dataLayer.push(arguments);
+    };
+
+  injectScript("https://www.googletagmanager.com/gtm.js?id=GTM-NB2SNHDC", {
+    id: "gtm-script",
+  });
+  injectScript("https://www.googletagmanager.com/gtag/js?id=AW-17183563041", {
+    id: "gtag-aw-script",
+  });
+
+  window.gtag("js", new Date());
+  window.gtag("config", "AW-17183563041");
+  window.gtag("config", "G-57J9W85WBB");
+
+  if (!window.fbq) {
+    const fbq = function () {
+      fbq.callMethod
+        ? fbq.callMethod.apply(fbq, arguments)
+        : fbq.queue.push(arguments);
+    };
+    window.fbq = fbq;
+    window._fbq = fbq;
+    fbq.push = fbq;
+    fbq.loaded = true;
+    fbq.version = "2.0";
+    fbq.queue = [];
+    injectScript("https://connect.facebook.net/en_US/fbevents.js", {
+      id: "meta-pixel-script",
+    });
+    fbq("init", "870013968909327");
+    fbq("track", "PageView");
+  }
+
+  injectScript("https://t.contentsquare.net/uxa/730ef13edd313.js", {
+    id: "contentsquare-script",
+    defer: true,
+  });
+
+  window._tfa = window._tfa || [];
+  window._tfa.push({ notify: "event", name: "page_view", id: 1961592 });
+  injectScript("//cdn.taboola.com/libtrc/unip/1961592/tfa.js", {
+    id: "tb_tfa_script",
+  });
+};
 
 const AppContent = () => {
   const location = useLocation();
@@ -188,7 +260,11 @@ const AppContent = () => {
 
   return (
     <>
-      {!hideLayout && <Navbar />}
+      {!hideLayout && (
+        <Suspense fallback={null}>
+          <Navbar />
+        </Suspense>
+      )}
 
       <div style={{ minHeight: "100vh", width: "100%" }}>
         <Suspense fallback={<PageLoader />}>
@@ -379,16 +455,17 @@ const AppContent = () => {
         </Suspense>
       </div>
 
-      {!hideLayout && <Footer />}
+      {!hideLayout && (
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
+      )}
     </>
   );
 };
 
 const App = () => {
-
-  const [isLoading, setIsLoading] = useState(true);
-  const [fadeProp, setFadeProp] = useState({ opacity: 1, zIndex: 9999 });
-
+  const [showPreloader, setShowPreloader] = useState(true);
   const [loadingState, setLoadingState] = useState({
     progress: 0,
     message: "Configuring core modules...",
@@ -396,124 +473,83 @@ const App = () => {
   });
 
   useEffect(() => {
-    if (!isLoading) return;
+    return runAfterInitialPaint(loadMarketingScripts);
+  }, []);
 
-    const milestoneMessage = (p) => {
-      if (p >= 100) return "Ready";
-      if (p >= 75) return "Finalizing assets...";
-      if (p >= 50) return "Securing quantum link...";
-      if (p >= 25) return "Optimizing rendering engine...";
+  useEffect(() => {
+    if (!showPreloader) return;
+
+    const startedAt = performance.now();
+    const minVisibleMs = 750;
+    const fallbackReadyMs = 1600;
+    let rafId = null;
+    let hideTimeoutId = null;
+    let lastStateUpdate = 0;
+    let completed = false;
+    let loaded = document.readyState === "complete";
+
+    const milestoneMessage = (progress) => {
+      if (progress >= 100) return "Ready";
+      if (progress >= 75) return "Finalizing assets...";
+      if (progress >= 50) return "Preparing experience...";
+      if (progress >= 25) return "Optimizing rendering...";
       return "Configuring core modules...";
     };
 
-    let rafId = null;
-    let start = performance.now();
-    let progress = 0;
-    let domLoaded = false;
-
-    const easeOutQuint = (t) => 1 - Math.pow(1 - t, 5);
-
-    // ✅ update only every 66ms (15 FPS) -> NO jitter
-    let lastUIUpdate = 0;
-
-    const DURATION_BEFORE_LOAD = 900;
-    const DURATION_AFTER_LOAD = 450;
+    const complete = () => {
+      if (completed) return;
+      completed = true;
+      setLoadingState({
+        progress: 100,
+        message: "Ready",
+        isComplete: true,
+      });
+      hideTimeoutId = window.setTimeout(() => setShowPreloader(false), 700);
+    };
 
     const tick = (now) => {
-      const duration = domLoaded ? DURATION_AFTER_LOAD : DURATION_BEFORE_LOAD;
-      const elapsed = Math.max(0, now - start);
-      const t = Math.min(elapsed / duration, 1);
-      const eased = easeOutQuint(t);
+      const elapsed = now - startedAt;
+      const progressCap = loaded ? 98 : 88;
+      const progress = Math.min(progressCap, (elapsed / minVisibleMs) * progressCap);
 
-      if (!domLoaded) progress = eased * 90;
-      else progress = 90 + eased * 10;
-
-      progress = Math.max(0, Math.min(100, progress));
-      const stable = Number(progress.toFixed(2));
-
-      // ✅ throttle setState
-      if (now - lastUIUpdate > 66 || stable >= 100) {
-        lastUIUpdate = now;
-
+      if (now - lastStateUpdate > 50) {
+        lastStateUpdate = now;
         setLoadingState({
-          progress: stable,
-          message: milestoneMessage(stable),
-          isComplete: stable >= 100,
+          progress: Number(progress.toFixed(2)),
+          message: milestoneMessage(progress),
+          isComplete: false,
         });
       }
 
-      if (domLoaded && stable >= 100) {
-        cancelAnimationFrame(rafId);
+      if (loaded && elapsed >= minVisibleMs) {
+        complete();
         return;
       }
 
-      rafId = requestAnimationFrame(tick);
+      rafId = window.requestAnimationFrame(tick);
     };
-
-    rafId = requestAnimationFrame(tick);
 
     const handleLoad = () => {
-      domLoaded = true;
-      progress = Math.max(progress, 90);
-      start = performance.now();
+      loaded = true;
     };
 
-    if (document.readyState === "complete") handleLoad();
-    else window.addEventListener("load", handleLoad);
-
-    const fallback = setTimeout(() => handleLoad(), 1800);
+    if (!loaded) window.addEventListener("load", handleLoad, { once: true });
+    const fallbackId = window.setTimeout(handleLoad, fallbackReadyMs);
+    rafId = window.requestAnimationFrame(tick);
 
     return () => {
-      cancelAnimationFrame(rafId);
-      clearTimeout(fallback);
+      window.cancelAnimationFrame(rafId);
+      window.clearTimeout(fallbackId);
+      window.clearTimeout(hideTimeoutId);
       window.removeEventListener("load", handleLoad);
     };
-  }, [isLoading]);
-
-  useEffect(() => {
-    if ((loadingState?.progress || 0) < 100) return;
-
-    const t1 = setTimeout(() => {
-      setFadeProp({ opacity: 0, zIndex: 9999 });
-
-      const t2 = setTimeout(() => {
-        setIsLoading(false);
-        setFadeProp({ opacity: 0, zIndex: -1 });
-        ScrollTrigger.refresh();
-      }, 800);
-
-      return () => clearTimeout(t2);
-    }, 200);
-
-    return () => clearTimeout(t1);
-  }, [loadingState?.progress]);
+  }, [showPreloader]);
 
   return (
     <Router>
       <ScrollToTop />
-      <PageTracking />
-
-      <div
-        className="preloader-overlay"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100vh",
-          backgroundColor: "#050505",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          transition: "opacity 0.8s ease-in-out",
-          pointerEvents: isLoading ? "auto" : "none",
-          ...fadeProp,
-        }}
-      >
-        <Preloader state={loadingState} />
-      </div>
-
       <AppContent />
+      {showPreloader && <Preloader state={loadingState} />}
     </Router>
   );
 };
