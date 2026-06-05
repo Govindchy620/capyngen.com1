@@ -106,7 +106,7 @@ const serviceSchema = {
       "https://www.facebook.com/capyngen",
       "https://www.instagram.com/capyngen",
       "https://www.linkedin.com/company/capyngen",
-      "https://twitter.com/capyngen",
+      "https://x.com/capyngen",
     ],
   },
   areaServed: {

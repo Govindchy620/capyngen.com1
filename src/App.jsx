@@ -101,7 +101,10 @@ const LandingPage = lazy(
   () => import("./pages/LandingPage/DigitalMarketingLandingPage/LandingPage"),
 );
 const LandingPageForeign = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPageForeign/LandingPageForeign"),
+  () => import("./pages/LandingPage/DigitalMarketingLandingPageUSA/LandingPageForeign"),
+);
+const LandingPageUAE = lazy(
+  () => import("./pages/LandingPage/DigitalMarketingLandingPageUAE/LandingPageUAE"),
 );
 
 const SoftwareDevelopmentLandingPage = lazy(
@@ -115,7 +118,10 @@ const GreetingsPage = lazy(
   () => import("./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage"),
 );
 const GreetingsPageForeign = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPageForeign/GreetingsPageForeign"),
+  () => import("./pages/LandingPage/DigitalMarketingLandingPageUSA/GreetingsPageForeign"),
+);
+const GreetingsPageUAE = lazy(
+  () => import("./pages/LandingPage/DigitalMarketingLandingPageUAE/GreetingsPageUAE"),
 );
 const WebDevelopmentHiddenPage = lazy(
   () => import("./pages/WebDevelopmentHiddenPage"),
@@ -244,7 +250,8 @@ const AppContent = () => {
 
   const noLayoutRoutes = [
     "/digital-marketing-landing-page",
-    "/digital-marketing-offer-page",
+    "/digital-marketing-landing-page-uae",
+    "/digital-marketing-landing-page-usa",
     "/design-landing-page",
     "/software-development-landing-page",
     "/greetings",
@@ -386,8 +393,12 @@ const AppContent = () => {
               element={<LandingPage />}
             />
             <Route
-              path="/digital-marketing-offer-page"
+              path="/digital-marketing-landing-page-usa"
               element={<LandingPageForeign />}  
+            />
+            <Route
+              path="/digital-marketing-landing-page-uae"
+              element={<LandingPageUAE />}  
             />
             <Route
               path="/software-development-landing-page"

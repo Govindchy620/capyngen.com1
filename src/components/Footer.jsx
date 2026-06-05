@@ -27,12 +27,12 @@ const Footer = () => {
     },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/capyngen-private-limited-5ba173390",
+      href: "https://www.linkedin.com/company/capyngen/",
       label: "LinkedIn",
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/capyngen/",
+      href: "https://www.instagram.com/capyngen_official/",
       label: "Instagram",
     },
     { icon: Twitter, href: "https://x.com/capyngen", label: "Twitter" },

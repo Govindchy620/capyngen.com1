@@ -295,7 +295,7 @@ export default function ContactUs() {
 
               <div className="flex flex-wrap gap-3 mt-4 text-blue-300/90">
                 <a
-                  href="https://www.facebook.com/profile.php?id=100086626928653"
+                  href="https://www.facebook.com/capyngen/"
                   className="rounded-xl bg-blue-600/70 p-3 border border-blue-500/70 hover:scale-110 transition-all duration-300"
                 >
                   <FaFacebookF className="text-white" />
@@ -307,19 +307,19 @@ export default function ContactUs() {
                   <FaTwitter className="text-white" />
                 </a>
                 <a
-                  href="https://www.instagram.com/capyngen/"
+                  href="https://www.instagram.com/capyngen_official/"
                   className="rounded-xl bg-blue-600/70 p-3 border border-blue-500/70 hover:scale-110 transition-all duration-300 flex items-center gap-2 px-4"
                 >
                   <FaInstagram className="text-white" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/capyngen-private-limited-5ba173390"
+                  href="https://www.linkedin.com/company/capyngen/"
                   className="rounded-xl bg-blue-600/70 p-3 border border-blue-500/70 hover:scale-110 transition-all duration-300 flex items-center gap-2 px-4"
                 >
                   <FaLinkedinIn className="text-white" />
                 </a>
                 <a
-                  href="https://www.youtube.com/@Capyngen-pvt-ltd"
+                  href="https://www.youtube.com/@Capyngen_official"
                   className="rounded-xl bg-blue-600/70 p-3 border border-blue-500/70 hover:scale-110 transition-all duration-300 flex items-center gap-2 px-4"
                 >
                   <FaYoutube className="text-white" />

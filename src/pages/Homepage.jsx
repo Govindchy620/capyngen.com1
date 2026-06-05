@@ -37,8 +37,8 @@ const webpageSchema = {
   },
   sameAs: [
     "https://www.linkedin.com/company/capyngen",
-    "https://www.instagram.com/capyngen/",
-    "https://twitter.com/Capyngen",
+    "https://www.instagram.com/capyngen_official/",
+    "https://x.com/capyngen",
   ],
   foundingDate: "2022-01-24",
   founders: [

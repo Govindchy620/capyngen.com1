@@ -5,17 +5,17 @@ export default function ReadyToBuild() {
   const socialLinks = [
     {
       icon: Facebook,
-      href: "https://www.facebook.com/profile.php?id=100086626928653",
+      href: "https://www.facebook.com/capyngen/",
       label: "Facebook",
     },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/capyngen-private-limited-5ba173390",
+      href: "https://www.linkedin.com/company/capyngen/",
       label: "LinkedIn",
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/capyngen/",
+      href: "https://www.instagram.com/capyngen_official/",
       label: "Instagram",
     },
     { icon: Twitter, href: "https://x.com/capyngen", label: "Twitter" },

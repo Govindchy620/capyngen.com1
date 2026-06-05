@@ -76,7 +76,7 @@ const OfferSection = () => {
                                 </h2>
 
                                 <p className="text-lg text-slate-400 leading-relaxed mb-8">
-                                    Once the countdown ends, the price will instantly return to its original value of $4,999. Don't let your competitors grab this advantage before you do.
+                                    Once the countdown ends, the price will instantly return to its original value of 4,999 AED. Don't let your competitors grab this advantage before you do.
                                 </p>
 
                                 {/* Animated Call to Action Anchor */}

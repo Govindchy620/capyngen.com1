@@ -93,7 +93,7 @@ const serviceSchema = {
     sameAs: [
       "https://www.facebook.com/capyngen",
       "https://www.instagram.com/capyngen",
-      "https://twitter.com/capyngen",
+      "https://x.com/capyngen",
     ],
   },
   areaServed: {
