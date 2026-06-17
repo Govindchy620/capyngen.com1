@@ -52,7 +52,7 @@ const JobOpeningsTable = () => {
         data-company-id="69cc27055f98df1f87e9a01a"
         data-api-base="https://api.orinite.com/api/v1/public/recruitment">
       </div>
-      <script src="https://hrms.orinite.com/careers-v1.js" defer></script>
+      <script src="https://api.orinite.com/careers-v1.js" defer></script>
     </section>
   );
 };
