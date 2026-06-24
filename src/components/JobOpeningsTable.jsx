@@ -49,10 +49,10 @@ const JobOpeningsTable = () => {
   return (
     <section className="bg-black py-16 px-4 sm:px-6 lg:px-12">
       <div id="hrms-careers-widget"
-        data-company-id="69cc27055f98df1f87e9a01a"
+        data-company-id="6a3bb4300657f6171d4529a0"
         data-api-base="https://api.orinite.com/api/v1/public/recruitment">
       </div>
-      <script src="https://api.orinite.com/careers-v1.js" defer></script>
+      <script src="https://hrms.orinite.com/careers-v1.js" defer></script>
     </section>
   );
 };
