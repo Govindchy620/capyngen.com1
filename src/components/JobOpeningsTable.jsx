@@ -10,7 +10,6 @@ export default function JobOpeningsTable() {
   useEffect(() => {
     let active = true;
 
-
     const initWidget = (force = false) => {
       const container = document.getElementById("hrms-careers-widget");
       if (!container) return;
