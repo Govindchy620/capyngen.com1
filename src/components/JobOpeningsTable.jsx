@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 
 const COMPANY_ID = "6a3bb4300657f6171d4529a0";
-const API_BASE = "https://api.orinite.com/api/v1/public/recruitment";
-const WIDGET_SCRIPT = "https://api.orinite.com/careers-v1.js";
+const API_BASE = "http://localhost:3000/api/v1/public/recruitment";
+const WIDGET_SCRIPT = "https://test-hrms.orinite.com/careers-v1.js";
 
-const JobOpeningsTable = () => {
+export default function JobOpeningsTable() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
     let active = true;
+
 
     const initWidget = (force = false) => {
       const container = document.getElementById("hrms-careers-widget");
@@ -23,10 +24,7 @@ const JobOpeningsTable = () => {
       };
     }
 
-    const existingScript = document.querySelector(
-      'script[src="' + WIDGET_SCRIPT + '"]'
-    );
-
+    const existingScript = document.querySelector('script[src="' + WIDGET_SCRIPT + '"]');
     if (existingScript) {
       existingScript.addEventListener("load", () => initWidget(false), { once: true });
       return () => {
@@ -41,7 +39,6 @@ const JobOpeningsTable = () => {
     script.onerror = () => {
       if (active) setError("Failed to load careers widget");
     };
-
     document.body.appendChild(script);
 
     return () => {
@@ -52,8 +49,8 @@ const JobOpeningsTable = () => {
   }, []);
 
   return (
-    <section className="bg-black py-16 px-4 sm:px-6 lg:px-12">
-      {error ? <div className="text-center text-red-500 py-20 text-lg">{error}</div> : null}
+    <section style={{ width: "100%" }}>
+      {error ? <div style={{ color: "#dc2626", padding: "48px 0", textAlign: "center" }}>{error}</div> : null}
       <div
         id="hrms-careers-widget"
         data-company-id={COMPANY_ID}
@@ -61,6 +58,4 @@ const JobOpeningsTable = () => {
       />
     </section>
   );
-};
-
-export default JobOpeningsTable;
+}
