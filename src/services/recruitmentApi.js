@@ -167,6 +167,14 @@ export const fetchRecruitmentJobs = async (filters = {}, signal) => {
 // Application form (dynamic fields + submission)
 // ---------------------------------------------------------------------------
 
+// The apply-direct endpoint only accepts these custom-field types; anything
+// else (e.g. a "file"-type custom field like a cover letter) is rejected by its
+// validator with "expected one of text|number|select|checkbox".
+const APPLY_CUSTOM_FIELD_TYPES = ["text", "number", "select", "checkbox"];
+
+const isSubmittableField = (field) =>
+  field.source !== "custom" || APPLY_CUSTOM_FIELD_TYPES.includes(field.type);
+
 const DEFAULT_SUBMISSION = {
   method: "POST",
   url: `${RECRUITMENT_ROOT}/apply-direct`,
@@ -185,8 +193,13 @@ export const fetchApplicationFields = async (signal) => {
   if (!json?.success || !json?.data) throw new Error("Failed to load form");
 
   const data = json.data;
+  // Drop custom fields the apply endpoint can't accept (e.g. file-type custom
+  // fields), so the form never renders or submits something that 400s.
+  const fields = (Array.isArray(data.fields) ? data.fields : []).filter(
+    isSubmittableField,
+  );
   return {
-    fields: Array.isArray(data.fields) ? data.fields : [],
+    fields,
     resume: data.resume || null,
     labels: data.labels || {},
     submission: { ...DEFAULT_SUBMISSION, ...(data.submission || {}) },
@@ -205,6 +218,8 @@ export const submitApplication = async ({ jobId, config, values, files }) => {
   if (jobId) fd.append("jobId", jobId);
 
   (config?.fields || []).forEach((field) => {
+    // Skip custom fields the apply endpoint rejects (only text/number/select/checkbox).
+    if (!isSubmittableField(field)) return;
     const isFile = field.type === "file";
     if (field.source === "custom") {
       // The apply-direct endpoint takes every custom field (text or file) as a
@@ -233,7 +248,15 @@ export const submitApplication = async ({ jobId, config, values, files }) => {
     let message = `Submission failed (${response.status})`;
     try {
       const err = await response.json();
-      if (err?.message) message = err.message;
+      // Backend may return { message }, { errors: [...] }, or a raw Zod error array.
+      const issues = Array.isArray(err) ? err : err?.errors || err?.issues;
+      if (Array.isArray(issues) && issues.length > 0) {
+        message = issues
+          .map((i) => i.message || `${(i.path || []).join(".")} is invalid`)
+          .join("; ");
+      } else if (err?.message) {
+        message = err.message;
+      }
     } catch {
       /* ignore */
     }

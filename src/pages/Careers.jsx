@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { careerRoutes } from '../utils/careerRoutes';
 
 // 1. Image imports
 import heroBg from '../assets/carrer.png';
@@ -121,7 +122,7 @@ const Careers = () => {
 
   const handleCountryClick = (e, country) => {
     e.preventDefault();
-    navigate('/country-careers', { state: { country } });
+    navigate(careerRoutes.country(country));
   };
 
   return (
@@ -152,21 +153,12 @@ const Careers = () => {
           <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-10 md:mb-12 max-w-2xl">
             Build the Future with Capyngen
           </p>
-          <button className="flex items-center gap-4 group w-max cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-full">
-            <span className="text-white text-sm sm:text-base md:text-lg font-medium transition-all group-hover:opacity-80">
-              Apply now
-            </span>
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#2A61F5] shadow-lg">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-gray-900 group-hover:text-white transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </div>
-          </button>
+        
         </div>
 
         {/* Subtle scroll cue */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2">
-          <span className="text-white/60 text-[10px] tracking-[0.25em] uppercase">Scroll</span>
+          
           <div className="w-[1px] h-10 bg-gradient-to-b from-white/60 to-transparent"></div>
         </div>
       </section>
@@ -456,12 +448,7 @@ const Careers = () => {
           <p className="text-gray-300 text-base sm:text-lg font-light leading-relaxed max-w-xl mb-12">
             Whether you're a designer, developer, marketer, or AI enthusiast, join a team that values creativity, collaboration, and continuous growth.
           </p>
-          <button className="group w-max inline-flex items-center gap-3 px-8 py-3 rounded-full border border-gray-400/50 text-white text-sm sm:text-base font-medium hover:bg-white hover:text-[#101524] hover:border-white transition-all duration-300">
-            Explore Careers
-            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </button>
+          
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { fetchApplicationFields, submitApplication } from '../services/recruitmentApi';
+import { slugToCountry, careerRoutes } from '../utils/careerRoutes';
 
 // --- Reusable Form Field ---
 const Field = ({ label, required, children, hint, error }) => (
@@ -84,13 +85,16 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
   const location = useLocation();
 
   // Job + branding arrive via router state from the Job Detail page.
+  const { country: countrySlug, jobId } = useParams();
+  const country = slugToCountry(countrySlug);
+
   const job = location.state?.job || null;
   const branding = location.state?.branding || null;
-  const jobId = job?.id || null;
   const title = jobTitle || job?.title || 'this Position';
   const dept =
     department || (job?.category && job.category !== 'Other' ? job.category : '') || '';
-  const goBack = onBack || (() => navigate(-1));
+  const goBack =
+    onBack || (() => navigate(careerRoutes.jobDetail(country, jobId)));
 
   const [config, setConfig] = useState(null);
   const [loading, setLoading] = useState(true);

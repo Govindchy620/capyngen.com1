@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { fetchRecruitmentJobs } from '../services/recruitmentApi';
+import { slugToCountry, careerRoutes } from '../utils/careerRoutes';
 
 // --- Data ---
 const filterMeta = {
@@ -142,10 +143,12 @@ const FilterSection = ({ title, filterKey, options, selected, onSelect, onClear 
 export default function JobSearchPage() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { country: countrySlug } = useParams();
 
-  // Filters carried over from the country / category pages.
+  // Country comes from the URL (/careers/:country/jobs); the department the
+  // user picked is carried in navigation state.
+  const country = slugToCountry(countrySlug) || '';
   const incoming = location.state || {};
-  const country = incoming.country || '';
   const region = incoming.region || '';
   const jobCategory = incoming.jobCategory || '';
 
@@ -225,7 +228,9 @@ export default function JobSearchPage() {
 
   // Open the job detail page for the selected job (carry branding for display rules)
   const handleViewDetails = (job) =>
-    navigate('/career-job-detail', { state: { job, branding } });
+    navigate(careerRoutes.jobDetail(country, job.id), {
+      state: { job, branding },
+    });
 
   // Render the default Job Search Page
   return (

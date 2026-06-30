@@ -1,5 +1,7 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { fetchRecruitmentJobs } from '../services/recruitmentApi';
+import { slugToCountry, careerRoutes } from '../utils/careerRoutes';
 
 // --- Data (swap per job, or pass as the `job` prop) ---
 const jobDetail = {
@@ -101,18 +103,42 @@ const SimilarJobCard = ({ job, onViewDetails }) => (
 export default function CareerJobDetail(props) {
   const navigate = useNavigate();
   const location = useLocation();
+  const { country: countrySlug, jobId } = useParams();
+  const country = slugToCountry(countrySlug);
 
-  const {
-    job = location.state?.job || jobDetail,
-    branding = location.state?.branding || null,
-    similarJobs,
-    onBack = () => navigate(-1),
-    onViewSimilar,
-  } = props;
+  const { similarJobs, onViewSimilar } = props;
+  const stateJob = props.job || location.state?.job || null;
+
+  // Prefer the job passed via navigation state; on a direct/shared link,
+  // resolve it by id from the URL by fetching the job list.
+  const [resolvedJob, setResolvedJob] = useState(stateJob);
+  const [branding, setBranding] = useState(
+    props.branding || location.state?.branding || null,
+  );
+  const [loading, setLoading] = useState(!stateJob && !!jobId);
+
+  useEffect(() => {
+    if (stateJob || !jobId) return;
+    const controller = new AbortController();
+    setLoading(true);
+    fetchRecruitmentJobs({ country }, controller.signal)
+      .then(({ jobs, branding: b }) => {
+        setResolvedJob(jobs.find((j) => j.id === jobId) || null);
+        setBranding((prev) => prev || b);
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+    return () => controller.abort();
+  }, [jobId, country, stateJob]);
+
+  const job = resolvedJob || jobDetail;
+  const onBack = props.onBack || (() => navigate(careerRoutes.jobs(country)));
 
   // Open the application form, carrying the job + branding for display.
   const handleApply = () =>
-    navigate('/job-application', { state: { job, branding } });
+    navigate(careerRoutes.jobApply(country, jobId), {
+      state: { job, branding },
+    });
 
   // Branding-driven display rules from the API (default to showing everything).
   const labels = branding?.labels || {};
@@ -147,6 +173,15 @@ export default function CareerJobDetail(props) {
 
   // Only the structured fallback ships similar jobs; API jobs render none.
   const similar = similarJobs || (job?.intro ? defaultSimilarJobs : []);
+
+  // Resolving the job from a shared/direct link.
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
+        <div className="w-10 h-10 border-2 border-gray-200 border-t-[#4884f0] rounded-full animate-spin" />
+      </div>
+    );
+  }
 
   // Render the Job Details view
   return (

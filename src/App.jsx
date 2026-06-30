@@ -383,10 +383,16 @@ const AppContent = () => {
             <Route path="/industries/gaming" element={<Gaming />} />
             <Route path="/company-overview" element={<CompanyOverview />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/country-careers" element={<CountryCareers />} />
-            <Route path="/career-search" element={<CareerSearch />} />
-            <Route path="/career-job-detail" element={<CareerJobDetail />} />
-            <Route path="/job-application" element={<JobApplicationForm />} />
+            <Route path="/careers/:country" element={<CountryCareers />} />
+            <Route path="/careers/:country/jobs" element={<CareerSearch />} />
+            <Route
+              path="/careers/:country/jobs/:jobId"
+              element={<CareerJobDetail />}
+            />
+            <Route
+              path="/careers/:country/jobs/:jobId/apply"
+              element={<JobApplicationForm />}
+            />
             <Route path="/news-and-updates" element={<NewsAndUpdates />} />
             <Route path="/news-and-updates/:slug" element={<BlogDetail />} />
             <Route path="/contact-us" element={<ContactUs />} />

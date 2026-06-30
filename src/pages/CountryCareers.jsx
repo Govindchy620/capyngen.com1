@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { slugToCountry, careerRoutes } from '../utils/careerRoutes';
+import { fetchRecruitmentJobs, DEPARTMENTS } from '../services/recruitmentApi';
 import HeroImage from "../assets/HeroImage.png";
 import HeroImage1 from "../assets/HeroImage1.png";
 import HeroImage2 from "../assets/HeroImage2.png";
 
-// --- DATA ---
-const departments = [
-  { id: 1, num: '01.', title: 'Engineering', roles: ['Frontend', 'Backend', 'Full Stack'] },
-  { id: 2, num: '02.', title: 'Design', roles: ['UX/UI Design', 'Product Design'] },
-  { id: 3, num: '03.', title: 'AI & Data', roles: ['Machine Learning', 'Data Science'] },
-  { id: 4, num: '04.', title: 'Marketing', roles: ['Content Strategy', 'Growth Marketing'] },
-  { id: 5, num: '05.', title: 'Business', roles: ['Sales', 'Operations'] },
-];
+// Department order shown in the accordion (canonical buckets + a catch-all).
+const DEPARTMENT_ORDER = [...DEPARTMENTS, 'Other'];
+
+// Max job roles previewed per department before "Visit career page".
+const MAX_PREVIEW_ROLES = 3;
 
 const whyCards = [
   {
@@ -70,9 +69,38 @@ const stats = [
 
 export default function CapyngenCareers() {
   const navigate = useNavigate();
-  const location = useLocation();
-  const country = location.state?.country || 'India';
+  const { country: countrySlug } = useParams();
+  const country = slugToCountry(countrySlug) || 'India';
   const [openAccordion, setOpenAccordion] = useState(null);
+
+  const [jobs, setJobs] = useState([]);
+  const [branding, setBranding] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // Load the country's jobs so departments + roles reflect real openings.
+  useEffect(() => {
+    const controller = new AbortController();
+    setLoading(true);
+    fetchRecruitmentJobs({ country }, controller.signal)
+      .then(({ jobs, branding }) => {
+        setJobs(jobs);
+        setBranding(branding);
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+    return () => controller.abort();
+  }, [country]);
+
+  // Group the country's jobs into departments (only those with openings).
+  const departments = useMemo(() => {
+    const inCountry = jobs.filter((j) => !country || j.country === country);
+    return DEPARTMENT_ORDER.map((title, i) => ({
+      id: i + 1,
+      num: `${String(i + 1).padStart(2, '0')}.`,
+      title,
+      jobs: inCountry.filter((j) => (j.category || 'Other') === title),
+    })).filter((d) => d.title !== 'Other' || d.jobs.length > 0); // always show the canonical departments
+  }, [jobs, country]);
 
   const toggleAccordion = (id) => {
     setOpenAccordion(openAccordion === id ? null : id);
@@ -81,8 +109,16 @@ export default function CapyngenCareers() {
   // Handler for opening the job search, scoped to country + department.
   const handleVisitCareerPage = (e, departmentTitle) => {
     e.preventDefault();
-    navigate('/career-search', {
-      state: { country, jobCategory: departmentTitle },
+    navigate(careerRoutes.jobs(country), {
+      state: { jobCategory: departmentTitle },
+    });
+  };
+
+  // Open a specific job's detail page.
+  const handleViewJob = (e, job) => {
+    e.preventDefault();
+    navigate(careerRoutes.jobDetail(country, job.id), {
+      state: { job, branding },
     });
   };
 
@@ -189,10 +225,25 @@ export default function CapyngenCareers() {
       <section className="w-full bg-white pb-16 sm:pb-20 lg:pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t border-gray-200">
-            {departments.map((dept) => {
-              const isOpen = openAccordion === dept.id;
-              const count = dept.roles.length;
-              return (
+            {loading ? (
+              <div className="py-10 space-y-4">
+                {[0, 1, 2, 3].map((i) => (
+                  <div key={i} className="h-16 rounded-lg bg-gray-100 animate-pulse" />
+                ))}
+              </div>
+            ) : departments.length === 0 ? (
+              <div className="py-14 text-center">
+                <p className="text-lg font-semibold text-black mb-1">
+                  No open roles in {country} right now
+                </p>
+                <p className="text-gray-500 text-sm">Please check back soon.</p>
+              </div>
+            ) : (
+              departments.map((dept) => {
+                const isOpen = openAccordion === dept.id;
+                const count = dept.jobs.length;
+                const previewJobs = dept.jobs.slice(0, MAX_PREVIEW_ROLES);
+                return (
                 <div
                   key={dept.id}
                   className={`border-b transition-colors duration-300 ${isOpen ? 'border-[#0070c9]' : 'border-gray-200'}`}
@@ -205,7 +256,7 @@ export default function CapyngenCareers() {
                       <span className="text-[#0070c9] tabular-nums">{dept.num}</span>
                       <span className={`transition-colors ${isOpen ? 'text-[#0070c9]' : 'group-hover:text-black'}`}>{dept.title}</span>
                       <span className={`hidden sm:inline-flex items-center justify-center text-xs font-semibold rounded-full px-2.5 py-0.5 transition-colors ${isOpen ? 'bg-[#0070c9]/10 text-[#0070c9]' : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'}`}>
-                        {count} {count === 1 ? 'role' : 'roles'}
+                        {count > 0 ? `${count} ${count === 1 ? 'role' : 'roles'}` : 'No openings'}
                       </span>
                     </h3>
                     <div className={`shrink-0 ml-4 transition-all duration-300 ${isOpen ? 'text-[#0070c9] rotate-180' : 'text-black group-hover:text-[#0070c9]'}`}>
@@ -224,15 +275,17 @@ export default function CapyngenCareers() {
                   </button>
 
                   <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[600px] opacity-100 pb-8' : 'max-h-0 opacity-0'}`}>
+                    {previewJobs.length > 0 ? (
+                    <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 pt-2 pr-2 pl-14 sm:pl-20">
-                      {dept.roles.map((role, idx) => (
+                      {previewJobs.map((job) => (
                         <a
-                          key={idx}
+                          key={job.id}
                           href="#"
-                          onClick={(e) => handleVisitCareerPage(e, dept.title)}
+                          onClick={(e) => handleViewJob(e, job)}
                           className="group/card flex items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-4 transition-all duration-300 hover:border-[#0070c9] hover:bg-[#0070c9]/5 hover:shadow-sm hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0070c9]"
                         >
-                          <span className="text-[#0070c9] text-lg sm:text-xl font-light truncate">{role}</span>
+                          <span className="text-[#0070c9] text-lg sm:text-xl font-light truncate">{job.title}</span>
                           <svg
                             className="shrink-0 w-5 h-5 text-gray-400 -translate-x-1 opacity-0 group-hover/card:translate-x-0 group-hover/card:opacity-100 group-hover/card:text-[#0070c9] transition-all duration-300"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -243,21 +296,32 @@ export default function CapyngenCareers() {
                       ))}
                     </div>
                     <div className="pl-14 sm:pl-20 mt-6">
-                      <a 
-                        href="#" 
+                      <a
+                        href="#"
                         onClick={(e) => handleVisitCareerPage(e, dept.title)}
                         className="group/link inline-flex items-center gap-2 text-black text-sm sm:text-base underline underline-offset-4 font-medium hover:text-[#0070c9] transition-colors"
                       >
-                        Visit career page
+                        {count > MAX_PREVIEW_ROLES
+                          ? `Visit career page — view all ${count} roles`
+                          : 'Visit career page'}
                         <svg className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                       </a>
                     </div>
+                    </>
+                    ) : (
+                      <div className="pl-14 sm:pl-20 pt-2">
+                        <p className="text-gray-600 text-base sm:text-lg">
+                          No openings in {dept.title} right now. New roles are added regularly — please check back soon.
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
         </div>
       </section>
