@@ -90,6 +90,10 @@ const Gaming = lazy(() => import("./pages/Gaming"));
 // Company & Misc
 const CompanyOverview = lazy(() => import("./pages/CompanyOverview"));
 const Careers = lazy(() => import("./pages/Careers"));
+const CountryCareers = lazy(() => import("./pages/CountryCareers"));
+const CareerSearch = lazy(() => import("./pages/CareerSearch"));
+const CareerJobDetail = lazy(() => import("./pages/CareerJobDetail"));
+const JobApplicationForm = lazy(() => import("./pages/JobApplicationForm"));
 const NewsAndUpdates = lazy(() => import("./pages/NewsAndUpdates"));
 const BlogDetail = lazy(() => import("./components/BlogDetail"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
@@ -379,6 +383,10 @@ const AppContent = () => {
             <Route path="/industries/gaming" element={<Gaming />} />
             <Route path="/company-overview" element={<CompanyOverview />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/country-careers" element={<CountryCareers />} />
+            <Route path="/career-search" element={<CareerSearch />} />
+            <Route path="/career-job-detail" element={<CareerJobDetail />} />
+            <Route path="/job-application" element={<JobApplicationForm />} />
             <Route path="/news-and-updates" element={<NewsAndUpdates />} />
             <Route path="/news-and-updates/:slug" element={<BlogDetail />} />
             <Route path="/contact-us" element={<ContactUs />} />
