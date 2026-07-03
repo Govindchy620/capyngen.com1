@@ -1,11 +1,13 @@
 // Public recruitment API (Orinite HRMS) used by the Careers section.
 // Returns active jobs + branding so the site can render the job list dynamically.
-// Base is configurable so dev can point at a local backend (e.g.
-// http://localhost:3000/api/v1/public/recruitment) where the fields endpoint
-// is reachable; defaults to the public production API.
+// The API origin-gates requests to https://capyngen.com, so in dev the calls
+// go through the Vite proxy (see vite.config.js), which forwards them with
+// the allowed Origin. VITE_RECRUITMENT_API_BASE still overrides both.
 const RECRUITMENT_ROOT =
   import.meta.env.VITE_RECRUITMENT_API_BASE ||
-  "https://api.orinite.com/api/v1/public/recruitment";
+  (import.meta.env.DEV
+    ? "/recruitment-api"
+    : "https://api.orinite.com/api/v1/public/recruitment");
 const RECRUITMENT_BASE = `${RECRUITMENT_ROOT}/jobs`;
 const RECRUITMENT_TENANT_ID = "6a47a7e1ec2ba07354500c19";
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { fetchRecruitmentJobs } from '../services/recruitmentApi';
 import { slugToCountry, careerRoutes } from '../utils/careerRoutes';
+import { parseJobDescription, splitBoldSegments } from '../utils/jobDescription';
 
 // --- Data (swap per job, or pass as the `job` prop) ---
 const jobDetail = {
@@ -64,6 +65,84 @@ const BulletList = ({ items }) => (
     ))}
   </ul>
 );
+
+// Render a text line, honoring **bold** runs from the description markdown.
+const InlineText = ({ text }) => (
+  <>
+    {splitBoldSegments(text).map((seg, i) =>
+      seg.bold ? (
+        <strong key={i} className="font-semibold text-[#03152c]">
+          {seg.text}
+        </strong>
+      ) : (
+        <span key={i}>{seg.text}</span>
+      ),
+    )}
+  </>
+);
+
+// The API returns the description as flattened markdown (newlines stripped);
+// parseJobDescription restores the structure and this renders it with the
+// page's heading/bullet styles.
+const DescriptionBlocks = ({ description, title }) => {
+  const blocks = parseJobDescription(description, title);
+  if (blocks.length === 0) return null;
+
+  return (
+    <div>
+      {blocks.map((block, i) => {
+        if (block.type === 'heading') {
+          return block.level <= 2 ? (
+            <h3
+              key={i}
+              className="text-base sm:text-lg lg:text-xl font-bold text-[#03152c] mt-8 first:mt-0 mb-3 pb-2 border-b border-gray-100"
+            >
+              <InlineText text={block.text} />
+            </h3>
+          ) : (
+            <h4
+              key={i}
+              className="text-sm sm:text-base font-semibold text-[#4884f0] mt-6 first:mt-0 mb-2 uppercase tracking-wide"
+            >
+              <InlineText text={block.text} />
+            </h4>
+          );
+        }
+
+        if (block.type === 'list') {
+          return block.ordered ? (
+            <ol key={i} className="list-decimal pl-5 space-y-2 mb-4 text-sm sm:text-base text-gray-700 leading-relaxed">
+              {block.items.map((item, j) => (
+                <li key={j}>
+                  <InlineText text={item} />
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <ul key={i} className="space-y-2 mb-4">
+              {block.items.map((item, j) => (
+                <li key={j} className="flex items-start gap-3 text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <svg className="w-4 h-4 mt-1 text-[#4884f0] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>
+                    <InlineText text={item} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+
+        return (
+          <p key={i} className="text-sm sm:text-base text-gray-700 leading-relaxed mb-3">
+            <InlineText text={block.text} />
+          </p>
+        );
+      })}
+    </div>
+  );
+};
 
 // Single card inside the Similar Jobs section
 const SimilarJobCard = ({ job, onViewDetails }) => (
@@ -268,9 +347,7 @@ export default function CareerJobDetail(props) {
           <section className="mb-10 sm:mb-12">
             <SectionHeading>Job Description</SectionHeading>
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8 lg:p-10">
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed whitespace-pre-line">
-                {job.description}
-              </p>
+              <DescriptionBlocks description={job.description} title={job.title} />
             </div>
           </section>
         )}
