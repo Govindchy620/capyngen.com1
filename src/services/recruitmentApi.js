@@ -7,7 +7,7 @@ const RECRUITMENT_ROOT =
   import.meta.env.VITE_RECRUITMENT_API_BASE ||
   "https://api.orinite.com/api/v1/public/recruitment";
 const RECRUITMENT_BASE = `${RECRUITMENT_ROOT}/jobs`;
-const RECRUITMENT_TENANT_ID = "6a3bb4300657f6171d4529a0";
+const RECRUITMENT_TENANT_ID = "6a47a7e1ec2ba07354500c19";
 
 // Filters supported by the API (sent as query params).
 const FILTER_KEYS = [
@@ -20,10 +20,9 @@ const FILTER_KEYS = [
   "search",
 ];
 
-// The API only returns an opaque `department` ObjectId (no name) and does not
-// resolve it anywhere, so we classify each job into the same department buckets
-// the Careers site uses (see CountryCareers) from the job title. This is what
-// lets us keep, e.g., an HR role out of the Engineering listing.
+// Canonical department buckets the Careers site always shows. Jobs whose API
+// category/department doesn't match one of these still get their own section:
+// CountryCareers auto-creates a department for any other category with jobs.
 export const DEPARTMENTS = [
   "Engineering",
   "Design",
@@ -55,8 +54,32 @@ const DEPARTMENT_KEYWORDS = {
   ],
 };
 
-// Classify a job into one of DEPARTMENTS (or "Other") from its title.
+// A bare 24-hex string is an unresolved Mongo ObjectId, not a display name.
+const isObjectId = (value) => /^[0-9a-f]{24}$/i.test(value);
+
+// The department/category name the API provides for a job, if any. Checked in
+// order of likelihood; `department` counts only when it's a real name (some
+// payloads only carry an opaque ObjectId there).
+const apiCategory = (job) => {
+  const candidates = [
+    job.jobCategory,
+    job.category,
+    job.departmentName,
+    job.department?.name,
+    typeof job.department === "string" && !isObjectId(job.department)
+      ? job.department
+      : "",
+  ];
+  const found = candidates.find((c) => typeof c === "string" && c.trim());
+  return found ? found.trim() : "";
+};
+
+// Department for a job: whatever the API names wins (even a brand-new
+// department — the UI auto-creates a section for it); otherwise classify
+// into the canonical buckets from the title, falling back to "Other".
 export const categorizeJob = (job) => {
+  const named = apiCategory(job);
+  if (named) return named;
   const text = `${job.title || ""}`.toLowerCase();
   for (const dept of DEPARTMENTS) {
     if (DEPARTMENT_KEYWORDS[dept].some((kw) => text.includes(kw))) return dept;
@@ -102,8 +125,11 @@ const normalizeJob = (job) => ({
   id: job._id,
   jobCode: job.jobCode || "",
   title: job.title || "",
-  department: job.department || "", // opaque id; not displayed by name
-  category: categorizeJob(job), // derived bucket used for filtering/display
+  department:
+    (typeof job.department === "string"
+      ? job.department
+      : job.department?.name) || "", // raw value; `category` is what's displayed
+  category: categorizeJob(job), // API-named department, or derived from title
   country: detectCountry(job.location), // inferred from location ("" if unknown)
   location: job.location || "",
   type: job.type || "",
@@ -167,14 +193,6 @@ export const fetchRecruitmentJobs = async (filters = {}, signal) => {
 // Application form (dynamic fields + submission)
 // ---------------------------------------------------------------------------
 
-// The apply-direct endpoint only accepts these custom-field types; anything
-// else (e.g. a "file"-type custom field like a cover letter) is rejected by its
-// validator with "expected one of text|number|select|checkbox".
-const APPLY_CUSTOM_FIELD_TYPES = ["text", "number", "select", "checkbox"];
-
-const isSubmittableField = (field) =>
-  field.source !== "custom" || APPLY_CUSTOM_FIELD_TYPES.includes(field.type);
-
 const DEFAULT_SUBMISSION = {
   method: "POST",
   url: `${RECRUITMENT_ROOT}/apply-direct`,
@@ -193,11 +211,8 @@ export const fetchApplicationFields = async (signal) => {
   if (!json?.success || !json?.data) throw new Error("Failed to load form");
 
   const data = json.data;
-  // Drop custom fields the apply endpoint can't accept (e.g. file-type custom
-  // fields), so the form never renders or submits something that 400s.
-  const fields = (Array.isArray(data.fields) ? data.fields : []).filter(
-    isSubmittableField,
-  );
+  // Render every field the API returns — the form is fully API-driven.
+  const fields = Array.isArray(data.fields) ? data.fields : [];
   return {
     fields,
     resume: data.resume || null,
@@ -217,19 +232,31 @@ export const submitApplication = async ({ jobId, config, values, files }) => {
   fd.append("companyId", RECRUITMENT_TENANT_ID);
   if (jobId) fd.append("jobId", jobId);
 
+  // Non-file custom fields are sent together as a JSON object in a single
+  // `customFields` form field (per the submission spec's customTextPayload);
+  // custom file fields go as flat `custom_<name>` multipart fields.
+  const customValues = {};
+
   (config?.fields || []).forEach((field) => {
-    // Skip custom fields the apply endpoint rejects (only text/number/select/checkbox).
-    if (!isSubmittableField(field)) return;
     const isFile = field.type === "file";
     if (field.source === "custom") {
-      // The apply-direct endpoint takes every custom field (text or file) as a
-      // flat `custom_<name>` form field (e.g. custom_linkedin, custom_cover_letter).
-      const fieldName = field.multipartFieldName || `${filePrefix}${field.name}`;
       if (isFile) {
-        if (files[field.name]) fd.append(fieldName, files[field.name]);
+        if (files[field.name]) {
+          fd.append(
+            field.multipartFieldName || `${filePrefix}${field.name}`,
+            files[field.name],
+          );
+        }
       } else {
         const v = values[field.name];
-        if (v !== undefined && v !== "") fd.append(fieldName, v);
+        if (v !== undefined && v !== "") {
+          // jsonFieldPath is like "customFields.linkedin" — the key inside the
+          // customFields object is its last segment (falls back to the name).
+          const key = field.jsonFieldPath
+            ? field.jsonFieldPath.split(".").pop()
+            : field.name;
+          customValues[key] = v;
+        }
       }
     } else if (isFile) {
       if (files[field.name]) fd.append(field.submitAs || field.name, files[field.name]);
@@ -238,6 +265,10 @@ export const submitApplication = async ({ jobId, config, values, files }) => {
       if (v !== undefined) fd.append(field.submitAs || field.name, v);
     }
   });
+
+  if (Object.keys(customValues).length > 0) {
+    fd.append("customFields", JSON.stringify(customValues));
+  }
 
   const response = await fetch(submission.url, {
     method: submission.method || "POST",
