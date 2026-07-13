@@ -1,11 +1,76 @@
 // Parses the recruitment API's job `description` into renderable blocks.
 //
-// The API stores descriptions as markdown but strips the newlines, so a job
-// arrives as one long line: "# Job Title ## Summary ... * First bullet * ...".
-// (Its `formattedDescription.blocks` is unreliable — it splits mid-sentence.)
-// We restore the line breaks from the inline markers, then parse line by line.
-// Descriptions that still contain real newlines, or plain text with no
-// markdown at all, parse correctly too.
+// Descriptions arrive in whatever shape the HRMS stored them:
+//   - rich-text HTML from its editor ("<h2>Position Details</h2><p>...")
+//   - markdown with the newlines stripped ("# Title ## Summary * bullet ...")
+//   - plain text
+// HTML is first converted to the markdown dialect below (tags are never
+// rendered — blocks become plain React text, so hostile markup is inert),
+// then everything goes through the same line-based parser.
+// (The API's `formattedDescription.blocks` is unreliable — it splits
+// mid-sentence — so we always parse `description` ourselves.)
+
+// --- HTML handling ---------------------------------------------------------
+
+// True when the text contains real HTML markup rather than markdown/plain
+// text. Matches known tags only, so "a < b" or "<3" never trigger it.
+const HTML_TAG =
+  /<\/?(h[1-6]|p|div|ul|ol|li|br|hr|strong|b|em|i|u|s|span|a|table|thead|tbody|tr|td|th|blockquote|section|article|font)(\s[^>]*)?\/?>/i;
+const looksLikeHtml = (raw) => HTML_TAG.test(String(raw));
+
+const NAMED_ENTITIES = {
+  amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ",
+  ndash: "–", mdash: "—", lsquo: "‘", rsquo: "’",
+  ldquo: "“", rdquo: "”", hellip: "…", bull: "•",
+  middot: "·", copy: "©", reg: "®", trade: "™",
+};
+
+const decodeEntities = (text) =>
+  text
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, num) => String.fromCodePoint(Number(num)))
+    .replace(/&([a-z]+);/gi, (m, name) => NAMED_ENTITIES[name.toLowerCase()] ?? m)
+    .replace(/ /g, " ");
+
+// Convert rich-text HTML to the flattened-markdown dialect the parser below
+// understands: headings -> "# ", list items -> "* " / "1. ", bold -> **...**,
+// other block boundaries -> newlines, everything else stripped.
+const htmlToMarkdown = (raw) => {
+  const text = String(raw)
+    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<\s*(br|hr)\s*\/?\s*>/gi, "\n")
+    .replace(/<\s*h([1-6])(\s[^>]*)?>/gi, (_, level) => `\n${"#".repeat(Number(level))} `)
+    // Number ordered-list items so they keep their 1., 2., ... sequence.
+    .replace(/<\s*ol(\s[^>]*)?>([\s\S]*?)<\/\s*ol\s*>/gi, (_, attrs, body) => {
+      let n = 0;
+      return `\n${body.replace(/<\s*li(\s[^>]*)?>/gi, () => `\n${++n}. `)}\n`;
+    })
+    .replace(/<\s*li(\s[^>]*)?>/gi, "\n* ")
+    .replace(/<\/?\s*(strong|b)(\s[^>]*)?>/gi, "**")
+    // Any other block tag (open or close) just ends the current line.
+    .replace(/<\/?\s*(h[1-6]|p|div|ul|ol|li|section|article|table|thead|tbody|tr|td|th|blockquote)(\s[^>]*)?>/gi, "\n")
+    // Remaining inline/unknown tags contribute nothing.
+    .replace(/<[^>]+>/g, "")
+    // Empty bold runs left by "<strong> </strong>" would render as literal **.
+    .replace(/\*\*(\s*)\*\*/g, "$1");
+  return decodeEntities(text);
+};
+
+// Flatten rich text (or plain text with entities) to one readable line — for
+// fields like requirements items that render as plain strings.
+export const htmlToPlainText = (raw) => {
+  const text = String(raw ?? "");
+  if (!looksLikeHtml(text) && !/&[a-z#]/i.test(text)) return text.trim();
+  return htmlToMarkdown(text)
+    .split("\n")
+    .map((line) => line.replace(/^\s*(#{1,6}|[*•-]|\d{1,2}[.)])\s+/, "").trim())
+    .filter(Boolean)
+    .join(" ")
+    .replace(/\*\*/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+};
 
 // Re-insert a newline before every block-level markdown marker. Markers only
 // count when surrounded by whitespace, so "C#", "**bold**" and "3-5 years"
@@ -60,6 +125,27 @@ const KNOWN_SECTIONS = [
   "perks",
 ];
 
+// A joiner lets a known section name extend without starting a sentence:
+// "Required Skills & Competencies" is still a title, "Salary up to X" is not.
+const SECTION_JOINER = /^\s*([&/+(]|and\b)/i;
+
+// HTML descriptions often leave section titles as bare text between blocks
+// ("...</p>Key Responsibilities<ul>..."). Recognize a plain line that IS a
+// section title so it renders as a heading; sentence-like lines stay
+// paragraphs. Returns the cleaned title or null.
+const asSectionHeading = (line) => {
+  const plain = line.replace(/\*\*/g, "").replace(/:\s*$/, "").trim();
+  if (!plain || plain.length > 60 || /[.!?,:](\s|$)/.test(plain)) return null;
+  const lower = plain.toLowerCase();
+  for (const name of KNOWN_SECTIONS) {
+    if (lower === name) return plain;
+    if (lower.startsWith(name) && SECTION_JOINER.test(lower.slice(name.length))) {
+      return plain;
+    }
+  }
+  return null;
+};
+
 // Words that typically start the sentence trailing a merged heading.
 const SENTENCE_STARTERS = /^(The|This|These|We|Our|You|Your|It|A|An)$/;
 
@@ -97,7 +183,8 @@ const splitHeadingBody = (text) => {
 export const parseJobDescription = (raw, jobTitle = "") => {
   if (!raw || !String(raw).trim()) return [];
 
-  const lines = restoreLineBreaks(raw)
+  const source = looksLikeHtml(raw) ? htmlToMarkdown(raw) : String(raw);
+  const lines = restoreLineBreaks(source)
     .split("\n")
     .map((line) => line.trim())
     .filter(Boolean);
@@ -141,18 +228,35 @@ export const parseJobDescription = (raw, jobTitle = "") => {
       continue;
     }
 
+    const section = asSectionHeading(line);
+    if (section) {
+      blocks.push({ type: "heading", level: 3, text: section });
+      continue;
+    }
+
     blocks.push({ type: "paragraph", text: line });
   }
 
-  // The page header already shows the job title — drop a leading
-  // "# Job Title: ..." heading (or one that just repeats the title).
-  const first = blocks[0];
-  if (
-    first?.type === "heading" &&
-    (/^job\s*title\b/i.test(first.text) ||
-      (jobTitle &&
-        first.text.trim().toLowerCase() === jobTitle.trim().toLowerCase()))
-  ) {
+  // The page header already shows the job title — drop leading blocks that
+  // just repeat it: "# Job Title: ...", "# Sales Executive", or a bare
+  // "Sales Executive – Job Description" line.
+  const normalize = (s) =>
+    s.replace(/\*\*/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const title = normalize(jobTitle || "");
+  const titleEchoes = new Set([
+    "job description",
+    ...(title
+      ? [title, `${title} job description`, `job description ${title}`, `job title ${title}`]
+      : []),
+  ]);
+  while (blocks.length > 0) {
+    const first = blocks[0];
+    if (first.type !== "heading" && first.type !== "paragraph") break;
+    const norm = normalize(first.text);
+    const isEcho =
+      titleEchoes.has(norm) ||
+      (first.type === "heading" && /^job\s*title\b/.test(norm));
+    if (!isEcho) break;
     blocks.shift();
   }
 

@@ -6,8 +6,10 @@ import HeroImage from "../assets/HeroImage.png";
 import HeroImage1 from "../assets/HeroImage1.png";
 import HeroImage2 from "../assets/HeroImage2.png";
 
-// Canonical departments always shown first; departments the API introduces
-// that aren't in this list are auto-created after them, then a catch-all.
+// Canonical departments always shown first (with "No openings" until the API
+// specifically returns that category); departments the API introduces via
+// filters.categories that aren't in the list are auto-created after them,
+// then a catch-all.
 
 // Max job roles previewed per department before "Visit career page".
 const MAX_PREVIEW_ROLES = 3;
@@ -74,6 +76,7 @@ export default function CapyngenCareers() {
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const [jobs, setJobs] = useState([]);
+  const [apiCategories, setApiCategories] = useState([]);
   const [branding, setBranding] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -82,9 +85,10 @@ export default function CapyngenCareers() {
     const controller = new AbortController();
     setLoading(true);
     fetchRecruitmentJobs({ country }, controller.signal)
-      .then(({ jobs, branding }) => {
+      .then(({ jobs, branding, categories }) => {
         setJobs(jobs);
         setBranding(branding);
+        setApiCategories(categories || []);
       })
       .catch(() => {})
       .finally(() => setLoading(false));
@@ -92,13 +96,18 @@ export default function CapyngenCareers() {
   }, [country]);
 
   // Group the country's jobs into departments. Canonical departments are
-  // always shown; any department the API introduces that isn't in the list is
+  // always shown (with "No openings" until the API specifically returns that
+  // category). Any department the API announces via filters.categories — or
+  // that a job actually carries — which isn't in the canonical list is
   // auto-created (alphabetically, after the canonical ones) so its jobs are
   // never hidden. "Other" appears last and only when it has jobs.
   const departments = useMemo(() => {
     const inCountry = jobs.filter((j) => !country || j.country === country);
     const extraDepartments = [
-      ...new Set(inCountry.map((j) => j.category || 'Other')),
+      ...new Set([
+        ...apiCategories,
+        ...inCountry.map((j) => j.category || 'Other'),
+      ]),
     ]
       .filter((title) => title !== 'Other' && !DEPARTMENTS.includes(title))
       .sort((a, b) => a.localeCompare(b));
@@ -109,8 +118,13 @@ export default function CapyngenCareers() {
         title,
         jobs: inCountry.filter((j) => (j.category || 'Other') === title),
       }))
-      .filter((d) => DEPARTMENTS.includes(d.title) || d.jobs.length > 0);
-  }, [jobs, country]);
+      .filter(
+        (d) =>
+          DEPARTMENTS.includes(d.title) ||
+          d.jobs.length > 0 ||
+          apiCategories.includes(d.title),
+      );
+  }, [jobs, apiCategories, country]);
 
   const toggleAccordion = (id) => {
     setOpenAccordion(openAccordion === id ? null : id);

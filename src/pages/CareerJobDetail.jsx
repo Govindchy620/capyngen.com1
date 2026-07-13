@@ -81,7 +81,7 @@ const InlineText = ({ text }) => (
   </>
 );
 
-// The API returns the description as flattened markdown (newlines stripped);
+// The API returns the description as rich-text HTML or flattened markdown;
 // parseJobDescription restores the structure and this renders it with the
 // page's heading/bullet styles.
 const DescriptionBlocks = ({ description, title }) => {

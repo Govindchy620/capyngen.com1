@@ -1,3 +1,5 @@
+import { htmlToPlainText } from "../utils/jobDescription";
+
 // Public recruitment API (Orinite HRMS) used by the Careers section.
 // Returns active jobs + branding so the site can render the job list dynamically.
 // The API origin-gates requests to https://capyngen.com, so in dev the calls
@@ -22,9 +24,10 @@ const FILTER_KEYS = [
   "search",
 ];
 
-// Canonical department buckets the Careers site always shows. Jobs whose API
-// category/department doesn't match one of these still get their own section:
-// CountryCareers auto-creates a department for any other category with jobs.
+// Canonical department buckets the Careers site always shows (with
+// "No openings" when empty). The real department list comes from the API's
+// filters.categories; any category it announces beyond these gets its own
+// auto-created section in CountryCareers.
 export const DEPARTMENTS = [
   "Engineering",
   "Design",
@@ -32,6 +35,18 @@ export const DEPARTMENTS = [
   "Marketing",
   "Business",
 ];
+
+// Match a category name from the API to a canonical department regardless of
+// casing/whitespace ("engineering" → "Engineering"), so the same department
+// never renders as two sections. Unknown names pass through trimmed.
+export const canonicalDepartment = (name) => {
+  const trimmed = `${name || ""}`.trim();
+  if (!trimmed) return "";
+  const match = DEPARTMENTS.find(
+    (dept) => dept.toLowerCase() === trimmed.toLowerCase(),
+  );
+  return match || trimmed;
+};
 
 const DEPARTMENT_KEYWORDS = {
   Engineering: [
@@ -81,7 +96,7 @@ const apiCategory = (job) => {
 // into the canonical buckets from the title, falling back to "Other".
 export const categorizeJob = (job) => {
   const named = apiCategory(job);
-  if (named) return named;
+  if (named) return canonicalDepartment(named);
   const text = `${job.title || ""}`.toLowerCase();
   for (const dept of DEPARTMENTS) {
     if (DEPARTMENT_KEYWORDS[dept].some((kw) => text.includes(kw))) return dept;
@@ -138,8 +153,10 @@ const normalizeJob = (job) => ({
   experience: job.experienceRange || "",
   salaryRange: job.salaryRange || "",
   openings: typeof job.openings === "number" ? job.openings : null,
-  description: job.description || "",
-  requirements: Array.isArray(job.requirements) ? job.requirements : [],
+  description: job.description || "", // may be rich-text HTML; parsed at render
+  requirements: Array.isArray(job.requirements)
+    ? job.requirements.map(htmlToPlainText).filter(Boolean)
+    : [],
   createdAt: job.createdAt || null,
   skills: [], // API does not provide a skills array
 });
@@ -148,7 +165,7 @@ const normalizeJob = (job) => ({
  * Fetch active jobs, optionally filtered by country / region / location / etc.
  * @param {Object} filters - any subset of FILTER_KEYS
  * @param {AbortSignal} [signal]
- * @returns {Promise<{ jobs: Array, branding: Object|null }>}
+ * @returns {Promise<{ jobs: Array, branding: Object|null, categories: string[] }>}
  */
 export const fetchRecruitmentJobs = async (filters = {}, signal) => {
   const params = new URLSearchParams();
@@ -188,7 +205,22 @@ export const fetchRecruitmentJobs = async (filters = {}, signal) => {
     return normalized;
   });
 
-  return { jobs, branding: data.branding || null };
+  // Department names the API announces for this result set
+  // (data.filters.categories). Entries may be plain strings or objects
+  // carrying a name; normalize to canonical spellings and dedupe.
+  const categories = [
+    ...new Set(
+      (Array.isArray(data.filters?.categories) ? data.filters.categories : [])
+        .map((c) =>
+          canonicalDepartment(
+            typeof c === "string" ? c : c?.name || c?.label || c?.title || "",
+          ),
+        )
+        .filter(Boolean),
+    ),
+  ];
+
+  return { jobs, branding: data.branding || null, categories };
 };
 
 // ---------------------------------------------------------------------------
