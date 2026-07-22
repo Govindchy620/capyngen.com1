@@ -97,6 +97,17 @@ export const detectCountry = (location) => {
   return "";
 };
 
+const SCREENING_QUESTION_TYPES = ["yesno", "number", "text"];
+
+// Normalize a job's screening questions; unknown/future `type` values fall
+// back to "text" so the form always has a renderable widget.
+const normalizeScreeningQuestions = (questions) =>
+  (Array.isArray(questions) ? questions : []).map((q) => ({
+    question: q.question || "",
+    type: SCREENING_QUESTION_TYPES.includes(q.type) ? q.type : "text",
+    required: !!q.required,
+  }));
+
 // Map an API job document to the shape the Careers UI expects.
 const normalizeJob = (job) => ({
   id: job._id,
@@ -114,6 +125,7 @@ const normalizeJob = (job) => ({
   requirements: Array.isArray(job.requirements) ? job.requirements : [],
   createdAt: job.createdAt || null,
   skills: [], // API does not provide a skills array
+  screeningQuestions: normalizeScreeningQuestions(job.screeningQuestions),
 });
 
 /**
@@ -182,6 +194,11 @@ const DEFAULT_SUBMISSION = {
   customFileFieldPrefix: "custom_",
 };
 
+// Multipart field name for screening-question answers on apply-direct. Not
+// documented by the API's submission spec (unlike companyId/jobId/customFields) —
+// change only this constant if the backend confirms a different key.
+const SCREENING_ANSWERS_FIELD = "screeningAnswers";
+
 // Fetch the dynamic application-form field config for the company.
 export const fetchApplicationFields = async (signal) => {
   const response = await fetch(
@@ -209,7 +226,7 @@ export const fetchApplicationFields = async (signal) => {
 
 // Submit an application as multipart/form-data per the submission spec.
 // values: { [fieldName]: string }, files: { [fieldName]: File }
-export const submitApplication = async ({ jobId, config, values, files }) => {
+export const submitApplication = async ({ jobId, config, values, files, screeningAnswers }) => {
   const submission = config?.submission || DEFAULT_SUBMISSION;
   const filePrefix = submission.customFileFieldPrefix || "custom_";
 
@@ -238,6 +255,10 @@ export const submitApplication = async ({ jobId, config, values, files }) => {
       if (v !== undefined) fd.append(field.submitAs || field.name, v);
     }
   });
+
+  if (Array.isArray(screeningAnswers) && screeningAnswers.length > 0) {
+    fd.append(SCREENING_ANSWERS_FIELD, JSON.stringify(screeningAnswers));
+  }
 
   const response = await fetch(submission.url, {
     method: submission.method || "POST",
