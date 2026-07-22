@@ -6,8 +6,10 @@ import HeroImage from "../assets/HeroImage.png";
 import HeroImage1 from "../assets/HeroImage1.png";
 import HeroImage2 from "../assets/HeroImage2.png";
 
-// Department order shown in the accordion (canonical buckets + a catch-all).
-const DEPARTMENT_ORDER = [...DEPARTMENTS, 'Other'];
+// Canonical departments always shown first (with "No openings" until the API
+// specifically returns that category); departments the API introduces via
+// filters.categories that aren't in the list are auto-created after them,
+// then a catch-all.
 
 // Max job roles previewed per department before "Visit career page".
 const MAX_PREVIEW_ROLES = 3;
@@ -74,6 +76,7 @@ export default function CapyngenCareers() {
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const [jobs, setJobs] = useState([]);
+  const [apiCategories, setApiCategories] = useState([]);
   const [branding, setBranding] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -82,25 +85,46 @@ export default function CapyngenCareers() {
     const controller = new AbortController();
     setLoading(true);
     fetchRecruitmentJobs({ country }, controller.signal)
-      .then(({ jobs, branding }) => {
+      .then(({ jobs, branding, categories }) => {
         setJobs(jobs);
         setBranding(branding);
+        setApiCategories(categories || []);
       })
       .catch(() => {})
       .finally(() => setLoading(false));
     return () => controller.abort();
   }, [country]);
 
-  // Group the country's jobs into departments (only those with openings).
+  // Group the country's jobs into departments. Canonical departments are
+  // always shown (with "No openings" until the API specifically returns that
+  // category). Any department the API announces via filters.categories — or
+  // that a job actually carries — which isn't in the canonical list is
+  // auto-created (alphabetically, after the canonical ones) so its jobs are
+  // never hidden. "Other" appears last and only when it has jobs.
   const departments = useMemo(() => {
     const inCountry = jobs.filter((j) => !country || j.country === country);
-    return DEPARTMENT_ORDER.map((title, i) => ({
-      id: i + 1,
-      num: `${String(i + 1).padStart(2, '0')}.`,
-      title,
-      jobs: inCountry.filter((j) => (j.category || 'Other') === title),
-    })).filter((d) => d.title !== 'Other' || d.jobs.length > 0); // always show the canonical departments
-  }, [jobs, country]);
+    const extraDepartments = [
+      ...new Set([
+        ...apiCategories,
+        ...inCountry.map((j) => j.category || 'Other'),
+      ]),
+    ]
+      .filter((title) => title !== 'Other' && !DEPARTMENTS.includes(title))
+      .sort((a, b) => a.localeCompare(b));
+    return [...DEPARTMENTS, ...extraDepartments, 'Other']
+      .map((title, i) => ({
+        id: i + 1,
+        num: `${String(i + 1).padStart(2, '0')}.`,
+        title,
+        jobs: inCountry.filter((j) => (j.category || 'Other') === title),
+      }))
+      .filter(
+        (d) =>
+          DEPARTMENTS.includes(d.title) ||
+          d.jobs.length > 0 ||
+          apiCategories.includes(d.title),
+      );
+  }, [jobs, apiCategories, country]);
 
   const toggleAccordion = (id) => {
     setOpenAccordion(openAccordion === id ? null : id);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const COMPANY_ID = "6a3bb4300657f6171d4529a0";
-const API_BASE = "http://localhost:3000/api/v1/public/recruitment";
+const COMPANY_ID = "6a47a7e1ec2ba07354500c19";
+const API_BASE = "https://api.orinite.com/api/v1/public/recruitment";
 const WIDGET_SCRIPT = "https://test-hrms.orinite.com/careers-v1.js";
 
 export default function JobOpeningsTable() {

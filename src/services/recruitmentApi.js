@@ -1,13 +1,17 @@
+import { htmlToPlainText } from "../utils/jobDescription";
+
 // Public recruitment API (Orinite HRMS) used by the Careers section.
 // Returns active jobs + branding so the site can render the job list dynamically.
-// Base is configurable so dev can point at a local backend (e.g.
-// http://localhost:3000/api/v1/public/recruitment) where the fields endpoint
-// is reachable; defaults to the public production API.
+// The API origin-gates requests to https://capyngen.com, so in dev the calls
+// go through the Vite proxy (see vite.config.js), which forwards them with
+// the allowed Origin. VITE_RECRUITMENT_API_BASE still overrides both.
 const RECRUITMENT_ROOT =
   import.meta.env.VITE_RECRUITMENT_API_BASE ||
-  "https://api.orinite.com/api/v1/public/recruitment";
+  (import.meta.env.DEV
+    ? "/recruitment-api"
+    : "https://api.orinite.com/api/v1/public/recruitment");
 const RECRUITMENT_BASE = `${RECRUITMENT_ROOT}/jobs`;
-const RECRUITMENT_TENANT_ID = "6a47ab48ec2ba07354500c91";
+const RECRUITMENT_TENANT_ID = "6a47a7e1ec2ba07354500c19";
 
 // Filters supported by the API (sent as query params).
 const FILTER_KEYS = [
@@ -20,10 +24,10 @@ const FILTER_KEYS = [
   "search",
 ];
 
-// The API only returns an opaque `department` ObjectId (no name) and does not
-// resolve it anywhere, so we classify each job into the same department buckets
-// the Careers site uses (see CountryCareers) from the job title. This is what
-// lets us keep, e.g., an HR role out of the Engineering listing.
+// Canonical department buckets the Careers site always shows (with
+// "No openings" when empty). The real department list comes from the API's
+// filters.categories; any category it announces beyond these gets its own
+// auto-created section in CountryCareers.
 export const DEPARTMENTS = [
   "Engineering",
   "Design",
@@ -31,6 +35,18 @@ export const DEPARTMENTS = [
   "Marketing",
   "Business",
 ];
+
+// Match a category name from the API to a canonical department regardless of
+// casing/whitespace ("engineering" → "Engineering"), so the same department
+// never renders as two sections. Unknown names pass through trimmed.
+export const canonicalDepartment = (name) => {
+  const trimmed = `${name || ""}`.trim();
+  if (!trimmed) return "";
+  const match = DEPARTMENTS.find(
+    (dept) => dept.toLowerCase() === trimmed.toLowerCase(),
+  );
+  return match || trimmed;
+};
 
 const DEPARTMENT_KEYWORDS = {
   Engineering: [
@@ -55,8 +71,32 @@ const DEPARTMENT_KEYWORDS = {
   ],
 };
 
-// Classify a job into one of DEPARTMENTS (or "Other") from its title.
+// A bare 24-hex string is an unresolved Mongo ObjectId, not a display name.
+const isObjectId = (value) => /^[0-9a-f]{24}$/i.test(value);
+
+// The department/category name the API provides for a job, if any. Checked in
+// order of likelihood; `department` counts only when it's a real name (some
+// payloads only carry an opaque ObjectId there).
+const apiCategory = (job) => {
+  const candidates = [
+    job.jobCategory,
+    job.category,
+    job.departmentName,
+    job.department?.name,
+    typeof job.department === "string" && !isObjectId(job.department)
+      ? job.department
+      : "",
+  ];
+  const found = candidates.find((c) => typeof c === "string" && c.trim());
+  return found ? found.trim() : "";
+};
+
+// Department for a job: whatever the API names wins (even a brand-new
+// department — the UI auto-creates a section for it); otherwise classify
+// into the canonical buckets from the title, falling back to "Other".
 export const categorizeJob = (job) => {
+  const named = apiCategory(job);
+  if (named) return canonicalDepartment(named);
   const text = `${job.title || ""}`.toLowerCase();
   for (const dept of DEPARTMENTS) {
     if (DEPARTMENT_KEYWORDS[dept].some((kw) => text.includes(kw))) return dept;
@@ -113,16 +153,21 @@ const normalizeJob = (job) => ({
   id: job._id,
   jobCode: job.jobCode || "",
   title: job.title || "",
-  department: job.department || "", // opaque id; not displayed by name
-  category: categorizeJob(job), // derived bucket used for filtering/display
+  department:
+    (typeof job.department === "string"
+      ? job.department
+      : job.department?.name) || "", // raw value; `category` is what's displayed
+  category: categorizeJob(job), // API-named department, or derived from title
   country: detectCountry(job.location), // inferred from location ("" if unknown)
   location: job.location || "",
   type: job.type || "",
   experience: job.experienceRange || "",
   salaryRange: job.salaryRange || "",
   openings: typeof job.openings === "number" ? job.openings : null,
-  description: job.description || "",
-  requirements: Array.isArray(job.requirements) ? job.requirements : [],
+  description: job.description || "", // may be rich-text HTML; parsed at render
+  requirements: Array.isArray(job.requirements)
+    ? job.requirements.map(htmlToPlainText).filter(Boolean)
+    : [],
   createdAt: job.createdAt || null,
   skills: [], // API does not provide a skills array
   screeningQuestions: normalizeScreeningQuestions(job.screeningQuestions),
@@ -132,7 +177,7 @@ const normalizeJob = (job) => ({
  * Fetch active jobs, optionally filtered by country / region / location / etc.
  * @param {Object} filters - any subset of FILTER_KEYS
  * @param {AbortSignal} [signal]
- * @returns {Promise<{ jobs: Array, branding: Object|null }>}
+ * @returns {Promise<{ jobs: Array, branding: Object|null, categories: string[] }>}
  */
 export const fetchRecruitmentJobs = async (filters = {}, signal) => {
   const params = new URLSearchParams();
@@ -172,20 +217,27 @@ export const fetchRecruitmentJobs = async (filters = {}, signal) => {
     return normalized;
   });
 
-  return { jobs, branding: data.branding || null };
+  // Department names the API announces for this result set
+  // (data.filters.categories). Entries may be plain strings or objects
+  // carrying a name; normalize to canonical spellings and dedupe.
+  const categories = [
+    ...new Set(
+      (Array.isArray(data.filters?.categories) ? data.filters.categories : [])
+        .map((c) =>
+          canonicalDepartment(
+            typeof c === "string" ? c : c?.name || c?.label || c?.title || "",
+          ),
+        )
+        .filter(Boolean),
+    ),
+  ];
+
+  return { jobs, branding: data.branding || null, categories };
 };
 
 // ---------------------------------------------------------------------------
 // Application form (dynamic fields + submission)
 // ---------------------------------------------------------------------------
-
-// The apply-direct endpoint only accepts these custom-field types; anything
-// else (e.g. a "file"-type custom field like a cover letter) is rejected by its
-// validator with "expected one of text|number|select|checkbox".
-const APPLY_CUSTOM_FIELD_TYPES = ["text", "number", "select", "checkbox"];
-
-const isSubmittableField = (field) =>
-  field.source !== "custom" || APPLY_CUSTOM_FIELD_TYPES.includes(field.type);
 
 const DEFAULT_SUBMISSION = {
   method: "POST",
@@ -210,11 +262,8 @@ export const fetchApplicationFields = async (signal) => {
   if (!json?.success || !json?.data) throw new Error("Failed to load form");
 
   const data = json.data;
-  // Drop custom fields the apply endpoint can't accept (e.g. file-type custom
-  // fields), so the form never renders or submits something that 400s.
-  const fields = (Array.isArray(data.fields) ? data.fields : []).filter(
-    isSubmittableField,
-  );
+  // Render every field the API returns — the form is fully API-driven.
+  const fields = Array.isArray(data.fields) ? data.fields : [];
   return {
     fields,
     resume: data.resume || null,
@@ -234,19 +283,31 @@ export const submitApplication = async ({ jobId, config, values, files, screenin
   fd.append("companyId", RECRUITMENT_TENANT_ID);
   if (jobId) fd.append("jobId", jobId);
 
+  // Non-file custom fields are sent together as a JSON object in a single
+  // `customFields` form field (per the submission spec's customTextPayload);
+  // custom file fields go as flat `custom_<name>` multipart fields.
+  const customValues = {};
+
   (config?.fields || []).forEach((field) => {
-    // Skip custom fields the apply endpoint rejects (only text/number/select/checkbox).
-    if (!isSubmittableField(field)) return;
     const isFile = field.type === "file";
     if (field.source === "custom") {
-      // The apply-direct endpoint takes every custom field (text or file) as a
-      // flat `custom_<name>` form field (e.g. custom_linkedin, custom_cover_letter).
-      const fieldName = field.multipartFieldName || `${filePrefix}${field.name}`;
       if (isFile) {
-        if (files[field.name]) fd.append(fieldName, files[field.name]);
+        if (files[field.name]) {
+          fd.append(
+            field.multipartFieldName || `${filePrefix}${field.name}`,
+            files[field.name],
+          );
+        }
       } else {
         const v = values[field.name];
-        if (v !== undefined && v !== "") fd.append(fieldName, v);
+        if (v !== undefined && v !== "") {
+          // jsonFieldPath is like "customFields.linkedin" — the key inside the
+          // customFields object is its last segment (falls back to the name).
+          const key = field.jsonFieldPath
+            ? field.jsonFieldPath.split(".").pop()
+            : field.name;
+          customValues[key] = v;
+        }
       }
     } else if (isFile) {
       if (files[field.name]) fd.append(field.submitAs || field.name, files[field.name]);
@@ -258,6 +319,10 @@ export const submitApplication = async ({ jobId, config, values, files, screenin
 
   if (Array.isArray(screeningAnswers) && screeningAnswers.length > 0) {
     fd.append(SCREENING_ANSWERS_FIELD, JSON.stringify(screeningAnswers));
+  }
+
+  if (Object.keys(customValues).length > 0) {
+    fd.append("customFields", JSON.stringify(customValues));
   }
 
   const response = await fetch(submission.url, {
