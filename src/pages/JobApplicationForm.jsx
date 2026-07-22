@@ -90,6 +90,7 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
 
   const job = location.state?.job || null;
   const branding = location.state?.branding || null;
+  const screeningQuestions = job?.screeningQuestions || [];
   const title = jobTitle || job?.title || 'this Position';
   const dept =
     department || (job?.category && job.category !== 'Other' ? job.category : '') || '';
@@ -103,6 +104,7 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
 
   const [values, setValues] = useState({});
   const [files, setFiles] = useState({});
+  const [screeningValues, setScreeningValues] = useState({});
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -136,6 +138,7 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
 
   const setVal = (name) => (e) => setValues((s) => ({ ...s, [name]: e.target.value }));
   const setFile = (name) => (f) => setFiles((s) => ({ ...s, [name]: f }));
+  const setScreeningVal = (idx) => (val) => setScreeningValues((s) => ({ ...s, [idx]: val }));
 
   const validate = () => {
     const err = {};
@@ -160,6 +163,12 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
         err[name] = 'Enter a valid email.';
       }
     });
+    screeningQuestions.forEach((q, idx) => {
+      const errorKey = `screening_${idx}`;
+      const value = (screeningValues[idx] ?? "").toString().trim();
+      if (q.required && !value) err[errorKey] = `${q.question} is required.`;
+    });
+
     setErrors(err);
     return Object.keys(err).length === 0;
   };
@@ -170,13 +179,18 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
+    const screeningAnswers = screeningQuestions.map((q, idx) => ({
+      question: q.question,
+      type: q.type,
+      answer: (screeningValues[idx] ?? '').toString(),
+    }));
     if (onSubmitOverride) {
-      onSubmitOverride({ jobId, values, files });
+      onSubmitOverride({ jobId, values, files, screeningAnswers });
       return;
     }
     setSubmitting(true);
     try {
-      await submitApplication({ jobId, config, values, files });
+      await submitApplication({ jobId, config, values, files, screeningAnswers });
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (e) {
@@ -224,6 +238,45 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
           value={values[name] || ''}
           onChange={setVal(name)}
           autoComplete={autocomplete}
+          className={inputClass}
+        />
+      </Field>
+    );
+  };
+
+  const renderScreeningQuestion = (q, idx) => {
+    const errorKey = `screening_${idx}`;
+    const error = errors[errorKey];
+    const value = screeningValues[idx] ?? '';
+
+    if (q.type === 'yesno') {
+      return (
+        <Field key={errorKey} label={q.question} required={q.required} error={error}>
+          <div className="flex items-center gap-6">
+            {['yes', 'no'].map((opt) => (
+              <label key={opt} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
+                <input
+                  type="radio"
+                  name={`screening-${idx}`}
+                  value={opt}
+                  checked={value === opt}
+                  onChange={() => setScreeningVal(idx)(opt)}
+                  className="w-4 h-4 text-[#4884f0] focus:ring-[#4884f0]"
+                />
+                {opt === 'yes' ? 'Yes' : 'No'}
+              </label>
+            ))}
+          </div>
+        </Field>
+      );
+    }
+
+    return (
+      <Field key={errorKey} label={q.question} required={q.required} error={error}>
+        <input
+          type={q.type === 'number' ? 'number' : 'text'}
+          value={value}
+          onChange={(e) => setScreeningVal(idx)(e.target.value)}
           className={inputClass}
         />
       </Field>
@@ -343,6 +396,16 @@ export default function JobApplicationForm({ jobTitle, department, onBack, onSub
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {otherFields.map(renderField)}
+                </div>
+              </div>
+            )}
+
+            {/* Screening questions */}
+            {screeningQuestions.length > 0 && (
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8 mt-8">
+                <h2 className="text-lg font-semibold text-[#03152c] mb-4">Screening Questions</h2>
+                <div className="space-y-5">
+                  {screeningQuestions.map(renderScreeningQuestion)}
                 </div>
               </div>
             )}

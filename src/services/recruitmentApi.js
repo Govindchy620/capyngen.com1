@@ -7,7 +7,7 @@ const RECRUITMENT_ROOT =
   import.meta.env.VITE_RECRUITMENT_API_BASE ||
   "https://api.orinite.com/api/v1/public/recruitment";
 const RECRUITMENT_BASE = `${RECRUITMENT_ROOT}/jobs`;
-const RECRUITMENT_TENANT_ID = "6a3bb4300657f6171d4529a0";
+const RECRUITMENT_TENANT_ID = "6a47ab48ec2ba07354500c91";
 
 // Filters supported by the API (sent as query params).
 const FILTER_KEYS = [

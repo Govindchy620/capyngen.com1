@@ -4,6 +4,22 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      "/orinite-proxy": {
+        target: "https://api.orinite.com/api/v1/public/recruitment",
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/orinite-proxy/, ""),
+        configure: (proxy) => {
+          proxy.on("proxyReq", (proxyReq) => {
+            proxyReq.removeHeader("origin");
+            proxyReq.removeHeader("referer");
+          });
+        },
+      },
+    },
+  },
   build: {
     cssCodeSplit: true,
     sourcemap: false,
