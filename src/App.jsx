@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy, useState } from "react";
+﻿import React, { useEffect, Suspense, lazy, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,8 +11,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Preloader from "./components/Preloader";
 
 // Admin Services (Lightweight functions)
-import { isAdminLoggedIn } from "./pages/AdminPanel/services/authService";
-import { ToastProvider } from "./pages/AdminPanel/hooks/useToast";
+import { isAdminLoggedIn } from "./views/AdminPanel/services/authService";
+import { ToastProvider } from "./views/AdminPanel/hooks/useToast";
 import usePageTracking from "./hooks/usePageTracking";
 
 // ============================================================================
@@ -23,137 +23,137 @@ import usePageTracking from "./hooks/usePageTracking";
 // Main Pages
 const Navbar = lazy(() => import("./components/Navbar"));
 const Footer = lazy(() => import("./components/Footer"));
-const Homepage = lazy(() => import("./pages/Homepage"));
-const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
-const AppDevelopment = lazy(() => import("./pages/AppDevelopment"));
-const CustomAiSolution = lazy(() => import("./pages/CustomAiSolution"));
-const ECommerceSolution = lazy(() => import("./pages/ECommerceSolution"));
+const Homepage = lazy(() => import("./views/Homepage"));
+const WebDevelopment = lazy(() => import("./views/WebDevelopment"));
+const AppDevelopment = lazy(() => import("./views/AppDevelopment"));
+const CustomAiSolution = lazy(() => import("./views/CustomAiSolution"));
+const ECommerceSolution = lazy(() => import("./views/ECommerceSolution"));
 const BlockchainDevelopment = lazy(
-  () => import("./pages/BlockchainDevelopment"),
+  () => import("./views/BlockchainDevelopment"),
 );
-const DevOpsSolutions = lazy(() => import("./pages/DevOpsSolutions"));
-const ApplicationSolutions = lazy(() => import("./pages/ApplicationSolutions"));
+const DevOpsSolutions = lazy(() => import("./views/DevOpsSolutions"));
+const ApplicationSolutions = lazy(() => import("./views/ApplicationSolutions"));
 const CrmManagementSoftware = lazy(
-  () => import("./pages/CrmManagementSoftware"),
+  () => import("./views/CrmManagementSoftware"),
 );
 
 // Design Services
-const UiUxDesign = lazy(() => import("./pages/UiUxDesign"));
-const WebsiteDesign = lazy(() => import("./pages/WebsiteDesign"));
+const UiUxDesign = lazy(() => import("./views/UiUxDesign"));
+const WebsiteDesign = lazy(() => import("./views/WebsiteDesign"));
 const BrandingIdentityDesign = lazy(
-  () => import("./pages/BrandingIdentityDesign"),
+  () => import("./views/BrandingIdentityDesign"),
 );
-const EcommerceDesign = lazy(() => import("./pages/EcommerceDesign"));
-const CMSDesign = lazy(() => import("./pages/CMSDesign"));
+const EcommerceDesign = lazy(() => import("./views/EcommerceDesign"));
+const CMSDesign = lazy(() => import("./views/CMSDesign"));
 
 // Marketing Services
-const DigitalMarketing = lazy(() => import("./pages/DigitalMarketing"));
-const SEO = lazy(() => import("./pages/SEO"));
-const SMM = lazy(() => import("./pages/SMM"));
-const PPC = lazy(() => import("./pages/PPC"));
+const DigitalMarketing = lazy(() => import("./views/DigitalMarketing"));
+const SEO = lazy(() => import("./views/SEO"));
+const SMM = lazy(() => import("./views/SMM"));
+const PPC = lazy(() => import("./views/PPC"));
 
 // Tech Services
 const ArtificialIntelligence = lazy(
-  () => import("./pages/ArtificialIntelligence"),
+  () => import("./views/ArtificialIntelligence"),
 );
-const Cybersecurity = lazy(() => import("./pages/Cybersecurity"));
+const Cybersecurity = lazy(() => import("./views/Cybersecurity"));
 const NetworkSolutionServices = lazy(
-  () => import("./pages/NetworkSolutionServices"),
+  () => import("./views/NetworkSolutionServices"),
 );
-const EnterpriseSolutions = lazy(() => import("./pages/EnterpriseSolutions"));
-const DataAnalytics = lazy(() => import("./pages/DataAnalytics"));
-const Consulting = lazy(() => import("./pages/Consulting"));
+const EnterpriseSolutions = lazy(() => import("./views/EnterpriseSolutions"));
+const DataAnalytics = lazy(() => import("./views/DataAnalytics"));
+const Consulting = lazy(() => import("./views/Consulting"));
 
 // Industries
-const Industries = lazy(() => import("./pages/Industries"));
-const Banking = lazy(() => import("./pages/Banking"));
-const Education = lazy(() => import("./pages/Education"));
-const CapitalMarket = lazy(() => import("./pages/CapitalMarket"));
-const LifeScience = lazy(() => import("./pages/LifeScience"));
-const HealthcareAndFitness = lazy(() => import("./pages/HealthcareAndFitness"));
+const Industries = lazy(() => import("./views/Industries"));
+const Banking = lazy(() => import("./views/Banking"));
+const Education = lazy(() => import("./views/Education"));
+const CapitalMarket = lazy(() => import("./views/CapitalMarket"));
+const LifeScience = lazy(() => import("./views/LifeScience"));
+const HealthcareAndFitness = lazy(() => import("./views/HealthcareAndFitness"));
 const EnergyResourcesUtilities = lazy(
-  () => import("./pages/EnergyResourcesUtilities"),
+  () => import("./views/EnergyResourcesUtilities"),
 );
 const ManufacturingAutomotive = lazy(
-  () => import("./pages/ManufacturingAutomotive"),
+  () => import("./views/ManufacturingAutomotive"),
 );
-const PublicService = lazy(() => import("./pages/PublicService"));
-const ECommerceIndustry = lazy(() => import("./pages/ECommerceIndustry"));
-const HighTech = lazy(() => import("./pages/HighTech"));
-const TravelAndLogistics = lazy(() => import("./pages/TravelAndLogistics"));
-const CpgDistribution = lazy(() => import("./pages/CpgDistribution"));
-const Insurance = lazy(() => import("./pages/Insurance"));
-const CommunicationMediaIT = lazy(() => import("./pages/CommunicationMediaIT"));
-const RealEstate = lazy(() => import("./pages/RealEstate"));
-const Gaming = lazy(() => import("./pages/Gaming"));
+const PublicService = lazy(() => import("./views/PublicService"));
+const ECommerceIndustry = lazy(() => import("./views/ECommerceIndustry"));
+const HighTech = lazy(() => import("./views/HighTech"));
+const TravelAndLogistics = lazy(() => import("./views/TravelAndLogistics"));
+const CpgDistribution = lazy(() => import("./views/CpgDistribution"));
+const Insurance = lazy(() => import("./views/Insurance"));
+const CommunicationMediaIT = lazy(() => import("./views/CommunicationMediaIT"));
+const RealEstate = lazy(() => import("./views/RealEstate"));
+const Gaming = lazy(() => import("./views/Gaming"));
 
 // Company & Misc
-const CompanyOverview = lazy(() => import("./pages/CompanyOverview"));
-const Careers = lazy(() => import("./pages/Careers"));
-const CountryCareers = lazy(() => import("./pages/CountryCareers"));
-const CareerSearch = lazy(() => import("./pages/CareerSearch"));
-const CareerJobDetail = lazy(() => import("./pages/CareerJobDetail"));
-const JobApplicationForm = lazy(() => import("./pages/JobApplicationForm"));
-const NewsAndUpdates = lazy(() => import("./pages/NewsAndUpdates"));
+const CompanyOverview = lazy(() => import("./views/CompanyOverview"));
+const Careers = lazy(() => import("./views/Careers"));
+const CountryCareers = lazy(() => import("./views/CountryCareers"));
+const CareerSearch = lazy(() => import("./views/CareerSearch"));
+const CareerJobDetail = lazy(() => import("./views/CareerJobDetail"));
+const JobApplicationForm = lazy(() => import("./views/JobApplicationForm"));
+const NewsAndUpdates = lazy(() => import("./views/NewsAndUpdates"));
 const BlogDetail = lazy(() => import("./components/BlogDetail"));
-const ContactUs = lazy(() => import("./pages/ContactUs"));
-const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const ContactUs = lazy(() => import("./views/ContactUs"));
+const PrivacyPolicy = lazy(() => import("./views/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./views/TermsAndConditions"));
 
 // Landing Pages & Hidden Pages
 const LandingPage = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPage/LandingPage"),
+  () => import("./views/LandingPage/DigitalMarketingLandingPage/LandingPage"),
 );
 const LandingPageForeign = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPageUSA/LandingPageForeign"),
+  () => import("./views/LandingPage/DigitalMarketingLandingPageUSA/LandingPageForeign"),
 );
 const LandingPageUAE = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPageUAE/LandingPageUAE"),
+  () => import("./views/LandingPage/DigitalMarketingLandingPageUAE/LandingPageUAE"),
 );
 
 const SoftwareDevelopmentLandingPage = lazy(
   () =>
-    import("./pages/LandingPage/SoftwareDevelopmentLandingPage/SoftwareDevelopmentLandingPage"),
+    import("./views/LandingPage/SoftwareDevelopmentLandingPage/SoftwareDevelopmentLandingPage"),
 );
 const DesignLandingPage = lazy(
-  () => import("./pages/LandingPage/DesignLandingPage/DesignLandingPage"),
+  () => import("./views/LandingPage/DesignLandingPage/DesignLandingPage"),
 );
 const GreetingsPage = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPage/GreetingsPage"),
+  () => import("./views/LandingPage/DigitalMarketingLandingPage/GreetingsPage"),
 );
 const GreetingsPageForeign = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPageUSA/GreetingsPageForeign"),
+  () => import("./views/LandingPage/DigitalMarketingLandingPageUSA/GreetingsPageForeign"),
 );
 const GreetingsPageUAE = lazy(
-  () => import("./pages/LandingPage/DigitalMarketingLandingPageUAE/GreetingsPageUAE"),
+  () => import("./views/LandingPage/DigitalMarketingLandingPageUAE/GreetingsPageUAE"),
 );
 const WebDevelopmentHiddenPage = lazy(
-  () => import("./pages/WebDevelopmentHiddenPage"),
+  () => import("./views/WebDevelopmentHiddenPage"),
 );
 const AppDevelopmentHiddenPage = lazy(
-  () => import("./pages/AppDevelopmentHiddenPage"),
+  () => import("./views/AppDevelopmentHiddenPage"),
 );
 const CrmManagementSoftwareHiddenPage = lazy(
-  () => import("./pages/CrmManagementSoftwareHiddenPage"),
+  () => import("./views/CrmManagementSoftwareHiddenPage"),
 );
 
 // Admin Panel
 const AdminLogin = lazy(
-  () => import("./pages/AdminPanel/components/AdminLogin"),
+  () => import("./views/AdminPanel/components/AdminLogin"),
 );
 const AdminLanding = lazy(
-  () => import("./pages/AdminPanel/components/AdminLanding"),
+  () => import("./views/AdminPanel/components/AdminLanding"),
 );
 const AdminPanel = lazy(
-  () => import("./pages/AdminPanel/components/AdminPanel"),
+  () => import("./views/AdminPanel/components/AdminPanel"),
 );
 const CareerAdminPanel = lazy(
-  () => import("./pages/AdminPanel/components/CareerAdminPanel"),
+  () => import("./views/AdminPanel/components/CareerAdminPanel"),
 );
 const ViewReports = lazy(
-  () => import("./pages/AdminPanel/components/ViewReports"),
+  () => import("./views/AdminPanel/components/ViewReports"),
 );
-const Settings = lazy(() => import("./pages/AdminPanel/components/Settings"));
+const Settings = lazy(() => import("./views/AdminPanel/components/Settings"));
 
 const ProtectedRoute = ({ children }) => {
   const loggedIn = isAdminLoggedIn();

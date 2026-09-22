@@ -1,0 +1,75 @@
+import ClientApp from "@/components/ClientApp";
+
+export const dynamicParams = true;
+
+export function generateStaticParams() {
+  const routes = [
+    ["web-development"],
+    ["app-development"],
+    ["custom-ai-solutions"],
+    ["ecommerce-solutions"],
+    ["blockchain-development"],
+    ["devops-solutions"],
+    ["application-solutions"],
+    ["crm-management-software"],
+    ["ui-ux-design-services"],
+    ["website-design-company-india"],
+    ["branding-identity-design"],
+    ["ecommerce-website-design"],
+    ["cms-website-design"],
+    ["digital-marketing"],
+    ["seo"],
+    ["smm"],
+    ["ppc"],
+    ["artificial-intelligence-services"],
+    ["cybersecurity"],
+    ["network-solutions"],
+    ["enterprise-solutions"],
+    ["data-analytics-services"],
+    ["consulting"],
+    ["industries"],
+    ["industries", "banking"],
+    ["industries", "education"],
+    ["industries", "capital-market"],
+    ["industries", "life-science"],
+    ["industries", "healthcare-fitness"],
+    ["industries", "energy-resources-utilities"],
+    ["industries", "manufacturing-and-automotive"],
+    ["industries", "public-service"],
+    ["industries", "e-commerce"],
+    ["industries", "high-tech"],
+    ["industries", "travel-logistics"],
+    ["industries", "cpg-distribution"],
+    ["industries", "insurance"],
+    ["industries", "communication-media-it"],
+    ["industries", "real-estate"],
+    ["industries", "gaming"],
+    ["company-overview"],
+    ["careers"],
+    ["news-and-updates"],
+    ["contact-us"],
+    ["privacy-policy"],
+    ["terms-and-conditions"],
+    ["digital-marketing-landing-page"],
+    ["digital-marketing-landing-page-usa"],
+    ["digital-marketing-landing-page-uae"],
+    ["software-development-landing-page"],
+    ["design-landing-page"],
+    ["greetings"],
+    ["greetings-offer"],
+    ["web-development-hidden-page"],
+    ["app-development-hidden-page"],
+    ["crm-management-software-hidden-page"],
+    ["admin-login"],
+    ["admin-dashboard"],
+    ["admin-blogs"],
+    ["admin-careers"],
+    ["admin-reports"],
+  ];
+
+  return routes.map((slug) => ({ slug }));
+}
+
+export default function SlugPage() {
+  return <ClientApp />;
+}
