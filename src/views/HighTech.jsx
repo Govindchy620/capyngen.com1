@@ -471,128 +471,293 @@ const HighTech = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER11 - RETAINED EXACTLY AS REQUESTED)                */}
+      {/* ========================================================================= */}
       <Banner11
         heading=" Driving the High-Tech Industry"
         highlight="Intelligent IT Solutions"
         description="By making technologies, software, and products simple, secure, and adaptable to suit the needs of varying markets, we not only give the future to the high-tech industry but also help our businesses evolve and prosper. Capyngen offers high tech IT solutions that enable organisations to remain digital."
         cards={marketingCards}
       />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Get in touch with us for a no-charge consultation."
-        description={[
-          "It is we, as a Top IT services company for tech firms in the high-tech industry to develop and design next-gen IT solutions for high-tech industry that results to smart systems, reliable infrastructure and high-end software, which achieve the seamless and cutting-edge experience of the customer.",
-        ]}
-        buttonText="Get in Touch"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        reverse={false}
-        title="Capyngen New Technologies and Solutions are Shaping the High-Tech Industry"
-        description={[
-          <>
-            <p>
-              Automation, cloud computing, Internet of Things (IoT), and
-              Artificial Intelligence serve to facilitate the development of the
-              high-tech sector, and these are the changes that preconditioned
-              the existence of the industry. It is not just necessary that
-              businesses should be able to keep up but also keep ahead of the
-              competition with quick, intelligent, secure, and dynamic digital
-              ecosystems.
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / HIGH-TECH (SPLIT LIGHT SECTION)                             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.highTech12}
+                alt="High-Tech Digital Solutions"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Shaping the High-Tech Industry with Next-Gen Engineering
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                Automation, cloud computing, Internet of Things (IoT), and Artificial Intelligence are fundamentally redefining high-tech product velocity. Organizations must not only keep pace, but lead with intelligent, secure, and resilient digital backbones.
+              </p>
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> provides data-driven engineering excellence to both ambitious tech startups and global technology enterprises across semiconductors, telecommunications, robotics, and SaaS platforms.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Zero-trust cybersecurity architectures safeguarding valuable intellectual property.",
+                "High-performance cloud platforms and edge computing telemetry.",
+                "Generative AI integration accelerating engineering design-to-production cycles.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule High-Tech Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. WHY GLOBAL TECH LEADERS TRUST CAPYNGEN (DARK CARDS GRID)              */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Global Technology Leaders Trust Capyngen
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Domain expertise, zero-trust cybersecurity, multi-cloud scalability, and practical Gen AI integration.
             </p>
-            <p className="pt-4">
-              The best IT solutions provider for high-tech industry is Capyngen,
-              which provides a data-driven method of engineering excellence. We
-              make technology giants out of start-ups within the blink of an
-              eye. Our capabilities are appropriate to software customisation in
-              electronics, semiconductor, telecommunications, AI platforms, and
-              new tech verticals- supplying exactly what the high-tech companies
-              require.
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. HIGH-TECH SOFTWARE DEVELOPMENT (LIGHT CARDS)                           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              High-Tech Software Development Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Transforming raw ideas into production-ready platforms using modern engineering standards.
             </p>
-            <p className="pt-4">
-              Digitally engineered in the application of high-tech companies,
-              i.e. Gen AI-driven platforms, cloud-native infrastructure, etc.,
-              is a true high-tech software. Such is precisely the type of
-              advanced IT solutions to the high-tech industry that we create.
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-600 text-sm leading-relaxed mt-2">
+                    {item.description}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. EMPOWERING HIGH-TECH THROUGH DIGITAL TRANSFORMATION (6 DARK CARDS)     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Digital Transformation Outcomes
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Delivering quantifiable velocity, cost efficiency, and unyielding intellectual property protection.
             </p>
-          </>,
-        ]}
-        image={assets.highTech12}
-        background={assets.patternBg1}
-        isHidden="hidden"
-      />
-      <CardsSection
-        heading="Why Global Technology Leaders Trust Capyngen"
-        subheading=""
-        services={cardsSectionData2}
-        sectionBg="bg-gray-900"
-        headColor="text-white"
-        cardBg="bg-black border border-white transition-all duration-400"
-        hoverBg=" hover:-translate-y-2"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-      />
-      <CardsSectionImage
-        heading="High-Tech Software Solution Development"
-        subheading="Modern Tech Stack for Healthcare & Fitness Solutions"
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Would you consider innovating differently?"
-        description={[
-          "If you want to know how our IT solutions for the smart high-tech industry can be the key to your organization’s capacity to innovate and competitiveness in the global market then schedule a free strategy session with Capyngen.",
-        ]}
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <IndustryServices
-        heading="Empowering the High-Tech Industry Through Digital Transformation"
-        subheading=""
-        services={servicesData}
-      />
-      <CardsSectionSlider
-        heading="Industries We Empower in the High-Tech Ecosystem"
-        subheading=""
-        cardBg="bg-transparent"
-        hoverBg=" hover:bg-blue-50"
-        textColor="text-gray-800"
-        hoverTextColor=""
-        textSize="text-xl"
-        sectionBg="bg-black/90"
-        height="h-78"
-        headColor="text-white"
-        services={cardsSectionSliderData1}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Ready to Lead the Future of High-Tech Innovation?"
-        description={[
-          "How about Capyngen’s IT solutions for the high-tech industry making a difference in your enterprise with automation, AI, cloud, and cybersecurity? Get in touch with us to start creating the future.",
-        ]}
-        buttonText="Get a Free Consultation"
-        backgroundVideo={assets.backgroundVideo}
-      />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. INDUSTRIES WE EMPOWER IN HIGH-TECH (LIGHT CARDS)                       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Industries We Empower in the High-Tech Ecosystem
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Specialized domain engineering serving every segment of advanced electronics, telecom, and robotics.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionSliderData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Ready to Lead the Future of High-Tech Innovation?
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Empower your enterprise with scalable cloud platforms, Gen AI automation, and zero-trust security engineered for high-tech competitiveness.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

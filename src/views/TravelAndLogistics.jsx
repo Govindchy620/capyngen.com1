@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
 import {
   FaTools,
@@ -513,6 +515,9 @@ const TravelAndLogistics = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (CREATIVEAGENCYFAQ - RETAINED EXACTLY AS REQUESTED)       */}
+      {/* ========================================================================= */}
       <CreativeAgencyFAQ
         slides={slidesData}
         slideDuration={4000}
@@ -521,109 +526,280 @@ const TravelAndLogistics = () => {
         buttonGradient="from-blue-500 to-purple-600"
         priceLabel=""
       />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Consult Me for Free!"
-        description={[
-          "Turn your travel or logistics business upside down with Capyngen’s digital solutions for travel and logistics – from automation to analytics, we create systems that revolutionize the world.",
-        ]}
-        buttonText="Consult With Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="IT Solution For Travel and logistics"
-        description={[
-          "The travel and logistics industry has been undergoing a series of rapid changes that mainly come from digital transformation, automation, and a rise in customer expectations. The need for smart systems that can do tasks like dynamic pricing, route optimization, online bookings, and end-to-end supply chain visibility is now a must for companies.",
-          "Capyngen gives you the Best IT solutions for logistics companies that link every department of your company — from fleet management to customer engagement.",
-        ]}
-        image={assets.travel13}
-      />
 
-      <CardsSection
-        heading="Why Travel & Logistics Companies Choose Capyngen"
-        subheading=""
-        services={cardsSectionData1}
-        sectionBg="bg-black"
-        cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
-        headColor="text-white"
-        hoverBg=" hover:bg-gray-700"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-      />
-      <CardsSectionImage
-        heading="Capyngen’s Core Travel & Logistics IT Offerings"
-        subheading=""
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Do you want to update your transport or logistics business with the latest technology?"
-        description={[
-          "Why not have a chat with one of our specialists now? We will show you how Capyngen’s IT solutions for transport and logistics could be the key to your smart, speedy and profitable operations.",
-        ]}
-        buttonText="Chat With Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <CardsSection
-        heading="Advantages of Capyngen’s IT Solutions"
-        subheading=""
-        services={cardsSectionData2}
-        sectionBg="bg-black"
-        cardBg="bg-gray-800 hover:bg-gray-900 transition-all duration-400 ease-in-out hover:shadow-2xl hover:shadow-gray-700/70 hover:-translate-y-2"
-        headColor="text-white"
-        hoverBg=" hover:bg-gray-700"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-        height="h-78"
-      />
-      <CardsSectionSlider
-        heading="Industries We Serve"
-        subheading=""
-        cardBg="bg-transparent"
-        hoverBg=" hover:bg-blue-50"
-        textColor="text-gray-800"
-        hoverTextColor=""
-        textSize="text-xl"
-        sectionBg="bg-black/90"
-        height="h-78"
-        headColor="text-white"
-        services={cardsSectionSliderData1}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Let’s Redefine the Future of Travel & Logistics!"
-        description={[
-          "Capyngen’s bespoke software for travel and logistics is the perfect recipe for your company to be operationally excellent, transparent, and customer delightful. Reach out to us when you’re ready to start.",
-        ]}
-        buttonText="Work With Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / TRAVEL & LOGISTICS (SPLIT LIGHT SECTION)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.travel13}
+                alt="Travel and Logistics IT Solutions"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Intelligent IT Solutions for Travel & Logistics
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                The travel and logistics industry is experiencing unprecedented acceleration driven by automation, IoT telemetry, and heightened consumer expectations for live shipment tracking and instant travel bookings.
+              </p>
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> provides end-to-end software solutions for logistics companies and travel agencies, connecting every node from dispatch, fleet tracking, and warehouse automation to front-facing customer booking apps.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "AI-driven route optimization cutting fuel burn and reducing delivery delays.",
+                "Seamless integration with ERP, WMS, CRM, and global distribution systems (GDS).",
+                "Full compliance with international transport standards, GDPR, and PCI-DSS.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Logistics Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. WHY TRAVEL & LOGISTICS CHOOSE CAPYNGEN (DARK CARDS GRID)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Travel & Logistics Companies Choose Capyngen
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Proven domain expertise, high-availability cloud platforms, and dependable enterprise integrations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. CORE TRAVEL & LOGISTICS IT OFFERINGS (LIGHT CARDS)                     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Capyngen’s Core Travel & Logistics IT Offerings
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Specialized digital solutions tailored to each stage of passenger travel, cargo routing, and inventory fulfillment.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mt-2">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. ADVANTAGES OF OUR IT SOLUTIONS (DARK CARDS)                            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Advantages of Capyngen’s IT Solutions
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Enhance operational precision, eliminate manual paperwork, and provide effortless experiences to customers worldwide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. INDUSTRIES & VERTICALS WE SERVE (LIGHT CARDS)                         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Industries & Verticals We Serve
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Enabling modern transportation networks across aviation, rail, ocean freight, and express couriers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionSliderData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Let’s Redefine the Future of Travel & Logistics!
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Capyngen’s bespoke software for travel and logistics is the perfect recipe for operational excellence, transparent freight tracking, and customer delight.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

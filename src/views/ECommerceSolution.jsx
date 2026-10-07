@@ -1,26 +1,11 @@
 import React from "react";
-import Banner from "../components/Banner";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import CardsSectionGrid from "../components/CardsSectionGrid";
-import { ShoppingCart, CreditCard, Smartphone, Store } from "lucide-react";
-import CardsSection from "../components/CardsSection";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
-  FaLightbulb,
-  FaChartLine,
-  FaCogs,
-  FaLaptopCode,
-  FaProjectDiagram,
-  FaTasks,
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
+import {
   FaTools,
   FaDollarSign,
   FaUsers,
@@ -31,14 +16,15 @@ import {
   FaLaravel,
   FaCubes,
 } from "react-icons/fa";
-import Banner5 from "../components/Banner5";
-import GetStarted from "../components/GetStarted";
-import CardsSectionImage from "../components/CardsSectionImage";
-import IndustryServices from "../components/IndustryServices";
+import { assets } from "../assets/assets";
+import ecomType1 from "../assets/Ecommerce solutions/1.png";
+import ecomType2 from "../assets/Ecommerce solutions/2.png";
+import ecomType3 from "../assets/Ecommerce solutions/3.png";
+import ecomType4 from "../assets/Ecommerce solutions/4.png";
+import ecomType5 from "../assets/Ecommerce solutions/5.png";
+import ecomType6 from "../assets/Ecommerce solutions/6.png";
+import FAQSection2 from "../components/FAQSection2";
 import TechStack from "../components/TechStack";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
-import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -102,37 +88,38 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": "https://www.capyngen.com/ecommerce-solutions#faq",
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is an e-commerce solution?",
+      name: "What are e-commerce solutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "An e-commerce solution is a complete system that enables businesses to sell products or services online. It includes website design and development, payment integration, marketing tools, and ongoing support.",
+        text: "E-commerce solutions encompass end-to-end services and platforms required to build, operate, and scale online stores, including web development, payments, and marketing.",
       },
     },
     {
       "@type": "Question",
-      name: "Why do I need an e-commerce solutions website for my business?",
+      name: "Why does my business need an e-commerce website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "An e-commerce solutions website allows your business to sell 24/7, reach global customers, reduce operating costs, and provide a seamless shopping experience that increases conversions.",
+        text: "An e-commerce website allows your business to sell 24/7, reach global markets, lower overhead costs, and provide seamless customer shopping experiences.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide both Android and iOS mobile e-commerce applications?",
+      name: "Do you develop both Android and iOS e-commerce mobile apps?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Capyngen develops secure and high-performance Android and iOS mobile e-commerce applications using Flutter, React Native, and native technologies.",
+        text: "Yes. We build high-performance e-commerce mobile applications for both Android and iOS using technologies like Flutter and React Native.",
       },
     },
     {
       "@type": "Question",
-      name: "Can Capyngen develop a multi-vendor marketplace like Amazon?",
+      name: "Can Capyngen build a multi-vendor marketplace like Amazon?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. We build scalable multi-vendor marketplaces where multiple sellers can list and sell products, similar to platforms like Amazon or Flipkart.",
+        text: "Yes. We create multi-vendor marketplaces where multiple sellers can register, manage catalogs, and sell goods with vendor payout automation.",
       },
     },
     {
@@ -140,63 +127,63 @@ const faqSchema = {
       name: "Which payment gateways can be integrated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We integrate leading global and local payment gateways such as Stripe, PayPal, Razorpay, and others to ensure fast and secure transactions.",
+        text: "We integrate all leading payment gateways including Stripe, PayPal, Razorpay, PayU, and custom bank gateways for safe transactions.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide SEO and digital marketing services for e-commerce websites?",
+      name: "Do you provide SEO and digital marketing for e-commerce stores?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We implement SEO strategies and digital marketing services to improve search rankings, attract traffic, and increase conversions for e-commerce websites.",
+        text: "Yes. We implement comprehensive SEO strategies and digital marketing campaigns to drive organic traffic, improve rankings, and boost conversions.",
       },
     },
     {
       "@type": "Question",
-      name: "Can Capyngen help build a globally accessible e-commerce store?",
+      name: "Can Capyngen help me sell globally?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Our e-commerce solutions support global access with multi-currency, multi-language functionality, and international shipping options.",
+        text: "Yes. Our global e-commerce solutions include multi-currency support, multi-language localization, and international shipping configurations.",
       },
     },
     {
       "@type": "Question",
-      name: "How much time is required to develop an e-commerce solutions website?",
+      name: "How much does it cost to build an e-commerce website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "E-commerce development typically takes between 3 to 8 weeks, depending on customization requirements and project scope.",
+        text: "Cost varies based on features, platform, and complexity. Timelines typically range from 3 to 8 weeks. Contact us for a detailed custom quote.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide maintenance after the website goes live?",
+      name: "Do you provide post-launch maintenance and support?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We offer ongoing support and maintenance to ensure your e-commerce platform runs smoothly, securely, and stays up to date.",
+        text: "Yes. We offer continuous support, server monitoring, security updates, and performance tuning to keep your store running flawlessly.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you integrate CRM and ERP systems?",
+      name: "Can you connect CRM and ERP systems with my store?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We integrate CRM and ERP systems to streamline business operations and improve data management within your e-commerce platform.",
+        text: "Yes. We seamlessly connect popular CRM and ERP systems like Salesforce, Zoho, SAP, and HubSpot to automate your business operations.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer subscription-based e-commerce models?",
+      name: "Do you build subscription-based e-commerce models?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We develop subscription and membership-based e-commerce solutions with recurring billing for products, services, and SaaS businesses.",
+        text: "Yes. We create automated recurring billing and subscription commerce models for physical products, digital content, and SaaS platforms.",
       },
     },
     {
       "@type": "Question",
-      name: "Which industries do you serve with e-commerce solutions?",
+      name: "Which industries do you serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve a wide range of industries including retail, food, healthcare, education, travel, hospitality, and B2B wholesale.",
+        text: "We serve fashion, electronics, FMCG, healthcare, groceries, jewelry, automotive, and B2B wholesale industries across the globe.",
       },
     },
     {
@@ -311,6 +298,7 @@ const ECommerceSolution = () => {
         "Just make a free appointment or contact our staff. We will know your objectives, and we will design a customised e-commerce solutions to you.",
     },
   ];
+
   const servicesData = [
     {
       image: assets.eCommSol12,
@@ -343,78 +331,70 @@ const ECommerceSolution = () => {
       desc: "Assess the outcomes and develop successfully.",
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "Enhanced User Engagement & Retention",
       description:
         "Begin to create user-centric and interactive products that will make users revisit them, thereby raising loyalty and long-term interactions. User-engagement sites ensure that the users continue to learn more about your platform and visit regularly.",
       image: assets.eCommSol3,
-      cardBg: "bg-blue-100",
     },
-
     {
       title: "Improved Conversion Rates",
       description:
         "The primary determinant of encouraging visitors to follow the desired action is the ability to select layouts and workflows that are efficient in engaging the visitors and, hence, increasing sales, sign-ups, and leads. Call-to-actions and convincing design elements are strategically placed, which brings the conversions to the next level.",
       image: assets.eCommSol4,
-      cardBg: "bg-green-100",
     },
     {
       title: "Intuitive, Responsive, and Accessible Design",
       description:
         "Ensure that the user experience is also good on other devices, such as those of a disabled user. Focusing on creating accessibility expands your audience and reinforces your brand image with the help of ecommerce website design.",
       image: assets.eCommSol5,
-      cardBg: "bg-yellow-100",
     },
     {
       title: "Faster Load Times & Optimized Performance",
       description:
         "Quick loading of pages, easy navigation and effective apps reduce referred visits that exit instantly. Enhanced performance optimality leads to enhanced user delight and longer sessions.",
       image: assets.eCommSol6,
-      cardBg: "bg-pink-100",
     },
     {
       title: "Scalable Architecture for Growth",
       description:
         "Design changes that could accommodate additional traffic, new functionality and larger geographical aspects without quality reduction. Scalable systems provide the opportunity of business to expand in a stable manner and without having to redesign the platform.",
       image: assets.eCommSol7,
-      cardBg: "bg-purple-100",
     },
     {
       title: "Strong Branding & Visual Identity",
       description:
         "Attractive, customary designs convey the ideals of the company to its consumers in a clean and rather memorable way. A single visual identity is central to recognition and trust by users.",
       image: assets.eCommSol8,
-      cardBg: "bg-red-100",
     },
     {
       title: "Seamless Integration with Tools & Services",
       description:
         "Integrate any third-party services to create a fully fledged ecosystem, including: connect CRMs, payment gateways, analytics or any other third-party services. Integration ensures there is efficiency in operations and improved user experience.",
       image: assets.eCommSol9,
-      cardBg: "bg-blue-100",
     },
     {
       title: "Data-Driven Decision Making",
       description:
         "You can make UX and UI better, enhance the marketing approach, and enhance the products with the help of analytics and knowledge of how people behave. The daily optimisation will involve the users even more, and their loyalty will rise, which will result in the overall enhancement of the ROI.",
       image: assets.eCommSol10,
-      cardBg: "bg-green-100",
     },
     {
       title: "Security & Privacy Compliance",
       description:
         "Install all security controls that comply with the industry requirements and the optimal cybersecurity standards to protect the data of the users. Compliance and earning the confidence of the users will ensure that your platform is not only credible but also secure for everyone who will use it.",
       image: assets.eCommSol11,
-      cardBg: "bg-yellow-100",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title: "CRM & ERP Systems",
       description:
         "Enhance the efficiency of business data flowing to improve its management.",
-      icon: <FaReact className="text-4xl text-white" />,
+      icon: <FaReact className="text-3xl text-cyan-400" />,
     },
     {
       title: "AI-Powered Product Suggestions",
@@ -423,60 +403,68 @@ const ECommerceSolution = () => {
           Make more sales with smart product recommendations using{" "}
           <a
             href="https://www.capyngen.com/custom-ai-solutions"
-            className="text-blue-500 font-semibold"
+            className="text-cyan-400 hover:text-cyan-300 underline font-semibold transition-colors"
           >
             Top AI software solutions in Gurgaon
           </a>
           .
         </>
       ),
-      icon: <FaLaravel className="text-4xl text-white" />,
+      icon: <FaLaravel className="text-3xl text-blue-400" />,
     },
     {
       title: "Chatbots for Support",
       description:
         "Allow chatbots to provide immediate assistance and increase the level of customer satisfaction.",
-      icon: <FaCubes className="text-4xl text-white" />,
+      icon: <FaCubes className="text-3xl text-indigo-400" />,
     },
   ];
+
   const cardsSectionData2 = [
     {
       title: "B2C (Business to Consumer) Stores",
       description:
         "They are online retail stores that are direct and are designed to sell products to the end consumers.",
-      icon: <FaTools className="text-4xl" />,
+      icon: <FaTools className="text-3xl text-cyan-400" />,
+      bgImage: ecomType1,
     },
     {
       title: "B2B (Business to Business) Platforms",
       description:
         "These are scalable e-commerce services that are created to fulfil the requirements of wholesale and enterprise.",
-      icon: <FaDollarSign className="text-4xl" />,
+      icon: <FaDollarSign className="text-3xl text-cyan-400" />,
+      bgImage: ecomType2,
     },
     {
       title: "Multi-Vendor Marketplaces",
       description:
         "Several sellers are allowed to post their products on your platform and sell them.",
-      icon: <FaUsers className="text-4xl" />,
+      icon: <FaUsers className="text-3xl text-cyan-400" />,
+      bgImage: ecomType3,
     },
     {
       title: "Subscription-Based Ecommerce",
       description:
         "It is an ideal billing model when it comes to recurring transactions like sub boxes and membership transactions.",
-      icon: <FaShieldAlt className="text-4xl" />,
+      icon: <FaShieldAlt className="text-3xl text-cyan-400" />,
+      bgImage: ecomType4,
     },
     {
       title: "Dropshipping Stores",
       description:
         "One can begin an e-commerce business by using a little money and having no inventory.",
-      icon: <FaBullhorn className="text-4xl" />,
+      icon: <FaBullhorn className="text-3xl text-cyan-400" />,
+      bgImage: ecomType5,
     },
     {
       title: "Social Commerce Solutions",
       description:
         "Selling on social media is possible with the assistance of built-in shopping capabilities.",
-      icon: <FaHeart className="text-4xl" />,
+      icon: <FaHeart className="text-3xl text-cyan-400" />,
+      bgImage: ecomType6,
     },
   ];
+
   const solutionsData = [
     {
       title: "Quick and Easy Checkout System",
@@ -499,22 +487,26 @@ const ECommerceSolution = () => {
       desc: "The use of a professional will always help you, regardless of the part of the world you are.",
     },
   ];
+
   const techStack = [
     {
       title: "No-Code / Low-Code Platforms",
       items: [
         {
           name: "Shopify",
-          icon: "https://cdn.worldvectorlogo.com/logos/shopify.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg",
         },
-        { name: "Wix", icon: "https://cdn.worldvectorlogo.com/logos/wix.svg" },
+        {
+          name: "Wix",
+          icon: "https://cdn.worldvectorlogo.com/logos/wix.svg",
+        },
         {
           name: "Squarespace",
           icon: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Squarespace_Logo.png?20130318145354",
         },
         {
           name: "Webflow",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Webflow_logo_2023.svg/1600px-Webflow_logo_2023.svg.png?20231006234957",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg",
         },
         {
           name: "Bubble",
@@ -531,15 +523,15 @@ const ECommerceSolution = () => {
       items: [
         {
           name: "React",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         },
         {
           name: "Next.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         },
         {
           name: "Vue.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
         },
       ],
     },
@@ -548,15 +540,15 @@ const ECommerceSolution = () => {
       items: [
         {
           name: "Node.js",
-          icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         },
         {
           name: "PHP (Laravel)",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
         },
         {
           name: "Python (Django)",
-          icon: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
         },
       ],
     },
@@ -565,15 +557,15 @@ const ECommerceSolution = () => {
       items: [
         {
           name: "MongoDB",
-          icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
         },
         {
           name: "MySQL",
-          icon: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
         },
         {
           name: "PostgreSQL",
-          icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         },
       ],
     },
@@ -582,15 +574,15 @@ const ECommerceSolution = () => {
       items: [
         {
           name: "Figma",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         },
         {
           name: "Adobe XD",
-          icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg",
         },
         {
           name: "Sketch",
-          icon: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg",
         },
       ],
     },
@@ -635,13 +627,11 @@ const ECommerceSolution = () => {
     },
   ];
 
-  useSplitTextAnimation("h1");
   return (
-    <div className="relative">
+    <div className="relative font-sans text-slate-900 bg-white selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
-          Smart E-Commerce Solutions – India’s Leading E-Commerce Solution
-          Provider
+          Smart E-Commerce Solutions – India’s Leading E-Commerce Solution Provider
         </title>
         <meta
           name="description"
@@ -656,222 +646,555 @@ const ECommerceSolution = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <div className="">
-        <Banner5
-          title={
-            <>
-              <span className="text-2xl md:text-4xl">
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (Sharp Edges / Zero Rounded Corners / Clean Tech Look)     */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-[85vh] bg-gradient-to-b from-[#070e1d] via-[#09152e] to-[#070e1d] text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden"
+        aria-label="Smart E-Commerce Solutions Banner"
+      >
+        {/* Subtle Background Tech Grid Overlay */}
+        <div 
+          className="absolute inset-0 opacity-15 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(#3b82f6 1px, transparent 1px)",
+            backgroundSize: "32px 32px"
+          }}
+        />
+
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            
+            {/* Left Column: Heading, Description, CTA */}
+            <div className="lg:col-span-7 text-left">
+              <h1
+                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-bold leading-[1.12] tracking-tight mb-6"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
                 Instant Smart E-Commerce Solutions{" "}
-              </span>
-              <span className="text-blue-600">
-                {" "}
-                – Get India’s #1 Trusted E-Commerce Platform
-              </span>
-            </>
-          }
-          description="Bring together, build, and flourish your online store using the effective and user-friendly e-commerce solutions offered by Capyngen, bearing in mind the modern business dynamics as a major e-commerce business solutions company."
-          primaryBtnText="Start your Store Today"
-          primaryBtnLink="/contact-us"
-          image={assets.eCommSol1}
-        />
-      </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            "Jump-start your e-commerce business using Capyngen easy to use e-commerce solutions. We not just design, develop and market, but we also transport you and your store to the other side of the world to enable you prosper as the best ecommerce platform in India to grow scalable.",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <TopRatedCompany
-          title="Why Your Business Needs an E-Commerce Solution"
-          description={[
-            <span>
-              No longer is it sufficient to possess an ecommerce platform, that
-              one can depend on, but now it is necessary as a professional
-              e-commerce solutions. Through an effective business plan of a
-              ecommerce website development solutions, your business can:
-            </span>,
-            <>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
-                {[
-                  {
-                    title: "",
-                    text: "Reaching out to a global market and making sales any day of the week, and at any time of the day or night.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "",
-                    text: "Reducing your business costs as opposed to the normal shops.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "",
-                    text: "Creating customer trust via secure payments.x",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "",
-                    text: "Proper management of stocks and orders.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "",
-                    text: "Providing the customers with a chance to enjoy a fast and convenient shopping experience.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "",
-                    text: "Climbing or descending your ecommerce business without hustling when you make.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                  >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>
-                    {text}
-                  </li>
-                ))}
-              </ul>
-              <p>
-                The e-commerce solutions that are available to Capyngen for the
-                e-commerce will be matched with your company goals towards the
-                e-commerce solutions for businesses, whether you are a new
-                entrant in the market or intend to expand to other international
-                markets.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+                  – Get India’s #1 Trusted E-Commerce Platform
+                </span>
+              </h1>
+
+              <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-2xl font-normal">
+                Bring together, build, and flourish your online store using the effective and user-friendly e-commerce solutions offered by Capyngen, bearing in mind the modern business dynamics as a major e-commerce business solutions company.
               </p>
-            </>,
-          ]}
-          image={assets.eCommSol2}
-          isHidden={true}
-          background={assets.patternBg1}
-        />
-        <CardsSectionImage
-          heading="E-Commerce Solutions Services We Offer"
-          subheading="We develop an all-inclusive array of E commerce solutions services, which are business-specific and are based on the size of the business, including:"
-          services={cardsSectionImageData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        />
-        <CardsSection
-          heading="Types of E-Commerce Solutions"
-          subheading="Capyngen offers flexible e-commerce software solutions packages that suit any business model, using our ecommerce development company experience:"
-          services={cardsSectionData2}
-          headColor="text-white"
-          cardBg="bg-gray-700"
-          sectionBg="bg-gray-900"
-          hoverBg="hover:bg-blue-800 hover:scale-98"
-          textColor="text-white"
-          hoverTextColor=""
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Book a Free Consultation"
-          description={[
-            "Arrange an appointment with our online business specialists to know more about our eCommerce development services that will transform your business. You can easily share with us your online victory.",
-          ]}
-          buttonText="Book Now"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <CardsSection
-          heading="Smart Integrations That Power Your Store"
-          subheading="This is what Capyngen will connect your ecommerce website development with highly impactful resources to enhance the performance of your site:"
-          services={cardsSectionData1}
-          sectionBg="bg-black"
-          cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
-          headColor="text-white"
-          hoverBg=" hover:bg-gray-700"
-          textColor="text-white"
-          hoverTextColor=""
-          textSize="text-md"
-          height="h-72"
-        />
-        <IndustryServices
-          heading="E-Commerce Marketing Made Simple"
-          subheading={
-            <>
-              Capyngen information based marketing is the way your E commerce
-              solutions services can make contact with the appropriate audience
-              with the use of{" "}
+
+              <div>
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+                >
+                  Start your Store Today
+                  <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column: Hero Graphic (Clean, Sharp, Border-free, rounded-none) */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="w-full max-w-[560px] xl:max-w-[600px] h-[440px] sm:h-[480px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={assets.eCommSol1}
+                  alt="Smart E-Commerce Solutions - Capyngen"
+                  className="w-full h-full object-contain rounded-none drop-shadow-2xl"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. TYPES OF E-COMMERCE SOLUTIONS (Directly Below Hero Section)            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Types of E-Commerce Solutions
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
+              Capyngen offers flexible e-commerce software solutions packages that suit any business model, using our ecommerce development company experience:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden border border-slate-300 p-8 shadow-md hover:shadow-2xl transition-all duration-300 rounded-none flex flex-col justify-end min-h-[340px] group bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${item.bgImage})`,
+                }}
+              >
+                {/* Dark gradient overlay for text readability and high contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070e1d]/95 via-[#070e1d]/80 to-[#070e1d]/50 group-hover:via-[#070e1d]/70 transition-all duration-300" />
+                
+                {/* Top Border Accent */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-300 rounded-none z-10" />
+
+                <div className="relative z-10">
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-200 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. JUMP-START BANNER (Clean Dark Tech Strip)                              */}
+      {/* ========================================================================= */}
+      <section className="py-10 lg:py-12 bg-[#09152e] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="max-w-4xl">
+            <p className="text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed">
+              Jump-start your e-commerce business using Capyngen easy to use e-commerce solutions. We not just design, develop and market, but we also transport you and your store to the other side of the world to enable you prosper as the best ecommerce platform in India to grow scalable.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-8 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. SECTION 1: Why Your Business Needs an E-Commerce Solution (Split)      */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-stretch">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6 flex flex-col justify-center">
+              <h2
+                className="text-slate-900 leading-[1.2] tracking-tight text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Why Your Business Needs an{" "}
+                <span className="text-blue-600">E-Commerce Solution</span>
+              </h2>
+
+              <p className="text-slate-600 text-sm sm:text-[15px] lg:text-base leading-relaxed">
+                No longer is it sufficient to possess an ecommerce platform, that one can depend on, but now it is necessary as a professional e-commerce solutions. Through an effective business plan of a ecommerce website development solutions, your business can:
+              </p>
+
+              {/* 6 Advantage Bullet Points */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-2">
+                {[
+                  "Reaching out to a global market and making sales any day of the week, and at any time of the day or night.",
+                  "Reducing your business costs as opposed to the normal shops.",
+                  "Creating customer trust via secure payments.",
+                  "Proper management of stocks and orders.",
+                  "Providing the customers with a chance to enjoy a fast and convenient shopping experience.",
+                  "Climbing or descending your ecommerce business without hustling when you make.",
+                ].map((txt, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                    <span>{txt}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-slate-600 text-sm sm:text-[15px] lg:text-base leading-relaxed">
+                The e-commerce solutions that are available to Capyngen for the e-commerce will be matched with your company goals towards the e-commerce solutions for businesses, whether you are a new entrant in the market or intend to expand to other international markets.
+              </p>
+            </div>
+
+            {/* Right Visual Image (Sharp, border-free frame, rounded-none) */}
+            <div className="lg:col-span-5 flex">
+              <div className="border border-slate-300 bg-slate-950 shadow-xl rounded-none w-full overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px] lg:min-h-[480px]">
+                <img
+                  src={assets.eCommSol2}
+                  alt="E-Commerce Solutions by Capyngen"
+                  className="w-full h-full object-cover rounded-none"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. SECTION 2: E-Commerce Solutions Services We Offer (9 Cards Grid)        */}
+      {/* ========================================================================= */}
+      <section id="services-section" className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <h2
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              E-Commerce Solutions Services We Offer
+            </h2>
+            <p className="text-slate-400 text-base sm:text-lg mt-4 leading-relaxed">
+              We develop an all-inclusive array of E commerce solutions services, which are business-specific and are based on the size of the business, including:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 overflow-hidden shadow-xl flex flex-col justify-between group transition-all duration-300 rounded-none relative"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-300 rounded-none" />
+                
+                <div className="h-52 w-full overflow-hidden bg-slate-900 relative rounded-none">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3
+                      className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. SECTION 4: Book a Free Consultation (CTA Strip)                        */}
+      {/* ========================================================================= */}
+      <section className="py-10 lg:py-12 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-5"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Book a Free Consultation
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
+              Arrange an appointment with our online business specialists to know more about our eCommerce development services that will transform your business. You can easily share with us your online victory.
+            </p>
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+            >
+              Book Now
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. SECTION 5: Smart Integrations That Power Your Store (3 Cards)          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0a1122] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mb-8 lg:mb-10">
+            <h2
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Smart Integrations That Power Your Store
+            </h2>
+            <p className="text-slate-400 text-base sm:text-lg mt-4 leading-relaxed">
+              This is what Capyngen will connect your ecommerce website development with highly impactful resources to enhance the performance of your site:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#0d172e] border border-slate-800 hover:border-blue-500 p-8 shadow-xl flex flex-col justify-between group transition-all duration-300 rounded-none relative"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-300 rounded-none" />
+                
+                <div>
+                  <div className="w-14 h-14 bg-[#101b38] border border-slate-700 flex items-center justify-center rounded-none mb-6 group-hover:border-blue-500 transition-colors">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. SECTION 6: E-Commerce Marketing Made Simple (6 Cards)                   */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              E-Commerce Marketing Made Simple
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
+              Capyngen information based marketing is the way your E commerce solutions services can make contact with the appropriate audience with the use of{" "}
               <a
                 href="https://www.capyngen.com/digital-marketing"
-                className="text-blue-500 font-semibold"
+                className="text-blue-600 hover:text-blue-700 underline font-semibold transition-colors"
               >
                 digital marketing services
               </a>
               :
-            </>
-          }
-          cardBg="bg-gray-700"
-          cardText="text-white"
-          cardDescText="text-white"
-          services={servicesData}
-        />
-        <BenefitsSection
-          heading="Benefits of Choosing Capyngen’s E-Commerce Solutions"
-          desc="Customer Friendliness experience to the customers, quick, user-friendly, and easy-to-use shops that enhance contact with the customers."
-          benefits={solutionsData}
-          footerNote=""
-          image={assets.eCommSol18}
-        />
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#f8fafc] border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 rounded-none flex flex-col group"
+              >
+                <div className="h-52 w-full overflow-hidden bg-slate-100 relative rounded-none border-b border-slate-200">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3
+                      className="text-lg sm:text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. SECTION 7: Benefits of Choosing Capyngen’s E-Commerce Solutions         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Benefits of Choosing Capyngen’s E-Commerce Solutions
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
+              Customer Friendliness experience to the customers, quick, user-friendly, and easy-to-use shops that enhance contact with the customers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutionsData.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white border border-slate-200 hover:border-blue-500 p-8 shadow-sm hover:shadow-xl transition-all duration-300 rounded-none flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="mb-4 text-xs font-mono font-bold text-blue-600 tracking-wider">
+                    BENEFIT 0{index + 1}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10. FULL-SIZE INTERSTITIAL IMAGE SECTION                                  */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.eCommSolFullsize}
+            alt="Build your online store with confidence"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-white">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Build your online store with confidence
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Our company is the ideal firm that can launch a new best ecommerce platfrom that is easy to use, secure and expandable.
+          </p>
+          <Link
+            to="/contact-us"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all shadow-xl"
+          >
+            Launch My Store <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 11. TECH STACK (Sharp Edges, Clean Logos, Light Theme)                    */}
+      {/* ========================================================================= */}
+      <div className="bg-white border-b border-slate-200">
         <TechStack
           heading="Technologies Capyngen Uses for Ecommerce Mobile Apps"
-          subheading=""
           categories={techStack}
+          theme="light"
         />
-        <FullSizeImageSection
-          backgroundImage={assets.eCommSolFullsize}
-          title="Build your online store with confidence"
-          description="Our company is the ideal firm that can launch a new best ecommerce platfrom that is easy to use, secure and expandable."
-          buttonText="Launch My Store"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <HowWeWork
-          heading="E-Commerce Solutions Process"
-          desc=""
-          steps={steps}
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Why Capyngen is the Right Partner for E-Commerce Growth"
-          description={[
-            "Capyngen is a global enterprise E commerce solutions company that start-ups, small and medium-sized businesses, as well as large corporate organisations rely on. We are highly experienced and skilled in e-commerce website development solutions and e-commerce applications development, hence we can work out e-commerce solutions that are not only scalable and well-protected but also future-proof. Therefore, when it comes to opening your very first online store or even trying to connect with the foreign markets in e-commerce, Capyngen will continue to remain the optimal choice in the context of your rapid expansion.",
-          ]}
-          buttonText="Contact Us"
-          image={assets.getStarted}
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Scale Your Ecommerce Business"
-          description={[
-            "You can put your every finger on your mouth when using Capyngen e-commerce solutions to build your business- Fast websites, secure check out, marketing tools and support.",
-          ]}
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
       </div>
+
+      {/* ========================================================================= */}
+      {/* 12. SECTION 8: E-Commerce Solutions Process (Steps 01 - 06)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <h2
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              E-Commerce Solutions Process
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 p-8 rounded-none relative group hover:border-blue-500 transition-all duration-300 hover:-translate-y-1 shadow-lg"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-300 rounded-none" />
+                
+                <div className="text-xs font-mono font-bold text-cyan-400 tracking-wider mb-3">
+                  {st.step}
+                </div>
+                <h3
+                  className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  {st.title}
+                </h3>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  {st.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 13. SECTION 9: Growth Partner Action Banner                               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#081224] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Capyngen is the Right Partner for E-Commerce Growth
+            </h2>
+            <p className="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed">
+              Capyngen is a global enterprise E commerce solutions company that start-ups, small and medium-sized businesses, as well as large corporate organisations rely on. We are highly experienced and skilled in e-commerce website development solutions and e-commerce applications development, hence we can work out e-commerce solutions that are not only scalable and well-protected but also future-proof. Therefore, when it comes to opening your very first online store or even trying to connect with the foreign markets in e-commerce, Capyngen will continue to remain the optimal choice in the context of your rapid expansion.
+            </p>
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-10 rounded-none transition-all shadow-xl"
+            >
+              Contact Us <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 14. FAQ SECTION                                                           */}
+      {/* ========================================================================= */}
+      <FAQSection2 items={faqItems} />
+
+      {/* ========================================================================= */}
+      {/* 15. SECTION 10: Scale Your Ecommerce Business (Bottom Final CTA)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-5"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Scale Your Ecommerce Business
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
+              You can put your every finger on your mouth when using Capyngen e-commerce solutions to build your business- Fast websites, secure check out, marketing tools and support.
+            </p>
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

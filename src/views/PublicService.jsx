@@ -541,110 +541,325 @@ const PublicService = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER4 - RETAINED EXACTLY AS REQUESTED)                 */}
+      {/* ========================================================================= */}
       <Banner4 slides={slides} />
-      <CardsSectionImage
-        heading="Explore Our Presence: Public Sector Solutions We Offer"
-        subheading="We offer end-to-end public sector solutions designed specifically for local, regional, and national organizations:"
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Initiate a Public Sector Transformation"
-        description={[
-          "Book a complimentary discovery call to examine IT solutions for public sector modernization and ask for a customized roadmap.",
-        ]}
-        buttonText="Book Now!"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <IndustryServices
-        heading="Empowering Governance with Modern Public IT Services"
-        subheading={
-          <span>
-            <Link to={"/"}>Capyngen</Link> services assist agencies in becoming
-            more efficient and building citizen trust:
-          </span>
-        }
-        services={servicesData}
-      />
-      <CardsSection
-        heading="Public Sector IT Solutions — Main Features"
-        subheading=""
-        services={cardsSectionData1}
-        sectionBg="bg-gray-900"
-        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-        hoverBg=""
-        height="h-64"
-        textColor="text-white"
-        hoverTextColor=""
-        headColor="text-white"
-      />
-      <CardsSection
-        heading="Why Choose Capyngen for Public Sector IT Solutions?"
-        subheading=""
-        services={cardsSectionData2}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg="bg-black border border-black transition-all duration-400"
-        hoverBg=" hover:border-white"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-        height="h-64"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Ask for an AI Pilot for Government Services"
-        description={[
-          "Experience how AI public sector solutions can better utilize resource allocation—schedule a 2-week pilot to show returns.",
-        ]}
-        buttonText="Schedule Now!"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <HowWeWork
-        heading="How we implement public sector projects"
-        desc=""
-        steps={steps}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Ready to Modernize Public Services?"
-        description={[
-          "Capyngen is poised to collaborate on initiatives that transform citizen experience and operational effectiveness. We craft and deploy reliable IT solutions for public sector Industry that scale and secure public value.",
-        ]}
-        image={assets.publicService19}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Introduce Secure Digital Payments & Portals"
-        description={[
-          "Enforce compliant public sector e-commerce solutions for public sector fee collection and licensing with accelerated time-to-value.",
-        ]}
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / PUBLIC SERVICE (SPLIT LIGHT SECTION)                        */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.publicService19}
+                alt="Public Service Digital Transformation"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Empowering Governance & Citizen Engagement
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> delivers digital transformation and technology-driven solutions for public sector organizations, empowering governance, municipal responsiveness, and citizen engagement.
+              </p>
+              <p>
+                From inclusive e-Governance portals and smart city IoT dashboards to secure fee collection systems and administrative workflows, we build compliant, accessible, and audit-ready public IT systems.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Strict compliance with government data regulations, WCAG, and ISO standards.",
+                "High-capacity digital identity verification and transparent public audit trails.",
+                "Mobile-first citizen portals for seamless grievance redressal, utility payments, and licensing.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Public Sector Discovery Call
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. PUBLIC SECTOR SOLUTIONS WE OFFER (DARK CARDS GRID)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Public Sector Solutions We Offer
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              End-to-end public sector software architectures designed specifically for local, regional, and national institutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-5 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. EMPOWERING GOVERNANCE WITH MODERN IT (LIGHT CARDS)                     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Modern Public IT Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Assisting agencies in enhancing administrative efficiency and reinforcing citizen trust:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-600 text-sm leading-relaxed mt-2">
+                    {item.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. CORE PUBLIC SECTOR IT FEATURES (DARK CARDS)                            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Public Sector IT Solutions — Core Features
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Architectures engineered to handle city-wide throughput, stringent role-based access, and uninterrupted reliability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. WHY CHOOSE CAPYNGEN FOR PUBLIC SECTOR (LIGHT CARDS)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen for Public Sector IT?
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              We bring transparent governance, strict security protocols, and continuous support to government engagements:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 border border-slate-200 bg-slate-50 flex flex-col justify-between rounded-none shadow-sm hover:border-blue-600 transition-colors duration-150 relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-600 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. PROJECT IMPLEMENTATION PROCESS (TIMELINE)                              */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              How We Implement Public Sector Projects
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              A structured, audit-proof delivery model minimizing risk and accelerating time-to-value for government stakeholders.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {steps.map((step, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 p-6 rounded-none relative group hover:border-blue-500 transition-colors duration-150"
+              >
+                <div className="text-blue-400 font-mono text-sm font-semibold tracking-wider mb-2">
+                  {step.step}
+                </div>
+                <h3
+                  className="text-lg font-bold text-white mb-2 leading-snug"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Ready to Modernize Public Services?
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Capyngen is poised to collaborate on initiatives that transform citizen experience, secure data privacy, and deliver lasting public value.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

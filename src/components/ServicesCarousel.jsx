@@ -1,422 +1,258 @@
 "use client";
 
-import { useRef } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ for navigation
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import BestHeading from "./BestHeading";
-import {
-  Smartphone,
-  Cpu,
-  Globe,
-  ShoppingCart,
-  ShieldCheck,
-  Hammer,
-  Layout,
-  Settings,
-  Paintbrush,
-  Monitor,
-  Tag,
-  Box,
-  FileText,
-  Search,
-  Facebook,
-  DollarSign,
-  Brain,
-  Shield,
-  Wifi,
-  Briefcase,
-  BarChart2,
-  UserCheck,
-} from "lucide-react";
-
-// ---------------- CARDS DATA + LINKS ----------------
+import { motion } from "framer-motion";
+import { assets } from "../assets/assets";
 
 const cards = [
   {
     title: "Custom AI Solution",
     desc: "Specially made AI-based solutions that enable jobs to be faster and enable businesses to succeed better.",
     href: "/custom-ai-solutions",
-    items: [
-      "Predictive analysis",
-      "Intelligent automation",
-      "AI models that are specifically created.",
-      "Insights in real time",
-    ],
+    image: assets.customAiSolution,
   },
   {
     title: "Web Development",
     desc: "The secure, responsive websites where the users can enjoy themselves and the companies can flourish during the use of the services of the Best web design.",
     href: "/web-development",
-    items: [
-      "Right solutions to web problems.",
-      "Growing infrastructure.",
-      "Better performance",
-      "Design for mobile first",
-    ],
+    image: assets.webDevelopment,
   },
   {
     title: "E-Commerce Solutions",
     desc: "Smarter online shops that are designed to maximize purchases, customer satisfaction, and interaction.",
     href: "/ecommerce-solutions",
-    items: [
-      "Secure payment integration",
-      "Easy to get around",
-      "Taking care of stock",
-      "Growth that can be measured",
-    ],
+    image: assets.eCommerceSolution,
   },
   {
     title: "Blockchain Development",
     desc: "Safe, transparent, and trustworthy blockchain solutions to conducting digital transactions.",
     href: "/blockchain-development",
-    items: [
-      "Creating smart contracts",
-      "Applications which do not require a central server to operate.",
-      "Secure transactions",
-      "Blockchain consulting",
-    ],
+    image: assets.blockchainDevelopment,
   },
   {
     title: "DevOps Solutions",
     desc: "Easy DevOps solutions that allow you to develop software faster, with greater reliability and efficiency.",
     href: "/devops-solutions",
-    items: [
-      "Always integrating",
-      "Self-deployment.",
-      "Expanding pipelines.",
-      "Doing business on the cloud",
-    ],
+    image: assets.devops,
   },
   {
     title: "Application Solutions",
     desc: "Complete utilization of new ideas, better company performance, and simplified smooth work.",
     href: "/application-solutions",
-    items: [
-      "Upgrading obsolete systems",
-      "Going to the cloud",
-      "Make applications safe",
-      "Help from beginning to end",
-    ],
+    image: assets.applicationSolution,
   },
   {
-    title: "CRM &amp; Management Software",
+    title: "CRM & Management Software",
     desc: "Tailored customer relationship management systems that actually assist in sales, relationships and customer involvement.",
     href: "/crm-management-software",
-    items: [
-      "Lead management",
-      "Automating processes",
-      "Data-based insights",
-      "Multi-channel support",
-    ],
+    image: assets.crmManagement,
   },
   {
     title: "UI/UX Design",
     desc: "UI/UX design that focuses on the user to ensure that interactions are not difficult to understand and use by users.",
     href: "/ui-ux-design-services",
-    items: [
-      "Development of wireframes and prototypes.",
-      "Interactive design",
-      "Testing with real people",
-      "Improving conversions",
-    ],
+    image: assets.uiUxDesign,
   },
   {
     title: "Website Design",
     desc: "Engaging, receptive and effective websites built to enhance online presence.",
     href: "/website-design-company-india",
-    items: [
-      "SEO-friendly design",
-      "Custom layouts",
-      "Mobile optimization",
-      "Fast loading speed",
-    ],
+    image: assets.websiteDesign,
   },
   {
-    title: "Branding &amp; Identity Design",
+    title: "Branding & Identity Design",
     desc: "Good branding solutions to make an identity and reach your audience.",
     href: "/branding-identity-design",
-    items: [
-      "Logo creation",
-      "Brand strategy",
-      "Visual guidelines",
-      "Identity consistency",
-    ],
+    image: assets.branding1 || assets.creativeAgencyFAQ,
   },
   {
     title: "Ecommerce Design",
     desc: "Contemporary ecommerce layouts that enhance purchasing, confidence, and shopping experiences of customers.",
     href: "/ecommerce-website-design",
-    items: [
-      "Simple to use interface",
-      "Safe checkout",
-      "Display of goods",
-      "User-friendly backend",
-    ],
+    image: assets.eCommerceDesign,
   },
   {
     title: "CMS Design",
     desc: "CMS templates that assist you in managing your contents to a better extent and enhance the performance of the site.",
     href: "/cms-website-design",
-    items: [
-      "Easy to switch",
-      "A framework that can expand",
-      "SEO optimization",
-      "Easy to use backend.",
-    ],
+    image: assets.cms,
   },
   {
     title: "Search Engine Optimization",
     desc: "Proper search engine optimization to enhance the ranking, visibility, and the long-term online expansion.",
     href: "/seo",
-    items: [
-      "On-page SEO",
-      "Off-page SEO",
-      "Keyword optimization",
-      "Analytics tracking",
-    ],
+    image: assets.seo,
   },
   {
     title: "Social Media Marketing (SMM)",
     desc: "Participation in SMM campaigns that create brand awareness and reach out to audiences.",
     href: "/smm",
-    items: [
-      "Advertisements that are platform specific.",
-      "Finding an audience",
-      "Keeping an eye on engagement",
-    ],
+    image: assets.smm2 || assets.socialMediaMarketing,
   },
   {
     title: "Pay-Per-Click Advertising (PPC)",
     desc: "Outcome-based PPC advertisements, which lead to the highest ROI and acquisition of qualified leads in the shortest time possible.",
     href: "/ppc",
-    items: [
-      "The campaigns targeting specific people.",
-      "The best keywords",
-      "Tracking in real time",
-      "Advertisements focusing on the returns on investment.",
-    ],
+    image: assets.paidAdvertising || assets.digitalMarketing1,
   },
   {
     title: "Artificial Intelligence",
     desc: "Innovation, smarter automation, and business transformation through state-of-the-art AI services.",
     href: "/artificial-intelligence-services",
-    items: [
-      "AI-powered chatbots",
-      "Predictive analysis",
-      "Data-based insights",
-      "Making things automatic",
-    ],
+    image: assets.customAiSolution,
   },
   {
     title: "Cybersecurity",
     desc: "Solid cybersecurity measures to protect information, networks, and computer networks.",
     href: "/cybersecurity",
-    items: [
-      "Finding dangers",
-      "Keeping data safe",
-      "Risk monitoring and assessment 24/7.",
-    ],
+    image: assets.cybersecurity,
   },
   {
     title: "Network Services and Solutions",
     desc: "Breakthrough Network solutions that provide reliable, scalable and secure network infrastructure.",
     href: "/network-solutions",
-    items: [
-      "Cloud-based networking",
-      "Network safety",
-      "Building infrastructure",
-      "Getting better at what you do",
-    ],
+    image: assets.technologiesImg,
   },
   {
     title: "Business Solutions",
     desc: "Enterprise solutions designed to be scalable and streamline operations and speed up digital transformation.",
     href: "/enterprise-solutions",
-    items: [
-      "Systems for ERP",
-      "Applications designed specifically to your company.",
-      "Taking care of data",
-      "Working with the cloud",
-    ],
+    image: assets.applicationSolution,
   },
   {
     title: "Data and Analysis",
     desc: "Service analytics Actionable information analytics services transforming raw data into business insights.",
     href: "/data-analytics-services",
-    items: [
-      "Handling a lot of data",
-      "Real time changing dashboards.",
-      "Predictions that can be made",
-      "Looking at data",
-    ],
+    image: assets.seoTool1,
   },
   {
     title: "Consulting",
     desc: "IT consulting services to make technology work with your business growth objectives.",
     href: "/consulting",
-    items: [
-      "Thinking forward",
-      "A plan for technology",
-      "Making procedures better",
-      "Always ready to assist",
-    ],
+    image: assets.companyOverview,
   },
   {
     title: "App Development",
     desc: "Mobile device apps that are robust, scalable and easy to use, and are aimed at assisting organisations in achieving their goals.",
     href: "/app-development",
-    items: [
-      "Multi-device compatibility",
-      "Quick and safe growth",
-      "Architecture that can evolve over time.",
-      "User-centered design.",
-    ],
+    image: assets.appDevelopment,
   },
 ];
 
-// ---------------- ICONS MAP ----------------
-const iconMap = [
-  <Smartphone className="text-white w-7 h-7" />,
-  <Cpu className="text-white w-7 h-7" />,
-  <Globe className="text-white w-7 h-7" />,
-  <ShoppingCart className="text-white w-7 h-7" />,
-  <ShieldCheck className="text-white w-7 h-7" />,
-  <Hammer className="text-white w-7 h-7" />,
-  <Settings className="text-white w-7 h-7" />,
-  <Layout className="text-white w-7 h-7" />,
-  <Paintbrush className="text-white w-7 h-7" />,
-  <Monitor className="text-white w-7 h-7" />,
-  <Tag className="text-white w-7 h-7" />,
-  <Box className="text-white w-7 h-7" />,
-  <FileText className="text-white w-7 h-7" />,
-  <Search className="text-white w-7 h-7" />,
-  <Facebook className="text-white w-7 h-7" />,
-  <DollarSign className="text-white w-7 h-7" />,
-  <Brain className="text-white w-7 h-7" />,
-  <Shield className="text-white w-7 h-7" />,
-  <Wifi className="text-white w-7 h-7" />,
-  <Briefcase className="text-white w-7 h-7" />,
-  <BarChart2 className="text-white w-7 h-7" />,
-  <UserCheck className="text-white w-7 h-7" />,
-];
-
-// ---------------- CARD COMPONENT ----------------
-const Card = ({ title, desc, items, index, href, onClick }) => (
-  <article
-    className="h-92 relative group rounded-2xl p-6 min-h-[380px] flex flex-col shadow-lg
-               bg-gradient-to-br from-cyan-600 via-blue-600 to-indigo-700
-               backdrop-blur-md overflow-hidden border border-cyan-400/40
-               transition-all duration-500 hover:shadow-2xl hover:scale-[1.04] cursor-pointer
-               focus:outline-none focus:ring-4 focus:ring-cyan-400"
-    onClick={onClick}
-    tabIndex={0}
-    aria-label={`${title} service`}
-    role="group"
-  >
-    <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition duration-500 bg-gradient-to-r from-teal-500 to-blue-700 rounded-2xl"></div>
-
-    <div className="relative z-10 flex flex-col h-full">
-      <div className="flex mb-4 items-center">
-        <span className="w-12 h-12 flex justify-center items-center rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 text-white text-2xl shadow-md mr-3 select-none">
-          {iconMap[index]}
-        </span>
-        <span className="ml-auto flex items-center border border-cyan-300 rounded-full w-10 h-10 justify-center group-hover:bg-cyan-50 transition-colors duration-300">
-          <ArrowRight className="h-5 w-5 text-cyan-100 group-hover:text-cyan-700 transition-colors duration-300" />
-        </span>
-      </div>
-      <h2 className="font-bold text-lg mb-2 text-white">{title}</h2>
-      <p className="text-cyan-200 text-sm mb-4">{desc}</p>
-      <ul className="text-cyan-100 text-[15px] pl-4 list-disc flex-grow space-y-1">
-        {items.map((it, idx) => (
-          <li key={idx} className="my-1">
-            {it}
-          </li>
-        ))}
-      </ul>
-    </div>
-  </article>
-);
-
-// ---------------- MAIN CAROUSEL ----------------
 const ServicesCarousel = () => {
-  const navigate = useNavigate(); // ✅ navigation
-  const sliderRef = useRef(null);
+  const navigate = useNavigate();
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    containScroll: "trimSnaps",
+  });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
 
-  const settings = {
-    dots: false,
-    infinite: cards.length > 4,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-    ],
-  };
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
     <section
-      className="overflow-x-hidden overflow-y-hidden md:min-h-[100vh] py-12"
-      aria-label="Services"
-      role="region"
+      id="services"
+      className="w-full bg-[#2563eb] py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 scroll-mt-10"
+      aria-label="Technology Solutions"
     >
-      <BestHeading title="" highlight="Services" />
-
-      <div className="py-6 sm:py-10">
-        <div className="mx-auto w-full max-w-screen-2xl px-2 sm:px-6">
-          <div className="relative px-7 sm:px-12 md:px-16">
-            {/* Prev Button */}
+      <div className="mx-auto w-full max-w-[1536px]">
+        {/* Header Row */}
+        <div className="mb-10 lg:mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Technology Solutions That Drive Growth
+          </h2>
+          <div className="flex shrink-0 gap-3">
             <button
               type="button"
-              onClick={() => sliderRef.current?.slickPrev()}
-              aria-label="Previous Services"
-              className="flex absolute left-0 lg:left-4 top-1/2 -translate-y-1/2 z-20
-                         bg-gradient-to-r from-indigo-600 to-purple-600
-                         hover:from-purple-600 hover:to-pink-600
-                         text-white rounded-full p-3 shadow-lg
-                         transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-500"
+              onClick={scrollPrev}
+              disabled={!canScrollPrev}
+              className={`flex h-12 w-12 items-center justify-center border border-white/20 text-white transition-colors hover:bg-white/10 focus:outline-none cursor-pointer ${
+                canScrollPrev ? "" : "opacity-40 cursor-not-allowed"
+              }`}
+              aria-label="Previous slide"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
-
-            {/* Next Button */}
             <button
               type="button"
-              onClick={() => sliderRef.current?.slickNext()}
-              aria-label="Next Services"
-              className="flex absolute right-0 lg:right-4 top-1/2 -translate-y-1/2 z-20
-                         bg-gradient-to-r from-indigo-600 to-purple-600
-                         hover:from-purple-600 hover:to-pink-600
-                         text-white rounded-full p-3 shadow-lg
-                         transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-500"
+              onClick={scrollNext}
+              disabled={!canScrollNext}
+              className={`flex h-12 w-12 items-center justify-center border border-white/20 text-white transition-colors hover:bg-white/10 focus:outline-none cursor-pointer ${
+                canScrollNext ? "" : "opacity-40 cursor-not-allowed"
+              }`}
+              aria-label="Next slide"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="w-5 h-5" />
             </button>
+          </div>
+        </div>
 
-            {/* Slider */}
-            <Slider
-              ref={sliderRef}
-              {...settings}
-              role="list"
-              aria-live="polite"
-            >
-              {cards.map((card, idx) => (
-                <div key={idx} className="px-2 sm:px-3 py-2" role="listitem">
-                  <Card
-                    {...card}
-                    index={idx}
-                    onClick={() => navigate(card.href)} // ✅ navigate on card click
-                  />
-                </div>
-              ))}
-            </Slider>
+        {/* Embla Carousel */}
+        <div className="overflow-hidden cursor-grab active:cursor-grabbing pb-2" ref={emblaRef}>
+          <div className="flex gap-6 sm:gap-8">
+            {cards.map((card, idx) => (
+              <div
+                key={idx}
+                className="flex-[0_0_85vw] sm:flex-[0_0_360px] md:flex-[0_0_400px] max-w-[400px] min-w-0"
+              >
+                <article
+                  onClick={() => navigate(card.href)}
+                  className="group flex h-full cursor-pointer flex-col border border-white/10 bg-[#1e293b] p-6 sm:p-8 shadow-xl transition-shadow duration-300 hover:shadow-2xl"
+                >
+                  {/* Card Image */}
+                  <div className="relative aspect-video w-full overflow-hidden bg-slate-900">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="mt-6 sm:mt-8 flex flex-1 flex-col justify-between">
+                    <div>
+                      <h3
+                        className="mb-3 sm:mb-4 text-xl sm:text-2xl font-semibold text-white"
+                        style={{ fontFamily: "'Syne', sans-serif" }}
+                      >
+                        {card.title}
+                      </h3>
+                      <p className="text-sm sm:text-base leading-relaxed text-slate-300 font-sans">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            ))}
           </div>
         </div>
       </div>

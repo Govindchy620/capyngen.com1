@@ -1,30 +1,36 @@
-import React from "react";
-import Banner from "../components/Banner";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import CreativeAgencyFAQ from "../components/CreativeAgencyFAQ";
-import IndustryServices from "../components/IndustryServices";
-import GetStarted from "../components/GetStarted";
-import CardsSectionImage from "../components/CardsSectionImage";
-import CardsSection from "../components/CardsSection";
-import {
-  FaAppStore,
-  FaBuilding,
-  FaIndustry,
-  FaLaptopCode,
-  FaMoneyBillWave,
-  FaPuzzlePiece,
-} from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  Layers,
+  Smartphone,
+  Globe,
+  Database,
+  Cloud,
+  Cpu,
+  Shield,
+  ArrowRight,
+  ChevronDown,
+  CheckCircle2,
+  Workflow,
+  Sparkles,
+  Zap,
+  TrendingUp,
+  Settings,
+  Boxes,
+  Code2,
+  Puzzle,
+  Building2,
+  Check,
+} from "lucide-react";
+import { assets } from "../assets/assets";
+import appHeroBg from "../assets/application/1.png";
+import appLegacyImg from "../assets/application/2.png";
+import appArchitectureImg from "../assets/application/3.png";
+import appCloudImg from "../assets/application/4.png";
+import appModernImg from "../assets/application/5.png";
+import TechStack from "../components/TechStack";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -51,7 +57,6 @@ const webpageSchema = {
   primaryImageOfPage: {
     "@type": "ImageObject",
     url: "https://www.capyngen.com/assets/applicationSolution5-BrBtAszh.png",
-    caption: "Custom Application Solutions for Business by Capyngen",
   },
 };
 
@@ -80,7 +85,6 @@ const serviceSchema = {
   image: {
     "@type": "ImageObject",
     url: "https://www.capyngen.com/assets/applicationSolution5-BrBtAszh.png",
-    caption: "Custom Application Solutions for Business by Capyngen",
   },
 };
 
@@ -114,10 +118,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Which technologies do you use to develop applications?",
+      name: "Which technologies do you use for application development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use modern technologies such as React, Node.js, Flutter, AWS, and Kubernetes to build scalable and high-performance application solutions.",
+        text: "We use modern technologies including React, Node.js, Flutter, AWS, and Kubernetes to build scalable and high-performance applications.",
       },
     },
     {
@@ -125,7 +129,7 @@ const faqSchema = {
       name: "Do you develop both mobile and web applications?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We develop custom mobile and web applications based on your business requirements.",
+        text: "Yes. We design and develop both mobile apps (iOS & Android) and web applications based on your business requirements.",
       },
     },
     {
@@ -133,15 +137,15 @@ const faqSchema = {
       name: "Can Capyngen build cloud-native applications?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We specialize in cloud-native application solutions that are scalable, flexible, and cost-effective.",
+        text: "Yes. We specialize in building cloud-native applications that are scalable, resilient, and cost-effective.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you upgrade and modernize legacy applications?",
+      name: "Do you modernize legacy applications?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We modernize legacy applications to align with current technologies and evolving business needs.",
+        text: "Yes. We upgrade and modernize legacy systems to improve performance, security, and scalability.",
       },
     },
     {
@@ -149,7 +153,7 @@ const faqSchema = {
       name: "Which industries do you serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve multiple industries including healthcare, finance, commerce, education, entertainment, software, and telecommunications.",
+        text: "We serve healthcare, finance, retail, education, entertainment, logistics, and telecommunications industries.",
       },
     },
     {
@@ -157,15 +161,15 @@ const faqSchema = {
       name: "Are your applications secure and scalable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We follow strict security standards and develop highly scalable application solutions.",
+        text: "Yes. We implement robust security protocols and design architectures to scale with your business growth.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide SaaS application development?",
+      name: "Do you offer SaaS application development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We develop cloud-based SaaS application solutions that enable businesses to deliver recurring services.",
+        text: "Yes. We build subscription-based SaaS platforms with multi-tenant architecture and secure payment integrations.",
       },
     },
     {
@@ -173,7 +177,7 @@ const faqSchema = {
       name: "Can your applications integrate with existing systems?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Our APIs are designed for seamless integration with existing platforms and software.",
+        text: "Yes. Our applications are built with custom APIs to seamlessly integrate with your existing software and tools.",
       },
     },
     {
@@ -181,7 +185,7 @@ const faqSchema = {
       name: "How long does application development take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Application development timelines typically range from 4 to 10 weeks, depending on project complexity.",
+        text: "Development timelines generally range from 4 to 10 weeks depending on project scope and complexity.",
       },
     },
     {
@@ -189,7 +193,7 @@ const faqSchema = {
       name: "Do you provide post-launch support and maintenance?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We offer comprehensive post-launch support, maintenance, and upgrade services.",
+        text: "Yes. We offer continuous monitoring, updates, and maintenance services after launch.",
       },
     },
     {
@@ -212,6 +216,8 @@ const faqSchema = {
 };
 
 const ApplicationSolutions = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const faqItems = [
     {
       question: "What are application solutions?",
@@ -395,6 +401,78 @@ const ApplicationSolutions = () => {
     },
   ];
 
+  const benefitsData = [
+    {
+      title: "More Efficiency and Productivity",
+      text: "Automation of tasks and workflow.",
+      icon: <Zap className="w-5 h-5 text-blue-500" />,
+    },
+    {
+      title: "Increase in Customer Interaction",
+      text: "Easy-to-use apps enhance customer relationships.",
+      icon: <TrendingUp className="w-5 h-5 text-indigo-500" />,
+    },
+    {
+      title: "Secure, Scale-able, and Future Orientated Applications",
+      text: "Built using the latest technology to support businesses.",
+      icon: <Shield className="w-5 h-5 text-emerald-500" />,
+    },
+    {
+      title: "Shorter Route to Sales",
+      text: "Fast business development before competitors.",
+      icon: <Workflow className="w-5 h-5 text-cyan-500" />,
+    },
+    {
+      title: "Integration With No Ado",
+      text: "Easily access existing systems or third-party applications.",
+      icon: <Boxes className="w-5 h-5 text-amber-500" />,
+    },
+    {
+      title: "Low-priced solutions",
+      text: "Optimized development uses less on operations.",
+      icon: <Sparkles className="w-5 h-5 text-purple-500" />,
+    },
+  ];
+
+  const whyChooseCards = [
+    {
+      title: "Competencies to develop customised, cloud, mobile and web application solutions.",
+      icon: <Puzzle className="w-8 h-8 text-blue-400" />,
+    },
+    {
+      title: "A total development package, which takes a product through all development phases.",
+      icon: <Code2 className="w-8 h-8 text-cyan-400" />,
+    },
+    {
+      title: "A highly qualified development and design team at Apps Solutions company.",
+      icon: <Smartphone className="w-8 h-8 text-indigo-400" />,
+    },
+    {
+      title: "The capability to perform on a global scale and be as secure as big companies.",
+      icon: <Globe className="w-8 h-8 text-emerald-400" />,
+    },
+    {
+      title: "Focus on invention, expandability and user-friendliness.",
+      icon: <Building2 className="w-8 h-8 text-amber-400" />,
+    },
+    {
+      title: (
+        <>
+          Application software services for solving problems of the corporates
+          worldwide, and digital growth support that rivals even the{" "}
+          <Link
+            to="/digital-marketing"
+            className="text-cyan-400 font-semibold underline hover:text-cyan-300"
+          >
+            Best digital marketing services Provider
+          </Link>{" "}
+          in impact on revenue.
+        </>
+      ),
+      icon: <Layers className="w-8 h-8 text-purple-400" />,
+    },
+  ];
+
   const slidesData = [
     {
       image: assets.applicationSolution1,
@@ -414,7 +492,6 @@ const ApplicationSolutions = () => {
           </p>
         </>
       ),
-      price: "",
     },
     {
       image: assets.applicationSolution2,
@@ -428,7 +505,6 @@ const ApplicationSolutions = () => {
           </p>
         </>
       ),
-      price: "",
     },
     {
       image: assets.applicationSolution3,
@@ -442,7 +518,7 @@ const ApplicationSolutions = () => {
             Capyngen also partners with you as a strategic{" "}
             <a
               href="https://www.capyngen.com/consulting"
-              className="text-blue-500 font-semibold"
+              className="text-blue-400 font-semibold underline hover:text-cyan-300"
             >
               consulting services provider
             </a>
@@ -450,63 +526,18 @@ const ApplicationSolutions = () => {
           </p>
         </>
       ),
-      price: "",
     },
   ];
 
-  const cardsSectionData1 = [
-    {
-      title:
-        "Competencies to develop customised, cloud, mobile and web application solutions.",
-      description: "",
-      icon: <FaPuzzlePiece className="text-4xl text-white" />,
-    },
-    {
-      title:
-        "A total development package, which takes a product through all development phases.",
-      description: "",
-      icon: <FaLaptopCode className="text-4xl text-white" />,
-    },
-    {
-      title:
-        "A highly qualified development and design team at Apps Solutions company.",
-      description: "",
-      icon: <FaAppStore className="text-4xl text-white" />,
-    },
-    {
-      title:
-        "The capability to perform on a global scale and be as secure as big companies.",
-      description: "",
-      icon: <FaMoneyBillWave className="text-4xl text-white" />,
-    },
-    {
-      title: "Focus on invention, expandability and user-friendliness.",
-      description: "",
-      icon: <FaBuilding className="text-4xl text-white" />,
-    },
-    {
-      title: (
-        <>
-          Application software services for solving problems of the corporates
-          worldwide, and digital growth support that rivals even the{" "}
-          <a
-            href="https://www.capyngen.com/digital-marketing"
-            className="text-blue-500 font-semibold"
-          >
-            Best digital marketing services Provider
-          </a>{" "}
-          in impact on revenue.
-        </>
-      ),
-      description: "",
-      icon: <FaIndustry className="text-4xl text-white" />,
-    },
-  ];
-
-  useSplitTextAnimation("h1");
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slidesData.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slidesData.length]);
 
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Best Application Solutions for Business – India’s Top Custom
@@ -528,140 +559,396 @@ const ApplicationSolutions = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <div className="lg:sticky inset-0">
-        <CreativeAgencyFAQ
-          slides={slidesData}
-          slideDuration={4000}
-          headingClass="text-4xl md:text-5xl font-extrabold mb-6"
-          descClass="text-lg leading-relaxed mb-8 text-gray-300"
-          buttonGradient="from-blue-500 to-purple-600"
-          priceLabel=""
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (Full Screen min-h-screen / Sharp Edges / 3 Slides Slider) */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-cover bg-center transition-all duration-700"
+        style={{
+          backgroundImage: `url(${slidesData[activeSlide].image})`,
+        }}
+        aria-label="Application Solutions Banner"
+      >
+        {/* Dark Tech Gradient Overlay for Crystal Clear Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050b17] via-[#070e1d]/90 to-[#050b17]/75 backdrop-blur-[1px]" />
+
+        {/* Subtle Background Tech Grid Lines */}
+        <div
+          className="absolute inset-0 opacity-15 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(#3b82f6 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl text-left">
+            {/* Top Tag */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-[1px] w-8 sm:w-12 bg-slate-400" />
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-slate-300 font-bold">
+                WHAT WE DO <span className="text-blue-400 mx-1">/</span> SERVICES
+              </span>
+              <div className="h-[1px] flex-1 max-w-xs bg-slate-600/50" />
+            </div>
+
+            <h1
+              className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold leading-[1.14] tracking-tight mb-6"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              {slidesData[activeSlide].heading}
+            </h1>
+
+            <div className="text-slate-200 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl font-normal space-y-3">
+              {slidesData[activeSlide].description}
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Sharp Navigation Tabs / Indicators */}
+            <div className="flex items-center gap-3 mt-10">
+              {slidesData.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveSlide(idx)}
+                  aria-label={`Slide ${idx + 1}`}
+                  className={`h-1.5 transition-all duration-300 rounded-none cursor-pointer ${
+                    activeSlide === idx
+                      ? "w-12 bg-blue-500 shadow-sm"
+                      : "w-6 bg-slate-600 hover:bg-slate-500"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. SERVICES WE OFFER (12 SERVICES GRID)                                   */}
+      {/* ========================================================================= */}
+      <section id="services-section" className="py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <div className="text-xs font-bold tracking-widest text-blue-600 mb-3 uppercase">
+              COMPREHENSIVE SPECTRUM
+            </div>
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Application Solutions We Offer
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
+              We complete a package of business application solutions with the focus on the diverse industry needs, with application software services:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {servicesData.map((svc, idx) => (
+              <div
+                key={idx}
+                className="group bg-white border border-slate-200 hover:border-blue-500 transition-all duration-300 flex flex-col justify-between rounded-none overflow-hidden shadow-sm hover:shadow-xl"
+              >
+                <div className="relative h-48 overflow-hidden bg-slate-900">
+                  <img
+                    src={svc.image}
+                    alt={svc.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none"
+                  />
+                </div>
+
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3
+                      className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {svc.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                      {svc.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. BOOK YOUR FREE CONSULTATION CALLOUT (MID-PAGE STRIP)                   */}
+      {/* ========================================================================= */}
+      <section className="bg-[#09152e] text-white py-10 lg:py-12 border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="space-y-3 max-w-4xl text-left">
+            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 block font-bold">
+              COLLABORATIVE STRATEGY
+            </span>
+            <h3
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Book Your Free Consultation Today
+            </h3>
+            <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
+              Talk to one of our brilliant employees and define the best application solutions that suit your company as the best application solutions for business. Another mighty project is in the process of construction.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-8 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+            >
+              Book Your Consultation Now
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. BENEFITS OF OUR APPLICATION SOLUTIONS                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative order-2 lg:order-1">
+            <div className="border border-slate-200 bg-white p-3 shadow-xl rounded-none">
+              <img
+                src={assets.applicationSolution17}
+                alt="Benefits of Our Application Solutions by Capyngen"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+            <div className="mt-4 p-4 bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed rounded-none font-medium">
+              The Capyngen application solutions, which are best used in the business, are developed in a way that leaves a lasting impression that is lasting.
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
+            <div className="text-xs font-bold tracking-widest text-blue-600 uppercase">
+              QUANTIFIABLE METRICS
+            </div>
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Benefits of Our Application Solutions
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Client-built custom application solution, Capyngen business wins can be quantitatively measured as follows:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {benefitsData.map((benefit, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#f8fafc] border border-slate-200 p-5 rounded-none hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-md"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 bg-white border border-slate-200 rounded-none shadow-sm">
+                      {benefit.icon}
+                    </div>
+                    <h3
+                      className="text-base font-bold text-slate-900"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {benefit.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 pl-11 leading-relaxed">
+                    {benefit.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. FULL SIZE IMAGE SECTION: SMART APPLICATIONS                            */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.applicationSolFullSize}
+            alt="Smart applications for modern businesses"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <span className="text-xs uppercase font-mono tracking-widest px-3 py-1 bg-cyan-950/80 text-cyan-400 border border-cyan-500/30 rounded-none inline-block font-bold">
+            MODERN PLATFORMS
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Smart applications for modern businesses
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            We are fervent about developing software that is scalable and efficient, and that fulfils the requirements of the business in the 21st century by providing end-to-end application development services.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+            >
+              Discover More
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. OUR APPLICATION DEVELOPMENT PROCESS (6 STEPS)                          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 block mb-3 font-bold">
+              DELIVERY LIFECYCLE
+            </span>
+            <h2
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Application Development Process
+            </h2>
+            <p className="text-slate-400 text-base sm:text-lg mt-4 leading-relaxed">
+              Our process is transparent and well structured from start to end to ensure that all application solutions are of the best standards:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 p-8 flex flex-col justify-between hover:border-blue-500 transition-all duration-300 rounded-none relative group shadow-xl"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-300 rounded-none" />
+
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-blue-400 transition-colors"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {st.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {st.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. WHY CHOOSE CAPYNGEN FOR APPLICATION SOLUTIONS                          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <div className="text-xs font-bold tracking-widest text-blue-600 mb-3 uppercase">
+              WHY PARTNER WITH US
+            </div>
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen for Application Solutions
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseCards.map((card, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 p-8 hover:border-blue-500 transition-all duration-300 flex flex-col justify-between rounded-none shadow-sm hover:shadow-xl group"
+              >
+                <div>
+                  <div className="w-14 h-14 bg-slate-900 text-cyan-400 flex items-center justify-center mb-6 rounded-none group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    {card.icon}
+                  </div>
+                  <div className="text-base sm:text-lg font-semibold text-slate-800 leading-relaxed">
+                    {card.title}
+                  </div>
+                </div>
+                <div className="mt-6 pt-4 border-t border-slate-200 text-xs font-mono text-slate-500 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" /> CAPYNGEN ASSURANCE
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. TECH STACK SHOWCASE                                                    */}
+      {/* ========================================================================= */}
+      <div className="bg-white border-b border-slate-200">
+        <TechStack
+          heading="Enterprise Frameworks & Cloud Services"
+          subheading="Accelerating development with industry-proven tools and scalable infrastructure."
+          theme="light"
         />
       </div>
 
-      <div className="relative z-10">
-        <IndustryServices
-          heading="Application Solutions We Offer"
-          subheading="We complete a package of business application solutions with the focus on the diverse industry needs, with application software services:"
-          cardBg="bg-gray-700"
-          cardText="text-white"
-          cardDescText="text-white"
-          services={servicesData}
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Book Your Free Consultation Today"
-          description={[
-            <>
-              <span>
-                Talk to one of our brilliant employees and define the best
-                application solutions that suit your company as the best
-                application solutions for business. Another mighty project is in
-                the process of construction.
-              </span>
-            </>,
-          ]}
-          buttonText="Book Your Consultation Now"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <TopRatedCompany
-          title="Benefits of Our Application Solutions"
-          description={[
-            "Client-built custom application solution, Capyngen business wins can be quantitatively measured as follows:  ",
-            <>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
-                {[
-                  {
-                    title: "More Efficiency and Productivity",
-                    text: "Automation of tasks and workflow.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Increase in Customer Interaction",
-                    text: "Easy-to-use apps enhance customer relationships.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title:
-                      "Secure, Scale-able, and Future Orientated Applications",
-                    text: "Built using the latest technology to support businesses.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Shorter Route to Sales",
-                    text: "Fast business development before competitors.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Integration With No Ado",
-                    text: "Easily access existing systems or third-party applications.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Low-priced solutions",
-                    text: "Optimized development uses less on operations.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                  >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}:
-                    </strong>{" "}
-                    {text}
-                  </li>
-                ))}
-              </ul>
-              <p>
-                The Capyngen application solutions, which are best used in the
-                business, are developed in a way that leaves a lasting
-                impression that is lasting.
-              </p>
-            </>,
-          ]}
-          image={assets.applicationSolution17}
-          isHidden={true}
-          background={assets.patternBg1}
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.applicationSolFullSize}
-          title="Smart applications for modern businesses"
-          description="We are fervent about developing software that is scalable and efficient, and that fulfils the requirements of the business in the 21st century by providing end-to-end application development services."
-          buttonText="Discover More"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <HowWeWork
-          heading="Our Application Development Process"
-          desc="Our process is transparent and well structured from start to end to ensure that all application solutions are of the best standards:"
-          steps={steps}
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Start Your Digital Transformation Journey"
-          description={[
-            "Capyngen develops custom application solutions collabors to the business community, which are enjoyable to access and help the company develop more quickly, as high as worldwide, with the best application development solutions.",
-          ]}
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <CardsSection
-          heading="Why Choose Capyngen for Application Solutions"
-          services={cardsSectionData1}
-          sectionBg="bg-gray-900"
-          cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-          height="h-72"
-          textColor="text-white"
-          headColor="text-white"
-        />
-        <FAQSection2 items={faqItems} />
-      </div>
+      {/* ========================================================================= */}
+      {/* 9. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
+      <FAQSection2
+        title="Frequently Asked Questions"
+        desc="Explore answers regarding our custom applications, SaaS architecture, timeline, and enterprise SLAs."
+        items={faqItems}
+      />
+
+      {/* ========================================================================= */}
+      {/* 10. DIGITAL TRANSFORMATION CALLOUT (Bottom Final CTA - below FAQs)         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 block font-bold">
+              ENTERPRISE ROADMAP
+            </span>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Start Your Digital Transformation Journey
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Capyngen develops custom application solutions collabors to the business community, which are enjoyable to access and help the company develop more quickly, as high as worldwide, with the best application development solutions.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+              >
+                Contact Us
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

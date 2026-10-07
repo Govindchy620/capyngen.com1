@@ -6,6 +6,7 @@ import {
   useTransform,
 } from "motion/react";
 import { assets } from "../assets/assets";
+import energyHero from "../assets/energyHero.png";
 
 const IMGS = [
   assets.webdevBanner1,
@@ -103,49 +104,105 @@ const BannerRollingGallery = ({
   };
   const { height: imgHeight, width: imgWidth } = getImageSizes();
 
-  // Responsive container height scaling
-  const containerHeight = windowWidth <= 640 ? 400 : 600;
+  // Responsive container height scaling (tightened to remove dead space)
+  const containerHeight = windowWidth <= 640 ? 300 : 420;
 
   return (
-    <section className="bg-black text-white w-full pt-30">
-      {/* Heading + Subheading */}
-      <div className="text-center max-w-[90vw] mx-auto px-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-          Instant Web Development – Get India’s #1 Trusted Best website
-          development company in India
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl max-w-6xl mx-auto pt-5 leading-relaxed">
-          Turn your ideas into interactive, responsive and scalable websites.
-          Make customers attracted, your brand more valuable, and retain your
-          competitive edge in the digital world by offering our best web
-          development services provided by the{" "}
-          <a
-            href="https://www.capyngen.com/consulting"
-            className="text-blue-500 font-semibold"
-          >
-            best consulting company in India
-          </a>{" "}
-          and the best web development company in India.
-        </p>
-      </div>
+    <>
+      {/* 1. HERO SECTION: Reference Design with Left-Aligned Content, Gradient Overlay & Action Buttons */}
+      <section className="relative w-full flex items-center overflow-hidden min-h-[85vh] lg:min-h-screen pt-28 pb-20 sm:pb-28 lg:pb-36 bg-[#0a192f]">
+        {/* Background Image Layer mapped to energyHero */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={energyHero}
+            alt="Web Development Hero Background"
+            className="w-full h-full object-cover opacity-60"
+          />
+        </div>
 
-      {/* Gallery */}
-      <div
-        className="relative w-full overflow-hidden"
-        style={{ height: containerHeight }}
-      >
-        {/* fade edges */}
+        {/* Gradient Overlay from left-to-right (navy blue to transparent) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/85 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a192f]/70 via-transparent to-[#0a192f]/90 z-0 pointer-events-none" />
+
+        {/* Left-Aligned Hero Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
+          <div className="max-w-4xl flex flex-col items-start text-white pt-8 sm:pt-12 pb-12">
+            
+            {/* Main Heading */}
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Instant Web Development – Get India’s #1 Trusted Best website development company in India
+            </h1>
+
+            {/* Description Paragraph */}
+            <p className="text-sm sm:text-base md:text-lg text-gray-200 mb-10 leading-relaxed max-w-3xl font-normal">
+              Turn your ideas into interactive, responsive and scalable websites. Make customers attracted, your brand more valuable, and retain your competitive edge in the digital world by offering our best web development services provided by the{" "}
+              <a
+                href="https://www.capyngen.com/consulting"
+                className="text-cyan-400 hover:text-cyan-300 underline font-semibold transition-colors"
+              >
+                best consulting company in India
+              </a>{" "}
+              and the best web development company in India.
+            </p>
+
+            {/* Action Buttons (Strictly rounded-none) */}
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <a
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-none flex justify-center items-center transition-colors duration-300 text-sm md:text-base shadow-lg"
+              >
+                Connect With Our Experts
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <button
+                type="button"
+                onClick={() => {
+                  document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="bg-transparent border border-gray-300 hover:border-white text-white font-semibold py-3 px-6 rounded-none flex justify-center items-center transition-colors duration-300 text-sm md:text-base"
+              >
+                Examine Web Solutions
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Scroll Indicator Prompt fixed to screen bottom with sharp badge */}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-slate-300 text-[11px] font-semibold uppercase tracking-widest animate-bounce px-4 py-1.5 bg-[#07132b]/80 border border-blue-500/30 rounded-none shadow-lg">
+          <span>Scroll to explore</span>
+          <svg className="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </section>
+
+      {/* 2. ROLLING GALLERY SECTION: Matching Seamless Background (#f8fafc) & No Border Line */}
+      <section className="bg-[#f8fafc] text-slate-900 w-full py-6 sm:py-8 overflow-hidden">
         <div
-          className="absolute top-0 left-0 h-full w-16 z-10"
+          className="relative w-full overflow-hidden"
+          style={{ height: containerHeight }}
+        >
+        {/* fade edges in matching #f8fafc */}
+        <div
+          className="absolute top-0 left-0 h-full w-24 z-10 pointer-events-none"
           style={{
-            background: "linear-gradient(to left, rgba(0,0,0,0) 0%, #000 100%)",
+            background: "linear-gradient(to right, #f8fafc 0%, rgba(248,250,252,0) 100%)",
           }}
         />
         <div
-          className="absolute top-0 right-0 h-full w-16 z-10"
+          className="absolute top-0 right-0 h-full w-24 z-10 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to right, rgba(0,0,0,0) 0%, #000 100%)",
+              "linear-gradient(to left, #f8fafc 0%, rgba(248,250,252,0) 100%)",
           }}
         />
 
@@ -179,7 +236,7 @@ const BannerRollingGallery = ({
                 <img
                   src={url}
                   alt="gallery"
-                  className="pointer-events-none rounded-xl border-[4px] border-white object-cover shadow-lg transition-transform duration-300 ease-out group-hover:scale-105"
+                  className="pointer-events-none rounded-none border-[3px] border-slate-900 object-cover shadow-2xl transition-transform duration-300 ease-out group-hover:scale-105"
                   style={{ height: imgHeight, width: imgWidth }}
                 />
               </div>
@@ -188,7 +245,8 @@ const BannerRollingGallery = ({
         </div>
       </div>
     </section>
-  );
+  </>
+);
 };
 
 export default BannerRollingGallery;

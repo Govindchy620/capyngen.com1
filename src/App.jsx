@@ -1,4 +1,4 @@
-﻿import React, { useEffect, Suspense, lazy, useState } from "react";
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -199,6 +199,14 @@ const runAfterInitialPaint = (callback) => {
 };
 
 const loadMarketingScripts = () => {
+  if (
+    typeof window !== "undefined" &&
+    (window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1")
+  ) {
+    return;
+  }
+
   window.dataLayer = window.dataLayer || [];
   window.gtag =
     window.gtag ||
@@ -505,8 +513,13 @@ const App = () => {
     if (!showPreloader) return;
 
     const startedAt = performance.now();
-    const minVisibleMs = 750;
-    const fallbackReadyMs = 1600;
+    const isLocalhost =
+      typeof window !== "undefined" &&
+      (window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1");
+
+    const minVisibleMs = isLocalhost ? 250 : 750;
+    const fallbackReadyMs = isLocalhost ? 500 : 1600;
     let rafId = null;
     let hideTimeoutId = null;
     let lastStateUpdate = 0;
@@ -529,7 +542,10 @@ const App = () => {
         message: "Ready",
         isComplete: true,
       });
-      hideTimeoutId = window.setTimeout(() => setShowPreloader(false), 700);
+      hideTimeoutId = window.setTimeout(
+        () => setShowPreloader(false),
+        isLocalhost ? 150 : 700
+      );
     };
 
     const tick = (now) => {

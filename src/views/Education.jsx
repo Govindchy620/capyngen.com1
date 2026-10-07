@@ -539,6 +539,9 @@ const Education = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER6 - RETAINED EXACTLY AS REQUESTED)                */}
+      {/* ========================================================================= */}
       <Banner6
         slides={slidesData}
         autoplay={true}
@@ -548,134 +551,299 @@ const Education = () => {
         arrowColor="text-white"
         bgHover="hover:bg-white/20"
       />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Start Your Digital Transformation"
-        description={[
-          "Every institution needs to compete highly to stay relevant and competitive in a constantly evolving environment. This is why Capyngen LMS and eLearning solutions supported by IT solutions for education industry can help you to outdo your competition and revitalise your institution. Free consultation and become innovative now!",
-        ]}
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        title=""
-        description={[
-          <>
-            <p>
-              Capyngen is an IT solutions firm that happens to be one of the key
-              contributors to the digital transformation of the educational
-              system across the world, covering schools, colleges, and
-              universities. In our amazing development of our own Learning
-              Management Systems (LMS), cloud-based systems to enable remote
-              learning, and online education platforms that guarantee the active
-              involvement of students as well as enable management, we have
-              gained the world wide recognition in India and in a number of
-              other countries in the world. Our solutions have gained confidence
-              as the best IT solutions for education industry, as well as the
-              best IT services in education sector in India. Our products
-              include eLearning app development and a virtual classroom; these
-              are quite useful in learning innovation, expansion, and
-              modernisation, and this is the reason that earned us this fame. We
-              are also an IT solution provider for education industry in Gurgaon
-              and offer scalable and secure digital ecosystems.
-            </p>
-            <p className="my-5">
-              eLearning <Link to={"/app-development"}>app development</Link> and
-              a virtual classroom are two of our products that are very helpful
-              in learning innovation, expansion, and modernization, and these
-              are the reasons that brought us this fame.
-            </p>
-            <h3 className="text-2xl font-semibold">Highlights:</h3>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / DIGITAL TRANSFORMATION (SPLIT LIGHT SECTION)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.education1}
+                alt="Education Digital Transformation"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Digital Transformation in Education & eLearning
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> is a global IT solutions provider contributing to the digital transformation of educational ecosystems worldwide, including K-12 schools, higher education universities, and innovative EdTech ventures.
+              </p>
+              <p>
+                From custom Learning Management Systems (LMS) and cloud-based virtual classrooms to comprehensive{" "}
+                <Link to="/app-development" className="text-blue-600 hover:underline font-semibold">
+                  eLearning app development
+                </Link>
+                , we design resilient software architectures that boost student engagement and streamline institutional administration.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
               {[
-                {
-                  text: "Full digitalisation of the education system at school, college and university levels through IT solution for education sector in India.",
-                },
-                {
-                  text: "Learning management systems can be adopted and implemented with ease.",
-                },
-                {
-                  text: " The progress of the students in learning with numbers and facts is fuelled by the IT solutions for education industry.",
-                },
-              ].map(({ text }, idx) => (
-                <li
-                  key={idx}
-                  className="hover:scale-105 transition-transform duration-300 cursor-default relative pl-4"
-                >
-                  {text}
-                </li>
+                "Full digitalization of education systems at school, college, and university levels.",
+                "Seamless Learning Management System adoption and effortless interoperability.",
+                "Data-driven student progress tracking powered by advanced EdTech analytics.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
               ))}
-            </ul>
-          </>,
-        ]}
-        image={assets.education1}
-        background={assets.patternBg1}
-        isHidden="hidden"
-      />
-      <CardsSection
-        heading="Education Sector Challenges"
-        subheading="Educational institutions have several educational-operational and technology issues that they must address. These are the issues that involve:"
-        services={cardsSectionData2}
-        headColor="text-white"
-        cardBg="bg-gray-700"
-        sectionBg="bg-gray-900"
-        hoverBg="hover:bg-blue-800 hover:scale-98"
-        textColor="text-white"
-        hoverTextColor=""
-      />
-      <IndustryServices
-        heading="Transforming Education with IT Innovation"
-        subheading="Capyngen offers full IT solutions to upgrade educational institutions and assists the top IT services in education sector in India:"
-        services={servicesData}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Book Your Personalised Demo"
-        description={[
-          "Get first-hand exposure to Capyngen IT's futuristic education solutions. Schedule a live LMS demonstration and discover how we will transform the learning ecosystem of IT solutions for education industry.",
-        ]}
-        buttonText="Book Now"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TypesWeDevelop
-        heading="Benefits of Choosing Capyngen"
-        subheading="With Capyngen, you integrate an additional layer of success to your education system that can be seen through the following advantages:"
-        buttonText="Let's Contact"
-        image={assets.education5}
-        types={typesData}
-      />
-      <CardsSectionImage
-        heading="Why Capyngen?"
-        subheading="Capyngen can be referred to as a trusted education IT consulting partner, and hence:"
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Transform Your Institution with Capyngen IT Solutions"
-        description={["Request a customised demo or consultation."]}
-        textSize="text-2xl"
-        buttonText="Work With Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Education Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. EDUCATION SECTOR CHALLENGES (DARK CARDS GRID)                         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Education Sector Challenges We Solve
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Addressing operational, administrative, and technological hurdles faced by contemporary educational institutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-5">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-slate-300 text-sm leading-relaxed mt-2">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. TRANSFORMING EDUCATION WITH IT INNOVATION (3 LIGHT CARDS)             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Transforming Education with IT Innovation
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Capyngen delivers comprehensive software solutions designed to upgrade educational institutions into digitally connected environments.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-600 text-sm leading-relaxed space-y-2">
+                    {item.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. WHY CAPYNGEN (6 DARK CARDS WITH IMAGES)                                */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Partner with Capyngen
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              We stand as a trusted education IT consulting partner, delivering end-to-end strategy, agile development, and continuous support.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. BENEFITS OF CHOOSING CAPYNGEN (SPLIT LIGHT SECTION)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
+              <img
+                src={assets.education5}
+                alt="Education Solutions Benefits"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Benefits of Choosing Capyngen
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              With Capyngen, you integrate an additional layer of excellence into your academic institution through resilient digital infrastructure:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {typesData.map((benefit, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-600 transition-colors duration-150"
+                >
+                  <div className="text-blue-600 text-2xl mt-1 shrink-0">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h4
+                      className="font-bold text-slate-900 text-sm sm:text-base leading-snug"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {benefit.title}
+                    </h4>
+                    {benefit.desc && (
+                      <p className="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
+                        {benefit.desc}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Transform Your Institution with Capyngen IT Solutions
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Every institution must innovate to stay ahead in a rapidly changing educational landscape. Request a customized demo or strategy consultation with our EdTech specialists today.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

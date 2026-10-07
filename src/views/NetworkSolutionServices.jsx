@@ -1,32 +1,18 @@
 import React from "react";
-import Banner from "../components/Banner";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import Banner14 from "../components/Banner14";
-import GetStarted from "../components/GetStarted";
-import IndustryServices from "../components/IndustryServices";
-import CardsSection from "../components/CardsSection";
-import {
-  FaAndroid,
-  FaApple,
-  FaCheckCircle,
-  FaCode,
-  FaCogs,
-  FaMobileAlt,
-} from "react-icons/fa";
-import CardsSectionSlider from "../components/CardsSectionSlider";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Network,
+  Wifi,
+  ShieldCheck,
+  Cloud,
+  Server,
+  Activity,
+} from "lucide-react";
+import { assets } from "../assets/assets";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -56,6 +42,7 @@ const webpageSchema = {
     caption: "Network Solutions | Secure Connectivity | Capyngen",
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -83,6 +70,7 @@ const serviceSchema = {
       "Network Solutions | IT Networking | Cloud Infrastructure | Cybersecurity",
   },
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -280,7 +268,7 @@ const NetworkSolutionServices = () => {
     {
       question: "Do you provide network solutions for small businesses?",
       answer:
-        "Yes, definitely! The managed network services for small businesses, which are affordable is what Capyngen offers. We realize that budgets can be tight and supply you with solutions that can be scaled up depending on your needs in terms of performance,",
+        "Yes, definitely! The managed network services for small businesses, which are affordable is what Capyngen offers. We realize that budgets can be tight and supply you with solutions that can be scaled up depending on your needs in terms of performance.",
     },
     {
       question: "How do I get started with Capyngen's network services?",
@@ -288,138 +276,132 @@ const NetworkSolutionServices = () => {
         "It is very simple to get started! By either our website, phone, or email, you can reach us to schedule a consultation for free. First, we do a network checkup, then based on your requirements and objectives, we recommend individualized solutions with no binding commitment, and we help you find the best solution for your business.",
     },
   ];
-  const cardsSectionImageData2 = [
-    {
-      image: assets.network3,
-      title: "Expert IT Professionals",
-      desc: "We are a team of certified network engineers and IT specialists, who have accumulated a lot of experience in different industries. We keep ourselves updated with the latest technologies and best practices to provide state-of-the-art solutions.",
-    },
-    {
-      image: assets.network4,
-      title: "Customized Solutions",
-      desc: "We do not believe in universal solutions. If you are looking for affordable managed network services for a small business or if you are looking for a network security solution provider for enterprise capabilities, we will adjust our services to meet your specific requirements and budget.",
-    },
-    {
-      image: assets.network5,
-      title: "Best Network Solutions Company in India",
-      desc: "Capyngen has been able to convince companies all over India that it is the best solution for the network by offering such services as the most reliable, secure, and high-performing as necessary without fail. -No need for us to say it, our Incidents of Success already tell the story well enough.",
-    },
-    {
-      image: assets.network6,
-      title: "Cost-Effective & Scalable",
-      desc: "We are aware of how important it is to optimize the budget. Our services are aimed at providing you with the best value while still being flexible enough to scale up as your business develops.",
-    },
-    {
-      image: assets.network7,
-      title: "Proactive Approach",
-      desc: "We don't just react to problems – we prevent them. Our preventive care through watchful monitoring and upkeep, reduces the time your network is off and keeps your network at its maximum output.",
-    },
-    {
-      image: assets.network8,
-      title: "24/7 Support & Monitoring",
-      desc: "Work hours for business are never just from 9 to 5 and our working hours for support and monitoring services are never 0. So it is basically the same as businesses not sleeping. -Inadequate situation is always rejected, as even the strictest off-duty observation and support leave only restoration of their network uninterrupted operations.",
-    },
-  ];
-  const cardsSectionData1 = [
+
+  const servicesData = [
     {
       title: "Managed Network Services",
       description:
-        "24/7 network monitoring with real-time alerts and proactive issue detection to stop the minimal time of network downtime from going under your business operations.",
-      icon: <FaAndroid className="text-4xl text-white" />,
+        "24/7 network monitoring with real-time telemetry and proactive issue mitigation to prevent business-disrupting downtime.",
+      icon: <Activity className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "Network Security Solutions",
       description:
-        "Advanced firewall protection with multi-layered security for preventing unauthorized access while encrypting your sensitive business data.",
-      icon: <FaApple className="text-4xl text-white" />,
+        "Advanced perimeter firewall protection with multi-layered security preventing unauthorized infiltration and securing data.",
+      icon: <ShieldCheck className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "Cloud Network Services",
       description:
-        "Cloud migration services guide you through the process of moving from the server to cloud with less downtime and higher productivity.",
-      icon: <FaMobileAlt className="text-4xl text-white" />,
+        "Smooth cloud migration architectures connecting on-premises data centers with hybrid and multi-cloud hyperscalers.",
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "Network Consulting Services",
       description:
-        "Infrastructure assessment studying your current network setup; recognizing bottlenecks, and advising feasible solutions for the company to grow.",
-      icon: <FaCode className="text-4xl text-white" />,
+        "Full infrastructure audit inspecting topology, pinpointing bottlenecks, and architecting scalable enterprise growth roadmaps.",
+      icon: <Network className="w-8 h-8 text-blue-400" />,
     },
     {
-      title: "IT Network Support & Maintenance Services",
+      title: "IT Support & Maintenance Services",
       description:
-        "Equipment installation and configuration making sure that all network hardware is properly set up, fully efficient, and easily connected.",
-      icon: <FaCheckCircle className="text-4xl text-white" />,
+        "Hardware installation, router configuration, cable management, and lifecycle patching for optimal hardware health.",
+      icon: <Server className="w-8 h-8 text-blue-400" />,
     },
     {
-      title: "Network Infrastructure Design & Implementation",
+      title: "Infrastructure Design & Implementation",
       description:
-        "Custom network design fabricating the most perfect network architectures which not only support your business requirements and industry but also strengthen your future plans.",
-      icon: <FaCogs className="text-4xl text-white" />,
-    },
-  ];
-  const cardsSectionSliderData1 = [
-    {
-      title: "Startups & Small Businesses",
-      desc: "",
-      image: assets.webDev17,
-      textColor: "text-white",
-    },
-    {
-      title: "E-commerce & Retail",
-      desc: "",
-      image: assets.webDev18,
-      textColor: "text-white",
-    },
-    {
-      title: "Healthcare & Education",
-      desc: "",
-      image: assets.webDev19,
-      textColor: "text-white",
-    },
-    {
-      title: "Real Estate & Travel",
-      desc: "",
-      image: assets.webDev20,
-      textColor: "text-white",
-    },
-    {
-      title: "Corporate Enterprises",
-      desc: "",
-      image: assets.webDev21,
-      textColor: "text-white",
-    },
-    {
-      title: "Trading Sites",
-      desc: "",
-      image: assets.webDev22,
-      textColor: "text-white",
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Assessment",
-      description:
-        "The initial phase of our work involves comprehensive assessments aimed at grasping your current network infrastructure, business objectives, challenges, and expansion plans.",
-    },
-    {
-      step: "Step 02",
-      title: "Strategic Planning",
-      description:
-        "We have skilled professionals develop a tailored communication strategy that meets your unique requirements and takes into account the aspects of scalability, security, and budgeting.",
-    },
-    {
-      step: "Step 03",
-      title: "Implementation",
-      description:
-        "Following the standard operating procedures and undergoing the rigorous testing phases, we accomplish your network solution with the least possible downtime in your services.",
+        "Bespoke high-availability network topologies engineered to scale effortlessly with multi-site corporate expansion.",
+      icon: <Wifi className="w-8 h-8 text-blue-400" />,
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const trustCards = [
+    {
+      image: assets.network3,
+      title: "Expert IT Professionals",
+      desc: "We are a team of certified network engineers and IT specialists with deep cross-industry experience in routing, switching, and security.",
+    },
+    {
+      image: assets.network4,
+      title: "Customized Solutions",
+      desc: "Tailored network topologies adjusted to your distinct bandwidth needs, operational workflow, and budgetary parameters.",
+    },
+    {
+      image: assets.network5,
+      title: "Best Network Solutions Company in India",
+      desc: "Capyngen is trusted across India for architecting resilient, secure, and ultra-high-speed network systems with verified success.",
+    },
+    {
+      image: assets.network6,
+      title: "Cost-Effective & Scalable",
+      desc: "Elastic infrastructure designs engineered to optimize operational spending while expanding smoothly as traffic increases.",
+    },
+    {
+      image: assets.network7,
+      title: "Proactive Approach",
+      desc: "We prevent outages before they happen through intelligent automated monitoring, redundant links, and predictive maintenance.",
+    },
+    {
+      image: assets.network8,
+      title: "24/7 Support & Monitoring",
+      desc: "Continuous round-the-clock Network Operations Center (NOC) supervision guaranteeing 99.99% network uptime for clients.",
+    },
+  ];
+
+  const industriesData = [
+    {
+      title: "Startups & Small Businesses",
+      image: assets.webDev17,
+      description: "Agile, cost-efficient office networking and secure Wi-Fi architectures built to support rapid scaling.",
+    },
+    {
+      title: "E-commerce & Retail",
+      image: assets.webDev18,
+      description: "High-throughput store networks, POS system resilience, and secure PCI-compliant guest Wi-Fi networks.",
+    },
+    {
+      title: "Healthcare & Education",
+      image: assets.webDev19,
+      description: "HIPAA-compliant hospital telemetry networks, campus-wide coverage, and secure student/staff segmentation.",
+    },
+    {
+      title: "Real Estate & Logistics",
+      image: assets.webDev20,
+      description: "Distributed warehouse Wi-Fi, asset tracking connectivity, and real-time logistics communication pipelines.",
+    },
+    {
+      title: "Corporate Enterprises",
+      image: assets.webDev21,
+      description: "Multi-branch SD-WAN routing, MPLS migration, high-density corporate Wi-Fi, and redundant data center links.",
+    },
+    {
+      title: "FinTech & Trading Sites",
+      image: assets.webDev22,
+      description: "Deterministic sub-millisecond network architectures, redundant fiber backbones, and zero packet loss.",
+    },
+  ];
+
+  const steps = [
+    {
+      title: "Discovery & Assessment",
+      description:
+        "The initial phase involves comprehensive audits grasping your current topology, hardware health, bottlenecks, and expansion plans.",
+    },
+    {
+      title: "Strategic Planning & Topology Design",
+      description:
+        "Certified engineers create a bespoke network roadmap balancing bandwidth, security policies, redundancy, and budgeting.",
+    },
+    {
+      title: "Implementation & Optimization",
+      description:
+        "Following strict SOPs and rigorous latency testing, we deploy your solution with near-zero disruption to ongoing business operations.",
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Network Solutions | Managed IT & Cloud Network Services – Capyngen
@@ -440,116 +422,357 @@ const NetworkSolutionServices = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <Banner14
-        imageSrc={assets.network1}
-        imageAlt="Blockchain development illustration"
-        title="Creative"
-        highlighted="Network Solutions and Services"
-        subtitle="for Contemporary Businesses"
-        description="Capyngen provides efficient, safe, and adaptable technology network solutions and services that assist your business in achieving maximum performance."
-        reverse={false}
-      />
 
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            "Not a minute to lose, book your free consult with us today - Get the network revolution started!",
-          ]}
-          textSize="text-2xl"
-          buttonText="Get in Touch"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <TopRatedCompany
-          title="Network Solution"
-          description={[
-            `We live in a world where everything must be done digitally and therefore your network becomes the most important thing in the chain of your business operations. At Capyngen, we know very well that your connectivity processes must be without any type of failure, and besides that, security and performance must be also at their zenith. Hence we provide the kind of customer and business solutions that enable organizations of any size to achieve their greatest potential.`,
-            `We are your one-stop shop for all things related to networking, including solutions that are hosted on windows and to support round the clock. With Capyngen, your organization would become a move powered by network services professionals are better you can get.`,
-          ]}
-          image={assets.network2}
-          isHidden={true}
-          imageHeight="aspect-[1/1]"
-          background={assets.patternBg1}
-        />
-        <CardsSection
-          heading="Our Network Solutions & Services"
-          subheading=""
-          services={cardsSectionData1}
-          headColor="text-white"
-          cardBg="bg-gradient-to-r from-gray-900 via-gray-900 to-blue-900"
-          textSize="text-md"
-          sectionBg="bg-gray-900"
-          hoverBg="hover:from-indigo-800 hover:via-gray-800 hover:to-blue-900 hover:scale-105"
-          textColor="text-white"
-          hoverTextColor=""
-        />
-        <IndustryServices
-          heading="Why Businesses Trust Capyngen"
-          subheading=""
-          cardBg="bg-gray-700"
-          cardText="text-white"
-          cardDescText="text-white"
-          services={cardsSectionImageData2}
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            <>
-              <span>
-                Want to enhance your network? Get in touch with{" "}
-                <Link to={"/"}>Capyngen</Link> for a professional solution right
-                away!
-              </span>
-            </>,
-          ]}
-          textSize="text-2xl"
-          buttonText="Get in Touch"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <CardsSectionSlider
-          heading="Industries We Serve"
-          subheading=""
-          cardBg="bg-transparent"
-          hoverBg=" hover:bg-blue-50"
-          textColor="text-gray-800"
-          hoverTextColor=""
-          textSize="text-xl"
-          sectionBg="bg-black/90"
-          height="h-78"
-          headColor="text-white"
-          services={cardsSectionSliderData1}
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.networkSolFullSize}
-          title="Connect with confidence"
-          description="Our team is committed to delivering quality networking solutions that are not only fast and reliable but also secure to enterprises."
-          buttonText="Connect With Us"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <HowWeWork heading="Our Process" desc="" steps={steps} />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Get Started Today"
-          description={[
-            "Do not allow your old or unstable network system to slow down your business. No matter if you require a cloud-based network solution for businesses, complete security, or continuous managed services, Capyngen is the partner that you can always rely on to get the results you want.",
-          ]}
-          textSize="text-xl"
-          buttonText="Get Started"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
-      </div>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (ORIGINAL BANNER14 DESIGN AS REQUESTED)                  */}
+      {/* ========================================================================= */}
+      <section
+        className="pt-28 lg:pt-36 flex items-center py-16 bg-[#111927] text-white px-4 sm:px-6 lg:px-12 border-b border-slate-800"
+        aria-label="Capyngen Network Solutions Banner"
+      >
+        <div className="w-full max-w-[1536px] mx-auto">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-14">
+            {/* Left Content: Image with rounded-3xl as in original */}
+            <div className="w-full lg:w-5/12 flex justify-center mb-6 lg:mb-0">
+              <img
+                src={assets.network1}
+                alt="Network Solutions Illustration"
+                className="rounded-3xl shadow-2xl w-full object-cover"
+              />
+            </div>
+
+            {/* Right Content */}
+            <div className="w-full lg:w-7/12 py-4 text-left">
+              <h1
+                className="text-3xl sm:text-4xl lg:text-[46px] font-bold mb-6 leading-tight tracking-tight"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Creative{" "}
+                <span className="text-blue-500 font-extrabold">
+                  Network Solutions and Services
+                </span>{" "}
+                for Contemporary Businesses
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl font-normal">
+                Capyngen provides efficient, safe, and adaptable technology network solutions and services that assist your business in achieving maximum performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. NETWORK OVERVIEW & VALUE PROPOSITION (SPLIT LIGHT SECTION)             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.network2}
+                alt="Network Performance and Reliability"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Mission-Critical Connectivity for Modern Enterprises
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                In a digital-first economy, your network infrastructure is the lifeline of your business. At Capyngen, we understand that connectivity must operate without single points of failure, while maintaining top-tier security and throughput.
+              </p>
+              <p>
+                From unified enterprise Wi-Fi to high-bandwidth multi-cloud interconnects, our certified engineers build robust networks that enable teams to collaborate without interruption.
+              </p>
+            </div>
+
+            {/* Core Value Checklist */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div className="flex items-center gap-2.5 text-sm font-medium text-slate-800">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                <span>24/7 Proactive Monitoring</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-sm font-medium text-slate-800">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                <span>Zero-Downtime Migration</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-sm font-medium text-slate-800">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                <span>Next-Gen Firewall Defense</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-sm font-medium text-slate-800">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                <span>Hybrid Cloud Interconnect</span>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Infrastructure Assessment
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FULL SIZE BANNER 1: CONNECT WITH CONFIDENCE                            */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.networkSolFullSize}
+            alt="Connect with confidence"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Connect with confidence
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Our team is committed to delivering quality networking solutions that are not only blazing fast and resilient but also impenetrable against unauthorized access.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Connect With Us
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. OUR NETWORK SOLUTIONS & SERVICES (6 Cards - White Background)          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Network Solutions & Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Complete lifecycle infrastructure capabilities designed to engineer, deploy, monitor, and optimize your business network.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. WHY BUSINESSES TRUST CAPYNGEN (6 Cards with Images)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Businesses Trust Capyngen
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              We engineer dependable, secure, and future-ready network systems with proven uptime and dedicated client partnership.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {trustCards.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. OUR PROCESS (3 Step Cards)                                             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Network Implementation Process
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              A systematic engineering methodology designed to deliver seamless transitions with zero unplanned downtime.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {steps.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-xs font-mono font-semibold text-blue-400 mb-3 tracking-wider">
+                    PHASE 0{idx + 1}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. INDUSTRIES WE SERVE (6 Industry Cards)                                 */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Industries We Serve
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              We design robust network backbones that address unique regulatory compliance, bandwidth intensity, and distributed site demands.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industriesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-44 mb-6 bg-slate-900 p-2 flex items-center justify-center rounded-none overflow-hidden border border-slate-800">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="max-h-full max-w-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. GET STARTED / CONSULTATION BANNER                                      */}
+      {/* ========================================================================= */}
+      <section className="py-16 lg:py-20 bg-[#030712] text-white border-b border-slate-800 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.18),transparent)] pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Get Started Today with Capyngen
+          </h2>
+          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Do not allow legacy network bottlenecks to hinder your business velocity. Connect with our certified engineers to build a resilient, high-bandwidth IT ecosystem.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl text-base"
+            >
+              Get in Touch
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. FREQUENTLY ASKED QUESTIONS                                             */}
+      {/* ========================================================================= */}
+      <FAQSection2 items={faqItems} />
     </div>
   );
 };

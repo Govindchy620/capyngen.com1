@@ -1,159 +1,197 @@
-// App.jsx
+"use client";
+
 import React from "react";
+import {
+  Cloud,
+  ShieldCheck,
+  Building2,
+  Cpu,
+  RefreshCw,
+  Check,
+} from "lucide-react";
 import { assets } from "../assets/assets";
-import AnimatedButton from "./AnimatedButton";
-import BestHeading from "./BestHeading";
+
+const pillarFeatures = [
+  {
+    icon: Cloud,
+    title: "Next-Gen Cloud & IT Solutions",
+    description: "Future-Proof, Secure, and Scalable.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "State of the art Cybersecurity Services",
+    description: "Protecting companies against emerging threats.",
+  },
+  {
+    icon: Building2,
+    title: "Industry-Targeted Innovation",
+    description: "Our technology drives the growth of finance to healthcare.",
+  },
+  {
+    icon: Cpu,
+    title: "Artificial Intelligence and Data-driven insights",
+    description: "More intelligent choices, quicker outcomes.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Digital transformation without interruption",
+    description: "Modernisation of enterprises with responsive solutions.",
+  },
+];
+
+const capabilityItems = [
+  "Business Automation",
+  "Digital Transformation",
+  "Legacy System Issues",
+  "Downtime & Reliability",
+  "Remote Work Enablement",
+  "Customer Experience Gaps",
+  "System Integration",
+  "Industry Innovation",
+];
+
+const clientAvatars = [
+  assets.team1 || "https://randomuser.me/api/portraits/men/32.jpg",
+  assets.team2 || "https://randomuser.me/api/portraits/women/44.jpg",
+  assets.team3 || "https://randomuser.me/api/portraits/women/68.jpg",
+  assets.team4 || "https://randomuser.me/api/portraits/men/81.jpg",
+];
 
 export default function HomeIndustries() {
   return (
-    <div className="min-h-screen text-white">
-      <BestHeading title="" highlight="Technologies" />
-      {/* Top Section */}
-      <div className="relative flex flex-col pt-15 lg:flex-row items-center justify-center max-w-[90rem] px-4 md:px-6 lg:px-12 mx-auto w-full">
-        {/* Left Image + Stat Card */}
-        <div className="relative flex-1 flex flex-col justify-center">
-          {/* Image */}
-          <div className="overflow-hidden object-contain">
-            <img
-              src={assets.homepageTechnologies}
-              alt="People discussing IT project"
-              className="object-cover lg:min-h-[650px] w-full md:w-5/6 flex items-end justify-self-end"
-            />
-          </div>
-          {/* Stat Card - overlays image on large screens, sits below on small screens */}
-          <div className="md:absolute md:-bottom-1/2 md:-translate-y-1/2 md:-left-10 transform z-10">
-            <div className="bg-blue-600 text-white p-6 md:p-10 w-full md:w-fit md:mt-4 mb-5 md:mb-0 shadow-xl flex flex-col gap-5">
-              <div>
-                <p className="text-lg mb-4 opacity-80">
-                  Customers are satisfied <br className="hidden md:block" />{" "}
-                  with the services.
-                </p>
-                <div className="text-4xl md:text-6xl font-bold text-center md:text-left">
-                  5.2k
-                </div>
+    <section
+      className="w-full bg-[#f8fafc] text-slate-900 py-20 sm:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 border-t border-slate-200"
+      aria-label="Technologies"
+    >
+      <div className="mx-auto w-full max-w-[1536px]">
+        {/* Top Header */}
+        <div className="max-w-3xl mb-12 lg:mb-16">
+          <span className="block mb-2 text-xs font-bold tracking-widest text-blue-600 uppercase font-sans">
+            Technologies &amp; Innovation
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-semibold text-slate-900 leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Smart Technologies That Drive Growth
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed">
+            We use innovation, latest IT services, tailored software development,
+            Best web design services and digital solutions to develop scalable,
+            secure, and future-ready systems to meet your business needs at
+            Capyngen.
+          </p>
+        </div>
+
+        {/* Clean Enterprise Grid Architecture */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Left Column (8 cols): Why Our Technologies Stand Out */}
+          <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-between border border-slate-200 bg-white p-7 sm:p-9 lg:p-10 shadow-sm">
+            <div>
+              <div className="pb-6 mb-2 border-b border-slate-100">
+                <h3
+                  className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  Why Our Technologies Stand Out
+                </h3>
               </div>
-              {/* Avatars */}
-              <div className="flex md:mt-10 md:space-x-[-10px] justify-center md:justify-start gap-4 md:gap-0">
-                {[
-                  "https://randomuser.me/api/portraits/men/32.jpg",
-                  "https://randomuser.me/api/portraits/women/44.jpg",
-                  "https://randomuser.me/api/portraits/women/68.jpg",
-                  "https://randomuser.me/api/portraits/men/81.jpg",
-                  "https://randomuser.me/api/portraits/men/81.jpg",
-                ].map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt={`avatar-${i}`}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+
+              {/* 5 Pillar Rows */}
+              <div className="divide-y divide-slate-100">
+                {pillarFeatures.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="group flex items-start sm:items-center gap-4 sm:gap-5 py-5 transition-colors"
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-slate-200 bg-slate-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <div className="flex-1">
+                        <h4
+                          className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug"
+                          style={{ fontFamily: "'Syne', sans-serif" }}
+                        >
+                          {item.title}
+                        </h4>
+                        <p className="text-sm text-slate-500 font-sans mt-0.5 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column (4 cols): Stat Card + Capabilities Checklist */}
+          <div className="lg:col-span-5 xl:col-span-4 flex flex-col gap-6 justify-between">
+            {/* Stat Card: 5.2k+ Customers */}
+            <div className="bg-[#2563eb] text-white p-7 sm:p-8 shadow-md border border-blue-400/30 flex flex-col justify-between">
+              <div>
+                <span className="block text-xs font-bold tracking-widest uppercase text-cyan-200 mb-3">
+                  Verified Clients
+                </span>
+                <div
+                  className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-2"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  5.2k+
+                </div>
+                <p className="text-sm text-blue-100 font-sans leading-relaxed">
+                  Customers are satisfied with the services.
+                </p>
+              </div>
+
+              {/* Avatar stack */}
+              <div className="mt-6 pt-5 border-t border-white/20 flex items-center gap-3">
+                <div className="flex -space-x-2.5">
+                  {clientAvatars.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`Avatar ${i + 1}`}
+                      className="w-8 h-8 rounded-full object-cover border-2 border-white shadow-xs"
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+                <span className="text-xs text-blue-100 font-sans font-medium">
+                  Global Enterprise Clients
+                </span>
+              </div>
+            </div>
+
+            {/* Capabilities Checklist Card */}
+            <div className="flex-1 border border-slate-200 bg-white p-7 sm:p-8 shadow-sm">
+              <h4
+                className="text-lg font-bold text-slate-900 mb-5"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Key Capabilities &amp; Impact
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5">
+                {capabilityItems.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-3 py-1.5"
+                  >
+                    <div className="flex h-5 w-5 shrink-0 items-center justify-center bg-blue-50 text-blue-600 border border-blue-100">
+                      <Check size={13} strokeWidth={3} />
+                    </div>
+                    <span className="text-xs sm:text-sm font-semibold text-slate-700 font-sans">
+                      {item}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-        {/* Right Content */}
-        <div className="flex-1 flex flex-col justify-center">
-          <div className="px-2 md:px-6 xl:px-10">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
-              Smart Technologies That Drive Growth
-            </h1>
-            <p className="text-lg md:pr-20 mt-5 mb-6">
-              We use innovation, latest IT services, tailored software
-              development, Best web design services and digital solutions to
-              develop scalable, secure, and future-ready systems to meet your
-              business needs at Capyngen.
-            </p>
-
-            <h2 className="text-2xl md:text-3xl font-semibold mt-8 mb-4">
-              Why Our Technologies Stand Out
-            </h2>
-
-            <ul className="list-disc list-inside space-y-3 text-gray-300">
-              <li>
-                <span className="font-semibold text-cyan-400">
-                  Next-Gen Cloud &amp; IT Solutions -
-                </span>
-                Future-Proof, Secure, and Scalable.
-              </li>
-              <li>
-                <span className="font-semibold text-cyan-400">
-                  State of the art Cybersecurity Services -
-                </span>
-                Protecting companies against emerging threats.
-              </li>
-              <li>
-                <span className="font-semibold text-cyan-400">
-                  Industry-Targeted Innovation -
-                </span>
-                Our technology drives the growth of finance to healthcare.
-              </li>
-              <li>
-                <span className="font-semibold text-cyan-400">
-                  Artificial Intelligence and Data-driven insights -
-                </span>
-                More intelligent choices, quicker outcomes.
-              </li>
-              <li>
-                <span className="font-semibold text-cyan-400">
-                  Digital transformation without interruption -
-                </span>
-                Modernisation of enterprises with responsive solutions.
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
-      {/* Services List */}
-      <div className="max-w-7xl mx-auto flex mt-5 xl:mt-0">
-        <div className="md:w-1/2 hidden md:block"></div>
-        <div className="w-full md:w-1/2 mt-6 md:mt-0 bg-white py-2">
-          <div className="px-5 xl:px-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-2 md:gap-0 xl:gap-10 text-gray-800 text-lg py-6">
-              <div>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    Business Automation
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    Digital Transformation
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    Legacy System Issues
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    Downtime & Reliability
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    Remote Work Enablement
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    Customer Experience Gaps
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    System Integration
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="inline-block text-green-600">✔</span>{" "}
-                    Industry Innovation
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }

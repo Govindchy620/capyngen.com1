@@ -14,7 +14,13 @@ export default function BestHeading({
           {title}
         </h1>
       )}
-      <p className="text-center flex justify-center items-center text-4xl md:text-5xl font-extrabold text-white">
+      <p
+        className={`text-center flex justify-center items-center text-4xl md:text-5xl font-extrabold ${
+          textColor === "black" || textColor === "slate-900" || textColor === "dark"
+            ? "text-slate-900"
+            : "text-white"
+        }`}
+      >
         {highlight}
       </p>
       {/* <TextType

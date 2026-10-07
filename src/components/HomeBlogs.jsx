@@ -1,147 +1,188 @@
-import React, { useRef, useLayoutEffect } from "react";
-import BestHeading from "./BestHeading";
+"use client";
+
+import React, { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { assets } from "../assets/assets";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const TeamMemberCard = React.forwardRef(
-  ({ image, name, title, isMobile }, ref) => (
-    <div
-      ref={ref}
-      className="team-member-card relative w-full sm:w-72 md:w-80 lg:w-84 h-[22rem] rounded-lg overflow-hidden group shadow-lg mx-auto"
-    >
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-full object-cover transition-opacity duration-200"
-      />
-      {/* Show info always on mobile, hover on desktop */}
-      <div
-        className={`absolute bottom-0 left-0 w-full bg-white/90 p-4 sm:p-6 transition-transform duration-300 shadow-md 
-        ${
-          isMobile
-            ? "translate-y-0"
-            : "translate-y-28 group-hover:translate-y-0"
-        }`}
-      >
-        <p className="text-lg sm:text-xl md:text-2xl text-black font-semibold">
-          {name}
-        </p>
-        <p className="text-gray-600 text-sm sm:text-md mt-1 sm:mt-2">{title}</p>
-      </div>
-    </div>
-  )
-);
+const stories = [
+  {
+    tag: "SAAS",
+    image: assets.news1,
+    name: "Tech Updates",
+    desc: "Latest trends in IT, AI automation, and scalable cloud solutions.",
+  },
+  {
+    tag: "E-COMMERCE",
+    image: assets.news2,
+    name: "Marketing Buzz",
+    desc: "Boosting digital presence, ROI, and modern performance marketing.",
+  },
+  {
+    tag: "ENTERPRISE",
+    image: assets.homepageIndustryBlog,
+    name: "Industry Blog",
+    desc: "Cross-industry insights, enterprise transformation, and strategic growth.",
+  },
+  {
+    tag: "FINANCE",
+    image: assets.homepageCapyngenNews,
+    name: "Capyngen News",
+    desc: "Company milestones, technology partnerships, and recent achievements.",
+  },
+  {
+    tag: "ARCHITECTURE",
+    image: assets.blog1,
+    name: "Software Engineering",
+    desc: "Architecting resilient, mission-critical systems for high throughput.",
+  },
+  {
+    tag: "INNOVATION",
+    image: assets.blog2,
+    name: "Digital Transformation",
+    desc: "Empowering businesses through smart automation and intelligent apps.",
+  },
+];
 
 export default function HomeBlogs() {
-  const sectionRef = useRef(null);
-  const cardsRef = useRef(null);
+  const navigate = useNavigate();
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    containScroll: "trimSnaps",
+  });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
 
-  const members = [
-    {
-      image: assets.news1,
-      name: "Tech Updates",
-      title: "Latest trends in IT & innovation.",
-    },
-    {
-      image: assets.news2,
-      name: "Marketing Buzz",
-      title: "Fresh SEO & social media tips.",
-    },
-    {
-      image: assets.homepageIndustryBlog,
-      name: "Industry Blog",
-      title: "Insights from global industries.",
-    },
-    {
-      image: assets.homepageCapyngenNews,
-      name: "Capyngen News",
-      title: "Our latest updates & events.",
-    },
-  ];
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
-  useLayoutEffect(() => {
-    const section = sectionRef.current;
-    const cardsContainer = cardsRef.current;
-    if (!cardsContainer || !section) return;
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
-    const cardEls = Array.from(
-      cardsContainer.querySelectorAll(".team-member-card")
-    );
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
 
-    const mm = gsap.matchMedia();
-
-    // Desktop only
-    mm.add("(min-width: 768px)", () => {
-      const st = ScrollTrigger.create({
-        id: "teamPin",
-        trigger: section,
-        start: "top top",
-        end: "+=200%",
-        pin: true,
-        anticipatePin: 1,
-        scrub: false,
-        markers: false,
-      });
-
-      const vw = window.innerWidth;
-      const vh = window.innerHeight;
-      const offLeft = -vw * 0.9;
-      const offRight = vw * 0.9;
-      const offBottom = vh * 0.6;
-
-      gsap.set(cardEls, {
-        x: (i) => (i % 2 === 0 ? offLeft : offRight),
-        y: offBottom,
-        opacity: 1,
-        willChange: "transform",
-      });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: () => st.start + window.innerHeight * 1.25,
-          scrub: true,
-        },
-      });
-
-      tl.to(cardEls, { x: 0, y: 0, stagger: 0, ease: "none" }, 0);
-
-      return () => {
-        st.kill();
-        tl.scrollTrigger?.kill();
-      };
-    });
-
-    return () => {
-      mm.revert();
-    };
-  }, [members.length]);
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
-    <div
-      ref={sectionRef}
-      className="min-h-screen text-white py-10 relative overflow-hidden"
+    <section
+      className="w-full bg-[#f8fafc] text-slate-900 pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 border-t border-slate-200/80"
+      aria-label="News and Updates"
     >
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
-        <BestHeading title="" highlight="News & Updates" />
-        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-8 mt-10 leading-snug">
-          Discover what’s new and what’s next in our journey of growth.
-        </h1>
-        <div
-          ref={cardsRef}
-          className="flex flex-col md:flex-row gap-4 justify-center relative"
-        >
-          {members.map((m, idx) => (
-            <TeamMemberCard key={idx} {...m} isMobile={isMobile} />
-          ))}
+      <div className="mx-auto w-full max-w-[1536px]">
+        {/* Header Row */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 lg:mb-12 gap-6">
+          <div className="max-w-3xl">
+            <span className="block mb-2 text-xs font-bold tracking-widest text-[#2563eb] uppercase">
+              Insights That Inspire Innovation
+            </span>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-900 leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              News &amp; Updates
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-2 font-normal font-sans">
+              Discover what’s new and what’s next in our journey of growth.
+            </p>
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={scrollPrev}
+              disabled={!canScrollPrev}
+              aria-label="Previous story"
+              className={`flex h-12 w-12 items-center justify-center bg-white border border-slate-200 text-slate-600 transition-all focus:outline-none cursor-pointer ${
+                canScrollPrev
+                  ? "hover:bg-slate-900 hover:text-white hover:border-slate-900 shadow-sm"
+                  : "opacity-40 cursor-not-allowed"
+              }`}
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              onClick={scrollNext}
+              disabled={!canScrollNext}
+              aria-label="Next story"
+              className={`flex h-12 w-12 items-center justify-center bg-white border border-slate-200 text-slate-600 transition-all focus:outline-none cursor-pointer ${
+                canScrollNext
+                  ? "hover:bg-slate-900 hover:text-white hover:border-slate-900 shadow-sm"
+                  : "opacity-40 cursor-not-allowed"
+              }`}
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Embla Carousel Stories */}
+        <div className="overflow-hidden cursor-grab active:cursor-grabbing pb-2" ref={emblaRef}>
+          <div className="flex gap-6">
+            {stories.map((story, idx) => (
+              <div
+                key={idx}
+                className="flex-[0_0_88%] sm:flex-[0_0_46%] lg:flex-[0_0_31%] xl:flex-[0_0_23.5%] min-w-0"
+              >
+                <motion.article
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.25 }}
+                  onClick={() => navigate("/news-and-updates")}
+                  className="group flex h-full cursor-pointer flex-col overflow-hidden border border-slate-200/90 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:border-blue-400/60"
+                >
+                  {/* Image */}
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={story.image}
+                      alt={story.name}
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-106"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Content & Action */}
+                  <div className="flex flex-1 flex-col justify-between p-4 sm:p-5">
+                    <div>
+                      <h3
+                        className="mb-1.5 text-base sm:text-lg font-bold leading-snug text-slate-900 group-hover:text-blue-600 transition-colors"
+                        style={{ fontFamily: "'Syne', sans-serif" }}
+                      >
+                        {story.name}
+                      </h3>
+                      <p className="text-xs sm:text-sm leading-relaxed text-slate-500 font-sans">
+                        {story.desc}
+                      </p>
+                    </div>
+
+                    {/* Read More Link */}
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs sm:text-sm font-semibold text-blue-600 group-hover:text-blue-700">
+                      <span>Read More</span>
+                      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform duration-200 group-hover:translate-x-1 group-hover:bg-blue-600 group-hover:text-white">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

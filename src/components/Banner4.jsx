@@ -22,7 +22,7 @@ const Banner4 = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-gray-900">
+    <div className="relative w-full min-h-screen overflow-hidden bg-gray-900">
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, index) => (
           <div
@@ -32,7 +32,7 @@ const Banner4 = ({ slides }) => {
             role="group"
           >
             <div
-              className="relative min-h-[80vh] flex items-center justify-start px-6 md:px-20 bg-cover bg-center transition-transform duration-700 ease-in-out"
+              className="relative min-h-screen flex items-center justify-start px-6 md:px-20 bg-cover bg-center transition-transform duration-700 ease-in-out"
               style={{ backgroundImage: `url(${slide.image})` }}
               role="img"
               aria-roledescription="slide background"

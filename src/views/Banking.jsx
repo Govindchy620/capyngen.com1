@@ -1,13 +1,10 @@
 import React from "react";
-import ExpandableGallery from "../components/ExpandableGallery";
-import IndustryServices from "../components/IndustryServices";
-import TypesWeDevelop from "../components/TypesWeDevelop";
-import { assets } from "../assets/assets";
-import GetStarted from "../components/GetStarted";
-import TopRatedCompany from "../components/TopRatedCompany";
-import CardsSection from "../components/CardsSection";
-import CardsSectionImage from "../components/CardsSectionImage";
-import FAQSection2 from "../components/FAQSection2";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 import {
   FaCogs,
   FaShieldAlt,
@@ -20,8 +17,9 @@ import {
   FaCreditCard,
   FaLightbulb,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
+import ExpandableGallery from "../components/ExpandableGallery";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -49,6 +47,7 @@ const webpageSchema = {
     },
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -81,6 +80,7 @@ const serviceSchema = {
   serviceOutput:
     "Capyngen provides secure and scalable banking software development services. From FinTech apps to mobile banking software, we build next-gen digital solutions.",
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -147,62 +147,6 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Costs depend on features, complexity, technology stack, integrations, and support. We offer flexible engagement models such as fixed-price, time and material, and dedicated teams. A tailored quote is available upon request.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you integrate with our existing banking systems?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we integrate new banking solutions with legacy systems, third-party platforms, payment gateways, compliance tools, and external services using APIs, middleware, and proven integration methods with minimal disruption.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide FinTech app development for startups?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we build FinTech apps for startups, including digital wallets, lending platforms, investment apps, payment solutions, and other innovative financial applications tailored for scalability and quick deployment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you ensure regulatory compliance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We follow RBI, PCI DSS, GDPR, AML/KYC, and other international standards. Our solutions include built-in compliance features such as automated reporting and audit trails.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What technologies do you use for banking software?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We use Java, .NET, and Python for development; Oracle, MySQL, and MongoDB for databases; AWS and Azure for cloud; AI and ML for intelligence; blockchain for security; and the latest frameworks for modern, scalable solutions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide ongoing support and maintenance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we provide 24/7 monitoring, bug fixing, security updates, performance optimization, feature enhancements, and technical support to ensure smooth and secure banking software operations.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you help with digital transformation for traditional banks?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, our digital banking solutions help modernize legacy systems, adopt cloud technologies, implement AI, use blockchain, and improve customer experiences for a digital-first future.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What makes your custom banking app development services unique?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our custom banking app development combines domain expertise, user-focused design, modern technology, strong security, regulatory compliance, smooth integration capabilities, and proven delivery methods to create high-impact digital solutions.",
       },
     },
   ],
@@ -325,37 +269,37 @@ const Banking = () => {
       title: "Core Banking Software",
       description:
         "Unified platforms for account management, deposits, loans, and real-time transactions.",
-      icon: <FaDatabase className="text-4xl text-white" />,
+      icon: <FaDatabase className="text-3xl text-blue-400" />,
     },
     {
       title: "Mobile & Internet Banking Solutions",
       description:
         "Cross-platform iOS and Android banking apps offering secure, intuitive user experiences.",
-      icon: <FaMobileAlt className="text-4xl text-white" />,
+      icon: <FaMobileAlt className="text-3xl text-blue-400" />,
     },
     {
       title: "Payments & Gateway Solutions",
       description:
         "High-volume, secure, and anti-fraud payment systems with enterprise-grade uptime.",
-      icon: <FaCreditCard className="text-4xl text-white" />,
+      icon: <FaCreditCard className="text-3xl text-blue-400" />,
     },
     {
       title: "CRM & Customer Experience",
       description:
         "Centralized platforms for personalized analytics, dashboards, and user engagement.",
-      icon: <FaUsers className="text-4xl text-white" />,
+      icon: <FaUsers className="text-3xl text-blue-400" />,
     },
     {
       title: "FinTech Transformation Advisory",
       description:
         "Strategic consulting for modernization, automation, and high-tech digital banking evolution.",
-      icon: <FaLightbulb className="text-4xl text-white" />,
+      icon: <FaLightbulb className="text-3xl text-blue-400" />,
     },
     {
       title: "Regulatory & Security Frameworks",
       description:
         "Built-in data protection frameworks, ensuring ISO, PCI, GDPR, and national compliance.",
-      icon: <FaShieldAlt className="text-4xl text-white" />,
+      icon: <FaShieldAlt className="text-3xl text-blue-400" />,
     },
   ];
 
@@ -365,75 +309,69 @@ const Banking = () => {
       description:
         "Java, .NET, Python, C++, and Kotlin for modern, scalable, secure, and flexible backend systems.",
       image: assets.banking8,
-      cardBg: "bg-blue-100",
     },
     {
       title: "Databases & Storage",
       description:
         "Oracle, MySQL, MongoDB, PostgreSQL, and Redis for secure and high-speed data management.",
       image: assets.banking9,
-      cardBg: "bg-green-100",
     },
     {
       title: "Frameworks & Libraries",
       description:
         "Spring Boot, React, Angular, Node.js, and Flutter for powerful, cross-platform architectures.",
       image: assets.banking10,
-      cardBg: "bg-yellow-100",
     },
     {
       title: "Cloud Platforms",
       description:
         "AWS, Azure, Google Cloud, and IBM Cloud for reliable, hybrid-ready hosting solutions.",
       image: assets.banking11,
-      cardBg: "bg-pink-100",
     },
     {
       title: "Security Technologies",
       description:
         "MFA, blockchain, encryption, biometrics, SSL/TLS, and intrusion detection ensuring multi-layered security.",
       image: assets.banking12,
-      cardBg: "bg-purple-100",
     },
     {
       title: "AI & Analytics",
       description:
         "Machine learning, predictive analytics, NLP chatbots, and real-time fraud detection dashboards.",
       image: assets.banking13,
-      cardBg: "bg-red-100",
     },
   ];
 
   const typesData = [
     {
-      icon: <FaCogs />,
+      icon: <FaCogs className="text-3xl text-blue-600 mb-3" />,
       title: "Operational Efficiency",
-      desc: "Automate processes, reduce errors, and free staff for high-value tasks.",
+      desc: "Automate processes, reduce errors, and free staff for high-value strategic tasks.",
     },
     {
-      icon: <FaShieldAlt />,
+      icon: <FaShieldAlt className="text-3xl text-blue-600 mb-3" />,
       title: "Enhanced Security",
-      desc: "Enterprise-grade protection for all data and transactions.",
+      desc: "Enterprise-grade protection for all sensitive financial data and real-time transactions.",
     },
     {
-      icon: <FaUsers />,
+      icon: <FaUsers className="text-3xl text-blue-600 mb-3" />,
       title: "Customer Experience",
-      desc: "Deliver omnichannel banking through personalized interfaces.",
+      desc: "Deliver omnichannel banking through responsive and personalized user interfaces.",
     },
     {
-      icon: <FaChartLine />,
+      icon: <FaChartLine className="text-3xl text-blue-600 mb-3" />,
       title: "Cost Efficiency",
-      desc: "Lower operational costs using cloud and resource optimization.",
+      desc: "Lower operational overhead leveraging cloud elasticity and modern resource optimization.",
     },
     {
-      icon: <FaChartPie />,
+      icon: <FaChartPie className="text-3xl text-blue-600 mb-3" />,
       title: "Advanced Reporting",
-      desc: "Gain insights and detect fraud with real-time data analytics.",
+      desc: "Gain deep visibility and detect suspicious anomalies with real-time analytics engines.",
     },
     {
-      icon: <FaExpand />,
+      icon: <FaExpand className="text-3xl text-blue-600 mb-3" />,
       title: "Scalability",
-      desc: "Systems built to expand seamlessly without performance loss.",
+      desc: "Microservices architectures built to scale gracefully to millions of concurrent users.",
     },
   ];
 
@@ -499,7 +437,7 @@ const Banking = () => {
   ];
 
   return (
-    <div className="">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>Banking Software Development Services</title>
         <meta
@@ -508,7 +446,7 @@ const Banking = () => {
         />
         <meta
           name="keywords"
-          content="Banking Software Development Services "
+          content="Banking Software Development Services"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -518,83 +456,318 @@ const Banking = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (EXPANDABLE GALLERY - RETAINED EXACTLY AS REQUESTED)     */}
+      {/* ========================================================================= */}
       <ExpandableGallery panels={panels} />
-      <GetStarted
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        description={[
-          "Contact us for a free consultation. Experience next-gen secure, scalable, and innovative banking software with Capyngen — India’s leading fintech partner.",
-        ]}
-        buttonText="Get Started"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        title="Banking Industry Meets Digital Transformation"
-        description={[
-          <span>
-            <Link to={"/"}>Capyngen</Link> partners with global financial
-            institutions to build secure, scalable, and compliant digital
-            infrastructures. Our banking software solutions redefine customer
-            relationships and operational performance.
-          </span>,
-          <span>
-            We have deep experience working across retail, corporate,
-            microfinance, and fintech ecosystems, offering end-to-end solutions
-            in core banking, digital payments, and{" "}
-            <Link to={"/artificial-intelligence-services"}>AI-powered</Link>{" "}
-            financial intelligence.
-          </span>,
-        ]}
-        image={assets.banking1}
-        background={assets.patternBg1}
-        isHidden
-      />
-      <IndustryServices
-        heading="Why Leading Banks Choose Capyngen"
-        services={servicesData}
-      />
-      <CardsSection
-        heading="Banking Software Solutions"
-        services={cardsSectionData1}
-        headColor="text-white"
-        cardBg="bg-gradient-to-br from-gray-900 to-blue-800"
-        sectionBg="bg-gray-900"
-        textColor="text-white"
-      />
-      <CardsSectionImage
-        heading="Modern Tech Stack for Banking Excellence"
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        description={[
-          "Want to modernize your banking systems? Schedule a free demo and discover how Capyngen’s solutions make banking smarter, safer, and customer-driven.",
-        ]}
-        buttonText="Book a Demo"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TypesWeDevelop
-        heading="Making Banks Digitally Fit"
-        image={assets.banking14}
-        types={typesData}
-      />
-      <IndustryServices
-        heading="Serving Every Banking & Financial Sector"
-        services={servicesData1}
-      />
-      <GetStarted
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        description={[
-          "Work with Capyngen today to build custom fintech and banking software that transforms the way your customers interact and transact.",
-        ]}
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / BANKING DIGITAL TRANSFORMATION (SPLIT LIGHT SECTION)        */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.banking1}
+                alt="Banking Digital Transformation"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Banking Industry Meets Digital Transformation
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> partners with global financial institutions to build secure, scalable, and compliant digital infrastructures. Our banking software solutions redefine customer relationships, automate complex reconciliations, and ensure ironclad transactional reliability.
+              </p>
+              <p>
+                We have deep experience working across retail, corporate, microfinance, and fintech ecosystems, offering end-to-end capabilities in core banking, digital payments, and{" "}
+                <Link to="/artificial-intelligence-services" className="text-blue-600 hover:underline font-semibold">
+                  AI-powered
+                </Link>{" "}
+                financial intelligence.
+              </p>
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Banking Consultation
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. WHY LEADING BANKS CHOOSE CAPYNGEN (6 Dark Cards with Images)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Leading Banks Choose Capyngen
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Proven domain expertise, security-first architectures, and quantifiable outcomes for modern financial institutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. BANKING SOFTWARE SOLUTIONS (6 Clean Light Cards with Icons)            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Banking Software Solutions
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Enterprise digital solutions built specifically to automate operations, empower banking customers, and guarantee transaction integrity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. MODERN TECH STACK FOR BANKING EXCELLENCE (6 Dark Cards with Images)    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Modern Tech Stack for Banking Excellence
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              We leverage resilient, cloud-ready, and high-security technologies to power mission-critical banking operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. MAKING BANKS DIGITALLY FIT (6 Cards Grid)                              */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Making Banks Digitally Fit
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Core strategic advantages realized when financial institutions modernise their platforms with Capyngen.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {typesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-2">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. SERVING EVERY BANKING & FINANCIAL SECTOR (6 Dark Cards with Images)    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Serving Every Banking & Financial Sector
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              From large retail networks to nimble fintech disruptors, we cater to the full financial spectrum.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-16 lg:py-20 bg-[#2563eb] text-white border-b border-blue-500/30 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.18),transparent)] pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Start Your Digital Transformation
+          </h2>
+          <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Partner with Capyngen today to construct secure, scalable, and next-generation banking software that elevates the way your customers transact.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl text-base"
+            >
+              Book a Free Demo
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. FREQUENTLY ASKED QUESTIONS                                             */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
     </div>
   );

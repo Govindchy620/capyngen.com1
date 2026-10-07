@@ -248,7 +248,7 @@ const Footer = () => {
                 <a
                   key={idx}
                   href={social.href}
-                  className="w-10 h-10 bg-slate-800 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+                  className="w-10 h-10 bg-slate-800 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 rounded-none flex items-center justify-center transition-all duration-200 hover:scale-110"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4 text-slate-300 hover:text-white transition-colors duration-200" />
@@ -263,7 +263,7 @@ const Footer = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <button
               onClick={scrollToTop}
-              className={`w-12 h-12 rounded-full border border-blue-500 bg-slate-800/50 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-white hover:bg-blue-500 cursor-pointer group ${
+              className={`w-12 h-12 rounded-none border border-blue-500 bg-slate-800/50 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-white hover:bg-blue-500 cursor-pointer group ${
                 showScrollTop
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"

@@ -487,130 +487,291 @@ const Insurance = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER4 - RETAINED EXACTLY AS REQUESTED)                 */}
+      {/* ========================================================================= */}
       <Banner4 slides={slides} />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Book a meeting with our CPG tech experts, it will be a great opportunity to start digitalizing your business."
-        description={[
-          "Utilize Capyngen’s innovative IT solutions for CPG distribution to revolutionize your supply chain — tailored to simplify logistics, elevate productivity, and expand your market presence.",
-        ]}
-        buttonText="Book Now!"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        reverse={false}
-        title={
-          <span>
-            Trusted Insurance{" "}
-            <Link to={"/"}>Software Development Services</Link> for Insurers
-          </span>
-        }
-        description={[
-          "Transform your insurance company's fate with IT solutions for the insurance industry, Capyngen's cutting-edge software development services. We create customized policy admin solutions, claim management systems along with InsurTech applications that fundamentally change the process of digital Solution for insurance companies. The digital transformation process that is the latest one consists of safety, automated activities along with effortless interaction with the customer, which align with our insurance app development services.",
-        ]}
-        image={assets.insurance1}
-        background={assets.patternBg1}
-        isHidden="hidden"
-      />
-      <CardsSectionImage
-        heading="Insurance Software Development Experience"
-        subheading={
-          <span>
-            We are an{" "}
-            <Link to={"/crm-management-software"}>
-              insurance software development
-            </Link>{" "}
-            team fully dedicated to building the right, scalable, and secure
-            solutions for all situations, in general, and all types of
-            industries.
-          </span>
-        }
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <IndustryServices
-        heading="Latest Technology We Implement"
-        subheading="Today, we are blending the best IT solutions for insurance industry cutting-edge and advanced technology with time-tested insurance software services that are most dependable, hence coming out with successful applications that have such qualities as speed, precision, and revolutionary."
-        services={servicesData}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Future of IT solutions for insurance industry"
-        description={[
-          "Insurance technology solutions (InsurTech), artificial-intelligence-driven claims processing, and digital policy platforms are the future of the insurance industry. With Capyngen in simple terms, it's incredibly simple and fast to execute the process of completely overhauling the outdated systems, uplifting customer interaction, and merging cloud insurance platforms.",
-        ]}
-        image={assets.insurance14}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Introduce Smart Tech to Your CPG Distribution Network to Lift It Up"
-        description={[
-          "Why not work together now on creating a smart and connected network that will be the engine of your growth and will please your customers?",
-        ]}
-        buttonText="Contact Our Experts for a Consultation"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <CardsSection
-        heading="Why Capygen for Insurance Software Development?"
-        subheading=""
-        services={cardsSectionData1}
-        sectionBg="bg-gray-900"
-        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-        hoverBg=""
-        height="h-64"
-        textColor="text-white"
-        hoverTextColor=""
-        headColor="text-white"
-      />
-      <BenefitsSection
-        heading="Insurance Software Solutions Development Services"
-        desc="We are open-to-close insurance software development providers to attain precision, creativity, and customer satisfaction in the insurance sector."
-        image={assets.insurance15}
-        benefits={solutionsData}
-        footerNote=""
-      />
-      <TopRatedCompany
-        reverse={false}
-        title="Life Application Insurance Health Insurance Program"
-        description={[
-          "Take Advantage of the Unique and Exceptional Software development For insurance companiesCapyngen is one of India's foremost providers of insurtech that offers you sustainable, flexible and user-friendly solutions. We specialize in policy management software, claims management systems and developing proprietary insurance apps. That not only enables us to offer you highly scalable solutions but highly secure ones as well. Schedule your free consultation today",
-        ]}
-        image={assets.insurance16}
-        background={assets.patternBg1}
-        imageHeight="aspect-[4/3]"
-        isHidden="hidden"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Request Your Free Demo & Strategy Session Right Now"
-        description={[
-          "Work closely with us to build the brand’s future-proof systems that are adaptable and scalable for long-term benefits.",
-        ]}
-        buttonText="Request Now"
-        backgroundVideo={assets.backgroundVideo}
-      />
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / INSURANCE (SPLIT LIGHT SECTION)                             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.insurance1}
+                alt="Insurance Software Development Services"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Trusted Insurance Software Development Services
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                Transform your insurance operations with <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen's</Link> cutting-edge digital platforms. We engineer customized policy administration portals, automated claims settlement systems, and scalable InsurTech mobile applications.
+              </p>
+              <p>
+                Our solutions integrate AI-driven risk scoring, multi-channel customer self-service, and ironclad regulatory compliance across life, health, auto, and commercial insurance providers.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Strict compliance with GDPR, HIPAA, KYC, AML, and insurance regulatory standards.",
+                "Automated claims verification and real-time fraud pattern detection with AI.",
+                "Omnichannel agent and policyholder portals with seamless premium payment gateways.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Insurance Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. WHY CAPYNGEN FOR INSURANCE (DARK CARDS GRID)                          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen for Insurance Software
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Customer-specific architectures, financial domain expertise, robust multi-layer encryption, and strict regulatory compliance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. INSURANCE SOFTWARE DEVELOPMENT SOLUTIONS (LIGHT CARDS)                 */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Insurance Software Development Solutions
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Fully dedicated to building scalable, automated, and secure digital foundations for insurance enterprises.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. LATEST TECHNOLOGY WE IMPLEMENT (DARK CARDS)                            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Latest Technology We Implement
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Blending robotic process automation, predictive analytics, AI assistants, and blockchain smart contracts.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. INSURANCE SOFTWARE SUITE (SPLIT LIGHT SECTION)                         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
+              <img
+                src={assets.insurance15}
+                alt="Insurance Software Development Services"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Enterprise Insurance Software Capabilities
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Full lifecycle software engineering tailored to achieve precision, fraud reduction, and elevated policyholder satisfaction:
+            </p>
+
+            <div className="space-y-4 pt-2">
+              {solutionsData.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-600 transition-colors duration-150"
+                >
+                  <div className="w-2.5 h-2.5 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <div>
+                    <h4
+                      className="font-bold text-slate-900 text-base mb-1"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h4>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Transform Your Insurance Enterprise with Capyngen
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Deploy AI-powered claims processing, cloud policy administration, and friction-free mobile InsurTech applications.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

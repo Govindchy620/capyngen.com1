@@ -1,18 +1,10 @@
 import React from "react";
-import Banner11 from "../components/Banner11";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import GetStarted from "../components/GetStarted";
-import CardsSection from "../components/CardsSection";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 import {
   FaBullhorn,
   FaChartLine,
@@ -23,9 +15,8 @@ import {
   FaTools,
   FaUsers,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
-import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -50,6 +41,7 @@ const webpageSchema = {
     },
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -76,6 +68,7 @@ const serviceSchema = {
     availability: "InStock",
   },
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -284,280 +277,128 @@ const DigitalMarketing = () => {
         "Begin with a free consultation to discuss your goals and receive a company-specific plan of digital marketing.",
     },
   ];
+
   const solutionsData = [
     {
       title: "Search Engine Optimisation (SEO)",
-      desc: (
-        <>
-          <p>
-            SEO is the acronym for the fundamental structural marketing of
-            digital marketing. The SEO companies within the group of the company
-            rank your site with more favourable influences than unfavourable
-            ones with the search engines of the renowned Search Engines for such
-            relevant keywords.
-          </p>
-          <p>The company provides search optimisation by:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>On-page optimisation (meta tags, content, URL structure)</li>
-            <li>Backlinks (off-page optimisation)</li>
-            <li>Technical SEO (site speed, mobile-friendliness, indexing)</li>
-            <li>Local search (optimisation of Google My Business, maps)</li>
-            <li>Key-word research and competitor research</li>
-          </ul>
-          <p>
-            With the adoption of SEO, your company will have the capacity to
-            gain natural visitors and benefit in the long run in terms of
-            exposure.
-          </p>
-        </>
-      ),
+      desc: "Rank your site higher on renowned search engines for high-intent keywords through on-page optimization, quality backlinks, technical SEO, and localized Google Maps ranking.",
     },
     {
       title: "Social Media Marketing (SMM)",
-      desc: (
-        <>
-          <p>
-            Your customers spend most of their time on social media. We enable
-            you to be socially active in terms of such platforms as Facebook,
-            Instagram, LinkedIn, Twitter, and YouTube.
-          </p>
-          <p>What we do:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Social media planning, strategy</li>
-            <li>Designing posts and developing content</li>
-            <li>Google Ads (Facebook Ads, Instagram Ads, LinkedIn Ads)</li>
-            <li>Participation & neighbourhood development</li>
-            <li>Influencer collaborations</li>
-          </ul>
-          <p>
-            The advantages of brand awareness and customer engagement are
-            attainable with SMM.
-          </p>
-        </>
-      ),
+      desc: "Engage your customers where they spend their time: Facebook, Instagram, LinkedIn, X, and YouTube with targeted creatives, community management, and paid social campaigns.",
     },
     {
       title: "Pay-Per-Click Advertising (PPC)",
-      desc: (
-        <>
-          <p>
-            PPC advertisements provide instant exposure on social media and
-            Google. Our accredited PPC experts manage campaigns, producing lead
-            volumes that are of the best quality at the lowest cost per click
-            (CPC).
-          </p>
-          <p>We provide full PPC service, including:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Google (Search, Display, Shopping) Ads</li>
-            <li>Social media advertising (Meta, LinkedIn, Twitter, TikTok)</li>
-            <li>Retargeting/remarketing advertisements</li>
-            <li>Conversion tracking & reporting</li>
-          </ul>
-          <p>PPC produces quick results and quality leads.</p>
-        </>
-      ),
+      desc: "Generate instant exposure and qualified lead volumes at the lowest Cost Per Click (CPC) across Google Search, Display, Shopping, and high-converting retargeting funnels.",
     },
     {
       title: "Content Marketing",
-      desc: (
-        <>
-          <p>
-            Content is the most useful tool of digital marketing. Our content is
-            valuable, engaging, and optimised to appeal to search engines,
-            thereby becoming trust-building and authoritative to your brand.
-          </p>
-          <p>We carry out content marketing campaigns like:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Article marketing and blog writing</li>
-            <li>Landing pages and content on the website</li>
-            <li>Video marketing & scripts</li>
-            <li>Visual storytelling and infographics</li>
-            <li>Case studies, eBooks and whitepapers</li>
-          </ul>
-          <p>
-            Through content marketing, you get to attract, engage, and convert
-            customers.
-          </p>
-        </>
-      ),
+      desc: "Build authority and organic search visibility with value-driven blog writing, landing page copy, case studies, whitepapers, and compelling visual storytelling.",
     },
     {
       title: "Email Marketing",
-      desc: (
-        <>
-          <p>
-            The email marketing channel is one of the channels with the highest
-            returns on investment. We build customised leads, cultivating
-            campaigns that encourage cross-selling.
-          </p>
-          <p>What we do:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Newsletter creation</li>
-            <li>Automated drip campaigns</li>
-            <li>Product launch emails</li>
-            <li>Customer retention programs</li>
-            <li>Performance tracking & analytics</li>
-          </ul>
-          <p>
-            When using email, it is possible to retain customers and add
-            lifetime value.
-          </p>
-        </>
-      ),
+      desc: "Achieve the highest ROI with personalized lead nurturing sequences, automated drip workflows, product launch announcements, and customer retention campaigns.",
     },
     {
       title: "Conversion Rate Optimisation (CRO)",
-      desc: (
-        <>
-          <p>
-            The increased traffic on the websites may not be enough unless the
-            visitors are converted into customers. Our CRO specialists optimise
-            your site and landing pages to the utmost level of acquiring more
-            conversions.
-          </p>
-          <p>We enhance the process of the CRO by improving:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Heatmap & behaviour analysis</li>
-            <li>A/B testing</li>
-            <li>Optimising call-to-action (CTA) buttons</li>
-            <li>Smoothing out the checkout process</li>
-            <li>Mobile-friendly design</li>
-          </ul>
-          <p>Visitors are turned into loyal customers with CRO.</p>
-        </>
-      ),
-    },
-  ];
-  const cardsSectionData2 = [
-    {
-      title: "Global Reach",
-      description: "Users outside of your local district.",
-      icon: <FaTools className="text-4xl" />,
-    },
-    {
-      title: "Targeted Marketing",
-      description:
-        "It is not worth wasting resources to sell to people who are not interested, but focus on groups that are highly likely to convert.",
-      icon: <FaDollarSign className="text-4xl" />,
-    },
-    {
-      title: "Cost-Efficient",
-      description:
-        "The digital advertisements are likely to be cheaper compared to TV, radio, and billboard advertisements.",
-      icon: <FaUsers className="text-4xl" />,
-    },
-    {
-      title: "Tailored Impact independently",
-      description:
-        "Connect through multiple digital platforms/ calls to action by tracking the exits through data regarding the number of clicks, impressions, leads and sales.",
-      icon: <FaShieldAlt className="text-4xl" />,
-    },
-    {
-      title: "High Interaction Levels",
-      description:
-        "Demand personal connection with your customers and win brand loyalty online.",
-      icon: <FaBullhorn className="text-4xl" />,
-    },
-    {
-      title: "Greater ROI",
-      description:
-        "Monitor your capital returns at all times with the help of strategised analytics.",
-      icon: <FaHeart className="text-4xl" />,
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Research & Analysis",
-      description: "Know your business, competition, and customers.",
-    },
-    {
-      step: "Step 02",
-      title: "Strategy Development",
-      description: "Develop a custom online marketing strategy.",
-    },
-    {
-      step: "Step 03",
-      title: "Execution",
-      description:
-        "Use the SEO, advertisements, content, and social campaigns.",
-    },
-    {
-      step: "Step 04",
-      title: "Tracking & Optimisation",
-      description: "Monitoring KPIs and maximising productivity.",
-    },
-    {
-      step: "Step 05",
-      title: "Reporting",
-      description: "Issue with simple and clear reports.",
-    },
-    {
-      step: "Step 06",
-      title: "Continuous Improvement",
-      description:
-        "Periodically re-examine marketing results and optimise ways of maintaining a growth curve.",
-    },
-  ];
-  const features = [
-    {
-      icon: <FaRocket className="text-4xl text-blue-400" />,
-      title: "Tailored Strategies",
-      description: "Neither a universal nor a standard approach.",
-    },
-    {
-      icon: <FaUsers className="text-4xl text-green-400" />,
-      title: "Past Performance Success",
-      description: "The years of experience in different industries.",
-    },
-    {
-      icon: <FaShieldAlt className="text-4xl text-yellow-400" />,
-      title: "Professional Team",
-      description:
-        "Google Ads certified, Meta Ads certified and SEO certified specialists.",
-    },
-    {
-      icon: <FaChartLine className="text-4xl text-pink-400" />,
-      title: "Analytics-based Campaigns",
-      description: "We rely on statistics instead of our feelings.",
-    },
-    {
-      icon: <FaChartLine className="text-4xl text-pink-400" />,
-      title: "Open Reporting",
-      description: "Clear monthly reports with results.",
-    },
-  ];
-  const marketingCards = [
-    {
-      img: assets.seoAndContent,
-      alt: "Christmas background 3D cartoon",
-      text: "SEO & Content",
-    },
-    {
-      img: assets.socialMediaMarketing,
-      alt: "A beautiful glowing flower",
-      text: "Social Media Marketing",
-    },
-    {
-      img: assets.paidAdvertising,
-      alt: "A magical leopard",
-      text: "Paid Advertising",
-    },
-    {
-      img: assets.emailCampaigns,
-      alt: "A female 3D cartoon holding a wrapped gift box",
-      text: "Email Campaigns",
+      desc: "Turn passive traffic into paying customers through rigorous heatmap analysis, A/B testing, CTA optimization, and seamless friction-free checkout flows.",
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const cardsSectionData2 = [
+    {
+      title: "Global Reach",
+      description: "Expand your customer footprint far beyond local boundaries to capture international markets.",
+      icon: <FaTools className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Targeted Marketing",
+      description: "Direct your advertising budget specifically toward high-intent buyer segments that yield maximum return.",
+      icon: <FaDollarSign className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Cost-Efficient",
+      description: "Agile digital campaigns that deliver measurable leads at a fraction of traditional media costs.",
+      icon: <FaUsers className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Measurable Impact",
+      description: "Track impressions, clicks, conversion rates, and revenue with precision through live analytics dashboards.",
+      icon: <FaShieldAlt className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "High Interaction Levels",
+      description: "Form direct personal relationships with buyers and establish lasting brand loyalty online.",
+      icon: <FaBullhorn className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Greater ROI",
+      description: "Continuously optimize campaigns to scale your bottom-line return on marketing investment.",
+      icon: <FaHeart className="text-3xl text-blue-400" />,
+    },
+  ];
+
+  const steps = [
+    {
+      title: "Research & Analysis",
+      description: "Deep dive into your business model, competitor landscape, and target customer behavior.",
+    },
+    {
+      title: "Strategy Development",
+      description: "Architect a customized, multi-channel digital growth roadmap aligned with your business KPIs.",
+    },
+    {
+      title: "Execution",
+      description: "Deploy high-performance SEO, targeted paid ads, content distribution, and social campaigns.",
+    },
+    {
+      title: "Tracking & Optimisation",
+      description: "Continuously monitor campaign KPIs, test variations, and adjust budgets to maximize output.",
+    },
+    {
+      title: "Reporting",
+      description: "Deliver transparent, comprehensive monthly performance reports with actionable insights.",
+    },
+    {
+      title: "Continuous Improvement",
+      description: "Iterate strategies based on empirical data to ensure your business maintains sustained growth.",
+    },
+  ];
+
+  const features = [
+    {
+      icon: <FaRocket className="text-3xl text-blue-400" />,
+      title: "Tailored Strategies",
+      description: "Bespoke marketing funnels built uniquely around your product, margins, and market positioning.",
+    },
+    {
+      icon: <FaUsers className="text-3xl text-blue-400" />,
+      title: "Proven Track Record",
+      description: "Demonstrated success scaling traffic and revenue across B2B, eCommerce, and enterprise sectors.",
+    },
+    {
+      icon: <FaShieldAlt className="text-3xl text-blue-400" />,
+      title: "Certified Specialists",
+      description: "Google Ads certified, Meta Blueprint certified, and seasoned technical SEO specialists.",
+    },
+    {
+      icon: <FaChartLine className="text-3xl text-blue-400" />,
+      title: "Analytics-Based Decisions",
+      description: "Campaign decisions driven purely by hard statistical data, attribution models, and conversion metrics.",
+    },
+    {
+      icon: <FaChartLine className="text-3xl text-blue-400" />,
+      title: "Open & Honest Reporting",
+      description: "Full visibility into ad spend, cost per acquisition, and net return with zero hidden fees.",
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Best Digital Marketing Services | End-to-End Marketing Solutions
         </title>
-
         <meta
           name="description"
           content="Looking for the best digital marketing services in India? Capyngen offers end-to-end digital marketing services to increase traffic, leads, and sales for your business."
@@ -574,189 +415,428 @@ const DigitalMarketing = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <div className="lg:sticky inset-0">
-        <Banner11
-          heading="to Grow Your Business"
-          highlight="Digital Marketing Services"
-          description="Increase exposure, interactions and purchases through personalised digital marketing services based on your brand. Expand your company through appropriate marketing strategies, enhanced by cybersecurity measures for safe online operations and e commerce services integration."
-          cards={marketingCards}
-        />
-      </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative lg:z-10">
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Expand Your Company through the Introduction of the appropriate Marketing Strategies."
-          description={[""]}
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <TopRatedCompany
-          title="What is Digital Marketing?"
-          description={[
-            `Digital marketing can be defined as the promotional activities of the brands, products or services, both online and using digital technologies. It gives businesses an opportunity to zoom in on the specific consumers and quantify the success of the efforts, and enhance in-house campaigns on the spot, as compared to traditional marketing.`,
-            <>
-              <p className="mb-3 font-semibold">It includes:</p>
-              <ul className="list-disc list-inside space-y-2">
-                <li>
-                  <a
-                    href="https://www.capyngen.com/seo"
-                    className="text-blue-500 font-bold"
-                  >
-                    Search Engine Optimisation (SEO)
-                  </a>
-                </li>
-                <li>Social Media Marketing (SMM)</li>
-                <li>
-                  <a
-                    href="https://www.capyngen.com/ppc"
-                    className="text-blue-500 font-bold"
-                  >
-                    Pay-Per-Click Advertising (PPC)
-                  </a>
-                </li>
-                <li>Content Marketing</li>
-                <li>Email Marketing</li>
-                <li>Influencer Marketing</li>
-                <li>Conversion Rate Optimisation (CRO)</li>
-              </ul>
-              <br />
-              <p>
-                In case you choose to make a digital marketing strategy happen
-                and do it properly, you might not only increase the number of
-                visits to the site but also get helpful leads in terms of sales.
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (MICROSOFT-STYLE: Editorial, Minimalist, High Contrast)   */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-[90vh] lg:min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-gradient-to-r from-[#121316] via-[#1a1c22] to-[#121316]"
+        aria-label="Digital Marketing Services Hero"
+      >
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 text-left">
+              {/* Microsoft-style Yellow/Amber Accent Pill */}
+              <span className="inline-block bg-[#ffb900] text-black font-semibold text-xs px-2.5 py-1 mb-6 rounded-none tracking-wide">
+                New
+              </span>
+
+              <h1
+                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold leading-[1.12] tracking-tight mb-6"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Digital Marketing Services That Drive Real Growth
+              </h1>
+
+              <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-xl font-normal">
+                Big ideas, busy markets, creative campaigns. Increase exposure, user engagement, and measurable sales with end-to-end data-driven digital marketing solutions designed to keep pace.
               </p>
-            </>,
-          ]}
-          image={assets.digitalMarketing1}
-          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
-          isHidden={true}
-          background={assets.patternBg1}
-        />
-        <CardsSection
-          heading="Why Choose Capyngen for Digital Marketing Services?"
-          subheading="Investing in digital marketing services is a must-have now and not an option. The list below demonstrates the reasoning why many companies invest in this type of marketing, particularly when selecting one of the top digital marketing agencies or even the best digital marketing company in India:"
-          services={cardsSectionData2}
-          headColor="text-white"
-          cardBg="bg-gray-700"
-          sectionBg="bg-gray-900"
-          hoverBg="hover:bg-blue-800 hover:scale-98"
-          textColor="text-white"
-          hoverTextColor=""
-          height="h-72"
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.digitalMarketingFullSize}
-          title="Expand your brand in the digital world"
-          description="We collaborate with you to find, interact and transform customers using any channel."
-          buttonText="Boost My Business"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <BenefitsSection
-          heading="Our Digital Marketing Services"
-          desc={
-            <>
-              This is because we take pleasure in providing internet solutions
-              that are best suited and comprehensive in fulfilling numerous
-              business goals over the internet. <Link to={"/"}>Capyngen</Link>{" "}
-              is ranked in the top 10 digital marketing company in the market by
-              many global companies.
-            </>
-          }
-          benefits={solutionsData}
-          image={assets.digitalMarketing2}
-          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
-          footerNote=""
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Take Your Digital Presence to the Next Level"
-          description={[
-            "Adapt the alteration in your business to the custom digital marketing services of Capyngen, which is geared towards the delivery of traffic, engagement, and sales to you in any part of the world. We ensure you remain ahead of the competition because we are one of the best providers of best global digital marketing services.",
-          ]}
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <HowWeWork
-          heading="Our Digital Marketing Process"
-          desc="Our practice is based on a mindful and evidence-driven approach. Our own practice will ensure maximum growth outcomes per campaign."
-          steps={steps}
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.digitalMarketingFullSize2}
-          title="Turn clicks into customers"
-          description="Our marketers strategise sharp, information-oriented measures to realise quantifiable growth."
-          buttonText="CONTACT US"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <WhyChoose
-          heading="What makes us the perfect partner for your digital marketing?"
-          intro=""
-          features={features}
-        />
-        <TopRatedCompany
-          reverse={true}
-          title="Why is it beneficial to work with a digital marketing agency?"
-          description={[
-            `Working with us, you do not just receive services, but also get solutions to grow.`,
-            <>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Waste less time and invest it in your business.</li>
-                <li>Make use of the latest tools and technologies.</li>
-                <li>
-                  You are able to modify your campaigns according to your budget
-                  and performance.
-                </li>
-                <li>
-                  You are able to obtain long-term brand loyalty and
-                  reliability. <Link to={"/"}>Capyngen</Link> is the subject of
-                  many surveys that suggest it is one of the top 10 digital
-                  marketing company in Delhi and a reliable international
-                  digital marketing agency in India.
-                </li>
-              </ul>
-            </>,
-          ]}
-          image={assets.digitalMarketing3}
-          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
-          imageHeight="aspect-[1/1]"
-          isHidden={true}
-          background={assets.patternBg1}
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-black"
-          textColor="text-white"
-          title="Enhance Your Web Presence Now"
-          description={[
-            "Digital marketing involves more than simply advertisements and content on social media platforms, but also involves designing an online presence that can be maintained and lead to actual business development.",
-            "By using the right mix of SEO, PPC, social media and content marketing, it will be possible to have more visitors, enable the creation of qualified leads and make more sales.",
-            "To be above the competition, my digital marketing services can be the weapon to get your business to the next stage and to do it efficiently and effectively in the modern cutthroat market.",
-          ]}
-          buttonText="Contact Us"
-          image={assets.digitalMarketing4}
-          alt="Best Digital Marketing Services | End-to-End Marketing Solutions"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-black"
-          textColor="text-white"
-          title="Free of Charge Digital Marketing Consultation"
-          description={[
-            "Discuss the digital marketing services with our experts and determine the most appropriate services that your business can use to expand effectively online.",
-          ]}
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
-      </div>
+
+              <div>
+                {/* Microsoft-style Solid White High-Contrast Button */}
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3.5 px-8 rounded-none transition-colors duration-150 shadow-lg text-base"
+                >
+                  Learn more
+                  <ArrowRight className="w-4 h-4 text-slate-900" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Graphic (Clean Showcase against sleek dark canvas) */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="w-full max-w-[560px] xl:max-w-[620px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={assets.digitalMarketing1}
+                  alt="Digital Marketing Solutions Showcase"
+                  className="w-full h-auto object-contain rounded-none drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. WHAT IS DIGITAL MARKETING? (SPLIT LIGHT SECTION)                       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.digitalMarketing2}
+                alt="What is Digital Marketing"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              What is Digital Marketing?
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                Digital marketing encompasses all promotional efforts leveraging online channels and connected devices. Unlike traditional advertising, digital marketing offers granular precision targeting, live conversion analytics, and rapid optimization loops.
+              </p>
+              <p>
+                When executed strategically, your digital presence generates scalable organic traffic, qualified sales leads, and sustainable long-term brand authority.
+              </p>
+            </div>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Strategy Session
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FULL SIZE BANNER 1: EXPAND YOUR BRAND                                  */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.digitalMarketingFullSize}
+            alt="Expand your brand in the digital world"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Expand your brand in the digital world
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            We collaborate with you to find, interact with, and convert customers across every digital touchpoint.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Boost My Business
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. OUR DIGITAL MARKETING SERVICES (6 CARDS - White Background)             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Digital Marketing Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              We deliver complete digital solutions designed to help ambitious companies acquire traffic, leads, and sales across every channel.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {solutionsData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. WHY CHOOSE CAPYNGEN FOR DIGITAL MARKETING (6 Dark Cards)                */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen for Digital Marketing Services?
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Investing in performance digital marketing is the cornerstone of sustainable modern business expansion.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. OUR DIGITAL MARKETING PROCESS (6 Dark Cards)                            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Digital Marketing Process
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Our practice is based on a mindful and evidence-driven approach to ensure maximum growth outcomes per campaign.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {st.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {st.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. FULL SIZE BANNER 2: TURN CLICKS INTO CUSTOMERS                         */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.digitalMarketingFullSize2}
+            alt="Turn clicks into customers"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Turn clicks into customers
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Our marketers strategise sharp, information-oriented measures to realise quantifiable revenue growth.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              CONTACT US
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. WHAT MAKES US THE PERFECT PARTNER (5 CARDS - White Background)          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              What Makes Us the Perfect Partner
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feat, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{feat.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {feat.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {feat.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. WHY WORK WITH A DIGITAL MARKETING AGENCY (Split Light Section)         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Work With a Digital Marketing Agency?
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Working with Capyngen, you receive more than basic task execution — you gain a high-impact digital growth partner.
+            </p>
+            <ul className="space-y-3.5 text-slate-700 text-base">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>Save valuable internal time and stay focused on core operations.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>Leverage enterprise-grade analytics, automation, and testing tools.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>Seamlessly scale campaign budgets up or down based on verified performance.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>Build lasting multi-channel brand authority and measurable market dominance.</span>
+              </li>
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.digitalMarketing3}
+                alt="Why work with a digital marketing agency"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10. FAQ SECTION                                                           */}
+      {/* ========================================================================= */}
+      <FAQSection2
+        title="Frequently Asked Questions"
+        desc="Learn more about our digital marketing campaigns, ROI tracking, and channel optimizations."
+        items={faqItems}
+      />
+
+      {/* ========================================================================= */}
+      {/* 11. BOTTOM FINAL CTA BANNER (Below FAQs)                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Enhance Your Web Presence Now
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Discuss your digital marketing goals with our certified specialists and receive a custom roadmap designed to grow your business online.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

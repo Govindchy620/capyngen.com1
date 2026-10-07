@@ -603,6 +603,9 @@ const ECommerceIndustry = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER6 - RETAINED EXACTLY AS REQUESTED)                 */}
+      {/* ========================================================================= */}
       <Banner6
         slides={slidesData}
         autoplay={true}
@@ -612,132 +615,299 @@ const ECommerceIndustry = () => {
         arrowColor="text-white"
         bgHover="hover:bg-white/20"
       />
-      <CardsSection
-        heading="Capyngen’s Approaches towards IT Solutions for E-commerce"
-        subheading=""
-        services={cardsSectionData1}
-        sectionBg="bg-black"
-        cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
-        headColor="text-white"
-        hoverBg=" hover:bg-gray-700"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-        height=""
-      />
-      <CardsSectionImage
-        heading="Advantages of our Information Technology Solutions for E-Commerce"
-        subheading=""
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Start Today with Our Offer"
-        description={[
-          "Power and accelerate your business through the latest and smarter IT solutions that provide better speed, better security, and better user experiences across all users. It's high time that you take that initial step and get started today!",
-        ]}
-        buttonText="Get in Touch"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <BenefitsSection
-        heading="AI solutions for online shopping platforms For Online Retail Sites"
-        desc={
-          <span>
-            The way online businesses work and function on a day-to-day basis is
-            being heavily disrupted by{" "}
-            <Link to={"/artificial-intelligence-services"}>
-              Artificial Intelligence
-            </Link>
-            . We create new-age AI products that are specially designed for
-            online e-commerce sites that not only redesign and enhance customer
-            experience but also increase overall profitability across multiple
-            areas of their operations.
-          </span>
-        }
-        benefits={solutionsData}
-        image={assets.eCommIndustry10}
-        footerNote=""
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Fuel the Growth of Your E-Commerce Enterprise through the Potential of Technology"
-        description={[
-          "Join Capyngen and incorporate AI, DevOps, and CRM into your business. Speaking with our team today.",
-        ]}
-        buttonText="Get in Touch"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        title="What are the reasons that make Capyngen the best destination to
-              get E-Commerce IT Solutions?"
-        reverse={false}
-        description={[
-          <>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-4 text-gray-300">
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / E-COMMERCE (SPLIT LIGHT SECTION)                            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.eCommIndustry1}
+                alt="E-Commerce IT Solutions"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Tailored IT Solutions for Modern E-Commerce
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> delivers tailored IT solutions for global e-commerce and DTC retail brands. From predictive AI product recommendation engines and unified CRM systems to high-conversion UI/UX design and elastic DevOps, we empower online stores to scale smoothly.
+              </p>
+              <p>
+                We construct robust storefronts that reduce cart abandonment, automate high-volume fulfillment, and provide personalized omni-channel customer journeys.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Conversion-focused mobile-first UI/UX engineering reducing checkout friction.",
+                "AI-driven personalization, smart search filters, and dynamic pricing models.",
+                "High-speed cloud infrastructure engineered to withstand viral traffic spikes.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule E-Commerce Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. CAPYNGEN APPROACHES TO E-COMMERCE (DARK CARDS GRID)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Capyngen’s Approaches towards E-Commerce IT
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Targeted technology solutions meeting every facet of the online shopping ecosystem from store design to automated fulfillment.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  {item.title && (
+                    <h3
+                      className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                  )}
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. ADVANTAGES OF OUR IT SOLUTIONS (LIGHT CARDS)                           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Advantages of Our E-Commerce IT Solutions
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Enhancing conversion rates, improving inventory precision, and minimizing operating costs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. ENTERPRISE E-COMMERCE CAPABILITIES (DARK CARDS)                        */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Enterprise E-Commerce Capabilities
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              State-of-the-art AI, CRM, and cloud DevOps designed to elevate customer loyalty and operational scale.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutionsData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-300 text-sm leading-relaxed space-y-2">
+                    {item.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. WHY CAPYNGEN (SPLIT LIGHT SECTION)                                     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
+              <img
+                src={assets.eCommIndustry10}
+                alt="Why Capyngen E-Commerce"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Leading Retailers Choose Capyngen
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              We unite deep retail commerce acumen with enterprise engineering to ensure your store scales effortlessly:
+            </p>
+
+            <div className="space-y-4 pt-2">
               {[
                 {
                   title: "Industry Expertise",
-                  text: "Possessing comprehensive and widespread knowledge regarding the extensive trends and technologies that are shaping the face of e-retail.",
-                  color: "text-blue-500",
+                  text: "Comprehensive knowledge of global retail trends, headless architectures, and checkout optimizations.",
                 },
                 {
                   title: "End-to-End Solutions",
-                  text: "Right from development, through deployment, all the way through.",
-                  color: "text-blue-500",
+                  text: "From wireframing and frontend styling to payment gateway integrations and cloud hosting.",
                 },
                 {
-                  title: "Global Delivery",
-                  text: "Scale-friendly solutions that suit businesses ranging from small startups to enterprises.",
-                  color: "text-blue-500",
+                  title: "Global Scalability",
+                  text: "Architectures engineered to handle multi-currency, multi-lingual, and international fulfillment.",
                 },
                 {
-                  title: "Security and Compliance",
-                  text: "Offering enterprise-class protection that is able to keep your valuable data as well as the individuals that handle the data secure.",
-                  color: "text-blue-500",
+                  title: "Security & Compliance",
+                  text: "PCI-DSS certified payment workflows, fraud detection, and robust data encryption.",
                 },
-                {
-                  title: "Individual Strategies",
-                  text: "We provide solutions that uniquely meet the particular goals of your brand, as well as reach and connect effectively with your target marketplace.",
-                  color: "text-blue-500",
-                },
-              ].map(({ title, text, color }, idx) => (
-                <li
+              ].map((pillar, idx) => (
+                <div
                   key={idx}
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                  className="p-4 border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-600 transition-colors duration-150"
                 >
-                  <strong className={`${color} drop-shadow-md`}>{title}</strong>{" "}
-                  - {text}
-                </li>
+                  <div className="w-2.5 h-2.5 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <div>
+                    <h4
+                      className="font-bold text-slate-900 text-base mb-1"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {pillar.title}
+                    </h4>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      {pillar.text}
+                    </p>
+                  </div>
+                </div>
               ))}
-            </ul>
-          </>,
-        ]}
-        image={assets.eCommIndustry1}
-        background={assets.patternBg1}
-        isHidden="hidden"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Collaboratively, Let's Develop and Build Your Superior High-Performance E-Commerce PlatformFrom smart AI to seamless UI/UX"
-        description={[
-          "We’ll power your digital store for success. Get in touch with us today.",
-        ]}
-        buttonText="Get in Touch"
-        backgroundVideo={assets.backgroundVideo}
-      />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Collaboratively, Let's Build Your High-Performance E-Commerce Platform
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              From intelligent AI recommendations to high-converting UI/UX design, we power your online store for compounding growth.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

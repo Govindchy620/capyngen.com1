@@ -1,56 +1,19 @@
 import React from "react";
-import Banner from "../components/Banner";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import {
-  CreditCard,
-  LifeBuoy,
-  ShoppingCart,
-  Smartphone,
-  Sparkles,
-  Store,
-} from "lucide-react";
-import Banner10 from "../components/Banner10";
-import GetStarted from "../components/GetStarted";
-import CardsSectionGrid from "../components/CardsSectionGrid";
-import CardsSection from "../components/CardsSection";
-import {
-  FaAndroid,
-  FaApple,
-  FaChartLine,
-  FaCogs,
-  FaLaptopCode,
-  FaLightbulb,
-  FaNetworkWired,
-  FaProjectDiagram,
-  FaVrCardboard,
-  FaCloud,
-  FaBriefcase,
-  FaServer,
-  FaHandshake,
-  FaDigitalOcean,
-  FaBuilding,
-  FaMoneyBillWave,
-  FaBullhorn,
-  FaChartBar,
-  FaHeadset,
-  FaPuzzlePiece,
-  FaTrophy,
-} from "react-icons/fa";
-import AppTypesSection from "../components/AppTypesSection";
-import CardsSectionImage from "../components/CardsSectionImage";
-import CardsSectionSlider from "../components/CardsSectionSlider";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Lightbulb,
+  BarChart3,
+  Network,
+  Laptop,
+  Megaphone,
+  Trophy,
+} from "lucide-react";
+import { assets } from "../assets/assets";
+import Banner10 from "../components/Banner10";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -317,186 +280,148 @@ const Consulting = () => {
         "All you need to do is contact us and make a free initial consultation. We will learn about your problems, objectives and requirements and propose a tailored consulting engagement plan that defines the plan of action, time, output and cost involved.",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title: "Expert IT Advisors",
       description:
-        "It is simply astounding that our team has experience in various sectors and technologies over the last few decades and is one of the top consulting services providers. Being one of the top management consulting services in India and in foreign countries, and growing start-ups and nurturing mature businesses, we deliver strategic direction, follow up with practical skills, and achieve success.",
-      icon: <FaLightbulb className="text-4xl text-indigo-600" />,
+        "Our team has decades of cross-sector technology advisory experience. As a premier consulting services provider in India and abroad, we deliver clear strategic direction paired with actionable execution capabilities.",
+      icon: <Lightbulb className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "Customized Solutions",
       description:
-        "We do not believe that one formula can be applied in all situations, as it has been successful. Any business consulting solution will be tailored to your industry, company, situation, challenges, and objectives as a trustworthy consulting company. They will be the most pertinent and efficient for you because of our tailor-made strategies.",
-      icon: <FaChartBar className="text-4xl text-indigo-600" />,
+        "We never force generic templates. Every business consulting solution is tailored to your industry verticals, operational challenges, and growth goals to deliver maximum measurable impact.",
+      icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "End-to-End Support",
       description:
-        "Among the services that Capyngen can offer during your technology transformation, there is the first assessment and development of a strategy, all the way to the implementation, training, and optimisation borne out through continuous consulting services. We do not share the advice we give--we are partners.",
-      icon: <FaNetworkWired className="text-4xl text-indigo-600" />,
+        "From initial technology audits and strategic roadmaps through active implementation, employee change management, and continuous optimization, we serve as your invested long-term partner.",
+      icon: <Network className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "Proven Track Record",
       description:
-        "Our portfolio narrates about the effective transformations of IT projects of other industries that have quantifiable outcomes like reduced costs, increased efficiency, increased revenues, and enhanced customer satisfaction as the top consulting services. Our clients are the success stories that are testimonies of how well we can deliver.​",
-      icon: <FaLaptopCode className="text-4xl text-indigo-600" />,
+        "Our portfolio demonstrates verified business transformations with quantifiable ROI: reduced overhead, streamlined operational throughput, and sustainable revenue growth.",
+      icon: <Laptop className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "Future-Ready Technology",
       description:
-        "We, as an IT consulting company, intend to become the trendsetter in the world of technology. We will steer you in the implementation of the newest tools, platforms, and solutions, including cloud computing, artificial intelligence, automation, and analytics, that will enable your company to have a competitive advantage in the long run.",
-      icon: <FaBullhorn className="text-4xl text-indigo-600" />,
+        "We guide enterprises in embracing cutting-edge cloud computing, AI automation, and advanced analytics architectures that provide a lasting, sustainable competitive edge.",
+      icon: <Megaphone className="w-8 h-8 text-blue-400" />,
     },
     {
       title: "Industry Recognition",
       description:
-        "Capyngen is among the top consulting company in India. The firm has managed to build an effective reputation through its consistent delivery of good-quality consulting services, constant development of new solutions, and its constant determination in the success of its customers in various markets.​",
-      icon: <FaMoneyBillWave className="text-4xl text-indigo-600" />,
+        "Capyngen is among the top consulting companies in India, recognized for consistent advisory excellence, client centricity, and innovative digital problem-solving.",
+      icon: <Trophy className="w-8 h-8 text-blue-400" />,
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "IT Strategy & Planning",
       description:
-        "The development of the strategic IT road maps, which will combine the technology projects with business goals and the mission of the company as the management consulting services.​",
+        "Development of strategic IT roadmaps aligning corporate technology initiatives with core enterprise revenue targets.",
       image: assets.consulting2,
-      cardBg: "bg-blue-100",
     },
-
     {
       title: "Cloud Consulting",
       description:
-        "A cloud uptake plan that plots the most appropriate cloud approach (public, private, hybrid) to the requirements set by the consulting services.​",
+        "Comprehensive cloud adoption roadmaps identifying optimal architectures (public, private, hybrid) tailored to your operational demands.",
       image: assets.consulting3,
-      cardBg: "bg-green-100",
     },
     {
       title: "Cybersecurity Consulting",
       description:
-        "The security risk assessment that identifies the security loopholes, intrusions, and potential attacks in the entire infrastructure by consulting company experience.​",
+        "Holistic security risk assessments identifying vulnerabilities, threat perimeters, and regulatory compliance postures across infrastructure.",
       image: assets.consulting4,
-      cardBg: "bg-yellow-100",
     },
     {
       title: "Digital Transformation Consulting",
       description:
-        "Streamlining of business processes through the selection of the appropriate RPA, AI, and workflow software that is to be applied to the automation procedure with the top consulting services.",
+        "Process modernization incorporating automated workflow software, RPA, and artificial intelligence into legacy business models.",
       image: assets.consulting5,
-      cardBg: "bg-blue-100",
     },
-
     {
       title: "IT Infrastructure Consulting",
       description:
-        "The advances in the network architecture that render network infrastructures high-performance, secure, and scaling to increase with growth as consulting services provider.​",
+        "Architectural reviews delivering high-throughput, secure, and elastic networks ready to scale seamlessly with corporate growth.",
       image: assets.consulting6,
-      cardBg: "bg-green-100",
     },
     {
       title: "Business Consulting Solutions",
       description:
-        "Growth strategy, which constitutes of specific strategies to grow into new markets, launch of new products, and growth through consulting, is developed.​",
+        "Expansion blueprints providing concrete go-to-market strategies, operational bottleneck resolution, and new product initiatives.",
       image: assets.consulting7,
-      cardBg: "bg-yellow-100",
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Assessment",
-      description:
-        "The discovery workshops are the genesis of our appreciation of your IT environment, business goals, problems and prospects as the top consulting company in India. Among these sessions are technology audits, stakeholder interviews, process mapping, and competitive analysis, all of which form a strategy basis.",
-    },
-    {
-      step: "Step 02",
-      title: "Strategy Development",
-      description:
-        "Our team is composed of experts who will design a custom roadmap with the help of consulting services, depending on the results of the assessment and in accordance with your business objectives. A roadmap is made to contain prioritised recommendations, implementation schedules, budget planning, and expected ROI that puts the path ahead straight.",
-    },
-    {
-      step: "Step 03",
-      title: "Implementation Support",
-      description:
-        "We do not simply offer suggestions and leave. As management consulting services, our team accompanies yours throughout the implementation process, providing technical knowledge, project management, and simply ensuring that the implementation is underway with minimum inconvenience to the rest of the organisation.​",
-    },
-  ];
-  const cardsSectionSliderData1 = [
-    {
-      title: (
-        <span>
-          <Link to={"/industries/e-commerce"}>E-commerce & Retail</Link>
-        </span>
-      ),
-      desc: "",
-      image: assets.webDesign11,
-      textColor: "text-white",
-    },
-    {
-      title: (
-        <span>
-          <Link to={"/industries/healthcare-fitness"}>
-            Healthcare & Wellness
-          </Link>
-        </span>
-      ),
-      desc: "",
-      image: assets.webDesign12,
-      textColor: "text-white",
-    },
-    {
-      title: (
-        <span>
-          <Link to={"/industries/education"}>Education & E-learning</Link>
-        </span>
-      ),
-      desc: "",
-      image: assets.webDesign13,
-      textColor: "text-white",
-    },
-    {
-      title: (
-        <span>
-          <Link to={"/industries/real-estate"}>Real Estate</Link>
-        </span>
-      ),
-      desc: "",
-      image: assets.webDesign14,
-      textColor: "text-white",
-    },
-    {
-      title: "IT & Software",
-      desc: "",
-      image: assets.webDesign15,
-      textColor: "text-white",
-    },
-    {
-      title: "Corporate & Enterprise Solutions",
-      desc: "",
-      image: assets.webDesign16,
-      textColor: "text-white",
-    },
-    {
-      title: (
-        <span>
-          <Link to={"/industries/travel-logistics"}>Travel & Hospitality</Link>
-        </span>
-      ),
-      desc: "",
-      image: assets.webDesign17,
-      textColor: "text-white",
-    },
-    {
-      title: "Startups & Entrepreneurs",
-      desc: "",
-      image: assets.webDesign18,
-      textColor: "text-white",
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const steps = [
+    {
+      title: "Discovery & Assessment",
+      description:
+        "Discovery workshops conducting comprehensive technology audits, stakeholder interviews, process mapping, and competitive gap analyses.",
+    },
+    {
+      title: "Strategy Development",
+      description:
+        "Architecting a bespoke transformation roadmap with prioritized recommendations, budget milestones, and forecasted ROI.",
+    },
+    {
+      title: "Implementation Support",
+      description:
+        "Our consultants work directly alongside your teams, delivering project oversight, technical expertise, and seamless change management.",
+    },
+  ];
+
+  const industriesData = [
+    {
+      title: "E-commerce & Retail",
+      image: assets.webDesign11,
+      link: "/industries/e-commerce",
+    },
+    {
+      title: "Healthcare & Wellness",
+      image: assets.webDesign12,
+      link: "/industries/healthcare-fitness",
+    },
+    {
+      title: "Education & E-learning",
+      image: assets.webDesign13,
+      link: "/industries/education",
+    },
+    {
+      title: "Real Estate",
+      image: assets.webDesign14,
+      link: "/industries/real-estate",
+    },
+    {
+      title: "IT & Software",
+      image: assets.webDesign15,
+      link: "/industries",
+    },
+    {
+      title: "Corporate & Enterprise",
+      image: assets.webDesign16,
+      link: "/enterprise-solutions",
+    },
+    {
+      title: "Travel & Hospitality",
+      image: assets.webDesign17,
+      link: "/industries/travel-logistics",
+    },
+    {
+      title: "Startups & Entrepreneurs",
+      image: assets.webDesign18,
+      link: "/contact-us",
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Top Consulting Services in India | Business Consulting Services
@@ -507,7 +432,7 @@ const Consulting = () => {
         />
         <meta
           name="keywords"
-          content="Top consulting services in India, consulting services "
+          content="Top consulting services in India, consulting services"
         />
         <script type="application/ld+json">
           {JSON.stringify(webpageSchema)}
@@ -517,7 +442,11 @@ const Consulting = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <div className="lg:sticky inset-0">
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER10 RETAINED AS REQUESTED)                          */}
+      {/* ========================================================================= */}
+      <div>
         <Banner10
           title="Instant consulting services in India"
           highlight=" – Get India’s #1 Trusted consulting services"
@@ -530,12 +459,16 @@ const Consulting = () => {
               to simplify the processes in the businesses, make them more
               productive and extend with the help of the management consulting
               services into the market with support from the{" "}
-              <a href="https://www.capyngen.com/ppc">
+              <a
+                href="https://www.capyngen.com/ppc"
+                className="text-blue-400 font-semibold underline"
+              >
                 best ppc services in India
               </a>
               .
             </>
           }
+          buttonText="Start Your Project"
           buttonAria="Start Your Project"
           services={[
             "Custom IT Consulting",
@@ -546,111 +479,288 @@ const Consulting = () => {
           image={assets.consulting1}
         />
       </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Request for a Complimentary Consultation"
-          description={[
-            "You Know Our Strategic Technology Solutions and Grow with Us. Reaching Your Business to Grow with Us - Partner with one of the top consulting company in India!",
-          ]}
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.consultingFullSize}
-          title="Strategic guidance for business success"
-          description={
-            <>
-              Our expertise in consulting services providers is introduced to
-              diagnose problems, come up with solutions and help you develop as
-              a{" "}
-              <a href="https://www.capyngen.com/seo">
-                best seo service provider in india
-              </a>
-            </>
-          }
-          buttonText="Book Consultation"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <CardsSection
-          heading={
-            <span>
-              Why should you choose <Link to={"/"}>Capyngen</Link> Consulting?
-            </span>
-          }
-          subheading=""
-          services={cardsSectionData1}
-          sectionBg="bg-black"
-          cardBg="bg-gradient-to-br from-[#000]/90 to-gray-800/90 hover:bg-gradient-to-tl hover:-translate-y-1 transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-white/30"
-          headColor="text-white"
-          hoverBg=" hover:bg-gray-700"
-          textColor="text-white"
-          hoverTextColor=""
-          textSize="text-md"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Request for a Complimentary Consultation"
-          description={[
-            "Would you like to transform your IT strategy and make it efficient? You can then contact the expert consulting services provider of Capyngen today and discover how your business can expand fast with a carefully thought-out technology strategy from us!",
-          ]}
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <CardsSectionImage
-          heading="Our Comprehensive Consulting Services"
-          subheading=""
-          services={cardsSectionImageData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        />
-        <CardsSectionSlider
-          heading="Industries We Serve"
-          subheading=""
-          cardBg="bg-transparent"
-          hoverBg=" hover:bg-blue-50"
-          textColor="text-gray-800"
-          hoverTextColor=""
-          textSize="text-xl"
-          sectionBg="bg-black/90"
-          height="h-78"
-          headColor="text-white"
-          services={cardsSectionSliderData1}
-        />
-        <HowWeWork
-          heading="How We Deliver Results - Our Consulting Approach"
-          desc=""
-          steps={steps}
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.consultingFullSize2}
-          title="Your vision, our expertise"
-          description="Work with us in order to reach digital transformation and strategic initiatives."
-          buttonText="CONTACT US"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            "Our free IT consulting services are available; why not use them? Our technology experts will first learn your needs and then design custom strategies that will actually take your company on a new level and will provide you with a payback on your investment!",
-          ]}
-          textSize="text-2xl"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
-      </div>
+
+      {/* ========================================================================= */}
+      {/* 2. FULL SIZE BANNER 1: STRATEGIC GUIDANCE                                 */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.consultingFullSize}
+            alt="Strategic guidance for business success"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Strategic guidance for business success
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Our expertise in consulting services is designed to diagnose operational bottlenecks, architect future-ready technology roadmaps, and accelerate your commercial expansion.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Book Consultation
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. WHY CHOOSE CAPYNGEN CONSULTING? (6 Cards - White Background)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen Consulting?
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              We combine seasoned strategic acumen, technical mastery, and measurable business deliverables to elevate organizations worldwide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. COMPREHENSIVE CONSULTING SERVICES (6 Dark Cards with Images)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Comprehensive Consulting Services
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Strategic, architectural, and operational guidance across all domains of digital enterprise.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. OUR CONSULTING PROCESS (3 Step Cards)                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              How We Deliver Results – Our Consulting Approach
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              A disciplined, three-step execution framework ensuring actionable clarity and zero disruption to your active operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {steps.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-xs font-mono font-semibold text-blue-400 mb-3 tracking-wider">
+                    PHASE 0{idx + 1}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. FULL SIZE BANNER 2: YOUR VISION, OUR EXPERTISE                          */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.consultingFullSize2}
+            alt="Your vision, our expertise"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Your vision, our expertise
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Collaborate with Capyngen to realize digital transformation, optimize enterprise architectures, and achieve lasting strategic milestones.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. INDUSTRIES WE SERVE (8 Cards with Visuals)                             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Industries We Serve
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              We provide tailored strategic consulting designed specifically around the regulatory and technology demands of critical commercial sectors.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {industriesData.map((item, idx) => (
+              <Link
+                key={idx}
+                to={item.link}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-5 flex flex-col justify-between rounded-none shadow-xl relative group block"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-36 mb-4 bg-slate-900 p-2 flex items-center justify-center rounded-none overflow-hidden border border-slate-800">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="max-h-full max-w-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. REQUEST FOR COMPLIMENTARY CONSULTATION (CTA BANNER)                    */}
+      {/* ========================================================================= */}
+      <section className="py-16 lg:py-20 bg-[#030712] text-white border-b border-slate-800 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.18),transparent)] pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Request a Complimentary Consultation
+          </h2>
+          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Discover our strategic technology frameworks. Connect with Capyngen's principal advisors today to evaluate your systems and design a high-ROI growth roadmap.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl text-base"
+            >
+              Get In Touch
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. FREQUENTLY ASKED QUESTIONS                                             */}
+      {/* ========================================================================= */}
+      <FAQSection2 items={faqItems} />
     </div>
   );
 };

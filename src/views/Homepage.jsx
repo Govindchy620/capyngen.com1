@@ -15,9 +15,8 @@ import { StickyScroll } from "../components/StickyScroll";
 import { TextParallaxContentExample } from "../components/TextParallaxContent";
 import { ParallaxScroll } from "../components/ParallaxScroll";
 import { assets } from "../assets/assets";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
 import FAQSection2 from "../components/FAQSection2";
+import WorkShowcase from "../components/WorkShowcase";
 import { Helmet } from "react-helmet-async";
 
 const webpageSchema = {
@@ -200,17 +199,6 @@ const faqSchema = {
 
 const Homepage = () => {
   const containerRef = useRef(null);
-  const [init, setInit] = useState(false);
-
-  // Initialize particles engine only once
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-      setInit(true);
-    });
-  }, []);
-
-  if (!init) return null;
 
   const faqItems = [
     {
@@ -355,75 +343,42 @@ const Homepage = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      {/* Particles Background */}
-      <Particles
-        id="tsparticles"
-        className="absolute inset-0 z-0"
-        options={{
-          background: { color: "#0a0a0a" },
-          fpsLimit: 60,
-          interactivity: {
-            events: { onHover: { enable: true, mode: "repulse" } },
-            modes: { repulse: { distance: 120 }, push: { quantity: 4 } },
-          },
-          particles: {
-            number: { value: 120, density: { enable: true, area: 900 } },
-            color: { value: "#ffffff" },
-            links: {
-              enable: true,
-              color: "#ffffff",
-              distance: 150,
-              opacity: 0.4,
-              width: 1,
-            },
-            move: { enable: true, speed: 1 },
-            size: { value: { min: 1, max: 4 } },
-            opacity: { value: 0.6 },
-          },
-        }}
-      />
-      {/* Fixed Background (HeroSection) */}
-      {/* Fixed Background (HeroSection) */}
-      <div className="sticky inset-0">
-        <HeroSection />
-      </div>
-      {/* <StickyScroll content={demoContent} />
-      <TextParallaxContentExample />
-      <ParallaxScroll images={images} />; */}
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <div className="py-10 pt-20 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <HomeAboutUs />
-        </div>
-        {/* <div className="h-10 bg-gradient-to-b from-[#0010A2]/90 to-[#0010A2]/90"></div> */}
+      {/* HeroSection */}
+      <HeroSection />
+      {/* Foreground Content */}
+      <div className="relative z-10 w-full">
+        {/* 1. Who We Are / About Cards */}
+        <HomeAboutUs />
 
-        <div className="py-10 bg-gradient-to-b from-[#0010A2]/90 to-[#708090]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-            <WhyChooseUs />
-        </div>
-        <div className="py-10 bg-gradient-to-b from-[#708090]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <HorizontalProcessSection />
-        </div>
-        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <ServicesCarousel />
-        </div>
-        <div className="py-10 bg-gradient-to-b from-[#0010A2]/90 to-[#708090]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <HomeServices />
-        </div>
-        <div className="py-10 bg-gradient-to-b from-[#708090]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <HomeIndustries />
-        </div>
-        <div className="py-10 bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <TestimonialCarousel />
-        </div>
-        <div className="py-10 bg-gradient-to-b from-[#0010A2]/90 to-[#708090]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <HomeBlogs />
-        </div>
-        <div className="py-10 bg-gradient-to-b from-[#708090]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <FAQSection2 items={faqItems} bgColor="bg-transparent" />
-        </div>
-        <div className="pt-10 bg-gradient-to-b from-[#000]/90 to-[#000]/90 [&>*]:!mt-0 [&>*]:!mb-0">
-          <ScrollRevealEffect />
-        </div>
+        {/* 2. Why Choose Capyngen */}
+        <WhyChooseUs />
+
+        {/* 3. The Capyngen Approach / Our Process */}
+        <HorizontalProcessSection />
+
+        {/* 4. Technology Solutions That Drive Growth */}
+        <ServicesCarousel />
+
+        {/* 5. Industries We Serve */}
+        <HomeServices />
+
+        {/* 6. Work Showcase (Our Work in Motion) */}
+        <WorkShowcase />
+
+        {/* 7. Smart Technologies That Drive Growth */}
+        <HomeIndustries />
+
+        {/* 8. Client Testimonials Carousel */}
+        <TestimonialCarousel />
+
+        {/* 10. News & Updates */}
+        <HomeBlogs />
+
+        {/* 11. FAQs */}
+        <FAQSection2 items={faqItems} bgColor="bg-white" />
+
+        {/* 12. Contact / Let's Talk */}
+        <ScrollRevealEffect />
       </div>
     </div>
   );

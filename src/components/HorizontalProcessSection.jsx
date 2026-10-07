@@ -1,241 +1,177 @@
-import { useRef, useLayoutEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import BestHeading from "./BestHeading";
+"use client";
+
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { assets } from "../assets/assets";
 
-gsap.registerPlugin(ScrollTrigger);
+const processSteps = [
+  {
+    title: "Goal Setting & Strategy",
+    description:
+      "We begin by defining business goals and setting up on key performance indicators (KPIs) that are in line with your vision. This strategy will ensure that all digital marketing services will have quantifiable positive impact of a Top IT Company in World.",
+    image: assets.homepageGoal,
+  },
+  {
+    title: "Audience Research & Insights",
+    description:
+      "We drill in the figures to identify the most desirable customers to your company. With the identification of their needs and wants, we are able to create products that will be appealing to them and will keep them occupied by the solutions offered by Capyngen digital marketing agency.",
+    image: assets.homepageAudience,
+  },
+  {
+    title: "Data-Driven Performance",
+    description:
+      "We are provided with the latest data by which each act we do is followed. As we identify trends and opportunities, we will change our approach to ensure that your SEO, social media and marketing will provide the highest returns to your investment.",
+    image: assets.homepageDataDriven,
+  },
+  {
+    title: "Execution & Continuous Optimization",
+    description:
+      "We are so attentive in executing our programs up to the point of the takeoff to the landing. We always ensure that our team is busy with the minor components of the programs, thereby making sure that your IT services and online marketing will be profitable in the long run with the help of the modern devops consulting services.",
+    image: assets.homepageExecution,
+  },
+  {
+    title: "Reporting & Transparent Communication",
+    description:
+      "We are also available of reports and keep you informed at every stage thereby allowing a complete realization and measurable results of your IT consulting services and custom software development programs developed by a top IT company in World.",
+    image: assets.homepageReporting,
+  },
+];
 
 const HorizontalProcessSection = () => {
-  const sectionRef = useRef(null);
-  const containerRef = useRef(null);
-  const [pinReadyKey, setPinReadyKey] = useState(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    containScroll: "trimSnaps",
+  });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
 
-  const processSteps = [
-    {
-      id: 1,
-      title: "Goal Setting & Strategy",
-      description:
-        "We begin by defining business goals and setting up on key performance indicators (KPIs) that are in line with your vision. This strategy will ensure that all digital marketing services will have quantifiable positive impact of a Top IT Company in World.",
-      image: assets.homepageGoal,
-    },
-    {
-      id: 2,
-      title: "Audience Research & Insights",
-      description:
-        "We drill in the figures to identify the most desirable customers to your company. With the identification of their needs and wants, we are able to create products that will be appealing to them and will keep them occupied by the solutions offered by Capyngen digital marketing agency.",
-      image: assets.homepageAudience,
-    },
-    {
-      id: 3,
-      title: "Data-Driven Performance",
-      description:
-        "We are provided with the latest data by which each act we do is followed. As we identify trends and opportunities, we will change our approach to ensure that your SEO, social media and marketing will provide the highest returns to your investment.",
-      image: assets.homepageDataDriven,
-    },
-    {
-      id: 4,
-      title: "Execution & Continuous Optimization",
-      description:
-        "We are so attentive in executing our programs up to the point of the takeoff to the landing. We always ensure that our team is busy with the minor components of the programs, thereby making sure that your IT services and online marketing will be profitable in the long run with the help of the modern devops consulting services.",
-      image: assets.homepageExecution,
-    },
-    {
-      id: 5,
-      title: "Reporting & Transparent Communication",
-      description:
-        "We are also available of reports and keep you informed at every stage thereby allowing a complete realization and measurable results of your IT consulting services and custom software development programs developed by a top IT company in World.",
-      image: assets.homepageReporting,
-    },
-  ];
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
-  useLayoutEffect(() => {
-    const section = sectionRef.current;
-    const container = containerRef.current;
-    if (!section || !container) return;
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
-    let scrollTriggerInstance, horizontalScrollTween;
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
 
-    const calculateScrollDistance = () => {
-      const viewportWidth = window.innerWidth;
-      const cards = container.querySelectorAll(".process-card");
-      const lastCard = cards[cards.length - 1];
-      const lastCardRightEdge = lastCard
-        ? lastCard.offsetLeft + lastCard.offsetWidth
-        : 0;
-      const buffer = 200;
-      return Math.max(0, lastCardRightEdge - viewportWidth + buffer);
-    };
-
-    const setupAnimation = () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-
-      const scrollDistance = calculateScrollDistance();
-      container.style.paddingRight = `${window.innerWidth}px`;
-
-      scrollTriggerInstance = ScrollTrigger.create({
-        id: "processPin",
-        trigger: section,
-        start: "top top",
-        end: `+=${scrollDistance}`,
-        pin: true,
-        scrub: 1,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      });
-
-      setPinReadyKey(scrollTriggerInstance.start);
-
-      horizontalScrollTween = gsap.to(container, {
-        x: -scrollDistance,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: () => scrollTriggerInstance.start,
-          end: () => scrollTriggerInstance.end,
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      processSteps.forEach((_, idx) => {
-        const card = container.querySelector(`.process-card-${idx}`);
-        if (!card) return;
-
-        gsap.fromTo(
-          card,
-          {
-            opacity: 0,
-            y: idx % 2 === 0 ? -100 : 100,
-            scale: 0.3,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: card,
-              containerAnimation: horizontalScrollTween,
-              start: "left 90%",
-              end: "left 70%",
-              scrub: 0.8,
-            },
-          }
-        );
-      });
-    };
-
-    setupAnimation();
-
-    // Debounced resize handler
-    let resizeTimeout;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (scrollTriggerInstance) scrollTriggerInstance.kill();
-        if (horizontalScrollTween && horizontalScrollTween.scrollTrigger)
-          horizontalScrollTween.scrollTrigger.kill();
-        setupAnimation();
-      }, 150);
-    };
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("orientationchange", handleResize);
-
-    return () => {
-      if (scrollTriggerInstance) scrollTriggerInstance.kill();
-      if (horizontalScrollTween && horizontalScrollTween.scrollTrigger)
-        horizontalScrollTween.scrollTrigger.kill();
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("orientationchange", handleResize);
-    };
-  }, []);
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
     <section
-      ref={sectionRef}
-      className="relative overflow-hidden"
+      className="w-full bg-white text-slate-900 py-16 sm:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 border-t border-slate-100"
       aria-label="Capyngen Process Section"
     >
-      <div className="h-screen overflow-hidden relative z-10">
-        <div
-          ref={containerRef}
-          className="flex items-center h-full px-4 md:px-8"
-          style={{ width: "max-content" }}
-        >
-          <div className="flex-shrink-0 w-screen flex items-center justify-center px-8 relative">
-            <div className="text-center max-w-7xl relative z-10">
-              <BestHeading
-                title=""
-                highlight="The Capyngen Approach"
-                textColor="white"
-              />
-              <div className="mt-16">
-                <p className="text-base text-white md:text-xl leading-relaxed max-w-4xl mx-auto font-medium">
-                  We do your strategic work at Capyngen with smart, data driven
-                  steps to make it more effective and grow it. All the
-                  personalization of the software and application solutions, as
-                  well as cloud platforms and digital strategies, are customized
-                  to your business goals. Our professional team makes all the
-                  required measures, supports the performance and observes the
-                  results, and, therefore, will help you to stay in the
-                  competition, win customers and make another new gateway to the
-                  long-term success.
-                </p>
-              </div>
-            </div>
+      <div className="mx-auto w-full max-w-[1536px]">
+        {/* Header Row with Title and Scroll Buttons */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 lg:mb-14 gap-6">
+          <div className="max-w-3xl">
+            <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-blue-600">
+              Our Process
+            </span>
+            <h2
+              className="mb-4 text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-slate-900"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              The Capyngen Approach
+            </h2>
+            <p className="text-base sm:text-lg leading-relaxed text-slate-600 font-sans">
+              We do your strategic work at Capyngen with smart, data driven steps
+              to make it more effective and grow it. All the personalization of the
+              software and application solutions, as well as cloud platforms and
+              digital strategies, are customized to your business goals.
+            </p>
           </div>
 
-          {processSteps.map((step, index) => (
-            <div
-              key={step.id}
-              className="flex items-center justify-center h-full w-[100vw] md:w-[30vw] "
-              // style={{ width: "calc(30vw)" }}
+          {/* Navigation Controls */}
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={scrollPrev}
+              disabled={!canScrollPrev}
+              className={`flex h-12 w-12 items-center justify-center border border-slate-200 text-slate-600 transition-all focus:outline-none cursor-pointer ${
+                canScrollPrev
+                  ? "hover:bg-slate-900 hover:text-white hover:border-slate-900 shadow-sm"
+                  : "opacity-40 cursor-not-allowed"
+              }`}
+              aria-label="Scroll left"
             >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              onClick={scrollNext}
+              disabled={!canScrollNext}
+              className={`flex h-12 w-12 items-center justify-center border border-slate-200 text-slate-600 transition-all focus:outline-none cursor-pointer ${
+                canScrollNext
+                  ? "hover:bg-slate-900 hover:text-white hover:border-slate-900 shadow-sm"
+                  : "opacity-40 cursor-not-allowed"
+              }`}
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Embla Carousel: 3 Cards Visible at a Time on Desktop */}
+        <div className="overflow-hidden cursor-grab active:cursor-grabbing pb-2" ref={emblaRef}>
+          <div className="flex gap-6">
+            {processSteps.map((step, index) => (
               <div
-                className={`flex flex-col justify-${
-                  index % 2 === 0 ? "start" : "end"
-                } h-[24rem] md:h-[80vh] w-full sm:w-80 md:w-96 mx-6 md:mx-6`}
+                key={index}
+                className="flex-[0_0_88%] sm:flex-[0_0_calc((100%-1.5rem)/2)] lg:flex-[0_0_calc((100%-3rem)/3)] min-w-0"
               >
-                <div
-                  className={`process-card process-card-${index} relative bg-white backdrop-blur-2xl rounded-3xl shadow-2xl`}
+                <article
+                  className="group relative h-[440px] sm:h-[460px] w-full overflow-hidden border border-slate-200/90 bg-slate-950 shadow-md transition-all duration-500 hover:shadow-2xl hover:border-blue-500/60 cursor-pointer"
+                  tabIndex={0}
+                  role="article"
                 >
-                  <div className="relative">
-                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white">
-                      <span className="text-white font-black text-lg relative z-10">
-                        {step.id}
-                      </span>
-                    </div>
-
-                    <div className="mb-8">
-                      <div className="w-full h-44 rounded-t-2xl overflow-hidden">
-                        <img
-                          src={step.image}
-                          alt={step.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="text-center space-y-2 px-2">
-                      <h3 className="text-2xl font-black text-gray-800 mb-4 leading-tight">
-                        {step.title}
-                      </h3>
-                      <div className="px-2 xl:px-6 pb-2 xl:pb-6 rounded-2xl">
-                        <p className="text-gray-700 text-base leading-relaxed font-medium">
-                          {step.description}
-                        </p>
-                      </div>
-                    </div>
+                  {/* Card Image */}
+                  <div className="absolute inset-0 w-full h-full overflow-hidden bg-slate-950">
+                    <img
+                      src={step.image}
+                      alt={step.title}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      loading="lazy"
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
-          ))}
 
-          {/* Spacer for breathing room on desktop */}
-          <div className="hidden md:block w-96 flex-shrink-0" />
+                  {/* Dark Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#081226]/95 via-[#081226]/65 to-transparent group-hover:from-[#081226]/98 group-hover:via-[#081226]/85 group-hover:to-[#081226]/50 transition-all duration-500" />
+
+                  {/* Bottom Content: Title visible, description expands on hover */}
+                  <div className="relative z-10 flex flex-col justify-end p-7 sm:p-8 h-full pointer-events-none">
+                    <h3
+                      className="text-xl sm:text-2xl font-semibold text-white mb-2 leading-snug transition-transform duration-300 group-hover:-translate-y-1"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {step.title}
+                    </h3>
+
+                    {/* Description: Reveals smoothly on hover */}
+                    <p className="text-sm sm:text-[15px] leading-relaxed text-slate-300 font-sans opacity-0 max-h-0 overflow-hidden transform translate-y-3 group-hover:opacity-100 group-hover:max-h-60 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                      {step.description}
+                    </p>
+
+                    {/* Hover Indicator Line */}
+                    <div className="mt-3.5 h-0.5 w-8 bg-blue-500 transition-all duration-500 group-hover:w-16 group-hover:bg-[#00e5ff]" />
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

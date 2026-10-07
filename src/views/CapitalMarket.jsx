@@ -558,6 +558,9 @@ const CapitalMarket = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (CREATIVEAGENCYFAQ - RETAINED EXACTLY AS REQUESTED)       */}
+      {/* ========================================================================= */}
       <CreativeAgencyFAQ
         slides={slidesData}
         slideDuration={4000}
@@ -566,110 +569,293 @@ const CapitalMarket = () => {
         buttonGradient="from-blue-500 to-purple-600"
         priceLabel=""
       />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Transform Your Capital Market Operations Today"
-        description={[
-          "Capyngen provides capital market software solutions to experience the revolution in trading, investment and managing portfolios. Why not get a free demo and scale your business in an intelligent manner with the help of the best IT solutions for capital market?",
-        ]}
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        title="Innovative Software Solutions for Capital Markets to Achieve Remarkable Results"
-        description={[
-          <>
-            <p>
-              <Link to={"/"}>Capyngen</Link> is a provider of the capital
-              market, which provides a full set of software services to
-              financial institutions, trading companies, and investment firms.
-              In addition to our highly developed stock trading software, we
-              also offer a wealth management platform that is developed on
-              capital markets technology and enables businesses to automate
-              their operations, be compliant, and remain competitive in the
-              financial world.
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / CAPITAL MARKETS (SPLIT LIGHT SECTION)                       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.capitalMarket1}
+                alt="Capital Market Software Solutions"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Innovative Software Solutions for Capital Markets
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> provides end-to-end software engineering for financial institutions, brokerages, investment firms, and FinTech innovators. Our capital markets technology allows organizations to automate operations, navigate strict regulatory compliance, and dominate high-speed financial ecosystems.
+              </p>
+              <p>
+                From custom algorithmic trading engines and wealth management platforms to Capmarket liquidity bridges and white-label trading suites, we build low-latency, resilient digital backbones for modern finance.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Sub-millisecond execution and reliable algorithmic order routing.",
+                "Automated multi-jurisdiction compliance and risk assessment frameworks.",
+                "Unified front, middle, and back-office integration across multi-asset classes.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Capital Market Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. CHALLENGES IN CAPITAL MARKET SECTOR (DARK CARDS GRID)                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Challenges in Capital Market Sector
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Tackling latency bottlenecks, regulatory complexity, and fragmented data ecosystems across trading desks.
             </p>
-            <p>
-              Our capital markets FinTech allows firms the authority to apply an
-              algorithmic trading platform, portfolio management software and
-              Capmarket platform development to make their capital work
-              effectively and generate long-term, regular results. Our own
-              Capmarket white-label services is also supported to be deployed
-              quickly.
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-5">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-slate-300 text-sm leading-relaxed mt-2">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. ADVANCING INNOVATION WITH CAPITAL MARKET SOFTWARE (LIGHT CARDS)        */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Capital Market Software Solutions
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Best-fit solutions engineered to automate trading, wealth advisory, and investment lifecycle processes.
             </p>
-          </>,
-        ]}
-        image={assets.capitalMarket1}
-        background={assets.patternBg1}
-        imageHeight="aspect-[1/1]"
-        isHidden="hidden"
-      />
-      <CardsSection
-        heading="Challenges in Capital Market Sector"
-        subheading=""
-        services={cardsSectionData1}
-        sectionBg="bg-black"
-        cardBg="bg-gradient-to-b from-[#000]/90 to-[#0010A2]/90 hover:bg-gradient-to-t transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-700/70"
-        headColor="text-white"
-        hoverBg=" hover:bg-gray-700"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-      />
-      <CardsSectionImage
-        heading="Advancing Innovation with the Help of Capital Market Software Solutions"
-        subheading="Capyngen will provide the best-fit solutions that are aimed at ultimately substituting and automating trade and investment processes of a firm, which makes it a reliable Capmarket technology provider."
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Book Your Capital Market Software Demo"
-        description={[
-          "Find tomorrow stock trader software, wealth-management, and algorithmic trading software that will make you financially prosperous with the best IT solutions for capital market. Get a demo today!",
-        ]}
-        buttonText="Book Now"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <BenefitsSection
-        heading="Benefits of Choosing Capyngen"
-        desc={<>Why Capyngen is the Capital Market IT Services Partner.</>}
-        benefits={solutionsData}
-        image={assets.capitalMarket8}
-        footerNote=""
-      />
-      <IndustryServices
-        heading="Our Capital Market Software Solutions"
-        subheading="Features You Can't Get Along"
-        services={servicesData}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Work Together with the Best IT Solutions for Capital Market"
-        description={[
-          "Have your own stock trading platform developed, investment management software, and advanced FinTech in capital markets to grow your business with services to best IT solutions for capital market.",
-        ]}
-        buttonText="Work With Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. OUR CAPITAL MARKET SOFTWARE CAPABILITIES (6 DARK CARDS)                */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Enterprise Capital Market Features
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Advanced technical capabilities powering modern brokerage and investment management infrastructures.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.desc && (
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. BENEFITS OF CHOOSING CAPYNGEN (SPLIT LIGHT SECTION)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
+              <img
+                src={assets.capitalMarket8}
+                alt="Capital Market Benefits"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Benefits of Choosing Capyngen
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              We bring comprehensive technical acumen to capital markets, ensuring swift time-to-market and robust architectural integrity:
+            </p>
+
+            <div className="space-y-4 pt-2">
+              {solutionsData.map((benefit, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-600 transition-colors duration-150"
+                >
+                  <div className="w-2.5 h-2.5 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <div>
+                    {benefit.title && (
+                      <h4
+                        className="font-bold text-slate-900 text-sm sm:text-base mb-1"
+                        style={{ fontFamily: "'Syne', sans-serif" }}
+                      >
+                        {benefit.title}
+                      </h4>
+                    )}
+                    <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+                      {benefit.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Transform Your Capital Market Operations Today
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Have your proprietary stock trading platform developed, alongside advanced investment management tools and FinTech integrations to scale your business.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

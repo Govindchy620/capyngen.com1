@@ -575,6 +575,9 @@ const ManufacturingAutomotive = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (SHUFFLEHERO - RETAINED EXACTLY AS REQUESTED)             */}
+      {/* ========================================================================= */}
       <ShuffleHero
         heading={
           <>
@@ -611,128 +614,285 @@ const ManufacturingAutomotive = () => {
         gridRows={4}
         shuffleInterval={3000}
       />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Revolutionize Your Manufacturing Processes"
-        description={[
-          <>
-            Utilize Capyngen’s manufacturing{" "}
-            <Link to={"/"}>software solutions</Link> which comprise smart
-            factory software, ERP, and industrial automation software to your
-            energy.
-          </>,
-        ]}
-        buttonText="Get in touch now!"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Top Manufacturing Software Development Company"
-        description={[
-          <>
-            To stay competitive, manufacturers are going digital with the
-            Internet of Things for manufacturing,{" "}
-            <Link to={"/enterprise-solutions"}>Enterprise Resource</Link>{" "}
-            Planning platforms, and{" "}
-            <Link to={"/artificial-intelligence-services"}>AI-powered</Link>{" "}
-            analytics.
-          </>,
-          <span>
-            We provide custom manufacturing software solutions that energize the
-            factories, Original Equipment Manufacturers, and supply chains with
-            a <Link to={"/digital-marketing"}>digital solution</Link> that is
-            digital, scalable, and future-ready at Capyngen.
-          </span>,
-        ]}
-        buttonText="Get in touch now!"
-        image={assets.manufacturing1}
-      />
-      <CardsSection
-        heading="High-End Manufacturing Software Development Services"
-        subheading="We are the experts in creating intelligent, safe, and tailored
-            software solutions for the manufacturing sector. Our solutions
-            spread the pace of growth and innovation in the areas of factory
-            floor automation and supply chain optimization."
-        services={cardsSectionDifferentColorData1}
-        cardBg=""
-        headColor="text-white"
-        sectionBg="bg-black"
-        hoverBg=""
-        height="h-72"
-        textColor="text-white"
-        hoverTextColor="transition-all"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Make Your Supply Chain & Production More Efficient"
-        description={[
-          "Adopt supply chain management software of the latest technology and IoT for manufacturing that will help you standardize your production process, have minimum downtime, and create maximum ROI.",
-        ]}
-        buttonText="Get in touch now!"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <IndustryServices
-        heading="Advanced Technology Integrations in Manufacturing Software"
-        subheading="We integrate the latest innovations to future-proof your manufacturing business:"
-        services={servicesData}
-      />
-      <CardsSectionImage
-        heading="Features We Add in Manufacturing Software Solutions"
-        subheading=""
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <AppTypesSection
-        heading="Manufacturing Software Solutions Made Easy"
-        subheading1=""
-        desc="Our prebuilt and customizable solutions make your digital manufacturing journey more efficient."
-        textAlign="text-center mx-auto"
-        cardHeight="h-54"
-        subheading2=""
-        appTypes={appTypes}
-      />
-      <TopRatedCompany
-        title="Expand the production of your manufacturing business with the help of our software solutions"
-        description={[
-          `Manufacturing software solutions enable businesses to automate practically everything via IoT, ERP, supply chain management, etc. We offer smart factory software, industrial automation solutions for production lines, and various other high-tech tools which ultimately lead to the lowering of expenses while increasing productivity.`,
-          `Make a call to us today and take your manufacturing operations to the next level with the help of Capyngen.`,
-        ]}
-        image={assets.manufacturing14}
-        isHidden={true}
-        imageHeight="aspect-[1/1]"
-        background={assets.patternBg1}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-gray-700"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Create More Intelligent Manufacturing & Automotive Solutions"
-        description={[
-          "Take advantage of our automotive software and industrial automation solution designed specifically for your manufacturing to have the operations that are scalable and innovative.",
-        ]}
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / MANUFACTURING & AUTOMOTIVE (SPLIT LIGHT SECTION)            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.manufacturing1}
+                alt="Manufacturing Software Development"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Top Manufacturing Software Development Company
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                To stay competitive, industrial leaders are digitizing factory floors with the Internet of Things (IoT),{" "}
+                <Link to="/enterprise-solutions" className="text-blue-600 hover:underline font-semibold">
+                  Enterprise Resource Planning (ERP)
+                </Link>{" "}
+                platforms, and{" "}
+                <Link to="/artificial-intelligence-services" className="text-blue-600 hover:underline font-semibold">
+                  AI-powered predictive maintenance
+                </Link>
+                .
+              </p>
+              <p>
+                At <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link>, we deliver custom manufacturing software solutions that energize assembly plants, Tier-1 automotive OEMs, and logistics supply chains with future-ready digital foundations.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Smart factory automation and real-time telemetry from shop-floor machinery.",
+                "Custom ERP systems streamlining procurement, bill of materials, and inventory.",
+                "Fleet tracking, asset health scoring, and predictive maintenance algorithms.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Factory Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. HIGH-END MANUFACTURING DEVELOPMENT SERVICES (DARK CARDS GRID)         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              High-End Manufacturing Software Development
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Intelligent, secure, and tailored software solutions for factory floor automation and supply chain optimization.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionDifferentColorData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. ADVANCED TECHNOLOGY INTEGRATIONS (LIGHT CARDS)                         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Advanced Technology Integrations in Manufacturing
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              We integrate the latest Industry 4.0 innovations to future-proof your manufacturing enterprise.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. FEATURES WE BUILD IN MANUFACTURING SOFTWARE (6 DARK CARDS)             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Features We Build in Manufacturing Software
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Industrial capabilities designed for uptime, operator safety, and comprehensive production line visibility.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. MODULAR PREBUILT & CUSTOM PLATFORMS (SPLIT LIGHT SECTION)              */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
+              <img
+                src={assets.manufacturing14}
+                alt="Manufacturing Software Systems"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Manufacturing Software Solutions Made Simple
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Our prebuilt modules and bespoke engineering make your digital manufacturing and automotive journey efficient and cost-effective:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {appTypes.map((app, idx) => (
+                <div
+                  key={idx}
+                  className="p-5 border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-600 transition-colors duration-150"
+                >
+                  <div className="text-blue-600 text-2xl mt-1 shrink-0">
+                    {app.icon}
+                  </div>
+                  <div>
+                    <h4
+                      className="font-bold text-slate-900 text-base leading-snug"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {app.title}
+                    </h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Create More Intelligent Manufacturing & Automotive Solutions
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Take advantage of our automotive software and industrial automation solutions designed specifically for your manufacturing lines to achieve scalable operations and maximum ROI.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

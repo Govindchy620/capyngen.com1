@@ -1,20 +1,10 @@
 import React from "react";
-import Banner from "../components/Banner";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import Banner5 from "../components/Banner5";
-import GetStarted from "../components/GetStarted";
-import CardsSectionImage from "../components/CardsSectionImage";
-import CardsSection from "../components/CardsSection";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 import {
   FaAppStore,
   FaBuilding,
@@ -23,9 +13,8 @@ import {
   FaMoneyBillWave,
   FaPuzzlePiece,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
-import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -52,6 +41,7 @@ const webpageSchema = {
     },
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -83,6 +73,7 @@ const serviceSchema = {
   serviceOutput:
     "Build a powerful brand identity with Capyngen’s branding design services. We create custom, creative, and professional designs that make your brand stand out.",
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -290,177 +281,179 @@ const BrandingIdentityDesign = () => {
         "Take a look at the schedule on our website and pick a time that works for you to receive a free consultation to share your ideas and business needs.",
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "Logo Design",
       description:
-        "One-of-a-kind designs that immediately are the names of products and services the brand is recognizable and are also a familiar occurrence in the matter of trust.",
+        "One-of-a-kind designs that make your product immediately recognizable, establish trust, and form a memorable presence.",
       image: assets.branding3,
-      cardBg: "bg-blue-100",
     },
     {
       title: "Visual Identity",
       description:
-        "Design elements such as the colors, fonts, icons, and images used for all the channels in order to keep the look uniform.",
+        "Design elements such as colors, fonts, icons, and imagery crafted uniformly across all communication channels.",
       image: assets.branding4,
-      cardBg: "bg-pink-100",
     },
     {
       title: "Brand Guidelines",
       description:
-        "A rule book that assists in the performance of close-knit communities in print, web, and social media.",
+        "A comprehensive rule book that governs brand application consistently across print, web, and social media platforms.",
       image: assets.branding5,
-      cardBg: "bg-green-100",
     },
     {
       title: "Packaging Design",
       description:
-        "Beautiful packages for the customers, who at the same time are the mirror of your brand.",
+        "Stunning, tactile packaging that delights consumers while serving as a direct physical reflection of your brand values.",
       image: assets.branding6,
-      cardBg: "bg-yellow-100",
     },
     {
       title: "Stationery & Collateral Design",
       description:
-        "Business cards, brochures, and promotional materials are designed.",
+        "High-end business cards, presentation decks, brochures, and promotional materials designed to impress corporate partners.",
       image: assets.branding7,
-      cardBg: "bg-purple-100",
     },
     {
       title: "Digital Branding",
       description:
-        "The digital avenues like your website, social media, and campaign that make your online presence simple and easy to follow.",
+        "Digital avenues like websites, social media graphics, and campaign materials that make your online presence cohesive.",
       image: assets.branding8,
-      cardBg: "bg-red-100",
     },
   ];
+
   const cardsSectionData1 = [
     {
       title: "Richly articulated designs",
       description:
-        "Brand market research leads to brand identities that connect with the most suitable target group.",
-      icon: <FaPuzzlePiece className="text-4xl text-white" />,
+        "Brand market research leads to distinct brand identities that resonate deeply with your target group.",
+      icon: <FaPuzzlePiece className="text-3xl text-blue-400" />,
     },
     {
       title: "Tailored Solutions",
       description:
-        "The designs are personalized and crafted with the opposite personality and intrinsic objectives of the brand.",
-      icon: <FaLaptopCode className="text-4xl text-white" />,
+        "Personalized designs crafted to match the exact personality and business objectives of your enterprise.",
+      icon: <FaLaptopCode className="text-3xl text-blue-400" />,
     },
     {
       title: "Creative Expertise",
       description:
-        "One of the primary reasons for the longevity of innovative concepts in the memory of the visual users is that they are creatively designed.",
-      icon: <FaAppStore className="text-4xl text-white" />,
+        "Innovative design thinking that leaves permanent positive impressions in the minds of your audience.",
+      icon: <FaAppStore className="text-3xl text-blue-400" />,
     },
     {
       title: "Cross-Platform Consistency",
-      description: (
-        <span>
-          A brand identity both visually and conceptually standardized across
-          all media such as digital, print, and{" "}
-          <Link to={"/smm"}>social media</Link> platforms.
-        </span>
-      ),
-      icon: <FaMoneyBillWave className="text-4xl text-white" />,
+      description:
+        "A brand identity standardized both visually and conceptually across digital, print, and social media channels.",
+      icon: <FaMoneyBillWave className="text-3xl text-blue-400" />,
     },
     {
       title: "Strategic Approach",
       description:
-        "A brand’s story and business goals are the anchor of every design evolved.",
-      icon: <FaBuilding className="text-4xl text-white" />,
+        "Your brand story and commercial roadmap serve as the anchor of every visual identity decision we make.",
+      icon: <FaBuilding className="text-3xl text-blue-400" />,
     },
     {
       title: "Worldwide Experience",
       description:
-        "Capyngen is the solution to branding requests from different parts of the world.",
-      icon: <FaIndustry className="text-4xl text-white" />,
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Research",
-      description:
-        "Dig into the business, target market, and competitors to construct a proper foundation.",
-    },
-    {
-      step: "Step 02",
-      title: "Strategy Development",
-      description: "Decide on brand position, communication, and visuals.",
-    },
-    {
-      step: "Step 03",
-      title: "Creative Conceptualization",
-      description:
-        "Begin and refine the ideas of logos, typography, and color palettes.",
-    },
-    {
-      step: "Step 04",
-      title: "Design Execution",
-      description:
-        "Create brand guidelines, stationery, and digital collateral with final assets.",
-    },
-    {
-      step: "Step 05",
-      title: "Brand Implementation",
-      description:
-        "Use the new brand identity on websites, social media, packaging, and marketing.",
-    },
-    {
-      step: "Step 06",
-      title: "Ongoing Support",
-      description:
-        "Regular updates and coaching to keep your brand fresh anywhere on the globe, that is Benefits of Professional Branding Design",
-    },
-  ];
-  const cardsSectionImageData2 = [
-    {
-      title: "Minimalist Design",
-      description:
-        "Neat and straightforward visuals effectively deliver the message.",
-      image: assets.branding10,
-      cardBg: "bg-blue-100",
-    },
-    {
-      title: "Bold Typography",
-      description:
-        "Hard-to-find fonts are a good way to grab people's attention towards your brand.",
-      image: assets.branding11,
-      cardBg: "bg-pink-100",
-    },
-    {
-      title: "Vibrant Color Palettes",
-      description: "Colors that trigger feelings and memory.",
-      image: assets.branding12,
-      cardBg: "bg-green-100",
-    },
-    {
-      title: "Custom Illustrations",
-      description:
-        "Greeting cards for your brand with which no other company can match.",
-      image: assets.branding13,
-      cardBg: "bg-yellow-100",
-    },
-    {
-      title: "Dynamic Logos",
-      description:
-        "Logos which are flexible for both printed and virtual worlds.",
-      image: assets.branding14,
-      cardBg: "bg-purple-100",
-    },
-    {
-      title: "Interactive Digital Branding",
-      description:
-        "The use of motion graphics and animations for grabbing the attention of consumers makes the digital branding process easier and more effective.",
-      image: assets.branding15,
-      cardBg: "bg-red-100",
+        "Capyngen delivers branding solutions designed to cross cultural and geographical boundaries effortlessly.",
+      icon: <FaIndustry className="text-3xl text-blue-400" />,
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const steps = [
+    {
+      title: "Discovery & Research",
+      description:
+        "Dig into the business, target market, and competitive landscape to construct a rock-solid brand foundation.",
+    },
+    {
+      title: "Strategy Development",
+      description: "Define brand positioning, tone of voice, core messaging hierarchy, and strategic visual direction.",
+    },
+    {
+      title: "Creative Conceptualization",
+      description:
+        "Develop and iterate ideas for logos, bespoke typography, color palettes, and graphic motifs.",
+    },
+    {
+      title: "Design Execution",
+      description:
+        "Build complete brand guidelines, corporate stationery, packaging concepts, and high-fidelity digital assets.",
+    },
+    {
+      title: "Brand Implementation",
+      description:
+        "Deploy the new identity across your official website, social media, marketing collateral, and customer touchpoints.",
+    },
+    {
+      title: "Ongoing Support",
+      description:
+        "Continuous guidance, updates, and asset governance to keep your brand fresh and competitive globally.",
+    },
+  ];
+
+  const cardsSectionImageData2 = [
+    {
+      title: "Minimalist Design",
+      description: "Neat and straightforward visuals that communicate elegance and deliver your core message without friction.",
+      image: assets.branding10,
+    },
+    {
+      title: "Bold Typography",
+      description: "Custom and distinctive typefaces that command immediate attention and build visual authority.",
+      image: assets.branding11,
+    },
+    {
+      title: "Vibrant Color Palettes",
+      description: "Carefully curated color schemes that evoke emotion, build distinction, and drive psychological recall.",
+      image: assets.branding12,
+    },
+    {
+      title: "Custom Illustrations",
+      description: "Bespoke brand illustration libraries that give your visual identity an unrepeatable character.",
+      image: assets.branding13,
+    },
+    {
+      title: "Dynamic Logos",
+      description: "Adaptive responsive logos engineered for pixel-perfect clarity from billboards down to smartwatches.",
+      image: assets.branding14,
+    },
+    {
+      title: "Interactive Digital Branding",
+      description: "Motion graphics, interactive UI micro-interactions, and animated logo reveals for digital-first brands.",
+      image: assets.branding15,
+    },
+  ];
+
+  const whyNeedsBrandingList = [
+    {
+      title: "Create a Lasting First Impression",
+      text: "Professional branding ensures you and your audience connect immediately with high recall.",
+    },
+    {
+      title: "Establish Brand Awareness & Loyalty",
+      text: "Done right, branding increases recognition and turns casual buyers into lifetime advocates.",
+    },
+    {
+      title: "Communicate Values Clearly",
+      text: "Your mission, values, and personality become self-evident through thoughtful visual presentation.",
+    },
+    {
+      title: "Stand Out from Competitors",
+      text: "A well-differentiated identity guarantees you command attention even in crowded markets.",
+    },
+    {
+      title: "Amplify Marketing Impact",
+      text: "Consistent, premium branding drives stronger campaign conversions, trust, and marketing ROI.",
+    },
+    {
+      title: "Global Reach",
+      text: "Our international design framework equips your brand to speak effectively across world borders.",
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Branding and Identity Design Services – Best Branding Company in India
@@ -481,197 +474,458 @@ const BrandingIdentityDesign = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <Banner5
-        title={
-          <>
-            Best Branding and Identity Design Services in India{" "}
-            <span className="text-cyan-400">
-              Delivering Unique Logos, Visual Identities, and Brand Strategies
-            </span>
-          </>
-        }
-        description={
-          <span>
-            One of the main reasons consumers choose a certain product over
-            another is the branding. Capyngen's branding design services, a
-            branding expert who is always prepared to think out of the box, come
-            up with ways to simply and globally standardize brand identities.
-            Thus, we are not limited in representing{" "}
-            <Link to={"/"}>companies</Link> of various sizes and in different
-            stages of their development, ranging from the idea stage to that of
-            a multinational corporation, which allows us to produce brand
-            identities that are visually attractive and that can go beyond
-            geographical borders.
-          </span>
-        }
-        primaryBtnText="Get started"
-        primaryBtnLink="/contact-us"
-        image={assets.branding1}
-      />
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          buttonColor="bg-white hover:scale-105"
-          buttonTextColor="text-black"
-          title=""
-          description={[
-            "Turn into a global sensation with the help of Capyngen's expert branding design services. Stop the original logo, digital branding, and packaging that are just right for you from rolling now!",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (Full Screen min-h-screen / Sharp Edges / High Contrast)   */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-gradient-to-b from-[#070e1d] via-[#09152e] to-[#070e1d]"
+        aria-label="Branding and Identity Design Services Banner"
+      >
+        {/* Subtle Tech Grid Overlay */}
+        <div
+          className="absolute inset-0 opacity-15 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(#3b82f6 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
         />
-        <TopRatedCompany
-          title="Reasons for branding design to be considered"
-          description={[
-            `The social media revolution, the ads, and the 24/7 news cycle have not only altered the people's way of communicating but also the speed of the modern world. In addition, a brand is just a brand name in this interconnected world where the brand is the customer loyalty is the narrative, the emotion, and the whole customer's experience. Capyngen's branding design services provide the necessary tools to clients worldwide to do it systematically and creatively to find their unique identities and hence stand out in a deep and lasting way as well as to nurture loyalty to the brand. A company with a harmonized visual identity is able to differentiate itself from other competitors, become valued by customers, and even take the marketing to higher levels of engagement and conversions.`,
-          ]}
-          image={assets.branding2}
-          isHidden={true}
-          imageHeight="aspect-[1/1]"
-          background={assets.patternBg1}
-        />
-        <CardsSectionImage
-          heading="What are branding design services?"
-          subheading="It is not only the visual attractiveness of design products by Capyngen that makes them stand out but also the inclusion of a full range of branding solutions."
-          services={cardsSectionImageData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        />
-        <TopRatedCompany
-          title="Why your business needs branding design?"
-          description={[
-            <>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
-                {[
-                  {
-                    title: "Create a Lasting First Impression",
-                    text: "You, together with your audience, are better able to see and remember each other due to professional branding.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Establish Brand Awareness and Loyalty",
-                    text: "Done right, branding will not only increase the recognizability of the business but also the trust of the customers.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Communicate Values Clearly",
-                    text: "As the brand's mission and personality become evident just by the style and presentation of the designs.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Stand Out from Competitors",
-                    text: "Great looking and well-differentiated brands will not get lost even in a saturated market.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Amplify Marketing Impact",
-                    text: "Strong and creative branding will lead to higher engagements, conversions, and ROI.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Global Reach",
-                    text: "Your brand is able to communicate with foreign markets due to Capyngen's international know-how.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 text-left">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-[1px] w-8 sm:w-12 bg-slate-400" />
+                <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-slate-300 font-bold">
+                  WHAT WE DO <span className="text-blue-400 mx-1">/</span> SERVICES
+                </span>
+                <div className="h-[1px] flex-1 max-w-xs bg-slate-600/50" />
+              </div>
+
+              <h1
+                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-bold leading-[1.15] tracking-tight mb-6"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Best Branding & Identity Design Services in India{" "}
+                <span className="text-blue-500">
+                  Delivering Unique Logos, Visual Identities & Brand Strategies
+                </span>
+              </h1>
+
+              <div className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed font-normal">
+                <p>
+                  Consumers choose brands that inspire trust and emotion. Capyngen's branding design services combine strategic positioning with world-class artistry to build cohesive brand identities that transcend geographical borders. From ambitious startups to global enterprises, we shape brands that command attention.
+                </p>
+              </div>
+
+              <div>
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+                >
+                  Schedule Free Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Graphic */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="w-full max-w-[560px] xl:max-w-[600px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={assets.branding1}
+                  alt="Branding and Identity Design Services by Capyngen"
+                  className="w-full h-auto object-contain rounded-none drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. SPLIT INTRO SECTION: REASONS FOR BRANDING DESIGN TO BE CONSIDERED       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.branding2}
+                alt="Reasons for branding design to be considered"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Reasons for Branding Design to Be Considered
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                In an interconnected world overwhelmed by continuous advertising, a brand is far more than a name or logo — it is the customer experience, the narrative, and the emotional connection. Capyngen provides systematic, research-backed branding solutions that help businesses discover their distinct identity and build lasting customer loyalty.
+              </p>
+              <p>
+                A unified visual identity allows your company to differentiate itself cleanly from competitors, gain immediate trust, and maximize marketing ROI across all physical and digital channels.
+              </p>
+            </div>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Strategy Session
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FULL SIZE BANNER 1: BUILD A BRAND THAT STANDS OUT                       */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.brandingFullSize}
+            alt="Build a brand that stands out"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Build a brand that stands out
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            We develop distinctive brand identities that have the power to make deep and lasting impressions.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Create My Brand
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. WHAT ARE BRANDING DESIGN SERVICES? (6 CARDS - White Background)         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              What Are Branding Design Services?
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              It is not only the visual elegance of design products by Capyngen that makes them stand out, but also the delivery of a complete end-to-end branding ecosystem.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+
+                <div className="relative h-56 overflow-hidden border-b border-slate-200">
+                    <img
+                      src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                  </div>
+
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between bg-[#f8fafc]">
+                  <div>
+                    <h3
+                      className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Accent Summary Box */}
+          <div className="p-6 bg-[#f8fafc] border border-slate-200 border-l-4 border-l-blue-600 text-slate-800 text-center text-lg sm:text-xl rounded-none shadow-sm">
+            Turn into a global sensation with the help of{" "}
+            <span className="font-semibold text-blue-600">Capyngen's</span> expert branding design services.
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. WHY YOUR BUSINESS NEEDS BRANDING DESIGN (Split Light Section)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.branding9}
+                alt="Why your business needs branding design"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Your Business Needs Branding Design
+            </h2>
+            <ul className="space-y-3.5 text-slate-700 text-base">
+              {whyNeedsBrandingList.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-slate-900 font-semibold">{item.title}</strong>{" "}
+                    – {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. WHAT MAKES PROFESSIONAL BRANDING DESIGN STAND OUT (6 Dark Cards)       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              What Makes Professional Branding Design Services Stand Out?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
                   >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>{" "}
-                    – {text}
-                  </li>
-                ))}
-              </ul>
-            </>,
-          ]}
-          image={assets.branding9}
-          background={assets.patternBg1}
-          isHidden="hidden"
-          imageHeight="aspect-[4/3] md:aspect-[3/4]"
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.brandingFullSize}
-          title="Build a brand that stands out"
-          description="We develop distinctive brand identities that have the power to make deep and lasting impressions."
-          buttonText="Create My Brand"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <CardsSection
-          heading="What makes professional branding design services stand out?"
-          subheading=""
-          services={cardsSectionData1}
-          sectionBg="bg-gray-900"
-          cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-          hoverBg=""
-          height="h-72"
-          textColor="text-white"
-          hoverTextColor=""
-          headColor="text-white"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          buttonColor="bg-white hover:scale-105"
-          buttonTextColor="text-black"
-          title=""
-          description={[
-            "Want tailored branding solutions that make a mark? Partner up with Capyngen, a branding design services leader from all over the globe, and lift your brand presence to the following level.",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <HowWeWork
-          heading="Our Branding Design Process"
-          desc=""
-          steps={steps}
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.brandingFullSize2}
-          title="Define your visual story"
-          description="Working from logo to design systems, we build your brand’s presence in the digital world."
-          buttonText="CONTACT US"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <CardsSectionImage
-          heading="Branding Design Trends for 2025"
-          subheading=""
-          services={cardsSectionImageData2}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          buttonColor="bg-white hover:scale-105"
-          buttonTextColor="text-black"
-          title=""
-          description={[
-            "Develop a brand identity that is memorable, consistent, and interesting with Capyngen’s branding design services. Call us for a free consultation today!",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-      </div>
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. OUR BRANDING DESIGN PROCESS (6 STEPS)                                   */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Branding Design Process
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              From in-depth discovery to worldwide deployment, our structured workflow creates memorable and scalable branding.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {st.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {st.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FULL SIZE BANNER 2: DEFINE YOUR VISUAL STORY                           */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.brandingFullSize2}
+            alt="Define your visual story"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Define your visual story
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Working from logo to complete design systems, we build your brand’s indelible presence in the digital world.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              CONTACT US
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. BRANDING DESIGN TRENDS (6 Cards - White Background)                     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Branding Design Trends
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {cardsSectionImageData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+
+                <div className="relative h-56 overflow-hidden border-b border-slate-200">
+                    <img
+                      src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                  </div>
+
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between bg-[#f8fafc]">
+                  <div>
+                    <h3
+                      className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10. FAQ SECTION                                                           */}
+      {/* ========================================================================= */}
+      <FAQSection2
+        title="Frequently Asked Questions"
+        desc="Learn more about our branding services, delivery timelines, and brand guidelines implementation."
+        items={faqItems}
+      />
+
+      {/* ========================================================================= */}
+      {/* 11. BOTTOM FINAL CTA BANNER (Below FAQs)                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Develop a Memorable Brand Identity
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Develop a brand identity that is memorable, consistent, and impactful with Capyngen’s branding design services. Schedule a consultation today!
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

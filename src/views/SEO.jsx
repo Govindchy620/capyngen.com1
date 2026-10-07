@@ -1,11 +1,10 @@
-import { assets } from "../assets/assets";
-import HowWeWork from "../components/HowWeWork";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import Banner5 from "../components/Banner5";
-import CardsSection from "../components/CardsSection";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 import {
   FaSearch,
   FaFileAlt,
@@ -14,12 +13,9 @@ import {
   FaMapMarkerAlt,
   FaMicrophone,
 } from "react-icons/fa";
-import GetStarted from "../components/GetStarted";
+import { assets } from "../assets/assets";
+import FAQSection2 from "../components/FAQSection2";
 import SeoStatsSection from "../components/SeoStatsSection";
-import CardsSectionImage from "../components/CardsSectionImage";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
-import { Link } from "react-router-dom";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -28,7 +24,7 @@ const webpageSchema = {
   url: "https://www.capyngen.com/seo",
   name: "Best SEO Company in India | Professional AI SEO Services",
   description:
-    "Capyngen is the best SEO company in India providing professional SEO services like technical SEO, on-page SEO, off-page SEO, local SEO near you. :contentReference[oaicite:0]{index=0}",
+    "Capyngen is the best SEO company in India providing professional SEO services like technical SEO, on-page SEO, off-page SEO, local SEO near you.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
@@ -44,6 +40,7 @@ const webpageSchema = {
     },
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -61,7 +58,7 @@ const serviceSchema = {
     name: "India",
   },
   description:
-    "Capyngen is the best SEO company in India providing professional SEO services like technical SEO, on-page SEO, off-page SEO, local SEO near you.([capyngen.com/seo](https://www.capyngen.com/seo))",
+    "Capyngen is the best SEO company in India providing professional SEO services like technical SEO, on-page SEO, off-page SEO, local SEO near you.",
   url: "https://www.capyngen.com/seo",
   image: {
     "@type": "ImageObject",
@@ -75,6 +72,7 @@ const serviceSchema = {
     availability: "InStock",
   },
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -287,131 +285,108 @@ const SEO = () => {
         "One similar to Capyngen possesses an SEO consultant and a team of experts that provide custom-made SEO services, continuous Search Engine Optimization (SEO), and measurable evidences that can work in your business development and growth online.",
     },
   ];
-  const cardsSectionData1 = [
-    {
-      title: "Increase Visibility",
-      description:
-        "Become visible by appearing on top of search results through the use of SEO services in India and other Google rankings of the top digital marketing company.",
-      icon: <FaSearch className="text-4xl" />,
-    },
-    {
-      title: "Affordable Solutions",
-      description:
-        "This is the right solution that you need in case you are a startup. Our affordable SEO services package would enable you to expand at a manageable cost.",
-      icon: <FaFileAlt className="text-4xl" />,
-    },
-    {
-      title: "Drive Traffic & Leads",
-      description:
-        "Through proper SEO marketing strategies, you will have the intended quality traffic and leads through ppc services provider.",
-      icon: <FaLink className="text-4xl" />,
-    },
-    {
-      title: "Custom SEO Strategies",
-      description:
-        "Knowing your business and business strength, we develop a unique solution that fits only you as seo company in Gurgaon.",
-      icon: <FaWrench className="text-4xl" />,
-    },
-    {
-      title: "Trusted Agency",
-      description:
-        "A seo agency India company partner should be a firm that has a track record of achieving its objectives in the field of seo.",
-      icon: <FaMapMarkerAlt className="text-4xl" />,
-    },
-    {
-      title: "Boost ROI",
-      description:
-        "Optimise your returns and enjoy all the services that our SEO agency in India has to offer.",
-      icon: <FaMicrophone className="text-4xl" />,
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Discovery & Goal Setting",
-      description:
-        "understand your business, target audience and your competitors.",
-    },
-    {
-      step: "Step 02",
-      title: "Audit & Keyword Research",
-      description:
-        "Identify areas to be developed and focus on SEO keywords, such as custom Search Engine Optimization (SEO) strategies that the best seo agency uses.",
-    },
-    {
-      step: "Step 03",
-      title: "Strategy Development",
-      description:
-        "Technical adjustments, content publication, link building, and local SEO by seo service provider in India.",
-    },
-    {
-      step: "Step 04",
-      title: "Implementation",
-      description:
-        "Provide the SEO services comprising the on-page SEO, the off-page SEO, and the content optimization by seo services in Gurgaon.",
-    },
-    {
-      step: "Step 05",
-      title: "Monitoring & Optimization",
-      description:
-        "Frequent updates, location tracking, and performance optimization.",
-    },
-    {
-      step: "Step 06",
-      title: "Reporting & Feedback",
-      description:
-        "Clearly written monthly reports; verify the percentage of profit and place new measures in the motions with best SEO services.",
-    },
-  ];
+
   const cardsSectionImageData1 = [
     {
       title: "SEO Audit & Strategy",
       description:
-        "Detailed auditing and customised Search Engine Optimization (SEO) solutions that unlock the prospects of growth with the help of seo agency India knowledge.",
+        "Comprehensive site diagnostics and competitive keyword architecture that unlock high-ranking organic opportunities.",
       image: assets.seo1,
-      cardBg: "bg-blue-100",
     },
-
     {
       title: "On-Page SEO",
       description:
-        "Meta tags, structured data and internal linking are also performed along with optimization of keywords so that the seo company in Gurgaon is well portrayed in search results.",
+        "Semantic meta tags, structured schema data, keyword placement, and internal linking to maximize search engine indexing.",
       image: assets.seo2,
-      cardBg: "bg-green-100",
     },
     {
       title: "Off-Page SEO & Link Building",
       description:
-        "The features of services that we offer as the best seo agency are safe backlink purchase options, which offer power and ranking.",
+        "Authoritative, high-trust backlink acquisition and digital PR to build verifiable domain authority and search dominance.",
       image: assets.seo3,
-      cardBg: "bg-yellow-100",
     },
     {
       title: "Technical SEO",
       description:
-        "The technical upgrades of your site include combined efforts in terms of site speed, crawlability, mobile-friendliness, and indexation through seo services in Gurgaon.",
+        "Core Web Vitals tuning, lightning-fast site speed, mobile optimization, crawl budget management, and clean XML sitemaps.",
       image: assets.seo4,
-      cardBg: "bg-pink-100",
     },
     {
       title: "Local SEO",
       description:
-        "As the SEO service provider in India, you can have solutions based on city/region optimization.",
+        "Google Business Profile optimization, local citation building, and geo-targeted ranking to dominate regional search queries.",
       image: assets.seo5,
-      cardBg: "bg-purple-100",
     },
     {
       title: "Content Strategy & Creation",
       description:
-        "Blogs, articles, and landing pages with the best SEO services to businesses of seo company in India.",
+        "High-intent blogs, authoritative guides, and landing pages designed to rank at the top and engage human readers.",
       image: assets.seo6,
-      cardBg: "bg-red-100",
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const cardsSectionData1 = [
+    {
+      title: "Increase Visibility",
+      description: "Rank at the top of organic search results for the commercial keywords that drive buyers to your business.",
+      icon: <FaSearch className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Affordable Solutions",
+      description: "Scalable search optimization packages that deliver superior ROI for both ambitious startups and established firms.",
+      icon: <FaFileAlt className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Drive Traffic & Leads",
+      description: "Attract intent-driven qualified organic traffic that converts reliably into inbound leads and closed deals.",
+      icon: <FaLink className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Custom SEO Strategies",
+      description: "Bespoke optimization blueprints tailored to your specific industry vertical and market competitors.",
+      icon: <FaWrench className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Trusted Agency",
+      description: "A battle-tested track record of lifting client websites to Page 1 on competitive global terms.",
+      icon: <FaMapMarkerAlt className="text-3xl text-blue-400" />,
+    },
+    {
+      title: "Boost ROI",
+      description: "Compounds over time to lower your Customer Acquisition Cost (CAC) compared to continuous paid advertising.",
+      icon: <FaMicrophone className="text-3xl text-blue-400" />,
+    },
+  ];
+
+  const steps = [
+    {
+      title: "Discovery & Goal Setting",
+      description: "Understand your target market, buyer personas, commercial goals, and core competitive set.",
+    },
+    {
+      title: "Audit & Keyword Research",
+      description: "Diagnose on-site technical friction and identify high-value search intent keywords.",
+    },
+    {
+      title: "Strategy Development",
+      description: "Architect content roadmaps, link acquisition plans, and technical remediation schedules.",
+    },
+    {
+      title: "Implementation",
+      description: "Execute precision on-page optimization, content publishing, speed boosts, and schema tags.",
+    },
+    {
+      title: "Monitoring & Optimization",
+      description: "Continuously track position movements, algorithmic updates, impressions, and click-through rates.",
+    },
+    {
+      title: "Reporting & Feedback",
+      description: "Deliver transparent monthly reports with verified rank improvements, organic traffic, and revenue metrics.",
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>Best SEO Company in India | Professional AI SEO Services</title>
         <meta
@@ -430,174 +405,368 @@ const SEO = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <div className="lg:sticky inset-0">
-        <Banner5
-          title={
-            <>
-              <span className="text-3xl md:text-4xl">
-                Boost Your Brand Visibility with{" "}
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (MICROSOFT-STYLE: Editorial, Minimalist, High Contrast)   */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-[90vh] lg:min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-gradient-to-r from-[#121316] via-[#1a1c22] to-[#121316]"
+        aria-label="SEO Services Hero"
+      >
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 text-left">
+              {/* Microsoft-style Yellow/Amber Accent Pill */}
+              <span className="inline-block bg-[#ffb900] text-black font-semibold text-xs px-2.5 py-1 mb-6 rounded-none tracking-wide">
+                New
               </span>
-              <br />
-              <span className="text-blue-600">SEO Services</span>
-            </>
-          }
-          description={
-            <>
-              Capyngen is the best SEO company in India that provides affordable
-              search engine optimization services to startups, small businesses,
-              and enterprises. Make the online success of your steadfast with
-              our expertise Search Engine Optimization (SEO) services; acquire
-              the visibility, traffic and ROI of the kind that you seek with the
-              services of seo services india and best SEO services.​ Complement
-              your strategy with{" "}
-              <a
-                href="https://www.capyngen.com/smm"
-                className="text-blue-500 font-bold"
+
+              <h1
+                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold leading-[1.12] tracking-tight mb-6"
+                style={{ fontFamily: "'Syne', sans-serif" }}
               >
-                Social Media Marketing (SMM)
-              </a>{" "}
-              for maximum reach.
-            </>
-          }
-          primaryBtnText="Improve Your Website Rankings"
-          primaryBtnLink="/contact-us"
-          image={assets.seoHero}
-          alt="Best SEO Company in India | Professional AI SEO Services"
-        />
-      </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <CardsSectionImage
-          heading="Our SEO Services"
-          subheading=""
-          services={cardsSectionImageData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Schedule a SEO Consultation"
-          description={[
-            "Discover the strength of our online SEO services in India that can make you receive more visitors, increase sales, and provide you with the favorable payback on the investment that you can follow with the help of the best SEO company in India.",
-          ]}
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <CardsSection
-          heading="Features & Benefits"
-          subheading=""
-          services={cardsSectionData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg="bg-black border border-black transition-all duration-400"
-          hoverBg=" hover:border-white"
-          textColor="text-white"
-          hoverTextColor=""
-          textSize="text-md"
-          height="h-72"
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.seoFullSize}
-          title="Rank higher, reach further"
-          description="Through Search Engine Optimization (SEO) best practices, we do all that the search engines do with your site to increase the exposure level, traffic and purchases."
-          buttonText="Improve Ranking"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <SeoStatsSection />
-        <HowWeWork heading="SEO Process" desc="" steps={steps} />
-        <FullSizeImageSection
-          backgroundImage={assets.seoFullSize2}
-          title="Let your brand be found first"
-          description="And improve your ranking in the search list using proven and best search engine optimization (SEO) in seo company in India."
-          buttonText="CONTACT US"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <TopRatedCompany
-          title={
-            <span>
-              Why Choose <Link to={"/"}>Capyngen</Link> as Your SEO Partner
-            </span>
-          }
-          description={[
-            <>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
-                {[
-                  {
-                    title: "Established History",
-                    text: "The company has a history of providing best SEO services to small companies in India and companies.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Custom Strategies",
-                    text: "Custom Tailored Search Engine Optimization (SEO) strategies.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Affordable Packages",
-                    text: (
-                      <>
-                        Affordable SEO solutions for start-ups by the Top
-                        <a
-                          href="https://www.capyngen.com/digital-marketing"
-                          className="text-blue-500 font-bold"
-                        >
-                          Digital marketing company
-                        </a>
-                        .
-                      </>
-                    ),
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Open Reporting",
-                    text: "Understand the progress and ROI.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Dedicated Support",
-                    text: "Real-time support of our SEO agency in India professionals through ppc services provider.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+                Boost Your Brand Visibility with AI-Powered SEO Services
+              </h1>
+
+              <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-xl font-normal">
+                Big ideas, busy markets, measurable results. Capyngen provides affordable, data-driven Search Engine Optimization services that ensure your business ranks at the top and stays ahead.
+              </p>
+
+              <div>
+                {/* Microsoft-style Solid White High-Contrast Button */}
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3.5 px-8 rounded-none transition-colors duration-150 shadow-lg text-base"
+                >
+                  Learn more
+                  <ArrowRight className="w-4 h-4 text-slate-900" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Graphic (Clean Showcase against sleek dark canvas) */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="w-full max-w-[560px] xl:max-w-[620px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={assets.seoHero}
+                  alt="SEO Services Illustration"
+                  className="w-full h-auto object-contain rounded-none drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. OUR SEO SERVICES (6 CARDS - White Background)                           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our SEO Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              From technical website audits to localized search rankings, we deploy targeted optimizations that bring real organic growth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+
+                <div className="relative h-56 overflow-hidden border-b border-slate-200">
+                    <img
+                      src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                  </div>
+
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between bg-[#f8fafc]">
+                  <div>
+                    <h3
+                      className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Accent Summary Box */}
+          <div className="p-6 bg-[#f8fafc] border border-slate-200 border-l-4 border-l-blue-600 text-slate-800 text-center text-lg sm:text-xl rounded-none shadow-sm">
+            Discover the strength of our online SEO services in India that help you gain more visitors and increase revenue.
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FEATURES & BENEFITS (6 Dark Cards)                                      */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Features & Benefits
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Search engine optimization is an investment in durable digital equity that scales with your business over time.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
                   >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>{" "}
-                    – {text}
-                  </li>
-                ))}
-              </ul>
-            </>,
-          ]}
-          image={assets.seo7}
-          alt="Best SEO Company in India | Professional AI SEO Services"
-          isHidden="hidden"
-          imageHeight="aspect-[4/3] md:aspect-[1/1]"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Take Your Business to the Top of Search Results"
-          description={[
-            "Get the best SEO company in India, Capyngen, to partner with so as to achieve measurable growth in traffic, leads, and revenue by use of seo services India.",
-          ]}
-          buttonText="Book Your Free SEO Consultation Today"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
-      </div>
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. FULL SIZE BANNER 1: RANK HIGHER, REACH FURTHER                          */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.seoFullSize}
+            alt="Rank higher, reach further"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Rank higher, reach further
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Through Search Engine Optimization best practices, we elevate your digital visibility to drive high-intent leads and purchases.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Improve Ranking
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. SEO STATS & LIVE CHARTS SECTION                                         */}
+      {/* ========================================================================= */}
+      <SeoStatsSection />
+
+      {/* ========================================================================= */}
+      {/* 6. OUR SEO PROCESS (6 Dark Cards)                                          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our SEO Process
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              We apply an organized, battle-tested methodology to elevate your website's search performance methodically.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {st.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {st.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. FULL SIZE BANNER 2: LET YOUR BRAND BE FOUND FIRST                       */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.seoFullSize2}
+            alt="Let your brand be found first"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Let your brand be found first
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Improve your ranking on Google and major search engines using proven, ethical search engine optimization strategies.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              CONTACT US
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. WHY CHOOSE CAPYNGEN AS YOUR SEO PARTNER (Split White Section)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen as Your SEO Partner
+            </h2>
+            <ul className="space-y-4 text-slate-700 text-base">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Established History:</strong> Proven track record of delivering top search visibility for high-growth firms.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Custom Strategies:</strong> Bespoke technical and content blueprints aligned strictly with your market goals.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Affordable Packages:</strong> Cost-effective search marketing packages designed to scale seamlessly with your revenue.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Open Reporting:</strong> Transparent, real-time KPI tracking for impressions, keyword positions, and ROI.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Dedicated Support:</strong> Agile direct communication with senior SEO consultants dedicated to your project.</span>
+              </li>
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.seo7}
+                alt="Why Choose Capyngen as Your SEO Partner"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
+      <FAQSection2
+        title="Frequently Asked Questions"
+        desc="Learn more about SEO timelines, link building practices, and keyword rankings."
+        items={faqItems}
+      />
+
+      {/* ========================================================================= */}
+      {/* 10. BOTTOM FINAL CTA BANNER (Below FAQs)                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Take Your Business to the Top of Search Results
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Partner with Capyngen to achieve measurable, compounding growth in organic traffic, qualified sales leads, and revenue.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Book Your Free SEO Consultation Today
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

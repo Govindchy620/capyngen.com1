@@ -75,7 +75,7 @@ const Preloader = ({ state }) => {
       className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] transition-all duration-500 ease-in-out
         ${
           state?.isComplete
-            ? "translate-y-[-100%] opacity-0"
+            ? "translate-y-[-100%] opacity-0 pointer-events-none"
             : "translate-y-0 opacity-100"
         }
       `}

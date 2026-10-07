@@ -1,32 +1,12 @@
 import React from "react";
-import Banner from "../components/Banner";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import Banner8 from "../components/Banner8";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import GetStarted from "../components/GetStarted";
-import CardsSection from "../components/CardsSection";
-import {
-  FaChartLine,
-  FaCogs,
-  FaLaptopCode,
-  FaLightbulb,
-  FaProjectDiagram,
-  FaTasks,
-} from "react-icons/fa";
-import Banner15 from "../components/Banner15";
-import IndustryServices from "../components/IndustryServices";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
+import { assets } from "../assets/assets";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -51,6 +31,7 @@ const webpageSchema = {
     },
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -77,6 +58,7 @@ const serviceSchema = {
     availability: "InStock",
   },
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -275,19 +257,8 @@ const SMM = () => {
     {
       question:
         "Is it possible to have social media marketing to integrate with the other online marketing activities?",
-      answer: (
-        <>
-          Yes.{" "}
-          <a
-            href="https://www.capyngen.com/seo"
-            className="text-blue-500 font-bold"
-          >
-            SEO
-          </a>
-          , email marketing and paid advertising may be incorporated into our
-          campaigns to have a unified digital strategy.
-        </>
-      ),
+      answer:
+        "Yes. SEO, email marketing and paid advertising may be incorporated into our campaigns to have a unified digital strategy.",
     },
     {
       question: "Is social media marketing services appropriate in startups?",
@@ -301,211 +272,96 @@ const SMM = () => {
         "We have scheduled an appointment with you to start developing a unique social media marketing strategy that suits your business objectives using the best social media marketing agency in gurgaon.",
     },
   ];
+
   const servicesData = [
     {
       image: assets.smm3,
       title: "Content Personalization",
-      desc: "Posting content that would be liked and disliked by your followers.",
+      desc: "Delivering bespoke, audience-segmented media that resonates deeply with target buyer profiles.",
     },
     {
       image: assets.smm4,
       title: "Storytelling Marketing",
-      desc: "The appeal to the audience to sympathise with them by providing them with stories to read.",
+      desc: "Narrative-driven visual campaigns that evoke emotional resonance and build lasting brand affinity.",
     },
     {
       image: assets.smm5,
-      title: "Hashtag Campaigns",
-      desc: "Creating awareness by collaboration with trending hashtags.",
+      title: "Hashtag & Trend Campaigns",
+      desc: "Leveraging trending viral conversations and community challenges to drive exponential organic exposure.",
     },
     {
       image: assets.smm6,
-      title: "Video First Strategy",
-      desc: "Use of reels, shorts and live sessions to attract attention.",
+      title: "Video-First Strategy",
+      desc: "High-retention Reels, TikToks, Shorts, and Live sessions engineered to capture viewer attention within seconds.",
     },
     {
       image: assets.smm7,
-      title: "Paid + Organic Mix",
-      desc: "Organic content and Social media advertising should work simultaneously.",
+      title: "Paid + Organic Synergy",
+      desc: "Balancing authentic organic community engagement with hyper-targeted paid amplification for maximum scale.",
     },
     {
       image: assets.smm8,
       title: "Data-Driven Optimization",
-      desc: "Monitoring the figures and utilizing them well to boost output utilizing the Best network solutions services in gurgaon.",
-    },
-  ];
-  const solutionsData = [
-    {
-      title: "Social Media Strategy & Planning",
-      desc: (
-        <>
-          <p>
-            When we create a strategy, it is custom-made to your brand goals,
-            the prevailing trends in the industry and consumer behaviour where
-            we are providing the top social media marketing services in Gurgaon.
-          </p>
-          <p className="py-5 font-semibold">Incorporates:</p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>Competitor analysis</li>
-            <li>
-              Selection of platform (Facebook, Instagram, LinkedIn, Twitter,
-              YouTube, TikTok, and so on)
-            </li>
-            <li>Content calendar planning</li>
-            <li>Hashtag and trend research</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      title: "Social Media Management Services",
-      desc: (
-        <>
-          <p>
-            The operation of social media accounts requires frequency and
-            inspiration. With best social media services in India, our social
-            media management services ensure that your brand remains alive and
-            attractive in all the social media platforms.
-          </p>
-          <p className="py-5 font-semibold">We Handle:</p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>
-              Creation of content (posts, stories, reels, graphics, videos)
-            </li>
-            <li>Planning and publishing of content</li>
-            <li>Community management (reviews, DMs, inquiries)</li>
-            <li>Monitoring of brand reputation</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      title: "Social Media Advertising",
-      desc: (
-        <>
-          <p>
-            Advertisements that are paid are the most rapid means to be heard.
-            Our advertising gurus in social media establish highly targeted
-            advertisements in order to achieve the highest ROI in terms of
-            strategic social media campaigns as well as value growth.
-          </p>
-          <p className="py-5 font-semibold">
-            Under the advertisement umbrella, the services that we offer are:
-          </p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>Facebook & Instagram Ads</li>
-            <li>LinkedIn Sponsored Content</li>
-            <li>YouTube Ads</li>
-            <li>Twitter (X) Ads</li>
-            <li>Retargeting campaigns</li>
-          </ul>
-          <p className="pt-5">
-            Paid promotion allows reaching the target audience when it is
-            necessary and via social media services in India.
-          </p>
-        </>
-      ),
-    },
-    {
-      title: "Creative Content Production",
-      desc: (
-        <>
-          <p>
-            The primary instrument of promotion using social media is content;
-            however, the medium is social media. In a bid to capture and
-            attract, we create exciting visuals and copy that resonate with your
-            target market with the support of the best social media marketing
-            agency in Gurgaon.
-          </p>
-          <p className="py-5 font-semibold">The content we make is:</p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>Graphics & infographics</li>
-            <li>Short-form videos & reels</li>
-            <li>GIFs & animations</li>
-            <li>Blogs & captions</li>
-            <li>Campaigns of user-generated content</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      title: "Influencer Marketing & Collaborations",
-      desc: (
-        <>
-          <p>
-            The influence of social media personalities on the decision-making
-            process of customers may be tremendous. As a gurgaon based social
-            media agency, we associate your brand with influencers who will help
-            you reach more.
-          </p>
-          <p className="py-5 font-semibold">We do this by:</p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>
-              Identifying the influencers who will be relevant to the target
-              niche
-            </li>
-            <li>Managing the influencer partnerships</li>
-            <li>The Evaluation of How Your Campaign is Working</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      title: "Analytics & Reporting",
-      desc: (
-        <>
-          <p>
-            Our data-based campaigns are almost all based on data. We provide
-            detailed reports to our customers that encompass different measures
-            of performance, including the number of people that were reached,
-            engaged, clicked, and converted.
-          </p>
-          <p className="pt-3">
-            This is the information that we apply in achieving a better return
-            on our investments using the best crm service design tools.
-          </p>
-        </>
-      ),
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Research & Audit",
-      description:
-        "Learning your brand in and out, determining your competition.",
-    },
-    {
-      step: "Step 02",
-      title: "Strategy Development",
-      description: "Make decisions on the content and the advertisement plan.",
-    },
-    {
-      step: "Step 03",
-      title: "Content Creation",
-      description: "Creating posts, videos, and campaigns will become real.",
-    },
-    {
-      step: "Step 04",
-      title: "Execution",
-      description:
-        "Posting, administration of advertisements, and interaction with the users.",
-    },
-    {
-      step: "Step 05",
-      title: "Monitoring & Reporting",
-      description: "Measuring the outcomes and optimising the campaigns.",
-    },
-    {
-      step: "Step 06",
-      title: "Continuous Improvement",
-      description:
-        "Adjust tactics on analytics to grow continuously and enhance ROI.",
+      desc: "Live analytics interpretation to continually refine creative assets, posting cadences, and ad spend efficiency.",
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const solutionsData = [
+    {
+      title: "Social Media Strategy & Planning",
+      desc: "Comprehensive market positioning, competitor analysis, channel selection (Meta, LinkedIn, X, YouTube), and quarterly content calendars.",
+    },
+    {
+      title: "Social Media Management Services",
+      desc: "End-to-end editorial execution including graphic design, short-form video creation, community management, and active reputation monitoring.",
+    },
+    {
+      title: "Social Media Advertising",
+      desc: "High-converting paid campaigns across Meta Ads, LinkedIn Sponsored Content, and YouTube Ads optimized for lowest cost-per-lead.",
+    },
+    {
+      title: "Creative Content Production",
+      desc: "Scroll-stopping infographics, motion graphics, carousel decks, and persuasive copy written to turn casual scrollers into followers.",
+    },
+    {
+      title: "Influencer Collaborations",
+      desc: "Identifying, vetting, and managing niche-specific influencer partnerships that bring trusted third-party validation to your brand.",
+    },
+    {
+      title: "Analytics & Attribution Reporting",
+      desc: "Transparent monthly performance reporting tracking audience growth, click-through rates, and downstream revenue conversions.",
+    },
+  ];
+
+  const steps = [
+    {
+      title: "Research & Audit",
+      description: "Analyze your existing profiles, target demographics, and top competitor playbooks.",
+    },
+    {
+      title: "Strategy Development",
+      description: "Define core content pillars, creative guidelines, posting cadence, and ad budget allocations.",
+    },
+    {
+      title: "Content Creation",
+      description: "Produce high-impact graphic design, video reels, and compelling caption copy.",
+    },
+    {
+      title: "Execution & Amplification",
+      description: "Publish content at optimal engagement times, run targeted ad campaigns, and engage the community.",
+    },
+    {
+      title: "Monitoring & Reporting",
+      description: "Track live KPIs, community sentiment, audience growth, and direct response actions.",
+    },
+    {
+      title: "Continuous Improvement",
+      description: "Refine creative angles and audience targeting to scale return on ad spend continuously.",
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Social Media Marketing Agency in India | Growth-Driven SMM Services
@@ -526,225 +382,411 @@ const SMM = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <Banner15 />
-      {/* <TopRatedCompany
-        title="Connect, engage, and grow online"
-        description={[
-          `We are operating your social media so as to establish communities that are appreciative of your brand, as well as to provide the best social media marketing services in India that result in engagement.`,
-        ]}
-        image={assets.smm1}
-        isHidden={true}
-        background={assets.patternBg1}
-      />
-      <TopRatedCompany
-        reverse={true}
-        title="Importance of Social Media Marketing"
-        description={[
-          `Social Media Marketing (SMM) is a process that is directed at promoting products, services, or brands through social media. It entails creating appealing content, running sponsored campaigns and creating a positive rapport with the target market. Brand is ensured by the community social network structure:`,
-          <>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Targets the right audience.</li>
-              <li>Holds the summit of the adversaries.</li>
-              <li>Earn confidence and the name.</li>
-              <li>Pulls the sales and right leads.</li>
-            </ul>
-            <br />
-            <p>
-              More precisely, the social media services in India are the new
-              means of reaching your consumers via your brand, backed by the
-              social media campaigns that facilitate the growth.
-            </p>
-          </>,
-        ]}
-        image={assets.smm10}
-        imageHeight="aspect-[1/1]"
-        isHidden={true}
-        background={assets.patternBg1}
-      /> */}
-      <FullSizeImageSection
-        backgroundImage={assets.smmFullSize}
-        title="Connect, engage, and grow online"
-        description="We are operating your social media so as to establish communities that are appreciative of your brand, as well as to provide the best social media marketing services in India that result in engagement."
-        buttonText="Grow My Audience"
-        buttonLink="/contact-us"
-        overlayColor="bg-black/40"
-      />
-      <div className="pt-10 bg-black"></div>
-      <TopRatedCompany
-        title="Importance of Social Media Marketing"
-        description={[
-          `In case you are contemplating the importance of social media marketing, some of the reasons why companies are willing to invest their resources in social media marketing that as presented by a reliable social media agency in Gurgaon, include:`,
-          <>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
-              {[
-                {
-                  title: "Large Reach of the Audience",
-                  text: "There are over 5 billion users of social media in the world.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Cost-Effective Promotion",
-                  text: "It is cheaper than the conventional advertising strategies.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Targeted Advertising",
-                  text: "The advert will be tailored to look more attractive to the age, location, likes, and behaviour.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Brand Visibility",
-                  text: "Brand loyalty is achieved through frequent social media services in India.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "Customer Engagement",
-                  text: "Add and Behave with customers as frequently as you desire.",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "High Conversion Rate",
-                  text: "Feedback and Social proof is a major factor that buyers put into consideration prior to making their decisions.",
-                  color: "text-blue-500",
-                },
-              ].map(({ title, text, color }, idx) => (
-                <li
-                  key={idx}
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (MICROSOFT-STYLE: Editorial, Minimalist, High Contrast)   */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-[90vh] lg:min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-gradient-to-r from-[#121316] via-[#1a1c22] to-[#121316]"
+        aria-label="Social Media Marketing Hero"
+      >
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 text-left">
+              {/* Microsoft-style Yellow/Amber Accent Pill */}
+              <span className="inline-block bg-[#ffb900] text-black font-semibold text-xs px-2.5 py-1 mb-6 rounded-none tracking-wide">
+                New
+              </span>
+
+              <h1
+                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold leading-[1.12] tracking-tight mb-6"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Growth-Driven Social Media Marketing That Converts
+              </h1>
+
+              <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-xl font-normal">
+                Big ideas, engaging content, thriving communities. We manage and scale your social presence with data-backed strategies and creative paid ads engineered to drive viral engagement.
+              </p>
+
+              <div>
+                {/* Microsoft-style Solid White High-Contrast Button */}
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3.5 px-8 rounded-none transition-colors duration-150 shadow-lg text-base"
                 >
-                  <strong className={`${color} drop-shadow-md`}>{title}</strong>{" "}
-                  – {text}
-                </li>
-              ))}
-            </ul>
-          </>,
-        ]}
-        image={assets.smm1}
-        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
-        background={assets.patternBg1}
-        isHidden="hidden"
-      />
-      <BenefitsSection
-        heading="Our Social Media Marketing Services"
-        desc={
-          <>
-            Being one of the top Best marketing agency in Gurgaon, we offer
-            all-in-one solutions to your business requirements with the help of
-            potent social media marketing services, complemented by our{" "}
-            <a
-              href="https://www.capyngen.com/digital-marketing"
-              className="text-blue-500 font-bold"
+                  Learn more
+                  <ArrowRight className="w-4 h-4 text-slate-900" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Graphic (Clean Showcase against sleek dark canvas) */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="w-full max-w-[560px] xl:max-w-[620px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={assets.smm1}
+                  alt="Social Media Marketing Showcase"
+                  className="w-full h-auto object-contain rounded-none drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. IMPORTANCE OF SOCIAL MEDIA MARKETING (SPLIT LIGHT SECTION)             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.smm10}
+                alt="Importance of Social Media Marketing"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              Digital Marketing Services
-            </a>{" "}
-            and SEO Services.
-          </>
-        }
-        benefits={solutionsData}
-        image={assets.smm2}
-        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
-        footerNote=""
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Amplify Your Brand on Social Media"
-        description={[
-          <>
-            Through the social media services in India, you can expand your
-            interactions, reach, and turnover and apply the proven social media
-            marketing services through <Link to={"/"}>Capyngen</Link>, a social
-            media agency in Gurgaon.
-          </>,
-        ]}
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <IndustryServices
-        heading="Top Social Media Marketing Tactics"
-        subheading="We are not using some lucky shots in our company. Our strategies are a combination of creative minds, figures and trends. The principal social media marketing strategies that we utilise include the following:"
-        cardBg="bg-gray-700"
-        cardText="text-white"
-        cardDescText="text-white"
-        services={servicesData}
-      />
-      <GetStarted
-        reverse={true}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-black hover:scale-105 hover:bg-white hover:text-black"
-        buttonTextColor="text-white"
-        title="Why Choose Us as Your Social Media Marketing Partner?"
-        description={[
-          <>
-            <p>
-              The market does not have a limit on the number of agencies. But
-              the following 5 points are what we boast of:
+              Importance of Social Media Marketing
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                Social Media Marketing (SMM) is the fastest route to direct customer engagement. It involves producing compelling content, managing active communities, and running targeted paid promotions.
+              </p>
+            </div>
+            <ul className="space-y-3.5 text-slate-700 text-base">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Massive Reach:</strong> Connect with billions of active social media users globally.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Cost-Effective:</strong> Higher ROI and agility compared to legacy promotional media.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Precision Targeting:</strong> Serve ads tailored by age, interests, job title, and real-time behavior.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">High Conversion Rates:</strong> Customer trust and social proof directly accelerate buying decisions.</span>
+              </li>
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Strategy Session
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FULL SIZE BANNER 1: CONNECT, ENGAGE, AND GROW ONLINE                   */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.smmFullSize}
+            alt="Connect, engage, and grow online"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Connect, engage, and grow online
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            We manage your social presence to build engaged communities that convert into loyal brand advocates.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Grow My Audience
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. OUR SOCIAL MEDIA MARKETING SERVICES (6 CARDS - White Background)        */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Social Media Marketing Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              All-in-one solutions to elevate your brand presence across Facebook, Instagram, LinkedIn, and emerging platforms.
             </p>
-            <p className="py-4">
-              Ready-made strategies are not used here, we design tailor-made
-              strategies to fit your business.
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {solutionsData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. TOP SOCIAL MEDIA MARKETING TACTICS (6 Image Cards - White Background)   */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Top Social Media Marketing Tactics
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              We combine creative storytelling, trending formats, and live data feedback to keep your brand at the cultural forefront.
             </p>
-            <p>
-              Our designers, writers, and strategists co-ordinate well and we
-              have a dynamic and creative team.
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-500 transition-colors duration-150 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+
+                <div className="relative h-56 overflow-hidden border-b border-slate-200">
+                    <img
+                      src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                  </div>
+
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3
+                      className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. OUR SMM PROCESS (6 Dark Cards)                                          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Social Media Marketing Process
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Our campaigns are conducted in a proven step-by-step fashion to ensure predictable audience growth.
             </p>
-            <p className="py-4">
-              Our credibility is on the basis of our prowess, which is proven by
-              Years of experience in local and foreign markets, giving rise to
-              varying industry bases.
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {st.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {st.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. FULL SIZE BANNER 2: MAKE YOUR BRAND GO VIRAL                            */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.smmFullSize2}
+            alt="Make your brand go viral"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Make your brand go viral
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            A creative, data-driven campaign can attract thousands of new followers and keep existing customers engaged.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              CONTACT US
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. WHY CHOOSE US AS YOUR SMM PARTNER (Split White Section)                 */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Us as Your SMM Partner?
+            </h2>
+            <ul className="space-y-4 text-slate-700 text-base">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Custom Strategies:</strong> No cookie-cutter packages; every strategy is customized to your exact growth objectives.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Multidisciplinary Team:</strong> Experienced copywriters, video animators, and media buyers working cohesively.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Global & Local Experience:</strong> Established authority scaling campaigns across domestic and international markets.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Genuine Growth Partner:</strong> We align our goals directly with your revenue and customer acquisition metrics.</span>
+              </li>
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.smm9}
+                alt="Why Choose Us as Your SMM Partner"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
+      <FAQSection2
+        title="Frequently Asked Questions"
+        desc="Learn more about our social media management packages, advertising platforms, and content production."
+        items={faqItems}
+      />
+
+      {/* ========================================================================= */}
+      {/* 10. BOTTOM FINAL CTA BANNER (Below FAQs)                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Amplify Your Brand on Social Media Today
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Schedule a strategy session with Capyngen to design high-impact social media campaigns that scale customer engagement and revenue.
             </p>
-            <p>
-              Not only do you not just hire a social media marketing company
-              when you are with us, but you are getting a growth partner.
-            </p>
-          </>,
-        ]}
-        image={assets.smm9}
-        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
-      />
-      <HowWeWork
-        heading="Our Social Media Marketing Process"
-        desc="Our campaigns are conducted in a proven step-by-step fashion, which will ensure the success thereof:"
-        steps={steps}
-      />
-      <FullSizeImageSection
-        backgroundImage={assets.smmFullSize2}
-        title="Make your brand go viral"
-        description="A creative campaign, which can attract new followers and keep the existing ones with the help of social media services in India, is one of the best approaches to increasing brand awareness."
-        buttonText="CONTACT US"
-        buttonLink="/contact-us"
-        overlayColor="bg-black/40"
-      />
-      <TopRatedCompany
-        title=""
-        description={[
-          `The world is synonymous with social interactions and your brand must follow the same trend. Social media marketing is not the number game that most individuals would assume. The overall aim in marketing is to win the trust, augment the interactions, and ultimately increase sales.`,
-          <>
-            The social media marketing company is a flawless combination of
-            creative thinking, analytical approach and targeted advertisements.
-            Whether you are a young firm or an already existing brand, it does
-            not matter; our social media services in India will be the key to
-            your sustainable growth.
-          </>,
-        ]}
-        image={assets.smm10}
-        alt="Social Media Marketing Agency in India | Growth-Driven SMM Services"
-        isHidden={true}
-        background={assets.patternBg1}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Get a Social Media Consultation"
-        description={[
-          "It will be difficult to determine the most effective social media marketing services that are particularly designed to suit your business to achieve maximum impact and growth using the best social media services in India.",
-        ]}
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,16 +1,20 @@
-import React from "react";
-import Banner4 from "../components/Banner4";
-import ExpandableGallery from "../components/ExpandableGallery";
-import GetStarted from "../components/GetStarted";
-import TopRatedCompany from "../components/TopRatedCompany";
-import IndustryServices from "../components/IndustryServices";
-import CardsSection from "../components/CardsSection";
-import CardsSectionImage from "../components/CardsSectionImage";
-import TechStack from "../components/TechStack";
-import BenefitsSection from "../components/BenefitsSection";
-import HowWeWork from "../components/HowWeWork";
-import FAQSection2 from "../components/FAQSection2";
-import { assets } from "../assets/assets";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  ChevronRight,
+  CheckCircle2,
+  Shield,
+  ShieldCheck,
+  Layers,
+  Cpu,
+  Coins,
+  Globe,
+  Lock,
+  Zap,
+  Check,
+} from "lucide-react";
 import {
   FaShieldAlt,
   FaCogs,
@@ -21,11 +25,12 @@ import {
   FaDatabase,
   FaMobileAlt,
   FaCreditCard,
-  FaUsers as FaUsersIcon,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
-import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
+import blockchainHeroBg from "../assets/BLOC_KCH_AIN/1.png";
+import blockchainGlobalSphere from "../assets/BLOC_KCH_AIN/2.png";
+import FAQSection2 from "../components/FAQSection2";
+import TechStack from "../components/TechStack";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -100,42 +105,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What is the importance of blockchain for businesses?",
+      name: "Why should my business choose blockchain technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Blockchain development services enhance security, transparency, and performance, helping businesses reduce costs and build trust with customers and partners through custom blockchain solutions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Capyngen provide custom blockchain development?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Capyngen offers custom blockchain development services tailored to your business goals, network requirements, and use cases.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you develop smart contracts?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We develop secure smart contracts on platforms such as Ethereum, Binance Smart Chain (BSC), Solana, and more.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer blockchain application development?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We build secure, scalable, and user-friendly blockchain applications (DApps) using our best blockchain development services.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which industries can use blockchain solutions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Blockchain solutions are widely used across industries including healthcare, finance, insurance, supply chain, education, transportation, and retail.",
+        text: "Blockchain brings transparency, tamper-proof security, automated smart contract execution, and eliminates intermediaries to reduce overall operational costs.",
       },
     },
     {
@@ -143,110 +116,68 @@ const faqSchema = {
       name: "Which blockchain platforms do you work with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our blockchain development services support platforms such as Ethereum, Hyperledger, Solana, Binance Smart Chain, Polkadot, Cardano, and more based on project needs.",
+        text: "We work with Ethereum, Solana, Polygon, Binance Smart Chain, Hyperledger Fabric, Polkadot, and Avalanche depending on your project needs.",
       },
     },
     {
       "@type": "Question",
-      name: "Is blockchain safe for businesses?",
+      name: "Is blockchain secure for enterprise businesses?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Enterprise blockchain solutions use cryptography and decentralized networks, making them more secure and resistant to hacking than traditional systems.",
+        text: "Yes. Cryptographic hashing, consensus algorithms, and decentralized distributed architectures make blockchain far more resilient to unauthorized tampering than conventional databases.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does blockchain development take?",
+      name: "How long does a blockchain development project take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Blockchain development typically takes between 4 to 12 weeks, depending on the project complexity and business requirements.",
+        text: "A typical blockchain project timeline ranges from 4 to 12 weeks depending on smart contract complexity, auditing, and platform architecture requirements.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide blockchain consulting services?",
+      name: "Do you offer smart contract auditing and consulting?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We offer end-to-end blockchain consulting services, from strategy and planning to development and implementation.",
+        text: "Yes. We conduct rigorous security audits, vulnerability assessments, and strategic architectural consulting from ideation to mainnet deployment.",
       },
     },
     {
       "@type": "Question",
-      name: "Can Capyngen integrate blockchain with existing systems?",
+      name: "Can you integrate blockchain with our existing software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We ensure seamless blockchain integration with your existing systems using advanced blockchain software development techniques.",
+        text: "Yes. We build custom middleware, Web3 RPC bridges, and REST/GraphQL APIs that connect decentralized ledgers directly into your existing ERP, CRM, and web applications.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you work with startups?",
+      name: "Do you build custom crypto tokens and NFTs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We provide affordable and scalable blockchain solutions suitable for startups and growing businesses.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer post-launch support and maintenance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We provide ongoing maintenance, updates, and continuous support for enterprise blockchain development projects.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can blockchain solutions operate globally?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. With the right architecture, blockchain technology solutions can support global-scale users and transactions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I start my blockchain project with Capyngen?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You can start by booking a free consultation. Our blockchain development specialists will create a customized blockchain roadmap based on your project requirements.",
+        text: "Yes. We develop ERC-20, ERC-721, ERC-1155, and SPL tokens along with custom minting mechanisms, royalty contracts, and marketplace portals.",
       },
     },
   ],
 };
 
 const BlockchainDevelopment = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const faqItems = [
     {
       question: "What is blockchain development?",
       answer:
-        "The term blockchain development solutions is a process of creating and deploying secure and decentralised systems in which their data is stored in distributed ledgers by professional blockchain development.​",
+        "The blockchain development solutions imply the creation of secure and decentralised systems in which the data is stored in distributed registries. The transaction records enable blockchain technology solutions to promote trust, security, and transparency compared to the case of normal databases.",
     },
     {
-      question: "What is the importance of blockchain to businesses?",
+      question: "Why should my business choose blockchain technology?",
       answer:
-        "Blockchain Development services that are based on blockchain maximise credibility, safety, and performance, assisting companies to reduce costs and increase loyalty among consumers and partners with the help of custom blockchain development.​",
+        "Blockchain development solutions change industries by providing better protection with cryptographic encryption, transparent logs, lower costs, and international availability.",
     },
     {
-      question: "Does Capyngen provide custom blockchain development?",
-      answer:
-        "Absolutely. Our services are custom blockchain development based on your business objectives and network requirements of your blockchain development company.​",
-    },
-    {
-      question: "Are you able to develop smart contracts?",
-      answer:
-        "Yes, we create smart contracts on such platforms as Ethereum, BSC, Solana, etc. as a blockchain application development.​",
-    },
-    {
-      question: "Do you offer development of blockchain apps?",
-      answer:
-        "Yes, we develop secure, scalable and user-friendly blockchain application development (DApps) using our best blockchain development services.​",
-    },
-    {
-      question: "What industries are able to utilise blockchain solutions?",
-      answer:
-        "Blockchain solutions for businesses can be used in industries such as healthcare, finance, insurance, supply chain, education, transport, and retail.​",
-    },
-    {
-      question: "Which blockchain platforms are you involved with?",
+      question: "Which blockchain platforms do you work with?",
       answer:
         "Our blockchain development services company uses Ethereum, Hyperledger, Solana, Binance Smart Chain, Polkadot, Cardano, and others, depending on the needs of customers.​",
     },
@@ -332,61 +263,6 @@ const BlockchainDevelopment = () => {
     },
   ];
 
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Requirement Analysis",
-      description:
-        "Knowing the business requirements and the scope of the project to fit perfectly.",
-    },
-    {
-      step: "Step 02",
-      title: "Blockchain Platform Selection",
-      description:
-        "Select a suitable platform depending on scalability, security and use case.",
-    },
-    {
-      step: "Step 03",
-      title: "Design & Architecture",
-      description:
-        "Design nodes, topology of a network and governance model that guarantees security and scalability.",
-    },
-    {
-      step: "Step 04",
-      title: "Smart Contract Development",
-      description:
-        "Build business processes and automate through smart contracts.",
-    },
-    {
-      step: "Step 05",
-      title: "Decentralized Application (DApp) Development",
-      description:
-        "CDevelop user-friendly DApps that provide decentralised features",
-    },
-    {
-      step: "Step 06",
-      title: "Integration with Existing Systems",
-      description:
-        "Make sure that it is compatible with current databases, ERPs and apps.",
-    },
-    {
-      step: "Step 07",
-      title: "Testing & Security Audit",
-      description:
-        "Functionality test and audit to determine and correct vulnerabilities.",
-    },
-    {
-      step: "Step 08",
-      title: "Deployment",
-      description: "Apply secure user access to all parts.",
-    },
-    {
-      step: "Step 09",
-      title: "Maintenance & Upgrades",
-      description: "Offer continuous support, updates, and scalability.",
-    },
-  ];
-
   const slides = [
     {
       image: assets.blockchainBanner1,
@@ -407,6 +283,52 @@ const BlockchainDevelopment = () => {
       title: "Enterprise Blockchain Solutions",
       subtitle:
         "Enterprise blockchain solutions will help improve security, simplify business operations, and enable massive corporate operations.",
+    },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const steps = [
+    {
+      step: "Step 01",
+      title: "Requirement Analysis",
+      description:
+        "Knowing the business requirements and the scope of the project to fit perfectly.",
+    },
+    {
+      step: "Step 02",
+      title: "Blockchain Platform Selection",
+      description:
+        "Select a suitable platform depending on scalability, security and use case.",
+    },
+    {
+      step: "Step 03",
+      title: "Design & Architecture",
+      description:
+        "Structure the network nodes, consensus mechanisms, and cryptographic model.",
+    },
+    {
+      step: "Step 04",
+      title: "Smart Contract & Core Coding",
+      description:
+        "Develop bug-free, gas-optimized smart contracts and decentralized business logic.",
+    },
+    {
+      step: "Step 05",
+      title: "Rigorous Auditing & Testnet Testing",
+      description:
+        "Audit vulnerabilities, simulate edge cases, and test network performance.",
+    },
+    {
+      step: "Step 06",
+      title: "Mainnet Deployment & Node Management",
+      description:
+        "Deploy to live networks with continuous node health monitoring and upgrades.",
     },
   ];
 
@@ -445,7 +367,7 @@ const BlockchainDevelopment = () => {
           technology solutions, such as the{" "}
           <a
             href="https://www.capyngen.com/website-design-company-india"
-            className="text-blue-500 font-semibold"
+            className="text-blue-600 hover:text-blue-700 underline font-semibold transition-colors"
           >
             ecommerce website design
           </a>
@@ -469,71 +391,45 @@ const BlockchainDevelopment = () => {
         },
         {
           name: "Polygon",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Polygon_Icon.svg/504px-Polygon_Icon.svg.png",
+          icon: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/info/logo.png",
+        },
+        {
+          name: "Hyperledger",
+          icon: "https://avatars.githubusercontent.com/u/7657900?s=200&v=4",
         },
         {
           name: "Binance Smart Chain",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg/1024px-BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg.png?20220816165226",
-        },
-        {
-          name: "Polkadot",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Polkadot_Logo.png/1597px-Polkadot_Logo.png?20220602143035",
+          icon: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/info/logo.png",
         },
       ],
     },
     {
-      title: "Smart Contract Languages",
-      items: [
-        {
-          name: "Solidity",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/9/98/Solidity_logo.svg",
-        },
-        {
-          name: "Rust",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg",
-        },
-        {
-          name: "Move",
-          icon: "https://avatars.githubusercontent.com/u/105913937?s=200&v=4",
-        },
-      ],
-    },
-    {
-      title: "Frontend",
+      title: "Frontend & Web3",
       items: [
         {
           name: "React",
-          icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+          icon: assets.react,
         },
         {
           name: "Next.js",
           icon: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
         },
         {
-          name: "Vue.js",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+          name: "Web3.js",
+          icon: "https://docs.web3js.org/img/web3js.svg",
+        },
+        {
+          name: "Ethers.js",
+          icon: "https://avatars.githubusercontent.com/u/37898297?s=200&v=4",
+        },
+        {
+          name: "MetaMask",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg",
         },
       ],
     },
     {
-      title: "Backend",
-      items: [
-        {
-          name: "Node.js",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-        },
-        {
-          name: "Python",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-        },
-        {
-          name: "Go",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg",
-        },
-      ],
-    },
-    {
-      title: "Blockchain Tools",
+      title: "Developer Tools",
       items: [
         {
           name: "Hardhat",
@@ -547,24 +443,12 @@ const BlockchainDevelopment = () => {
           name: "Ganache",
           icon: "https://avatars.githubusercontent.com/u/22558608?s=200&v=4",
         },
-        {
-          name: "MetaMask",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg",
-        },
-        {
-          name: "Web3.js",
-          icon: "https://docs.web3js.org/img/web3js.svg",
-        },
-        {
-          name: "Ethers.js",
-          icon: "https://avatars.githubusercontent.com/u/37898297?s=200&v=4",
-        },
       ],
     },
   ];
 
   return (
-    <div className="relative">
+    <div className="relative font-sans text-slate-900 bg-white selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Blockchain Development Solutions – India’s Best Blockchain Development
@@ -586,174 +470,439 @@ const BlockchainDevelopment = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <Banner4 slides={slides} />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Build the Future with Blockchain"
-        description="Capyngen will be your preferred choice of state-of-the-art, high-security, and scalable blockchain solutions for businesses. As one of the largest blockchain development company in the world, we accelerate the innovation of your business and keep it at the forefront of the competition.​"
-        buttonText="Contact Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        reverse={true}
-        title="What is Blockchain Development Technology?"
-        description={[
-          `The blockchain development solutions imply the creation of secure and decentralised systems in which the data is stored in distributed registries. The transaction records enable blockchain technology solutions to promote trust, security, and transparency compared to the case of normal databases.`,
-          `As a trusted custom blockchain development provider, Capyngen assists businesses to innovative of blockchain application development using smart contracts, tokens and decentralised networks to develop apps with high levels of trust.​`,
-        ]}
-        image={assets.blockchainDevelopmentCompany}
-        background={assets.patternBg1}
-        isHidden={true}
-        imageHeight="aspect-[1/1]"
-      />
-      <FullSizeImageSection
-        backgroundImage={assets.blockchainDevFullSize}
-        title="Secure your future with blockchain innovation"
-        description="With the provision of our blockchain development services, you will benefit from an open and decentralised blockchain software development system that suits your business requirements perfectly.​"
-        buttonText="Start Building"
-        buttonLink="/contact-us"
-        overlayColor="bg-black/40"
-      />
-      <TopRatedCompany
-        title="Importance of Blockchain in Modern Businesses"
-        description={[
-          <>
-            <p className="mb-3 font-semibold">
-              The blockchain development solutions change industries by
-              providing:
-            </p>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
-              {[
-                "Better protection with cryptographic encryption.",
-                "Verifiable transaction logs that are transparent.",
-                "Lower prices through the removal of middlemen.",
-                "Rapid cross-border transactions.",
-                "Unalterable non-repudiated data storage.",
-                "International availability in favour of successful expansion.",
-              ].map((text, idx) => (
-                <li
-                  key={idx}
-                  className="hover:scale-105 transition-transform duration-300 cursor-default relative pl-4"
-                >
-                  {text}
-                </li>
-              ))}
-            </ul>
-            <p>
-              The enterprise blockchain solutions provided by Capyngen will help
-              companies to modernise operations and become the market leader in
-              terms of digitalisation, being ranked as the best blockchain
-              development services provider.
-            </p>
-          </>,
-        ]}
-        image={assets.blockchain1}
-        background={assets.patternBg1}
-        isHidden={true}
-      />
-      <IndustryServices
-        heading="Blockchain Services We Offer"
-        subheading="Full blockchain development solutions for startups and enterprises of a leading blockchain development company and Custom blockchain development company:"
-        cardBg="bg-gray-700"
-        cardText="text-white"
-        cardDescText="text-white"
-        services={servicesData}
-      />
-      <TechStack
-        heading={
-          <span>
-            Transform Your <Link to={"/web-development"}>Web Development</Link>{" "}
-            and <Link to={"/consulting"}>Consulting</Link> with Our Expert Tech
-            Stack
-          </span>
-        }
-        categories={techStack}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Schedule a Free Blockchain Consultation"
-        description="Introduce yourself to the blockchain development services company to identify the most suitable professional blockchain development solutions of your business idea to implementation."
-        buttonText="Schedule a Consultation"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <BenefitsSection
-        heading="Benefits of Blockchain Solutions"
-        desc="Business solutions Capyngen offers blockchain solutions for businesses, including:"
-        benefits={benefitsSection1}
-        image={assets.blockchainApplications}
-        footerNote={
-          <>
-            A destination of development and maintenance of the{" "}
-            <a
-              href="https://www.capyngen.com/ecommerce-solutions"
-              className="text-blue-500 font-semibold"
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (Sharp Edges / Zero Rounded Corners / Clean Tech Look)     */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-cover bg-center transition-all duration-700"
+        style={{
+          backgroundImage: `url(${slides[activeSlide].image})`,
+        }}
+        aria-label="Blockchain Development Solutions Banner"
+      >
+        {/* Dark Tech Gradient Overlay for Crystal Clear Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050b17] via-[#070e1d]/90 to-[#050b17]/75 backdrop-blur-[1px]" />
+
+        {/* Subtle Background Tech Grid Lines */}
+        <div
+          className="absolute inset-0 opacity-15 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(#3b82f6 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl text-left">
+            <h1
+              className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold leading-[1.14] tracking-tight mb-6"
+              style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              best e-commerce software solutions
-            </a>{" "}
-            to guarantee hassle-free shopping experiences.
-          </>
-        }
-      />
-      <FullSizeImageSection
-        backgroundImage={assets.blockchainDevFullSize2}
-        title="Power your ideas with blockchain technology"
-        description="With the experience of Enterprise blockchain development company, we support the implementation of smart contract to cryptocurrency platform innovation."
-        buttonText="CONTACT US"
-        buttonLink="/contact-us"
-        overlayColor="bg-black/40"
-      />
-      <HowWeWork
-        heading="How Blockchain Development Works"
-        desc="Our structured custom blockchain development model guarantees highly beneficial blockchain development solutions:"
-        steps={steps}
-      />
-      <TopRatedCompany
-        title="Why Choose Capyngen for Blockchain Development"
-        description={[
-          <>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
-              {[
-                "Expert and Proficient Blockchain programmers.",
-                "Full blockchain development services, from concept to implementation.",
-                "Tailored Blockchain development company in India, strategies that best fit your Business.",
-                "Reliable and Secure enterprise blockchain solutions implementations.",
-                "Periodical Maintenance and Troubleshooting Support.",
-                "Top-of-the-line Technology Stack and Fashionable blockchain solutions for businesses remedies.",
-              ].map((text, idx) => (
-                <li
-                  key={idx}
-                  className="hover:scale-105 transition-transform duration-300 cursor-default relative pl-4"
-                >
-                  {text}
-                </li>
-              ))}
-            </ul>
-            <p>
-              Capyngen is recognised worldwide as an empowerment company based
-              on blockchain development solutions on the onshore, nearshore, and
-              offshore models, as the Blockchain development company in India.​
+              {slides[activeSlide].title}
+            </h1>
+
+            <p className="text-slate-200 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl font-normal">
+              {slides[activeSlide].subtitle}
             </p>
-          </>,
-        ]}
-        image={assets.blockchain8}
-        background={assets.patternBg1}
-        isHidden={true}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        title="Launch Your Blockchain Project"
-        description="We provide fast, secure, and constantly innovative enterprise blockchain solutions. Future with your blockchain technology solutions.​"
-        buttonText="Launch Your Project Now"
-        backgroundVideo={assets.backgroundVideo}
-      />
+
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Sharp Navigation Tabs / Indicators */}
+            <div className="flex items-center gap-3 mt-10">
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveSlide(idx)}
+                  aria-label={`Slide ${idx + 1}`}
+                  className={`h-1.5 transition-all duration-300 rounded-none cursor-pointer ${
+                    activeSlide === idx
+                      ? "w-12 bg-blue-500 shadow-sm"
+                      : "w-6 bg-slate-600 hover:bg-slate-500"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. SECTION: Blockchain Services We Offer (Directly Below Hero Section)     */}
+      {/* ========================================================================= */}
+      <section id="services-section" className="py-12 lg:py-16 bg-[#f8fafc] border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <div className="text-xs font-bold tracking-widest text-blue-600 mb-3 uppercase">
+              CAPABILITIES
+            </div>
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Blockchain Services We Offer
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
+              Full blockchain development solutions for startups and enterprises of a leading blockchain development company and Custom blockchain development company:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 rounded-none flex flex-col group"
+              >
+                <div className="h-52 w-full overflow-hidden bg-slate-100 relative rounded-none border-b border-slate-200">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3
+                      className="text-lg sm:text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <div className="text-slate-600 text-sm leading-relaxed">
+                      {item.desc}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. SECTION 1: What is Blockchain Development Technology? (Split)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-stretch">
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6 flex flex-col justify-center">
+              <div className="text-xs font-bold tracking-widest text-blue-600 uppercase">
+                DISTRIBUTED TRUST
+              </div>
+              <h2
+                className="text-slate-900 leading-[1.2] tracking-tight text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                What is Blockchain Development{" "}
+                <span className="text-blue-600">Technology?</span>
+              </h2>
+
+              <p className="text-slate-600 text-sm sm:text-[15px] lg:text-base leading-relaxed">
+                The blockchain development solutions imply the creation of secure and decentralised systems in which the data is stored in distributed registries. The transaction records enable blockchain technology solutions to promote trust, security, and transparency compared to the case of normal databases.
+              </p>
+
+              <p className="text-slate-600 text-sm sm:text-[15px] lg:text-base leading-relaxed">
+                As a trusted custom blockchain development provider, Capyngen assists businesses to innovative of blockchain application development using smart contracts, tokens and decentralised networks to develop apps with high levels of trust.​
+              </p>
+
+              <p className="text-slate-600 text-sm sm:text-[15px] lg:text-base leading-relaxed">
+                Capyngen will be your preferred choice of state-of-the-art, high-security, and scalable blockchain solutions for businesses. As one of the largest blockchain development company in the world, we accelerate the innovation of your business and keep it at the forefront of the competition.​
+              </p>
+            </div>
+
+            {/* Right Visual Image (Sharp Edges, rounded-none) */}
+            <div className="lg:col-span-5 flex">
+              <div className="border border-slate-300 bg-slate-950 shadow-xl rounded-none w-full overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px] lg:min-h-[480px]">
+                <img
+                  src={blockchainGlobalSphere}
+                  alt="Blockchain Development - Capyngen"
+                  className="w-full h-full object-cover rounded-none"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. SECTION 2: Importance of Blockchain in Modern Businesses (6 Cards)      */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <div className="text-xs font-bold tracking-widest text-cyan-400 mb-3 uppercase">
+              ENTERPRISE VALUE
+            </div>
+            <h2
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Importance of Blockchain in Modern Businesses
+            </h2>
+            <p className="text-slate-400 text-base sm:text-lg mt-4 leading-relaxed">
+              The enterprise blockchain solutions provided by Capyngen will help companies to modernise operations and become the market leader in terms of digitalisation, being ranked as the best blockchain development services provider.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Cryptographic Encryption",
+                desc: "Better protection with cryptographic encryption for complete integrity.",
+                icon: <Lock className="text-cyan-400 w-6 h-6" />,
+              },
+              {
+                title: "Transparent Audit Logs",
+                desc: "Verifiable transaction logs that are completely transparent and verifiable.",
+                icon: <ShieldCheck className="text-cyan-400 w-6 h-6" />,
+              },
+              {
+                title: "Lower Operational Costs",
+                desc: "Lower prices through the removal of middlemen and automated settlement.",
+                icon: <Coins className="text-cyan-400 w-6 h-6" />,
+              },
+              {
+                title: "Instant Cross-Border Settlement",
+                desc: "Rapid cross-border transactions without banking delays or friction.",
+                icon: <Zap className="text-cyan-400 w-6 h-6" />,
+              },
+              {
+                title: "Immutable Storage",
+                desc: "Unalterable non-repudiated data storage that guarantees absolute truth.",
+                icon: <Layers className="text-cyan-400 w-6 h-6" />,
+              },
+              {
+                title: "Global Scalability",
+                desc: "International availability in favour of successful enterprise expansion.",
+                icon: <Globe className="text-cyan-400 w-6 h-6" />,
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 p-8 shadow-xl flex flex-col justify-between group transition-all duration-300 rounded-none relative"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-300 rounded-none" />
+
+                <div>
+                  <div className="w-14 h-14 bg-[#101b38] border border-slate-700 flex items-center justify-center rounded-none mb-6 group-hover:border-blue-500 transition-colors">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. SECTION: How Blockchain Development Works (Steps 01 - 06)              */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <div className="text-xs font-bold tracking-widest text-blue-600 mb-3 uppercase">
+              DEPLOYMENT WORKFLOW
+            </div>
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              How Blockchain Development Works
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
+              Our structured custom blockchain development model guarantees highly beneficial blockchain development solutions:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-500 p-8 rounded-none relative group transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 transition-all duration-300 rounded-none" />
+
+                <h3
+                  className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  {st.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {st.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. SECTION 4: Benefits of Blockchain Solutions (9 Bento Cards)            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10">
+            <div className="text-xs font-bold tracking-widest text-cyan-400 mb-3 uppercase">
+              STRATEGIC ADVANTAGES
+            </div>
+            <h2
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Benefits of Blockchain Solutions
+            </h2>
+            <p className="text-slate-400 text-base sm:text-lg mt-4 leading-relaxed">
+              Business solutions Capyngen offers blockchain solutions for businesses, including:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefitsSection1.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 p-8 shadow-xl flex flex-col justify-between group transition-all duration-300 rounded-none relative"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-500 transition-all duration-300 rounded-none" />
+
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. FULL-SIZE INTERSTITIAL IMAGE SECTION 2                                */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.blockchainDevFullSize2}
+            alt="Power your ideas with blockchain technology"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-white">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Power your ideas with blockchain technology
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            With the experience of Enterprise blockchain development company, we support the implementation of smart contract to cryptocurrency platform innovation.
+          </p>
+          <Link
+            to="/contact-us"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all shadow-xl"
+          >
+            CONTACT US <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. SECTION 5: Tech Stack (Clean, Sharp Edges, Light Theme)                */}
+      {/* ========================================================================= */}
+      <div className="bg-white border-b border-slate-200">
+        <TechStack
+          heading="Transform Your Blockchain Architecture with Our Expert Tech Stack"
+          categories={techStack}
+          theme="light"
+        />
+      </div>
+
+      {/* ========================================================================= */}
+      {/* 9. SECTION 7: Launch Your Blockchain Project with Confidence              */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Launch Your Blockchain Project with Confidence
+            </h2>
+            <p className="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed">
+              We provide fast, secure, and constantly innovative enterprise blockchain solutions. Future with your blockchain technology solutions.​
+            </p>
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all duration-300 shadow-xl hover:shadow-blue-500/25 group text-base"
+            >
+              Launch Your Project Now
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10. FAQ SECTION                                                           */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
+
+      {/* ========================================================================= */}
+      {/* 11. FULL-SIZE INTERSTITIAL IMAGE SECTION (Bottom Below FAQs)              */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-t border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.blockchainDevFullSize}
+            alt="Secure your future with blockchain innovation"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-white">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Secure your future with blockchain innovation
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            With the provision of our blockchain development services, you will benefit from an open and decentralised blockchain software development system that suits your business requirements perfectly.​
+          </p>
+          <Link
+            to="/contact-us"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-all shadow-xl"
+          >
+            Start Building <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

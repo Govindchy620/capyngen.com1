@@ -1,13 +1,11 @@
-import { assets } from "../assets/assets";
-import HowWeWork from "../components/HowWeWork";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import Banner8 from "../components/Banner8";
-import GetStarted from "../components/GetStarted";
-import CardsSectionImage from "../components/CardsSectionImage";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Check,
+} from "lucide-react";
 import {
   FaHandsHelping,
   FaSearch,
@@ -16,11 +14,8 @@ import {
   FaBullhorn,
   FaUsers,
 } from "react-icons/fa";
-import CardsSection from "../components/CardsSection";
-import CardsSectionSlider from "../components/CardsSectionSlider";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
-import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -73,6 +68,7 @@ const webpageSchema = {
     ],
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -140,6 +136,7 @@ const serviceSchema = {
   },
   image: "https://www.capyngen.com/assets/webDesign--l8DQpZ8.png",
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -347,6 +344,7 @@ const WebSiteDesign = () => {
         "Combining creativity, technology, and business tactics, Capyngen takes the trust of Indian businesses to create tailor-made, responsive, and scalable website design services across the length and breadth of India.",
     },
   ];
+
   const benefitsData = [
     {
       title: "Custom Design",
@@ -358,13 +356,7 @@ const WebSiteDesign = () => {
     },
     {
       title: "Creative UI/UX",
-      desc: (
-        <span>
-          Trendy, entertaining, and easy-to-navigate{" "}
-          <Link to={"/ui-ux-design-services"}>UI/UX design</Link> interfaces
-          that visitors find irresistible to leave.
-        </span>
-      ),
+      desc: "Trendy, entertaining, and easy-to-navigate UI/UX interfaces that visitors find irresistible to leave.",
     },
     {
       title: "E-commerce Solutions",
@@ -376,237 +368,211 @@ const WebSiteDesign = () => {
     },
     {
       title: "SEO Integration",
-      desc: "All the elements come together to facilitate search rankings e.g. structure, meta tags, and of content.",
+      desc: "All the elements come together to facilitate search rankings e.g. structure, meta tags, and quality content.",
     },
     {
       title: "Performance Optimization",
-      desc: "User experience gets better with a very fast loading of the website and functionalities which are so smooth.",
+      desc: "User experience gets better with a very fast loading of the website and functionalities which are smooth.",
     },
     {
       title: "Analytics & Tracking",
-      desc: "Tools that are fully integrated to effectively capture the data of visitors, their activities on the website, and the performance of the website.",
+      desc: "Tools that are fully integrated to effectively capture visitor data, website activity, and performance.",
     },
     {
       title: "Ongoing Support",
       desc: "Regular maintenance, timely updates, and long-term technical assistance are available.",
     },
   ];
+
   const steps = [
     {
-      step: "Step 01",
       title: "Discovery & Research",
       description:
-        "Getting to know your brand, audience, and objectives to create a strong base.",
+        "Getting to know your brand, audience, and objectives to create a strong base for all design decisions.",
     },
     {
-      step: "Step 02",
       title: "Strategy & Planning",
       description:
-        "Working out details of the site structure, user flow, and key features for a clear plan.",
+        "Working out details of the site structure, user flow, and key features for a clear execution plan.",
     },
     {
-      step: "Step 03",
       title: "Wireframing & UI Design",
       description:
-        "Creating simple layouts and impressive visuals that reflect your ideas.",
+        "Creating simple layouts and impressive visuals that reflect your unique brand identity.",
     },
     {
-      step: "Step 04",
       title: "Development",
       description:
-        "Making websites that are fast, safe, and responsive with the latest technology from the designs.",
+        "Making websites that are fast, safe, and responsive with modern technology from the finalized designs.",
     },
     {
-      step: "Step 05",
       title: "Content Integration",
       description:
-        "Incorporating SEO-friendly text, interactive media, and attractive CTAs.",
+        "Incorporating SEO-friendly text, interactive media, and attractive CTAs to guide user action.",
     },
     {
-      step: "Step 06",
       title: "Testing & Quality Assurance",
       description:
-        "Checking that the performance is good on all browsers and devices.",
+        "Checking that performance, layout, and functionality are flawless on all browsers and devices.",
     },
     {
-      step: "Step 07",
       title: "Launch",
-      description: "Easy installation and going live without any trouble.",
+      description: "Easy installation, seamless deployment, and going live without any downtime or trouble.",
     },
     {
-      step: "Step 08",
       title: "Analytics & Optimization",
       description:
-        "Monitoring user behavior and making your website better for continuous growth.",
+        "Monitoring user behavior and optimizing your website continuously for higher conversion rates.",
     },
     {
-      step: "Step 09",
       title: "Ongoing Support & Maintenance",
       description:
-        "Regular updates, tracking, and patches to keep your site at its best.",
+        "Regular updates, security tracking, and patches to keep your site operating at its peak performance.",
     },
   ];
+
   const cardsSectionImageData1 = [
     {
       title: "Custom Website Design Services",
       description:
         "We make websites that are one-of-a-kind and show off your brand’s identity. Nothing is standard, even the smallest detail is to ensure your business gets noticed online.",
       image: assets.webDesign3,
-      cardBg: "bg-blue-100",
     },
-
     {
       title: "Responsive Website Design Services",
       description:
-        "It doesn’t matter whether someone is visiting your site on a desktop computer, tablet, or mobile phone; it will always be perfect for them and hence a quick and trouble-free user experience.",
+        "It doesn’t matter whether someone is visiting your site on a desktop computer, tablet, or mobile phone; it will always be perfect for them with a quick and trouble-free user experience.",
       image: assets.webDesign4,
-      cardBg: "bg-green-100",
     },
     {
       title: "Creative Website Design Services",
       description:
         "Website designs are modern, eye-catching, and user-friendly that attract new visitors and make them stay on the site for a longer period of time.",
       image: assets.webDesign5,
-      cardBg: "bg-yellow-100",
     },
     {
       title: "Corporate Website Design Services",
       description:
         "Websites that are designed professionally and are scalable get you loved by your customers and hence, your business becomes more powerful.",
       image: assets.webDesign6,
-      cardBg: "bg-pink-100",
     },
     {
       title: "E-commerce Website Design Services",
       description:
         "Online stores that are safe, simple to use with easy and quick checkout are designed just to increase your selling.",
       image: assets.webDesign7,
-      cardBg: "bg-purple-100",
     },
     {
       title: "Landing Page Design Services",
       description:
         "Landing pages with high conversion rates are made to be the source of leads, sign-ups, and get the targeted audience to take the desired next step.",
       image: assets.webDesign8,
-      cardBg: "bg-red-100",
     },
   ];
+
   const cardsSectionDifferentColorData1 = [
     {
       title: "Hands-On Experience",
       description:
-        "The company has the know-how of years and a commendable record of success in creating high-performing websites from diverse sectors.",
-      icon: (
-        <FaHandsHelping className="text-4xl text-white transition-transform duration-300" />
-      ),
-      cardBg:
-        "bg-gradient-to-tr from-[#1e3a8a] to-[#1e40af] hover:from-[#1d4ed8] hover:to-[#2563eb]", // deep to vibrant blue
+        "The company has the know-how of years and a commendable record of success in creating high-performing websites across diverse industry sectors.",
+      icon: <FaHandsHelping className="text-3xl text-blue-400" />,
     },
     {
       title: "SEO-Compatible Method",
       description:
-        "Good quality programming, quick loading times, and search-friendly structures that increase your online visibility.",
-      icon: (
-        <FaSearch className="text-4xl text-white transition-transform duration-300" />
-      ),
-      cardBg:
-        "bg-gradient-to-tr from-[#111827] to-[#374151] hover:from-[#1f2937] hover:to-[#4b5563]", // black to gray
+        "Good quality programming, quick loading times, and search-friendly structures that increase your organic online visibility.",
+      icon: <FaSearch className="text-3xl text-blue-400" />,
     },
     {
       title: "Cheap Web Design Services",
       description:
-        "The customer gets tailor-made solutions in every way, including the price, that do not slightly compromise the quality.",
-      icon: (
-        <FaTags className="text-4xl text-white transition-transform duration-300" />
-      ),
-      cardBg:
-        "bg-gradient-to-tr from-blue-500 to-[#1e293b] hover:from-blue-500 hover:to-blue-500", // navy black to slate gray
+        "The customer gets tailor-made solutions in every way, including price, that do not slightly compromise on engineering quality.",
+      icon: <FaTags className="text-3xl text-blue-400" />,
     },
     {
       title: "Bright Side of Design",
       description:
-        "Just the right combination of contemporary beauty and customer-centric practicality.",
-      icon: (
-        <FaPalette className="text-4xl text-white transition-transform duration-300" />
-      ),
-      cardBg:
-        "bg-gradient-to-tr from-[#374151] to-[#6b7280] hover:from-[#4b5563] hover:to-[#9ca3af]", // mid gray to light gray
+        "Just the right combination of contemporary aesthetics and customer-centric digital practicality.",
+      icon: <FaPalette className="text-3xl text-blue-400" />,
     },
     {
       title: "Action-Oriented Campaigns",
       description:
-        "It is precisely the kind of design that strongly engages the audience, turns visitors into contacts, and eventually to conversions.",
-      icon: (
-        <FaBullhorn className="text-4xl text-white transition-transform duration-300" />
-      ),
-      cardBg:
-        "bg-gradient-to-tr from-[#1e293b] to-[#3b82f6] hover:from-[#2563eb] hover:to-[#60a5fa]", // dark navy to bright blue
+        "Design crafted specifically to strongly engage the audience, turn visitors into contacts, and ultimately drive conversions.",
+      icon: <FaBullhorn className="text-3xl text-blue-400" />,
     },
     {
       title: "Always There for You",
       description:
-        "Our crew, from scheduling to post-launch, is totally committed to smooth communication and continuous support.",
-      icon: (
-        <FaUsers className="text-4xl text-white transition-transform duration-300" />
-      ),
-      cardBg:
-        "bg-gradient-to-tr from-[#0f172a] to-[#4b5563] hover:from-[#1e293b] hover:to-[#6b7280]", // dark slate to gray
-    },
-  ];
-  const cardsSectionSliderData1 = [
-    {
-      title: "E-commerce & Retail",
-      desc: "",
-      image: assets.webDesign11,
-      textColor: "text-white",
-    },
-    {
-      title: "Healthcare & Wellness",
-      desc: "",
-      image: assets.webDesign12,
-      textColor: "text-white",
-    },
-    {
-      title: "Education & E-learning",
-      desc: "",
-      image: assets.webDesign13,
-      textColor: "text-white",
-    },
-    {
-      title: "Real Estate",
-      desc: "",
-      image: assets.webDesign14,
-      textColor: "text-white",
-    },
-    {
-      title: "IT & Software",
-      desc: "",
-      image: assets.webDesign15,
-      textColor: "text-white",
-    },
-    {
-      title: "Corporate & Enterprise Solutions",
-      desc: "",
-      image: assets.webDesign16,
-      textColor: "text-white",
-    },
-    {
-      title: "Travel & Hospitality",
-      desc: "",
-      image: assets.webDesign17,
-      textColor: "text-white",
-    },
-    {
-      title: "Startups & Entrepreneurs",
-      desc: "",
-      image: assets.webDesign18,
-      textColor: "text-white",
+        "Our crew, from initial scheduling to post-launch, is completely committed to transparent communication and continuous support.",
+      icon: <FaUsers className="text-3xl text-blue-400" />,
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const cardsSectionSliderData1 = [
+    {
+      title: "E-commerce & Retail",
+      image: assets.webDesign11,
+    },
+    {
+      title: "Healthcare & Wellness",
+      image: assets.webDesign12,
+    },
+    {
+      title: "Education & E-learning",
+      image: assets.webDesign13,
+    },
+    {
+      title: "Real Estate",
+      image: assets.webDesign14,
+    },
+    {
+      title: "IT & Software",
+      image: assets.webDesign15,
+    },
+    {
+      title: "Corporate & Enterprise Solutions",
+      image: assets.webDesign16,
+    },
+    {
+      title: "Travel & Hospitality",
+      image: assets.webDesign17,
+    },
+    {
+      title: "Startups & Entrepreneurs",
+      image: assets.webDesign18,
+    },
+  ];
+
+  const whyChooseList = [
+    {
+      title: "Custom Website Designs",
+      text: "that reflect your brand concept and distinctive value proposition.",
+    },
+    {
+      title: "Fully Responsive Layouts",
+      text: "to ensure every user gets the exact same frictionless experience on any device.",
+    },
+    {
+      title: "Creative & Modern Interfaces",
+      text: "that attract more attention to your brand and lower bounce rates.",
+    },
+    {
+      title: "Corporate Web Solutions",
+      text: "delivering a professional online identity that is solid, reputable, and reliable.",
+    },
+    {
+      title: "E-commerce Website Designs",
+      text: "built to scale smoothly, secure user checkout, and directly increase your revenue.",
+    },
+    {
+      title: "Recognized by the Industry",
+      text: "trusted nationwide as one of the best website design and development partners.",
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Website Design Company – Best Website Design Company in India
@@ -627,216 +593,460 @@ const WebSiteDesign = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <Banner8
-        titleMain="Website Design"
-        titlePrefix=""
-        titleSuffix="That Works for Your Business"
-        description={
-          <>
-            <span>
-              The world sees your business through your website.{" "}
-              <Link to={"/"}>Capyngen</Link> has the solution for you - Website
-              Design Services, which combine eye-catching design, clever
-              technology, and a clear strategy. We don’t just build websites
-              that look beautiful, they also function. Are you looking for a
-              corporate website, a visually engaging portfolio, or an{" "}
-              <Link to={"/ecommerce-solutions"}>e-commerce</Link>
-              site that attracts and retains customers? Our team is on a mission
-              to deliver your brand the right amount of visibility in the
-              digital space.
-            </span>
-          </>
-        }
-        imageSrc={assets.webDesign1}
-        imageAlt="Ecommerce Design Illustration"
-        bgColor="bg-gray-900"
-        iconColor="bg-blue-700"
-        reverse={false}
-      />
-      <div className="relative z-10">
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            "Do you need the professional services of a web designer? Then contact Capyngen, the best website design company in India, and get tailor-made website design services which take your brand to the next level.",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (Full Screen min-h-screen / Sharp Edges / High Contrast)   */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-gradient-to-b from-[#070e1d] via-[#09152e] to-[#070e1d]"
+        aria-label="Website Design Services Banner"
+      >
+        {/* Subtle Tech Grid Overlay */}
+        <div
+          className="absolute inset-0 opacity-15 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(#3b82f6 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
         />
-        <TopRatedCompany
-          title="Why Choose Capyngen for Website Design Services?"
-          description={[
-            <>
+
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 text-left">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-[1px] w-8 sm:w-12 bg-slate-400" />
+                <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-slate-300 font-bold">
+                  WHAT WE DO <span className="text-blue-400 mx-1">/</span> SERVICES
+                </span>
+                <div className="h-[1px] flex-1 max-w-xs bg-slate-600/50" />
+              </div>
+
+              <h1
+                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-bold leading-[1.15] tracking-tight mb-6"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Website Design{" "}
+                <span className="text-blue-500">
+                  That Works for Your Business
+                </span>
+              </h1>
+
+              <div className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed font-normal">
+                <p>
+                  The world sees your business through your website. Capyngen provides Website Design Services that combine eye-catching design, clever technology, and a clear strategy. We don't just build websites that look beautiful, they also perform seamlessly to elevate your brand presence in the digital space.
+                </p>
+              </div>
+
+              <div>
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+                >
+                  Schedule Free Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Graphic */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="w-full max-w-[560px] xl:max-w-[600px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={assets.webDesign1}
+                  alt="Website Design Services Illustration"
+                  className="w-full h-auto object-contain rounded-none drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. SPLIT INTRO SECTION: WHY CHOOSE CAPYNGEN FOR WEBSITE DESIGN             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.webDesign2}
+                alt="Why Choose Capyngen for Website Design Services"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen for Website Design Services?
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
               <p>
-                We at Capyngen are not just a service provider - we are your
-                digital growth partner. Through our expertise and the skilled
-                team, we develop websites that are visually attractive, easy to
-                navigate, mobile-friendly, and conversion-focused.
+                We at Capyngen are not just a service provider — we are your digital growth partner. Through our expertise and skilled team, we develop websites that are visually attractive, easy to navigate, mobile-friendly, and conversion-focused.
               </p>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
-                {[
-                  {
-                    title: "Custom Website Designs",
-                    text: " that reflect your brand concept.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Fully Responsive Layouts",
-                    text: " to ensure that the user can get the same experience on any device.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Creative & Modern Interfaces",
-                    text: " that attract more attention to your brand.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Corporate Web Solutions",
-                    text: " to a professional online identity that is both strong and reliable.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: (
-                      <>
-                        <Link to={"/ecommerce-website-design"}>
-                          E-commerce Website Designs
-                        </Link>
-                      </>
-                    ),
-                    text: " that are not only scalable but also redirect to increase your revenue.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Recognized by the Industry",
-                    text: " as One of the Best Website Designers.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
+            </div>
+            <ul className="space-y-3.5 text-slate-700 text-base">
+              {whyChooseList.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-slate-900 font-semibold">{item.title}</strong>{" "}
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Strategy Session
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FULL SIZE BANNER 1: BRING YOUR BRAND TO LIFE ONLINE                     */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.webDesignFullSize}
+            alt="Bring your brand to life online"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Bring your brand to life online
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Creating online environments that attract, engage, and uplift the users.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Design My Website
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. OUR WEB DEVELOPMENT FEATURES (6 CARDS - White Background)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Web Development Features
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+
+                <div className="relative h-56 overflow-hidden border-b border-slate-200">
+                    <img
+                      src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                  </div>
+
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between bg-[#f8fafc]">
+                  <div>
+                    <h3
+                      className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Accent Summary Box */}
+          <div className="p-6 bg-[#f8fafc] border border-slate-200 border-l-4 border-l-blue-600 text-slate-800 text-center text-lg sm:text-xl rounded-none shadow-sm">
+            Are you searching for a responsive, creative website design for your business? Contact{" "}
+            <span className="font-semibold text-blue-600">Capyngen</span> right now and get affordable, tailor-made solutions.
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. CAPYNGEN WEBSITE DESIGN PROCESS (9 STEPS)                               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Capyngen Website Design Process
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              At Capyngen, we combine creativity, strategy, and technology to deliver websites that really work. Our organized process guarantees every project is orderly, transparent, and results-driven.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
                   >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>{" "}
-                    {text}
-                  </li>
-                ))}
-              </ul>
-            </>,
-          ]}
-          image={assets.webDesign2}
-          background={assets.patternBg1}
-          isHidden="hidden"
-          imageHeight="aspect-[4/3] md:aspect-[3/4]"
-        />
-        <CardsSectionImage
-          heading="Our Web Development Features"
-          subheading=""
-          services={cardsSectionImageData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            "Are you searching for the services of a responsive or creative website design for your company? Contact Capyngen right now and get the affordable and best website design services directed towards your requirements.",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <HowWeWork
-          heading="Capyngen Website Design Process"
-          desc="At Capyngen, we combine creativity, strategy, and technology to deliver websites that really work. Our organized process guarantees every project to be orderly, open, and results-driven:"
-          steps={steps}
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.webDesignFullSize}
-          title="Bring your brand to life online"
-          description="Creating online environments that attract, engage, and uplift the users."
-          buttonText="Design My Website"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <CardsSection
-          heading="Why Capyngen is the Best Website Design Company"
-          subheading="Capyngen shines out of the pack by creatively combining the art, the science, and the strategy to create websites that merely are not visually striking — but also produce tangible outcomes. This is why we are the first preference of decision-makers in startups, SMEs, and enterprises:"
-          services={cardsSectionDifferentColorData1}
-          cardBg=""
-          headColor="text-white"
-          sectionBg="bg-black"
-          hoverBg=""
-          height="h-72"
-          textColor="text-white"
-          hoverTextColor="transition-all"
-        />
-        <GetStarted
-          reverse={true}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            "To become one of the Best Website Design Companies, Capyngen has had to fuse creative thinking, the latest technology, and a sound commercial approach to build a solid reputation that spans the digital domain. The company is recognized as a leader in providing digital experiences that make a difference in the lives of startups, SMEs and enterprises, and hence, they trust them for such engagements.",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          image={assets.getStarted}
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <BenefitsSection
-          heading="Key Features of Our Website Design Services"
-          desc="At Capyngen, our website design services are specifically made to bring about a positive impact, functionality, and value for the long term. Here are our unique selling points:"
-          benefits={benefitsData}
-          image={assets.webDesign10}
-          footerNote=""
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.webDesignFullSize2}
-          title="Beautiful websites that tell your story"
-          description="We create responsive, innovative, and impactful websites for any brand."
-          buttonText="CONTACT US"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <CardsSectionSlider
-          heading="Industries We Serve"
-          subheading="Our web design and development services span a variety of industries, namely:"
-          cardBg="bg-transparent"
-          hoverBg=" hover:bg-blue-50"
-          textColor="text-gray-800"
-          hoverTextColor=""
-          textSize="text-xl"
-          sectionBg="bg-black/90"
-          height="h-78"
-          headColor="text-white"
-          services={cardsSectionSliderData1}
-          footerNote="We create websites compliant with your industry and business objectives regardless of your niche."
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title=""
-          description={[
-            "Crave a stylish, expandable, and captivating website? Acquire Capyngen's corporate website design services and e-commerce website design services to be the first in the line to grow your business online from the best website design company.",
-          ]}
-          textSize="text-2xl"
-          buttonText="Contact Us"
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
-      </div>
+                    {st.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {st.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. WHY CAPYNGEN IS THE BEST WEBSITE DESIGN COMPANY (6 CARDS)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Capyngen is the Best Website Design Company
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Capyngen shines out of the pack by creatively combining art, science, and strategy to create websites that produce tangible business outcomes.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionDifferentColorData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{item.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. KEY FEATURES OF OUR WEBSITE DESIGN SERVICES (Split White Section)       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.webDesign10}
+                alt="Key Features of Our Website Design Services"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Key Features of Our Website Design Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              At Capyngen, our website design services are specifically made to bring about a positive impact, functionality, and value for the long term.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {benefitsData.map((item, idx) => (
+                <div key={idx} className="p-4 bg-[#f8fafc] border border-slate-200 rounded-none">
+                  <h4 className="font-bold text-slate-900 text-base mb-1" style={{ fontFamily: "'Syne', sans-serif" }}>
+                    {item.title}
+                  </h4>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. INDUSTRIES WE SERVE (8 CARDS)                                          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Industries We Serve
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Our web design and development services span a wide variety of industries worldwide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {cardsSectionSliderData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 flex flex-col rounded-none shadow-xl overflow-hidden group"
+              >
+                <div className="h-40 overflow-hidden bg-slate-900 border-b border-slate-800">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h4
+                    className="text-sm sm:text-base font-bold text-white group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h4>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center text-slate-400 text-sm">
+            We create websites compliant with your industry and business objectives regardless of your niche.
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. FULL SIZE BANNER 2: BEAUTIFUL WEBSITES THAT TELL YOUR STORY            */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.webDesignFullSize2}
+            alt="Beautiful websites that tell your story"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Beautiful websites that tell your story
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            We create responsive, innovative, and impactful websites for any brand.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              CONTACT US
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10. FAQ SECTION                                                           */}
+      {/* ========================================================================= */}
+      <FAQSection2
+        title="Frequently Asked Questions"
+        desc="Find quick answers regarding our website design workflow, turnaround times, and technologies."
+        items={faqItems}
+      />
+
+      {/* ========================================================================= */}
+      {/* 11. BOTTOM FINAL CTA BANNER (Below FAQs)                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Ready to Build Your Website?
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Crave a stylish, scalable, and captivating website? Acquire Capyngen's corporate website design services and e-commerce website design services to grow your business online.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Get in Touch Today
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

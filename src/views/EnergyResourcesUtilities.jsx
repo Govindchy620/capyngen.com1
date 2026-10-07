@@ -535,140 +535,290 @@ const EnergyResourcesUtilities = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (EXPANDABLEGALLERY - RETAINED EXACTLY AS REQUESTED)       */}
+      {/* ========================================================================= */}
       <ExpandableGallery panels={panels} />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Start efficiency making possible through renewable & oil & gas software"
-        description={[
-          "Utilize cutting-edge energy analytics software to make better decisions and attain resource-saving goals.",
-        ]}
-        buttonText="Expert Consultation"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        title="Industry Has Lastly Managed To Go The Tech RoadLeading Energy Management Software Solutions for Modern Utilities"
-        description={[
-          <span>
-            <Link to={"/"}>Capyngen</Link> is an energy management software
-            solutions leader that provides the smart grid software, utility
-            billing software, and renewable energy software.
-          </span>,
-          `Energy analytics software and IoT solutions for energy and utilities that accompany us to the store of news agents are the same as those that allow us to automate operations, optimize energy distribution, and enhance sustainability in our businesses.`,
-          <>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-8 text-gray-300">
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / ENERGY & UTILITIES (SPLIT LIGHT SECTION)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.energyResources6}
+                alt="Energy and Utilities Software Solutions"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Leading Energy Management Software Solutions
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> is an energy management software solutions provider delivering smart grid infrastructure, utility billing platforms, and renewable energy ERP systems.
+              </p>
+              <p>
+                Our advanced energy analytics and IoT telemetry empower power utilities and oil & gas enterprises to automate grid operations, balance peak electrical loads, and drive sustainable resource efficiency.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
               {[
-                {
-                  text: "Power and utilities advanced software",
-                  color: "text-blue-500",
-                },
-                {
-                  text: "Oil, gas, and renewable scalable solutions",
-                  color: "text-blue-500",
-                },
-                {
-                  text: "Energy analytics software driven by data for wise decision-making",
-                  color: "text-blue-500",
-                },
-                {
-                  text: "Real-time monitoring with smart grid solutions",
-                  color: "text-blue-500",
-                },
-                {
-                  text: "Utility software for automated billing and consumption tracking",
-                  color: "text-blue-500",
-                },
-                {
-                  text: "IoT integrations for smart energy management",
-                  color: "text-blue-500",
-                },
-              ].map(({ title, text, color }, idx) => (
-                <li
-                  key={idx}
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                >
-                  {text}
-                </li>
+                "Real-time grid load balancing and automated smart meter consumption tracking.",
+                "Custom ERP systems tailored for oil, gas, solar, and hydro supply chains.",
+                "Predictive analytics engines minimizing transmission loss and equipment downtime.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
               ))}
-            </ul>
-          </>,
-        ]}
-        image={assets.energyResources6}
-        isHidden={true}
-        background={assets.patternBg1}
-      />
-      <IndustryServices
-        heading="Our Energy & Utility Software Solutions"
-        subheading=""
-        services={servicesData}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Realize Smart Grid & Energy Utility Solutions"
-        description={[
-          "Become a Capyngen partner to achieve smart grid software installation and billing system automation.",
-        ]}
-        buttonText="Schedule a Free Consultation"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <CardsSection
-        heading="Why Top Energy Companies Rely on Capyngen"
-        subheading=""
-        services={cardsSectionData1}
-        headColor="text-white"
-        sectionBg="bg-gray-900"
-        cardBg="bg-transparent"
-        hoverBg="shadow-xl hover:shadow-lg hover:shadow-white transition-all"
-        textColor="text-white"
-        hoverTextColor=""
-      />
-      <CardsSectionSlider
-        heading="Every Segment of the Energy Industry has been catered to."
-        subheading=""
-        cardBg="bg-transparent"
-        hoverBg=" hover:bg-blue-50"
-        textColor="text-gray-800"
-        hoverTextColor=""
-        textSize="text-xl"
-        sectionBg="bg-black/90"
-        height="h-78"
-        headColor="text-white"
-        services={cardsSectionSliderData1}
-      />
-      <CardsSection
-        heading="Why Choose Capyngen for Application Solutions"
-        subheading=""
-        services={cardsSectionData2}
-        sectionBg="bg-gray-900"
-        cardBg="border-2 border-white shadow-2xl shadow-gray-800"
-        hoverBg=""
-        height="h-72"
-        textColor="text-white"
-        hoverTextColor=""
-        headColor="text-white"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Make the most of your energy resources today"
-        description={[
-          "Increase productivity and lower your expenses with the help of Capyngen software solutions for energy management.",
-        ]}
-        buttonText="Request a demo"
-        backgroundVideo={assets.backgroundVideo}
-      />
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Energy Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. OUR ENERGY & UTILITY SOFTWARE SOLUTIONS (6 DARK CARDS)                 */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Energy & Utility Software Solutions
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Targeted digital applications crafted to streamline exploration, grid management, and billing administration.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. WHY TOP ENERGY COMPANIES RELY ON CAPYNGEN (6 LIGHT CARDS)             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Top Energy Companies Rely on Capyngen
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Proven domain expertise, seamless legacy integration, and dependable support for critical utility assets.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-600 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-slate-600 text-sm leading-relaxed mt-2">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. SEGMENTS SERVED ACROSS THE ENERGY ECOSYSTEM (6 DARK CARDS)            */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Segments Served Across the Energy Landscape
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Tailored software architectures serving every sector of the modern utilities value chain.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionSliderData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.desc && (
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. ARCHITECTURAL & TECHNOLOGY PILLARS (LIGHT CARDS)                       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Architectural & Technology Pillars
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Building dependable, cloud-native utility software powered by telemetry, analytics, and resilient security.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 border border-slate-200 bg-slate-50 flex flex-col justify-between rounded-none shadow-sm hover:border-blue-600 transition-colors duration-150 relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-600 text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-slate-600 text-sm leading-relaxed mt-2">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Make the Most of Your Energy Resources Today
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Increase productivity, lower expenses, and modernize customer management with Capyngen software solutions for energy and utilities.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

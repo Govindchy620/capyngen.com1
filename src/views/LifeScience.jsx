@@ -491,86 +491,251 @@ const LifeScience = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER4 - RETAINED EXACTLY AS REQUESTED)                 */}
+      {/* ========================================================================= */}
       <Banner4 slides={slides} />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title={
-          <span>
-            Schedule a Demo for Pharma <Link to={"/"}>IT Services</Link>
-          </span>
-        }
-        description={[
-          "Experience secure, scalable pharma IT services and clinical trial management software.",
-        ]}
-        textSize="text-2xl"
-        buttonText="Schedule a Demo"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        title="Transforming Life Sciences with Cutting-Edge Software."
-        description={[
-          "Capyngen delivers custom life sciences software solutions with the objective to simplify clinical trials, the laboratory information management system, and to open new digital healthcare solutions. We are experts in pharma IT services, biotech, and research and use these skills to help organizations raise their productivity, accuracy, and compliance levels while also inviting innovation.",
-        ]}
-        image={assets.lifeScience4}
-        background={assets.patternBg1}
-        imageHeight="aspect-[1/1]"
-        isHidden="hidden"
-      />
-      <CardsSectionImage
-        heading="Life Sciences Software Solutions from Our Side"
-        subheading=""
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Partner with a Trusted Life Sciences Software Development Company"
-        description={[
-          "Capyngen builds custom biotech software solutions and medical research software for growth.",
-        ]}
-        buttonText="Talk to Our Experts"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <BenefitsSection
-        heading="Why Capyngen for Life Sciences Software?"
-        desc=""
-        reverse={true}
-        benefits={solutionsData}
-        image={assets.lifeScience11}
-        footerNote=""
-      />
-      <IndustryServices
-        heading="Technologies We Use"
-        subheading="Leading-Edge Technological Solutions for Life Sciences"
-        services={servicesData}
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Ready to Transform Your Life Sciences Operations?"
-        description={[
-          "Empower your pharmaceutical, biotech, or research organization with secure and scalable digital solutions.",
-        ]}
-        buttonText="Work With Us"
-        backgroundVideo={assets.backgroundVideo}
-      />
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / LIFE SCIENCES (SPLIT LIGHT SECTION)                         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.lifeScience4}
+                alt="Life Sciences Software Solutions"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Transforming Life Sciences with Cutting-Edge Software
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> delivers custom life sciences software solutions engineered to simplify clinical trials, modernize laboratory information systems (LIMS), and power new digital healthcare ecosystems.
+              </p>
+              <p>
+                We partner with pharmaceutical giants, biotech innovators, and medical research institutes to heighten productivity, maintain rigorous FDA and HIPAA compliance, and accelerate life-saving discovery.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Strict compliance with HIPAA, FDA 21 CFR Part 11, and GDPR guidelines.",
+                "Real-time sample tracking and automated laboratory management protocols.",
+                "Seamless integration with medical IoT, laboratory instruments, and cloud analytics.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Pharma Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. LIFE SCIENCES SOFTWARE SOLUTIONS (6 DARK CARDS)                       */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Life Sciences Software Solutions
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Specialized platforms accelerating clinical discovery, laboratory operations, and healthcare delivery.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. TECHNOLOGIES WE USE (LIGHT CARDS)                                      */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Technologies We Leverage
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Leading-edge technical capabilities engineered for speed, high precision, and unyielding compliance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.desc && (
+                    <p className="text-slate-600 text-sm leading-relaxed mt-2">
+                      {item.desc}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. WHY CAPYNGEN FOR LIFE SCIENCES (SPLIT DARK SECTION)                    */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative flex justify-center order-2 lg:order-1">
+            <div className="border border-slate-700 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
+              <img
+                src={assets.lifeScience11}
+                alt="Why Capyngen for Life Sciences"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Capyngen for Life Sciences?
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              We synthesize clinical domain knowledge with state-of-the-art engineering to deliver reliable healthcare platforms:
+            </p>
+
+            <div className="space-y-4 pt-2">
+              {solutionsData.map((benefit, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 border border-slate-800 bg-[#070e1d] flex items-start gap-4 hover:border-blue-500 transition-colors duration-150"
+                >
+                  <div className="w-2.5 h-2.5 rounded-none bg-blue-500 mt-2 shrink-0" />
+                  <div>
+                    <h4
+                      className="font-bold text-white text-sm sm:text-base leading-snug"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {benefit.title}
+                    </h4>
+                    {benefit.desc && (
+                      <p className="text-slate-300 text-sm mt-1 leading-relaxed">
+                        {benefit.desc}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Ready to Transform Your Life Sciences Operations?
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Empower your pharmaceutical, biotech, or research organization with secure, scalable, and compliant digital solutions.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

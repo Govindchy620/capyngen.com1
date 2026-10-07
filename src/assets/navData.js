@@ -15,7 +15,7 @@ export const navItems = [
         links: [
           { label: "Web Development", href: "/web-development" },
           { label: "App Development", href: "/app-development" },
-          { label: "Custom AI Solution", href: "/custom-ai-solutions" },
+          { label: "Custom AI Solutions", href: "/custom-ai-solutions" },
           {
             label: "E-Commerce Solutions",
             href: "/ecommerce-solutions",
@@ -58,7 +58,7 @@ export const navItems = [
         ],
       },
       {
-        title: "Advanced Technologies",
+        title: "Enhanced Tech",
         links: [
           {
             label: "Artificial Intelligence",

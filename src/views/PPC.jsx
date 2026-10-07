@@ -1,28 +1,18 @@
 import React from "react";
-import Banner from "../components/Banner";
-import { assets } from "../assets/assets";
-import OurServices from "../components/OurServices";
-import HowWeWork from "../components/HowWeWork";
-import WhyChoose from "../components/WhyChoose";
-import TechnologiesCarousel from "../components/TechnologiesCarousel";
-import FAQSection2 from "../components/FAQSection2";
-import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import BenefitsSection from "../components/BenefitsSection";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
-import TopRatedCompany from "../components/TopRatedCompany";
-import { LifeBuoy, Sparkles } from "lucide-react";
-import Banner3 from "../components/Banner3";
-import Banner8 from "../components/Banner8";
-import GetStarted from "../components/GetStarted";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 import {
   FaCheckCircle,
   FaDraftingCompass,
   FaExchangeAlt,
   FaRocket,
 } from "react-icons/fa";
-import CardsSectionImage from "../components/CardsSectionImage";
-import { Helmet } from "react-helmet-async";
-import FullSizeImageSection from "../components/FullSizeImageSection";
+import { assets } from "../assets/assets";
+import FAQSection2 from "../components/FAQSection2";
 
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -93,6 +83,7 @@ const webpageSchema = {
     name: "Capyngen",
   },
 };
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -160,6 +151,7 @@ const serviceSchema = {
   },
   image: "https://www.capyngen.com/assets/ppc1-HKkEwlmX.png",
 };
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -218,7 +210,7 @@ const PPC = () => {
     {
       question: "What are the fundamentals of pay-per-click advertising?",
       answer:
-        "Pay-per-click advertising will not involve any charge until users click your ads on Google Ads, Microsoft Ads, Meta Ads, and social sites. Capyngen specialises in keyword research, ad copy testing, landing page optimization and conversion tracking to achieve maximum results.​",
+        "Pay-per-click advertising will not involve any charge until users click your ads on Google Ads, Microsoft Ads, Meta Ads, and social sites. Capyngen specialises in keyword research, ad copy testing, landing page optimization and conversion tracking to achieve maximum results.",
     },
     {
       question:
@@ -247,7 +239,7 @@ const PPC = () => {
       question:
         "What are the prices of professional PPC management services in India?",
       answer:
-        "Capyngen plans start at very affordable pricing (10% of ad spend), including strategy, daily optimisation, and reporting. Larger budgets are supported with custom enterprise plans to ensure improved ROAS.​",
+        "Capyngen plans start at very affordable pricing (10% of ad spend), including strategy, daily optimisation, and reporting. Larger budgets are supported with custom enterprise plans to ensure improved ROAS.",
     },
     {
       question: "Is it possible to use PPC to compete with big brands?",
@@ -258,7 +250,7 @@ const PPC = () => {
       question:
         "Why is Capyngen different from the other PPC agencies in India?",
       answer:
-        "Capyngen offers 24/7 monitoring, combines Google Ads, Meta Ads, Microsoft Advertising, and e-commerce platforms, and uses a proprietary bid algorithm. A 92% client retention rate reflects our position as a top PPC service provider in India.​",
+        "Capyngen offers 24/7 monitoring, combines Google Ads, Meta Ads, Microsoft Advertising, and e-commerce platforms, and uses a proprietary bid algorithm. A 92% client retention rate reflects our position as a top PPC service provider in India.",
     },
     {
       question: "What is Capyngen doing to ensure PPC advertising success?",
@@ -266,178 +258,96 @@ const PPC = () => {
         "Capyngen provides performance guarantees: Week 1 setup, Week 2 optimisation, Month 1 break-even ROAS, and Month 2 at 4X target. Strategy meetings and a transparent Looker Studio dashboard ensure full accountability.",
     },
   ];
+
   const solutionsData = [
     {
       title: "Google Ads Management",
-      desc: (
-        <>
-          <p>
-            We create and implement Google Ads pay per click, which brings
-            specific visitors and maximises the return on investment.
-          </p>
-          <p className="py-5">
-            The following are services that we offer in the google ppc agency:
-          </p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>Search Ads (intent-based searches)</li>
-            <li>Display Ads (brand visibility)</li>
-            <li>Shopping Ads (to e-commerce stores)</li>
-            <li>Video Ads (on YouTube)</li>
-            <li>Remarketing Ads (to re-appeal to lost visitors)</li>
-          </ul>
-        </>
-      ),
+      desc: "Comprehensive Search, Display, Shopping, and YouTube Video Ads created and fine-tuned for high-intent search queries and optimal return on ad spend.",
     },
     {
       title: "Social Media PPC Advertising",
-      desc: (
-        <>
-          <p>
-            Customers can be found mostly on social media sites. With our social
-            media advertisement campaigns, the brands can achieve the right
-            audience using the ppc marketing agency knowledge.
-          </p>
-          <p className="py-5">Our strengths are the following platforms:</p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>Facebook &amp; Instagram Ads</li>
-            <li>LinkedIn Ads (b2b is the best fit)</li>
-            <li>Twitter (X) Ads</li>
-            <li>TikTok Ads</li>
-            <li>Influencer-supported promotions</li>
-          </ul>
-        </>
-      ),
+      desc: "Hyper-targeted paid campaigns across Facebook, Instagram, LinkedIn, and X engineered to engage prospective buyers and drive lower CPA lead generation.",
     },
     {
       title: "PPC Management Services",
-      desc: (
-        <>
-          <p>
-            It is not a matter of just having ads, but the optimisation makes
-            the difference. With our ppc management services, you are confident
-            of having your campaigns in their best.
-          </p>
-          <p className="py-5">We handle:</p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>Keyword research &amp; targeting</li>
-            <li>Ad copy creation &amp; A/B testing</li>
-            <li>Bid strategy optimisation</li>
-            <li>Landing page optimization</li>
-            <li>Conversion tracking/reporting</li>
-          </ul>
-        </>
-      ),
+      desc: "Continuous bid strategy adjustments, keyword negative matching, landing page conversion rate testing, and cross-channel attribution reporting.",
     },
     {
       title: "E-commerce PPC Advertising",
-      desc: (
-        <>
-          <p>
-            In online stores, pay-per-click (PPC) advertising campaign is now
-            vital, as far as survival is concerned. Through Best ppc services in
-            India, we assist e-commerce brands to make more sales by attracting
-            and re-marketing their audience well.
-          </p>
-          <p className="py-5">
-            E-commerce PPC package that we present to the table include:
-          </p>
-          <ul className="list-disc list-inside space-y-3">
-            <li>Google Shopping Ads</li>
-            <li>Amazon PPC</li>
-            <li>Retargeting of products dynamically</li>
-            <li>
-              Paid advertising in the marketplace (Flipkart, Myntra, etc.)
-            </li>
-          </ul>
-        </>
-      ),
-    },
-  ];
-  const steps = [
-    {
-      step: "Step 01",
-      title: "Business Analysis",
-      description: "Breaking down your goals, market and your competition.",
-    },
-    {
-      step: "Step 02",
-      title: "Keyword Research",
-      description: "Obtaining low-cost and high-converting keywords.",
-    },
-    {
-      step: "Step 03",
-      title: "Campaign Setup",
-      description: "Campaign design involves ad groups, targeting and bidding.",
-    },
-    {
-      step: "Step 04",
-      title: "Ad Creation",
-      description: "A beautiful blend of the promotion text with graphics.",
-    },
-    {
-      step: "Step 05",
-      title: "Launch & Monitoring",
-      description:
-        "With real-time monitoring, it is possible to implement campaigns and monitor them at the same time.",
-    },
-    {
-      step: "Step 06",
-      title: "Optimisation",
-      description:
-        "Revision of the bids, targeting and creatives based on the performance attained as Top ppc ad expert in India.",
-    },
-  ];
-  const features = [
-    {
-      icon: <FaCheckCircle className="w-10 h-10 text-blue-500" />,
-      title: "Expert Team",
-      description:
-        "The fields where our professionals have acquired their certifications are Google Ads pay per click and Meta Ads.",
-    },
-    {
-      icon: <FaDraftingCompass className="w-10 h-10 text-blue-500" />,
-      title: "Personalized Strategies",
-      description:
-        "The ever-customised campaigns to suit your needs by the Google ppc agency.",
-    },
-    {
-      icon: <FaRocket className="w-10 h-10 text-blue-500" />,
-      title: "Results Measured by Data",
-      description: "Decision-making using analytics alone.",
-    },
-    {
-      icon: <FaExchangeAlt className="w-10 h-10 text-blue-500" />,
-      title: "Comprehensive Performance Measures",
-      description:
-        "Observe regular reports in easy-to-understand charts and tables on ROI.",
-    },
-  ];
-  const cardsSectionImageData1 = [
-    {
-      title: "SEO",
-      description: "An incremental process that builds credibility.",
-      image: assets.ppc6,
-      cardBg: "bg-blue-100",
-    },
-    {
-      title: "Social Media Marketing",
-      description:
-        "Good brand awareness, but might not necessarily translate to immediate gain.",
-      image: assets.ppc7,
-      cardBg: "bg-pink-100",
-    },
-    {
-      title: "PPC Marketing",
-      description:
-        "Makes real-time customer contacts and offers accountable ROI with ppc management services.",
-      image: assets.ppc8,
-      cardBg: "bg-pink-100",
+      desc: "Product feed optimization for Google Shopping, Amazon PPC, and marketplace ads (Flipkart, Myntra) with dynamic retargeting to maximize sales.",
     },
   ];
 
-  useSplitTextAnimation("h1");
+  const steps = [
+    {
+      title: "Business Analysis",
+      description: "Analyze your commercial goals, margin requirements, customer lifetime value, and competitor campaigns.",
+    },
+    {
+      title: "Keyword & Audience Research",
+      description: "Identify high-intent, low-waste search keywords and granular in-market audience segments.",
+    },
+    {
+      title: "Campaign Architecture Setup",
+      description: "Structure ad groups, match types, conversion tracking tags, and automated smart bidding rules.",
+    },
+    {
+      title: "Ad Creative & Copy Creation",
+      description: "Write compelling headlines, test dynamic ad assets, and build high-converting landing page variants.",
+    },
+    {
+      title: "Launch & Live Monitoring",
+      description: "Deploy campaigns with live real-time bid monitoring to avoid wasted spend in initial learning phases.",
+    },
+    {
+      title: "Continuous Optimisation",
+      description: "Weekly negative keyword pruning, demographic adjustments, and creative refreshing to scale ROAS.",
+    },
+  ];
+
+  const features = [
+    {
+      icon: <FaCheckCircle className="text-3xl text-blue-400" />,
+      title: "Certified Specialists",
+      description: "Google Ads Premier and Meta Certified media buyers managing your campaigns directly.",
+    },
+    {
+      icon: <FaDraftingCompass className="text-3xl text-blue-400" />,
+      title: "Personalized Strategies",
+      description: "Bespoke campaign funnels customized to your profit margins, target CAC, and inventory speed.",
+    },
+    {
+      icon: <FaRocket className="text-3xl text-blue-400" />,
+      title: "Data-Driven Execution",
+      description: "Decisions guided by rigorous statistical testing, predictive bidding algorithms, and conversion tracking.",
+    },
+    {
+      icon: <FaExchangeAlt className="text-3xl text-blue-400" />,
+      title: "Transparent Dashboards",
+      description: "24/7 access to live Looker Studio dashboards tracking impressions, clicks, leads, and ROAS in real time.",
+    },
+  ];
+
+  const cardsSectionImageData1 = [
+    {
+      title: "SEO",
+      description: "An organic compounding process that builds long-term domain authority and brand credibility over months.",
+      image: assets.ppc6,
+    },
+    {
+      title: "Social Media Marketing",
+      description: "Builds wide brand awareness and community trust across channels, supporting ongoing buyer retention.",
+      image: assets.ppc7,
+    },
+    {
+      title: "PPC Marketing",
+      description: "Generates real-time customer contacts within hours with precise budget control and accountable, instant ROI.",
+      image: assets.ppc8,
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       <Helmet>
         <title>
           Pay-Per-Click Advertising Company in India | Best PPC Services
@@ -458,326 +368,457 @@ const PPC = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <div className="lg:sticky inset-0">
-        <Banner8
-          titleMain="Pay-Per-Click Advertising Services"
-          titlePrefix=""
-          titleSuffix="That Drive Instant Results"
-          description={
-            <>
-              <p className="text-sm md:text-lg">
-                The necessity of fast and high-quality leads is the primary
-                concern of any organisation to emerge in the digital market of
-                the modern world. Even though the best seo services and SEO are
-                successful in the long term, businesses still need visibility
-                that is immediate and that they can measure their return on
-                investment. The case is simply that Pay-Per-Click Advertising
-                (PPC) would serve as a remedy for a ppc marketing agency.​
-              </p>
-              <p className="text-sm md:text-lg">
-                As the leading google ppc agency, we are the professionals in
-                accomplishing Pay-Per-Click Advertising (PPC) ad campaigns that
-                succeed and introduce the appropriate pool of visitors, trigger
-                the leads and establish grounds to proceed with the conversions
-                further by utilizing ppc services. Whether you are a startup or
-                an existing brand, the pay per click services offered to you by
-                our Pay-per-Click Advertising (PPC) are avenues that can help
-                you to stay ahead of your competitors as a pay per click
-                marketing agency.​
-              </p>
-            </>
-          }
-          imageSrc={assets.ppc1}
-          imageAlt="Pay-Per-Click Advertising Company in India | Best PPC Services"
-          bgColor="bg-gray-900"
-          iconColor="bg-blue-700"
-          reverse={false}
-        />
-      </div>
-      {/* Foreground Content (scrolls over background) */}
-      <div className="relative z-10">
-        <TopRatedCompany
-          title="What is Pay-Per-Click Advertising?"
-          description={[
-            <>
-              <p>
-                Pay-per-Click is an online advertising platform in which
-                marketers pay a fee as long as their advertisement is clicked.
-                By doing this, businesses would not only appear on the search
-                engine but also on the social media platform, thereby gaining
-                visitors and possible customers without necessarily relying on
-                the organic results using ppc management services.
-              </p>
-              <p className="pt-4">
-                Part of the key contenders of the PPC package are:
-              </p>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-4 text-gray-300">
-                {[
-                  {
-                    title:
-                      "Google Ads pay per click advertisement (Search, Display, Shopping, YouTube).",
-                    text: "",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Microsoft Ads (Bing Ads)",
-                    text: "",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Meta Ads (Facebook and Instagram ads).",
-                    text: "",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "LinkedIn Sponsored Content",
-                    text: "",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Twitter (X) Ads",
-                    text: "",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "E-commerce Advertisements (Amazon, Flipkart, etc.)",
-                    text: "",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                  >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>{" "}
-                    {text}
-                  </li>
-                ))}
-              </ul>
-              <p className="pt-4">
-                The ideal pay per click ads management services enable you to
-                bring the appropriate message to the appropriate audience at the
-                appropriate time using Best ppc services in India.​
-              </p>
-            </>,
-          ]}
-          image={assets.ppc2}
-          alt="Pay-Per-Click Advertising Company in India | Best PPC Services"
-          background={assets.patternBg1}
-          isHidden="hidden"
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.ppcFullSize}
-          title="Maximize ROI with smart PPC campaigns"
-          description="Through the process of running data-driven Ads, we can convert the traffic of clients to flow of money to the clients adopting Top ppc ad expert in India strategies."
-          buttonText="Start Campaign"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <TopRatedCompany
-          title="Why Choose Pay-Per-Click Marketing?"
-          reverse={true}
-          description={[
-            <>
-              <p>
-                In case, you would like to understand why businesses would
-                invest so much in pay per click marketing, this is the case with
-                our ppc services:
-              </p>
-              <p className="pt-4">
-                These are some of the primary Pay-Per-Click Advertising (PPC)
-                sites:
-              </p>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-4 text-gray-300">
-                {[
-                  {
-                    title: "Immediate Publicity",
-                    text: "Be top of Google in a few hours.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Very Niche Campaigns",
-                    text: "Advertisements can be listed based on keyword, demographic, interests, and behavior.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Budget Control",
-                    text: "It is your own decision on how much money you will use per day, week or month.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Measurable ROI",
-                    text: "All the clicks, impressions and conversions are measurable.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Improved Conversion",
-                    text: "Pay-Per-Click Advertising (PPC) advertisement targets individuals who have already shown interest in your product/service.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Scalable Marketing",
-                    text: "Start small and add more and more campaigns as they prove to be successful.",
-                    color: "text-blue-500",
-                  },
-                  {
-                    title: "Competitive Advantage",
-                    text: "Be at the top before the search results comes to your rivals.",
-                    color: "text-blue-500",
-                  },
-                ].map(({ title, text, color }, idx) => (
-                  <li
-                    key={idx}
-                    className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                  >
-                    <strong className={`${color} drop-shadow-md`}>
-                      {title}
-                    </strong>{" "}
-                    - {text}
-                  </li>
-                ))}
-              </ul>
-              <p className="pt-4">
-                That is why the pay per click services can be discussed as the
-                most effective paid marketing services.​
-              </p>
-            </>,
-          ]}
-          image={assets.ppc3}
-          alt="Pay-Per-Click Advertising Company in India | Best PPC Services"
-          background={assets.patternBg1}
-          isHidden="hidden"
-        />
-        <BenefitsSection
-          heading="Our Pay-Per-Click Advertising Services"
-          desc="Being a ppc management services company and a result-oriented company, we offer comprehensive paid advertising that is results-oriented and is fully tailored to achieve the objectives of your business as a Digital marketing company in Gurgaon."
-          benefits={solutionsData}
-          image={assets.ppc4}
-          footerNote=""
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Remarketing & Retargeting Campaigns"
-          description={[
-            "The majority of visitors do not buy anything or convert the first time they come there. Our remarketing programs will continue to bring them back until they decide to purchase or initiate contact with you through pay per click ads.",
-            "Therefore, you can always be in contact with the leads that are the most important to you.",
-          ]}
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <HowWeWork
-          heading="How We Develop Custom AI Solutions"
-          desc=""
-          steps={steps}
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Benefits of Working With a PPC Company"
-          description={[
-            "Working with an experienced Pay-Per-Click Advertising (PPC) company, you will not worry about receiving the expert recommendations, the maximum profit, and a competitive advantage over competitors in the form of pay per click marketing agency.",
-            <>
-              <p>The advantages associated with it include:</p>
-              <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto my-4 ">
-                <li
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                >
-                  You have certified ppc services at your disposal.
-                </li>
-                <li
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                >
-                  The industry and analytics: the most effective tools.
-                </li>
-                <li
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                >
-                  The exchange rates increase.
-                </li>
-                <li
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                >
-                  Wasteful expenditure on advertisements is reduced.
-                </li>
-              </ul>
-              <p>
-                In addition, returns on investment are greater since there is
-                constant optimization.​
-              </p>
-            </>,
-          ]}
-          image={assets.ppc5}
-          alt="Pay-Per-Click Advertising Company in India | Best PPC Services"
-        />
-        <FullSizeImageSection
-          backgroundImage={assets.ppcFullSize2}
-          title="Get instant visibility online"
-          description="The targeted pay per click advertising strategy aims at generating traffic and interested leads in the product or service being advertised."
-          buttonText="CONTACT US"
-          buttonLink="/contact-us"
-          overlayColor="bg-black/40"
-        />
-        <WhyChoose
-          heading="Why Choose  Us"
-          intro="Proven Experience -Unknown Success in executing up to 10K+ Pay-Per-Click Advertising (PPC) campaigns."
-          features={features}
-        />
-        <CardsSectionImage
-          heading="Pay-Per-Click Advertising vs. Other Promotion Channels"
-          subheading={
-            <>
-              <p>
-                Although tools such as SEO, content production, and social media
-                are effective in the long term, Pay-Per-Click Advertising (PPC)
-                would give agility and precision of focus that no other tool
-                will give a Digital marketing company in Gurgaon. A combination
-                of Pay-Per-Click Advertising (PPC) + SEO + Social Media is the
-                most potent digital strategy.
-              </p>
-            </>
-          }
-          services={cardsSectionImageData1}
-          sectionBg="bg-gray-800"
-          headColor="text-white"
-          cardBg=""
-          textSize="text-md"
-          hoverBg="hover:bg-gray-200"
-        />
-        <GetStarted
-          reverse={false}
-          backgroundColor="bg-blue-900"
-          textColor="text-white"
-          title="Conclusion"
-          description={[
-            "However, in the digital space, one cannot afford to wait months before getting results. This is, however, the fact that lots of businesses use pay per click services campaigns; it allows them to get an immediate exposure, precise targeting, and ROI can be measured.",
-            "Whether you are a small company or a large corporation, our ppc services will enable you be able to think big and implement Pay-Per-Click Advertising (PPC) ad campaigns that will help you grow your business significantly.",
-            <>
-              <a
-                href="https://www.capyngen.com/cybersecurity"
-                className="font-bold text-blue-500"
+
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (MICROSOFT-STYLE: Editorial, Minimalist, High Contrast)   */}
+      {/* ========================================================================= */}
+      <section
+        className="relative min-h-[90vh] lg:min-h-screen text-white flex items-center justify-center pt-28 sm:pt-32 pb-20 border-b border-slate-800 overflow-hidden bg-gradient-to-r from-[#121316] via-[#1a1c22] to-[#121316]"
+        aria-label="Pay-Per-Click Advertising Hero"
+      >
+        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 text-left">
+              {/* Microsoft-style Yellow/Amber Accent Pill */}
+              <span className="inline-block bg-[#ffb900] text-black font-semibold text-xs px-2.5 py-1 mb-6 rounded-none tracking-wide">
+                New
+              </span>
+
+              <h1
+                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold leading-[1.12] tracking-tight mb-6"
+                style={{ fontFamily: "'Syne', sans-serif" }}
               >
-                Cybersecurity
-              </a>
-              -protected platforms ensure safe transactions while our{" "}
-              <a
-                href="https://www.capyngen.com/ecommerce-website-design"
-                className="text-blue-500 font-bold"
+                Pay-Per-Click Advertising Services That Drive Instant Results
+              </h1>
+
+              <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-xl font-normal">
+                Big ideas, precision bidding, measurable return. As a leading Google & Meta ads partner, we execute data-backed PPC campaigns that attract high-intent buyers, boost qualified leads, and maximize your ROAS.
+              </p>
+
+              <div>
+                {/* Microsoft-style Solid White High-Contrast Button */}
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3.5 px-8 rounded-none transition-colors duration-150 shadow-lg text-base"
+                >
+                  Learn more
+                  <ArrowRight className="w-4 h-4 text-slate-900" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Graphic (Clean Showcase against sleek dark canvas) */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="w-full max-w-[560px] xl:max-w-[620px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={assets.ppc1}
+                  alt="PPC Advertising Showcase"
+                  className="w-full h-auto object-contain rounded-none drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. WHAT IS PAY-PER-CLICK ADVERTISING? (SPLIT LIGHT SECTION)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.ppc2}
+                alt="What is Pay-Per-Click Advertising"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              What is Pay-Per-Click Advertising?
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                Pay-Per-Click is a high-speed digital advertising model in which marketers only pay when a qualified user clicks on their ad. It allows your business to appear instantly at the top of search results and social feeds without waiting for organic rankings.
+              </p>
+            </div>
+            <ul className="space-y-3.5 text-slate-700 text-base">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>Google Ads (High-intent Search, Display, Shopping, and YouTube).</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>Meta Ads (Facebook and Instagram targeted user feeds).</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>LinkedIn Sponsored Content for executive B2B decision-makers.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span>E-commerce marketplace ads on Amazon and regional portals.</span>
+              </li>
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
               >
-                E commerce Services
-              </a>{" "}
-              complement PPC for online stores.
-            </>,
-            "In case you are seeking a reputable pay per click advertising company that will provide high-quality pay per click marketing agency in India and other parts of the world, then you have arrived at the right destination.",
-          ]}
-          backgroundVideo={assets.backgroundVideo}
-        />
-        <FAQSection2 items={faqItems} />
-        {/* <ScrollRevealEffect /> */}
-      </div>
+                Schedule Strategy Session
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FULL SIZE BANNER 1: MAXIMIZE ROI WITH SMART PPC CAMPAIGNS               */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.ppcFullSize}
+            alt="Maximize ROI with smart PPC campaigns"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Maximize ROI with smart PPC campaigns
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Through data-driven bid management, we convert qualified prospect traffic into predictable revenue streams.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              Start Campaign
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. WHY CHOOSE PAY-PER-CLICK MARKETING? (Split Light Section)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#f8fafc] text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Pay-Per-Click Marketing?
+            </h2>
+            <ul className="space-y-3.5 text-slate-700 text-base">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Immediate Visibility:</strong> Appear at the very top of Google and Meta feeds in just hours.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Hyper-Niche Targeting:</strong> Reach buyers filtered by exact commercial keywords and intent.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Total Budget Control:</strong> Set exact limits on daily, weekly, and monthly campaign spend.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Measurable ROAS:</strong> Transparent conversion attribution on every rupee invested.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <span><strong className="text-slate-900">Instant Competitive Advantage:</strong> Outrank legacy competitors immediately.</span>
+              </li>
+            </ul>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[520px]">
+              <img
+                src={assets.ppc3}
+                alt="Why Choose Pay-Per-Click Marketing"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. OUR PPC ADVERTISING SERVICES (4 CARDS - White Background)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Pay-Per-Click Advertising Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Tailored, results-driven paid advertising packages designed to achieve aggressive commercial targets.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            {solutionsData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. OUR PPC CAMPAIGN PROCESS (6 Dark Cards)                                 */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our PPC Campaign Process
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              We engineer, launch, and optimize your paid advertising campaigns through a rigorous empirical process.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {st.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {st.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. FULL SIZE BANNER 2: GET INSTANT VISIBILITY ONLINE                      */}
+      {/* ========================================================================= */}
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={assets.ppcFullSize2}
+            alt="Get instant visibility online"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Get instant visibility online
+          </h2>
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Targeted pay-per-click advertising puts your offerings right in front of high-intent searchers ready to convert.
+          </p>
+          <div className="pt-2">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+            >
+              CONTACT US
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. WHY CHOOSE US (4 Feature Cards - Dark Section)                          */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Us as Your PPC Partner
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Proven track record managing successful pay-per-click ad campaigns across diverse industries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feat, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="mb-4">{feat.icon}</div>
+                  <h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {feat.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {feat.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 9. PPC VS. OTHER PROMOTION CHANNELS (3 Image Cards - White Background)     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              PPC vs. Other Promotion Channels
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              While SEO and organic social build lasting brand authority, PPC delivers instant agility and laser precision. A combined strategy is unbeatable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+
+                <div className="relative h-56 overflow-hidden border-b border-slate-200">
+                    <img
+                      src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                  </div>
+
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3
+                      className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 10. FAQ SECTION                                                           */}
+      {/* ========================================================================= */}
+      <FAQSection2
+        title="Frequently Asked Questions"
+        desc="Explore answers regarding our PPC management pricing, expected ROAS timelines, and platform coverage."
+        items={faqItems}
+      />
+
+      {/* ========================================================================= */}
+      {/* 11. BOTTOM FINAL CTA BANNER (Below FAQs)                                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#060e1d] text-white border-t border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Ready to Accelerate Your Customer Acquisition?
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+              Partner with certified PPC experts to launch campaigns that increase qualified sales leads, reduce cost per acquisition, and scale your business.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              >
+                Schedule Free PPC Consultation
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -501,83 +501,273 @@ const CpgDistribution = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER16 - RETAINED EXACTLY AS REQUESTED)                */}
+      {/* ========================================================================= */}
       <Banner16 />
-      <BenefitsSection
-        heading="Reasons why digital transformation is necessary for CPG distributors"
-        desc={
-          <span>
-            Fast stock flow, properly operating supply chains, and brand
-            recognition are especially required in the consumer packaged goods
-            (CPG) sector. Consumers who utilise digital channels require easy
-            ordering, availability of products in real time, and the ease of the
-            delivery tracking system. Through the integration of Digital
-            Marketing Solution for the CPG industry and modern CPG software
-            solution, <Link to={"/"}>Capyngen</Link> is enabling the
-            distributors worldwide not only to streamline their operations and
-            increase their revenues but also to make a better connection with
-            the retailers and consumers, using the help of reliable CPG
-            distribution services and the tailor-made IT services for CPG
-            distribution sector in India.
-          </span>
-        }
-        benefits={solutionsData}
-        image={assets.cpg1}
-        footerNote=""
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Need inventory management solutions or IT services for the CPG distribution ERP software?"
-        description={[
-          "Collaborate with Capyngen, the CPG industry's best IT solutions in India, to streamline your business globally with reliable CPG distribution services.",
-        ]}
-        buttonText="Partner with Us"
-        textSize="text-2xl"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <CardsSectionImage
-        heading="Key Features and Benefits"
-        subheading=""
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <CardsSectionSlider
-        heading="Industries We Serve"
-        subheading=""
-        cardBg="bg-transparent"
-        hoverBg=" hover:bg-blue-50"
-        textColor="text-gray-800"
-        hoverTextColor=""
-        textSize="text-xl"
-        sectionBg="bg-black/90"
-        height="h-78"
-        headColor="text-white"
-        services={cardsSectionSliderData1}
-      />
-      <HowWeWork heading="Our Process" desc="" steps={steps} />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Revamp your distribution channel using the consumer packaged goods software solutions of Capyngen"
-        description={[
-          "Call us to receive tailored supply chain software to CPG firms and retail distribution management software solutions. Get the next level of CPG distribution services with a reliable partner in technology across the globe.",
-        ]}
-        textSize="text-2xl"
-        buttonText="Get a Free Consultation"
-        backgroundVideo={assets.backgroundVideo}
-      />
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / CPG DISTRIBUTION (SPLIT LIGHT SECTION)                      */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.cpg1}
+                alt="CPG Distribution Digital Transformation"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Digital Transformation in CPG Distribution
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                Fast inventory velocity, resilient supply chains, and transparent retailer-distributor relationships are critical in the consumer packaged goods (CPG) sector. Modern omnichannel buyers require instant stock visibility and automated reordering.
+              </p>
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> equips distributors, manufacturers, and FMCG wholesalers worldwide with modern CPG ERP software, warehouse automation, and customized retail distribution platforms.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              {[
+                "Real-time multi-warehouse inventory optimization and automated dispatch tracking.",
+                "Seamless integration with Amazon, Flipkart, and global B2B procurement marketplaces.",
+                "Custom CPG ERP software streamlining order lifecycle, billing, and supplier collaboration.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule CPG Consultation
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. KEY FEATURES AND DISTRIBUTION SOLUTIONS (DARK CARDS GRID)              */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Key Features & Distribution Solutions
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Automated supply chains, scalable B2B/B2C platforms, and real-time inventory telemetry for modern consumer brands.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <div className="text-slate-300 text-sm leading-relaxed mt-2">
+                    {item.description}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. STRATEGIC CAPABILITIES FOR CPG BRANDS (LIGHT CARDS)                     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Strategic Capabilities for CPG Brands
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Empowering distributors and wholesalers with end-to-end supply chain visibility and digital market reach.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutionsData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-8 rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <h3
+                  className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-150"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  {item.title}
+                </h3>
+                <div className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  {item.desc}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. CONSUMER GOODS VERTICALS WE SERVE (DARK CARDS)                         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Consumer Goods Verticals We Serve
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Proven software solutions serving FMCG, apparel, consumer electronics, and food & beverage distribution networks.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionSliderData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. OUR CPG IMPLEMENTATION PROCESS (LIGHT CARDS)                           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our CPG Implementation Process
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              A structured multi-phase rollout ensuring seamless data migration and uninterrupted supply chain operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {steps.map((step, idx) => (
+              <div
+                key={idx}
+                className="p-6 border border-slate-200 bg-slate-50 rounded-none hover:border-blue-600 transition-colors duration-150 relative group"
+              >
+                <div className="text-blue-600 font-mono text-sm font-semibold tracking-wider mb-2">
+                  {step.step}
+                </div>
+                <h3
+                  className="text-lg font-bold text-slate-900 mb-2 leading-snug"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Revamp Your Distribution Channels with Capyngen
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Connect with us to deploy tailored supply chain software, warehouse automation, and retail distribution management solutions.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };

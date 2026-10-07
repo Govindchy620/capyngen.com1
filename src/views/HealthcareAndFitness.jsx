@@ -507,160 +507,302 @@ const HealthcareAndFitness = () => {
         </script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION (BANNER11 - RETAINED EXACTLY AS REQUESTED)                */}
+      {/* ========================================================================= */}
       <Banner11
         heading=" with IT Solutions Beyond Imagination"
         highlight="Transforming Healthcare & Fitness"
         description="One of the innovative ways to improve patient care is developing software which will automate the process of hospitals, clinics and fitness centres."
         cards={marketingCards}
       />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Want to Make a Difference in Your Healthcare or Fitness Business?"
-        description={[
-          <span>
-            Coordinate a meeting with our professionals and perceive how{" "}
-            <Link to={"/digital-marketing"}>digital solutions</Link> can turn
-            round your operations.
-          </span>,
-        ]}
-        buttonText="Schedule a Free Strategy Session"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TopRatedCompany
-        reverse={true}
-        title="Healing & Fitness Revolutioned by IT"
-        description={[
-          <>
-            <p>
-              Capyngen is a healthcare app development company that can be
-              relied on to come up with practically implementing healthcare
-              mobile applications and telemedicine software solutions which
-              simplify operations and promote patient welfare.
-            </p>
-            <p>
-              We are the enablers of hospitals, clinics, and fitness centers to
-              undergo a digital transformation process that is smooth and
-              efficient, meeting standards, and increasing the engagement of
-              patients and clients.
-            </p>
-            <ul className="list-disc list-inside space-y-4 text-lg max-w-3xl mx-auto mt-8 text-gray-300">
+
+      {/* ========================================================================= */}
+      {/* 2. OVERVIEW / HEALTHCARE & FITNESS (SPLIT LIGHT SECTION)                  */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 relative order-2 lg:order-1 flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[540px]">
+              <img
+                src={assets.healthcareFitness5}
+                alt="Healthcare and Fitness IT Revolution"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Healthcare & Fitness Revolutionized by IT
+            </h2>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                <Link to="/" className="text-blue-600 hover:underline font-semibold">Capyngen</Link> is a trusted healthcare and fitness app development company engineering HIPAA-compliant mobile applications, telemedicine software, and hospital management ecosystems that elevate patient outcomes.
+              </p>
+              <p>
+                We enable hospitals, private practices, and fitness studios to undergo friction-free digital transformation, enhancing member retention and clinical workflow efficiency.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
               {[
-                {
-                  title: "",
-                  text: "Health & fitness digital transformation",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "",
-                  text: "Boosted operational efficiency and better communication",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "",
-                  text: "Patient empowerment via technology",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "",
-                  text: "Flexible solutions for any healthcare facility",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "",
-                  text: "Systems designed for trust & regulatory compliance",
-                  color: "text-blue-500",
-                },
-                {
-                  title: "",
-                  text: "IT services for a healthcare system that leads the future",
-                  color: "text-blue-500",
-                },
-              ].map(({ title, text, color }, idx) => (
-                <li
-                  key={idx}
-                  className={`hover:scale-105 transition-transform duration-300 cursor-default relative pl-4`}
-                >
-                  {text}
-                </li>
+                "Strict HIPAA & GDPR compliance built into every database and API layer.",
+                "Real-time telehealth consultations and secure electronic health records (EHR).",
+                "Connected fitness tracking apps integrating wearable devices and IoT hardware.",
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-none bg-blue-600 mt-2 shrink-0" />
+                  <p className="text-slate-700 text-sm sm:text-base">{point}</p>
+                </div>
               ))}
-            </ul>
-          </>,
-        ]}
-        image={assets.healthcareFitness5}
-        background={assets.patternBg1}
-        isHidden="hidden"
-      />
-      <IndustryServices
-        heading={
-          <span>
-            Complete Healthcare & Fitness <Link to={"/"}>IT Services</Link>
-          </span>
-        }
-        subheading=""
-        services={servicesData}
-      />
-      <CardsSection
-        heading="Industry Challenges We Solve"
-        subheading="Working on the most necessary medical and health problems"
-        services={cardsSectionData2}
-        sectionBg="bg-black"
-        cardBg="bg-gradient-to-br from-[#000]/90 to-gray-800/90 hover:bg-gradient-to-tl hover:-translate-y-1 transition-all ease-in-out shadow-xl shadow-gray-700/50 hover:shadow-white/30"
-        headColor="text-white"
-        hoverBg=" hover:bg-gray-700"
-        textColor="text-white"
-        hoverTextColor=""
-        textSize="text-md"
-        height="h-72"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Book Your Personalized Demo"
-        description={[
-          "Gain first-hand experience of futuristic HealthcareAndFitness IT solutions with Capyngen. Arrange a live LMS demo, and find out how we can revolutionize your learning ecosystem.",
-        ]}
-        buttonText="Book Now"
-        backgroundVideo={assets.backgroundVideo}
-      />
-      <TypesWeDevelop
-        heading="Why Choose Capyngen?"
-        subheading="Your trusted IT partner for the healthcare and fitness sector."
-        buttonText="Let's Contact"
-        image={assets.healthcare}
-        types={typesData}
-      />
-      <CardsSectionImage
-        heading="Technologies We Use"
-        subheading="Modern Tech Stack for Healthcare & Fitness Solutions"
-        services={cardsSectionImageData1}
-        sectionBg="bg-gray-800"
-        headColor="text-white"
-        cardBg=""
-        textSize="text-md"
-        hoverBg="hover:bg-gray-200"
-      />
-      <GetStarted
-        reverse={false}
-        backgroundColor="bg-blue-900"
-        textColor="text-white"
-        buttonColor="bg-white hover:scale-105"
-        buttonTextColor="text-black"
-        title="Digitize Your Healthcare Operations Today"
-        description={[
-          "Boost patient care and operational efficiency with HIPAA-compliant healthcare software solutions.",
-        ]}
-        buttonText="Get a Free Consultation"
-        backgroundVideo={assets.backgroundVideo}
-      />
+            </div>
+
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-none transition-colors duration-150 shadow-md group text-base"
+              >
+                Schedule Healthcare Strategy Session
+                <span className="text-blue-400 group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. INDUSTRY CHALLENGES WE SOLVE (DARK CARDS GRID)                         */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Industry Challenges We Solve
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Eliminating administrative friction, securing confidential patient health records, and enabling connected fitness.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionData2.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="text-blue-400 text-3xl mb-5">
+                    {item.icon}
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-slate-300 text-sm leading-relaxed mt-2">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4. COMPLETE HEALTHCARE & FITNESS IT SERVICES (LIGHT CARDS)               */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Complete Healthcare & Fitness IT Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Custom-built architectures crafted for hospitals, digital clinics, telehealth providers, and gym networks.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-md relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 border border-slate-200 overflow-hidden rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 5. TECHNOLOGIES WE USE (6 DARK CARDS)                                     */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Technologies We Use
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+              Modern tech stacks engineered for resilient security, cloud scale, and real-time biometric metrics.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-blue-400 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. WHY CHOOSE CAPYNGEN (SPLIT LIGHT SECTION)                             */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="border border-slate-200 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
+              <img
+                src={assets.healthcare}
+                alt="Why Choose Capyngen Healthcare"
+                className="w-full h-auto object-cover rounded-none"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <h2
+              className="text-slate-900 text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Why Choose Capyngen?
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Your trusted technological partner for hospital grade stability and HIPAA-governed product development:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {typesData.map((benefit, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-600 transition-colors duration-150"
+                >
+                  <div className="text-blue-600 text-2xl mt-1 shrink-0">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h4
+                      className="font-bold text-slate-900 text-sm sm:text-base leading-snug"
+                      style={{ fontFamily: "'Syne', sans-serif" }}
+                    >
+                      {benefit.title}
+                    </h4>
+                    {benefit.desc && (
+                      <p className="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
+                        {benefit.desc}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 7. CALL TO ACTION BANNER                                                  */}
+      {/* ========================================================================= */}
+      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Digitize Your Healthcare & Fitness Operations Today
+            </h2>
+            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Boost patient care, operational efficiency, and member retention with HIPAA-compliant healthcare and fitness software solutions.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+              >
+                Work With Us
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 8. FAQ SECTION                                                            */}
+      {/* ========================================================================= */}
       <FAQSection2 items={faqItems} />
-      {/* <ScrollRevealEffect /> */}
     </div>
   );
 };
