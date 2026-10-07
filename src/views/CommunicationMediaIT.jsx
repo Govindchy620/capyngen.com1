@@ -475,9 +475,6 @@ const CommunicationMediaIT = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-                DIGITAL TRANSFORMATION FOR MEDIA & IT
-              </div>
               <h2
                 className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight mb-6"
                 style={{ fontFamily: "'Syne', sans-serif" }}
@@ -549,9 +546,6 @@ const CommunicationMediaIT = () => {
       <section className="bg-[#070e1d] py-20 px-4 md:px-8 border-b border-gray-800 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/70 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              CAPABILITIES & ARCHITECTURE
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -615,9 +609,6 @@ const CommunicationMediaIT = () => {
       <section className="bg-white py-20 px-4 md:px-8 border-b border-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              PLATFORMS & ARCHITECTURE
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -664,19 +655,16 @@ const CommunicationMediaIT = () => {
       </section>
 
       {/* Mobile and Web Media Apps Section */}
-      <section className="bg-[#0b162c] py-20 px-4 md:px-8 border-b border-slate-800 text-white">
+      <section className="bg-[#2563eb] py-20 px-4 md:px-8 border-b border-blue-500/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/70 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              CROSS-PLATFORM DEPLOYMENTS
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Mobile and Web Media Apps
             </h2>
-            <p className="mt-4 text-slate-300 text-base leading-relaxed">
+            <p className="mt-4 text-blue-100 text-base leading-relaxed">
               We create mobile and web applications that allow businesses from
               different sectors to facilitate broadcasting, content delivery,
               and high-retention user engagement.
@@ -687,7 +675,7 @@ const CommunicationMediaIT = () => {
             {features.map((feat, fIdx) => (
               <div
                 key={fIdx}
-                className="bg-[#070e1d] border border-slate-800 p-8 rounded-none relative group hover:border-blue-500 transition-colors duration-200 flex flex-col justify-between"
+                className="bg-[#0b162c] border border-slate-800 p-8 rounded-none relative group hover:border-blue-300 transition-colors duration-200 flex flex-col justify-between"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 transition-colors" />
                 <div>
@@ -714,18 +702,15 @@ const CommunicationMediaIT = () => {
       </section>
 
       {/* High-Impact CTA Banner */}
-      <section className="bg-[#2563eb] py-20 px-4 md:px-8 text-white text-center border-b border-blue-500/30 relative overflow-hidden">
+      <section className="bg-white py-20 px-4 md:px-8 text-slate-900 text-center border-b border-slate-200 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/20 border border-white/30 text-white text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-            START YOUR TRANSFORMATION
-          </div>
           <h2
-            className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6"
+            className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Go Digital Confidently with Capyngen Media Solutions
           </h2>
-          <p className="text-blue-100 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             Rethink your processes with the digital overhaul of the Media
             Industry facilitated by Capyngen. Mobilize efficacy with software
             solutions tailor-made for high performance and creative innovation.
@@ -733,13 +718,13 @@ const CommunicationMediaIT = () => {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-block bg-white text-[#2563eb] hover:bg-slate-100 font-bold px-8 py-3.5 rounded-none shadow-lg transition-colors uppercase tracking-wider text-sm"
+              className="inline-block bg-[#2563eb] text-white hover:bg-blue-700 font-bold px-8 py-3.5 rounded-none shadow-lg transition-colors uppercase tracking-wider text-sm"
             >
               Grab a Demo Right Now
             </Link>
             <Link
               to="/contact"
-              className="inline-block bg-transparent text-white border-2 border-white font-bold px-8 py-3.5 rounded-none hover:bg-white hover:text-[#2563eb] transition-colors uppercase tracking-wider text-sm"
+              className="inline-block bg-transparent text-slate-900 border-2 border-slate-900 font-bold px-8 py-3.5 rounded-none hover:bg-slate-900 hover:text-white transition-colors uppercase tracking-wider text-sm"
             >
               Free Consultation
             </Link>
@@ -748,7 +733,7 @@ const CommunicationMediaIT = () => {
       </section>
 
       {/* FAQs */}
-      <FAQSection2 items={faqItems} />
+      <FAQSection2 items={faqItems} bgColor="bg-[#070e1d]" />
     </div>
   );
 };

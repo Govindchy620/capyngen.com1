@@ -709,7 +709,7 @@ const DataAnalytics = () => {
       {/* ========================================================================= */}
       {/* 5. WHY BUSINESSES TRUST CAPYNGEN (6 Cards with Images)                    */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+      <section className="py-12 lg:py-16 bg-[#2563eb] text-white border-b border-blue-500/30">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-3xl mb-8 lg:mb-10 text-left">
             <h2
@@ -718,7 +718,7 @@ const DataAnalytics = () => {
             >
               Why Businesses Trust Capyngen
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+            <p className="text-blue-100 text-base sm:text-lg mt-3 leading-relaxed">
               We blend engineering rigor, modern BI tooling, and cross-industry experience to deliver dependable analytics solutions.
             </p>
           </div>
@@ -757,30 +757,30 @@ const DataAnalytics = () => {
       {/* ========================================================================= */}
       {/* 6. FULL SIZE BANNER 2: DISCOVER OPPORTUNITIES                             */}
       {/* ========================================================================= */}
-      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-200 bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src={assets.dataAnalyticsFullSize2}
             alt="Discover opportunities hidden in your data"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-white/90 backdrop-blur-[1px]" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+        <div className="relative z-10 max-w-4xl mx-auto text-slate-900 space-y-6">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Discover opportunities hidden in your data
           </h2>
-          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+          <p className="text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
             Transform hidden operational patterns into actionable strategic leverage with Capyngen's business intelligence and data science solutions.
           </p>
           <div className="pt-2">
             <Link
               to="/contact-us"
-              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
             >
               Contact Us
               <ArrowRight className="w-5 h-5" />
@@ -792,7 +792,7 @@ const DataAnalytics = () => {
       {/* ========================================================================= */}
       {/* 7. OUR PROCESS (3 Step Cards)                                             */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-3xl mb-8 lg:mb-10 text-left">
             <h2
@@ -836,16 +836,16 @@ const DataAnalytics = () => {
       {/* ========================================================================= */}
       {/* 8. INDUSTRIES WE SERVE (5 Industry Cards)                                 */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-3xl mb-8 lg:mb-10 text-left">
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Industries We Serve
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
               Targeted data science implementations built specifically around vertical data formats, regulatory compliance, and commercial models.
             </p>
           </div>
@@ -854,11 +854,11 @@ const DataAnalytics = () => {
             {industriesData.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-sm relative group"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
                 <div>
-                  <div className="w-full h-44 mb-6 bg-slate-900 p-2 flex items-center justify-center rounded-none overflow-hidden border border-slate-800">
+                  <div className="w-full h-44 mb-6 bg-slate-100 p-2 flex items-center justify-center rounded-none overflow-hidden border border-slate-200">
                     <img
                       src={item.image}
                       alt={typeof item.title === 'string' ? item.title : 'Industry'}
@@ -866,12 +866,12 @@ const DataAnalytics = () => {
                     />
                   </div>
                   <h3
-                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
                     style={{ fontFamily: "'Syne', sans-serif" }}
                   >
                     {item.title}
                   </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed">
+                  <p className="text-slate-600 text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -893,22 +893,21 @@ const DataAnalytics = () => {
       {/* ========================================================================= */}
       {/* 10. GET STARTED / CONSULTATION BANNER                                     */}
       {/* ========================================================================= */}
-      <section className="py-16 lg:py-20 bg-[#030712] text-white border-b border-slate-800 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.18),transparent)] pointer-events-none" />
+      <section className="py-16 lg:py-20 bg-white text-slate-900 border-b border-slate-200 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-6">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-tight"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Become Brilliant with Data Analytics
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Your data is the gateway to smarter business decisions. Connect with Capyngen's analytics experts today for a comprehensive, obligation-free consultation.
           </p>
           <div className="pt-2">
             <Link
               to="/contact-us"
-              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl text-base"
+              className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl text-base"
             >
               Get Started
               <ArrowRight className="w-5 h-5" />
@@ -920,7 +919,7 @@ const DataAnalytics = () => {
       {/* ========================================================================= */}
       {/* 11. FREQUENTLY ASKED QUESTIONS                                            */}
       {/* ========================================================================= */}
-      <FAQSection2 items={faqItems} />
+      <FAQSection2 items={faqItems} bgColor="bg-[#070e1d]" />
     </div>
   );
 };

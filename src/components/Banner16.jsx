@@ -6,7 +6,7 @@ export default function Banner15() {
   return (
     <section className="flex flex-col lg:flex-row min-h-screen">
       {/* Left: Background/Image + Text */}
-      <div className="relative flex-1 flex items-center justify-center lg:justify-start px-6 py-16 lg:pl-16  bg-black overflow-hidden">
+      <div className="relative flex-1 flex items-center justify-center lg:justify-start px-6 py-16 lg:pl-16  bg-[#0b1b3c] overflow-hidden">
         {image && (
           <img
             src={image}

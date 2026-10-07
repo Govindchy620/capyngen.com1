@@ -13,7 +13,7 @@ const ShuffleHero = ({
   gridRows = 4,
   shuffleInterval = 3000,
   themeColor = "indigo",
-  bgColor = "bg-black",
+  bgColor = "bg-[#0b1b3c]",
 }) => {
   const navigate = useNavigate();
   return (

@@ -22,7 +22,7 @@ const Banner4 = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-gray-900">
+    <div className="relative w-full min-h-screen overflow-hidden bg-[#0b1b3c]">
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, index) => (
           <div
@@ -39,7 +39,7 @@ const Banner4 = ({ slides }) => {
               alt={slide.title}
             >
               {/* Dark gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0b1b3c]/90 via-[#0b1b3c]/60 to-transparent pointer-events-none"></div>
 
               {/* Content */}
               <div className="relative z-20 text-left max-w-5xl">

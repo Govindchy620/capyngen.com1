@@ -251,7 +251,7 @@ const Industries = () => {
     <div>
       <Banner
         title="Industries"
-        overlayBg="bg-black/70"
+        overlayBg="bg-[#0b1b3c]/85"
         backgroundImage={assets.industriesBanner}
         description="Unlock the Power of Web Presence with our Professional Website Designing Service! Elevate Your Online Presence with Stunning Website Designs."
       />

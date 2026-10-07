@@ -10,7 +10,6 @@ import HomeBlogs from "../components/HomeBlogs";
 import HeroSection from "../components/HeroSection";
 import FAQSection from "../components/FAQSection";
 import useSplitTextAnimation from "../hooks/useSplitTextAnimation";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import { StickyScroll } from "../components/StickyScroll";
 import { TextParallaxContentExample } from "../components/TextParallaxContent";
 import { ParallaxScroll } from "../components/ParallaxScroll";
@@ -376,9 +375,6 @@ const Homepage = () => {
 
         {/* 11. FAQs */}
         <FAQSection2 items={faqItems} bgColor="bg-white" />
-
-        {/* 12. Contact / Let's Talk */}
-        <ScrollRevealEffect />
       </div>
     </div>
   );

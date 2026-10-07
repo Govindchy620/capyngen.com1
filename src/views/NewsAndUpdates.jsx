@@ -22,7 +22,7 @@ const NewsAndUpdates = () => {
       </Helmet>
       <Banner
         title="News & Updates"
-        overlayBg="bg-black/60"
+        overlayBg="bg-[#0b1b3c]/85"
         backgroundImage={assets.news}
         description=""
       />

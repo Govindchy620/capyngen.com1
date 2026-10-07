@@ -48,7 +48,7 @@ const HeroSection = () => {
           >
             Designing Innovation,
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-400 inline-block pb-1">
               Delivering Growth
             </span>
           </h1>

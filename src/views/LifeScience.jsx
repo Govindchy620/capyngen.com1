@@ -34,7 +34,6 @@ import Banner6 from "../components/Banner6";
 import GetStarted from "../components/GetStarted";
 import TopRatedCompany from "../components/TopRatedCompany";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import CardsSection from "../components/CardsSection";
 import CardsSectionImage from "../components/CardsSectionImage";
 import BenefitsSection from "../components/BenefitsSection";
@@ -654,7 +653,7 @@ const LifeScience = () => {
       {/* ========================================================================= */}
       {/* 5. WHY CAPYNGEN FOR LIFE SCIENCES (SPLIT DARK SECTION)                    */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+      <section className="py-12 lg:py-16 bg-[#2563eb] text-white border-b border-blue-500/30">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-5 relative flex justify-center order-2 lg:order-1">
             <div className="border border-slate-700 overflow-hidden shadow-xl rounded-none w-full max-w-[480px]">
@@ -673,7 +672,7 @@ const LifeScience = () => {
             >
               Why Capyngen for Life Sciences?
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+            <p className="text-blue-100 text-base sm:text-lg leading-relaxed">
               We synthesize clinical domain knowledge with state-of-the-art engineering to deliver reliable healthcare platforms:
             </p>
 
@@ -681,7 +680,7 @@ const LifeScience = () => {
               {solutionsData.map((benefit, idx) => (
                 <div
                   key={idx}
-                  className="p-4 border border-slate-800 bg-[#070e1d] flex items-start gap-4 hover:border-blue-500 transition-colors duration-150"
+                  className="p-4 border border-blue-400/30 bg-[#0b162c] flex items-start gap-4 hover:border-white transition-colors duration-150"
                 >
                   <div className="w-2.5 h-2.5 rounded-none bg-blue-500 mt-2 shrink-0" />
                   <div>
@@ -707,7 +706,7 @@ const LifeScience = () => {
       {/* ========================================================================= */}
       {/* 6. CALL TO ACTION BANNER                                                  */}
       {/* ========================================================================= */}
-      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+      <section className="py-14 bg-white text-slate-900 border-b border-slate-200">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2
@@ -716,13 +715,13 @@ const LifeScience = () => {
             >
               Ready to Transform Your Life Sciences Operations?
             </h2>
-            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               Empower your pharmaceutical, biotech, or research organization with secure, scalable, and compliant digital solutions.
             </p>
             <div className="pt-2">
               <Link
                 to="/contact-us"
-                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+                className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
               >
                 Work With Us
                 <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
@@ -735,7 +734,7 @@ const LifeScience = () => {
       {/* ========================================================================= */}
       {/* 7. FAQ SECTION                                                            */}
       {/* ========================================================================= */}
-      <FAQSection2 items={faqItems} />
+      <FAQSection2 items={faqItems} bgColor="bg-[#070e1d]" />
     </div>
   );
 };

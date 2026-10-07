@@ -27,7 +27,6 @@ import {
 } from "react-icons/fa";
 import { assets } from "../assets/assets";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import BannerRollingGallery from "../components/BannerRollingGallery";
 import TechStack from "../components/TechStack";
 
@@ -1184,11 +1183,6 @@ const WebDevelopment = () => {
       <div className="bg-white">
         <FAQSection2 items={faqItems} bgColor="bg-white" />
       </div>
-
-      {/* ========================================================================= */}
-      {/* 15. SECTION 14: Let's Talk / Contact Form (ScrollRevealEffect)           */}
-      {/* ========================================================================= */}
-      <ScrollRevealEffect />
 
     </div>
   );

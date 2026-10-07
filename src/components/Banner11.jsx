@@ -6,7 +6,7 @@ export default function Banner11({
   highlight = "Digital Marketing Services",
   description = `In the current whirlwind digital environment, the importance of visibility cannot be overstated. Through digital marketing, your brand can connect with the appropriate target market, on time, using the most suitable communication, thus increasing your business with tangible results.`,
   cards = [],
-  bgColor = "bg-black",
+  bgColor = "bg-[#0b1b3c]",
   textColor = "text-white",
 }) {
   return (

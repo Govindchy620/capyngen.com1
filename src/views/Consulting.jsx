@@ -483,30 +483,30 @@ const Consulting = () => {
       {/* ========================================================================= */}
       {/* 2. FULL SIZE BANNER 1: STRATEGIC GUIDANCE                                 */}
       {/* ========================================================================= */}
-      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-200 bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src={assets.consultingFullSize}
             alt="Strategic guidance for business success"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-white/90 backdrop-blur-[1px]" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+        <div className="relative z-10 max-w-4xl mx-auto text-slate-900 space-y-6">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Strategic guidance for business success
           </h2>
-          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+          <p className="text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
             Our expertise in consulting services is designed to diagnose operational bottlenecks, architect future-ready technology roadmaps, and accelerate your commercial expansion.
           </p>
           <div className="pt-2">
             <Link
               to="/contact-us"
-              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
             >
               Book Consultation
               <ArrowRight className="w-5 h-5" />
@@ -518,16 +518,16 @@ const Consulting = () => {
       {/* ========================================================================= */}
       {/* 3. WHY CHOOSE CAPYNGEN CONSULTING? (6 Cards - White Background)           */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-3xl mb-8 lg:mb-10 text-left">
             <h2
-              className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Why Choose Capyngen Consulting?
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
               We combine seasoned strategic acumen, technical mastery, and measurable business deliverables to elevate organizations worldwide.
             </p>
           </div>
@@ -536,59 +536,11 @@ const Consulting = () => {
             {cardsSectionData1.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-sm relative group overflow-hidden"
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group overflow-hidden"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
                 <div>
-                  <div className="mb-4">{item.icon}</div>
-                  <h3
-                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
-                    style={{ fontFamily: "'Syne', sans-serif" }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 4. COMPREHENSIVE CONSULTING SERVICES (6 Dark Cards with Images)           */}
-      {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#070e1d] text-white border-b border-slate-800">
-        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
-          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
-            <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight"
-              style={{ fontFamily: "'Syne', sans-serif" }}
-            >
-              Our Comprehensive Consulting Services
-            </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
-              Strategic, architectural, and operational guidance across all domains of digital enterprise.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cardsSectionImageData1.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
-              >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
-                <div>
-                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover rounded-none"
-                    />
-                  </div>
+                  <div className="mb-4 text-blue-400">{item.icon}</div>
                   <h3
                     className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-150"
                     style={{ fontFamily: "'Syne', sans-serif" }}
@@ -606,9 +558,57 @@ const Consulting = () => {
       </section>
 
       {/* ========================================================================= */}
+      {/* 4. COMPREHENSIVE CONSULTING SERVICES (6 Dark Cards with Images)           */}
+      {/* ========================================================================= */}
+      <section className="py-12 lg:py-16 bg-white text-slate-900 border-b border-slate-200">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mb-8 lg:mb-10 text-left">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Our Comprehensive Consulting Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+              Strategic, architectural, and operational guidance across all domains of digital enterprise.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsSectionImageData1.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8fafc] border border-slate-200 hover:border-blue-600 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-sm relative group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
+                <div>
+                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-200 rounded-none">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover rounded-none"
+                    />
+                  </div>
+                  <h3
+                    className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-150"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
       {/* 5. OUR CONSULTING PROCESS (3 Step Cards)                                  */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+      <section className="py-12 lg:py-16 bg-[#2563eb] text-white border-b border-blue-500/30">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-3xl mb-8 lg:mb-10 text-left">
             <h2
@@ -617,7 +617,7 @@ const Consulting = () => {
             >
               How We Deliver Results – Our Consulting Approach
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+            <p className="text-blue-100 text-base sm:text-lg mt-3 leading-relaxed">
               A disciplined, three-step execution framework ensuring actionable clarity and zero disruption to your active operations.
             </p>
           </div>
@@ -626,11 +626,11 @@ const Consulting = () => {
             {steps.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-xl relative group"
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-400 transition-colors duration-150 p-8 flex flex-col justify-between rounded-none shadow-2xl relative group"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
                 <div>
-                  <div className="text-xs font-mono font-semibold text-blue-400 mb-3 tracking-wider">
+                  <div className="text-xs font-mono font-semibold text-blue-300 mb-3 tracking-wider">
                     PHASE 0{idx + 1}
                   </div>
                   <h3
@@ -652,30 +652,30 @@ const Consulting = () => {
       {/* ========================================================================= */}
       {/* 6. FULL SIZE BANNER 2: YOUR VISION, OUR EXPERTISE                          */}
       {/* ========================================================================= */}
-      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-800">
+      <section className="relative py-16 lg:py-20 px-4 sm:px-6 md:px-12 flex items-center justify-center text-center overflow-hidden border-b border-slate-200 bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src={assets.consultingFullSize2}
             alt="Your vision, our expertise"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-[#070e1d]/85 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-white/90 backdrop-blur-[1px]" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+        <div className="relative z-10 max-w-4xl mx-auto text-slate-900 space-y-6">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Your vision, our expertise
           </h2>
-          <p className="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+          <p className="text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
             Collaborate with Capyngen to realize digital transformation, optimize enterprise architectures, and achieve lasting strategic milestones.
           </p>
           <div className="pt-2">
             <Link
               to="/contact-us"
-              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
+              className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl group text-base"
             >
               Contact Us
               <ArrowRight className="w-5 h-5" />
@@ -733,7 +733,7 @@ const Consulting = () => {
       {/* ========================================================================= */}
       {/* 8. REQUEST FOR COMPLIMENTARY CONSULTATION (CTA BANNER)                    */}
       {/* ========================================================================= */}
-      <section className="py-16 lg:py-20 bg-[#030712] text-white border-b border-slate-800 text-center relative overflow-hidden">
+      <section className="py-16 lg:py-20 bg-white text-slate-900 border-b border-slate-200 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.18),transparent)] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-6">
           <h2
@@ -742,13 +742,13 @@ const Consulting = () => {
           >
             Request a Complimentary Consultation
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Discover our strategic technology frameworks. Connect with Capyngen's principal advisors today to evaluate your systems and design a high-ROI growth roadmap.
           </p>
           <div className="pt-2">
             <Link
               to="/contact-us"
-              className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl text-base"
+              className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-700 text-white font-semibold py-4 px-9 rounded-none transition-colors duration-150 shadow-xl text-base"
             >
               Get In Touch
               <ArrowRight className="w-5 h-5" />
@@ -760,7 +760,7 @@ const Consulting = () => {
       {/* ========================================================================= */}
       {/* 9. FREQUENTLY ASKED QUESTIONS                                             */}
       {/* ========================================================================= */}
-      <FAQSection2 items={faqItems} />
+      <FAQSection2 items={faqItems} bgColor="bg-[#070e1d]" />
     </div>
   );
 };

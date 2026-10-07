@@ -2,7 +2,6 @@ import React from "react";
 import { assets } from "../assets/assets";
 import Banner6 from "../components/Banner6";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import {
   FaBuilding,
   FaChartLine,
@@ -770,7 +769,7 @@ const ECommerceIndustry = () => {
       {/* ========================================================================= */}
       {/* 5. ENTERPRISE E-COMMERCE CAPABILITIES (DARK CARDS)                        */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+      <section className="py-12 lg:py-16 bg-[#2563eb] text-white border-b border-blue-500/30">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-3xl mb-8 lg:mb-10 text-left">
             <h2
@@ -779,7 +778,7 @@ const ECommerceIndustry = () => {
             >
               Enterprise E-Commerce Capabilities
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+            <p className="text-blue-100 text-base sm:text-lg mt-3 leading-relaxed">
               State-of-the-art AI, CRM, and cloud DevOps designed to elevate customer loyalty and operational scale.
             </p>
           </div>
@@ -788,7 +787,7 @@ const ECommerceIndustry = () => {
             {solutionsData.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-400 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
                 <div>
@@ -879,7 +878,7 @@ const ECommerceIndustry = () => {
       {/* ========================================================================= */}
       {/* 7. CALL TO ACTION BANNER                                                  */}
       {/* ========================================================================= */}
-      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+      <section className="py-14 bg-[#070e1d] text-white border-b border-slate-800">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2
@@ -888,13 +887,13 @@ const ECommerceIndustry = () => {
             >
               Collaboratively, Let's Build Your High-Performance E-Commerce Platform
             </h2>
-            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               From intelligent AI recommendations to high-converting UI/UX design, we power your online store for compounding growth.
             </p>
             <div className="pt-2">
               <Link
                 to="/contact-us"
-                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+                className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
               >
                 Work With Us
                 <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>

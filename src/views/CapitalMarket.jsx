@@ -563,11 +563,11 @@ const CapitalMarket = () => {
       {/* ========================================================================= */}
       <CreativeAgencyFAQ
         slides={slidesData}
-        slideDuration={4000}
-        headingClass="text-4xl md:text-5xl font-extrabold mb-6"
-        descClass="text-lg leading-relaxed mb-8 text-gray-300"
-        buttonGradient="from-blue-500 to-purple-600"
-        priceLabel=""
+        slideDuration={5000}
+        headingClass="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-white mb-6 leading-tight"
+        descClass="text-base sm:text-lg leading-relaxed mb-8 text-slate-300 max-w-xl"
+        buttonLabel="Schedule Capital Market Consultation"
+        buttonLink="/contact-us"
       />
 
       {/* ========================================================================= */}

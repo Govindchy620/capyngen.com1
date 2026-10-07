@@ -427,11 +427,6 @@ const DigitalMarketing = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 text-left">
-              {/* Microsoft-style Yellow/Amber Accent Pill */}
-              <span className="inline-block bg-[#ffb900] text-black font-semibold text-xs px-2.5 py-1 mb-6 rounded-none tracking-wide">
-                New
-              </span>
-
               <h1
                 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-semibold leading-[1.12] tracking-tight mb-6"
                 style={{ fontFamily: "'Syne', sans-serif" }}

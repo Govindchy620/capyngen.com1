@@ -549,9 +549,6 @@ const Gaming = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-                DIGITAL GAMING ECOSYSTEM
-              </div>
               <h2
                 className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight mb-6"
                 style={{ fontFamily: "'Syne', sans-serif" }}
@@ -616,9 +613,6 @@ const Gaming = () => {
       <section className="bg-[#070e1d] py-20 px-4 md:px-8 border-b border-gray-800 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/70 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              INFRASTRUCTURE & DEVELOPMENT
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -674,9 +668,6 @@ const Gaming = () => {
       <section className="bg-white py-20 px-4 md:px-8 border-b border-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              COMMUNITY & GROWTH ENGINES
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -726,20 +717,17 @@ const Gaming = () => {
       </section>
 
       {/* Key Features & Benefits Section */}
-      <section className="bg-[#0b162c] py-20 px-4 md:px-8 border-b border-slate-800 text-white">
+      <section className="bg-[#2563eb] py-20 px-4 md:px-8 border-b border-blue-500/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/70 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-                TECHNICAL EXCELLENCE
-              </div>
               <h2
                 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6"
                 style={{ fontFamily: "'Syne', sans-serif" }}
               >
                 Key Features & Benefits
               </h2>
-              <p className="text-slate-300 text-base leading-relaxed mb-8">
+              <p className="text-blue-100 text-base leading-relaxed mb-8">
                 Designed to give game studios, publishers, and platforms
                 uncompromising reliability, real-time analytics, and infinite
                 scalability during peak event launches.
@@ -758,7 +746,7 @@ const Gaming = () => {
               {solutionsData.map((item, sIdx) => (
                 <div
                   key={sIdx}
-                  className="bg-[#070e1d] border border-slate-800 p-6 rounded-none relative group hover:border-blue-500 transition-colors duration-200 flex gap-5 items-start"
+                  className="bg-[#0b162c] border border-slate-800 p-6 rounded-none relative group hover:border-blue-300 transition-colors duration-200 flex gap-5 items-start"
                 >
                   <div className="w-12 h-12 bg-[#070e1d] border border-slate-800 flex items-center justify-center shrink-0">
                     {item.icon}
@@ -785,9 +773,6 @@ const Gaming = () => {
       <section className="bg-white py-20 px-4 md:px-8 border-b border-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              SECTORS WE EMPOWER
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -843,9 +828,6 @@ const Gaming = () => {
       <section className="bg-[#070e1d] py-20 px-4 md:px-8 border-b border-gray-800 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/70 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              ENGINEERING METHODOLOGY
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -895,9 +877,6 @@ const Gaming = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-                THE CAPYNGEN ADVANTAGE
-              </div>
               <h2
                 className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight mb-6"
                 style={{ fontFamily: "'Syne', sans-serif" }}
@@ -939,18 +918,15 @@ const Gaming = () => {
       </section>
 
       {/* High-Impact CTA Banner */}
-      <section className="bg-[#2563eb] py-20 px-4 md:px-8 text-white text-center border-b border-blue-500/30 relative overflow-hidden">
+      <section className="bg-[#070e1d] py-20 px-4 md:px-8 text-white text-center border-b border-slate-800 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/20 border border-white/30 text-white text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-            LEVEL UP YOUR PROJECT
-          </div>
           <h2
             className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Boost Your Gaming Projects with Smart Tech Solutions
           </h2>
-          <p className="text-blue-100 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             Turn on the bright lights for your brand with Capyngen’s tailor-made
             IT solutions for the gaming sector, which covers everything from
             mobile to cloud gaming.
@@ -958,13 +934,13 @@ const Gaming = () => {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-block bg-white text-[#2563eb] hover:bg-slate-100 font-bold px-8 py-3.5 rounded-none shadow-lg transition-colors uppercase tracking-wider text-sm"
+              className="inline-block bg-[#2563eb] text-white hover:bg-blue-600 font-bold px-8 py-3.5 rounded-none shadow-lg transition-colors uppercase tracking-wider text-sm"
             >
               Receive a Game Tech Consultation at No Cost
             </Link>
             <Link
               to="/contact"
-              className="inline-block bg-transparent text-white border-2 border-white font-bold px-8 py-3.5 rounded-none hover:bg-white hover:text-[#2563eb] transition-colors uppercase tracking-wider text-sm"
+              className="inline-block bg-transparent text-white border-2 border-white font-bold px-8 py-3.5 rounded-none hover:bg-white hover:text-blue-400 transition-colors uppercase tracking-wider text-sm"
             >
               Get in Touch
             </Link>

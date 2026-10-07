@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import ScrollRevealEffect from "./ScrollRevealEffect";
 import { brandAssets, navItems } from "../assets/navData";
 import {
   Facebook,
@@ -14,6 +15,7 @@ import {
 import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const location = useLocation();
   const currentYear = new Date().getFullYear();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showAllServices, setShowAllServices] = useState(false);
@@ -71,7 +73,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-black text-white overflow-hidden">
+    <>
+      {!location.pathname.startsWith("/contact") && <ScrollRevealEffect />}
+      <footer className="relative bg-black text-white overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-2xl animate-pulse"></div>
@@ -311,7 +315,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

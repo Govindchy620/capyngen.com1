@@ -24,28 +24,34 @@ const FAQSection2 = ({
   return (
     <section
       className={`w-full ${
-        isLight ? "bg-white text-slate-900" : "bg-slate-950 text-white"
-      } pt-8 sm:pt-12 pb-16 sm:pb-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 border-t border-slate-100`}
+        isLight ? "bg-white text-slate-900 border-t border-slate-100" : "bg-[#070e1d] text-white border-t border-slate-800"
+      } pt-12 sm:pt-16 pb-16 sm:pb-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24`}
       aria-label="Frequently Asked Questions"
     >
       <div className="mx-auto w-full max-w-[1536px]">
         {/* Centered Heading */}
         <div className="relative flex flex-col items-center justify-center text-center mb-10 sm:mb-14">
           <h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900"
+            className={`text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight ${
+              isLight ? "text-slate-900" : "text-white"
+            }`}
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             {title}
           </h2>
           {desc ? (
-            <p className="mt-4 max-w-2xl text-base sm:text-lg text-slate-500 font-sans font-normal">
+            <p className={`mt-4 max-w-2xl text-base sm:text-lg font-sans font-normal ${
+              isLight ? "text-slate-500" : "text-slate-400"
+            }`}>
               {desc}
             </p>
           ) : null}
         </div>
 
         {/* Clean Accordion List */}
-        <div className="max-w-4xl mx-auto divide-y divide-slate-200/90">
+        <div className={`max-w-4xl mx-auto divide-y ${
+          isLight ? "divide-slate-200/90" : "divide-slate-800"
+        }`}>
           {items.map((item, index) => {
             const isOpen = activeIndex === index;
             const questionText = item.question || item.q;
@@ -61,8 +67,10 @@ const FAQSection2 = ({
                   <h3
                     className={`text-base sm:text-lg font-medium transition-colors leading-snug ${
                       isOpen
-                        ? "text-blue-600 font-semibold"
-                        : "text-slate-900 group-hover:text-blue-600"
+                        ? isLight ? "text-blue-600 font-semibold" : "text-blue-400 font-semibold"
+                        : isLight
+                        ? "text-slate-900 group-hover:text-blue-600"
+                        : "text-white group-hover:text-blue-400"
                     }`}
                     style={{ fontFamily: "'Syne', sans-serif" }}
                   >
@@ -73,7 +81,9 @@ const FAQSection2 = ({
                     className={`flex h-8 w-8 items-center justify-center rounded-none transition-all shrink-0 ${
                       isOpen
                         ? "bg-blue-600 text-white"
-                        : "bg-slate-100 text-slate-500 group-hover:bg-blue-50 group-hover:text-blue-600"
+                        : isLight
+                        ? "bg-slate-100 text-slate-500 group-hover:bg-blue-50 group-hover:text-blue-600"
+                        : "bg-slate-800 text-slate-400 group-hover:bg-slate-700 group-hover:text-white"
                     }`}
                   >
                     {isOpen ? (
@@ -93,7 +103,9 @@ const FAQSection2 = ({
                       transition={{ duration: 0.28, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <p className="text-sm sm:text-base leading-relaxed text-slate-600 font-sans font-normal pt-3.5 pr-8">
+                      <p className={`text-sm sm:text-base leading-relaxed font-sans font-normal pt-3.5 pr-8 ${
+                        isLight ? "text-slate-600" : "text-slate-300"
+                      }`}>
                         {answerText}
                       </p>
                     </motion.div>

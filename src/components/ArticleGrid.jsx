@@ -136,14 +136,14 @@ const [totalPages, setTotalPages] = useState(1);
 
   if (loading) {
     return (
-      <div className="w-full bg-black py-32 text-center text-slate-400">
+      <div className="w-full bg-white py-32 text-center text-slate-500">
         Loading blogs...
       </div>
     );
   }
 
   return (
-    <div className="w-full bg-black py-24">
+    <div className="w-full bg-white py-16 lg:py-24 text-slate-900 border-b border-slate-200">
       <section className="max-w-[90vw] mx-auto w-full" id="media-hub">
         {/* ========================
            SINGLE BLOG VIEW
@@ -155,39 +155,39 @@ const [totalPages, setTotalPages] = useState(1);
                 navigate(`/news-and-updates/${slugify(post.title)}`);
                 setSelectedBlog(null);
               }}
-              className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 mb-8"
+              className="flex items-center gap-2 text-slate-600 hover:text-blue-600 mb-8 font-medium transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
               Back to Blogs
             </button>
 
             <div className="max-w-4xl mx-auto">
-              <div className="flex gap-4 text-slate-400 text-sm mb-4">
-                <span className="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full text-xs">
+              <div className="flex gap-4 text-slate-500 text-sm mb-4">
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-full text-xs font-semibold">
                   {selectedBlog.category}
                 </span>
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
+                  <Calendar className="w-4 h-4 text-slate-400" />
                   {selectedBlog.date}
                 </span>
               </div>
 
-              <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-slate-900 text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: "'Syne', sans-serif" }}>
                 {selectedBlog.title}
               </h1>
 
               <div className="flex items-center gap-3 mb-10">
-                <User className="w-5 h-5 text-slate-300" />
-                <span className="text-slate-300">{selectedBlog.author}</span>
+                <User className="w-5 h-5 text-slate-400" />
+                <span className="text-slate-600 font-medium">{selectedBlog.author}</span>
               </div>
 
               <img
                 src={selectedBlog.image}
-                className="w-full h-[350px] object-cover rounded-md mb-10"
+                className="w-full h-[350px] object-cover rounded-md mb-10 shadow-sm border border-slate-200"
                 alt={selectedBlog.title}
               />
 
-              <div className="prose prose-invert max-w-none mb-16">
+              <div className="prose max-w-none mb-16 text-slate-700">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: selectedBlog.content,
@@ -201,9 +201,9 @@ const [totalPages, setTotalPages] = useState(1);
                   <button
                     key={tag}
                     onClick={(e) => handleTagClick(e, tag)}
-                    className="px-4 py-2 bg-slate-800 border border-slate-700 rounded-md text-slate-300"
+                    className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-md text-slate-700 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 transition"
                   >
-                    <Tag className="inline w-4 h-4 mr-1" />
+                    <Tag className="inline w-4 h-4 mr-1 text-slate-400" />
                     {tag}
                   </button>
                 ))}
@@ -213,8 +213,8 @@ const [totalPages, setTotalPages] = useState(1);
               {relatedBlogs.length > 0 && (
                 <>
                   <div className="flex items-center gap-2 mb-6">
-                    <Sparkles className="text-cyan-400" />
-                    <h3 className="text-white text-2xl font-bold">
+                    <Sparkles className="text-blue-600" />
+                    <h3 className="text-slate-900 text-2xl font-bold" style={{ fontFamily: "'Syne', sans-serif" }}>
                       Related Insights
                     </h3>
                   </div>
@@ -224,14 +224,14 @@ const [totalPages, setTotalPages] = useState(1);
                       <div
                         key={post._id}
                         onClick={() => openBlog(post)}
-                        className="cursor-pointer bg-slate-900 border border-slate-800 rounded-lg overflow-hidden"
+                        className="cursor-pointer bg-slate-50 border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all rounded-lg overflow-hidden"
                       >
                         <img
                           src={post.image}
                           className="h-32 w-full object-cover"
                         />
                         <div className="p-4">
-                          <h4 className="text-white text-sm font-bold">
+                          <h4 className="text-slate-900 text-sm font-bold">
                             {post.title}
                           </h4>
                         </div>
@@ -254,41 +254,45 @@ const [totalPages, setTotalPages] = useState(1);
                   setPage(1);
                   navigate("/news-and-updates");
                 }}
-                className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-cyan-500/40 text-cyan-400 rounded-md hover:bg-cyan-500/10 transition"
+                className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition"
               >
                 <ArrowLeft className="w-4 h-4" />
                 View All Blogs
               </button>
             )}
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredData.map((post) => (
                 <article
                   key={post._id}
                   onClick={() => openBlog(post)}
-                  className="cursor-pointer bg-slate-900 border border-slate-800 rounded-md overflow-hidden"
+                  className="cursor-pointer bg-slate-50 border border-slate-200 hover:border-blue-600 hover:shadow-lg transition-all rounded-md overflow-hidden flex flex-col justify-between"
                 >
-                  <img
-                    src={post.image}
-                    className="w-full object-contain xl:object-cover"
-                    alt={post.title}
-                  />
-                  <div className="p-4">
-                    <h3 className="text-white text-lg xl:text-xl font-bold mb-3">
-                      {post.title}
-                    </h3>
+                  <div>
+                    <img
+                      src={post.image}
+                      className="w-full h-52 object-cover"
+                      alt={post.title}
+                    />
+                    <div className="p-5">
+                      <h3 className="text-slate-900 text-lg xl:text-xl font-bold mb-3 hover:text-blue-600 transition-colors" style={{ fontFamily: "'Syne', sans-serif" }}>
+                        {post.title}
+                      </h3>
 
-                    <p className="text-slate-400 text-sm line-clamp-2 mb-4">
-                      {post.description}
-                    </p>
+                      <p className="text-slate-600 text-sm line-clamp-2 mb-4">
+                        {post.description}
+                      </p>
+                    </div>
+                  </div>
 
+                  <div className="p-5 pt-0">
                     {/* TAGS */}
                     <div className="flex flex-wrap gap-2">
                       {post.tags?.map((tag) => (
                         <button
                           key={tag}
                           onClick={(e) => handleTagClick(e, tag)}
-                          className="text-xs px-2 py-1 bg-slate-800 border border-slate-700 rounded-md text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition"
+                          className="text-xs px-2.5 py-1 bg-white border border-slate-300 rounded-md text-slate-700 hover:text-blue-600 hover:border-blue-400 transition"
                         >
                           #{tag}
                         </button>
@@ -300,8 +304,8 @@ const [totalPages, setTotalPages] = useState(1);
             </div>
 
             {filteredData.length === 0 && (
-              <div className="text-center py-20 text-slate-400">
-                <FileText className="mx-auto mb-4" />
+              <div className="text-center py-20 text-slate-500">
+                <FileText className="mx-auto mb-4 w-10 h-10 text-slate-400" />
                 No articles found
               </div>
             )}
@@ -314,7 +318,7 @@ const [totalPages, setTotalPages] = useState(1);
   <button
     disabled={page === 1}
     onClick={() => setPage((p) => p - 1)}
-    className="px-4 py-2 border border-slate-700 text-slate-300 rounded-md disabled:opacity-40"
+    className="px-4 py-2 border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 rounded-md disabled:opacity-40"
   >
     Prev
   </button>
@@ -327,11 +331,11 @@ const [totalPages, setTotalPages] = useState(1);
       <button
         key={pageNumber}
         onClick={() => setPage(pageNumber)}
-        className={`px-4 py-2 rounded-md border
+        className={`px-4 py-2 rounded-md border transition-colors
         ${
           page === pageNumber
-            ? "bg-cyan-500 text-black border-cyan-500"
-            : "border-slate-700 text-slate-300"
+            ? "bg-[#2563eb] text-white border-[#2563eb] font-semibold"
+            : "border-slate-300 text-slate-700 bg-white hover:bg-slate-100"
         }`}
       >
         {pageNumber}
@@ -343,7 +347,7 @@ const [totalPages, setTotalPages] = useState(1);
   <button
     disabled={page === totalPages}
     onClick={() => setPage((p) => p + 1)}
-    className="px-4 py-2 border border-slate-700 text-slate-300 rounded-md disabled:opacity-40"
+    className="px-4 py-2 border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 rounded-md disabled:opacity-40"
   >
     Next
   </button>

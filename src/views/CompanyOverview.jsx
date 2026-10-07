@@ -179,9 +179,6 @@ const CompanyOverview = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-                WHO WE ARE
-              </div>
               <h2
                 className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight mb-6"
                 style={{ fontFamily: "'Syne', sans-serif" }}
@@ -256,9 +253,6 @@ const CompanyOverview = () => {
       <section className="bg-[#070e1d] py-20 px-4 md:px-8 border-b border-gray-800 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/70 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              THE CAPYNGEN ADVANTAGE
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -336,9 +330,6 @@ const CompanyOverview = () => {
       <section className="bg-white py-20 px-4 md:px-8 border-b border-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              CORE PRINCIPLES
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
@@ -386,20 +377,17 @@ const CompanyOverview = () => {
         </div>
       </section>
 
-      {/* Section 4: Our Expertise */}
-      <section className="bg-[#070e1d] py-20 px-4 md:px-8 border-b border-gray-800 text-white">
+      {/* Section 4: Our Expertise (5th Section: Royal Blue) */}
+      <section className="bg-[#2563eb] py-20 px-4 md:px-8 border-b border-blue-500/30 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/70 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-              CORE CAPABILITIES
-            </div>
             <h2
               className="text-3xl md:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Our Core Areas of Expertise
             </h2>
-            <p className="mt-4 text-gray-400 text-base leading-relaxed">
+            <p className="mt-4 text-blue-100 text-base leading-relaxed">
               Full-lifecycle digital services engineered for scalability,
               conversion optimization, and technological resilience.
             </p>
@@ -409,9 +397,9 @@ const CompanyOverview = () => {
             {expertise.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#0b162c] border border-gray-800 rounded-none p-8 relative group transition-colors duration-200 hover:border-blue-500 flex flex-col justify-between"
+                className="bg-[#0b162c] border border-gray-800 rounded-none p-8 relative group transition-colors duration-200 hover:border-blue-400 flex flex-col justify-between shadow-2xl"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 transition-colors" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-400 transition-colors" />
 
                 <div>
                   <div className="w-full h-48 mb-6 overflow-hidden border border-gray-800 rounded-none">
@@ -429,12 +417,12 @@ const CompanyOverview = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-6">
                     {item.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-gray-800/80 flex items-center justify-between text-xs text-gray-500 font-mono">
+                <div className="pt-4 border-t border-gray-800/80 flex items-center justify-between text-xs text-gray-400 font-mono">
                   <span>DISCIPLINE SPEC</span>
                   <span className="text-blue-400 font-semibold">0{idx + 1}</span>
                 </div>
@@ -444,19 +432,16 @@ const CompanyOverview = () => {
         </div>
       </section>
 
-      {/* Section 5: High-Impact Royal Blue CTA Banner */}
-      <section className="bg-[#2563eb] py-20 px-4 md:px-8 text-white text-center border-b border-blue-500/30 relative overflow-hidden">
+      {/* Section 5: High-Impact CTA Banner (6th Section: White) */}
+      <section className="bg-white py-20 px-4 md:px-8 text-center border-b border-gray-200 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/20 border border-white/30 text-white text-xs font-bold tracking-widest uppercase mb-4 rounded-none">
-            START YOUR JOURNEY TODAY
-          </div>
           <h2
-            className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6"
+            className="text-3xl md:text-5xl font-extrabold text-[#070e1d] leading-tight mb-6"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Ready for a Complete Digital Transformation?
           </h2>
-          <p className="text-blue-100 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             In the modern era, playing the game well is not enough. You have to
             be memorable. Let's convert your business vision into an undeniable
             digital authority.
@@ -464,13 +449,13 @@ const CompanyOverview = () => {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-block bg-white text-[#2563eb] hover:bg-slate-100 font-bold px-8 py-3.5 rounded-none shadow-lg transition-colors uppercase tracking-wider text-sm"
+              className="inline-block bg-[#2563eb] hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-none shadow-lg transition-colors uppercase tracking-wider text-sm"
             >
               Let’s Transform Together
             </Link>
             <Link
               to="/contact"
-              className="inline-block bg-transparent text-white border-2 border-white hover:bg-white hover:text-[#2563eb] font-bold px-8 py-3.5 rounded-none transition-colors uppercase tracking-wider text-sm"
+              className="inline-block bg-transparent text-[#070e1d] border-2 border-[#070e1d] hover:bg-[#070e1d] hover:text-white font-bold px-8 py-3.5 rounded-none transition-colors uppercase tracking-wider text-sm"
             >
               Schedule Consultation
             </Link>
@@ -478,8 +463,8 @@ const CompanyOverview = () => {
         </div>
       </section>
 
-      {/* Section 6: FAQs */}
-      <FAQSection2 items={faqItems} />
+      {/* Section 6: FAQs (7th Section: Dark Black Blue) */}
+      <FAQSection2 items={faqItems} bgColor="bg-[#070e1d]" />
     </div>
   );
 };

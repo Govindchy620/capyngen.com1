@@ -1,6 +1,31 @@
 @import "tailwindcss";
 @import "./styles/animations.css";
 
+@theme {
+  --font-sans: 'Syne', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Syne', sans-serif;
+}
+
+/* Global Font Application: Enforce Syne across the entire website */
+html,
+body,
+#root {
+  scroll-behavior: smooth;
+  font-family: 'Syne', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif !important;
+}
+
+p, span, a, button, input, select, textarea, li, label, div {
+  font-family: 'Syne', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
@@ -29,15 +54,109 @@ button {
   opacity: 0; /* Initial state for GSAP animation */
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-  font-family: 'Syne', system-ui, -apple-system, sans-serif;
-}
-
 /* Animation performance optimization */
 .gpu-accelerated {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
+/* ==========================================================================
+   GLOBAL BRAND FONT: Syne with Natural 'g' Descender
+   Default Syne has a flat baseline (yMin=0) on lowercase 'g' (U+0067), 
+   which cuts off the bottom loop horizontally.
+   Here, we load Syne for all characters EXCEPT 'g' (U+0000-0066, U+0068-00FF...),
+   and map 'g' (U+0067) to Montserrat's wide geometric 'g' so every letter 'g'
+   everywhere across the website renders with a full, natural rounded descender.
+   ========================================================================== */
+
+/* Regular 400 */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2') format('woff2');
+  unicode-range: U+0000-0066, U+0068-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+  unicode-range: U+0067;
+}
+
+/* Medium 500 */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2') format('woff2');
+  unicode-range: U+0000-0066, U+0068-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+  unicode-range: U+0067;
+}
+
+/* SemiBold 600 */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2') format('woff2');
+  unicode-range: U+0000-0066, U+0068-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+  unicode-range: U+0067;
+}
+
+/* Bold 700 */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2') format('woff2');
+  unicode-range: U+0000-0066, U+0068-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+  unicode-range: U+0067;
+}
+
+/* ExtraBold 800 */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2') format('woff2');
+  unicode-range: U+0000-0066, U+0068-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+  unicode-range: U+0067;
+}
+

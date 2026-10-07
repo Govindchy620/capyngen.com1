@@ -3,7 +3,6 @@ import { assets } from "../assets/assets";
 import Banner4 from "../components/Banner4";
 import CardsSectionImage from "../components/CardsSectionImage";
 import FAQSection2 from "../components/FAQSection2";
-import ScrollRevealEffect from "../components/ScrollRevealEffect";
 import GetStarted from "../components/GetStarted";
 import IndustryServices from "../components/IndustryServices";
 import {
@@ -620,15 +619,15 @@ const PublicService = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cardsSectionImageData1.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-5 flex flex-col justify-between rounded-none shadow-xl relative group"
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 sm:p-7 flex flex-col justify-between rounded-none shadow-xl relative group"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
                 <div>
-                  <div className="w-full h-48 mb-6 overflow-hidden border border-slate-800 rounded-none">
+                  <div className="w-full h-52 sm:h-56 mb-6 overflow-hidden border border-slate-800 rounded-none">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -641,7 +640,7 @@ const PublicService = () => {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed text-slate-300">
                     {item.description}
                   </p>
                 </div>
@@ -702,7 +701,7 @@ const PublicService = () => {
       {/* ========================================================================= */}
       {/* 5. CORE PUBLIC SECTOR IT FEATURES (DARK CARDS)                            */}
       {/* ========================================================================= */}
-      <section className="py-12 lg:py-16 bg-[#0b162c] text-white border-b border-slate-800">
+      <section className="py-12 lg:py-16 bg-[#2563eb] text-white border-b border-blue-500/30">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-3xl mb-8 lg:mb-10 text-left">
             <h2
@@ -711,7 +710,7 @@ const PublicService = () => {
             >
               Public Sector IT Solutions — Core Features
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+            <p className="text-blue-100 text-base sm:text-lg mt-3 leading-relaxed">
               Architectures engineered to handle city-wide throughput, stringent role-based access, and uninterrupted reliability.
             </p>
           </div>
@@ -720,7 +719,7 @@ const PublicService = () => {
             {cardsSectionData1.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#070e1d] border border-slate-800 hover:border-blue-500 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
+                className="bg-[#0b162c] border border-slate-800 hover:border-blue-400 transition-colors duration-150 p-6 flex flex-col justify-between rounded-none shadow-xl relative group"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-blue-600 rounded-none z-10" />
                 <div>
@@ -831,7 +830,7 @@ const PublicService = () => {
       {/* ========================================================================= */}
       {/* 8. CALL TO ACTION BANNER                                                  */}
       {/* ========================================================================= */}
-      <section className="py-14 bg-[#2563eb] text-white border-b border-blue-500/30">
+      <section className="py-14 bg-white text-slate-900 border-b border-slate-200">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2
@@ -840,13 +839,13 @@ const PublicService = () => {
             >
               Ready to Modernize Public Services?
             </h2>
-            <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               Capyngen is poised to collaborate on initiatives that transform citizen experience, secure data privacy, and deliver lasting public value.
             </p>
             <div className="pt-2">
               <Link
                 to="/contact-us"
-                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-[#2563eb] font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
+                className="inline-flex items-center gap-3 bg-[#2563eb] hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-none shadow-lg transition-colors duration-150 shadow-xl group text-base"
               >
                 Work With Us
                 <span className="text-white group-hover:translate-x-1 transition-transform duration-150">→</span>
@@ -859,7 +858,7 @@ const PublicService = () => {
       {/* ========================================================================= */}
       {/* 9. FAQ SECTION                                                            */}
       {/* ========================================================================= */}
-      <FAQSection2 items={faqItems} />
+      <FAQSection2 items={faqItems} bgColor="bg-[#070e1d]" />
     </div>
   );
 };
